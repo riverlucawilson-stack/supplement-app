@@ -1,0 +1,44 @@
+---
+// The frame around every page: page title and description for search
+// engines, the header, the affiliate disclosure, and the "not medical
+// advice" note. Because every page uses this layout, none can skip them.
+import { settings } from '../settings';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+const { title, description } = Astro.props;
+const fullTitle = `${title} | ${settings.siteName}`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-name" href="/">{settings.siteName}</a>
+    </header>
+
+    <aside class="notice">
+      <p>
+        <strong>Affiliate disclosure:</strong> some links on this site may earn us a
+        commission. Commissions never affect rankings, which come only from the formula on our
+        Methodology page.
+      </p>
+      <p><strong>Not medical advice.</strong> Talk to a qualified professional before starting a supplement.</p>
+    </aside>
+
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
