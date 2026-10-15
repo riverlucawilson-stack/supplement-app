@@ -1,0 +1,23 @@
+---
+// TEMPORARY home page for phase (a): it only proves the product files load.
+// Phase (c) replaces this with the sortable comparison table.
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const products = await getCollection('products');
+---
+
+<BaseLayout title="Creatine compared" description="Creatine products compared on cost per dose, testing, and evidence.">
+  <h1>Products loaded: {products.length}</h1>
+  <ul>
+    {
+      products.map((p) => (
+        <li>
+          <strong>{p.data.brand}</strong>, {p.data.name} ({p.data.form}, {p.data.creatine_type}).
+          {p.data.prices.length} price(s), {p.data.certifications.length} certification(s),
+          {p.data.coas.length} COA(s). File id: <code>{p.id}</code>
+        </li>
+      ))
+    }
+  </ul>
+</BaseLayout>

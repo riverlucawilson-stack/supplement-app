@@ -1,0 +1,26 @@
+# FAKE SAMPLE PRODUCT for testing the site. Not a real brand or real data.
+# Shows a product that should land in Tier C (no COA, no certification).
+category: creatine
+brand: Sample Brand C
+name: Creatine Gummies
+form: gummy
+creatine_type: monohydrate
+other_ingredients: [glucose syrup, sugar, pectin, citric acid, natural flavors]
+
+dose:
+  serving_size_g: 12           # 4 gummies
+  creatine_per_serving_g: 3
+  servings_per_container: 30
+
+prices:
+  - retailer: Sample Store 2
+    price_usd: 29.99
+    servings: 30
+    url: https://example.com/sample-store-2/brand-c
+    date_checked: 2026-10-14
+
+certifications: []
+coas: []
+
+flags: [added_sweeteners]
+notes: ""

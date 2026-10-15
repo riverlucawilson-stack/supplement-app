@@ -1,0 +1,57 @@
+/* Site-wide styles. Kept small on purpose; each phase adds what it needs. */
+
+:root {
+  --text: #1a1a1a;
+  --muted: #5a5a5a;
+  --bg: #ffffff;
+  --panel: #f4f4f2;
+  --border: #d9d9d4;
+  --accent: #1f5f8b;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+main,
+.site-header,
+.notice {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  padding-block: 1rem;
+}
+
+.site-name {
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.notice {
+  font-size: 0.875rem;
+  color: var(--muted);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+}
+
+.notice p {
+  margin: 0.25rem 0;
+}
+
+a {
+  color: var(--accent);
+}
