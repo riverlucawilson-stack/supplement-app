@@ -1,0 +1,48 @@
+# Looked up by Claude on 2026-10-20 from The Vitamin Shoppe and GNC (US).
+# Entries marked entered_by: claude still need River's check.
+# Myprotein also sells "Creatine Monohydrate Gummy Stars" (GNC 607333), a different
+# formula (50 Cal per serving); not included here.
+category: creatine
+entered_by: claude
+brand: Myprotein
+name: Creatine Monohydrate Gummies
+form: gummy
+creatine_type: monohydrate
+other_ingredients:              # Vitamin Shoppe, Peach: "Glucose Syrup, Sucrose, Glycerol, less than 2% of: Purified Water, Pectin, Trisodium Citrate, Citric Acid, Natural Flavor, Black Carrot Juice Concentrate (Color), Tricalcium Phosphate, Turmeric (Color)"
+  - glucose syrup               # CHECK: colors differ by flavor
+  - sucrose
+  - glycerol
+  - purified water
+  - pectin
+  - trisodium citrate
+  - citric acid
+  - natural flavor
+  - black carrot juice concentrate (color)
+  - tricalcium phosphate
+  - turmeric (color)
+
+dose:
+  serving_size_g: 5             # CHECK: serving weight not stated; this is the creatine grams per serving (5 gummies)
+  creatine_per_serving_g: 5     # Vitamin Shoppe: "5 Gummies", creatine as monohydrate "5 GM"
+  servings_per_container: 18    # Vitamin Shoppe: "18 Servings" (90 gummies)
+
+prices:
+  - retailer: The Vitamin Shoppe
+    price_usd: 29.99            # Peach, "90 Gummies", "$29.99"; page shows "No Ratings"
+    servings: 18
+    url: https://www.vitaminshoppe.com/p/creatine-monohydrate-gummies-5-gm-peach-90-gummies/myp-17497
+    date_checked: 2026-10-20
+    entered_by: claude
+  - retailer: GNC
+    price_usd: 29.99            # GNC: "Creatine Gummies - Lemon - 90 Gummies (18 Servings)", "$29.99"
+    servings: 18                # CHECK: GNC lemon facts (90 Cal, 5 g creatine) match; ingredient wording differs slightly
+    url: https://www.gnc.com/creatine-gummies-chews/607330.html
+    date_checked: 2026-10-20
+    entered_by: claude
+
+certifications: []              # not found on NSF's creatine search; Informed Sport's site could not be loaded
+
+coas: []                        # none found
+
+flags: [added sugars]
+notes: ""

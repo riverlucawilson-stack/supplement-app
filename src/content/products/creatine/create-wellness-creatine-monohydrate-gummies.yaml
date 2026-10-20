@@ -1,0 +1,58 @@
+# Looked up by Claude on 2026-10-20 from GNC, Walmart and NSF. Entries marked
+# entered_by: claude still need River's check.
+# The brand site (trycreate.co) was not used for prices: its pouch/tub variants and
+# per-day prices did not line up clearly with a gummy count, and its .js text said
+# "5 grams" per serving while its page and the GNC label say 4.5 g.
+category: creatine
+entered_by: claude
+brand: Create Wellness
+name: Creatine Monohydrate Gummies
+form: gummy
+creatine_type: monohydrate
+# raw_material left out: The Feed's page says "Creapure", but the label text seen (GNC) just says "Creatine Monohydrate".
+other_ingredients:              # GNC, Sour Cherry: "Tapioca Syrup, Sugar, Allulose, Reverse Osmosis Water, Pectin, Natural Cherry Flavor, Natural Red Color, Citric Acid"
+  - tapioca syrup               # CHECK: colors and flavors differ by flavor
+  - sugar
+  - allulose
+  - water
+  - pectin
+  - natural cherry flavor
+  - natural red color
+  - citric acid
+
+dose:
+  serving_size_g: 4.5           # CHECK: serving weight not stated; this is the creatine grams per serving (3 gummies)
+  creatine_per_serving_g: 4.5   # GNC Supplement Facts: "Serving Size 3 gummies", "Creatine Monohydrate 4.5g"
+  servings_per_container: 15    # GNC: "45 Gummies (15 Servings)"
+
+prices:
+  - retailer: GNC
+    price_usd: 24.99            # GNC: "Sour Cherry - 45 Gummies (15 Servings)", "$24.99"
+    servings: 15
+    url: https://www.gnc.com/creatine/607893.html
+    date_checked: 2026-10-20
+    entered_by: claude
+  - retailer: Walmart
+    price_usd: 49.98            # Walmart: "90 Count", Blue Raspberry, "$49.98"
+    servings: 30                # CHECK: page gives 90 gummies and "1.5g ... per gummy"; 30 = 90 / 3-gummy label serving
+    url: https://www.walmart.com/ip/Create-Wellness-Creatine-Monohydrate-Gummy-90-Count-Blue-Raspberry/8049418829
+    date_checked: 2026-10-20
+    rating:                     # Walmart: "4.9 out of 5 stars", "2,520 ratings"
+      stars: 4.9
+      count: 2520
+    entered_by: claude
+
+certifications:
+  - program: NSF Certified for Sport
+    # "Create Wellness Creatine Gummies Sour Cherry", US, serving "3 gummies",
+    # sizes "15 g, 225 g, 454 g", specific lots only (e.g. 2526126-GM45).
+    # CHECK: NSF lists 60 Cal / 8 g carbs per serving; GNC label shows 33 Cal / 7.8 g.
+    # Other flavors have their own listings (e.g. Blue Raspberry id=1782313).
+    listing_url: https://www.nsfsport.com/certified-products/listing-detail.php?id=1782309
+    date_verified: 2026-10-20
+    entered_by: claude
+
+coas: []                        # no COA found on the brand page, GNC or Walmart
+
+flags: [added sugars]
+notes: "Independent test: SuppCo (article dated 2025-06-12) reports Create watermelon gummies measured 4.59 g creatine per serving against a 4.5 g label serving; the article says an ISO 17025-accredited lab did the testing but does not name it. Source: https://supp.co/articles/suppco-tested-creatine-testing-results-gummies-failed-lab-analysis"

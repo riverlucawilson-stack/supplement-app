@@ -1,0 +1,69 @@
+# Looked up by Claude on 2026-10-20 from transparentlabs.com (product page and .js variant
+# data), Scheels and NSF. This file describes the Unflavored version. Entries marked
+# entered_by: claude still need River's check.
+category: creatine
+entered_by: claude
+brand: Transparent Labs
+name: Creatine HMB (Unflavored)
+form: powder
+creatine_type: monohydrate      # page: "Creatine Monohydrate 5,000 mg"
+# CHECK: Supplement Facts is an image. These are the actives the page names; inactive
+# ingredients are not in the page text (flavored versions use "natural flavors and stevia").
+other_ingredients:
+  - myHMB (beta-hydroxy beta-methylbutyrate) 1,500 mg     # page: "myHMB® ... 1,500 mg"
+  - vitamin D3 (cholecalciferol) 12.5 mcg                 # page: "12.5 mcg (500 IU)"
+  - BioPerine black pepper fruit extract 5 mg             # page: "Bioperine® ... 5 mg"
+
+dose:
+  serving_size_g: 7             # NSF Unflavored listing: "1 scoop/pack (7 g)"; flavors differ (e.g. Hawaiian Splash 9.5 g)
+  creatine_per_serving_g: 5     # page: "Creatine Monohydrate 5,000 mg"
+  servings_per_container: 30    # .js: "30sv"; NSF: 210 g / 7 g
+
+prices:
+  - retailer: Transparent Labs
+    price_usd: 49.99            # .js: "30sv / Unflavored" 4999 cents
+    servings: 30
+    url: https://www.transparentlabs.com/products/creatine-hmb
+    date_checked: 2026-10-20
+    entered_by: claude            # page shows "3425 Reviews" but no average, so no rating
+  - retailer: Transparent Labs
+    price_usd: 89.99            # .js: "60sv / Unflavored" 8999 cents
+    servings: 60
+    url: https://www.transparentlabs.com/products/creatine-hmb
+    date_checked: 2026-10-20
+    entered_by: claude
+  - retailer: Scheels
+    price_usd: 49.99            # "Transparent Labs HMB Creatine", 30 Servings, $49.99 (Hawaiian Splash selected)
+    servings: 30
+    url: https://www.scheels.com/p/87465900024/
+    date_checked: 2026-10-20
+    rating:                     # page data: "averageRating":4.7, "ratingCount":2634
+      stars: 4.7
+      count: 2634
+    entered_by: claude
+
+certifications:
+  - program: NSF Certified for Sport
+    # "Creatine HMB Unflavored", United States, 105 g / 210 g / 420 g, 1 scoop/pack (7 g), powder
+    listing_url: https://www.nsfsport.com/certified-products/listing-detail.php?id=1755008
+    date_verified: 2026-10-20
+    entered_by: claude
+
+coas:
+  # Linked from the product page as "View product purity test results". CHECK: this is the
+  # Tropical Punch flavor, not Unflavored.
+  - url: https://cdn.shopify.com/s/files/1/0866/7664/files/TPL_Creatine_HMP_WS_Tropical_Punch_30_SERV_-_26080537_-_Heavy_Metals_Micro.pdf?v=1788183039
+    lab: Advanced Laboratories  # named in the COA disclaimer; "Lab No: 300494-01"; no address
+    iso_17025: unknown
+    lot: "26080537"
+    test_date: 2026-08-24       # "Received: 8/20/2026", "Completed: 8/24/2026"
+    scope: finished_product     # "TPL Creatine HMP WS Tropical Punch (30 SERV)"
+    # Micro (TAMC, coliform, E. coli, S. aureus, Salmonella, yeast & mold); As, Cd, Hg, Pb
+    # by ICP-MS per 9.6 g. No creatine assay, creatinine, DCD or DHT.
+    tests: [microbial, lead, arsenic, cadmium, mercury]
+    entered_by: claude
+# The "ingredient verification" COA (CREATINE_HMB_-_Peach_Mango_Creatine_Only_2.pdf) is an
+# image-only PDF Claude could not read, so it is left out.
+
+flags: [added HMB, added vitamin D3, added black pepper extract]
+notes: ""

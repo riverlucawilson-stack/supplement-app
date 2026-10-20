@@ -1,0 +1,44 @@
+# Looked up by Claude on 2026-10-20 from trycreate.co (.js variant data), The Feed and NSF.
+# Entries marked entered_by: claude still need River's check.
+# Note: this is a powder stick pack, not a gummy. Create sells it bundled with the gummies.
+category: creatine
+entered_by: claude
+brand: Create Wellness
+name: Creatine + Electrolytes Mix
+form: powder
+creatine_type: monohydrate
+other_ingredients:              # The Feed, Watermelon single: sodium 500 mg, potassium 250 mg (as potassium chloride), magnesium 50 mg (as magnesium citrate), chloride 230 mg, L-Taurine 1 g
+  - L-taurine                   # The Feed other ingredients: "sea salt, citric acid, natural flavoring, malic acid, and OnoSweet (Reb-M 95%)"
+  - sea salt
+  - potassium chloride
+  - magnesium citrate
+  - citric acid
+  - natural flavoring
+  - malic acid
+  - stevia Reb-M (OnoSweet)
+
+dose:
+  serving_size_g: 11            # NSF listing: serving size "1 stick (11 g)"
+  creatine_per_serving_g: 5     # The Feed / trycreate.co: "5g creatine monohydrate" per stick
+  servings_per_container: 30    # .js: "Pouch - 30ct"; NSF: "30 ct (318 g)"
+
+prices:
+  - retailer: Create Wellness
+    price_usd: 60.00            # .js: every flavor "/ Pouch - 30ct" variant, $60.00 one-time
+    servings: 30
+    url: https://trycreate.co/products/creatine-electrolytes-mix
+    date_checked: 2026-10-20
+    entered_by: claude
+
+certifications:
+  - program: NSF Certified for Sport
+    # "Create Wellness Creatine + Electrolytes Lemon Lime", Stick, "1 stick (11 g), 12 stick (127 g), 30 ct (318 g)",
+    # specific lots only. Country of sale field is blank. Other flavors have their own listings.
+    listing_url: https://www.nsfsport.com/certified-products/listing-detail.php?id=1783230
+    date_verified: 2026-10-20
+    entered_by: claude
+
+coas: []                        # none found
+
+flags: [added electrolytes, added taurine, added sweeteners]
+notes: ""

@@ -1,0 +1,32 @@
+# Looked up by Claude on 2026-10-20 from animalpak.com and the Navy Exchange (mynavyexchange.com).
+# Entries marked entered_by: claude still need River's check.
+category: creatine
+entered_by: claude
+brand: Animal
+name: Creatine Chews
+form: gummy                     # chewable tablets
+creatine_type: monohydrate
+other_ingredients:              # animalpak.com: AstraGin® 25 mg, Sea Salt 25 mg. Full other-ingredients list is image-only.
+  - AstraGin (Panax notoginseng and Astragalus membranaceus)
+  - sea salt
+
+dose:
+  serving_size_g: 5             # CHECK: serving weight not stated; this is the creatine grams per serving (4 chews)
+  creatine_per_serving_g: 5     # animalpak.com: "Four chewable tablets make up one serving", "5g of creatine monohydrate per serving"
+  servings_per_container: 30    # CHECK: 120 chews / 4 per serving; label's servings figure not seen as text
+
+prices:
+  - retailer: Navy Exchange
+    price_usd: 34.99            # NEX: "Retail Price: $34.99", "Size: 120 COUNT"
+    servings: 30                # 120 chews / 4-chew serving
+    url: https://www.mynavyexchange.com/universal-nutrition-animal-creatine-chews/14631585
+    date_checked: 2026-10-20
+    entered_by: claude
+# animalpak.com shows "$29.95" (Sour Surge) but the page text gives no count, so it isn't listed.
+
+certifications: []              # not found on NSF's creatine search; an image filename on animalpak.com mentions NSF, not confirmed
+
+coas: []                        # none on animalpak.com
+
+flags: [added AstraGin, added sea salt]
+notes: ""

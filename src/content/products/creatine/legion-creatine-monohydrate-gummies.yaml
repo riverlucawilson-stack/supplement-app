@@ -1,0 +1,49 @@
+# Looked up by Claude on 2026-10-20 from Target (sold & shipped by Legion Athletics)
+# and legionathletics.com. Entries marked entered_by: claude still need River's check.
+# CHECK: the two pages disagree. Target says a 4-gummy serving and lists maltitol,
+# isomalt, erythritol and stevia; Legion's own page says 5 gummies per serving and
+# describes stevia, allulose and monk fruit. Possibly a reformulation. Both say 5 g creatine.
+category: creatine
+entered_by: claude
+brand: Legion
+name: Creatine Monohydrate Gummies
+form: gummy
+creatine_type: monohydrate
+other_ingredients:              # Target: "maltitol syrup, isomalt, erythritol, pectin, sodium citrate, natural blueberry flavor, natural raspberry flavor, phycocyanin (color), stevia leaf extract"
+  - maltitol syrup
+  - isomalt
+  - erythritol
+  - pectin
+  - sodium citrate
+  - natural blueberry flavor
+  - natural raspberry flavor
+  - phycocyanin (color)
+  - stevia leaf extract
+
+dose:
+  serving_size_g: 5             # CHECK: serving weight not stated; this is the creatine grams per serving
+  creatine_per_serving_g: 5     # Target: "Creatine Monohydrate (5 grams per serving)"
+  servings_per_container: 30    # Target: "Serving Per Container: 30"
+
+prices:
+  - retailer: Target
+    price_usd: 34.95            # Target: Sour Blue Raspberry, "30 servings", "$34.95"
+    servings: 30
+    url: https://www.target.com/p/creatine-gummies-creatine-monohydrate-supplement-sour-blue-raspberry/-/A-1003210037
+    date_checked: 2026-10-20
+    rating:                     # Target: "4.48 out of 5 stars", "48" ratings
+      stars: 4.48
+      count: 48
+    entered_by: claude
+# Legion's own page gives only "$1.66 per serving", no container price, so it isn't listed.
+
+certifications: []              # not found on NSF's creatine search; Informed Sport's site could not be loaded
+
+# COA: Legion's page links a COA and a Labdoor report as images
+# (https://legionathletics.com/wp-content/uploads/2026/08/Creatine-Gummies-COA.png,
+#  https://legionathletics.com/wp-content/uploads/2026/01/Creatine-Gummies-Labdoor-Combined.png)
+# but the image could not be opened/read, so no COA is entered. River: open it by hand.
+coas: []
+
+flags: [added sweeteners, added sugar alcohols]
+notes: ""

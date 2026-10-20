@@ -1,0 +1,35 @@
+# Looked up by Claude on 2026-10-20 from the Vitacost product page and NSF.
+# Entries marked entered_by: claude still need River's check.
+category: creatine
+entered_by: claude
+brand: Designs for Sport
+name: Creatine Monohydrate
+form: powder
+creatine_type: monohydrate
+other_ingredients: []           # Vitacost Supplement Facts lists only creatine monohydrate
+
+dose:
+  serving_size_g: 5             # Vitacost: "Serving Size: 5 grams (approx. one scoop)"
+  creatine_per_serving_g: 5     # Vitacost: 5 g creatine monohydrate per serving
+  servings_per_container: 90    # Vitacost Supplement Facts: 90 servings
+
+prices:
+  - retailer: Vitacost
+    price_usd: 48.99            # Vitacost: "1 lb (450 g)", $48.99
+    servings: 90
+    url: https://www.vitacost.com/products/designs-for-health-designs-for-sport-creatine-monohydrate-1-lb-450-g-149258
+    date_checked: 2026-10-20
+    # No rating: the page shows 9 reviews but doesn't print an average.
+    entered_by: claude
+
+certifications:
+  - program: NSF Certified for Sport
+    # "Creatine Monohydrate", Designs for Sport, United States, Unflavored, 450 g, 1 scoop (5 g), Lot # All
+    listing_url: https://www.nsfsport.com/certified-products/listing-detail.php?id=1536549
+    date_verified: 2026-10-20
+    entered_by: claude
+
+coas: []                        # no COA link on the Vitacost page; web search found none
+
+flags: []
+notes: ""
