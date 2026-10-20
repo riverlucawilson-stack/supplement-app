@@ -16,7 +16,7 @@ prices:
     date_checked: 2099-01-01       # in the future
   - retailer: Sample Store 1       # listed twice
     price_usd: 25
-    servings: 60
+    servings: 60                   # same store, same size
     url: https://example.com/broken
     date_checked: 2020-01-01       # stale
     entered_by: claude             # not yet verified

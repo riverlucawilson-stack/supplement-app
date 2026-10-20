@@ -33,6 +33,10 @@ prices:
     servings: 0                # servings in the container THIS store sells
     url: https://
     date_checked: 2026-01-01   # the day you checked it (year-month-day)
+    # rating:                  # optional: the store's own review summary, if shown
+    #   stars: 4.7             # average, 0 to 5
+    #   count: 1234            # number of reviews
+    #   url: https://          # optional: where to read them (defaults to the price url)
 
 # --- From the certifier's own website (not the brand's claims) ---
 # Search for the exact product. If it isn't listed there, leave this as [].

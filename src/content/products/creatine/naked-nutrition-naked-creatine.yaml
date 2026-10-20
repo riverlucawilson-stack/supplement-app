@@ -1,0 +1,39 @@
+# Looked up by Claude on 2026-10-20 from nakednutrition.com (product pages and
+# their .js variant data). Entries marked entered_by: claude still need River's check.
+category: creatine
+entered_by: claude
+brand: Naked Nutrition
+name: Naked Creatine (Unflavored)
+form: powder
+creatine_type: monohydrate
+other_ingredients: []           # page: ingredients "Creatine Monohydrate" only
+
+dose:
+  serving_size_g: 5             # page: "5g of creatine per serving"; single ingredient
+  creatine_per_serving_g: 5
+  servings_per_container: 200   # 2.2LB size: "200 servings"
+
+prices:
+  - retailer: Naked Nutrition
+    price_usd: 35.99            # .js: 2.2LB variant
+    servings: 200               # page: "2.2LB 200 servings"
+    url: https://nakednutrition.com/products/creatine-monohydrate-powder
+    date_checked: 2026-10-20
+    rating:                     # page: "Rated 4.9 out of 5 stars", "Based on 3,036 reviews"
+      stars: 4.9
+      count: 3036
+    entered_by: claude
+  - retailer: Naked Nutrition
+    price_usd: 21.99            # .js: 1.1LB variant
+    servings: 100               # page: "1.1LB 100 servings"
+    url: https://nakednutrition.com/products/creatine-monohydrate-powder-500g
+    date_checked: 2026-10-20
+    entered_by: claude
+
+# The page says "Contents Certified by NSF". That is NSF's label-claim program,
+# not NSF Certified for Sport, so it isn't one of the site's certification programs.
+certifications: []
+coas: []                        # no COA link on the page
+
+flags: []
+notes: ""

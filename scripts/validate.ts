@@ -127,8 +127,9 @@ function checkFile(path: string): FileReport {
 
   // --- Things to look at ---
   if (product.prices.length === 0) warnings.push('No prices yet, so it has no cost per dose.');
-  const retailers = product.prices.map((p) => p.retailer.toLowerCase());
-  const duplicates = [...new Set(retailers.filter((r, i) => retailers.indexOf(r) !== i))];
+  // The same store can sell several sizes; only flag the same store AND size twice.
+  const listings = product.prices.map((p) => `${p.retailer.toLowerCase()} (${p.servings} servings)`);
+  const duplicates = [...new Set(listings.filter((r, i) => listings.indexOf(r) !== i))];
   for (const r of duplicates) warnings.push(`Retailer "${r}" is listed more than once. Is that on purpose?`);
 
   const { min, max } = category.plausibleCostPerReferenceDose;

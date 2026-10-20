@@ -20,6 +20,8 @@ const rows = (await getCollection('products'))
     const p = entry.data;
     const best = bestPrice(p, today);
     const tier = tierFor(p, today);
+    // Star rating: prefer the best-price store's, else the first store that has one.
+    const rated = best?.price.rating ? best.price : p.prices.find((x) => x.rating);
     const currentCerts = p.certifications.filter((c) => isCertificationCurrent(c.date_verified, today));
     return {
       id: entry.id,
@@ -28,6 +30,9 @@ const rows = (await getCollection('products'))
       tier: tier.tier,
       certs: currentCerts.map((c) => c.program),
       coaCount: p.coas.length,
+      rating: rated?.rating
+        ? { ...rated.rating, retailer: rated.retailer, url: rated.rating.url ?? rated.url }
+        : undefined,
       sample: isSampleProduct(p),
       unverified: hasUnverifiedData(p),
     };
@@ -127,6 +132,15 @@ const tierOrder = { A: 0, B: 1, C: 2 } as const;
                     {formLabel[r.product.form]} · {category.typeLabels[r.product.creatine_type]}
                     {r.product.raw_material && ` · ${r.product.raw_material}`}
                   </span>
+                  {r.rating && (
+                    <a class="rating" href={r.rating.url} rel="noopener" target="_blank">
+                      <span class="stars" aria-hidden="true">★</span>
+                      <span class="num">{r.rating.stars.toFixed(1)}</span>
+                      <span class="rating-count">
+                        {r.rating.count.toLocaleString('en-US')} reviews at {r.rating.retailer}
+                      </span>
+                    </a>
+                  )}
                   {(r.sample || r.unverified) && (
                     <span class="tags">
                       {r.sample && <span class="pill pill-muted">Sample data</span>}
@@ -199,8 +213,9 @@ const tierOrder = { A: 0, B: 1, C: 2 } as const;
       </div>
     </dl>
     <p class="fine">
-      Prices are checked by hand and marked stale after {settings.priceStaleAfterDays} days. A certification counts
-      only if it appears on the certifier's own website.
+      Prices are read from each store's own page and marked stale after {settings.priceStaleAfterDays} days. A certification counts
+      only if it appears on the certifier's own website. Star ratings are each store's own customer reviews, shown
+      for reference; they never affect the order of the table.
     </p>
   </section>
 </BaseLayout>
@@ -457,6 +472,32 @@ const tierOrder = { A: 0, B: 1, C: 2 } as const;
     align-items: center;
     gap: 0.4rem;
     flex-wrap: wrap;
+  }
+
+  .rating {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.3rem;
+    margin-top: 0.3rem;
+    font-size: 0.8125rem;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .rating:hover .rating-count {
+    text-decoration: underline;
+  }
+
+  .stars {
+    color: var(--tier-b);
+  }
+
+  .rating .num {
+    font-weight: 600;
+  }
+
+  .rating-count {
+    color: var(--muted);
   }
 
   .tags {

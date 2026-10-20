@@ -9,6 +9,15 @@ export const date = z.coerce.date();
 // checked it against its source; the validation script warns until you do.
 export const enteredBy = z.literal('claude').optional();
 
+// The store's own review summary for this listing, read on date_checked.
+// Only the average and count, never review text.
+export const ratingSchema = z.strictObject({
+  stars: z.number().min(0).max(5),
+  count: z.number().int().nonnegative(),
+  // Where shoppers can read the reviews. Defaults to the price's url.
+  url: z.url().optional(),
+});
+
 export const priceSchema = z.strictObject({
   retailer: z.string().min(1),
   price_usd: z.number().positive(),
@@ -16,6 +25,7 @@ export const priceSchema = z.strictObject({
   servings: z.number().int().positive(),
   url: z.url(),
   date_checked: date,
+  rating: ratingSchema.optional(),
   entered_by: enteredBy,
 });
 

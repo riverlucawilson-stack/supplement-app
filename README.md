@@ -97,7 +97,12 @@ Open the product's file and find its entry under `prices:`. Change `price_usd`, 
 the number of servings in **that store's** container. Never type a cost per gram: the
 site calculates it.
 
-To add a store, copy one `- retailer:` block (all five lines) and edit it.
+To add a store, copy one `- retailer:` block and edit it.
+
+**Star ratings** are optional. If the store shows a review summary, add a `rating:` under
+that price with `stars` (the average, 0 to 5) and `count` (number of reviews), checked on
+the same day as the price. Only the average and count go on the site, never review text.
+Ratings never change the table's order.
 
 ## How the numbers are calculated
 

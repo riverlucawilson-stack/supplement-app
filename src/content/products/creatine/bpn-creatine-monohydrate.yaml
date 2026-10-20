@@ -1,0 +1,48 @@
+# Looked up by Claude on 2026-10-20 from bareperformancenutrition.com (product page
+# and its .js variant data) and NSF. Entries marked entered_by: claude still need River's check.
+category: creatine
+entered_by: claude
+brand: Bare Performance Nutrition
+name: Creatine Monohydrate
+form: powder
+creatine_type: monohydrate
+raw_material: Creapure          # page: "Creatine Monohydrate sourced from Creapure®"
+other_ingredients: []           # CHECK: Supplement Facts is an image; 5 g serving = 5 g creatine
+
+dose:
+  serving_size_g: 5             # page: "1 serving (5 grams)"
+  creatine_per_serving_g: 5     # page: "providing 5 grams per serving"
+  servings_per_container: 60
+
+prices:
+  - retailer: Bare Performance Nutrition
+    price_usd: 34.99            # .js: "60 Servings" variant
+    servings: 60
+    url: https://www.bareperformancenutrition.com/products/creatine-monohydrate
+    date_checked: 2026-10-20
+    rating:                     # page: "Rated 4.9 out of 5 stars", "Based on 3,349 reviews"
+      stars: 4.9
+      count: 3349
+    entered_by: claude
+  - retailer: Bare Performance Nutrition
+    price_usd: 19.99            # .js: "30 Servings" variant
+    servings: 30
+    url: https://www.bareperformancenutrition.com/products/creatine-monohydrate
+    date_checked: 2026-10-20
+    rating:                     # page: "Rated 4.9 out of 5 stars", "Based on 3,349 reviews"
+      stars: 4.9
+      count: 3349
+    entered_by: claude
+
+certifications:
+  - program: NSF Certified for Sport
+    # "Creatine Monohydrate", US, unflavored, 150 g / 300 g / 500 g, 1 scoop (5 g), Lot # All
+    listing_url: https://www.nsfsport.com/certified-products/listing-detail.php?id=1635096
+    date_verified: 2026-10-20
+    entered_by: claude
+# Not listed: Informed Sport shows this product as withdrawn from its program on 2024-09-06.
+
+coas: []                        # no COA link on the page
+
+flags: []
+notes: ""

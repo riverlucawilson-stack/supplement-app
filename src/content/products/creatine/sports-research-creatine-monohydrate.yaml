@@ -1,0 +1,34 @@
+# Looked up by Claude on 2026-10-20 from sportsresearch.com. Entries marked
+# entered_by: claude still need River's check.
+category: creatine
+entered_by: claude
+brand: Sports Research
+name: Creatine Monohydrate (Unflavored)
+form: powder
+creatine_type: monohydrate
+other_ingredients: []           # CHECK: no ingredient list in the page text
+
+dose:
+  serving_size_g: 5             # page: "one 5 gram scoop"
+  creatine_per_serving_g: 5     # page: "5 grams of easily absorbable creatine per serving"
+  servings_per_container: 60    # 10.58 oz (300 g) ÷ 5 g; the page doesn't state servings
+
+prices:
+  - retailer: Sports Research
+    price_usd: 17.95            # page: "Unflavored / 5 G MICRONIZED CREATINE | 10.58 OZ", "One-Time Purchase$17.95"
+    servings: 60
+    url: https://www.sportsresearch.com/products/creatine-monohydrate
+    date_checked: 2026-10-20
+    entered_by: claude
+
+# NOT ADDED, NEEDS YOUR CALL: NSF Certified for Sport lists Sports Research
+# "Creatine Monohydrate Unflavored" (US, 450 g):
+#   https://www.nsfsport.com/certified-products/listing-detail.php?id=1751614
+# but the tub sold on sportsresearch.com is 10.58 oz (300 g). If you confirm the
+# listing covers this tub, add it here. The page also says "Informed Sport", but
+# its search page couldn't be read to confirm.
+certifications: []
+coas: []                        # no COA link on the page
+
+flags: []
+notes: ""
