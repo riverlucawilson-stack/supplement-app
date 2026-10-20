@@ -1,0 +1,37 @@
+# Looked up by Claude on 2026-10-20 from ghostlifestyle.com (product page and .js variant
+# data) and The Vitamin Shoppe. This file describes the Unflavored version.
+# Entries marked entered_by: claude still need River's check.
+category: creatine
+entered_by: claude
+brand: GHOST
+name: Creatine (Unflavored)
+form: powder
+creatine_type: monohydrate      # Vitamin Shoppe: "OPTICREATINE CREATINE MONOHYDRATE"
+raw_material: OptiCreatine      # Vitamin Shoppe label; ghostlifestyle.com: "5G OptiCreatine™"
+other_ingredients: []           # Vitamin Shoppe: Other ingredients "None."
+
+dose:
+  serving_size_g: 5             # CHECK: label says "1 Scoop", gram weight not stated; using creatine grams
+  creatine_per_serving_g: 5     # Vitamin Shoppe: "5,000 MG" OptiCreatine creatine monohydrate
+  servings_per_container: 50    # "50 Servings" (flavored versions have 40)
+
+prices:
+  - retailer: GHOST
+    price_usd: 24.99            # .js: "50 Servings / Unflavored" 2499 cents (one-time)
+    servings: 50
+    url: https://www.ghostlifestyle.com/products/ghost-creatine-unflavored
+    date_checked: 2026-10-20
+    entered_by: claude
+  - retailer: The Vitamin Shoppe
+    price_usd: 24.99            # "Creatine - 5g Creatine - Unflavored (50 Servings)" $24.99
+    servings: 50
+    url: https://www.vitaminshoppe.com/p/ghost-creatine-unflavored-9-powder/ghs-17890
+    date_checked: 2026-10-20
+    entered_by: claude
+
+certifications: []              # NSF brand search "GHOST": only energy drinks; not in Informed Sport Oct-2026 list
+
+coas: []                        # no COA link on either page
+
+flags: []
+notes: ""

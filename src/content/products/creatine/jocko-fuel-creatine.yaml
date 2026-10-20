@@ -33,7 +33,7 @@ prices:
       count: 831
     entered_by: claude
 
-certifications: []              # not in Informed Sport Oct-2026 list; NSF not checked by brand page yet
+certifications: []              # NSF brand search "Jocko": no results; not in Informed Sport Oct-2026 list
 
 coas: []                        # page says batches are tested but links no report
 

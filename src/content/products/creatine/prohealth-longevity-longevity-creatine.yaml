@@ -1,0 +1,31 @@
+# Looked up by Claude on 2026-10-20 from the Vitacost product page and NSF.
+# Entries marked entered_by: claude still need River's check.
+category: creatine
+entered_by: claude
+brand: ProHealth Longevity
+name: Longevity Creatine Pure Powder
+form: powder
+creatine_type: monohydrate
+raw_material: Creavitalis       # Vitacost Supplement Facts: "Creavitalis™ Creatine Monohydrate"
+other_ingredients: []           # Vitacost: other ingredients "None"
+
+dose:
+  serving_size_g: 5             # Vitacost: "1 Scoop (5 g)"
+  creatine_per_serving_g: 5     # Vitacost: 5 g Creavitalis creatine monohydrate
+  servings_per_container: 90    # Vitacost Supplement Facts: 90
+
+prices:
+  - retailer: Vitacost
+    price_usd: 49.95            # Vitacost: "15.9 oz (450 g)", $49.95
+    servings: 90
+    url: https://www.vitacost.com/products/prohealth-longevity-longevity-creatine-pure-powder-15-9-oz-450-g-137865
+    date_checked: 2026-10-20
+    # No rating: the page shows a star breakdown but no printed average or total.
+    entered_by: claude
+
+certifications: []              # not found in NSF's "creatine" search results on 2026-10-20
+
+coas: []                        # no COA link on the Vitacost page; web search found none
+
+flags: []
+notes: ""
