@@ -1,0 +1,40 @@
+# Looked up by Claude on 2026-10-20 from iHerb, Vitacost and cellucor.com (.js
+# variant data). Entries marked entered_by: claude still need River's check.
+category: creatine
+entered_by: claude              # label info from the iHerb and Vitacost Supplement Facts
+brand: Cellucor
+name: COR-Performance Creatine
+form: powder
+creatine_type: monohydrate      # iHerb: "Micronized Creatine Monohydrate 5 g"
+other_ingredients: []           # iHerb and Vitacost: "None."
+
+dose:
+  serving_size_g: 5             # iHerb: "5 g (Approx. 1 level scoop)"
+  creatine_per_serving_g: 5
+  servings_per_container: 72    # iHerb, 360 g tub: "72"
+
+prices:
+  - retailer: iHerb
+    price_usd: 18.99            # iHerb: "Unflavored, 12.7oz (360 g)", "$18.99"
+    servings: 72
+    url: https://www.iherb.com/pr/c4-cellucor-creatin-cor-performance-creatine-unflavored-12-69-oz-360-g/77551
+    date_checked: 2026-10-20
+    rating:                     # iHerb: "4.8" average, "172" reviews
+      stars: 4.8
+      count: 172
+    entered_by: claude
+  - retailer: Vitacost
+    price_usd: 18.99            # Vitacost: "Unflavored, 12.7oz (360 g)", "Regular price $18.99"
+    servings: 72
+    url: https://www.vitacost.com/cellucor-cor-performance-creatine-unflavored-72-servings
+    date_checked: 2026-10-20
+    entered_by: claude
+# Not added: cellucor.com lists "72 Servings / Unflavored" at $18.99 but out of
+# stock. Target's page showed no price.
+
+certifications: []              # NSF creatine search lists C4/Cellucor products, but not this one
+
+coas: []                        # no COA found on cellucor.com or by web search
+
+flags: []
+notes: ""

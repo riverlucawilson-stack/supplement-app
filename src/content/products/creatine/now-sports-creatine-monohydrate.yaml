@@ -1,0 +1,60 @@
+# Looked up by Claude on 2026-10-20 from nowfoods.com, iHerb and Vitacost.
+# Entries marked entered_by: claude still need River's check.
+category: creatine
+entered_by: claude              # label info from nowfoods.com and iHerb Supplement Facts
+brand: NOW
+name: Sports Creatine Monohydrate
+form: powder
+creatine_type: monohydrate      # label: "Creatine Monohydrate 5 g (5,000 mg)"
+other_ingredients: []           # nowfoods.com and iHerb: "Other ingredients: None."
+
+dose:
+  serving_size_g: 5             # label: "1 1/2 Level Teaspoons (approx. 5 g)"
+  creatine_per_serving_g: 5
+  servings_per_container: 200   # iHerb, 2.2 lb (1 kg): "about 200"
+
+prices:
+  - retailer: NOW Foods
+    price_usd: 11.99            # nowfoods.com: "8 oz.", "about 45" servings, $11.99 (shown as sale)
+    servings: 45
+    url: https://www.nowfoods.com/products/sports-nutrition/creatine-monohydrate-powder
+    date_checked: 2026-10-20
+    entered_by: claude
+  - retailer: NOW Foods
+    price_usd: 24.74            # nowfoods.com: "21.2 oz.", "about 120" servings, $24.74 (shown as sale)
+    servings: 120
+    url: https://www.nowfoods.com/products/sports-nutrition/creatine-monohydrate-powder
+    date_checked: 2026-10-20
+    entered_by: claude
+  - retailer: NOW Foods
+    price_usd: 41.24            # nowfoods.com: "35.2 oz. (2.2 lbs.)", "about 200" servings, $41.24 (shown as sale)
+    servings: 200
+    url: https://www.nowfoods.com/products/sports-nutrition/creatine-monohydrate-powder
+    date_checked: 2026-10-20
+    entered_by: claude
+  - retailer: iHerb
+    price_usd: 38.46            # iHerb: "2.2 lbs (1 kg)", "$38.46"
+    servings: 200
+    url: https://www.iherb.com/pr/now-foods-sports-creatine-monohydrate-2-2-lbs-1-kg/535
+    date_checked: 2026-10-20
+    rating:                     # iHerb: 4.7, 5,646 ratings and reviews
+      stars: 4.7
+      count: 5646
+    entered_by: claude
+  - retailer: Vitacost
+    price_usd: 38.46            # Vitacost: "2.2 lbs (1 kg)", "Regular price $38.46"
+    servings: 200
+    url: https://www.vitacost.com/now-sports-creatine-monohydrate-informed-sport-certified-2-2-lbs
+    date_checked: 2026-10-20
+    entered_by: claude
+
+# NOT ADDED, NEEDS YOUR CALL: nowfoods.com and iHerb show an Informed Sport badge,
+# and Informed Sport has a page for "NOW Sports Creatine Monohydrate Powder":
+#   https://sport.wetestyoutrust.com/supplement-search/now-foods/now-sports-creatine-monohydrate-powder
+# but that page couldn't be loaded to confirm it. No NSF listing found.
+certifications: []
+
+coas: []                        # nowfoods.com has a general testing page but no product COA
+
+flags: []
+notes: ""

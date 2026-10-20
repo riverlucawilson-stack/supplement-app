@@ -1,0 +1,40 @@
+# Looked up by Claude on 2026-10-20 from muscletech.com (page and .js variant
+# data) and iHerb. Entries marked entered_by: claude still need River's check.
+category: creatine
+entered_by: claude              # label info from iHerb and muscletech.com (unflavored)
+brand: MuscleTech
+name: Platinum 100% Creatine
+form: powder
+creatine_type: monohydrate      # iHerb: "Micronized creatine monohydrate 5 g"
+other_ingredients: []           # CHECK: no ingredient list shown for Unflavored on either page
+
+dose:
+  serving_size_g: 5             # iHerb: "1 Scoop (5 g)"
+  creatine_per_serving_g: 5
+  # iHerb, 400 g tub: "Approx. 80". CHECK: muscletech.com's Unflavored facts panel
+  # says "About 90 servings" but the same page says a 400 g container gives 80.
+  servings_per_container: 80
+
+prices:
+  - retailer: MuscleTech
+    price_usd: 22.99            # .js: "Platinum 100% Creatine - Unflavored", $22.99, 400 g (only size)
+    servings: 80
+    url: https://www.muscletech.com/products/platinum-100-creatine
+    date_checked: 2026-10-20
+    entered_by: claude
+  - retailer: iHerb
+    price_usd: 23.19            # iHerb: "Unflavored, 14.11 oz (400 g)", "$23.19"
+    servings: 80
+    url: https://www.iherb.com/pr/muscletech-essential-series-platinum-100-creatine-unflavored-14-11-oz-400-g/74271
+    date_checked: 2026-10-20
+    rating:                     # iHerb: 4.7, "18,545 Reviews"
+      stars: 4.7
+      count: 18545
+    entered_by: claude
+
+certifications: []              # no NSF listing found; brand page names no certification
+
+coas: []                        # page says "HPLC-tested" but links no COA; none found by search
+
+flags: []
+notes: ""
