@@ -1,0 +1,48 @@
+# Looked up by Claude on 2026-10-20 from livemomentous.com, Sports Basement and NSF.
+# Entries marked entered_by: claude still need River's check.
+category: creatine
+entered_by: claude
+brand: Momentous
+name: Creatine Chews
+form: gummy                     # chewable tablets
+creatine_type: monohydrate
+raw_material: Creapure          # brand label text: "Creatine monohydrate (Creapure®) 5 grams"
+other_ingredients:              # brand page, Mango label: "Organic cane sugar, organic tapioca syrup, natural flavors, citric acid, sodium citrate, vegetable-derived magnesium stearate"
+  - organic cane sugar          # CHECK: brand page's Lemon Lime description lists different ingredients (dextrose, stearic acid, Reb M...)
+  - organic tapioca syrup
+  - natural flavors
+  - citric acid
+  - sodium citrate
+  - magnesium stearate
+
+dose:
+  serving_size_g: 5             # CHECK: serving weight not stated; this is the creatine grams per serving (5 chews)
+  creatine_per_serving_g: 5     # brand page, Mango label: serving "5 chewable tablets", Creapure "5 grams"
+  servings_per_container: 30    # brand page: "Servings per container: 30" (150 count)
+
+prices:
+  - retailer: Sports Basement
+    price_usd: 49.99            # "Creatine Chews (150 Count)", "49.99 USD", "Each Creatine Chew packs 1g of pure Creapure® creatine"
+    servings: 30                # CHECK: 150 chews / 5-chew label serving; page names "The Momentous Standard" but no brand field
+    url: https://sportsbasement.com/products/creatine-chews-150-ct
+    date_checked: 2026-10-20
+    entered_by: claude
+# livemomentous.com product page showed no price as text; iHerb is robots-blocked.
+
+certifications:
+  - program: NSF Certified for Sport
+    # "Creatine Chews Mango", Momentous, Tablet, "5 ct, 50 ct, 150 ct", serving "1 tablet", Lot # "All", US.
+    # Lemon Lime (id=1742462) and Strawberry (id=1760026) have their own listings.
+    listing_url: https://www.nsfsport.com/certified-products/listing-detail.php?id=1762910
+    date_verified: 2026-10-20
+    entered_by: claude
+
+# COA: https://www.livemomentous.com/cdn/shop/files/Mango_Creatine_Chews_0401F6A.pdf was opened.
+# Lot 0401F6A, "Momentous® Signature Spec Creatine", manufacture date 06/26, best by 06/28,
+# but it prints no test or report date and names no issuing lab (LightLabs and Eurofins appear
+# only in the method column), so it is not entered. Several results appear to exceed the printed
+# spec (e.g. lead 0.080 vs <= 0.05 mcg/day) - River: read the PDF yourself.
+coas: []
+
+flags: [added sugars]
+notes: ""

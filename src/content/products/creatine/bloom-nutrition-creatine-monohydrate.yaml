@@ -1,0 +1,34 @@
+# Looked up by Claude on 2026-10-20 from iHerb (label facts), H-E-B (price) and bloomnu.com.
+# Entries marked entered_by: claude still need River's check.
+# This file is the Unflavored version. The Raspberry Lemon version (9 oz / 254 g,
+# 6.35 g scoop, 5 g creatine, 40 servings; natural flavors, malic acid, stevia) is
+# not included: iHerb lists it at $19.98.
+category: creatine
+entered_by: claude
+brand: Bloom Nutrition
+name: Creatine Monohydrate - Unflavored
+form: powder
+creatine_type: monohydrate
+other_ingredients: []           # CHECK: iHerb lists no other ingredients; bloomnu.com lists only "Micronized Creatine Monohydrate"
+
+dose:
+  serving_size_g: 5.15          # iHerb: "Serving Size: 1 Scoop (5.15 g)"
+  # CHECK: 5.15 g serving vs 5 g creatine with no other ingredients listed. Confirm on the label.
+  creatine_per_serving_g: 5     # iHerb: "Creatine Monohydrate 5 g"
+  servings_per_container: 40    # iHerb: 40
+
+prices:
+  - retailer: H-E-B
+    price_usd: 19.98            # H-E-B: "7.3 oz", "$19.98 each", "40 servings per container"
+    servings: 40
+    url: https://www.heb.com/product-detail/bloom-creatine-monohydrate-unflavored-7-3-oz/14952011
+    date_checked: 2026-10-20
+    entered_by: claude
+  # Not added: bloomnu.com lists $19.99 but doesn't state the container size or servings.
+
+certifications: []              # Bloom appears only in NSF's brand filter list, with no creatine product in its "creatine" results
+
+coas: []                        # no COA on bloomnu.com, iHerb or H-E-B
+
+flags: []
+notes: ""
