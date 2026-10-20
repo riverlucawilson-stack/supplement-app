@@ -1,0 +1,46 @@
+# Looked up by Claude on 2026-10-20 from kaged.com (.js variant data and product page),
+# Vitacost and Informed Sport. Entries marked entered_by: claude still need River's check.
+category: creatine
+entered_by: claude
+brand: Kaged
+name: Creatine HCl (Unflavored powder)
+form: powder
+creatine_type: hcl
+raw_material: CON-CRET      # Vitacost label: "Creatine Hydrochloride (Con-Cret® Creatine HCl)"
+other_ingredients: []       # Vitacost: Ingredients "None"
+
+dose:
+  serving_size_g: 0.75          # Vitacost: "Serving Size: 1 Scoop (750 mg)"
+  creatine_per_serving_g: 0.75  # Vitacost: "750 mg" Creatine Hydrochloride. CHECK: weight of creatine HCl, not creatine base
+  servings_per_container: 75    # Vitacost: "about 75"
+
+prices:
+  - retailer: Kaged
+    price_usd: 24.99            # .js: "75 Servings / Unflavored" 2499 cents
+    servings: 75
+    url: https://www.kaged.com/products/creatine-hcl
+    date_checked: 2026-10-20
+    rating:                     # page: "Overall rating: 4.8335137 / 5 from 925 reviews" (all versions)
+      stars: 4.8
+      count: 925
+    entered_by: claude
+  - retailer: Vitacost
+    price_usd: 27.20            # "Kaged, Creatine HCl, Unflavored, 1.98 oz (56.25 g)" $27.20
+    servings: 75
+    url: https://www.vitacost.com/products/kaged-creatine-hcl-unflavored-1-98-oz-56-25-g-126238
+    date_checked: 2026-10-20
+    entered_by: claude
+
+certifications:
+  - program: Informed Sport
+    # "Creatine HCL Powder" (Unflavored, Fruit Punch, Lemon Lime), Certified Product, date certified
+    # 15-Aug-2017; latest Unflavored batch 7KM25021 tested 26 March 2025. No size listed.
+    listing_url: https://sport.wetestyoutrust.com/supplement-search/kaged/creatine-hcl-powder
+    date_verified: 2026-10-20
+    entered_by: claude
+# Not listed on NSF Certified for Sport (brand search "Kaged": no results).
+
+coas: []                        # no COA or lab-results link on kaged.com; search found none
+
+flags: []
+notes: "Dose is 750 mg creatine HCl per serving. Cost per 5 g is per 5 g of creatine HCl as labeled."

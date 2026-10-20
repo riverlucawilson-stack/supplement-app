@@ -1,0 +1,41 @@
+# Looked up by Claude on 2026-10-20 from kaged.com (.js variant data), Vitacost and
+# Informed Sport. Entries marked entered_by: claude still need River's check.
+category: creatine
+entered_by: claude
+brand: Kaged
+name: Creatine HCl Capsules
+form: capsule
+creatine_type: hcl
+other_ingredients: [vegetable cellulose (capsule)]   # Vitacost: "Vegetable cellulose (capsule)."
+
+dose:
+  serving_size_g: 0.75          # CHECK: capsule weight not stated; using creatine HCl grams per serving
+  creatine_per_serving_g: 0.75  # Vitacost: "Serving Size: 1 Capsule", "750 mg". CHECK: creatine HCl, not creatine base
+  servings_per_container: 75    # Vitacost: "about 75"
+
+prices:
+  - retailer: Kaged
+    price_usd: 24.99            # .js: "75 Servings / 75 Vegetable Caps" 2499 cents
+    servings: 75
+    url: https://www.kaged.com/products/creatine-hcl
+    date_checked: 2026-10-20
+    entered_by: claude
+  - retailer: Vitacost
+    price_usd: 27.20            # "Kaged, Creatine HCl, 75 Veggie Capsules (750 mg per Capsule)" $27.20
+    servings: 75
+    url: https://www.vitacost.com/products/kaged-creatine-hcl-75-veggie-capsules-750-mg-per-capsule-126654
+    date_checked: 2026-10-20
+    entered_by: claude
+
+certifications:
+  - program: Informed Sport
+    # "Creatine HCL Capsules", Unflavored, Certified Product, date certified 15-Aug-2017;
+    # latest batch CKM25031 tested 03 April 2025. No size listed.
+    listing_url: https://sport.wetestyoutrust.com/supplement-search/kaged/creatine-hcl-capsules
+    date_verified: 2026-10-20
+    entered_by: claude
+
+coas: []                        # no COA link found
+
+flags: []
+notes: "Dose is 750 mg creatine HCl per capsule. Cost per 5 g is per 5 g of creatine HCl as labeled."

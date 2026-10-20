@@ -1,0 +1,35 @@
+# Looked up by Claude on 2026-10-20 from The Vitamin Shoppe. kaged.com's CreaClear page
+# could not be fetched. Entries marked entered_by: claude still need River's check.
+category: creatine
+entered_by: claude
+brand: Kaged
+name: CreaClear
+form: powder
+creatine_type: monohydrate      # Vitamin Shoppe: "CREATINE MONOHYDRATE - CREACLEAR"
+other_ingredients: []           # Vitamin Shoppe: Other ingredients "None."
+
+dose:
+  serving_size_g: 5             # CHECK: label says "1 Scoop", gram weight not stated; using creatine grams
+  creatine_per_serving_g: 5     # Vitamin Shoppe: "CREATINE MONOHYDRATE - CREACLEAR" "5 GM"
+  servings_per_container: 30    # "Number of Servings: 30 Servings"
+
+prices:
+  - retailer: The Vitamin Shoppe
+    price_usd: 16.49            # page price today $16.49 (sale; regular "$21.99"), Unflavored 30 servings
+    servings: 30
+    url: https://www.vitaminshoppe.com/p/creaclear-5-gm-5-4-oz-powder/kgm-17337
+    date_checked: 2026-10-20
+    rating:                     # "Rated 5 out of 5", "1 Review"
+      stars: 5
+      count: 1
+    entered_by: claude
+
+certifications: []
+# "CreaClear" appears under KAGED in Informed Sport's October-2026 product list PDF
+# (sport.wetestyoutrust.com/sites/default/files/generated-pdf/file.pdf), but Claude could not
+# open a CreaClear listing page to match flavor/size, so it is not added. Not on NSF.
+
+coas: []
+
+flags: []
+notes: ""

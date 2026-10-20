@@ -1,0 +1,41 @@
+# Looked up by Claude on 2026-10-20 from jockofuel.com (product page and .js variant data).
+# Entries marked entered_by: claude still need River's check.
+category: creatine
+entered_by: claude
+brand: Jocko Fuel
+name: Creatine
+form: powder
+creatine_type: monohydrate      # page: only listed ingredient "Creatine Monohydrate"
+other_ingredients: []           # CHECK: Supplement Facts is an image; page lists only creatine monohydrate
+
+dose:
+  serving_size_g: 5             # page: "Mix one serving (5g) with 8 oz of water"
+  creatine_per_serving_g: 5     # CHECK: from "one serving (5g)" + creatine as the only ingredient
+  servings_per_container: 90    # .js: "90 Servings Tub"
+
+prices:
+  - retailer: Jocko Fuel
+    price_usd: 39.99            # .js: "90 Servings Tub" 3999 cents
+    servings: 90
+    url: https://jockofuel.com/products/jocko-creatine
+    date_checked: 2026-10-20
+    rating:                     # page: "4.957882 / 5 from 831 reviews"
+      stars: 5.0
+      count: 831
+    entered_by: claude
+  - retailer: Jocko Fuel
+    price_usd: 24.99            # .js: "30 Servings Stick Packs" 2499 cents
+    servings: 30
+    url: https://jockofuel.com/products/jocko-creatine
+    date_checked: 2026-10-20
+    rating:                     # page: "4.957882 / 5 from 831 reviews"
+      stars: 5.0
+      count: 831
+    entered_by: claude
+
+certifications: []              # NSF brand search "Jocko": no results; not in Informed Sport Oct-2026 list
+
+coas: []                        # page says batches are tested but links no report
+
+flags: []
+notes: ""

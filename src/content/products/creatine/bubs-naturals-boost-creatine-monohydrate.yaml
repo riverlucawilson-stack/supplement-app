@@ -1,0 +1,51 @@
+# Looked up by Claude on 2026-10-20 from bubsnaturals.com (product page and .js
+# variant data), Vitacost and NSF. Entries marked entered_by: claude still need River's check.
+category: creatine
+entered_by: claude
+brand: BUBS Naturals
+name: BUBS Boost Creatine Monohydrate
+form: powder
+creatine_type: monohydrate
+raw_material: Creapure          # page: "5 g Creapure® Creatine Monohydrate"
+other_ingredients: []           # page: "Other Ingredients: None"
+
+dose:
+  serving_size_g: 5             # page: 5 g (1 scoop); Vitacost facts: "1 Scoop (5 g)"
+  creatine_per_serving_g: 5
+  servings_per_container: 90    # Vitacost facts: "Servings Per Container: 90" (15.9 oz tub)
+
+prices:
+  - retailer: BUBS Naturals
+    price_usd: 43.00            # .js: "15.9oz Tub", 4300 cents
+    servings: 90
+    url: https://www.bubsnaturals.com/collections/boosts/products/creatine-monohydrate
+    date_checked: 2026-10-20
+    entered_by: claude
+  - retailer: BUBS Naturals
+    price_usd: 37.00            # .js: "30ct Travel Pack", 3700 cents (30 x 5 g packets)
+    servings: 30
+    url: https://www.bubsnaturals.com/collections/boosts/products/creatine-monohydrate
+    date_checked: 2026-10-20
+    entered_by: claude
+  - retailer: Vitacost
+    price_usd: 43.00            # page: "Sale price $43.00", "15.9 oz (450 g)"
+    servings: 90
+    url: https://www.vitacost.com/products/bubs-naturals-bubs-boost-creatine-monohydrate-unflavored-15-9-oz-450-g-159817
+    date_checked: 2026-10-20
+    entered_by: claude
+# Brand page shows "108 reviews" but no average, so no rating entered.
+
+certifications:
+  - program: NSF Certified for Sport
+    # "BUBS Boost Creatine Monohydrate", United States, Unflavored, 450 g / 5 g, 1 scoop (5 g)
+    listing_url: https://www.nsfsport.com/certified-products/listing-detail.php?id=1755708
+    date_verified: 2026-10-20
+    entered_by: claude
+
+# The product page links per-lot NSF reports on Google Drive (e.g. lot 622514801,
+# "COA_CreatineTub_NSF-Sport_622514801_BN80531_20261006.pdf"). Drive showed only a
+# loading screen, so Claude couldn't read them. River: open one and add it if readable.
+coas: []
+
+flags: []
+notes: ""

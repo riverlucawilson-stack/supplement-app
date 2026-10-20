@@ -1,0 +1,32 @@
+# Looked up by Claude on 2026-10-20 from xwerks.com. Entries marked entered_by: claude
+# still need River's check.
+category: creatine
+entered_by: claude
+brand: XWERKS
+name: Lift
+form: powder
+creatine_type: monohydrate      # page: "Micronized Creatine Monohydrate"
+other_ingredients: []           # ingredients line lists only "Micronized Creatine Monohydrate"
+
+dose:
+  serving_size_g: 5             # page: "1 scoop (5g)"
+  creatine_per_serving_g: 5
+  servings_per_container: 80    # page: "80 servings" per bag
+
+prices:
+  - retailer: XWERKS
+    price_usd: 49.00            # page: one-time "$49.00", "/ 80 servings · $0.61 per serving"
+    servings: 80
+    url: https://xwerks.com/products/xwerks-lift
+    date_checked: 2026-10-20
+    rating:                     # page: "4.9 · 140 reviews"
+      stars: 4.9
+      count: 140
+    entered_by: claude
+
+certifications: []              # NSF brand search "XWERKS": no results; not in Informed Sport Oct-2026 list
+
+coas: []                        # no COA link on the page; web search found none
+
+flags: []
+notes: ""

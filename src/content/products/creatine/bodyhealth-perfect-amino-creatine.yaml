@@ -1,0 +1,43 @@
+# Looked up by Claude on 2026-10-20 from the Vitacost product page, bodyhealth.com and NSF.
+# Entries marked entered_by: claude still need River's check.
+# This file is the powder. BodyHealth also sells a 150-tablet version (5 tablets =
+# 5 g creatine), not included because the site has no "tablet" form.
+category: creatine
+entered_by: claude
+brand: BodyHealth
+name: Perfect Amino Creatine
+form: powder
+creatine_type: monohydrate
+other_ingredients:              # Vitacost Supplement Facts
+  - Perfect Amino EAA & NA Proprietary Blend (2 g; essential amino acids and nucleotides)
+  - silicon dioxide
+  - stevia (rebaudioside M)
+  - monk fruit (luo han guo) extract
+  - katemfe fruit (thaumatococcus daniellii) extract
+
+dose:
+  serving_size_g: 7.6           # Vitacost: "1 scoop (7.6 g)"
+  creatine_per_serving_g: 5     # Vitacost: 5 g micronized creatine monohydrate
+  servings_per_container: 30    # Vitacost: "Servings Per Container: 30"
+
+prices:
+  - retailer: Vitacost
+    price_usd: 39.95            # Vitacost: "8.04 oz (228 g)", $39.95
+    servings: 30
+    url: https://www.vitacost.com/products/bodyhealth-perfect-amino-creatine-8-04-oz-228-g-160839
+    date_checked: 2026-10-20
+    entered_by: claude
+  # Not added: bodyhealth.com sells "Creatine Powder / 1 Container" for $43.95, but its
+  # page doesn't state the container size or servings in text (and shows "Pre-Order").
+
+certifications:
+  - program: NSF Certified for Sport
+    # "PERFECT AMINO® CREATINE", BodyHealth, United States, 228 g, 1 scoop (7.6 g), Lots 25L0382, 25H0521
+    listing_url: https://www.nsfsport.com/certified-products/listing-detail.php?id=1753373
+    date_verified: 2026-10-20
+    entered_by: claude
+
+coas: []                        # no COA link on Vitacost or bodyhealth.com
+
+flags: [added amino acids, proprietary blend (amino acids only; creatine dose disclosed), added sweeteners]
+notes: ""

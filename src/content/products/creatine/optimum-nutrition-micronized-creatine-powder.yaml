@@ -1,0 +1,53 @@
+# Looked up by Claude on 2026-10-20 from optimumnutrition.com (.js variant data)
+# and iHerb. Entries marked entered_by: claude still need River's check.
+category: creatine
+entered_by: claude              # label info from the iHerb Supplement Facts (unflavored)
+brand: Optimum Nutrition
+name: Micronized Creatine Powder
+form: powder
+creatine_type: monohydrate      # iHerb: "5 g creatine monohydrate"
+other_ingredients: []           # iHerb: "Other ingredients None."
+
+dose:
+  serving_size_g: 5             # iHerb: "5 g (1 Rounded Teaspoon)"
+  creatine_per_serving_g: 5
+  servings_per_container: 120   # iHerb, 600 g tub: "Servings per container: 120"
+
+prices:
+  - retailer: Optimum Nutrition
+    price_usd: 20.49            # .js: "Unflavored / 60 Servings (0.66 lb)"
+    servings: 60
+    url: https://www.optimumnutrition.com/en-us/products/creatine-monohydrate-micronized-powder
+    date_checked: 2026-10-20
+    entered_by: claude
+  - retailer: Optimum Nutrition
+    price_usd: 31.99            # .js: "Unflavored / 120 Servings (1.32 lb)"
+    servings: 120
+    url: https://www.optimumnutrition.com/en-us/products/creatine-monohydrate-micronized-powder
+    date_checked: 2026-10-20
+    entered_by: claude
+  - retailer: Optimum Nutrition
+    price_usd: 53.99            # .js: "Unflavored / 240 Servings (2.64 lb)"
+    servings: 240
+    url: https://www.optimumnutrition.com/en-us/products/creatine-monohydrate-micronized-powder
+    date_checked: 2026-10-20
+    entered_by: claude
+  - retailer: iHerb
+    price_usd: 27.99            # iHerb: "Unflavored, 1.32 lb (600 g)", "$27.99"
+    servings: 120
+    url: https://www.iherb.com/pr/optimum-nutrition-micronized-creatine-powder-unflavored-1-32-lb-600-g/68616
+    date_checked: 2026-10-20
+    rating:                     # iHerb: 4.7, "Based on 14,047 ratings"
+      stars: 4.7
+      count: 14047
+    entered_by: claude
+
+# iHerb shows an "Informed Choice" badge and Informed Choice has a page for
+# "Micronized Creatine Powder" (choice.wetestyoutrust.com), which couldn't be read.
+# Informed Choice isn't one of the site's programs, and no NSF listing was found.
+certifications: []
+
+coas: []                        # no COA found on optimumnutrition.com or by web search
+
+flags: []
+notes: ""

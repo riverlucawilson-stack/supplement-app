@@ -1,0 +1,44 @@
+# Looked up by Claude on 2026-10-20 from athleanx.com and NSF.
+# Entries marked entered_by: claude still need River's check.
+category: creatine
+entered_by: claude
+brand: ATHLEAN-RX
+name: Creatine Monohydrate
+form: powder
+creatine_type: monohydrate
+other_ingredients: []           # CHECK: Supplement Facts is an image; page says "no fillers"
+
+dose:
+  serving_size_g: 5.05          # page: "Take 1 serving (5.05g) daily"; NSF: "5.05 g (1 scoop)"
+  creatine_per_serving_g: 5     # page: "provides 5 grams of creatine monohydrate per serving"
+  servings_per_container: 90    # NSF: "455 g (90 servings)"; page: "450g (90 Days)"
+
+prices:
+  # CHECK: the page has no structured price data. Each price below sits in the
+  # same block as the image labelled with that size. Sale prices shown.
+  - retailer: ATHLEAN-X
+    price_usd: 38.99            # "450g (90 Days)" block: "$43.99", "$38.99" SALE PRICE
+    servings: 90
+    url: https://athleanx.com/athleanrx/creatine
+    date_checked: 2026-10-20
+    entered_by: claude
+  - retailer: ATHLEAN-X
+    price_usd: 17.99            # "150g (30 Days)" block: "$19.99", "$17.99" SALE PRICE
+    servings: 30
+    url: https://athleanx.com/athleanrx/creatine
+    date_checked: 2026-10-20
+    entered_by: claude
+# Page shows a 4.8 average but no review count, so no rating entered.
+
+certifications:
+  - program: NSF Certified for Sport
+    # "ATHLEAN-RX CREATINE MONOHYDRATE", United States, Unflavored,
+    # 152 g (30 servings) / 455 g (90 servings), 5.05 g (1 scoop)
+    listing_url: https://www.nsfsport.com/certified-products/listing-detail.php?id=1621489
+    date_verified: 2026-10-20
+    entered_by: claude
+
+coas: []                        # no COA on the product page; web search found none
+
+flags: []
+notes: ""

@@ -1,0 +1,39 @@
+# Looked up by Claude on 2026-10-20 from buckedup.com, Walmart and NSF.
+# Entries marked entered_by: claude still need River's check.
+# This file is the Unflavored version. Flavored versions (+$2.00) add fulvic
+# mineral complex and sucralose.
+category: creatine
+entered_by: claude
+brand: Bucked Up
+name: Essentials Creatine Monohydrate    # NSF and Walmart name; brand page title is "Creatine Monohydrate"
+form: powder
+creatine_type: monohydrate
+other_ingredients: []           # page: "Just one ingredient" (unflavored)
+
+dose:
+  serving_size_g: 5             # page: 1 scoop = 5 g; NSF: "1 scoop (5 g)"
+  creatine_per_serving_g: 5     # page: "5,000mg of pure micronized creatine monohydrate per serving"
+  servings_per_container: 50    # page: "50 Servings Per Container"
+
+prices:
+  - retailer: Bucked Up
+    price_usd: 19.99            # page: Unflavored (Original) $19.99 one-time, 50 servings
+    servings: 50
+    url: https://www.buckedup.com/creatine/creatine-monohydrate
+    date_checked: 2026-10-20
+    entered_by: claude
+# Walmart (https://www.walmart.com/ip/2398996898, 50 servings) showed no price for this item.
+# Brand page shows "Based on 54 reviews" but no average, so no rating entered.
+
+certifications:
+  - program: NSF Certified for Sport
+    # "Essentials Creatine Monohydrate", United States, Unflavored, 250 g (8.82 oz), 1 scoop (5 g)
+    # NSF also has id=1612589 (Unflavored, 125 g / 250 g / 500 g).
+    listing_url: https://www.nsfsport.com/certified-products/listing-detail.php?id=1669953
+    date_verified: 2026-10-20
+    entered_by: claude
+
+coas: []                        # buckedup.com/third-party-tests needs a product or lot search; nothing shown
+
+flags: []
+notes: ""

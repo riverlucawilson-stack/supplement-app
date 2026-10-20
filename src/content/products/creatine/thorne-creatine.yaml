@@ -28,7 +28,15 @@ certifications:
     date_verified: 2026-10-20
     entered_by: claude
 
-coas: []                        # no COA published on thorne.com as of 2026-10-20
+# NEEDS YOUR CALL (Informed Sport, 2026-10-20): couldn't confirm a listing. Tried
+#   https://sport.wetestyoutrust.com/supplement-search?search=creatine (fetch error)
+#   https://sport.wetestyoutrust.com/certified-brands (loads, but brands are logos only)
+# and a web search; no Informed Sport page for this product turned up.
+# COA: none published. Checked 2026-10-20: the product page (FAQ: "We test each
+# ingredient for identity, purity, and potency"; no COA, lab results or lot lookup)
+# and thorne.com/quality (describes "four rounds of testing", no customer COAs,
+# no lot lookup, no request offer). A web search found no Thorne creatine COA.
+coas: []
 
 flags: []
 notes: ""

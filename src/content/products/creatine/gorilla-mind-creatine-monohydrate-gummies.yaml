@@ -1,0 +1,44 @@
+# Looked up by Claude on 2026-10-20 from The Vitamin Shoppe.
+# Entries marked entered_by: claude still need River's check.
+category: creatine
+entered_by: claude
+brand: Gorilla Mind
+name: Creatine Monohydrate Gummies with Creapure
+form: gummy
+creatine_type: monohydrate
+raw_material: Creapure          # Vitamin Shoppe facts: "CREAPURE - CREATINE MONOHYDRATE"
+other_ingredients:              # Vitamin Shoppe: "Maltitol, Xylitol, Water, Pectin; Less than 2% of: Natural Flavors, Citric Acid, Malic Acid, Sodium Citrate, Spirulina (Color), Organic Stevia Leaf Extract (Reb A), Organic Tapioca Starch"
+  - maltitol
+  - xylitol
+  - water
+  - pectin
+  - natural flavors
+  - citric acid
+  - malic acid
+  - sodium citrate
+  - spirulina (color)
+  - organic stevia leaf extract (Reb A)
+  - organic tapioca starch
+
+dose:
+  serving_size_g: 5             # CHECK: serving weight not stated; this is the creatine grams per serving (4 gummies)
+  creatine_per_serving_g: 5     # Vitamin Shoppe: "Serving Size: 4 Gummies", Creapure creatine monohydrate "5 GM"
+  servings_per_container: 30    # Vitamin Shoppe: "Number of Servings: 30 Servings" (120 gummies)
+
+prices:
+  - retailer: The Vitamin Shoppe
+    price_usd: 49.99            # Blue Raspberry, "120 Gummies", "$49.99"
+    servings: 30
+    url: https://www.vitaminshoppe.com/p/creatine-monohydrate-gummies-5-gm-blue-raspberry-120-gummies/gmd-17011
+    date_checked: 2026-10-20
+    rating:                     # "Rated 4.4 out of 5" from 81 reviews
+      stars: 4.4
+      count: 81
+    entered_by: claude
+
+certifications: []              # not found on NSF's creatine search; Informed Sport's site could not be loaded
+
+coas: []                        # none found
+
+flags: [added sweeteners, added sugar alcohols]
+notes: ""

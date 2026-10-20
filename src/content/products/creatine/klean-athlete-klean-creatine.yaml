@@ -28,7 +28,14 @@ certifications:
     date_verified: 2026-10-20
     entered_by: claude
 
-coas: []                        # no COA link on kleanathlete.com as of 2026-10-20
+# NEEDS YOUR CALL (Informed Sport, 2026-10-20): couldn't confirm a listing. Tried
+#   https://sport.wetestyoutrust.com/supplement-search?search=creatine (fetch error)
+#   https://sport.wetestyoutrust.com/certified-brands (loads, but brands are logos only)
+# and a web search; no Informed Sport page for this product turned up.
+# COA: none published. Checked 2026-10-20: kleanathlete.com product page links only
+# "Product Information" (KA57692P.pdf) and "Supplement Facts" PDFs; no COA, lab
+# results or lot lookup. A web search found no Klean Creatine COA.
+coas: []
 
 flags: []
 notes: ""

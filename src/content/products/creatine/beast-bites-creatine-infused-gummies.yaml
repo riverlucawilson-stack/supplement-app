@@ -1,0 +1,53 @@
+# Looked up by Claude on 2026-10-20 from getbeastbites.com (product page and .js
+# variant data), NSF and Clean Label Project. Entries marked entered_by: claude still need River's check.
+category: creatine
+entered_by: claude
+brand: Beast Bites
+name: Creatine Infused Gummies
+form: gummy
+creatine_type: monohydrate
+other_ingredients:              # page: "Creatine Monohydrate, Tapioca Syrup, Cane Sugar, Water, Pectin, Citric Acid, Natural Flavors, Natural Colors, Sunflower Oil, Carnauba Wax, Steviol Glycosides"
+  - tapioca syrup
+  - cane sugar
+  - water
+  - pectin
+  - citric acid
+  - natural flavors
+  - natural colors
+  - sunflower oil
+  - carnauba wax
+  - steviol glycosides
+
+dose:
+  serving_size_g: 5             # CHECK: serving weight not stated; this is the creatine grams per serving (5 gummies)
+  creatine_per_serving_g: 5     # page: "5g of Creatine Monohydrate per serving"; NSF: serving size "5 gummies"
+  servings_per_container: 15    # 75-gummy tub / 5 gummies; page shows "$1.66/serving" at $24.99, which fits 15
+
+prices:
+  - retailer: Beast Bites
+    price_usd: 24.99            # .js: "75 Gummies - Tub" / "1 Pack", $24.99
+    servings: 15
+    url: https://getbeastbites.com/products/creatine-infused-gummies
+    date_checked: 2026-10-20
+    entered_by: claude
+# 150-gummy pouch (30 servings) was sold out and its price was inconsistent on the page, so it isn't listed.
+# Page shows "Excellent" with 788 reviews but no star average, so no rating.
+
+certifications:
+  - program: NSF Certified for Sport
+    # "BEAST BITES™ Creatine Infused Gummies - Sweet Blue Raspberry", US, sizes "5, 75, 150",
+    # serving "5 gummies", Lot # "All". Each flavor has its own listing.
+    listing_url: https://www.nsfsport.com/certified-products/listing-detail.php?id=1796820
+    date_verified: 2026-10-20
+    entered_by: claude
+  - program: Clean Label Project
+    # CLP brand page: "The Beast Bites line of Creatine Infused Gummies is now Clean Label Project Certified";
+    # certificate https://cleanlabelproject.org/wp-content/uploads/20260430_CLP-Certificate_Beast-Bites.pdf (not opened)
+    listing_url: https://cleanlabelproject.org/brand/beast-bites/
+    date_verified: 2026-10-20
+    entered_by: claude
+
+coas: []                        # no COA links on the brand page
+
+flags: [added sugars]
+notes: ""

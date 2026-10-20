@@ -1,0 +1,39 @@
+# Looked up by Claude on 2026-10-20 from dotfit.com and NSF.
+# Entries marked entered_by: claude still need River's check.
+# This file is the Unflavored version. dotFIT also sells a Raspberry Lemonade
+# version (410 g, 7 g scoop, 5 g creatine, with maltodextrin and sucralose) at
+# https://www.dotfit.com/creatine-monohydrate. It is not included here.
+category: creatine
+entered_by: claude
+brand: dotFIT
+name: Creatine Monohydrate - Unflavored
+form: powder
+creatine_type: monohydrate
+other_ingredients: []           # page Supplement Facts lists only creatine monohydrate
+
+dose:
+  serving_size_g: 5             # page: "Serving Size: 5 g (1 scoop)"
+  # CHECK: the page description says "Mix 1 scoop (6.8g)", which conflicts with the facts panel.
+  creatine_per_serving_g: 5     # page: "Creatine Monohydrate | 5000 mg"
+  servings_per_container: 60    # page: "Servings Per Container: 60"
+
+prices:
+  - retailer: dotFIT
+    price_usd: 36.95            # page: "10.58 oz (300 g)", "$36.95" one-time purchase
+    servings: 60
+    url: https://www.dotfit.com/creatine-monohydrate-unflavored
+    date_checked: 2026-10-20
+    entered_by: claude
+
+certifications:
+  - program: NSF Certified for Sport
+    # "CreatineMonohydrate - Unflavored", dotFIT, United States, 300 g, 1 scoop (5 g),
+    # Lots 2603075, 2412058, 2603263, 2512276, 2508444
+    listing_url: https://www.nsfsport.com/certified-products/listing-detail.php?id=1666740
+    date_verified: 2026-10-20
+    entered_by: claude
+
+coas: []                        # no COA link on the page
+
+flags: []
+notes: ""

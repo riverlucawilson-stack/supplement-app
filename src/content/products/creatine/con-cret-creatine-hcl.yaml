@@ -1,0 +1,39 @@
+# Looked up by Claude on 2026-10-20 from the GNC product page and NSF.
+# Entries marked entered_by: claude still need River's check.
+# This file is the Unflavored powder, 64 servings.
+category: creatine
+entered_by: claude
+brand: CON-CRĒT
+name: Creatine HCl Powder - Unflavored
+form: powder
+creatine_type: hcl
+other_ingredients: []           # CHECK: GNC lists only "Patented Creatine HCl® 750 mg" and no other ingredients
+
+dose:
+  # CHECK: GNC says "1 Scoop(s)" with no gram weight. NSF's listing says "1 scoop (750 mg)",
+  # so this uses the creatine HCl amount as the serving weight.
+  serving_size_g: 0.75
+  # CHECK: this is the weight of creatine HCl (the salt), not creatine base. GNC: "Patented Creatine HCl® 750 mg"
+  creatine_per_serving_g: 0.75
+  servings_per_container: 64    # GNC: "Servings Per Container: 64"
+
+prices:
+  - retailer: GNC
+    price_usd: 29.99            # GNC: "Creatine HCl Powder - Unflavored (64 Servings)", "$29.99"
+    servings: 64
+    url: https://www.gnc.com/creatine-shopall/414520.html
+    date_checked: 2026-10-20
+    entered_by: claude
+
+certifications:
+  - program: NSF Certified for Sport
+    # "CON-CRĒT Creatine HCl Unflavored", United States, Unflavored,
+    # "45 g (60 servings), 48 g (64 servings), 75 g (100 ...", 1 scoop (750 mg), Lot # All
+    listing_url: https://www.nsfsport.com/certified-products/listing-detail.php?id=1693177
+    date_verified: 2026-10-20
+    entered_by: claude
+
+coas: []                        # no COA on the GNC page; web search found none
+
+flags: []
+notes: "Labeled dose is 750 mg of creatine HCl per scoop, far below 5 g. Cost per 5 g assumes about 6.7 scoops."

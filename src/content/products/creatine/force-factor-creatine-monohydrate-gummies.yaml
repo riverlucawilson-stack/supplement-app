@@ -1,0 +1,56 @@
+# Looked up by Claude on 2026-10-20 from iHerb, Target and NSF. Entries marked
+# entered_by: claude still need River's check.
+category: creatine
+entered_by: claude
+brand: Force Factor
+name: Creatine Monohydrate Gummies
+form: gummy
+creatine_type: monohydrate
+other_ingredients:              # iHerb/Target: "Maltitol, tapioca syrup, cane sugar, water, pectin, citric acid, natural flavors, vegetable & fruit juice (color), sodium citrate"
+  - maltitol
+  - tapioca syrup
+  - cane sugar
+  - water
+  - pectin
+  - citric acid
+  - natural flavors
+  - vegetable & fruit juice (color)
+  - sodium citrate
+
+dose:
+  serving_size_g: 5             # CHECK: serving weight not stated; this is the creatine grams per serving (5 gummies)
+  creatine_per_serving_g: 5     # iHerb: "Serving Size: 5 Gummies", "Creatine Monohydrate 5 g"
+  servings_per_container: 30    # iHerb: "Servings Per Container: 30" (150 gummies)
+
+prices:
+  - retailer: iHerb
+    price_usd: 29.99            # iHerb: Assorted Fruit, "150 count", "$29.99"
+    servings: 30
+    url: https://www.iherb.com/pr/force-factor-creatine-monohydrate-gummies-assorted-fruit-150-gummies/148147
+    date_checked: 2026-10-20
+    rating:                     # iHerb: "4.1 Based on 110 ratings"
+      stars: 4.1
+      count: 110
+    entered_by: claude
+  - retailer: Target
+    price_usd: 32.99            # Target: "Assorted Fruit, 150 Gummies", "$32.99", "Serving Per Container: 30"
+    servings: 30
+    url: https://www.target.com/p/force-factor-creatine-monohydrate-gummies-assorted-fruit-150-gummies/-/A-1002751165
+    date_checked: 2026-10-20
+    rating:                     # Target: "3.7 out of 5 stars with 3 reviews"
+      stars: 3.7
+      count: 3
+    entered_by: claude
+
+certifications:
+  - program: NSF Certified for Sport
+    # "Force Factor® Creatine Monohydrate Gummies, Assorted Flavors", US, package "150",
+    # serving "5 gummies", Lot # "All". Single flavors have their own listings.
+    listing_url: https://www.nsfsport.com/certified-products/listing-detail.php?id=1779617
+    date_verified: 2026-10-20
+    entered_by: claude
+
+coas: []                        # none found on retailer pages or by web search
+
+flags: [added sugars, added sugar alcohols]
+notes: "Independent test: SuppCo (article dated 2025-06-12) reports Force Factor gummies measured 6.3 g creatine per serving against a 5 g label serving; the article says an ISO 17025-accredited lab did the testing but does not name it. Source: https://supp.co/articles/suppco-tested-creatine-testing-results-gummies-failed-lab-analysis"

@@ -1,0 +1,44 @@
+# Looked up by Claude on 2026-10-20 from livemomentous.com (product page, its .js
+# variant data and its COA page) and NSF. Entries marked entered_by: claude still need River's check.
+category: creatine
+entered_by: claude
+brand: Momentous
+name: Creatine
+form: powder
+creatine_type: monohydrate
+# No raw_material: page says "Momentous no longer sources creatine from Creapure®."
+other_ingredients: []           # .js image alt text: "creatine monohydrate 5g, no other ingredients"
+
+dose:
+  serving_size_g: 5             # alt text: "serving size 1 scoop 5g"; NSF: "1 scoop (5 g)"
+  creatine_per_serving_g: 5     # alt text: "creatine monohydrate 5g"
+  servings_per_container: 90    # alt text: "15.8oz/450g", "90 servings"
+
+prices:
+  - retailer: Momentous
+    price_usd: 42.99            # .js: "Creatine - 90 Servings", Unflavored variant, 4299 cents (one-time; subscriptions are lower)
+    servings: 90
+    url: https://www.livemomentous.com/products/creatine-monohydrate
+    date_checked: 2026-10-20
+    rating:                     # page: "Rated 4.8 out of 5 stars", "Based on 3,977 reviews"
+      stars: 4.8
+      count: 3977
+    entered_by: claude
+
+certifications:
+  - program: NSF Certified for Sport
+    # "Creatine Monohydrate", Momentous, United States, Unflavored, 5 g / 75 g / 150 g / 450 g, 1 scoop (5 g), Lot # All
+    listing_url: https://www.nsfsport.com/certified-products/listing-detail.php?id=1285010
+    date_verified: 2026-10-20
+    entered_by: claude
+
+# COAs: livemomentous.com/pages/coa-page links one PDF per lot. Claude read lots 0041E6
+# (https://www.livemomentous.com/cdn/shop/files/Creatine_0041E6.pdf) and 0302D6. Both are
+# readable text ("Momentous® Signature Spec Creatine"; purity, DCD, DHT, creatinine, Pb, As,
+# Cd, Hg, microbial; methods cite LightLabs and Eurofins) but print only a manufacture date
+# (23-APR-2026 / 22-MAY-2026), no test or report date, so they are left out per the rules.
+# River: decide whether a manufacture date is acceptable as the test date.
+coas: []
+
+flags: []
+notes: ""

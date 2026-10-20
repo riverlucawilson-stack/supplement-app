@@ -1,0 +1,53 @@
+# Looked up by Claude on 2026-10-20 from optimumnutrition.com (.js variant data)
+# and iHerb. Entries marked entered_by: claude still need River's check.
+category: creatine
+entered_by: claude              # label info from the iHerb Supplement Facts (200 capsules)
+brand: Optimum Nutrition
+name: Micronized Creatine Capsules
+form: capsule
+creatine_type: monohydrate      # iHerb: "2.5 g (creatine monohydrate)"
+other_ingredients: [gelatin, magnesium stearate]   # iHerb: "Gelatin, magnesium stearate."
+
+dose:
+  # CHECK: the label doesn't state the weight of 2 capsules, so this is the creatine grams.
+  serving_size_g: 2.5           # iHerb: "Serving size: 2 Capsules"
+  creatine_per_serving_g: 2.5   # iHerb: 2.5 g per serving (1.25 g per capsule)
+  servings_per_container: 100   # iHerb, 200 capsules: "Servings per container: 100"
+
+prices:
+  - retailer: Optimum Nutrition
+    price_usd: 22.99            # .js: "Unflavored / 50 Servings (100 Capsules)"
+    servings: 50
+    url: https://www.optimumnutrition.com/en-us/products/creatine-monohydrate-micronized-capsules
+    date_checked: 2026-10-20
+    entered_by: claude
+  - retailer: Optimum Nutrition
+    price_usd: 39.99            # .js: "Unflavored / 100 Servings (200 Capsules)"
+    servings: 100
+    url: https://www.optimumnutrition.com/en-us/products/creatine-monohydrate-micronized-capsules
+    date_checked: 2026-10-20
+    entered_by: claude
+  - retailer: Optimum Nutrition
+    price_usd: 57.49            # .js: "Unflavored / 150 Servings (300 Capsules)"
+    servings: 150
+    url: https://www.optimumnutrition.com/en-us/products/creatine-monohydrate-micronized-capsules
+    date_checked: 2026-10-20
+    entered_by: claude
+  - retailer: iHerb
+    price_usd: 40.36            # iHerb: 200 count, "$40.36"
+    servings: 100
+    url: https://www.iherb.com/pr/optimum-nutrition-micronized-creatine-capsules-2-5-g-200-capsules/68618
+    date_checked: 2026-10-20
+    rating:                     # iHerb: 4.7, 6,237 ratings and reviews
+      stars: 4.7
+      count: 6237
+    entered_by: claude
+
+# iHerb shows an "Informed Choice" badge; Informed Choice isn't one of the site's
+# programs and its page couldn't be read. No NSF listing found.
+certifications: []
+
+coas: []                        # no COA found on optimumnutrition.com or by web search
+
+flags: [gelatin capsules]
+notes: ""

@@ -1,0 +1,42 @@
+# Looked up by Claude on 2026-10-20 from dymatize.com, the GoSupps product page,
+# Walmart and the BellRing Brands launch release.
+# Entries marked entered_by: claude still need River's check.
+# CHECK: this is Dymatize's current US creatine, "Creatine Monohydrate" made with
+# Creapure. The older "Creatine Micronized" no longer appears on dymatize.com.
+category: creatine
+entered_by: claude
+brand: Dymatize
+name: Creatine Monohydrate Unflavored
+form: powder
+creatine_type: monohydrate
+raw_material: Creapure          # dymatize.com: "Creatine Monohydrate [as Creapure®]"
+other_ingredients: []           # dymatize.com lists none; "no fillers or additives"
+
+dose:
+  serving_size_g: 5             # dymatize.com: "Serving Size: 5 grams (About 1 Scoop)"
+  creatine_per_serving_g: 5     # dymatize.com: 5 g creatine monohydrate
+  servings_per_container: 60    # dymatize.com size option: "60 SERVINGS"
+
+prices:
+  - retailer: GoSupps
+    # GoSupps: "60 Servings (300g)", "Special Price" US$44.99 (regular US$49.99).
+    # CHECK: BellRing's launch release gives a suggested price of $19.99 at Amazon and
+    # Walmart, so this reseller price is far above it. Replace it with a better US
+    # retailer price if you can find one.
+    price_usd: 44.99
+    servings: 60
+    url: https://www.gosupps.com/dymatize-100-creatine-monohydrate-with-creapure-5g-per-serving-60-servings-300g-creatine-for-women-and-men-gluten-free.html
+    date_checked: 2026-10-20
+    entered_by: claude
+  # Not added: dymatize.com shows no price. Walmart (item 16864352065) shows "Not Available".
+  # Amazon and iHerb were not tried again because they blocked an earlier attempt.
+
+certifications: []
+# Not found in NSF's "creatine" search results on 2026-10-20. BellRing's release says the
+# product is "Informed Choice" certified. That program isn't on the site's list, and the
+# claim wasn't checked on the certifier's site.
+
+coas: []                        # no COA link on dymatize.com
+
+flags: []
+notes: ""

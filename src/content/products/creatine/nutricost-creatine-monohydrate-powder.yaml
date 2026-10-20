@@ -1,0 +1,60 @@
+# Looked up by Claude on 2026-10-20 from nutricost.com (page and .js variant
+# data) and Target. Entries marked entered_by: claude still need River's check.
+category: creatine
+entered_by: claude              # label info from Target's listing and nutricost.com (unflavored)
+brand: Nutricost
+name: Creatine Monohydrate Powder
+form: powder
+creatine_type: monohydrate      # Target label: "Creatine Monohydrate (micronized)" 5 g
+other_ingredients: []           # CHECK: Target's label lists only creatine monohydrate; nutricost.com shows no list
+
+dose:
+  serving_size_g: 5             # nutricost.com: "5 Grams Per Serving (Scoop Included)"
+  creatine_per_serving_g: 5     # Target: "5g of Micronized Creatine Monohydrate per Serving"
+  servings_per_container: 100   # Target, 500 g: "Serving Per Container: 100"
+
+prices:
+  - retailer: Nutricost
+    price_usd: 16.97            # .js: "Unflavored / 30 SERV"
+    servings: 30
+    url: https://nutricost.com/products/nutricost-creatine-monohydrate-powder-500-grams
+    date_checked: 2026-10-20
+    entered_by: claude
+  - retailer: Nutricost
+    price_usd: 18.97            # .js: "Unflavored / 300 G"
+    servings: 60                # 300 g ÷ 5 g; the page doesn't state servings
+    url: https://nutricost.com/products/nutricost-creatine-monohydrate-powder-500-grams
+    date_checked: 2026-10-20
+    entered_by: claude
+  - retailer: Nutricost
+    price_usd: 23.97            # .js: "Unflavored / 500 G"
+    servings: 100
+    url: https://nutricost.com/products/nutricost-creatine-monohydrate-powder-500-grams
+    date_checked: 2026-10-20
+    entered_by: claude
+  - retailer: Nutricost
+    price_usd: 46.97            # .js: "Unflavored / 1 KG"
+    servings: 200               # 1,000 g ÷ 5 g; the page doesn't state servings
+    url: https://nutricost.com/products/nutricost-creatine-monohydrate-powder-500-grams
+    date_checked: 2026-10-20
+    entered_by: claude
+  - retailer: Target
+    price_usd: 21.50            # Target: "(500G) Unflavored ... 100 Servings", $21.50
+    servings: 100
+    url: https://www.target.com/p/nutricost-creatine-monohydrate-powder-500-grams/-/A-89144833
+    date_checked: 2026-10-20
+    rating:                     # Target: "4.41 out of 5 stars", 27 reviews
+      stars: 4.41
+      count: 27
+    entered_by: claude
+# nutricost.com prints "Based on 1760 reviews" but no average, so no rating added.
+
+certifications: []              # no NSF listing found; page names no certification
+
+# nutricost.com says "tested by an independent, accredited lab" but links no COA,
+# and none was found by web search. The page also carries a Prop 65 warning:
+# "Consuming this product can expose you to chemicals including lead."
+coas: []
+
+flags: []
+notes: ""
