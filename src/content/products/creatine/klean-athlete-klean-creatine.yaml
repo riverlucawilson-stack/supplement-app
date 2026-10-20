@@ -1,0 +1,34 @@
+# Looked up by Claude on 2026-10-20. Every entry marked entered_by: claude
+# still needs River's check against its link.
+category: creatine
+entered_by: claude              # label info from kleanathlete.com and the NSF listing
+brand: Klean Athlete
+name: Klean Creatine
+form: powder                    # NSF listing: "Product Form: Powder"
+creatine_type: monohydrate      # kleanathlete.com: "Creatine Monohydrate 5 g"
+other_ingredients: []           # kleanathlete.com: "Other ingredients: None"
+
+dose:
+  serving_size_g: 5             # kleanathlete.com: "1 Scoop (Approx. 5 g)"
+  creatine_per_serving_g: 5
+  servings_per_container: 60    # kleanathlete.com: "Approx. 60"
+
+prices:
+  - retailer: Klean Athlete
+    price_usd: 34.50            # kleanathlete.com: "Your Price $34.50"
+    servings: 60
+    url: https://www.kleanathlete.com/klean-creatine.html
+    date_checked: 2026-10-20
+    entered_by: claude
+
+certifications:
+  - program: NSF Certified for Sport
+    # Listing for "Klean Athlete® Klean Creatine", US, unflavored, 315 g
+    listing_url: https://www.nsfsport.com/certified-products/listing-detail.php?id=1780369
+    date_verified: 2026-10-20
+    entered_by: claude
+
+coas: []                        # no COA link on kleanathlete.com as of 2026-10-20
+
+flags: []
+notes: ""
