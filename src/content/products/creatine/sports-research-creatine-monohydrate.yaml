@@ -27,8 +27,23 @@ prices:
 # but the tub sold on sportsresearch.com is 10.58 oz (300 g). If you confirm the
 # listing covers this tub, add it here. The page also says "Informed Sport", but
 # its search page couldn't be read to confirm.
-certifications: []
-coas: []                        # no COA link on the page
+# Rechecked 2026-10-20: sportsresearch.com still offers only "Unflavored / 5 G
+# MICRONIZED CREATINE | 10.58 OZ" at $17.95; no 450 g size found there or in a web
+# search, so the NSF cert is still not added.
+# UPDATE 2026-10-20: Claude loaded the Informed Sport page below. It shows
+# "Creatine Monohydrate", "Certified Product", certified 29 January 2024, all
+# batches Unflavored, 24 batches (latest test date 30 Jun 2025).
+# CHECK: the page's brand field is blank (images and URL say Sports Research) and
+# it lists no sizes or regional availability, so confirm it covers the 300 g tub.
+certifications:
+  - program: Informed Sport
+    listing_url: https://sport.wetestyoutrust.com/supplement-search/sports-research/creatine-monohydrate
+    date_verified: 2026-10-20
+    entered_by: claude
+# COA: none published. Checked 2026-10-20: the product page says "Informed Sport
+# Tested" and "Third Party Tested Certified" but links no COA, lab results or lot
+# lookup. A web search found no Sports Research COA or lot-lookup tool.
+coas: []
 
 flags: []
 notes: ""

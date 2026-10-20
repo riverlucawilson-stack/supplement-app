@@ -52,7 +52,17 @@ prices:
 # and Informed Sport has a page for "NOW Sports Creatine Monohydrate Powder":
 #   https://sport.wetestyoutrust.com/supplement-search/now-foods/now-sports-creatine-monohydrate-powder
 # but that page couldn't be loaded to confirm it. No NSF listing found.
-certifications: []
+# UPDATE 2026-10-20: Claude loaded the listing (the ?page=1 view; the plain URL
+# errored). It shows "NOW Sports Creatine Monohydrate Powder", "Certified Product",
+# certified 23-Mar-2018, flavors Unflavored / Pure Unflavored. Newest batch on that
+# page: 3299601, tested 27 June 2023 (page 1 of the batch list may hold newer ones).
+# CHECK: brand field blank (image alt text says "Now Foods"); no sizes or regional
+# availability listed, so confirm it covers the sizes priced here.
+certifications:
+  - program: Informed Sport
+    listing_url: https://sport.wetestyoutrust.com/supplement-search/now-foods/now-sports-creatine-monohydrate-powder
+    date_verified: 2026-10-20
+    entered_by: claude
 
 coas: []                        # nowfoods.com has a general testing page but no product COA
 

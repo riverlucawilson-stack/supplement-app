@@ -33,7 +33,14 @@ prices:
 # The page says "Contents Certified by NSF". That is NSF's label-claim program,
 # not NSF Certified for Sport, so it isn't one of the site's certification programs.
 certifications: []
-coas: []                        # no COA link on the page
+# NEEDS YOUR CALL (Informed Sport, 2026-10-20): couldn't confirm a listing. Tried
+#   https://sport.wetestyoutrust.com/supplement-search?search=creatine (fetch error)
+#   https://sport.wetestyoutrust.com/certified-brands (loads, but brands are logos only)
+# and a web search; no Informed Sport page for this product turned up.
+# COA: none published. Checked 2026-10-20: the product page says "Independent
+# third-party tested for heavy metals" and "NSF-certified" but links no COA, lab
+# results, lot lookup or request offer. Web searches found no Naked creatine COA.
+coas: []
 
 flags: []
 notes: ""

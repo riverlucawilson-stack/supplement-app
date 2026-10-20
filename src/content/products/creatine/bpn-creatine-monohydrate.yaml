@@ -41,8 +41,12 @@ certifications:
     date_verified: 2026-10-20
     entered_by: claude
 # Not listed: Informed Sport shows this product as withdrawn from its program on 2024-09-06.
+# (Not rechecked 2026-10-20: the Informed Sport search page returned a fetch error.)
 
-coas: []                        # no COA link on the page
+# COA: none published. Checked 2026-10-20: the product page cites NSF Certified for
+# Sport and "NSF Contents Certified" testing but links no COA, lab results or lot
+# lookup. A web search for a BPN creatine COA found none.
+coas: []
 
 flags: []
 notes: ""
