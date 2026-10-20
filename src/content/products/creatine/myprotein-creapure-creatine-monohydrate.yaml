@@ -1,0 +1,33 @@
+# Looked up by Claude on 2026-10-20 from the GNC product page (item #607332).
+# Entries marked entered_by: claude still need River's check.
+# This file is the Unflavored 50-serving tub. GNC also sells flavored 20-packet boxes
+# (e.g. item #607348, Berry Watermelon, 6.4 g packet, 5 g Creapure, with sucralose,
+# $29.99), which are not included here.
+category: creatine
+entered_by: claude
+brand: Myprotein
+name: Creapure Creatine Monohydrate - Unflavored
+form: powder
+creatine_type: monohydrate
+raw_material: Creapure          # GNC: "Creapure® (Creatine Monohydrate) 5g"
+other_ingredients: []           # GNC: no other ingredients listed
+
+dose:
+  serving_size_g: 5             # GNC: "Serving Size: 1 Scoop (5g)"
+  creatine_per_serving_g: 5     # GNC: "Creapure® (Creatine Monohydrate)† 5g"
+  servings_per_container: 50    # GNC: "Servings Per Container: 50"
+
+prices:
+  - retailer: GNC
+    price_usd: 19.99            # GNC: "Unflavored (50 Servings)", "$19.99" one-time purchase
+    servings: 50
+    url: https://gnc.com/creatine/607332.html
+    date_checked: 2026-10-20
+    entered_by: claude
+
+certifications: []              # Myprotein not found in NSF's "creatine" search results on 2026-10-20
+
+coas: []                        # no COA link on the GNC page
+
+flags: []
+notes: ""
