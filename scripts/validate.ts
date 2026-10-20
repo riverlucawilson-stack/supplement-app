@@ -17,6 +17,8 @@ import { isAfterDay } from '../src/lib/dates';
 import { allPrices, bestPrice } from '../src/lib/pricing';
 import { isCertificationCurrent, isCoaStale } from '../src/lib/staleness';
 import { tierFor } from '../src/lib/tier';
+import { checkEvidence } from '../src/evidence/check';
+import { creatineEvidence } from '../src/evidence/creatine';
 
 const PRODUCTS_DIR = process.argv[2] ?? join('src', 'content', 'products');
 const today = new Date();
@@ -179,10 +181,14 @@ function checkFile(path: string): FileReport {
 
 // --- Run it ---
 const reports = listFiles(PRODUCTS_DIR).sort().map(checkFile);
+// The evidence page is checked only on a normal run, not when pointed at test files.
+if (process.argv[2] === undefined) {
+  reports.push({ file: join('src', 'evidence', 'creatine.ts'), ...checkEvidence(creatineEvidence) });
+}
 let errorCount = 0;
 let warningCount = 0;
 
-console.log(`Checking ${reports.length} product file(s) in ${PRODUCTS_DIR} (today is ${day(today)})\n`);
+console.log(`Checking ${reports.length} file(s) in ${PRODUCTS_DIR} (today is ${day(today)})\n`);
 for (const r of reports) {
   errorCount += r.errors.length;
   warningCount += r.warnings.length;

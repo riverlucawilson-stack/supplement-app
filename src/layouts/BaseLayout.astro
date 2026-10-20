@@ -12,8 +12,12 @@ interface Props {
 const { title, description } = Astro.props;
 const fullTitle = title === settings.siteName ? title : `${title} | ${settings.siteName}`;
 const path = Astro.url.pathname;
+const samePage = (href: string) => path.replace(/\/$/, '') === href.replace(/\/$/, '');
 // Only pages that exist go in the menu. Phase (e) adds Methodology, How to read a COA, About.
-const nav = [{ href: '/', label: 'Creatine' }];
+const nav = [
+  { href: '/', label: 'Creatine' },
+  { href: '/creatine/evidence/', label: 'Evidence' },
+];
 ---
 
 <!doctype html>
@@ -37,7 +41,7 @@ const nav = [{ href: '/', label: 'Creatine' }];
       <div class="wrap">
         <a class="wordmark" href="/">Sup<span>Search</span></a>
         <nav class="site-nav" aria-label="Main">
-          {nav.map((n) => <a href={n.href} aria-current={path === n.href ? 'page' : undefined}>{n.label}</a>)}
+          {nav.map((n) => <a href={n.href} aria-current={samePage(n.href) ? 'page' : undefined}>{n.label}</a>)}
         </nav>
       </div>
     </header>
