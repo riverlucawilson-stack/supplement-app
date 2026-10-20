@@ -125,6 +125,21 @@ You never type a calculated number. For each retailer's price:
 built, so the live site only updates its "stale" labels when it rebuilds. Phase (f) sets
 up an automatic daily rebuild.
 
+## How to review the evidence page
+
+Everything on the Evidence page lives in `src/evidence/creatine.ts`. Claude drafted it
+from the abstracts of the papers listed under each point; nothing in it is from memory.
+
+1. Open the page and read a section. Each point has a numbered link to its paper.
+2. Rewrite anything you'd say differently, right in `src/evidence/creatine.ts`.
+3. When you agree with the whole section, change its `reviewed: false` to `reviewed: true`.
+   That removes the "DRAFT - NEEDS REVIEW" label and its to-do box.
+4. For each citation, check the PMID and DOI on PubMed, then delete its
+   `entered_by: 'claude'` line.
+
+`npm run validate` lists every section and citation still waiting, and stops the build
+if a point has no source or cites a paper that isn't in the list.
+
 ## How to deploy
 
 Written in phase (f).

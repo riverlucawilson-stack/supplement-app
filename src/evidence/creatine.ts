@@ -1,0 +1,306 @@
+// Creatine evidence page: every sentence and citation shown on /creatine/evidence/.
+//
+// HOW THIS WAS DRAFTED: Claude summarized only what the listed papers' abstracts
+// (or, for Kreider 2017, the first half of the full text) actually say. Nothing
+// is from memory. The "strength of evidence" groupings are Claude's suggestion
+// and are yours to change.
+//
+// TO REVIEW A SECTION: read each item against its sources (links are on the
+// page), edit the wording into your own, then set `reviewed: true`.
+// TO VERIFY A CITATION: check its details on PubMed, then delete `entered_by`.
+// `npm run validate` lists everything still waiting.
+import type { EvidencePage } from './types';
+
+export const creatineEvidence: EvidencePage = {
+  category: 'creatine',
+  title: 'What the research says about creatine',
+  description:
+    'How creatine works, what it does and doesn’t help with grouped by strength of evidence, research-based doses, and safety, with every claim linked to its study.',
+  lede: 'Each point below summarizes specific studies, linked by number to the reference list at the bottom. Where the research is thin or mixed, we say so.',
+
+  sections: [
+    {
+      id: 'how-it-works',
+      heading: 'How creatine works',
+      reviewed: false,
+      items: [
+        {
+          title: 'It raises the creatine stored in muscle',
+          text: 'Taking 5 g of creatine monohydrate 4 to 6 times a day for 2 or more days raised total creatine in the thigh muscle of 17 people. The rise was biggest in those who started lowest, up to 50% in some. At least 20% of the creatine taken up was stored as phosphocreatine.',
+          cites: ['harris1992'],
+        },
+        {
+          title: 'Food only partly fills those stores',
+          text: 'A normal diet with 1 to 2 g of creatine a day leaves muscle stores about 60 to 80% full. Supplementing raises muscle creatine and phosphocreatine by 20 to 40%.',
+          cites: ['kreider2017'],
+        },
+        {
+          title: 'Fuller stores help short, hard efforts',
+          text: 'After loading, performance in high-intensity or repeated efforts generally improves by 10 to 20%, depending on how much phosphocreatine rises.',
+          cites: ['kreider2017'],
+        },
+      ],
+      todo: [
+        'Explain the phosphocreatine system (how phosphocreatine regenerates ATP during short, intense effort) in your own words, with a source.',
+      ],
+    },
+
+    {
+      id: 'what-it-helps',
+      heading: 'What it can and can’t help with',
+      reviewed: false,
+      intro:
+        'Grouped by how much research backs each outcome. A stronger group means more consistent results across more studies, not a bigger effect.',
+      items: [
+        {
+          title: 'High-intensity and repeated efforts',
+          strength: 'strong',
+          text: 'The ISSN position stand calls creatine monohydrate the most effective supplement available to athletes for increasing high-intensity exercise capacity. Performance in repeated, high-intensity efforts generally improves 10 to 20% after loading.',
+          cites: ['kreider2017'],
+        },
+        {
+          title: 'Muscle mass and strength, alongside training',
+          strength: 'strong',
+          text: 'The same review lists greater gains in muscle mass and strength during training as a benefit, and calls creatine the most effective supplement for increasing lean body mass during training.',
+          cites: ['kreider2017'],
+        },
+        {
+          title: 'Sports beyond the weight room',
+          strength: 'moderate',
+          text: 'The position stand lists sports that may benefit, ranging from sprints, team sports such as soccer, basketball and hockey, and combat sports to 400 to 800 m events and endurance interval training.',
+          cites: ['kreider2017'],
+        },
+        {
+          title: 'Recovery after hard training',
+          strength: 'limited',
+          text: 'Individual studies cited in the position stand found better strength during recovery from muscle-damaging exercise, and lower blood markers of muscle damage, in people taking creatine.',
+          cites: ['kreider2017'],
+        },
+        {
+          title: 'Memory and reasoning',
+          strength: 'limited',
+          text: 'A review of 6 randomized trials (281 people) found creatine may improve short-term memory and reasoning in healthy people. Results for other kinds of thinking were mixed, young adults showed no change, and vegetarians responded better on memory tasks than meat-eaters.',
+          cites: ['avgerinos2018'],
+        },
+        {
+          title: 'Medical conditions',
+          strength: 'limited',
+          text: 'Researchers have studied creatine in muscular dystrophy, Parkinson’s and Huntington’s disease, diabetes, osteoarthritis, fibromyalgia, aging, and adolescent depression, among others. The position stand lists these as clinical uses that have been studied.',
+          cites: ['kreider2017'],
+        },
+        {
+          title: 'Women may see smaller strength gains',
+          strength: 'limited',
+          text: 'The position stand notes that some studies suggest women may not gain as much strength or muscle mass in training with creatine as men.',
+          cites: ['kreider2017'],
+        },
+        {
+          title: 'Hair loss',
+          strength: 'not_supported',
+          text: 'In a 12-week randomized trial of resistance-trained men taking 5 g a day, creatine did not change DHT, the DHT-to-testosterone ratio, hair density or hair thickness compared with placebo.',
+          cites: ['lak2025'],
+        },
+      ],
+      todo: [
+        'Confirm or change each strength grouping. They are a suggestion based on the sources listed, not a formal grading.',
+        'Consider adding the older-adults and upper-body-strength meta-analyses (Devries & Phillips 2014, PMID 24576864; Lanhers 2017), not yet read.',
+      ],
+    },
+
+    {
+      id: 'dosing',
+      heading: 'Doses and protocols used in research',
+      reviewed: false,
+      intro:
+        'These are the amounts studied in research, all with creatine monohydrate. They are not a personal recommendation; check with a professional first.',
+      items: [
+        {
+          title: 'Loading, then maintenance (fastest)',
+          text: 'Described by the ISSN as the most effective way to raise muscle creatine. In one study, 20 g a day for 6 days raised muscle creatine by about 20%.',
+          cites: ['kreider2017', 'hultman1996'],
+          facts: [
+            { label: 'Loading dose', value: '5 g × 4 a day' },
+            { label: 'By body weight', value: '~0.3 g/kg/day' },
+            { label: 'Loading length', value: '5–7 days' },
+            { label: 'Then', value: '3–5 g/day' },
+          ],
+        },
+        {
+          title: 'Steady daily dose (no loading)',
+          text: 'Taking 3 g a day raised muscle creatine by a similar 20%, but gradually over 28 days. Until stores are full, it may have less effect on performance than loading.',
+          cites: ['hultman1996', 'kreider2017'],
+          facts: [
+            { label: 'Daily dose', value: '3 g/day' },
+            { label: 'Time to full stores', value: '~28 days' },
+          ],
+        },
+        {
+          title: 'Commonly recommended amount',
+          text: 'A 2021 expert review describes creatine as well tolerated, especially at recommended doses of 3 to 5 g a day or 0.1 g per kg of body weight a day.',
+          cites: ['antonio2021'],
+          facts: [
+            { label: 'Daily dose', value: '3–5 g/day' },
+            { label: 'By body weight', value: '0.1 g/kg/day' },
+          ],
+        },
+        {
+          title: 'Larger athletes',
+          text: 'Most people maintain full stores with 3 to 5 g a day, but some studies suggest larger athletes may need 5 to 10 g a day.',
+          cites: ['kreider2017'],
+        },
+        {
+          title: 'Taking it with food',
+          text: 'Taking creatine with carbohydrate, or carbohydrate and protein, has been reported to lead to more consistent creatine retention in muscle.',
+          cites: ['kreider2017'],
+        },
+        {
+          title: 'When you stop',
+          text: 'After stopping, muscle creatine gradually fell and was back to its starting level within 30 days. A 2 g daily dose was enough to hold the raised level for 30 days.',
+          cites: ['hultman1996'],
+        },
+        {
+          title: 'Vegetarians',
+          text: 'Vegetarians have lower creatine stores in muscle, so they may see larger increases from supplementing.',
+          cites: ['kreider2017'],
+        },
+      ],
+      todo: ['Decide whether to show a worked example by body weight (e.g. 0.3 g/kg × 70 kg = 21 g/day).'],
+    },
+
+    {
+      id: 'safety',
+      heading: 'Safety',
+      reviewed: false,
+      items: [
+        {
+          title: 'Long-term use',
+          text: 'The ISSN position stand concludes that short- and long-term use, up to 30 g a day for 5 years, has been safe and well tolerated in healthy people and in several patient groups from infants to older adults.',
+          cites: ['kreider2017'],
+        },
+        {
+          title: 'At usual doses',
+          text: 'A 2021 expert review describes creatine as relatively well tolerated, especially at 3 to 5 g a day or 0.1 g per kg a day.',
+          cites: ['antonio2021'],
+        },
+        {
+          title: 'Hormones and hair',
+          text: '12 weeks of 5 g a day did not change DHT or hair measures compared with placebo in resistance-trained men.',
+          cites: ['lak2025'],
+        },
+      ],
+      todo: [
+        'Kidney function in healthy people: read and cite a study or review before adding anything.',
+        'Water retention and weight gain during loading: read and cite before adding.',
+        'Cramping, dehydration and heat: read and cite before adding.',
+        'Who should talk to a doctor first (kidney disease, medications, pregnancy, under 18): your call as the editor.',
+      ],
+    },
+
+    {
+      id: 'myths',
+      heading: 'Common myths',
+      reviewed: false,
+      intro:
+        'A 2021 expert review set out to answer the most common questions about creatine, including water retention, steroids, kidney damage, hair loss, cramping, use by teens, fat gain, loading, older adults, women, and other forms of creatine.',
+      items: [
+        {
+          title: '“Creatine makes your hair fall out”',
+          text: 'The one trial that measured hair directly found no difference from placebo in hair density, thickness or DHT after 12 weeks.',
+          cites: ['lak2025'],
+        },
+        {
+          title: '“You have to do a loading phase”',
+          text: 'Loading fills muscle stores in about a week. Taking 3 g a day reached a similar level in about 4 weeks without loading.',
+          cites: ['hultman1996', 'kreider2017'],
+        },
+        {
+          title: '“It’s only for bodybuilders”',
+          text: 'The research lists many sports that may benefit, including team sports, combat sports, middle-distance running and swimming, and endurance interval training.',
+          cites: ['kreider2017'],
+        },
+      ],
+      todo: [
+        'Add the answers from Antonio et al. 2021 (only the abstract has been read so far; the full paper answers each question).',
+      ],
+    },
+  ],
+
+  citations: {
+    kreider2017: {
+      authors: 'Kreider RB, et al.',
+      title:
+        'International Society of Sports Nutrition position stand: safety and efficacy of creatine supplementation in exercise, sport, and medicine.',
+      journal: 'J Int Soc Sports Nutr 14:18',
+      year: 2017,
+      pmid: '28615996',
+      doi: '10.1186/s12970-017-0173-z',
+      source_url: 'https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5469049/fullTextXML',
+      read: 'full_text',
+      date_checked: '2026-10-20',
+      entered_by: 'claude',
+    },
+    antonio2021: {
+      authors: 'Antonio J, et al.',
+      title:
+        'Common questions and misconceptions about creatine supplementation: what does the scientific evidence really show?',
+      journal: 'J Int Soc Sports Nutr 18(1)',
+      year: 2021,
+      pmid: '33557850',
+      doi: '10.1186/s12970-021-00412-w',
+      source_url: 'https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:33557850&resultType=core&format=json',
+      read: 'abstract',
+      date_checked: '2026-10-20',
+      entered_by: 'claude',
+    },
+    hultman1996: {
+      authors: 'Hultman E, et al.',
+      title: 'Muscle creatine loading in men.',
+      journal: 'J Appl Physiol 81(1):232-237',
+      year: 1996,
+      pmid: '8828669',
+      doi: '10.1152/jappl.1996.81.1.232',
+      source_url: 'https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:8828669&resultType=core&format=json',
+      read: 'abstract',
+      date_checked: '2026-10-20',
+      entered_by: 'claude',
+    },
+    harris1992: {
+      authors: 'Harris RC, et al.',
+      title:
+        'Elevation of creatine in resting and exercised muscle of normal subjects by creatine supplementation.',
+      journal: 'Clin Sci (Lond) 83(3):367-374',
+      year: 1992,
+      pmid: '1327657',
+      doi: '10.1042/cs0830367',
+      source_url: 'https://pubmed.ncbi.nlm.nih.gov/1327657/',
+      read: 'abstract',
+      date_checked: '2026-10-20',
+      entered_by: 'claude',
+    },
+    avgerinos2018: {
+      authors: 'Avgerinos KI, et al.',
+      title:
+        'Effects of creatine supplementation on cognitive function of healthy individuals: A systematic review of randomized controlled trials.',
+      journal: 'Exp Gerontol 108:166-173',
+      year: 2018,
+      pmid: '29704637',
+      doi: '10.1016/j.exger.2018.04.013',
+      source_url: 'https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:29704637&resultType=core&format=json',
+      read: 'abstract',
+      date_checked: '2026-10-20',
+      entered_by: 'claude',
+    },
+    lak2025: {
+      authors: 'Lak M, et al.',
+      title: 'Does creatine cause hair loss? A 12-week randomized controlled trial.',
+      journal: 'J Int Soc Sports Nutr 22(sup1):2495229',
+      year: 2025,
+      pmid: '40265319',
+      doi: '10.1080/15502783.2025.2495229',
+      source_url: 'https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:40265319&resultType=core&format=json',
+      read: 'abstract',
+      date_checked: '2026-10-20',
+      entered_by: 'claude',
+    },
+  },
+};

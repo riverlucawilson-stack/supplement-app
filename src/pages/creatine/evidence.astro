@@ -1,0 +1,351 @@
+---
+// The creatine evidence page. All the words live in src/evidence/creatine.ts;
+// this file only lays them out.
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { creatineEvidence as page } from '../../evidence/creatine';
+import { strengthLabels, type Item, type Strength } from '../../evidence/types';
+
+// Number the references in the order they're first cited on the page.
+const order: string[] = [];
+for (const s of page.sections) for (const i of s.items) for (const c of i.cites) if (!order.includes(c)) order.push(c);
+const refNumber = (id: string) => order.indexOf(id) + 1;
+
+const strengthOrder: Strength[] = ['strong', 'moderate', 'limited', 'not_supported'];
+function groups(items: Item[]) {
+  const withStrength = items.filter((i) => i.strength);
+  if (withStrength.length === 0) return [{ strength: undefined, items }];
+  return strengthOrder
+    .map((strength) => ({ strength, items: items.filter((i) => i.strength === strength) }))
+    .filter((g) => g.items.length > 0);
+}
+const drafts = page.sections.filter((s) => !s.reviewed).length;
+---
+
+<BaseLayout title={page.title} description={page.description}>
+  <section class="intro wrap">
+    <p class="eyebrow">Creatine · Evidence</p>
+    <h1>{page.title}</h1>
+    <p class="lede">{page.lede}</p>
+    {
+      drafts > 0 && (
+        <p class="draft-note">
+          <span class="pill pill-warn">Draft - needs review</span>
+          {drafts} of {page.sections.length} sections haven't been reviewed by our editor yet. Each one is a summary of
+          the study abstracts listed under it.
+        </p>
+      )
+    }
+    <nav class="toc" aria-label="On this page">
+      {page.sections.map((s) => <a href={`#${s.id}`}>{s.heading}</a>)}
+      <a href="#references">References</a>
+    </nav>
+  </section>
+
+  {
+    page.sections.map((s) => (
+      <section class="wrap ev-section" id={s.id} aria-labelledby={`${s.id}-h`}>
+        <h2 id={`${s.id}-h`}>{s.heading}</h2>
+        {!s.reviewed && <p class="pill pill-warn draft-pill">DRAFT - NEEDS REVIEW</p>}
+        {s.intro && <p class="section-intro">{s.intro}</p>}
+        {!s.reviewed && s.todo && (
+          <div class="todo">
+            <p>Still to add before this section is finished:</p>
+            <ul>
+              {s.todo.map((t) => (
+                <li>{t}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+        {groups(s.items).map((g) => (
+          <div class="group">
+            {g.strength && (
+              <h3 class={`strength strength-${g.strength}`}>{strengthLabels[g.strength]}</h3>
+            )}
+            <div class="cards">
+              {g.items.map((item) => (
+                <article class="card">
+                  <h4>{item.title}</h4>
+                  <p>
+                    {item.text}
+                    {item.cites.map((c) => (
+                      <a class="cite num" href={`#ref-${c}`} aria-label={`Reference ${refNumber(c)}`}>
+                        [{refNumber(c)}]
+                      </a>
+                    ))}
+                  </p>
+                  {item.facts && (
+                    <dl class="facts">
+                      {item.facts.map((f) => (
+                        <div>
+                          <dt>{f.label}</dt>
+                          <dd class="num">{f.value}</dd>
+                        </div>
+                      ))}
+                    </dl>
+                  )}
+                </article>
+              ))}
+            </div>
+          </div>
+        ))}
+      </section>
+    ))
+  }
+
+  <section class="wrap ev-section" id="references" aria-labelledby="references-h">
+    <h2 id="references-h">References</h2>
+    <ol class="refs">
+      {
+        order.map((id) => {
+          const c = page.citations[id];
+          return (
+            <li id={`ref-${id}`}>
+              {c.authors} ({c.year}). {c.title} <em>{c.journal}</em>.{' '}
+              {c.pmid && (
+                <a href={`https://pubmed.ncbi.nlm.nih.gov/${c.pmid}/`} class="num">
+                  PMID {c.pmid}
+                </a>
+              )}
+              {c.doi && (
+                <>
+                  {' · '}
+                  <a href={`https://doi.org/${c.doi}`} class="num">
+                    doi:{c.doi}
+                  </a>
+                </>
+              )}
+              <span class="ref-meta">
+                {c.read === 'abstract' ? 'Summarized from the abstract' : 'Summarized from the full paper'}
+                {c.entered_by && <span class="pill pill-muted">Unverified</span>}
+              </span>
+            </li>
+          );
+        })
+      }
+    </ol>
+  </section>
+</BaseLayout>
+
+<style>
+  .intro {
+    padding-block: 2.5rem 1rem;
+  }
+
+  .eyebrow {
+    margin: 0 0 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  h1 {
+    margin: 0;
+    max-width: 22ch;
+    font-size: clamp(1.9rem, 4.5vw, 2.75rem);
+    font-weight: 800;
+  }
+
+  .lede {
+    max-width: 62ch;
+    margin: 1rem 0 0;
+    color: var(--muted);
+    font-size: 1.0625rem;
+  }
+
+  .draft-note {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    max-width: 62ch;
+    margin: 1.25rem 0 0;
+    font-size: 0.875rem;
+    color: var(--muted);
+  }
+
+  .toc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .toc a {
+    padding: 0.3rem 0.75rem;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: var(--surface);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .toc a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .ev-section {
+    padding-block: 2rem 0.5rem;
+    border-top: 1px solid var(--rule);
+    margin-top: 1.5rem;
+    scroll-margin-top: 1rem;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .draft-pill {
+    margin: 0.6rem 0 0;
+  }
+
+  .section-intro {
+    max-width: 68ch;
+    margin: 0.75rem 0 0;
+    color: var(--muted);
+  }
+
+  .todo {
+    max-width: 68ch;
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    border: 1px dashed var(--warn);
+    border-radius: var(--radius);
+    background: var(--warn-soft);
+    font-size: 0.875rem;
+  }
+
+  .todo p {
+    margin: 0;
+    font-weight: 600;
+    color: var(--warn);
+  }
+
+  .todo ul {
+    margin: 0.4rem 0 0;
+    padding-left: 1.2rem;
+  }
+
+  .group {
+    margin-top: 1.25rem;
+  }
+
+  .strength {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 0 0.75rem;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .strength::before {
+    content: '';
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background: currentColor;
+  }
+
+  .strength-strong {
+    color: var(--tier-a);
+  }
+  .strength-moderate {
+    color: var(--accent);
+  }
+  .strength-limited {
+    color: var(--tier-b);
+  }
+  .strength-not_supported {
+    color: var(--tier-c);
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+    gap: 0.75rem;
+  }
+
+  .card {
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    background: var(--surface);
+  }
+
+  .card h4 {
+    margin: 0 0 0.4rem;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .card p {
+    margin: 0;
+    font-size: 0.9375rem;
+  }
+
+  .cite {
+    margin-left: 0.2rem;
+    font-size: 0.75rem;
+    text-decoration: none;
+    vertical-align: super;
+    line-height: 0;
+  }
+
+  .facts {
+    display: grid;
+    gap: 0.25rem;
+    margin: 0.75rem 0 0;
+    padding-top: 0.6rem;
+    border-top: 1px dashed var(--rule);
+    font-size: 0.8125rem;
+  }
+
+  .facts div {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .facts dt {
+    color: var(--muted);
+  }
+
+  .facts dd {
+    margin: 0;
+    text-align: right;
+  }
+
+  .refs {
+    margin: 1rem 0 0;
+    padding-left: 1.5rem;
+    font-size: 0.875rem;
+  }
+
+  .refs li {
+    margin-bottom: 0.75rem;
+    scroll-margin-top: 1rem;
+  }
+
+  .refs li:target {
+    background: var(--accent-soft);
+  }
+
+  .ref-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.15rem;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+</style>
