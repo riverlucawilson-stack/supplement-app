@@ -5,7 +5,7 @@ effective dose, whether they've been independently tested, and what the research
 Built with [Astro](https://astro.build). There's no database: each product is a single
 YAML file you edit by hand.
 
-> Status: phase (c) of 6. Real products marked "not yet reviewed" plus 3 fake samples.
+> Status: phase (c) of 6. Real products, marked "not yet reviewed" until River checks them.
 
 ## One-time setup on your computer
 
