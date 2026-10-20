@@ -5,6 +5,10 @@ import { z } from 'astro/zod';
 // Dates in the YAML files are written like 2026-10-14.
 export const date = z.coerce.date();
 
+// Marks a value Claude looked up rather than you. Delete the line once you've
+// checked it against its source; the validation script warns until you do.
+export const enteredBy = z.literal('claude').optional();
+
 export const priceSchema = z.strictObject({
   retailer: z.string().min(1),
   price_usd: z.number().positive(),
@@ -12,6 +16,7 @@ export const priceSchema = z.strictObject({
   servings: z.number().int().positive(),
   url: z.url(),
   date_checked: date,
+  entered_by: enteredBy,
 });
 
 export const certificationPrograms = [
@@ -27,6 +32,7 @@ export const certificationSchema = z.strictObject({
   // Link to the product's listing on the certifier's own website.
   listing_url: z.url(),
   date_verified: date,
+  entered_by: enteredBy,
 });
 
 // A COA schema needs the category's own list of test names,
@@ -40,11 +46,14 @@ export function coaSchema<T extends readonly [string, ...string[]]>(testNames: T
     test_date: date,
     scope: z.enum(['finished_product', 'raw_material']),
     tests: z.array(z.enum(testNames)).default([]),
+    entered_by: enteredBy,
   });
 }
 
 // Fields every product has, whatever its category.
 export const baseProductFields = {
+  // Covers the basics and dose info (brand, name, ingredients, dose...).
+  entered_by: enteredBy,
   brand: z.string().min(1),
   name: z.string().min(1),
   form: z.enum(['powder', 'capsule', 'gummy']),

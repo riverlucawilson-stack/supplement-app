@@ -19,6 +19,7 @@ prices:
     servings: 60
     url: https://example.com/broken
     date_checked: 2020-01-01       # stale
+    entered_by: claude             # not yet verified
 certifications:
   - program: Informed Sport
     listing_url: https://example.com/cert

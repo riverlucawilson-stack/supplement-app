@@ -34,6 +34,7 @@ test('broken files are rejected with clear messages', () => {
     'OLD CERTIFICATION CHECK',
     'which is unusual',
     'listed more than once',
+    'UNVERIFIED: prices #2 (Sample Store 1) was entered by Claude',
   ]) {
     assert.ok(out.includes(expected), `expected output to mention: ${expected}\n\n${out}`);
   }

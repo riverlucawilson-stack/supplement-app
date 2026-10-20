@@ -161,6 +161,14 @@ function checkFile(path: string): FileReport {
     warnings.push('Uses example.com links, so this is sample data. Remove it or replace it before launch.');
   }
 
+  // Values Claude looked up that you haven't checked yet.
+  const unverified = (what: string) =>
+    warnings.push(`UNVERIFIED: ${what} was entered by Claude. Check it against its source, then delete its entered_by line.`);
+  if (product.entered_by) unverified('the product basics and dose (label info)');
+  product.prices.forEach((p, i) => p.entered_by && unverified(`prices #${i + 1} (${p.retailer})`));
+  product.certifications.forEach((c, i) => c.entered_by && unverified(`certifications #${i + 1} (${c.program})`));
+  product.coas.forEach((c, i) => c.entered_by && unverified(`coas #${i + 1} (lot ${c.lot})`));
+
   // One-line summary of what the site will show.
   const best = bestPrice(product, today);
   const price = best ? `${usd(best.costPerReferenceDose)} ${category.referenceDose.label}` : 'no price';

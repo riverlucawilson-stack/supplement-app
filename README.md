@@ -83,6 +83,13 @@ checks the deliberately broken test files instead of the real ones.
 
 Dates are written `2026-10-14` (year-month-day).
 
+### Checking what Claude entered
+
+When Claude looks up a price, certification, or COA, it adds `entered_by: claude` to
+that entry (or to the top of the file, for label info). `npm run validate` lists each one
+as **UNVERIFIED**. Open the entry's link, compare the values, fix anything wrong, then
+delete the `entered_by: claude` line.
+
 ## How to update a price
 
 Open the product's file and find its entry under `prices:`. Change `price_usd`, and set
