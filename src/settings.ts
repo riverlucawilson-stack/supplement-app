@@ -1,8 +1,8 @@
 // Site-wide settings. Change values here, not in the page code.
 
 export const settings = {
-  // Shown in page titles and the header. Pick a real name later.
-  siteName: '[SITE NAME]',
+  // Shown in page titles and the header.
+  siteName: 'Sup Search',
 
   // The site's public address. Update after deploying (phase f).
   siteUrl: 'https://example.pages.dev',

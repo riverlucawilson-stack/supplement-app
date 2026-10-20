@@ -1,4 +1,4 @@
-# [SITE NAME]
+# Sup Search
 
 A static website comparing creatine products on three things: what they cost per
 effective dose, whether they've been independently tested, and what the research says.
@@ -47,7 +47,7 @@ YAML file you edit by hand.
 
 ## How to add a product
 
-1. Copy an existing file in `src/content/products/creatine/` and rename it. Use lowercase
+1. Copy `templates/creatine-product.yaml` into `src/content/products/creatine/` and rename it. Use lowercase
    words joined by dashes, e.g. `brandname-creatine-monohydrate.yaml`. The file name
    becomes the page address.
 2. Fill in every field from the label and the seller's page. Leave out `raw_material`
@@ -58,6 +58,16 @@ YAML file you edit by hand.
 
 To see what the errors look like, run `npm run validate -- tests/fixtures/products`. That
 checks the deliberately broken test files instead of the real ones.
+
+### Where to find each piece of information
+
+| Information | Where to look |
+|---|---|
+| Brand, name, form, type, ingredients, dose | The Supplement Facts panel on the label, or the brand's product page |
+| Prices | Each retailer's product page. Note the container size each store sells. |
+| Certifications | The certifier's own search, never the brand's claim alone: [NSF Certified for Sport](https://www.nsfsport.com/certified-products/), [Informed Sport](https://sport.wetestyoutrust.com/certified-safer-supplements), [USP Verified](https://www.usp.org) (search "USP Verified products"), [BSCG](https://www.bscg.org/certified-drug-free-database), [Clean Label Project](https://cleanlabelproject.org) |
+| COAs | The brand's website (often a "lab results" or "testing" page), a QR code on the label, or by emailing the brand with the lot number from your container |
+| ISO/IEC 17025 accreditation | The lab's accreditation certificate, searchable on the accrediting body's site (for example A2LA or ANAB). Use `unknown` until you've confirmed it. |
 
 ### Allowed values
 

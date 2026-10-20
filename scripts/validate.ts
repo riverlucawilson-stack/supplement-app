@@ -53,6 +53,12 @@ function friendlyIssue(issue: z.core.$ZodIssue): string[] {
   if (issue.code === 'invalid_type' && issue.input === undefined) {
     return [`${fieldName(issue.path)}: missing. This field is required.`];
   }
+  if (issue.code === 'too_small' && issue.origin === 'string') {
+    return [`${fieldName(issue.path)}: empty. Fill it in.`];
+  }
+  if (issue.code === 'too_small' && issue.origin === 'number') {
+    return [`${fieldName(issue.path)}: must be more than 0.`];
+  }
   return [`${fieldName(issue.path)}: ${issue.message}`];
 }
 
