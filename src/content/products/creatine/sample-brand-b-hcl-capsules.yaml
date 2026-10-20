@@ -1,0 +1,35 @@
+# FAKE SAMPLE PRODUCT for testing the site. Not a real brand or real data.
+# Shows a product that should land in Tier B (COA exists, but the lab's
+# accreditation is unknown and it only covers the raw material).
+category: creatine
+brand: Sample Brand B
+name: Creatine HCl Capsules
+form: capsule
+creatine_type: hcl
+other_ingredients: [gelatin capsule, magnesium stearate]
+
+dose:
+  serving_size_g: 2.4          # 3 capsules
+  creatine_per_serving_g: 2
+  servings_per_container: 40
+
+prices:
+  - retailer: Sample Store 1
+    price_usd: 27.50
+    servings: 40
+    url: https://example.com/sample-store-1/brand-b
+    date_checked: 2026-09-20   # older than 14 days, should show as stale
+
+certifications: []
+
+coas:
+  - url: https://example.com/coa/brand-b-lot-17.pdf
+    lab: Sample Lab 2
+    iso_17025: unknown
+    lot: SAMPLE-B-017
+    test_date: 2025-11-03
+    scope: raw_material
+    tests: [purity, lead, arsenic]
+
+flags: []
+notes: ""
