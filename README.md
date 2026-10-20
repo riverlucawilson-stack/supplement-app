@@ -5,7 +5,7 @@ effective dose, whether they've been independently tested, and what the research
 Built with [Astro](https://astro.build). There's no database: each product is a single
 YAML file you edit by hand.
 
-> Status: phase (a) of 6. Sample products only (fake brands, fake data).
+> Status: phase (b) of 6. Sample products only (fake brands, fake data).
 
 ## One-time setup on your computer
 
@@ -26,7 +26,9 @@ YAML file you edit by hand.
 | Command | What it does |
 |---|---|
 | `npm run dev` | Starts the site at http://localhost:4321 and refreshes as you edit. Stop it with Ctrl+C. |
-| `npm run build` | Builds the finished site into `dist/`. Fails with a message if a product file is wrong. |
+| `npm run validate` | **Run before publishing.** Checks every product file and lists errors (✗, must fix) and warnings (⚠, look at). |
+| `npm run build` | Runs `validate`, then builds the finished site into `dist/`. Stops if there are any errors. |
+| `npm test` | Runs the automated tests for the price math, tiers, and validation. |
 | `npm run check` | Checks the code for type mistakes. |
 
 ## Where things live
@@ -35,6 +37,9 @@ YAML file you edit by hand.
 |---|---|
 | `src/content/products/creatine/` | **One YAML file per product.** This is where you'll spend most of your time. |
 | `src/settings.ts` | Site name, and the "stale" limits (prices 14 days, COAs 2 years, certifications 12 months). |
+| `src/lib/` | The calculations: `pricing.ts` (cost per 5 g, per 30 days, best price), `tier.ts` (Tier A/B/C with reasons), `staleness.ts`. |
+| `scripts/validate.ts` | The validation script. |
+| `tests/` | Automated tests. `tests/fixtures/products/` holds deliberately broken product files the tests check get caught. |
 | `src/categories/` | What a product file must contain, per category. Fish oil goes here later. |
 | `src/layouts/BaseLayout.astro` | The frame on every page, including the affiliate disclosure and "not medical advice" note. |
 | `src/pages/` | One file per page of the site. |
@@ -47,8 +52,12 @@ YAML file you edit by hand.
    becomes the page address.
 2. Fill in every field from the label and the seller's page. Leave out `raw_material`
    if the label doesn't name one. Use `[]` for an empty list.
-3. Run `npm run build`. If anything is misspelled or missing, it stops and names the file
-   and field. Fix it and run again.
+3. Run `npm run validate`. If anything is misspelled, missing, or impossible (like more
+   creatine per serving than the serving weighs), it names the file and field. Fix it and
+   run again.
+
+To see what the errors look like, run `npm run validate -- tests/fixtures/products`. That
+checks the deliberately broken test files instead of the real ones.
 
 ### Allowed values
 
@@ -72,6 +81,27 @@ the number of servings in **that store's** container. Never type a cost per gram
 site calculates it.
 
 To add a store, copy one `- retailer:` block (all five lines) and edit it.
+
+## How the numbers are calculated
+
+You never type a calculated number. For each retailer's price:
+
+- creatine in the container = `servings` × `creatine_per_serving_g`
+- **cost per 5 g** = price ÷ creatine in the container × 5
+- **cost per 30 days** = cost per gram × 5 g/day × 30
+- **best price** = the lowest cost per 5 g among prices that aren't stale. If every price
+  is stale, it uses the lowest stale one and marks it stale.
+
+**Tiers** (`src/lib/tier.ts`):
+
+- **A**: a current certification (verified within 12 months) AND a COA from an ISO/IEC
+  17025 accredited lab, on the finished product, under 2 years old.
+- **B**: not A, but at least one COA or certification exists.
+- **C**: no COA and no certification.
+
+**Stale** limits are in `src/settings.ts`. Staleness is worked out when the site is
+built, so the live site only updates its "stale" labels when it rebuilds. Phase (f) sets
+up an automatic daily rebuild.
 
 ## How to deploy
 

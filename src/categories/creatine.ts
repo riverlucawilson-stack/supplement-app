@@ -46,6 +46,11 @@ export const creatine = {
   name: 'Creatine',
   // Prices are compared per this much of the active ingredient.
   referenceDose: { grams: 5, label: 'per 5 g creatine' },
+  // Grams of the active ingredient per day, used for "cost per 30 days".
+  dailyGrams: 5,
+  // The validation script warns when a cost per 5 g falls outside this range,
+  // since that usually means a typo in the price or servings.
+  plausibleCostPerReferenceDose: { min: 0.05, max: 5 },
   // How many grams of the active ingredient one serving gives.
   activeGramsPerServing: (p: CreatineProduct) => p.dose.creatine_per_serving_g,
   coaTestLabels: {

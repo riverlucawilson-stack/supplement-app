@@ -1,21 +1,44 @@
 ---
-// TEMPORARY home page for phase (a): it only proves the product files load.
-// Phase (c) replaces this with the sortable comparison table.
+// TEMPORARY home page for phases (a) and (b): it proves the product files
+// load and shows the calculated numbers. Phase (c) replaces this with the
+// sortable comparison table.
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { bestPrice } from '../lib/pricing';
+import { tierFor } from '../lib/tier';
 
-const products = await getCollection('products');
+const today = new Date();
+const products = (await getCollection('products')).map((entry) => ({
+  entry,
+  best: bestPrice(entry.data, today),
+  tier: tierFor(entry.data, today),
+}));
+const usd = (n: number) => `$${n.toFixed(2)}`;
 ---
 
 <BaseLayout title="Creatine compared" description="Creatine products compared on cost per dose, testing, and evidence.">
   <h1>Products loaded: {products.length}</h1>
   <ul>
     {
-      products.map((p) => (
+      products.map(({ entry, best, tier }) => (
         <li>
-          <strong>{p.data.brand}</strong>, {p.data.name} ({p.data.form}, {p.data.creatine_type}).
-          {p.data.prices.length} price(s), {p.data.certifications.length} certification(s),
-          {p.data.coas.length} COA(s). File id: <code>{p.id}</code>
+          <strong>{entry.data.brand}</strong>, {entry.data.name}: Tier {tier.tier},{' '}
+          {best ? (
+            <>
+              {usd(best.costPerReferenceDose)} per 5 g, {usd(best.costPer30Days)} per 30 days at{' '}
+              {best.price.retailer}
+              {best.stale && ' (STALE PRICE)'}
+            </>
+          ) : (
+            'no price'
+          )}
+          <ul>
+            {tier.checks.map((c) => (
+              <li>
+                {c.met ? '✓' : '✗'} {c.label}: {c.details.join(' ')}
+              </li>
+            ))}
+          </ul>
         </li>
       ))
     }

@@ -1,0 +1,7 @@
+# DELIBERATELY BROKEN test file: bad file name, and it's in the wrong category folder.
+category: creatine
+brand: Broken Brand
+name: Bad Name
+form: powder
+creatine_type: monohydrate
+dose: { serving_size_g: 5, creatine_per_serving_g: 5, servings_per_container: 60 }
