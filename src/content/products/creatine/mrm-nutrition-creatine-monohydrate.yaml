@@ -1,0 +1,35 @@
+# Looked up by Claude on 2026-10-20 from Vitacost (500 g and 325 g listings).
+# Entries marked entered_by: claude still need River's check.
+category: creatine
+entered_by: claude
+brand: MRM Nutrition
+name: Creatine Monohydrate
+form: powder
+creatine_type: monohydrate
+other_ingredients: []           # Vitacost: Other ingredients "None."
+
+dose:
+  serving_size_g: 5             # facts: "Serving Size: 1 Scoop (5 grams)"
+  creatine_per_serving_g: 5     # facts: "Creatine Monohydrate | 5,000 mg"
+  servings_per_container: 100   # facts (500 g): "Servings Per Container: 100"
+
+prices:
+  - retailer: Vitacost
+    price_usd: 29.99            # "Creatine Monohydrate 500, 1.1 lbs (500 g)", "Sale price $29.99"
+    servings: 100
+    url: https://www.vitacost.com/products/mrm-nutrition-creatine-monohydrate-500-1-1-lbs-500-g-115906
+    date_checked: 2026-10-20
+    entered_by: claude
+  - retailer: Vitacost
+    price_usd: 22.49            # "Creatine Monohydrate 325, 11.5 oz (325 g)", $22.49; facts: 65 servings
+    servings: 65
+    url: https://www.vitacost.com/products/mrm-nutrition-creatine-monohydrate-325-11-5-oz-325-g-149943
+    date_checked: 2026-10-20
+    entered_by: claude
+
+certifications: []              # not on NSF's creatine search; no program named on the pages
+
+coas: []                        # none found by web search
+
+flags: []
+notes: ""

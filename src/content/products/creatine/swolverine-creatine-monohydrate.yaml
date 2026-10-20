@@ -1,0 +1,35 @@
+# Looked up by Claude on 2026-10-20 from swolverine.com (product page and .js
+# variant data). Entries marked entered_by: claude still need River's check.
+category: creatine
+entered_by: claude
+brand: Swolverine
+name: Creatine Monohydrate
+form: powder
+creatine_type: monohydrate
+other_ingredients: []           # page: "Creatine Monohydrate (Micronized). No fillers..."
+
+dose:
+  serving_size_g: 5             # page: "Mix 1 scoop (5g)"
+  creatine_per_serving_g: 5     # page: "5g of highly absorbable, unflavored creatine per scoop"
+  servings_per_container: 30
+
+prices:
+  - retailer: Swolverine
+    price_usd: 24.99            # .js: "Unflavored / 30", 2499 cents
+    servings: 30
+    url: https://swolverine.com/products/creatine-monohydrate
+    date_checked: 2026-10-20
+    rating:                     # page: "267 verified reviews · Average 4.81 stars"
+      stars: 4.81
+      count: 267
+    entered_by: claude
+
+certifications: []              # not on NSF's creatine search; page names no certification
+
+# swolverine.com/pages/certificates-of-analysis links one creatine COA (lot #9408) on
+# Dropbox. Dropbox blocked automated reading (robots), so Claude didn't read it.
+# River: open https://www.dropbox.com/s/m06g3pmrexbh8p4/Creatine%20-%20COA%20%289408%29.pdf?dl=0
+coas: []
+
+flags: []
+notes: ""

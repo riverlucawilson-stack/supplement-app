@@ -1,0 +1,48 @@
+# Looked up by Claude on 2026-10-20 from 1stphorm.com (product page and its .js
+# variant data) and NSF. Entries marked entered_by: claude still need River's check.
+category: creatine
+entered_by: claude
+brand: 1st Phorm
+name: Micronized Creatine Monohydrate
+form: powder
+creatine_type: monohydrate
+other_ingredients: []           # CHECK: Supplement Facts is an image; page says "Zero fillers or additives"
+
+dose:
+  serving_size_g: 5             # page image alt: "serving size of 1 scoop (5g)"; NSF: "1 scoop (5 g)"
+  creatine_per_serving_g: 5     # page: "5g of pure creatine in every serving"
+  servings_per_container: 100   # .js variant "100 servings" (500 g size)
+
+prices:
+  - retailer: 1st Phorm
+    price_usd: 39.99            # .js: "100 servings" variant, 3999 cents
+    servings: 100
+    url: https://1stphorm.com/products/micronized-creatine-monohydrate/
+    date_checked: 2026-10-20
+    rating:                     # page: "Rated 4.9 out of 5 stars", "7,602 Reviews"
+      stars: 4.9
+      count: 7602
+    entered_by: claude
+  - retailer: 1st Phorm
+    price_usd: 29.99            # .js: "50 servings" variant, 2999 cents
+    servings: 50
+    url: https://1stphorm.com/products/micronized-creatine-monohydrate/
+    date_checked: 2026-10-20
+    rating:                     # page: "Rated 4.9 out of 5 stars", "7,602 Reviews"
+      stars: 4.9
+      count: 7602
+    entered_by: claude
+# Academy Sports lists it (500 g, 100 servings) but shows no price ("Please visit your store").
+
+certifications:
+  - program: NSF Certified for Sport
+    # "Micronized Creatine Monohydrate", United States, 250 g / 500 g, 1 scoop (5 g), many lots.
+    # NSF also has id=1797700 (Unflavored, 250 g / 500 g) and id=1612067 ("... 500g").
+    listing_url: https://www.nsfsport.com/certified-products/listing-detail.php?id=1601206
+    date_verified: 2026-10-20
+    entered_by: claude
+
+coas: []                        # no COA on the product page; web search found none
+
+flags: []
+notes: ""

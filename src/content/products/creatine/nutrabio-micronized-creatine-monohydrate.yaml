@@ -1,0 +1,45 @@
+# Looked up by Claude on 2026-10-20 from Vitacost, iHerb and Target (nutrabio.com
+# was unreadable earlier). Entries marked entered_by: claude still need River's check.
+category: creatine
+entered_by: claude
+brand: NutraBio
+name: Micronized Creatine Monohydrate
+form: powder
+creatine_type: monohydrate
+raw_material: PharmaPure        # facts: "PharmaPure™ Creatine Monohydrate | 5 g" (NutraBio's own name, not Creapure)
+other_ingredients: []           # Vitacost/iHerb: other ingredients "Absolutely none."
+
+dose:
+  serving_size_g: 5             # facts: "Serving Size: 1 scoop (5 g)"
+  creatine_per_serving_g: 5
+  servings_per_container: 100   # facts: "Serving Per Container: 100"
+
+prices:
+  - retailer: iHerb
+    price_usd: 35.99            # "Unflavored, 1.1 lb (500 g)", $35.99
+    servings: 100
+    url: https://www.iherb.com/pr/nutrabio-micronized-creatine-monohydrate-unflavored-1-1-lb-500-g/80769
+    date_checked: 2026-10-20
+    rating:                     # page: 4.8 average, 1,158 reviews
+      stars: 4.8
+      count: 1158
+    entered_by: claude
+  - retailer: Vitacost
+    price_usd: 35.99            # "Unflavored, 1.1 lb (500 g)", $35.99
+    servings: 100
+    url: https://www.vitacost.com/products/nutrabio-micronized-creatine-monohydrate-unflavored-1-1-lb-500-g-80769
+    date_checked: 2026-10-20
+    entered_by: claude
+  - retailer: Target
+    price_usd: 38.99            # "1.1 lb (500 g)", $38.99, "Sold & shipped by iHerb"
+    servings: 100
+    url: https://www.target.com/p/nutrabio-performance-micronized-creatine-monohydrate-1-1-lbs-500-g/-/A-1002588166
+    date_checked: 2026-10-20
+    entered_by: claude
+
+certifications: []              # not on NSF's creatine search
+
+coas: []                        # brand site unreadable; no COA found on retailer pages
+
+flags: []
+notes: ""

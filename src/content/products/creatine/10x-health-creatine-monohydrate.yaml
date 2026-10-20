@@ -1,0 +1,37 @@
+# Looked up by Claude on 2026-10-20 from shop.10xhealthsystem.com (product page and
+# .js variant data) and NSF. Entries marked entered_by: claude still need River's check.
+category: creatine
+entered_by: claude
+brand: 10X Health
+name: Creatine Monohydrate
+form: powder
+creatine_type: monohydrate
+other_ingredients: []           # CHECK: Supplement Facts is an image; page says "single-ingredient creatine formula"
+
+dose:
+  serving_size_g: 5             # CHECK: page says only "1 scoop"; NSF: "1 scoop (5 g)"
+  creatine_per_serving_g: 5     # page: "delivers 5g of pure, micronized creatine monohydrate"
+  servings_per_container: 60    # page: "60 servings"; NSF: 300 g
+
+prices:
+  - retailer: 10X Health
+    price_usd: 34.99            # .js: one variant, 3499 cents; page: 60 servings
+    servings: 60
+    url: https://shop.10xhealthsystem.com/products/10x-creatine-monohydrate
+    date_checked: 2026-10-20
+    rating:                     # page: 5.0 average from 2 reviews
+      stars: 5.0
+      count: 2
+    entered_by: claude
+
+certifications:
+  - program: NSF Certified for Sport
+    # "10X Health Creatine Monohydrate", United States, Unflavored, 300 g, 1 scoop (5 g), Lot 26BP23767
+    listing_url: https://www.nsfsport.com/certified-products/listing-detail.php?id=1820613
+    date_verified: 2026-10-20
+    entered_by: claude
+
+coas: []                        # no COA on the product page
+
+flags: []
+notes: ""
