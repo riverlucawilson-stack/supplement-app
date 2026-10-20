@@ -1,0 +1,41 @@
+# Looked up by Claude on 2026-10-20 from nootropicsdepot.com and the COA PDF it
+# links. Entries marked entered_by: claude still need River's check.
+category: creatine
+entered_by: claude
+brand: Nootropics Depot
+name: Creatine Monohydrate Powder (200 Mesh)
+form: powder
+creatine_type: monohydrate
+other_ingredients: []           # page lists only "Pure creatine monohydrate powder"
+
+dose:
+  serving_size_g: 5             # page: "5g (Per Serving)"
+  creatine_per_serving_g: 5
+  servings_per_container: 100   # 500 g ÷ 5 g; the page doesn't state servings
+
+prices:
+  - retailer: Nootropics Depot
+    price_usd: 34.99            # page: "500 Grams", "Now: $34.99" (only size offered)
+    servings: 100
+    url: https://nootropicsdepot.com/creatine-monohydrate-200-mesh-powder/
+    date_checked: 2026-10-20
+    entered_by: claude
+
+certifications: []              # no third-party certification program named
+
+coas:
+  # The product page links one COA per lot. This is lot CMHS1080426, which Claude read.
+  - url: https://cdn11.bigcommerce.com/s-cebedmpn/content/lab-testing/CMHS1080426_500g_SIgned.pdf
+    lab: Not named on the COA    # COA lists methods (e.g. AZLAB-ICPMS) but no lab name
+    iso_17025: unknown
+    lot: CMHS1080426
+    test_date: 2026-08-04       # "Report Date: 08/04/2026"
+    # CHECK: the COA doesn't say finished product or raw material. It reports a
+    # 500 g jar fill weight, which points to the finished product.
+    scope: finished_product
+    # Assay 100% (dry basis); As, Cd, Hg, Pb by ICP-MS. No microbial, creatinine, DCD or DHT.
+    tests: [purity, lead, arsenic, cadmium, mercury]
+    entered_by: claude
+
+flags: []
+notes: ""

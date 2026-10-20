@@ -1,0 +1,59 @@
+# BLANK CREATINE PRODUCT TEMPLATE
+#
+# How to use it:
+#   1. Copy this file into src/content/products/creatine/
+#   2. Rename it, e.g. brandname-creatine-monohydrate.yaml (lowercase, dashes)
+#   3. Fill in every field from the sources named in the comments
+#   4. Delete any example lines you didn't use
+#   5. Run: npm run validate
+#
+# Only enter what you have seen yourself on the label, the seller's page,
+# the certifier's site, or the COA. If you can't find something, leave it out
+# (for optional fields) or leave the list empty with [].
+
+category: creatine
+
+# --- From the product label or the brand's product page ---
+brand: ""                      # e.g. the brand name exactly as printed
+name: ""                       # the product name, without the brand
+form: powder                   # powder | capsule | gummy
+creatine_type: monohydrate     # monohydrate | hcl | nitrate | ethyl_ester | buffered | magnesium_chelate | other
+# raw_material: ""             # only if the label names it (e.g. a branded creatine). Otherwise delete this line.
+other_ingredients: []          # everything besides creatine, e.g. [citric acid, sucralose]
+
+dose:                          # from the Supplement Facts panel
+  serving_size_g: 0            # weight of one serving in grams
+  creatine_per_serving_g: 0    # grams of creatine in one serving
+  servings_per_container: 0    # as printed on the label
+
+# --- From each retailer's product page, checked by hand. One block per store. ---
+prices:
+  - retailer: ""
+    price_usd: 0               # the regular price you'd pay today, before shipping
+    servings: 0                # servings in the container THIS store sells
+    url: https://
+    date_checked: 2026-01-01   # the day you checked it (year-month-day)
+    # rating:                  # optional: the store's own review summary, if shown
+    #   stars: 4.7             # average, 0 to 5
+    #   count: 1234            # number of reviews
+    #   url: https://          # optional: where to read them (defaults to the price url)
+
+# --- From the certifier's own website (not the brand's claims) ---
+# Search for the exact product. If it isn't listed there, leave this as [].
+certifications: []
+#  - program: NSF Certified for Sport   # or: Informed Sport | USP Verified | BSCG | Clean Label Project
+#    listing_url: https://              # link to the product on the certifier's site
+#    date_verified: 2026-01-01          # the day you saw it listed
+
+# --- From a Certificate of Analysis (COA), usually on the brand's site or by email request ---
+coas: []
+#  - url: https://                      # link to the COA
+#    lab: ""                            # testing lab named on the COA
+#    iso_17025: unknown                 # yes | no | unknown (only "yes" if you confirmed the lab's accreditation)
+#    lot: ""                            # lot or batch number on the COA
+#    test_date: 2026-01-01              # date of the test (not the date you found it)
+#    scope: finished_product            # finished_product | raw_material
+#    tests: []                          # any of: purity, lead, arsenic, cadmium, mercury, microbial, creatinine, dcd, dht
+
+flags: []                      # things shoppers should know, e.g. [added_sweeteners, proprietary_blend]
+notes: ""

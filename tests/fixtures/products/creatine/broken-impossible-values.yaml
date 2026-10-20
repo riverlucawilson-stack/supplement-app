@@ -1,0 +1,34 @@
+# DELIBERATELY BROKEN test file. The validation script must reject it.
+category: creatine
+brand: Broken Brand
+name: Impossible Values
+form: powder
+creatine_type: monohydrate
+dose:
+  serving_size_g: 3
+  creatine_per_serving_g: 5        # more creatine than the whole serving
+  servings_per_container: 60
+prices:
+  - retailer: Sample Store 1
+    price_usd: 0.99                # suspiciously cheap
+    servings: 60
+    url: https://example.com/broken
+    date_checked: 2099-01-01       # in the future
+  - retailer: Sample Store 1       # listed twice
+    price_usd: 25
+    servings: 60                   # same store, same size
+    url: https://example.com/broken
+    date_checked: 2020-01-01       # stale
+    entered_by: claude             # not yet verified
+certifications:
+  - program: Informed Sport
+    listing_url: https://example.com/cert
+    date_verified: 2020-01-01      # too old to count as current
+coas:
+  - url: https://example.com/coa.pdf
+    lab: Sample Lab
+    iso_17025: "yes"
+    lot: OLD-1
+    test_date: 2020-01-01          # stale
+    scope: finished_product
+    tests: []                      # no tests listed

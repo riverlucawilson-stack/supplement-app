@@ -1,0 +1,5 @@
+# DELIBERATELY BROKEN test file: not valid YAML.
+category: creatine
+brand: "Unclosed quote
+dose:
+  serving_size_g 5

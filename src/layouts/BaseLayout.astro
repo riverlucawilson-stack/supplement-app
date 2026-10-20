@@ -1,0 +1,67 @@
+---
+// The frame around every page: page title and description for search
+// engines, the header, the affiliate disclosure, and the "not medical
+// advice" note. Because every page uses this layout, none can skip them.
+import { settings } from '../settings';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+const { title, description } = Astro.props;
+const fullTitle = title === settings.siteName ? title : `${title} | ${settings.siteName}`;
+const path = Astro.url.pathname;
+// Only pages that exist go in the menu. Phase (e) adds Methodology, How to read a COA, About.
+const nav = [{ href: '/', label: 'Creatine' }];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={new URL(path, Astro.site)} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="wordmark" href="/">Sup<span>Search</span></a>
+        <nav class="site-nav" aria-label="Main">
+          {nav.map((n) => <a href={n.href} aria-current={path === n.href ? 'page' : undefined}>{n.label}</a>)}
+        </nav>
+      </div>
+    </header>
+
+    <aside class="notice" aria-label="Disclosures">
+      <div class="wrap">
+        <p>
+          <strong>Affiliate disclosure:</strong> some links may earn us a commission. It never affects rankings.
+        </p>
+        <p><strong>Not medical advice.</strong> Talk to a qualified professional before starting a supplement.</p>
+      </div>
+    </aside>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>
+          {settings.siteName} compares supplements on price per dose and published testing. Rankings come only from
+          the formula on our Methodology page, never from affiliate commissions.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

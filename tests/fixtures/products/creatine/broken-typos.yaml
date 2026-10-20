@@ -1,0 +1,17 @@
+# DELIBERATELY BROKEN test file: misspelled fields and invalid values.
+category: creatine
+brand: Broken Brand
+name: Typos
+form: gumy
+creatine_type: monohydrate
+raw_materal: Something
+dose:
+  serving_size_g: 5
+  creatine_per_servng_g: 5
+  servings_per_container: 60
+prices:
+  - retailer: Sample Store 1
+    price_usd: -5
+    servings: 60
+    url: not a link
+    date_checked: 2026-10-01

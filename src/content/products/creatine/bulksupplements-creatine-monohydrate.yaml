@@ -1,0 +1,40 @@
+# Looked up by Claude on 2026-10-20 from bulksupplements.com (product page and
+# its .js variant data). Entries marked entered_by: claude still need River's check.
+category: creatine
+entered_by: claude
+brand: BulkSupplements.com
+name: Creatine Monohydrate (Micronized) Powder
+form: powder
+creatine_type: monohydrate
+other_ingredients: []           # page: "Other Ingredients: None"
+
+dose:
+  serving_size_g: 5             # page: "Serving Size 2 tsp (about 5 grams)"
+  creatine_per_serving_g: 5     # only ingredient is creatine monohydrate
+  servings_per_container: 100   # 500 g size ÷ 5 g; the page doesn't state servings
+
+prices:
+  - retailer: BulkSupplements.com
+    price_usd: 23.97            # .js: "500 Grams (1.1 lbs)" variant CM500
+    servings: 100               # 500 g ÷ 5 g per serving
+    url: https://www.bulksupplements.com/products/creatine-monohydrate
+    date_checked: 2026-10-20
+    rating:                     # page: "Rated 4.8 of 5.0 stars", "Based on 10,018 Reviews"
+      stars: 4.8
+      count: 10018
+    entered_by: claude
+  - retailer: BulkSupplements.com
+    price_usd: 30.97            # .js: "1 Kilogram (2.2 lbs)" variant CM1KG
+    servings: 200               # 1,000 g ÷ 5 g per serving
+    url: https://www.bulksupplements.com/products/creatine-monohydrate
+    date_checked: 2026-10-20
+    rating:                     # page: "Rated 4.8 of 5.0 stars", "Based on 10,018 Reviews"
+      stars: 4.8
+      count: 10018
+    entered_by: claude
+
+certifications: []              # no third-party certification named on the page
+coas: []                        # no COA link on the page
+
+flags: []
+notes: ""

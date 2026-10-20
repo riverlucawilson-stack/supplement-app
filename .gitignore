@@ -1,0 +1,11 @@
+# Built site and Astro's cache (recreated every build)
+dist/
+.astro/
+
+# Installed tools (recreated by "npm install")
+node_modules/
+
+# Editor and OS clutter
+.DS_Store
+.vscode/
+.env
