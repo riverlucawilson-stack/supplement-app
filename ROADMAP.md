@@ -8,10 +8,8 @@ as "checkpoint: <unit>". CLAUDE.md wins any conflict with this file.
 - (none)
 
 ## Next up
-- Stage C1 Vitamin D: write categories/vitamin-d.yaml (status: draft). Comparison is $ per 1,000 IU (25 mcg).
-  Labels give D in IU, mcg or both; the YAML loader keeps IU and mcg apart, so the config will record mcg and
-  compare per 25 mcg (labelled "per 1,000 IU (25 mcg)"), unless River prefers adding a D-specific IU conversion.
-- Then Vitamin D batch 1 (up to 5 products) using TEAM.md Mission 1, once River OKs TEAM.md.
+- WAITING ON RIVER: OK TEAM.md, then Vitamin D batch 1 (up to 5 products) per TEAM.md Mission 1.
+  The vitamin D config records the label's mcg figure and compares per 25 mcg (= 1,000 IU).
 
 ## Already built before this roadmap existed (2026-10-21)
 - [x] Phase (a): project setup, data format (PR #1)
@@ -59,6 +57,9 @@ A category is done when it has:
 6. an evidence draft for River's review (drafts/evidence/<category>.md, NEEDS RIVER REVIEW)
 
 - [ ] 1. Vitamin D: $ per 1,000 IU (25 mcg). Record D3 vs D2, carrier oil, any added K2.
+  - [x] category config: categories/vitamin-d.yaml (status: draft) + templates/vitamin-d-product.yaml
+  - [ ] batch 1 (up to 5 products)  - [ ] batch 2  - [ ] batch 3 if needed (8-12 total)
+  - [ ] comparison page check  - [ ] product pages check  - [ ] claims-review pass  - [ ] evidence draft
 - [ ] 2. Magnesium: $ per 100 mg elemental magnesium, taken from the Supplement Facts panel,
       never from compound weight. Record the form (glycinate, citrate, oxide, malate, threonate, etc.).
 - [ ] 3. Fish oil / omega-3: $ per 1,000 mg EPA+DHA combined, not total oil. Record the form

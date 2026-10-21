@@ -4,6 +4,7 @@
 // with the reasons behind it. Every number is calculated in src/lib.
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { categoryOf, type Product } from '../categories';
+import { formLabels } from '../categories/shared';
 import { settings } from '../settings';
 import { allPrices, bestPrice } from '../lib/pricing';
 import { isCertificationCurrent } from '../lib/staleness';
@@ -31,7 +32,7 @@ const shortDate = (d: Date) =>
 const round = (n: number) => Number(n.toFixed(2)).toString();
 const unit = category.referenceDose.unit;
 const inUnit = (n: number) => `${round(n)} ${unit}`;
-const formLabel: Record<string, string> = { powder: 'Powder', capsule: 'Capsules', tablet: 'Tablets', gummy: 'Gummies' };
+const formLabel = formLabels;
 const scopeLabel = { finished_product: 'Finished product', raw_material: 'Raw material' } as const;
 const isoLabel = { yes: 'Yes', no: 'No', unknown: 'Unknown' } as const;
 const testIds = Object.keys(category.coaTestLabels);

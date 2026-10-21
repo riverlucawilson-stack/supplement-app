@@ -61,7 +61,7 @@ export const baseProductFields = {
   entered_by: enteredBy,
   brand: z.string().min(1),
   name: z.string().min(1),
-  form: z.enum(['powder', 'capsule', 'tablet', 'gummy']),
+  form: z.enum(['powder', 'capsule', 'softgel', 'tablet', 'gummy', 'liquid']),
   other_ingredients: z.array(z.string()).default([]),
   prices: z.array(priceSchema).default([]),
   flags: z.array(z.string()).default([]),
@@ -77,3 +77,13 @@ const baseShape = z.object({
   coas: z.array(coaSchema(['' as string] as [string])),
 });
 export type BaseProduct = z.infer<typeof baseShape>;
+
+// How each form is written on the site.
+export const formLabels: Record<string, string> = {
+  powder: 'Powder',
+  capsule: 'Capsules',
+  softgel: 'Softgels',
+  tablet: 'Tablets',
+  gummy: 'Gummies',
+  liquid: 'Liquid',
+};

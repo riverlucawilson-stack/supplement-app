@@ -6,8 +6,8 @@ import { join } from 'node:path';
 import { loadCategoryConfigs } from '../src/categories/config';
 import { categoryList } from '../src/categories';
 
-test('both categories load, creatine first', () => {
-  assert.deepEqual(categoryList.map((c) => c.id), ['creatine', 'ashwagandha']);
+test('categories load in their set order, creatine first', () => {
+  assert.deepEqual(categoryList.map((c) => c.id).slice(0, 3), ['creatine', 'ashwagandha', 'vitamin-d']);
 });
 
 function loadEdited(edit: (yaml: string) => string) {
