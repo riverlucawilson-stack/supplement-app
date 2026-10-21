@@ -1,0 +1,51 @@
+# Looked up by Claude on 2026-10-21 from jarrow.com (product page), vitacost.com and target.com.
+# Entries marked entered_by: claude still need River's check.
+# Note: the batch asked for a Sensoril version. Jarrow's current US ashwagandha is this
+# KSM-66 product; no Jarrow Sensoril ashwagandha was found on jarrow.com.
+category: ashwagandha
+entered_by: claude
+brand: Jarrow Formulas
+name: Ashwagandha
+form: capsule
+ashwagandha_type: root_extract  # page: "Ashwagandha Extract (Withania somnifera), root"
+extract: KSM-66                 # page: "KSM-66® is a registered trademark of Ixoreal Biomed Inc."
+other_ingredients: [microcrystalline cellulose, capsule (hydroxypropylmethylcellulose, water), magnesium stearate (vegetable source), silicon dioxide]
+
+dose:
+  units_per_serving: 1              # page: "Serving size: 1 capsule"
+  ashwagandha_per_serving_mg: 300   # page: "300 mg Ashwagandha Extract"
+  # Withanolide % not stated on the product page.
+  servings_per_container: 120       # Vitacost: "Total servings 120 count"; 120 capsules, 1 per serving.
+                                    # CHECK: no page showed "Servings Per Container" from the panel.
+
+prices:
+  - retailer: Jarrow Formulas
+    price_usd: 24.99                # page: 120 veggie capsules, $24.99 ("Sale")
+    servings: 120
+    url: https://jarrow.com/products/ashwagandha-300-mg-120-veggie-caps
+    date_checked: 2026-10-21
+    entered_by: claude
+  - retailer: Vitacost
+    price_usd: 22.93                # page: "Jarrow Formulas, Ashwagandha, 300 mg, 120 Veggie Capsules", $22.93
+    servings: 120
+    url: https://www.vitacost.com/jarrow-formulas-ashwagandha-withania-somnifera
+    date_checked: 2026-10-21
+    entered_by: claude
+  - retailer: Target
+    price_usd: 26.83                # page: "$26.83 when purchased online", Package Quantity: 120
+    servings: 120
+    url: https://www.target.com/p/jarrow-formulas-inc-vegan-withania-somnifera-ashwagandha-300-mg-120-veg-caps/-/A-90999089
+    date_checked: 2026-10-21
+    rating:                         # page: "4.6 out of 5 stars with 16 reviews"
+      stars: 4.6
+      count: 16
+    entered_by: claude
+
+# Not listed in NSF Certified for Sport (nsfsport.com keyword search "ashwagandha", 2026-10-21).
+certifications: []
+
+# COA: none found. Checked 2026-10-21: the jarrow.com product page links no COA or lab results.
+coas: []
+
+flags: []
+notes: ""
