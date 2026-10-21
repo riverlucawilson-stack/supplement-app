@@ -40,7 +40,13 @@ Propose how to generalize from creatine, but don't build it yet. Cover:
 - routes /<category>/ and /<category>/<product>/
 - how validation and tiers apply per category
 - [x] Write the proposal to drafts/multi-category-plan.md and STOP for River's approval. (written 2026-10-21, waiting)
-- [ ] After approval, implement it and migrate creatine onto it with its numbers unchanged.
+- [x] River approved 2026-10-21 (all 5 questions yes: creatine moves to /creatine/, evidence drafts off the site, no daily amount unless River gives one, keep ashwagandha).
+- [x] B1 snapshot every product's numbers (tests/fixtures/before-migration.json)
+- [ ] B2 YAML category loader; migrate creatine
+- [ ] B3 migrate ashwagandha
+- [ ] B4 generic routes, creatine to /creatine/, home page lists categories
+- [ ] B5 evidence drafts to drafts/evidence/, pages built only once fully reviewed
+- [ ] Draft TEAM.md (River asked 2026-10-21)
 
 ## Stage C: categories, most purchased first
 A category is done when it has:
