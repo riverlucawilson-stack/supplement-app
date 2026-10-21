@@ -35,19 +35,22 @@ YAML file you edit by hand.
 
 | Path | What's in it |
 |---|---|
-| `src/content/products/creatine/` | **One YAML file per product.** This is where you'll spend most of your time. |
+| `src/content/products/creatine/`, `src/content/products/ashwagandha/` | **One YAML file per product**, one folder per category. This is where you'll spend most of your time. |
 | `src/settings.ts` | Site name, and the "stale" limits (prices 14 days, COAs 2 years, certifications 12 months). |
 | `src/lib/` | The calculations: `pricing.ts` (cost per 5 g, per 30 days, best price), `tier.ts` (Tier A/B/C with reasons), `staleness.ts`. |
 | `scripts/validate.ts` | The validation script. |
 | `tests/` | Automated tests. `tests/fixtures/products/` holds deliberately broken product files the tests check get caught. |
-| `src/categories/` | What a product file must contain, per category. Fish oil goes here later. |
+| `src/categories/` | What a product file must contain, per category (`creatine.ts`, `ashwagandha.ts`), and the amount each is compared on. |
+| `src/evidence/` | The words on each category's evidence page. |
+| `templates/` | A blank product file for each category. |
 | `src/layouts/BaseLayout.astro` | The frame on every page, including the affiliate disclosure and "not medical advice" note. |
 | `src/pages/` | One file per page of the site. |
 | `src/styles/global.css` | Site-wide styling. |
 
 ## How to add a product
 
-1. Copy `templates/creatine-product.yaml` into `src/content/products/creatine/` and rename it. Use lowercase
+1. Copy the category's template from `templates/` (e.g. `creatine-product.yaml` or
+   `ashwagandha-product.yaml`) into that category's folder in `src/content/products/` and rename it. Use lowercase
    words joined by dashes, e.g. `brandname-creatine-monohydrate.yaml`. The file name
    becomes the page address.
 2. Fill in every field from the label and the seller's page. Leave out `raw_material`
@@ -125,13 +128,26 @@ You never type a calculated number. For each retailer's price:
 built, so the live site only updates its "stale" labels when it rebuilds. Phase (f) sets
 up an automatic daily rebuild.
 
+## Ashwagandha
+
+Ashwagandha products are compared on **cost per 600 mg of ashwagandha as labeled**.
+Extracts and plain root powder aren't the same at the same weight, so the table shows the
+type (root extract, root + leaf extract, root powder), the branded extract (e.g. KSM-66,
+Sensoril, Shoden) and the withanolide % beside each one. A small, concentrated extract
+(e.g. 120 mg of Shoden) will look expensive per 600 mg; that's expected. To compare on a
+different amount, change `referenceDose` and `dailyGrams` in `src/categories/ashwagandha.ts`.
+
+Its COA tests are: withanolides, identity, lead, arsenic, cadmium, mercury, microbial,
+pesticides, residual_solvents, aflatoxins. A COA from the extract supplier (e.g. the KSM-66
+maker) is `scope: raw_material`.
+
 ## How to review the evidence page
 
-Everything on the Evidence page lives in `src/evidence/creatine.ts`. Claude drafted it
+Everything on an evidence page lives in `src/evidence/<category>.ts` (e.g. `creatine.ts`). Claude drafted it
 from the abstracts of the papers listed under each point; nothing in it is from memory.
 
 1. Open the page and read a section. Each point has a numbered link to its paper.
-2. Rewrite anything you'd say differently, right in `src/evidence/creatine.ts`.
+2. Rewrite anything you'd say differently, right in that file.
 3. When you agree with the whole section, change its `reviewed: false` to `reviewed: true`.
    That removes the "DRAFT - NEEDS REVIEW" label and its to-do box.
 4. For each citation, check the PMID and DOI on PubMed, then delete its

@@ -49,7 +49,8 @@ export const ashwagandha = {
   // Grams per day used for "cost per 30 days".
   dailyGrams: 0.6,
   dailyLabel: '30 days at 600 mg/day',
-  plausibleCostPerReferenceDose: { min: 0.02, max: 3 },
+  // High-potency extracts (e.g. 120 mg Shoden) legitimately cost more per 600 mg, so the ceiling is generous.
+  plausibleCostPerReferenceDose: { min: 0.02, max: 6 },
   activeGramsPerServing: (p: AshwagandhaProduct) => p.dose.ashwagandha_per_serving_mg / 1000,
   // The short description under the product name in the table.
   describe: (p: AshwagandhaProduct) =>
