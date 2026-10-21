@@ -1,0 +1,42 @@
+# Looked up by Claude on 2026-10-21 from thorne.com (product page) and vitacost.com.
+# Entries marked entered_by: claude still need River's check.
+category: ashwagandha
+entered_by: claude
+brand: Thorne
+name: Ashwagandha
+form: capsule
+ashwagandha_type: root_leaf_extract  # Supplement Facts: "Ashwagandha extract (root, leaf) ... 120mg"
+# extract left out: the Supplement Facts doesn't name one. Vitacost's description says
+# "Shoden, a clinically studied ashwagandha extract" and "standardized to 35% withanolide
+# glycosides". CHECK the physical label before adding extract: Shoden.
+other_ingredients: [microcrystalline cellulose, hypromellose capsule, ascorbyl palmitate]
+
+dose:
+  units_per_serving: 1              # thorne.com: "Serving size: 1 Capsule(s)"
+  ashwagandha_per_serving_mg: 120   # thorne.com: "Ashwagandha extract (root, leaf): 120mg"
+  servings_per_container: 30        # thorne.com: "Servings per container: 30"
+
+prices:
+  - retailer: Thorne
+    price_usd: 22.00                # page: "$22 / 30 Capsule(s)", SKU SF828
+    servings: 30
+    url: https://www.thorne.com/products/dp/ashwagandha
+    date_checked: 2026-10-21
+    entered_by: claude
+  - retailer: Vitacost
+    price_usd: 22.00                # page: "Thorne, Ashwagandha, 120 mg, 30 Capsules", $22.00
+    servings: 30
+    url: https://www.vitacost.com/products/thorne-ashwagandha-120-mg-30-capsules-156374
+    date_checked: 2026-10-21
+    entered_by: claude
+    # No rating: Vitacost prints a star breakdown (16 ratings) but no average.
+
+# Not listed in NSF Certified for Sport (nsfsport.com keyword search "ashwagandha", 2026-10-21).
+certifications: []
+
+# COA: none published. Checked 2026-10-21: the product page shows "Thorne Verified" badges
+# but no COA or lab-result link. A web search for a Thorne ashwagandha COA found none.
+coas: []
+
+flags: []
+notes: ""

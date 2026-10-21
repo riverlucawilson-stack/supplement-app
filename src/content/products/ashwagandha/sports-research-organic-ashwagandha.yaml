@@ -1,0 +1,38 @@
+# Looked up by Claude on 2026-10-21 from sportsresearch.com, with the serving size
+# and other ingredients from SuppCo's label listing. Entries marked
+# entered_by: claude still need River's check.
+category: ashwagandha
+entered_by: claude
+brand: Sports Research
+name: Organic Ashwagandha
+form: capsule
+ashwagandha_type: root_extract  # brand page: "KSM-66®, a full-spectrum extract made from the root"
+extract: KSM-66
+# From https://supp.co/products/sports-research-organic-ashwagandha-023249094043-975c98bb-1769542900
+# (the brand page lists no other ingredients). CHECK against the bottle label.
+other_ingredients: [organic pullulan, organic rice hull]
+
+dose:
+  units_per_serving: 1          # SuppCo: "1 organic veggie capsule"; brand page: "600 MG / 90 Organic Veggie Capsules"
+  ashwagandha_per_serving_mg: 600  # brand page: "Our Ashwagandha delivers 600 mg per serving"
+  servings_per_container: 90    # SuppCo: 90 servings
+  # withanolides %: not stated on the brand page
+
+prices:
+  - retailer: Sports Research
+    price_usd: 32.95            # page: "600 MG / 90 Organic Veggie Capsules", one-time purchase $32.95 (only size)
+    servings: 90
+    url: https://www.sportsresearch.com/products/organic-ashwagandha
+    date_checked: 2026-10-21
+    entered_by: claude
+
+certifications: []
+# The brand page shows "Third Party Tested Certified" without naming a certifier,
+# plus NSF Gluten-Free (not a contaminant or potency program). No listing checked
+# on NSF / Informed Sport for this product.
+
+coas: []
+# No COA or lab-results link on the product page.
+
+flags: []
+notes: ""

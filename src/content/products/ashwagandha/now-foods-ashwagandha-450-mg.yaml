@@ -1,0 +1,61 @@
+# Looked up by Claude on 2026-10-21 from nowfoods.com (product page) and vitacost.com.
+# Entries marked entered_by: claude still need River's check.
+category: ashwagandha
+entered_by: claude
+brand: NOW Foods
+name: Ashwagandha 450 mg
+form: capsule
+ashwagandha_type: root_leaf_extract  # nowfoods.com: Withania somnifera "root and leaf" extract
+# No branded extract named on the label.
+other_ingredients: [hypromellose (cellulose capsule), vegetable stearic acid, rice flour]
+
+dose:
+  units_per_serving: 1              # nowfoods.com: "Serving size: 1 veg capsule"
+  ashwagandha_per_serving_mg: 450   # nowfoods.com: "Ashwagandha extract ... 450 mg"
+  withanolides_percent: 2.4         # nowfoods.com: "min. 2.4% total withanolides"
+                                    # (Vitacost still shows "min. 2.5%": older label? CHECK)
+  servings_per_container: 90        # 90-capsule bottle, 1 capsule per serving (Vitacost: 90)
+
+prices:
+  - retailer: NOW Foods
+    price_usd: 9.99                 # page: 30 veg capsules, $9.99, SKU 4595
+    servings: 30
+    url: https://www.nowfoods.com/products/supplements/ashwagandha-450-mg-veg-capsules
+    date_checked: 2026-10-21
+    entered_by: claude
+  - retailer: NOW Foods
+    price_usd: 19.99                # page: 90 veg capsules, $19.99, SKU 4603
+    servings: 90
+    url: https://www.nowfoods.com/products/supplements/ashwagandha-450-mg-veg-capsules
+    date_checked: 2026-10-21
+    entered_by: claude
+  - retailer: NOW Foods
+    price_usd: 34.99                # page: 180 veg capsules, $34.99, SKU 4593
+    servings: 180
+    url: https://www.nowfoods.com/products/supplements/ashwagandha-450-mg-veg-capsules
+    date_checked: 2026-10-21
+    entered_by: claude
+  # Not added: 120 veg capsules, $21.99, marked "in stores only".
+  - retailer: Vitacost
+    price_usd: 9.85                 # page: "NOW Foods, Ashwagandha, Standardized Extract, 450 mg, 90 Veg Capsules", $9.85
+    servings: 90
+    url: https://www.vitacost.com/now-ashwagandha
+    date_checked: 2026-10-21
+    entered_by: claude
+  - retailer: Vitacost
+    price_usd: 17.15                # page: "... 450 mg, 180 Veg Capsules", $17.15
+    servings: 180
+    url: https://www.vitacost.com/products/now-foods-standardized-extract-ashwagandha-450-mg-180-veg-capsules-78203
+    date_checked: 2026-10-21
+    entered_by: claude
+# No ratings: nowfoods.com shows none in text; Vitacost shows a breakdown but no average.
+
+# Not listed in NSF Certified for Sport (nsfsport.com keyword search "ashwagandha", 2026-10-21).
+certifications: []
+
+# COA: none published. Checked 2026-10-21: the product page shows badges (Intertek GMP,
+# Halal, Kosher, Non-GMO, Vegan) but links no COA or lab results.
+coas: []
+
+flags: []
+notes: ""

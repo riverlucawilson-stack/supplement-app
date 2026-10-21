@@ -1,0 +1,70 @@
+# Looked up by Claude on 2026-10-21 from gaiaherbs.com (product page and its .js variant
+# data) and vitacost.com. Entries marked entered_by: claude still need River's check.
+category: ashwagandha
+entered_by: claude
+brand: Gaia Herbs
+name: Ashwagandha Root
+form: capsule                   # "Liquid Phyto-Caps®": a liquid extract inside a capsule, dosed in mg
+ashwagandha_type: root_extract  # Supplement Facts (Vitacost): "Organic Ashwagandha (Withania somnifera) root,
+                                # Ashwagandha (Withania somnifera) root extract"
+# No branded extract named on the label.
+other_ingredients: [vegetable glycerin, water, vegan capsule (hypromellose)]
+
+dose:
+  units_per_serving: 1              # Vitacost: "Serving Size: 1 Capsule"
+  ashwagandha_per_serving_mg: 350   # Vitacost: "Herbal Extract Blend: 350 mg" (both parts are ashwagandha)
+  # withanolides_percent left out: the label gives "Withanolides: 2.5 mg", not a percent.
+  servings_per_container: 60        # Vitacost 60-count page: "Serving Per Container: 60"
+
+prices:
+  - retailer: Gaia Herbs
+    price_usd: 25.19                # .js: "60 ct" variant, 2519
+    servings: 60
+    url: https://www.gaiaherbs.com/products/ashwagandha-root
+    date_checked: 2026-10-21
+    rating:                         # page: "4.9 out of 5 stars", "257 reviews"
+      stars: 4.9
+      count: 257
+    entered_by: claude
+  - retailer: Gaia Herbs
+    price_usd: 42.29                # .js: "120 ct" variant, 4229
+    servings: 120
+    url: https://www.gaiaherbs.com/products/ashwagandha-root
+    date_checked: 2026-10-21
+    rating:
+      stars: 4.9
+      count: 257
+    entered_by: claude
+  - retailer: Gaia Herbs
+    price_usd: 52.49                # .js: "180 ct" variant, 5249
+    servings: 180
+    url: https://www.gaiaherbs.com/products/ashwagandha-root
+    date_checked: 2026-10-21
+    rating:
+      stars: 4.9
+      count: 257
+    entered_by: claude
+  - retailer: Vitacost
+    price_usd: 25.19                # page: "Gaia Herbs, Ashwagandha Root, 60 Liquid Phyto-Caps®", $25.19
+    servings: 60
+    url: https://www.vitacost.com/products/gaia-herbs-ashwagandha-root-60-liquid-phyto-caps-23832
+    date_checked: 2026-10-21
+    entered_by: claude
+  - retailer: Vitacost
+    price_usd: 42.29                # page: "... 120 Liquid Phyto-Caps® (350 mg Per cap)", $42.29
+    servings: 120
+    url: https://www.vitacost.com/gaia-herbs-ashwagandha-root-120-liquid-phyto-caps
+    date_checked: 2026-10-21
+    entered_by: claude
+# No Vitacost ratings: star breakdown shown but no average.
+
+# Not listed in NSF Certified for Sport (nsfsport.com keyword search "ashwagandha", 2026-10-21).
+certifications: []
+
+# COA: none found. Checked 2026-10-21: the product page links no COA. The brand's
+# "Know Your Gaia Herbs" page (gaiaherbs.com/pages/know-your-gaia-herbs) has a product
+# search whose results only load in a browser, so it couldn't be read. Check it by hand.
+coas: []
+
+flags: [liquid-filled capsule]
+notes: ""

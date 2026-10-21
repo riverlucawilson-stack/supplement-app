@@ -1,0 +1,48 @@
+# Looked up by Claude on 2026-10-21 from bulksupplements.com (product page and its
+# Shopify .js variant data) and SuppCo's label listing. Entries marked
+# entered_by: claude still need River's check.
+category: ashwagandha
+entered_by: claude
+brand: BulkSupplements.com
+name: Ashwagandha Extract Powder
+form: powder
+# Brand page title: "Ashwagandha Root Extract"; SuppCo: "Ashwagandha extract 5:1 600mg".
+# No branded extract named.
+ashwagandha_type: root_extract
+other_ingredients: []           # brand page lists none; "Free of ... additives"
+
+dose:
+  units_per_serving: 1          # one scoop: brand page "600 mg (about 1/4 tsp)"
+  ashwagandha_per_serving_mg: 600
+  # withanolides %: not stated anywhere Claude read
+  # SuppCo label listing (https://supp.co/products/bulksupplementscom-ashwagandha-extract-x001bh8g2v):
+  # 417 servings, matching the 250 g bag (250 g ÷ 0.6 g = 416.7). CHECK against the label.
+  servings_per_container: 417
+
+prices:
+  - retailer: BulkSupplements.com
+    price_usd: 24.97            # .js variant "Powder / 250 Grams (8.8 oz)": $24.97
+    servings: 417
+    url: https://bulksupplements.com/products/ashwagandha-extract-powder
+    date_checked: 2026-10-21
+    rating:                     # page: 4.8 out of 5 from 599 reviews
+      stars: 4.8
+      count: 599
+    entered_by: claude
+  - retailer: BulkSupplements.com
+    price_usd: 46.97            # .js variant "Powder / 1 Kilogram (2.2 lbs)": $46.97
+    servings: 1666              # CHECK: 1000 g ÷ 0.6 g, rounded down; label not seen
+    url: https://bulksupplements.com/products/ashwagandha-extract-powder
+    date_checked: 2026-10-21
+    entered_by: claude
+# Other sizes on the same page: 100 g $21.97, 500 g $33.97, 5 kg $215.97, and
+# a 240-capsule variant at $24.96 (SuppCo: 1 capsule = 600 mg, 240 servings).
+# The capsules could be added as a separate product file.
+
+certifications: []
+
+coas: []
+# No COA link on the product page; a web search found no BulkSupplements COA for it.
+
+flags: []
+notes: ""

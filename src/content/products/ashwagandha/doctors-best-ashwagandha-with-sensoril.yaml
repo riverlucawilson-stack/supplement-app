@@ -1,0 +1,43 @@
+# Looked up by Claude on 2026-10-21 from doctorsbest.com (product page and its
+# Shopify .js variant data) and Vitacost. Entries marked entered_by: claude still
+# need River's check.
+category: ashwagandha
+entered_by: claude
+brand: Doctor's Best
+name: Ashwagandha with Sensoril, 125 mg   # brand page title
+form: capsule
+# Facts: "Ashwagandha Ext. (Withania somnifera) (root and leaf)" 250 mg
+ashwagandha_type: root_leaf_extract
+# CHECK: the product name says "with Sensoril"; the facts panel line says only "Ashwagandha Ext."
+extract: Sensoril
+# "Cellulose, hypromellose (vegetarian capsule), magnesium stearate (vegetable source)"
+other_ingredients: [cellulose, hypromellose (vegetarian capsule), magnesium stearate (vegetable source)]
+
+dose:
+  units_per_serving: 2          # "Serving Size: 2 Veggie Capsules" (125 mg each)
+  ashwagandha_per_serving_mg: 250
+  # withanolides %: not stated
+  servings_per_container: 30    # "Servings Per Container: 30" (60 caps)
+
+prices:
+  - retailer: Doctor's Best
+    price_usd: 12.99            # .js "Default Title": $12.99 (60 veggie caps, only size)
+    servings: 30
+    url: https://www.doctorsbest.com/products/doctor-s-best-ashwagandha-60-veggie-caps-125-mg-per-capsule-56017
+    date_checked: 2026-10-21
+    entered_by: claude
+    # CHECK: the page showed "Sold out" although the .js data said available.
+  - retailer: Vitacost
+    price_usd: 12.99            # page: "Doctor's Best, Ashwagandha, 60 Veggie Caps (125 mg per Capsule)", $12.99
+    servings: 30
+    url: https://www.vitacost.com/products/doctor-s-best-ashwagandha-60-veggie-caps-125-mg-per-capsule-56017
+    date_checked: 2026-10-21
+    entered_by: claude
+    # rating left out: 181 reviews but no printed average
+
+certifications: []
+
+coas: []                        # no COA or test results on the brand page
+
+flags: []
+notes: "The task named this as a KSM-66 product, but Doctor's Best's ashwagandha uses Sensoril (root and leaf), not KSM-66."

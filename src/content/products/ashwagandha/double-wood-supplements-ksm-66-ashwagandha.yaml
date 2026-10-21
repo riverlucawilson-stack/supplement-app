@@ -1,0 +1,66 @@
+# Looked up by Claude on 2026-10-21 from doublewoodsupplements.com (product page,
+# its Shopify .js variant data and the test PDF it links) and Vitacost (Supplement
+# Facts). Entries marked entered_by: claude still need River's check.
+category: ashwagandha
+entered_by: claude
+brand: Double Wood Supplements
+name: KSM-66 Ashwagandha Supplement   # brand page title
+form: capsule
+ashwagandha_type: root_extract  # facts: "Organic KSM-66® Ashwagandha Extract (Withania somnifera) (root)"
+extract: KSM-66
+# Vitacost ingredients: "Hypromellose (capsule), microcrystalline cellulose,
+# vegetable stearate, and silica."
+other_ingredients: [hypromellose (capsule), microcrystalline cellulose, vegetable stearate, silica]
+
+dose:
+  units_per_serving: 2          # facts: "Serving Size: 2 Capsules"
+  ashwagandha_per_serving_mg: 600
+  withanolides_percent: 5       # "(5% total withanolides)"
+  servings_per_container: 60    # "Servings Per Container: 60" (120 capsules)
+
+prices:
+  - retailer: Double Wood Supplements
+    price_usd: 19.95            # .js variant "One Bottle": $19.95 (120 capsules, 60 servings)
+    servings: 60
+    url: https://doublewoodsupplements.com/products/ksm-66-ashwagandha-supplement
+    date_checked: 2026-10-21
+    rating:                     # page: 4.75/5 from 4 reviews
+      stars: 4.75
+      count: 4
+    entered_by: claude
+  - retailer: Double Wood Supplements
+    price_usd: 53.87            # .js variant "Triple Pack": $53.87 (3 bottles)
+    servings: 180
+    url: https://doublewoodsupplements.com/products/ksm-66-ashwagandha-supplement
+    date_checked: 2026-10-21
+    entered_by: claude
+  - retailer: Vitacost
+    price_usd: 20.18            # page: "KSM66® Ashwagandha, 120 Capsules (300 mg per Capsule)", $20.18
+    servings: 60
+    url: https://www.vitacost.com/products/double-wood-supplements-ksm66-ashwagandha-120-capsules-300-mg-per-capsule-161498
+    date_checked: 2026-10-21
+    entered_by: claude
+# Also on the brand page: Double Pack $37.91.
+
+certifications: []
+
+coas:
+  # "View Third Party Test Results" PDF linked from the product page.
+  - url: https://cdn.shopify.com/s/files/1/0756/3867/files/051325-0958.052225_KSM_66.pdf?v=1748033030
+    lab: Intertek Champaign Laboratories   # Champaign, IL; client Double Wood LLC
+    iso_17025: unknown           # no ISO/IEC 17025 statement on the PDF
+    lot: "2506202"
+    test_date: 2025-05-22       # received 05-13-2025, analyzed 05-19-2025, reported 05-22-2025
+    # CHECK: the PDF doesn't say capsules or raw material; it's a Double Wood lot number.
+    scope: finished_product
+    # Only one test: withanolide HPLC-UV profile "Conforms" to USP reference
+    # (an identity match, no withanolide amount). No metals, microbial, etc.
+    tests: [identity]
+    entered_by: claude
+# NOT ADDED: the product page also shows an on-page COA for lot 2605002 (made 04/2026)
+# with withanolides 31.44 mg/serving, As/Cd/Pb/Hg per serving and microbial counts,
+# but it shows no test or report date and no lab name. The page says tests are by
+# "ISO/IEC 17025 accredited labs". Lookup page: https://doublewoodsupplements.com/pages/coa-lookup
+
+flags: []
+notes: ""

@@ -1,0 +1,68 @@
+# Looked up by Claude on 2026-10-21 from himalayausa.com (product page and its .js variant
+# data), vitacost.com and walmart.com. Entries marked entered_by: claude still need River's check.
+category: ashwagandha
+entered_by: claude
+brand: Himalaya
+name: Organic Ashwagandha
+form: tablet                    # sold as "Caplets"
+ashwagandha_type: other         # mix of root powder and root extracts (see dose below)
+# No branded extract named on the label.
+other_ingredients: []           # brand page: no binders or fillers; Vitacost lists no other ingredients. CHECK label.
+
+dose:
+  units_per_serving: 1              # Vitacost: "Serving Size: 1 Caplet"
+  ashwagandha_per_serving_mg: 670   # Vitacost panel: root powder 380 mg + root extract 280 mg
+                                    # + supercritical CO2 root extract 10 mg = 670; Walmart title "670 mg"
+  # withanolides_percent left out: each part has its own % (0.2%, 0.5%, 8%), no single value.
+  servings_per_container: 60        # Vitacost 60-caplet page: "Servings Per Container: 60"
+
+prices:
+  - retailer: Himalaya
+    price_usd: 17.99                # .js: "30 Caplets", 1799
+    servings: 30
+    url: https://himalayausa.com/products/organic-ashwagandha
+    date_checked: 2026-10-21
+    entered_by: claude
+  - retailer: Himalaya
+    price_usd: 27.49                # .js: "60 Caplets", 2749
+    servings: 60
+    url: https://himalayausa.com/products/organic-ashwagandha
+    date_checked: 2026-10-21
+    entered_by: claude
+  - retailer: Himalaya
+    price_usd: 37.99                # .js: "90 Caplets", 3799
+    servings: 90
+    url: https://himalayausa.com/products/organic-ashwagandha
+    date_checked: 2026-10-21
+    entered_by: claude
+  - retailer: Himalaya
+    price_usd: 41.49                # .js: "60s Caplets - 2 Pack", 4149 (2 x 60 = 120 servings)
+    servings: 120
+    url: https://himalayausa.com/products/organic-ashwagandha
+    date_checked: 2026-10-21
+    entered_by: claude
+  - retailer: Walmart
+    price_usd: 22.99                # page: "... 670 mg, 60 Caplets", $22.99
+    servings: 60
+    url: https://www.walmart.com/ip/130486588
+    date_checked: 2026-10-21
+    rating:                         # page: "4.6 out of 5 stars", "152 ratings"
+      stars: 4.6
+      count: 152
+    entered_by: claude
+  - retailer: Vitacost
+    price_usd: 23.68                # page: "Himalaya, Organic Ashwagandha, 60 Caplets", $23.68
+    servings: 60
+    url: https://www.vitacost.com/products/himalaya-organic-ashwagandha-60-caplets-3691
+    date_checked: 2026-10-21
+    entered_by: claude
+
+# Not listed in NSF Certified for Sport (nsfsport.com keyword search "ashwagandha", 2026-10-21).
+certifications: []
+
+# COA: none published. Checked 2026-10-21: the brand page says every lot passes "more than
+# 25 tests" but links no COA or results.
+coas: []
+
+flags: [mix of root powder and root extract]
+notes: ""

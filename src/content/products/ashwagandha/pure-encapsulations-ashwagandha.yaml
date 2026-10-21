@@ -1,0 +1,42 @@
+# Looked up by Claude on 2026-10-21 from vitacost.com (60- and 120-capsule pages).
+# Entries marked entered_by: claude still need River's check.
+category: ashwagandha
+entered_by: claude
+brand: Pure Encapsulations
+name: Ashwagandha
+form: capsule
+ashwagandha_type: root_extract  # Supplement Facts: "Ashwagandha (Withania somnifera) extract (root)"
+# No branded extract named on the label.
+other_ingredients: [hypoallergenic plant fiber (cellulose), vegetarian capsule (cellulose, water)]
+
+dose:
+  units_per_serving: 1              # Vitacost: "Serving size: 1 capsule"
+  ashwagandha_per_serving_mg: 500   # Vitacost: "... extract (root) ... 500 mg"
+  withanolides_percent: 2.5         # Vitacost: "standardized to contain 2.5% withanolides"
+  servings_per_container: 60        # Vitacost 60-capsule page: "Servings per container: 60"
+
+prices:
+  - retailer: Vitacost
+    price_usd: 29.00                # page: "Pure Encapsulations, Ashwagandha, 60 Capsules", $29.00
+    servings: 60
+    url: https://www.vitacost.com/products/pure-encapsulations-ashwagandha-60-capsules-500-mg-per-capsule-145656
+    date_checked: 2026-10-21
+    entered_by: claude
+  - retailer: Vitacost
+    price_usd: 52.00                # page: "... 120 Capsules (500 mg per Capsule)", $52.00
+    servings: 120
+    url: https://www.vitacost.com/products/pure-encapsulations-ashwagandha-120-capsules-500-mg-per-capsule-145655
+    date_checked: 2026-10-21
+    entered_by: claude
+# No ratings: Vitacost prints star breakdowns but no average.
+# The brand's own product page didn't come up in a search, so no brand price was added.
+
+# Not listed in NSF Certified for Sport (nsfsport.com keyword search "ashwagandha", 2026-10-21).
+certifications: []
+
+# COA: none found. Checked 2026-10-21: no COA link on the Vitacost pages, and a web search
+# for a Pure Encapsulations COA found none.
+coas: []
+
+flags: []
+notes: ""

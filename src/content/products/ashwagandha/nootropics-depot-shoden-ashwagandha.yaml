@@ -1,0 +1,51 @@
+# Looked up by Claude on 2026-10-21 from nootropicsdepot.com and the COA PDFs it
+# links. Entries marked entered_by: claude still need River's check.
+category: ashwagandha
+entered_by: claude
+brand: Nootropics Depot
+name: Shoden Ashwagandha Capsules   # page: "Shoden® Ashwagandha Capsules"
+form: capsule
+ashwagandha_type: root_leaf_extract  # page: "Withania somnifera (root and leaf extract)"
+extract: Shoden
+other_ingredients: []           # CHECK: the page lists no other ingredients or capsule material
+
+dose:
+  units_per_serving: 1          # page: 120mg extract per capsule; suggested use 1 to 2 capsules daily
+  ashwagandha_per_serving_mg: 120
+  withanolides_percent: 35      # page: "35% withanolide glycosides" (HPLC/UPLC)
+  # CHECK: the page doesn't print servings per container. 90 = the 90ct size at
+  # 1 capsule per serving (also sold as 30ct).
+  servings_per_container: 90
+
+prices: []
+# NEEDS YOUR CALL (2026-10-21): nootropicsdepot.com offers 30ct and 90ct but shows
+# one price ("Now: $19.99") not tied to a size, so it was left out.
+
+certifications: []              # no NSF / Informed Sport / USP / BSCG / CLP listing found
+
+coas:
+  # The product page links 10 per-lot COAs (SHACS1120125 through SHACS1081726A).
+  # Claude read the two newest below.
+  - url: https://cdn11.bigcommerce.com/s-cebedmpn/content/lab-testing/SHACS1081726A_30ct_Signed.pdf
+    lab: Not named on the COA    # issued to Nootropics Depot; method codes like LAB TM-247 only
+    iso_17025: unknown           # no ISO/IEC 17025 statement on the COA
+    lot: SHACS1081726A
+    test_date: 2026-08-17       # "Report Date: 08/17/2026"
+    scope: finished_product      # 30 count; capsule fill weight 161 mg/capsule
+    # Total glycowithanolides 74.88 mg/capsule (spec >= 42 mg); withaferin A 3.06%;
+    # HPTLC root and leaf identity; Pb <0.01, As 0.011, Cd <0.01, Hg <0.01 ppm.
+    # No microbial, pesticides, solvents or aflatoxins.
+    tests: [withanolides, identity, lead, arsenic, cadmium, mercury]
+    entered_by: claude
+  - url: https://cdn11.bigcommerce.com/s-cebedmpn/content/lab-testing/SHACS1080426_90ct_SIgned.pdf
+    lab: Not named on the COA
+    iso_17025: unknown
+    lot: SHACS1080426           # printed as "S SHACS1080426"
+    test_date: 2026-08-04       # "Report Date: 08/04/2026"
+    scope: finished_product      # 90 count
+    # CHECK: results are identical to lot SHACS1081726A (74.88 mg/capsule, As 0.011 ppm).
+    tests: [withanolides, identity, lead, arsenic, cadmium, mercury]
+    entered_by: claude
+
+flags: []
+notes: ""

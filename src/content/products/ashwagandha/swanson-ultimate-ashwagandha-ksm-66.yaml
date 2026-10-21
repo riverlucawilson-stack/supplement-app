@@ -1,0 +1,38 @@
+# Looked up by Claude on 2026-10-21 from swansonvitamins.com. Entries marked
+# entered_by: claude still need River's check.
+category: ashwagandha
+entered_by: claude
+brand: Swanson
+name: Ultimate Ashwagandha - KSM-66   # page; SKU SWU1003 (Swanson Ultra line)
+form: capsule
+# Facts: "KSM-66® Ashwagandha Extract (made with certified organic ashwagandha) (Withania somnifera) (root)"
+ashwagandha_type: root_extract
+extract: KSM-66
+# "Rice flour, vegan capsule (hypromellose), magnesium stearate, silica."
+other_ingredients: [rice flour, vegan capsule (hypromellose), magnesium stearate, silica]
+
+dose:
+  units_per_serving: 1          # "Serving Size: 1 Vegan Capsule"
+  ashwagandha_per_serving_mg: 250
+  # withanolides %: not stated
+  servings_per_container: 60    # "Servings Per Container: 60"
+
+prices:
+  - retailer: Swanson
+    price_usd: 14.29            # page: 60 Vegan Caps, one-time $14.29 (only size)
+    servings: 60
+    url: https://www.swansonvitamins.com/p/swanson-ultra-ultimate-ashwagandha-ksm-66-250-mg-60-veg-caps-swu1003
+    date_checked: 2026-10-21
+    rating:                     # page: 4.6 stars from 122 reviews
+      stars: 4.6
+      count: 122
+    entered_by: claude
+
+certifications: []
+# Page badges include "NSF GMP Certified" (a facility program, not a product
+# certification), so nothing added.
+
+coas: []                        # no COA linked on the product page
+
+flags: []
+notes: ""
