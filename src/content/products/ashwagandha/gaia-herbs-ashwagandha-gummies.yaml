@@ -1,0 +1,39 @@
+# Looked up by Claude on 2026-10-21 from Fullscript's catalog page (Supplement Facts) and the
+# Grove Collaborative product page (price). Entries marked entered_by: claude still need River's check.
+category: ashwagandha
+entered_by: claude
+brand: Gaia Herbs
+name: Ashwagandha Gummies
+form: gummy
+ashwagandha_type: root_extract  # panel: "Organic ashwagandha (Withania somnifera) root extract"
+other_ingredients: [proprietary blend 62 mg (organic cinnamon bark, organic ginger root supercritical CO2 extract), organic apple juice concentrate, organic apple puree concentrate, organic date puree, organic blueberry, organic lemon juice concentrate, pectin (from apples and oranges), organic rice starch, organic rice flour, organic sunflower oil, organic carnauba wax]
+
+dose:
+  units_per_serving: 3              # Fullscript panel: "Serving size: 3 gummies"; Grove: "Adults chew 3 gummies once daily"
+  ashwagandha_per_serving_mg: 600   # panel: "Organic ashwagandha ... root extract 600 mg"
+  # CHECK: Grove's copy says "Each serving delivers the equivalent of 6 g of Ashwagandha"
+  # (that's dried-root equivalent). The Supplement Facts amount, 600 mg of extract, is used.
+  servings_per_container: 15        # CHECK: 45-gummy bottle / 3 per serving. Fullscript didn't
+  # print servings per container; SuppCo lists 40 servings (the 120-gummy size).
+
+prices:
+  - retailer: Grove Collaborative
+    price_usd: 14.84                # page: "$14.84", "45 count"
+    servings: 15                    # 45 gummies / 3 per serving
+    url: https://www.grove.co/products/ashwagandha-gummies-gaia-herbs
+    date_checked: 2026-10-21
+    rating:                         # page: 3.6 average, 31 reviews
+      stars: 3.6
+      count: 31
+    entered_by: claude
+# Whole Foods lists an "81 Count, 27 Servings" size but showed no price.
+
+certifications: []
+# NSF Certified for Sport: no Gaia Herbs products in NSF's "ashwagandha" search, 2026-10-21.
+
+# COA: none found on the pages checked (2026-10-21). Gaia Herbs advertises traceability
+# ("Meet Your Herbs") but no lot COA turned up.
+coas: []
+
+flags: [small proprietary blend (62 mg cinnamon + ginger), added sugar (4 g added per serving)]
+notes: ""

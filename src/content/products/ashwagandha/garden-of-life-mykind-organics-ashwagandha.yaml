@@ -1,0 +1,38 @@
+# Looked up by Claude on 2026-10-21 from the Vitacost product page (Supplement Facts and price).
+# Entries marked entered_by: claude still need River's check.
+category: ashwagandha
+entered_by: claude
+brand: Garden of Life
+name: mykind Organics Ashwagandha Stress & Mood   # Thrive Market title; Vitacost lists it as "Organics, Ashwagandha"
+form: tablet
+ashwagandha_type: root_extract  # panel: "Organic Ashwagandha Root Extract (30 mg Withanolides)"
+other_ingredients: [organic fermented ginger root (50 mg), probiotic blend (B. lactis Bl-04, L. acidophilus La-14, 4 mg), organic gum arabic, organic dextrose, organic tapioca maltodextrin, sunflower lecithin, palm oil, guar gum]
+
+dose:
+  units_per_serving: 1              # Vitacost panel: serving size 1 tablet
+  ashwagandha_per_serving_mg: 600   # panel: "Organic Ashwagandha Root Extract (30 mg Withanolides) 600 mg"
+  # withanolides_percent left out: the label gives "30 mg Withanolides", not a percent
+  # (30/600 would be 5%). CHECK: add 5 only if you're happy deriving it.
+  servings_per_container: 60        # panel: servings per container 60
+
+prices:
+  - retailer: Vitacost
+    price_usd: 19.59                # page: "$19.59", "60 Vegan Tablets"
+    servings: 60
+    url: https://www.vitacost.com/products/garden-of-life-organics-ashwagandha-60-vegan-tablets-600-mg-per-tablet-85255
+    date_checked: 2026-10-21
+    entered_by: claude
+    # No rating: page shows a star breakdown but no overall average.
+# Thrive Market ($19.09, "Compare at $27.99") left out: it's a membership store and the page
+# doesn't say whether that's a member price.
+
+certifications: []
+# Vitacost mentions "Certified Gluten-Free by NSF" and USDA Organic; neither is one of the
+# site's certification programs.
+
+# COA: none found. Searched 2026-10-21 for "Garden of Life ashwagandha certificate of analysis
+# COA lot"; results were other brands' COAs only.
+coas: []
+
+flags: [added fermented ginger root, added probiotics]
+notes: ""

@@ -1,0 +1,40 @@
+# Looked up by Claude on 2026-10-21 from the Vitacost product page (Supplement Facts and price)
+# and Blue Sky Vitamin (price). Entries marked entered_by: claude still need River's check.
+category: ashwagandha
+entered_by: claude
+brand: Himalaya
+name: Organic Ashwagandha Gummies   # Vitacost: "Himalaya, Organic Ashwagandha Gummies, Blackberry, 56 Gummies"
+form: gummy
+ashwagandha_type: root_extract  # panel: "Organic KSM-66® Ashwagandha extract (root)"
+extract: KSM-66
+other_ingredients: [organic tapioca syrup, organic cane sugar, water, pectin, citric acid, natural flavor, organic fruit and vegetable juice for color (carrot and black currant), sodium citrate]
+
+dose:
+  units_per_serving: 2              # Vitacost panel: "Serving Size: 2 Gummies"
+  ashwagandha_per_serving_mg: 300   # panel: "Organic KSM-66® Ashwagandha extract (root) 300 mg"
+  servings_per_container: 28        # panel: "Servings Per Container: 28"
+
+prices:
+  - retailer: Vitacost
+    price_usd: 17.99                # page: "$17.99", "56 Gummies"
+    servings: 28
+    url: https://www.vitacost.com/products/himalaya-organic-ashwagandha-gummies-blackberry-56-gummies-128007
+    date_checked: 2026-10-21
+    entered_by: claude
+    # No rating: page shows a star breakdown but no printed average.
+  - retailer: Blue Sky Vitamin
+    price_usd: 23.99                # page: "$23.99", "56 Gummies"
+    servings: 28
+    url: https://blueskyvitamin.com/products/ashwagandha-gummies-56-gummies-himalaya-wellness
+    date_checked: 2026-10-21
+    entered_by: claude
+# Fullscript lists the same gummies (Serving size 2 gummies, KSM-66 300 mg) but needs an account for pricing.
+
+certifications: []
+# NSF Certified for Sport: no Himalaya products in NSF's "ashwagandha" search, 2026-10-21.
+
+# COA: none found on the product pages checked (2026-10-21).
+coas: []
+
+flags: [added sugar (4 g added per serving)]
+notes: ""

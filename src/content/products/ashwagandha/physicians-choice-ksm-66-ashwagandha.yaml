@@ -1,0 +1,33 @@
+# Looked up by Claude on 2026-10-21 from the Vitacost product page (Supplement Facts and price).
+# Entries marked entered_by: claude still need River's check.
+category: ashwagandha
+entered_by: claude
+brand: Physician's Choice
+name: KSM-66 Ashwagandha
+form: capsule
+ashwagandha_type: root_extract  # panel: "Organic Ashwagandha Root Extract (KSM-66®)"
+extract: KSM-66
+other_ingredients: [organic black pepper 4:1 extract (15 mg), vegetable capsule (hypromellose, water)]
+
+dose:
+  units_per_serving: 2              # Vitacost panel: "Serving size: 2 Veggie Capsules"
+  ashwagandha_per_serving_mg: 1000  # panel: "Organic Ashwagandha Root Extract (KSM-66®) 1 g"
+  servings_per_container: 30        # panel: "Servings per container: 30"
+
+prices:
+  - retailer: Vitacost
+    price_usd: 31.47                # page: "$31.47", "60 Capsules"
+    servings: 30
+    url: https://www.vitacost.com/products/physician-s-choice-ksm-66-ashwagandha-60-capsules-160659
+    date_checked: 2026-10-21
+    entered_by: claude
+    # No rating: page says "No reviews".
+
+certifications: []
+
+# COA: none found. Searched 2026-10-21 for "Physician's Choice ashwagandha COA lab test results
+# lot"; results were other brands' COAs only.
+coas: []
+
+flags: [contains black pepper extract]
+notes: ""

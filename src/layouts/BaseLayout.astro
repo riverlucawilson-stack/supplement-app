@@ -2,6 +2,7 @@
 // The frame around every page: page title and description for search
 // engines, the header, the affiliate disclosure, and the "not medical
 // advice" note. Because every page uses this layout, none can skip them.
+import { categoryList } from '../categories';
 import { settings } from '../settings';
 import '../styles/global.css';
 
@@ -13,11 +14,9 @@ const { title, description } = Astro.props;
 const fullTitle = title === settings.siteName ? title : `${title} | ${settings.siteName}`;
 const path = Astro.url.pathname;
 const samePage = (href: string) => path.replace(/\/$/, '') === href.replace(/\/$/, '');
-// Only pages that exist go in the menu. Phase (e) adds Methodology, How to read a COA, About.
-const nav = [
-  { href: '/', label: 'Creatine' },
-  { href: '/creatine/evidence/', label: 'Evidence' },
-];
+// One menu link per category; each category page links to its own evidence page.
+// Phase (e) adds Methodology, How to read a COA, About.
+const nav = categoryList.map((c) => ({ href: c.path, label: c.name, evidence: c.evidencePath }));
 ---
 
 <!doctype html>
@@ -41,7 +40,7 @@ const nav = [
       <div class="wrap">
         <a class="wordmark" href="/">Sup<span>Search</span></a>
         <nav class="site-nav" aria-label="Main">
-          {nav.map((n) => <a href={n.href} aria-current={samePage(n.href) ? 'page' : undefined}>{n.label}</a>)}
+          {nav.map((n) => <a href={n.href} aria-current={samePage(n.href) || samePage(n.evidence) ? 'page' : undefined}>{n.label}</a>)}
         </nav>
       </div>
     </header>

@@ -1,0 +1,47 @@
+# Looked up by Claude on 2026-10-21 from naturemade.com (product page and its
+# Shopify .js variant data) and H-E-B. Entries marked entered_by: claude still
+# need River's check.
+category: ashwagandha
+entered_by: claude
+brand: Nature Made
+name: Ashwagandha Capsules      # brand page title
+form: capsule
+# brand page: "125 mg Sensoril® Ashwagandha (Withania somnifera) root and leaf extract"
+ashwagandha_type: root_leaf_extract
+extract: Sensoril
+# H-E-B ingredients: "Cellulose Gel, Hypromellose, Maltodextrin, Magnesium Stearate, Silicon Dioxide."
+other_ingredients: [cellulose gel, hypromellose, maltodextrin, magnesium stearate, silicon dioxide]
+
+dose:
+  units_per_serving: 1          # brand page and H-E-B: serving size 1 capsule
+  ashwagandha_per_serving_mg: 125
+  # withanolides %: not stated on the pages read
+  # CHECK: neither page prints servings per container (H-E-B shows "0 servings").
+  # 60 = the 60-count bottle at 1 capsule per serving.
+  servings_per_container: 60
+
+prices:
+  - retailer: Nature Made
+    price_usd: 22.89            # .js variant "60": $22.89 one-time
+    servings: 60
+    url: https://www.naturemade.com/products/nature-made-ashwagandha-capsule
+    date_checked: 2026-10-21
+    rating:                     # page: 4.2 average from 70 ratings
+      stars: 4.2
+      count: 70
+    entered_by: claude
+  - retailer: H-E-B
+    price_usd: 14.89            # page: "$14.89 each ($0.25 / ct)", 60 ct
+    servings: 60
+    url: https://www.heb.com/product-detail/nature-made-ashwagandha-capsules-/3820012
+    date_checked: 2026-10-21
+    entered_by: claude
+
+certifications: []
+# Nature Made has many USP Verified products, but the product page makes no USP
+# claim and a search found no USP listing for this product.
+
+coas: []                        # no COA or test results found
+
+flags: [brand page labels it "Discontinued"]
+notes: ""

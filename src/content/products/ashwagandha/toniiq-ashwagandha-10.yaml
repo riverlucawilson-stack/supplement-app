@@ -1,0 +1,71 @@
+# Looked up by Claude on 2026-10-21 from toniiq.com (product page, its Shopify
+# .js variant data and the COA PDF it links) and Vitacost (Supplement Facts).
+# Entries marked entered_by: claude still need River's check.
+category: ashwagandha
+entered_by: claude
+brand: Toniiq
+name: Ashwagandha 10%           # brand page: "Ashwagandha 10% - 90 Capsules"
+form: capsule
+# Facts: "Ashwagandha Withania somnifera (whole plant) 20:1 extract Std. to no less
+# than 10% total withanolides". Whole plant, so neither root nor root+leaf.
+ashwagandha_type: other
+# No branded extract (not KSM-66).
+# Vitacost "Other Ingredients": "Vegetable capsule (hydroxypropyl methylcellulose),
+# microcrystalline cellulose, silicon dioxide & vegetable magnesium stearate."
+other_ingredients:
+  - black pepper (Piper nigrum) fruit extract (10 mg)
+  - vegetable capsule (hydroxypropyl methylcellulose)
+  - microcrystalline cellulose
+  - silicon dioxide
+  - vegetable magnesium stearate
+
+dose:
+  units_per_serving: 2          # "Serving Size: 2 Vegetarian Capsules"
+  ashwagandha_per_serving_mg: 1300  # 1,300 mg of the 20:1 extract per serving
+  withanolides_percent: 10      # "Std. to no less than 10% total withanolides"
+  servings_per_container: 45    # "Servings Per Container: 45" (90 capsules)
+
+prices:
+  - retailer: Toniiq
+    price_usd: 24.97            # .js "Default Title" $24.97; page: 1 bottle (90 capsules) $24.97
+    servings: 45
+    url: https://www.toniiq.com/products/ashwagandha
+    date_checked: 2026-10-21
+    rating:                     # page: 5.0 out of 5 stars, based on 2 reviews
+      stars: 5.0
+      count: 2
+    entered_by: claude
+  - retailer: Toniiq
+    price_usd: 63.67            # page: 3 bottles $63.67 (one-time)
+    servings: 135
+    url: https://www.toniiq.com/products/ashwagandha
+    date_checked: 2026-10-21
+    entered_by: claude
+  - retailer: Vitacost
+    price_usd: 24.97            # page: "Toniiq, Ashwagandha , 90 Capsules", $24.97
+    servings: 45
+    url: https://www.vitacost.com/products/toniiq-ashwagandha-90-capsules-144813
+    date_checked: 2026-10-21
+    entered_by: claude
+# Also: 2 bottles $44.94 on toniiq.com. Vitacost lists a 120-count option at
+# $33.97 that Claude couldn't tie to this exact product, so it was left out.
+
+certifications: []
+
+coas:
+  # Linked from the product page. CHECK: the file name says "Lot_22071101" but
+  # the report inside is for lot 26C0181.
+  - url: https://cdn.shopify.com/s/files/1/0257/8723/files/Ashwagandha_Lot_22071101_Branded_COA.pdf?v=1732723474
+    lab: Certified Group - Tustin
+    iso_17025: yes               # COA: "Certified Group - Tustin is accredited to the ISO/IEC 17025:2017 standard"
+    lot: 26C0181
+    test_date: 2026-04-03       # report date; samples received 03/23/2026
+    scope: finished_product      # results in mg/capsule and per 2 capsules
+    # Total withanolides 137.10 mg/2 capsules (spec NLT 130); As 0.11, Cd 0.01,
+    # Pb 0.19 mcg/2 caps; Hg not detected. No identity, microbial, pesticides,
+    # solvents or aflatoxins.
+    tests: [withanolides, lead, arsenic, cadmium, mercury]
+    entered_by: claude
+
+flags: [contains black pepper extract, whole-plant extract]
+notes: ""

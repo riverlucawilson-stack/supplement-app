@@ -1,0 +1,51 @@
+# Looked up by Claude on 2026-10-21 from nutricost.com and Vitacost (Supplement
+# Facts). Entries marked entered_by: claude still need River's check.
+category: ashwagandha
+entered_by: claude
+brand: Nutricost
+name: KSM-66 Capsules           # brand page: "Nutricost KSM-66 Capsules" (600mg)
+form: capsule
+ashwagandha_type: root_extract  # Vitacost facts: "Organic KSM-66® Ashwagandha Extract (Withania somnifera)(root)"
+extract: KSM-66
+# Vitacost "Other Ingredients": hypromellose capsule, organic flow agent blend
+# (organic oat fiber, pea starch, bamboo extract, gum arabic, sunflower oil,
+# sunflower lecithin), silica, magnesium stearate. Plus BioPerine 5 mg (helper).
+other_ingredients:
+  - BioPerine black pepper extract (5 mg)
+  - hypromellose (cellulose) capsule
+  - organic flow agent blend (organic oat fiber, organic pea starch, organic bamboo extract, organic gum arabic, organic sunflower oil, organic sunflower lecithin)
+  - silica
+  - magnesium stearate (vegetable source)
+
+dose:
+  units_per_serving: 1          # Vitacost facts: "Serving size: 1 Capsule"
+  ashwagandha_per_serving_mg: 600  # "Organic KSM-66® Ashwagandha Extract ... 600 mg"
+  withanolides_percent: 5       # "(min. 5% total withanolides)"
+  servings_per_container: 60    # "Servings per container: 60"
+
+prices:
+  - retailer: Nutricost
+    price_usd: 16.97            # brand page: 60 veggie caps, 60 servings, $16.97 (only variant)
+    servings: 60
+    url: https://nutricost.com/products/nutricost-ksm-66-600mg-60-capsules
+    date_checked: 2026-10-21
+    entered_by: claude
+    # rating left out: page shows 204 reviews but no average
+  - retailer: Vitacost
+    price_usd: 14.95            # page: "Nutricost, KSM-66®, Ashwagandha Root Extract, 60 Capsules", $14.95
+    servings: 60
+    url: https://www.vitacost.com/products/nutricost-ksm-66-ashwagandha-root-extract-60-capsules-139433
+    date_checked: 2026-10-21
+    entered_by: claude
+    # rating left out: 868 reviews but no printed average
+# Vitacost also lists a 30-capsule size (not read):
+#   https://www.vitacost.com/products/nutricost-ksm-66-ashwagandha-root-extract-600-mg-30-capsules-145342
+
+certifications: []
+# Brand page says "Third-Party Tested" by "an independent, accredited lab" (not named).
+
+coas: []
+# No COA link on the product page; a web search found no Nutricost COA for this product.
+
+flags: [contains black pepper extract]
+notes: ""

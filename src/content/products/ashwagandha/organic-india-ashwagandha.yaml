@@ -1,0 +1,64 @@
+# Looked up by Claude on 2026-10-21 from shop.organicindiausa.com (product page and its .js
+# variant data) and vitacost.com. Entries marked entered_by: claude still need River's check.
+category: ashwagandha
+entered_by: claude
+brand: Organic India
+name: Ashwagandha
+form: capsule
+ashwagandha_type: root_powder   # Vitacost Supplement Facts: "Organic Ashwagandha (Withania somnifera) root";
+                                # brand page: "made with whole root", no extract mentioned
+other_ingredients: [organic pullulan capsule]
+
+dose:
+  units_per_serving: 2              # Vitacost: "Serving size: 2 capsules"
+  ashwagandha_per_serving_mg: 800   # Vitacost: "Organic Ashwagandha ... root, 800 mg"
+  servings_per_container: 45        # Vitacost 90-capsule page: "Servings per container: 45"
+
+prices:
+  - retailer: Organic India
+    price_usd: 19.99                # .js: "60 ct. bottle", 1999 (60 caps / 2 = 30 servings)
+    servings: 30
+    url: https://shop.organicindiausa.com/products/ashwagandha
+    date_checked: 2026-10-21
+    entered_by: claude
+  - retailer: Organic India
+    price_usd: 26.99                # .js: "90 ct. bottle", 2699 (45 servings)
+    servings: 45
+    url: https://shop.organicindiausa.com/products/ashwagandha
+    date_checked: 2026-10-21
+    entered_by: claude
+  - retailer: Organic India
+    price_usd: 43.99                # .js: "180 ct. bottle", 4399 (90 servings)
+    servings: 90
+    url: https://shop.organicindiausa.com/products/ashwagandha
+    date_checked: 2026-10-21
+    entered_by: claude
+  - retailer: Organic India
+    price_usd: 49.99                # .js: "320 ct. bottle", 4999 (160 servings)
+    servings: 160
+    url: https://shop.organicindiausa.com/products/ashwagandha
+    date_checked: 2026-10-21
+    entered_by: claude
+  - retailer: Vitacost
+    price_usd: 23.68                # page: "Organic India, Ashwagandha, 90 Vegetarian Caps", $23.68
+    servings: 45
+    url: https://www.vitacost.com/products/organic-india-ashwagandha-90-vegetarian-caps-400-mg-per-capsule-24627
+    date_checked: 2026-10-21
+    entered_by: claude
+  - retailer: Vitacost
+    price_usd: 35.01                # page: "... 180 Vegetarian Caps", $35.01; panel: 90 servings
+    servings: 90
+    url: https://www.vitacost.com/products/organic-india-ashwagandha-180-vegetarian-caps-400-mg-per-capsule-90447
+    date_checked: 2026-10-21
+    entered_by: claude
+# No ratings: the brand page shows no average or count; Vitacost shows a breakdown but no average.
+
+# Not listed in NSF Certified for Sport (nsfsport.com keyword search "ashwagandha", 2026-10-21).
+certifications: []
+
+# COA: none found. Checked 2026-10-21: the brand product page links no COA or lab results
+# (it mentions Fairtrade and Regenerative Organic Certified only).
+coas: []
+
+flags: [California Prop 65 lead warning on brand page]
+notes: ""

@@ -1,0 +1,49 @@
+# Looked up by Claude on 2026-10-21 from The Vitamin Shoppe product page (Supplement Facts),
+# transparentlabs.com (product page and its .js variant data) and NSF.
+# Entries marked entered_by: claude still need River's check.
+category: ashwagandha
+entered_by: claude
+brand: Transparent Labs
+name: KSM-66 Ashwagandha
+form: capsule
+ashwagandha_type: root_extract  # panel: "KSM-66 Ashwagandha Extract (Withania somnifera) (root)"
+extract: KSM-66
+other_ingredients: [rice flour, hypromellose (HPMC) capsule, vegetable magnesium stearate, silica]
+
+dose:
+  units_per_serving: 1              # Vitamin Shoppe panel: "Serving size: 1 Capsule"
+  ashwagandha_per_serving_mg: 600   # panel: "KSM-66 Ashwagandha Extract ... 600 mg"
+  withanolides_percent: 5           # panel: "MIN. 5% TOTAL WITHANOLIDES"
+  servings_per_container: 60        # panel: "Servings per container: 60 Servings"
+
+prices:
+  - retailer: Transparent Labs
+    price_usd: 19.99                # .js: "60 Servings" variant, 1999 cents
+    servings: 60
+    url: https://www.transparentlabs.com/products/ksm-66-ashwagandha
+    date_checked: 2026-10-21
+    entered_by: claude
+    # No rating: page shows 126 reviews and a star breakdown but no printed average.
+  - retailer: The Vitamin Shoppe
+    price_usd: 19.99                # page: "$19.99 ($0.33/serving)", 60 Capsules
+    servings: 60
+    url: https://www.vitaminshoppe.com/p/ksm-66-ashwagandha-600-mg-60-capsules/tpl-17909
+    date_checked: 2026-10-21
+    entered_by: claude
+    # No rating: page says "No Ratings".
+
+certifications: []
+# NSF Certified for Sport: not listed (NSF search for "ashwagandha" on 2026-10-21 showed no
+# Transparent Labs product). The product page shows an Informed Choice logo; Informed Choice
+# isn't one of the site's programs, and the Informed Sport search page refused automated
+# access (robots), so it wasn't checked. CHECK by hand at sport.wetestyoutrust.com.
+
+# COA: the product page links "View product purity test results (Certificate of Analysis)":
+# https://cdn.shopify.com/s/files/1/0866/7664/files/24111232_-_TPL_KSM-66_600_MG_60_CAP__Redacted.pdf?v=1745414124
+# It's an image-only PDF that Claude couldn't read (no text layer; direct download blocked),
+# so it's left out. CHECK: open it and add lot, date, lab and tests if readable.
+# All of the brand's tests: https://www.transparentlabs.com/pages/third-party-tests
+coas: []
+
+flags: []
+notes: ""

@@ -66,7 +66,7 @@ export const baseProductFields = {
   entered_by: enteredBy,
   brand: z.string().min(1),
   name: z.string().min(1),
-  form: z.enum(['powder', 'capsule', 'gummy']),
+  form: z.enum(['powder', 'capsule', 'tablet', 'gummy']),
   other_ingredients: z.array(z.string()).default([]),
   prices: z.array(priceSchema).default([]),
   certifications: z.array(certificationSchema).default([]),

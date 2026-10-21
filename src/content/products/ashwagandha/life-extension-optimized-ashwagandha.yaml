@@ -1,0 +1,45 @@
+# Looked up by Claude on 2026-10-21 from lifeextension.com (product page) and vitacost.com.
+# Entries marked entered_by: claude still need River's check.
+category: ashwagandha
+entered_by: claude
+brand: Life Extension
+name: Optimized Ashwagandha
+form: capsule
+ashwagandha_type: root_leaf_extract  # label: "Sensoril® Ashwagandha extract (root and leaf)"
+extract: Sensoril                    # label: "125 mg Sensoril® Ashwagandha extract"
+other_ingredients: [microcrystalline cellulose, vegetable cellulose (capsule), rice fiber, maltodextrin, silica, vegetable stearate]
+
+dose:
+  units_per_serving: 1              # page: "1 vegetarian capsule"
+  ashwagandha_per_serving_mg: 125   # page: "125 mg Sensoril® Ashwagandha extract"
+  # withanolides_percent left out: the label says "10% withanolide glycoside conjugates",
+  # a different measure from total withanolides. CHECK whether to record it.
+  servings_per_container: 60        # 60 capsules, 1 per serving (Vitacost: "Total servings 60 count").
+                                    # CHECK: no page showed "Servings Per Container" from the panel.
+
+prices:
+  - retailer: Life Extension
+    price_usd: 7.50                 # page: 60 vegetarian capsules, $7.50 one-time purchase
+    servings: 60
+    url: https://www.lifeextension.com/vitamins-supplements/item00888/optimized-ashwagandha-extract
+    date_checked: 2026-10-21
+    rating:                         # page: 4.7 stars, 326 reviews
+      stars: 4.7
+      count: 326
+    entered_by: claude
+  - retailer: Vitacost
+    price_usd: 7.50                 # page: "Life Extension, Optimized Ashwagandha, 60 Vegetarian Capsules", $7.50
+    servings: 60
+    url: https://www.vitacost.com/products/life-extension-optimized-ashwagandha-60-vegetarian-capsules-125-mg-per-capsule-16416
+    date_checked: 2026-10-21
+    entered_by: claude
+
+# Not listed in NSF Certified for Sport (nsfsport.com keyword search "ashwagandha", 2026-10-21).
+certifications: []
+
+# COA: none published. Checked 2026-10-21: the product page links no COA, and a web search
+# for a Life Extension COA lookup found none.
+coas: []
+
+flags: []
+notes: ""

@@ -1,0 +1,42 @@
+# Looked up by Claude on 2026-10-21 from kleanathlete.com (product page) and NSF.
+# Entries marked entered_by: claude still need River's check.
+category: ashwagandha
+entered_by: claude
+brand: Klean Athlete
+name: Klean Ashwagandha
+form: capsule
+ashwagandha_type: root_extract  # page: "Ashwagandha (Withania somnifera) extract (root)"
+# No branded extract named on the label.
+other_ingredients: [microcrystalline cellulose, capsule (hydroxypropyl methylcellulose)]
+
+dose:
+  units_per_serving: 1            # page: "Serving size: 1 Capsule"
+  ashwagandha_per_serving_mg: 500 # page: "Ashwagandha ... 500 mg"
+  # Withanolide % not stated on the product page.
+  servings_per_container: 60      # page: "Servings per container: 60"
+
+prices:
+  - retailer: Klean Athlete
+    price_usd: 32.00              # page: "$32.00", SKU KA202849-60 (only size, 60 servings)
+    servings: 60
+    url: https://www.kleanathlete.com/klean-ashwagandha.html
+    date_checked: 2026-10-21
+    entered_by: claude
+# Not added: shop.kleanathlete.com/ashwagandha/15016477.html showed "USD 21.92 (WAS: $24.35)"
+# for the same 60-serving product. It conflicts with the main site; check which store is current.
+
+certifications:
+  - program: NSF Certified for Sport
+    # "Klean Ashwagandha", Klean Athlete, United States, capsule, package size 60,
+    # 1 capsule serving, 10 specific lots listed (e.g. 50329652)
+    listing_url: https://www.nsfsport.com/certified-products/listing-detail.php?id=1536891
+    date_verified: 2026-10-21
+    entered_by: claude
+
+# COA: none published. Checked 2026-10-21: product page links only a label PDF, a product
+# information PDF and the NSF logo. The FAQ page describes batch testing but no published
+# results. A web search for a Klean Athlete COA found none.
+coas: []
+
+flags: []
+notes: ""

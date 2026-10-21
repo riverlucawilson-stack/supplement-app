@@ -1,0 +1,41 @@
+# Looked up by Claude on 2026-10-21 from the Walmart product page (price, rating) and SuppCo's
+# product page (Supplement Facts). Entries marked entered_by: claude still need River's check.
+# CHECK: Walmart's page had empty Specifications/Ingredients sections, so the dose comes from
+# supp.co/products/spring-valley-ashwagandha-root-powder-500-mg (a label database, not the label
+# itself). Please confirm against the bottle or Walmart's label image.
+category: ashwagandha
+entered_by: claude
+brand: Spring Valley
+name: Ashwagandha Root Powder 500 mg
+form: capsule
+ashwagandha_type: root_powder   # Walmart title: "Ashwagandha Root Powder"; SuppCo: "Organic Ashwagandha Root 500mg"
+other_ingredients: []           # CHECK: neither page listed other ingredients (at least a vegetarian capsule)
+
+dose:
+  units_per_serving: 1              # SuppCo: "Serving size: 1 Capsule(s)"
+  ashwagandha_per_serving_mg: 500   # SuppCo: "Organic Ashwagandha Root 500mg"
+  servings_per_container: 60        # SuppCo: 60 servings; Walmart: "60 Count"
+
+prices:
+  - retailer: Walmart
+    price_usd: 8.94                 # page: "$8.94" single bottle, "14.9¢/count", 60 count
+    servings: 60
+    url: https://www.walmart.com/ip/528758997
+    date_checked: 2026-10-21
+    rating:                         # page: 4.7 out of 5, 995 ratings
+      stars: 4.7
+      count: 995
+    entered_by: claude
+# Walmart also shows a 3-pack at $22.64 ("was $26.64") on the same page; left out because the
+# page doesn't tie it to its own listing clearly.
+# Related but separate product, not added: Spring Valley Ashwagandha Root Powder 800 mg, 60 count,
+# walmart.com/ip/762223612 ($8.94) — no Supplement Facts found for it.
+
+certifications: []
+
+# COA: none found. Spring Valley (Walmart store brand) publishes no COA or lab-results page that
+# turned up in searches on 2026-10-21.
+coas: []
+
+flags: []
+notes: ""

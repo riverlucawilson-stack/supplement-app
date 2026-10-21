@@ -1,0 +1,46 @@
+# Looked up by Claude on 2026-10-21 from livemomentous.com (product page and its .js
+# variant data) and NSF. Entries marked entered_by: claude still need River's check.
+category: ashwagandha
+entered_by: claude
+brand: Momentous
+name: Ashwagandha
+form: capsule
+ashwagandha_type: root_leaf_extract  # .js label alt text: "NooGandha Ashwagandha extract (Withania somnifera root and leaf)"
+extract: NooGandha                   # page: "features NooGandha®"
+# CHECK: Supplement Facts is an image; these values come from its alt text in the .js data.
+other_ingredients: [rice flour, hypromellose capsule, calcium laurate, silica]
+
+dose:
+  units_per_serving: 1              # label alt text: serving size 1 capsule
+  ashwagandha_per_serving_mg: 300   # label alt text: "300 mg ... liposomal NooGandha"
+  withanolides_percent: 4           # label alt text: "standardized to 4% withanolides"
+  servings_per_container: 60        # label alt text: 60 servings
+
+prices:
+  - retailer: Momentous
+    price_usd: 24.99                # .js: one variant, price 2499, one-time purchase (60 capsules)
+    servings: 60
+    url: https://www.livemomentous.com/products/ashwagandha
+    date_checked: 2026-10-21
+    rating:                         # page: "4.8 out of 5 stars", "based on 199 reviews"
+      stars: 4.8
+      count: 199
+    entered_by: claude
+# The rendered product page showed garbled option prices ($14.99, $29.99, etc.) and
+# "out of stock"; the .js data showed one variant at $24.99, available. Only the .js price is used.
+
+certifications:
+  - program: NSF Certified for Sport
+    # "Ashwagandha", Momentous, United States, capsule, unflavored, 60 capsules,
+    # 1 capsule serving, Lot # All
+    listing_url: https://www.nsfsport.com/certified-products/listing-detail.php?id=1604971
+    date_verified: 2026-10-21
+    entered_by: claude
+
+# COA: not found. Checked 2026-10-21: livemomentous.com/pages/coa-page lists Ashwagandha
+# in its product filter, but no Ashwagandha section or lot link appeared in the page text
+# (it may load only in a browser). Check by hand. A web search found no Momentous ashwagandha COA.
+coas: []
+
+flags: [liposomal extract]
+notes: ""
