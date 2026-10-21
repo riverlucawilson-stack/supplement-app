@@ -5,7 +5,7 @@
 // calculated in src/lib, never typed by hand.
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { categoryById, type CategoryId } from '../categories';
+import { categoryById, productPath, type CategoryId } from '../categories';
 import { settings } from '../settings';
 import { bestPrice } from '../lib/pricing';
 import { isCertificationCurrent } from '../lib/staleness';
@@ -33,6 +33,7 @@ const rows = (await getCollection('products'))
     const currentCerts = p.certifications.filter((c) => isCertificationCurrent(c.date_verified, today));
     return {
       id: entry.id,
+      href: productPath(entry.id, p),
       product: p,
       best,
       tier: tier.tier,
@@ -132,7 +133,11 @@ const costLabelLower = costLabel.charAt(0).toLowerCase() + costLabel.slice(1);
                 <th scope="row" class="product">
                   <div class="product-inner">
                   <span class="brand">{r.product.brand}</span>
-                  <span class="name">{r.product.name}</span>
+                  {r.href ? (
+                    <a class="name" href={r.href}>{r.product.name}</a>
+                  ) : (
+                    <span class="name">{r.product.name}</span>
+                  )}
                   <span class="meta">
                     {formLabel[r.product.form]} · {category.describe(r.product)}
                   </span>
@@ -153,7 +158,7 @@ const costLabelLower = costLabel.charAt(0).toLowerCase() + costLabel.slice(1);
                   )}
                   </div>
                 </th>
-                <td class="r cost" data-label={costLabel}>
+                <td class="r cost" data-label={costLabel} data-per={category.referenceDose.label.replace(/ \S+$/, '')}>
                   {r.best ? <span class="num big">{usd(r.best.costPerReferenceDose)}</span> : <span class="none">No price</span>}
                 </td>
                 <td class="r" data-label={category.dailyLabel}>
@@ -470,6 +475,10 @@ const costLabelLower = costLabel.charAt(0).toLowerCase() + costLabel.slice(1);
     font-size: 1rem;
   }
 
+  a.name {
+    color: var(--ink);
+  }
+
   .meta,
   .sub {
     font-size: 0.8125rem;
@@ -611,7 +620,7 @@ const costLabelLower = costLabel.charAt(0).toLowerCase() + costLabel.slice(1);
     }
 
     .compare td.cost::after {
-      content: ' per 5 g';
+      content: ' ' attr(data-per);
       font-size: 0.8125rem;
       color: var(--muted);
     }

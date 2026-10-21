@@ -20,6 +20,8 @@ export interface CategoryInfo {
   /** Where the category's comparison table lives. */
   path: string;
   evidencePath: string;
+  /** Where product pages live, e.g. /creatine/ for /creatine/<product>/. Leave out if the category has none yet. */
+  productBase?: string;
   referenceDose: { grams: number; label: string; short: string };
   dailyGrams: number;
   dailyLabel: string;
@@ -27,6 +29,8 @@ export interface CategoryInfo {
   coaTestLabels: Record<string, string>;
   activeGramsPerServing(p: Product): number;
   describe(p: Product): string;
+  /** Label facts for the "Dose" box on a product page, e.g. creatine per serving. */
+  doseFacts?(p: Product): { label: string; value: string }[];
   impossibleValues(p: Product): string[];
 }
 
@@ -38,4 +42,15 @@ export function categoryOf(product: Product): CategoryInfo {
 
 export function categoryById(id: CategoryId): CategoryInfo {
   return categories[id] as unknown as CategoryInfo;
+}
+
+/** The page address for one product, or undefined if its category has no product pages yet. */
+export function productPath(entryId: string, product: Product): string | undefined {
+  const base = categoryOf(product).productBase;
+  return base ? `${base}${productSlug(entryId)}/` : undefined;
+}
+
+/** "creatine/thorne-creatine" (the file's id) becomes "thorne-creatine". */
+export function productSlug(entryId: string): string {
+  return entryId.split('/').pop()!;
 }

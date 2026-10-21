@@ -188,6 +188,11 @@ h3 {
   color: var(--warn);
 }
 
+.pill-good {
+  background: var(--tier-a-soft);
+  color: var(--tier-a);
+}
+
 .pill-muted {
   background: var(--tier-c-soft);
   color: var(--tier-c);

@@ -1,0 +1,593 @@
+---
+// One product's page: the dose math, every retailer's price with the date it
+// was checked, certification links, a breakdown of each COA, and the tier
+// with the reasons behind it. Every number is calculated in src/lib.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { categoryOf, type Product } from '../categories';
+import { settings } from '../settings';
+import { allPrices, bestPrice } from '../lib/pricing';
+import { isCertificationCurrent } from '../lib/staleness';
+import { coaProblems, tierFor } from '../lib/tier';
+import { hasUnverifiedData, isSampleProduct } from '../lib/review';
+
+interface Props {
+  product: Product;
+}
+const { product: p } = Astro.props;
+const today = new Date();
+const category = categoryOf(p);
+const prices = allPrices(p, today);
+const best = bestPrice(p, today);
+const tier = tierFor(p, today);
+const perServing = category.activeGramsPerServing(p);
+const servingsPerReferenceDose = category.referenceDose.grams / perServing;
+const doseFacts = category.doseFacts?.(p) ?? [];
+const unverified = hasUnverifiedData(p);
+const sample = isSampleProduct(p);
+
+const usd = (n: number) => `$${n.toFixed(2)}`;
+const shortDate = (d: Date) =>
+  d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+const round = (n: number) => Number(n.toFixed(2)).toString();
+const grams = (g: number) => (g < 1 ? `${round(g * 1000)} mg` : `${round(g)} g`);
+const formLabel: Record<string, string> = { powder: 'Powder', capsule: 'Capsules', tablet: 'Tablets', gummy: 'Gummies' };
+const scopeLabel = { finished_product: 'Finished product', raw_material: 'Raw material' } as const;
+const isoLabel = { yes: 'Yes', no: 'No', unknown: 'Unknown' } as const;
+const testIds = Object.keys(category.coaTestLabels);
+const amount = category.referenceDose.label.replace(/^per /, '');
+
+const title = `${p.brand} ${p.name}`;
+const description = best
+  ? `${title}: ${usd(best.costPerReferenceDose)} ${category.referenceDose.label} at its best current price, transparency tier ${tier.tier}, with every price, certification and COA we found.`
+  : `${title}: transparency tier ${tier.tier}, with every certification and COA we found.`;
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="wrap intro">
+    <p class="crumbs"><a href={category.path}>{category.name}</a> / {p.brand}</p>
+    <p class="brand">{p.brand}</p>
+    <h1>{p.name}</h1>
+    <p class="meta">{formLabel[p.form]} · {category.describe(p)}</p>
+    {(sample || unverified) && (
+      <p class="tags">
+        {sample && <span class="pill pill-muted">Sample data</span>}
+        {unverified && <span class="pill pill-warn">Not yet reviewed</span>}
+      </p>
+    )}
+
+    <div class="summary">
+      <div class="stat">
+        <span class="label">{category.referenceDose.short}</span>
+        {best ? <span class="num big">{usd(best.costPerReferenceDose)}</span> : <span class="none">No price found</span>}
+        {best && <span class="sub">at {best.price.retailer}{best.stale && <span class="pill pill-warn">Stale</span>}</span>}
+      </div>
+      <div class="stat">
+        <span class="label">{category.dailyLabel}</span>
+        {best ? <span class="num big">{usd(best.costPer30Days)}</span> : <span class="none">–</span>}
+      </div>
+      <div class="stat">
+        <span class="label">Transparency tier</span>
+        <span class={`tier tier-${tier.tier}`}>{tier.tier}</span>
+        <a class="sub" href="#tier">Why this tier</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap block" aria-labelledby="dose">
+    <h2 id="dose">Dose math</h2>
+    <div class="card">
+      {doseFacts.length > 0 && (
+        <dl class="facts">
+          {doseFacts.map((f) => (
+            <div>
+              <dt>{f.label}</dt>
+              <dd class="num">{f.value}</dd>
+            </div>
+          ))}
+        </dl>
+      )}
+      <p>
+        {amount.charAt(0).toUpperCase() + amount.slice(1)} takes <strong class="num">{round(servingsPerReferenceDose)}</strong>
+        {servingsPerReferenceDose === 1 ? ' serving' : ' servings'} of this product.
+      </p>
+      {best && (
+        <p class="formula">
+          At the best price: <span class="num">{usd(best.price.price_usd)}</span> ÷ (
+          <span class="num">{best.price.servings}</span> servings × <span class="num">{grams(perServing)}</span>) ×{' '}
+          <span class="num">{grams(category.referenceDose.grams)}</span> ={' '}
+          <strong class="num">{usd(best.costPerReferenceDose)}</strong>
+        </p>
+      )}
+    </div>
+  </section>
+
+  <section class="wrap block" aria-labelledby="prices">
+    <h2 id="prices">Prices</h2>
+    {prices.length === 0 ? (
+      <p class="none">No prices found yet.</p>
+    ) : (
+      <div class="card flush">
+        <table class="list">
+          <thead>
+            <tr>
+              <th scope="col">Store</th>
+              <th scope="col" class="r">Price</th>
+              <th scope="col" class="r">Servings</th>
+              <th scope="col" class="r">{category.referenceDose.short}</th>
+              <th scope="col">Checked</th>
+            </tr>
+          </thead>
+          <tbody>
+            {prices.map((m) => (
+              <tr>
+                <th scope="row">
+                  <a href={m.price.url} rel="sponsored noopener" target="_blank">{m.price.retailer}</a>
+                  {m === best && <span class="pill pill-good">Best price</span>}
+                  {m.price.rating && (
+                    <a class="rating" href={m.price.rating.url ?? m.price.url} rel="noopener" target="_blank">
+                      <span class="stars" aria-hidden="true">★</span> {m.price.rating.stars.toFixed(1)} ·{' '}
+                      {m.price.rating.count.toLocaleString('en-US')} reviews
+                    </a>
+                  )}
+                </th>
+                <td class="r num" data-label="Price">{usd(m.price.price_usd)}</td>
+                <td class="r num" data-label="Servings">{m.price.servings}</td>
+                <td class="r num" data-label={category.referenceDose.short}><strong>{usd(m.costPerReferenceDose)}</strong></td>
+                <td data-label="Checked">
+                  {shortDate(m.price.date_checked)} {m.stale && <span class="pill pill-warn">Stale</span>}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    )}
+    <p class="fine">
+      Prices are read from each store's own page and marked stale after {settings.priceStaleAfterDays} days. The best price is
+      the lowest {category.referenceDose.short.toLowerCase()} among prices that aren't stale. Star ratings are the store's own
+      reviews and never affect rankings.
+    </p>
+  </section>
+
+  <section class="wrap block" aria-labelledby="certs">
+    <h2 id="certs">Third-party certification</h2>
+    {p.certifications.length === 0 ? (
+      <p class="none">No certification found on any certifier's website.</p>
+    ) : (
+      <ul class="cards">
+        {p.certifications.map((c) => {
+          const current = isCertificationCurrent(c.date_verified, today);
+          return (
+            <li class="card">
+              <strong>{c.program}</strong>
+              {current ? <span class="pill pill-good">Current</span> : <span class="pill pill-warn">Needs re-check</span>}
+              <span class="sub">Listing checked {shortDate(c.date_verified)}</span>
+              <a href={c.listing_url} rel="noopener" target="_blank">See the certifier's listing</a>
+            </li>
+          );
+        })}
+      </ul>
+    )}
+  </section>
+
+  <section class="wrap block" aria-labelledby="coas">
+    <h2 id="coas">Lab results (COAs)</h2>
+    {p.coas.length === 0 ? (
+      <p class="none">No certificate of analysis found.</p>
+    ) : (
+      <ul class="cards">
+        {p.coas.map((coa) => {
+          const problems = coaProblems(coa, today);
+          const reported = new Set<string>(coa.tests);
+          return (
+            <li class="card coa">
+              <div class="coa-head">
+                <strong>Lot {coa.lot}</strong>
+                {problems.length === 0 ? (
+                  <span class="pill pill-good">Counts toward Tier A</span>
+                ) : (
+                  <span class="pill pill-muted">Doesn't count toward Tier A</span>
+                )}
+              </div>
+              <dl class="facts">
+                <div><dt>Lab</dt><dd>{coa.lab}</dd></div>
+                <div><dt>ISO/IEC 17025 accredited</dt><dd>{isoLabel[coa.iso_17025]}</dd></div>
+                <div><dt>Test date</dt><dd>{shortDate(coa.test_date)}</dd></div>
+                <div><dt>What was tested</dt><dd>{scopeLabel[coa.scope]}</dd></div>
+              </dl>
+              <p class="label">Tests reported</p>
+              <ul class="tests">
+                {testIds.map((t) => (
+                  <li class={reported.has(t) ? 'yes' : 'no'}>
+                    <span aria-hidden="true">{reported.has(t) ? '✓' : '–'}</span>
+                    {category.coaTestLabels[t]}
+                    <span class="visually-hidden">{reported.has(t) ? ': reported' : ': not reported'}</span>
+                  </li>
+                ))}
+              </ul>
+              {problems.length > 0 && <p class="sub">Why not: {problems.join('; ')}.</p>}
+              <a href={coa.url} rel="noopener" target="_blank">Open the COA</a>
+            </li>
+          );
+        })}
+      </ul>
+    )}
+  </section>
+
+  <section class="wrap block" aria-labelledby="tier">
+    <h2 id="tier">Why tier {tier.tier}</h2>
+    <div class="card">
+      <ul class="checks">
+        {tier.checks.map((c) => (
+          <li>
+            <span class={c.met ? 'mark yes' : 'mark no'} aria-hidden="true">{c.met ? '✓' : '✕'}</span>
+            <div>
+              <strong>{c.label}</strong>
+              <span class="visually-hidden">{c.met ? ': met' : ': not met'}</span>
+              <ul class="details">{c.details.map((d) => <li>{d}</li>)}</ul>
+            </div>
+          </li>
+        ))}
+      </ul>
+      <p class="sub">
+        Tier A needs both checks. Tier B needs at least one COA or certification. Tier C has neither. The tier sits next to the
+        price and is never blended into it.
+      </p>
+    </div>
+  </section>
+
+  {(p.other_ingredients.length > 0 || p.flags.length > 0 || p.notes) && (
+    <section class="wrap block" aria-labelledby="label">
+      <h2 id="label">Label details</h2>
+      <div class="card">
+        {p.other_ingredients.length > 0 && (
+          <p><span class="label">Other ingredients</span> {p.other_ingredients.join(', ')}</p>
+        )}
+        {p.flags.length > 0 && (
+          <p class="tags">{p.flags.map((f) => <span class="pill pill-muted">{f}</span>)}</p>
+        )}
+        {p.notes && <p>{p.notes}</p>}
+      </div>
+    </section>
+  )}
+
+  <p class="wrap back"><a href={category.path}>← All {category.name.toLowerCase()} products</a></p>
+</BaseLayout>
+
+<style>
+  .intro {
+    padding-block: 2rem 0.5rem;
+  }
+
+  .crumbs {
+    margin: 0 0 1rem;
+    font-size: 0.875rem;
+    color: var(--muted);
+  }
+
+  .brand,
+  .label,
+  .facts dt,
+  .list thead th {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .brand {
+    margin: 0;
+    font-size: 0.8125rem;
+  }
+
+  h1 {
+    margin: 0.15rem 0 0;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 800;
+  }
+
+  .meta,
+  .sub,
+  .fine {
+    color: var(--muted);
+    font-size: 0.875rem;
+  }
+
+  .meta {
+    margin: 0.4rem 0 0;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin: 0.6rem 0 0;
+  }
+
+  .summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .stat,
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    padding: 1rem;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .stat .sub {
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+  }
+
+  .big {
+    font-size: 1.75rem;
+    font-weight: 700;
+  }
+
+  .none {
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  .block {
+    padding-top: 2rem;
+  }
+
+  h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.25rem;
+  }
+
+  .card > p:first-child,
+  .card > dl:first-child {
+    margin-top: 0;
+  }
+
+  .card > :last-child {
+    margin-bottom: 0;
+  }
+
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 0.75rem 1rem;
+    margin: 0 0 1rem;
+  }
+
+  .facts dd {
+    margin: 0.15rem 0 0;
+    font-weight: 600;
+  }
+
+  .formula {
+    font-size: 0.9375rem;
+  }
+
+  .flush {
+    padding: 0;
+    overflow-x: auto;
+  }
+
+  .list {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9375rem;
+  }
+
+  .list th,
+  .list td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--rule);
+    text-align: left;
+    vertical-align: top;
+    font-weight: 400;
+  }
+
+  .list thead th {
+    border-bottom: 2px solid var(--ink);
+    white-space: nowrap;
+  }
+
+  .list tbody tr:last-child > * {
+    border-bottom: 0;
+  }
+
+  .list tbody th a:first-child {
+    font-weight: 600;
+    margin-right: 0.4rem;
+  }
+
+  .list .r {
+    text-align: right;
+  }
+
+  .rating {
+    display: block;
+    margin-top: 0.2rem;
+    font-size: 0.8125rem;
+    color: var(--muted);
+    text-decoration: none;
+  }
+
+  .stars {
+    color: var(--tier-b);
+  }
+
+  .fine {
+    margin: 0.75rem 0 0;
+    max-width: 70ch;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .cards > .card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.4rem;
+  }
+
+  .coa-head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .coa .facts {
+    width: 100%;
+    margin: 0.4rem 0;
+  }
+
+  .coa .label {
+    margin: 0;
+  }
+
+  .tests {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+    gap: 0.2rem 1rem;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.875rem;
+  }
+
+  .tests li {
+    display: flex;
+    gap: 0.4rem;
+  }
+
+  .tests .no {
+    color: var(--muted);
+  }
+
+  .tests .yes span[aria-hidden] {
+    color: var(--tier-a);
+    font-weight: 700;
+  }
+
+  .checks {
+    margin: 0 0 1rem;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .checks > li {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .mark {
+    flex: none;
+    display: inline-grid;
+    place-items: center;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    font-weight: 700;
+  }
+
+  .mark.yes {
+    background: var(--tier-a-soft);
+    color: var(--tier-a);
+  }
+
+  .mark.no {
+    background: var(--tier-c-soft);
+    color: var(--tier-c);
+  }
+
+  .details {
+    margin: 0.3rem 0 0;
+    padding-left: 1.1rem;
+    font-size: 0.875rem;
+    color: var(--muted);
+  }
+
+  .back {
+    padding-block: 2rem 0;
+    font-weight: 600;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  /* Phones: each price row becomes a small labelled block. */
+  @media (max-width: 640px) {
+    .list thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+    }
+
+    .list,
+    .list tbody,
+    .list tr,
+    .list th,
+    .list td {
+      display: block;
+    }
+
+    .list tr {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .list tbody tr:last-child {
+      border-bottom: 0;
+    }
+
+    .list th,
+    .list td,
+    .list tbody tr:last-child > * {
+      padding: 0.15rem 0;
+      border: 0;
+    }
+
+    .list td {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      text-align: right;
+    }
+
+    .list td::before {
+      content: attr(data-label);
+      color: var(--muted);
+      font-size: 0.8125rem;
+      text-align: left;
+    }
+  }
+</style>

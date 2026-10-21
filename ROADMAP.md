@@ -5,7 +5,7 @@ when `npm run validate` and `npm run build` pass, log it in SESSION-LOG.md, and 
 as "checkpoint: <unit>". CLAUDE.md wins any conflict with this file.
 
 ## IN PROGRESS
-- Stage A, phase (d): creatine product pages
+- (none)
 
 ## Next up
 - (set at the end of each shift)
@@ -27,7 +27,7 @@ fully working and launchable before any others exist.
 - [x] (a) project setup, data format, sample products
 - [x] (b) calculations and validation script
 - [x] (c) home page table
-- [ ] (d) product pages
+- [x] (d) product pages at /creatine/<product>/ (2026-10-21)
 
 ## Stage B: make the site multi-category
 Propose how to generalize from creatine, but don't build it yet. Cover:

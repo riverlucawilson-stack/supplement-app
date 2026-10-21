@@ -1,0 +1,16 @@
+---
+// One page per creatine product, at /creatine/<file name>/.
+// The layout and math live in src/components/ProductPage.astro.
+import { getCollection } from 'astro:content';
+import ProductPage from '../../components/ProductPage.astro';
+import { productSlug } from '../../categories';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('products', (e) => e.data.category === 'creatine');
+  return entries.map((entry) => ({ params: { product: productSlug(entry.id) }, props: { product: entry.data } }));
+}
+
+const { product } = Astro.props;
+---
+
+<ProductPage product={product} />

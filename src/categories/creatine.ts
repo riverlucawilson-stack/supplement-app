@@ -46,6 +46,7 @@ export const creatine = {
   name: 'Creatine',
   path: '/',
   evidencePath: '/creatine/evidence/',
+  productBase: '/creatine/',
   // Prices are compared per this much of the active ingredient.
   referenceDose: { grams: 5, label: 'per 5 g creatine', short: 'Cost per 5 g' },
   // Grams of the active ingredient per day, used for "cost per 30 days".
@@ -59,6 +60,12 @@ export const creatine = {
   // The short description under the product name in the table.
   describe: (p: CreatineProduct) =>
     [creatine.typeLabels[p.creatine_type], p.raw_material].filter(Boolean).join(' · '),
+  // The label facts shown in the "Dose" box on each product page.
+  doseFacts: (p: CreatineProduct) => [
+    { label: 'Serving size', value: `${p.dose.serving_size_g} g` },
+    { label: 'Creatine per serving', value: `${p.dose.creatine_per_serving_g} g` },
+    { label: 'Servings per container (label)', value: `${p.dose.servings_per_container}` },
+  ],
   // Values that can't be true. The validation script reports these as errors.
   impossibleValues: (p: CreatineProduct): string[] =>
     p.dose.creatine_per_serving_g > p.dose.serving_size_g
