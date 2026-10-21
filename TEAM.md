@@ -1,6 +1,6 @@
 # TEAM.md: research roles
 
-> DRAFT written by Claude on 2026-10-21 at River's request. River approves or edits it.
+> Written by Claude 2026-10-21; River approved it the same day.
 > CLAUDE.md wins any conflict with this file.
 
 The lead session (the one following ROADMAP.md) does everything solo except product
@@ -28,7 +28,7 @@ Fills in one YAML file per product in `src/content/products/<slug>/`.
   elemental magnesium line, never the compound weight; for fish oil, EPA and DHA in mg,
   never total oil.
 - Certifications come only from the certifier's own site (NSF, Informed Sport, USP, BSCG,
-  Clean Label Project, IFOS once River approves it), never from the brand's claim.
+  Clean Label Project, and IFOS for fish oil), never from the brand's claim.
 - Every price, certification and COA gets its source URL, the date checked, and
   `entered_by: claude`. The product itself gets `entered_by: claude` too.
 - Star ratings: average and count only, never review text. Affiliate links play no part.

@@ -3,12 +3,14 @@
 Work in shifts. One unit at a time; mark it IN PROGRESS before starting, check it off
 when `npm run validate` and `npm run build` pass, log it in SESSION-LOG.md, and commit
 as "checkpoint: <unit>". CLAUDE.md wins any conflict with this file.
+Since 2026-10-21 River lets Claude make project decisions without asking; log each one in SESSION-LOG.md.
+Still River's: approving evidence/health text, and the first deploy.
 
 ## IN PROGRESS
 - (none)
 
 ## Next up
-- WAITING ON RIVER: OK TEAM.md, then Vitamin D batch 1 (up to 5 products) per TEAM.md Mission 1.
+- Vitamin D batch 1 (up to 5 products) per TEAM.md Mission 1.
   The vitamin D config records the label's mcg figure and compares per 25 mcg (= 1,000 IU).
 
 ## Already built before this roadmap existed (2026-10-21)
@@ -45,7 +47,7 @@ Propose how to generalize from creatine, but don't build it yet. Cover:
 - [x] B3 migrate ashwagandha
 - [x] B4 generic routes, creatine to /creatine/, home page lists categories
 - [x] B5 evidence drafts to drafts/evidence/, pages built only once fully reviewed
-- [x] Draft TEAM.md (River asked 2026-10-21; waiting for River's OK)
+- [x] Draft TEAM.md (River approved 2026-10-21)
 
 ## Stage C: categories, most purchased first
 A category is done when it has:
@@ -62,7 +64,7 @@ A category is done when it has:
   - [ ] comparison page check  - [ ] product pages check  - [ ] claims-review pass  - [ ] evidence draft
 - [ ] 2. Magnesium: $ per 100 mg elemental magnesium, taken from the Supplement Facts panel,
       never from compound weight. Record the form (glycinate, citrate, oxide, malate, threonate, etc.).
-- [ ] 3. Fish oil / omega-3: $ per 1,000 mg EPA+DHA combined, not total oil. Record the form
+- [ ] 3. Fish oil / omega-3 (River approved IFOS as a tier-counting certification, 2026-10-21): $ per 1,000 mg EPA+DHA combined, not total oil. Record the form
       (TG, rTG or EE), any published oxidation (TOTOX) results, and IFOS or similar certification.
 - [ ] 4. Protein powder: $ per 25 g protein. Record the protein source, heavy-metal testing,
       and NSF Certified for Sport or Informed Sport.
