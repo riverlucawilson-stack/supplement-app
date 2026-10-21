@@ -1,9 +1,8 @@
 # Everything specific to vitamin D. The site reads this file when it builds.
 # How each part works is explained in categories/README.md.
-# status: draft until it has 8-12 audited products and River's OK.
 slug: vitamin-d
 name: Vitamin D
-status: draft
+status: published
 order: 3
 
 page:

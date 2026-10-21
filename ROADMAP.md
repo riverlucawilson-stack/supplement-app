@@ -10,11 +10,11 @@ Still River's: approving evidence/health text, and the first deploy.
 - (none)
 
 ## Next up
-- Vitamin D evidence draft: src/evidence/vitamin-d.ts (sections reviewed: false) -> npm run evidence-drafts ->
-  drafts/evidence/vitamin-d.md. Papers via Europe PMC REST (about 1 request a minute). Then set vitamin-d to
-  status: published (decision is Claude's; the evidence page stays off until River reviews it).
-- Then Stage C2 Magnesium.
-  The vitamin D config records the label's mcg figure and compares per 25 mcg (= 1,000 IU).
+- Stage C2 Magnesium: categories/magnesium.yaml (status: draft). $ per 100 mg elemental magnesium from the
+  Supplement Facts line, never compound weight. type = form (glycinate, citrate, oxide, malate, threonate,
+  taurate, chloride, blend, other). Then batches of up to 5 per TEAM.md (give researchers WebSearch URLs).
+- Vitamin D evidence to-dos: D2 vs D3, VITAL, cancer/mortality, upper limit. PMC pages show a bot check and
+  Europe PMC was refused this shift; try again next shift or ask River to paste abstracts.
 
 ## Already built before this roadmap existed (2026-10-21)
 - [x] Phase (a): project setup, data format (PR #1)
@@ -61,11 +61,12 @@ A category is done when it has:
 5. a claims-review pass
 6. an evidence draft for River's review (drafts/evidence/<category>.md, NEEDS RIVER REVIEW)
 
-- [ ] 1. Vitamin D: $ per 1,000 IU (25 mcg). Record D3 vs D2, carrier oil, any added K2.
+- [x] 1. Vitamin D: $ per 1,000 IU (25 mcg). Record D3 vs D2, carrier oil, any added K2.
   - [x] category config: categories/vitamin-d.yaml (status: draft) + templates/vitamin-d-product.yaml
   - [x] batch 1: Nature Made D3 2000, NOW D3 5000, Thorne D-5000, Sports Research D3+K2 (no price yet); Kirkland skipped
   - [x] batch 2: Nature's Bounty D3 5000, Pure Encapsulations D3 5000, Carlson Super Daily D3 drops, Klean-D 5000 (NSF), Nordic Naturals D3 gummies  - [x] batch 3 not needed for now (9 products, 8 priced)
-  - [x] comparison page check  - [x] product pages check  - [x] claims-review pass (2026-10-21: no health wording in data or pages)  - [ ] evidence draft
+  - [x] comparison page check  - [x] product pages check  - [x] claims-review pass (2026-10-21: no health wording in data or pages)  - [x] evidence draft: drafts/evidence/vitamin-d.md (2 papers read; to-dos list what's still unsourced). NEEDS RIVER REVIEW.
+  - [x] published the category (2026-10-21); its evidence page stays off until River reviews it
 - [ ] 2. Magnesium: $ per 100 mg elemental magnesium, taken from the Supplement Facts panel,
       never from compound weight. Record the form (glycinate, citrate, oxide, malate, threonate, etc.).
 - [ ] 3. Fish oil / omega-3 (River approved IFOS as a tier-counting certification, 2026-10-21): $ per 1,000 mg EPA+DHA combined, not total oil. Record the form
