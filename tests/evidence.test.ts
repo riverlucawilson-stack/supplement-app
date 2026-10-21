@@ -12,7 +12,7 @@ test('the creatine evidence page has no broken references', () => {
 
 test('catches a missing source, an unknown citation, and a citation with no PMID or DOI', () => {
   const page: EvidencePage = {
-    category: 'x', title: 't', description: 'd', lede: 'l',
+    category: 'creatine', title: 't', description: 'd', lede: 'l',
     sections: [{ id: 's', heading: 'S', reviewed: true, items: [
       { title: 'No source', text: '.', cites: [] },
       { title: 'Typo', text: '.', cites: ['nope'] },
@@ -26,7 +26,7 @@ test('catches a missing source, an unknown citation, and a citation with no PMID
 
 test('warns about draft sections and Claude-entered citations', () => {
   const page: EvidencePage = {
-    category: 'x', title: 't', description: 'd', lede: 'l',
+    category: 'creatine', title: 't', description: 'd', lede: 'l',
     sections: [{ id: 's', heading: 'S', reviewed: false, items: [{ title: 'Ok', text: '.', cites: ['c'] }] }],
     citations: { c: { ...cite, entered_by: 'claude' } },
   };

@@ -10,7 +10,7 @@ import { readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, relative, sep } from 'node:path';
 import { parse } from 'yaml';
 import type { z } from 'astro/zod';
-import { categories, productSchema } from '../src/categories';
+import { categoryOf, productSchema } from '../src/categories';
 import type { Product } from '../src/categories';
 import { settings } from '../src/settings';
 import { isAfterDay } from '../src/lib/dates';
@@ -19,6 +19,7 @@ import { isCertificationCurrent, isCoaStale } from '../src/lib/staleness';
 import { tierFor } from '../src/lib/tier';
 import { checkEvidence } from '../src/evidence/check';
 import { creatineEvidence } from '../src/evidence/creatine';
+import { ashwagandhaEvidence } from '../src/evidence/ashwagandha';
 
 const PRODUCTS_DIR = process.argv[2] ?? join('src', 'content', 'products');
 const today = new Date();
@@ -105,19 +106,15 @@ function checkFile(path: string): FileReport {
     return report;
   }
   const product: Product = result.data;
-  const category = categories[product.category];
+  const category = categoryOf(product);
 
   if (parts.length === 2 && parts[0] !== product.category) {
     errors.push(`File is in the "${parts[0]}" folder but says category: ${product.category}.`);
   }
 
   // --- Impossible values ---
-  const { dose } = product;
-  if (dose.creatine_per_serving_g > dose.serving_size_g) {
-    errors.push(
-      `dose: creatine per serving (${dose.creatine_per_serving_g} g) is more than the whole serving (${dose.serving_size_g} g).`,
-    );
-  }
+  // Each category knows its own impossible values (see src/categories/).
+  errors.push(...category.impossibleValues(product));
   const futureDates: [string, Date][] = [
     ...product.prices.map((p, i): [string, Date] => [`prices #${i + 1} → date_checked`, p.date_checked]),
     ...product.certifications.map((c, i): [string, Date] => [`certifications #${i + 1} → date_verified`, c.date_verified]),
@@ -183,7 +180,9 @@ function checkFile(path: string): FileReport {
 const reports = listFiles(PRODUCTS_DIR).sort().map(checkFile);
 // The evidence page is checked only on a normal run, not when pointed at test files.
 if (process.argv[2] === undefined) {
-  reports.push({ file: join('src', 'evidence', 'creatine.ts'), ...checkEvidence(creatineEvidence) });
+  for (const page of [creatineEvidence, ashwagandhaEvidence]) {
+    reports.push({ file: join('src', 'evidence', `${page.category}.ts`), ...checkEvidence(page) });
+  }
 }
 let errorCount = 0;
 let warningCount = 0;

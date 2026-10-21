@@ -44,15 +44,26 @@ export type CreatineProduct = z.infer<typeof creatineProductSchema>;
 export const creatine = {
   id: 'creatine',
   name: 'Creatine',
+  path: '/',
+  evidencePath: '/creatine/evidence/',
   // Prices are compared per this much of the active ingredient.
-  referenceDose: { grams: 5, label: 'per 5 g creatine' },
+  referenceDose: { grams: 5, label: 'per 5 g creatine', short: 'Cost per 5 g' },
   // Grams of the active ingredient per day, used for "cost per 30 days".
   dailyGrams: 5,
+  dailyLabel: '30 days at 5 g/day',
   // The validation script warns when a cost per 5 g falls outside this range,
   // since that usually means a typo in the price or servings.
   plausibleCostPerReferenceDose: { min: 0.05, max: 5 },
   // How many grams of the active ingredient one serving gives.
   activeGramsPerServing: (p: CreatineProduct) => p.dose.creatine_per_serving_g,
+  // The short description under the product name in the table.
+  describe: (p: CreatineProduct) =>
+    [creatine.typeLabels[p.creatine_type], p.raw_material].filter(Boolean).join(' · '),
+  // Values that can't be true. The validation script reports these as errors.
+  impossibleValues: (p: CreatineProduct): string[] =>
+    p.dose.creatine_per_serving_g > p.dose.serving_size_g
+      ? [`dose: creatine per serving (${p.dose.creatine_per_serving_g} g) is more than the whole serving (${p.dose.serving_size_g} g).`]
+      : [],
   coaTestLabels: {
     purity: 'Purity / potency',
     lead: 'Lead',

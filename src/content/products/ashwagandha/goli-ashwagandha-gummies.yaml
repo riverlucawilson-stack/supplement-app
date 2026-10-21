@@ -1,0 +1,37 @@
+# Looked up by Claude on 2026-10-21 from the Vitacost product page (label panel and price).
+# Entries marked entered_by: claude still need River's check.
+category: ashwagandha
+entered_by: claude
+brand: Goli Nutrition
+name: Ashwagandha Gummies
+form: gummy
+ashwagandha_type: root_extract  # Supplement Facts: "KSM-66® Ashwagandha Root Extract"
+extract: KSM-66
+other_ingredients: [vitamin D2 (ergocalciferol), tapioca syrup, cane sugar, water, pectin, natural flavors, malic acid, citric acid, sodium citrate, fruit and vegetable juice (color), sunflower lecithin]
+
+dose:
+  units_per_serving: 2              # Vitacost Supplement Facts: "Serving size: 2 Gummies"
+  ashwagandha_per_serving_mg: 300   # Vitacost Supplement Facts: "KSM-66® Ashwagandha Root Extract 300 mg"
+  servings_per_container: 30        # Supplement Facts: "30" (60 gummies / 2)
+  # CHECK: Vitacost's "Key info" box says "Total servings 60 count", which is the gummy
+  # count, not servings. The panel's 30 servings is used.
+
+prices:
+  - retailer: Vitacost
+    price_usd: 14.98                # page: "$14.98", "60 Gummies"
+    servings: 30
+    url: https://www.vitacost.com/products/goli-nutrition-ashwagandha-gummies-60-gummies-104633
+    date_checked: 2026-10-21
+    entered_by: claude
+    # No rating: the page shows a star breakdown (618 reviews) but no overall average.
+# Walmart 5-pack page (walmart.com/ip/472126646) showed "Price ... Not Available", out of stock.
+
+# Certifications: none found on certifier sites (see report).
+certifications: []
+
+# COA: none found. Searched 2026-10-21 for "Goli ashwagandha gummies certificate of analysis
+# COA lab results"; no COA or lab-results page from Goli turned up.
+coas: []
+
+flags: [added vitamin D2, added sugar (4 g per serving)]
+notes: ""

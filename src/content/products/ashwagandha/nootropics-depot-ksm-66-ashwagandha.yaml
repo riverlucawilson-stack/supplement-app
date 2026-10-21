@@ -1,0 +1,53 @@
+# Looked up by Claude on 2026-10-21 from nootropicsdepot.com and the COA PDFs it
+# links. Entries marked entered_by: claude still need River's check.
+category: ashwagandha
+entered_by: claude
+brand: Nootropics Depot
+name: KSM-66 Capsules | Ashwagandha Root   # page title
+form: capsule
+ashwagandha_type: root_extract  # page: "Withania somnifera (root)", full-spectrum root extract
+extract: KSM-66
+other_ingredients: []           # CHECK: the page lists no other ingredients or capsule material
+
+dose:
+  units_per_serving: 1          # page: "300mg per serving", one 300 mg capsule
+  ashwagandha_per_serving_mg: 300
+  withanolides_percent: 5       # page: "Standardized to 5% withanolides"
+  # CHECK: the page doesn't print servings per container. 90 = the 90ct size at
+  # 1 capsule per serving (also sold as 180ct and 365ct).
+  servings_per_container: 90
+
+prices: []
+# NEEDS YOUR CALL (2026-10-21): nootropicsdepot.com offers 90ct, 180ct and 365ct
+# but shows one price ("Now: $19.99") not tied to any size, so it was left out.
+# Amazon listing https://www.amazon.com/dp/B01CZ2EFC4 is robots-disallowed for Claude.
+# The page metadata shows a 5-star rating from 77 reviews (not added, no price to attach it to).
+
+certifications: []              # no NSF / Informed Sport / USP / BSCG / CLP listing found
+
+coas:
+  # The product page links 10 per-lot COAs (KSMCS1051126A through KSMCS1081726).
+  # Claude read the two newest below.
+  - url: https://cdn11.bigcommerce.com/s-cebedmpn/content/lab-testing/KSMCS1081726_365ct_Signed.pdf
+    lab: Not named on the COA    # issued to Nootropics Depot; method codes like AZLAB-ICPMS only
+    iso_17025: unknown           # no ISO/IEC 17025 statement on the COA
+    lot: KSMCS1081726
+    test_date: 2026-08-17       # "Report Date: 08/17/2026"
+    scope: finished_product      # 365 count; capsule fill weight 405.7 mg/capsule
+    # HPTLC identity: root "Matches to BRM", leaf "Does Not Match"; Pb 0.0660, As 0.0281,
+    # Cd 0.0167, Hg <0.01 ppm. No withanolide assay, microbial, pesticides, solvents or aflatoxins.
+    tests: [identity, lead, arsenic, cadmium, mercury]
+    entered_by: claude
+  - url: https://cdn11.bigcommerce.com/s-cebedmpn/content/lab-testing/KSMCS1071726_90ct_Signed.pdf
+    lab: Not named on the COA
+    iso_17025: unknown
+    lot: KSMCS1071726
+    test_date: 2026-07-17       # "Report Date: 07/17/2026"
+    scope: finished_product      # 90 count capsules
+    # Same tests as above. CHECK: metal values are identical to lot KSMCS1081726
+    # (Pb 0.0660, As 0.0281, Cd 0.0167 ppm), possibly the same extract test reused.
+    tests: [identity, lead, arsenic, cadmium, mercury]
+    entered_by: claude
+
+flags: []
+notes: ""
