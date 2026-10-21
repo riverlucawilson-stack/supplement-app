@@ -160,6 +160,7 @@ export const ashwagandhaEvidence: EvidencePage = {
       doi: '10.1016/j.ctim.2026.103325',
       source_url: 'https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE:ashwagandha%20AND%20TITLE:meta-analysis&resultType=core&format=json&pageSize=8',
       read: 'abstract',
+      design: 'meta_analysis', // Claude's reading of the title; check it
       date_checked: '2026-10-21',
       entered_by: 'claude',
     },
@@ -172,6 +173,7 @@ export const ashwagandhaEvidence: EvidencePage = {
       doi: '10.3390/nu18121915',
       source_url: 'https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE:ashwagandha%20AND%20TITLE:meta-analysis&resultType=core&format=json&pageSize=8',
       read: 'abstract',
+      design: 'meta_analysis', // Claude's reading of the title; check it
       date_checked: '2026-10-21',
       entered_by: 'claude',
     },
@@ -184,6 +186,7 @@ export const ashwagandhaEvidence: EvidencePage = {
       doi: '10.3389/fphar.2026.1799467',
       source_url: 'https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE:ashwagandha%20AND%20TITLE:meta-analysis&resultType=core&format=json&pageSize=8',
       read: 'abstract',
+      design: 'meta_analysis', // Claude's reading of the title; check it
       date_checked: '2026-10-21',
       entered_by: 'claude',
     },
@@ -196,6 +199,7 @@ export const ashwagandhaEvidence: EvidencePage = {
       doi: '10.3390/nu18172815',
       source_url: 'https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE:ashwagandha%20AND%20TITLE:meta-analysis&resultType=core&format=json&pageSize=8',
       read: 'abstract',
+      design: 'meta_analysis', // Claude's reading of the title; check it
       date_checked: '2026-10-21',
       entered_by: 'claude',
     },
@@ -208,6 +212,7 @@ export const ashwagandhaEvidence: EvidencePage = {
       doi: '10.1016/j.diabres.2026.113529',
       source_url: 'https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE:ashwagandha%20AND%20TITLE:meta-analysis&resultType=core&format=json&pageSize=8',
       read: 'abstract',
+      design: 'meta_analysis', // Claude's reading of the title; check it
       date_checked: '2026-10-21',
       entered_by: 'claude',
     },
@@ -220,6 +225,7 @@ export const ashwagandhaEvidence: EvidencePage = {
       doi: '10.7759/cureus.109764',
       source_url: 'https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE:ashwagandha%20AND%20TITLE:liver&resultType=core&format=json&pageSize=5',
       read: 'abstract',
+      design: 'review', // Claude's reading of the title; check it
       date_checked: '2026-10-21',
       entered_by: 'claude',
     },
@@ -232,6 +238,7 @@ export const ashwagandhaEvidence: EvidencePage = {
       doi: '10.1155/crhe/8417352',
       source_url: 'https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE:ashwagandha%20AND%20TITLE:liver&resultType=core&format=json&pageSize=5',
       read: 'abstract',
+      design: 'case_report', // Claude's reading of the title; check it
       date_checked: '2026-10-21',
       entered_by: 'claude',
     },

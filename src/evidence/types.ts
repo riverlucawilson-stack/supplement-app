@@ -16,6 +16,32 @@ export const strengthLabels: Record<Strength, string> = {
   not_supported: 'Not supported',
 };
 
+// What kind of study a citation is. River's evidence levels:
+//   1 = human meta-analyses and RCTs, 2 = observational studies,
+//   3 = mechanistic and animal studies. Reviews, position stands, case reports
+//   and studies whose design isn't clear sit outside the three levels.
+export type Design = 'meta_analysis' | 'rct' | 'observational' | 'mechanistic_or_animal' | 'review' | 'case_report' | 'unclear';
+
+export const designLevel: Record<Design, 1 | 2 | 3 | undefined> = {
+  meta_analysis: 1,
+  rct: 1,
+  observational: 2,
+  mechanistic_or_animal: 3,
+  review: undefined,
+  case_report: undefined,
+  unclear: undefined,
+};
+
+export const designLabels: Record<Design, string> = {
+  meta_analysis: 'Systematic review / meta-analysis',
+  rct: 'Randomized controlled trial',
+  observational: 'Observational study',
+  mechanistic_or_animal: 'Mechanistic or animal study',
+  review: 'Review or position stand',
+  case_report: 'Case report',
+  unclear: 'Design not clear from the title (check the paper)',
+};
+
 export interface Citation {
   authors: string; // first author, then "et al." if more
   title: string;
@@ -28,6 +54,8 @@ export interface Citation {
   /** What was read: the abstract only, or the full paper. */
   read: 'abstract' | 'full_text';
   date_checked: string; // YYYY-MM-DD
+  /** Study design, read from the title. Decides which evidence level its points are filed under. */
+  design: Design;
   entered_by?: 'claude';
 }
 

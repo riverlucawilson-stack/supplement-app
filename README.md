@@ -146,6 +146,11 @@ maker) is `scope: raw_material`.
 Everything on an evidence page lives in `src/evidence/<category>.ts` (e.g. `creatine.ts`). Claude drafted it
 from the abstracts of the papers listed under each point; nothing in it is from memory.
 
+**Evidence pages stay off the site until you approve them.** A page is built only once every one of its
+sections has `reviewed: true`. Until then, read it in `drafts/evidence/<category>.md`, which files every point
+under your evidence levels (1: human meta-analyses and RCTs, 2: observational, 3: mechanistic and animal).
+After editing the `.ts` file, run `npm run evidence-drafts` to refresh the draft.
+
 1. Open the page and read a section. Each point has a numbered link to its paper.
 2. Rewrite anything you'd say differently, right in that file.
 3. When you agree with the whole section, change its `reviewed: false` to `reviewed: true`.

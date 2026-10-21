@@ -45,7 +45,7 @@ Propose how to generalize from creatine, but don't build it yet. Cover:
 - [x] B2 YAML category loader; migrate creatine
 - [x] B3 migrate ashwagandha
 - [x] B4 generic routes, creatine to /creatine/, home page lists categories
-- [ ] B5 evidence drafts to drafts/evidence/, pages built only once fully reviewed
+- [x] B5 evidence drafts to drafts/evidence/, pages built only once fully reviewed
 - [ ] Draft TEAM.md (River asked 2026-10-21)
 
 ## Stage C: categories, most purchased first

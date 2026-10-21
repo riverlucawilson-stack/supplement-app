@@ -236,6 +236,7 @@ export const creatineEvidence: EvidencePage = {
       doi: '10.1186/s12970-017-0173-z',
       source_url: 'https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5469049/fullTextXML',
       read: 'full_text',
+      design: 'review', // Claude's reading of the title; check it
       date_checked: '2026-10-20',
       entered_by: 'claude',
     },
@@ -249,6 +250,7 @@ export const creatineEvidence: EvidencePage = {
       doi: '10.1186/s12970-021-00412-w',
       source_url: 'https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:33557850&resultType=core&format=json',
       read: 'abstract',
+      design: 'review', // Claude's reading of the title; check it
       date_checked: '2026-10-20',
       entered_by: 'claude',
     },
@@ -261,6 +263,7 @@ export const creatineEvidence: EvidencePage = {
       doi: '10.1152/jappl.1996.81.1.232',
       source_url: 'https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:8828669&resultType=core&format=json',
       read: 'abstract',
+      design: 'unclear', // Claude's reading of the title; check it
       date_checked: '2026-10-20',
       entered_by: 'claude',
     },
@@ -274,6 +277,7 @@ export const creatineEvidence: EvidencePage = {
       doi: '10.1042/cs0830367',
       source_url: 'https://pubmed.ncbi.nlm.nih.gov/1327657/',
       read: 'abstract',
+      design: 'unclear', // Claude's reading of the title; check it
       date_checked: '2026-10-20',
       entered_by: 'claude',
     },
@@ -287,6 +291,7 @@ export const creatineEvidence: EvidencePage = {
       doi: '10.1016/j.exger.2018.04.013',
       source_url: 'https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:29704637&resultType=core&format=json',
       read: 'abstract',
+      design: 'meta_analysis', // Claude's reading of the title; check it
       date_checked: '2026-10-20',
       entered_by: 'claude',
     },
@@ -299,6 +304,7 @@ export const creatineEvidence: EvidencePage = {
       doi: '10.1080/15502783.2025.2495229',
       source_url: 'https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:40265319&resultType=core&format=json',
       read: 'abstract',
+      design: 'rct', // Claude's reading of the title; check it
       date_checked: '2026-10-20',
       entered_by: 'claude',
     },
