@@ -1,0 +1,41 @@
+# Looked up by Claude on 2026-10-21 from naturesbounty.com (Supplement Facts) and the
+# ShopRite and Kroger product pages (prices). Entries marked entered_by: claude still need River's check.
+category: ashwagandha
+entered_by: claude
+brand: Nature's Bounty
+name: Ashwagandha Gummies
+form: gummy
+ashwagandha_type: root_extract  # panel: "KSM-66 Ashwagandha® Extract (Withania somnifera) (root)"
+extract: KSM-66
+other_ingredients: [organic cane sugar, tapioca syrup, pectin, citric acid, fruit and vegetable concentrate (color), medium chain triglycerides, natural flavors, sodium citrate, sunflower lecithin, tapioca starch]
+
+dose:
+  units_per_serving: 2              # naturesbounty.com panel: "Serving size 2 Gummies"
+  ashwagandha_per_serving_mg: 300   # panel: "KSM-66 Ashwagandha® Extract ... 300 mg"
+  servings_per_container: 30        # panel: "Servings per container 30"
+
+prices:
+  - retailer: ShopRite
+    price_usd: 11.99                # page: "$11.99 was $23.99", "60 Gummies" (sale price)
+    servings: 30
+    url: https://www.shoprite.com/sm/planning/rsid/588/product/natures-bounty-ashwagandha-herbal-health-mixed-berry-flavored-gummies-dietary-supplement-60-count-id-00074312012242
+    date_checked: 2026-10-21
+    entered_by: claude
+  - retailer: Kroger
+    price_usd: 28.99                # page: "$28.99", "60 ct"
+    servings: 30
+    url: https://www.kroger.com/p/p/0007431201224
+    date_checked: 2026-10-21
+    rating:                         # page: rating 4.34, 67 reviews
+      stars: 4.34
+      count: 67
+    entered_by: claude
+# naturesbounty.com shows no price (metadata "0.00"), so no brand-site price.
+
+certifications: []
+
+# COA: none found. naturesbounty.com product page links no COA or lab results (checked 2026-10-21).
+coas: []
+
+flags: [added sugar (3 g added per serving)]
+notes: ""
