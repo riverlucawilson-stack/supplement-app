@@ -8,7 +8,9 @@ as "checkpoint: <unit>". CLAUDE.md wins any conflict with this file.
 - (none)
 
 ## Next up
-- (set at the end of each shift)
+- WAITING ON RIVER: approve drafts/multi-category-plan.md (and its 5 questions). Then implement Stage B
+  in about 4 units: snapshot of creatine numbers, YAML category loader, migrate creatine, migrate ashwagandha, generic routes.
+- Nothing in Stage C starts before Stage B is approved and built.
 
 ## Already built before this roadmap existed (2026-10-21)
 - [x] Phase (a): project setup, data format (PR #1)
@@ -37,7 +39,7 @@ Propose how to generalize from creatine, but don't build it yet. Cover:
   - which certifications and tests matter
 - routes /<category>/ and /<category>/<product>/
 - how validation and tiers apply per category
-- [ ] Write the proposal to drafts/multi-category-plan.md and STOP for River's approval.
+- [x] Write the proposal to drafts/multi-category-plan.md and STOP for River's approval. (written 2026-10-21, waiting)
 - [ ] After approval, implement it and migrate creatine onto it with its numbers unchanged.
 
 ## Stage C: categories, most purchased first
