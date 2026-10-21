@@ -1,14 +1,104 @@
 ---
-// Home page: the creatine comparison table.
-import CategoryPage from '../components/CategoryPage.astro';
+// Home page: one card per published category, linking to its comparison table.
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { categoryList } from '../categories';
+import { settings } from '../settings';
+
+const products = await getCollection('products');
+const cards = categoryList
+  .filter((c) => c.published)
+  .map((c) => ({ category: c, count: products.filter((p) => p.data.category === c.id).length }));
 ---
 
-<CategoryPage
-  categoryId="creatine"
-  title="Creatine compared by cost per 5 g and testing"
-  description="Every creatine product converted to cost per 5 g of creatine, with third-party certifications and lab results (COAs) graded A to C."
-  heading="What creatine really costs, and how much of its testing you can see."
+<BaseLayout
+  title={settings.siteName}
+  description="Supplements compared on what they really cost per dose and how much of their lab testing you can see."
 >
-  Every price is converted to <strong>cost per 5 g of creatine</strong>, the amount most labels use as one serving.
-  Testing transparency gets its own grade, A to C, and is never blended into the price.
-</CategoryPage>
+  <section class="intro wrap">
+    <h1>What supplements really cost, and how much of their testing you can see.</h1>
+    <p class="lede">
+      Each category converts every price to the same amount of the ingredient, so products compare fairly. Testing
+      transparency gets its own grade, A to C, and is never blended into the price.
+    </p>
+  </section>
+
+  <section class="wrap" aria-label="Categories">
+    <ul class="cards">
+      {
+        cards.map(({ category: c, count }) => (
+          <li>
+            <a class="card" href={c.path}>
+              <span class="name">{c.name}</span>
+              <span class="sub">{count} products · compared {c.referenceDose.label.replace(/ \S+$/, '')}</span>
+              <span class="go">Compare {c.name.toLowerCase()} →</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</BaseLayout>
+
+<style>
+  .intro {
+    padding-block: 2.5rem 1.5rem;
+  }
+
+  h1 {
+    margin: 0;
+    max-width: 24ch;
+    font-size: clamp(1.75rem, 4.5vw, 2.75rem);
+    font-weight: 800;
+  }
+
+  .lede {
+    max-width: 62ch;
+    margin: 1rem 0 0;
+    color: var(--muted);
+    font-size: 1.0625rem;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    height: 100%;
+    padding: 1.25rem;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .card:hover,
+  .card:focus-visible {
+    border-color: var(--accent);
+  }
+
+  .name {
+    font-size: 1.25rem;
+    font-weight: 800;
+  }
+
+  .sub {
+    font-size: 0.875rem;
+    color: var(--muted);
+  }
+
+  .go {
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: var(--accent);
+  }
+</style>

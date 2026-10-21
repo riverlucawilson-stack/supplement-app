@@ -1,0 +1,14 @@
+---
+// Each category's evidence page, at /<category>/evidence/.
+// The words live in src/evidence/<category>.ts.
+import EvidencePage from '../../components/EvidencePage.astro';
+import { evidencePages } from '../../evidence';
+
+export function getStaticPaths() {
+  return evidencePages.map((page) => ({ params: { category: page.category }, props: { page } }));
+}
+
+const { page } = Astro.props;
+---
+
+<EvidencePage page={page} />

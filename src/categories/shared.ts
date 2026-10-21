@@ -1,5 +1,5 @@
-// Pieces of the product file that every category shares
-// (creatine, and later fish oil). Category files build on these.
+// Pieces of the product file that every category shares. src/categories/index.ts
+// adds each category's own fields, read from categories/<slug>.yaml.
 import { z } from 'astro/zod';
 
 // Dates in the YAML files are written like 2026-10-14.
@@ -29,21 +29,16 @@ export const priceSchema = z.strictObject({
   entered_by: enteredBy,
 });
 
-export const certificationPrograms = [
-  'NSF Certified for Sport',
-  'Informed Sport',
-  'USP Verified',
-  'BSCG',
-  'Clean Label Project',
-] as const;
-
-export const certificationSchema = z.strictObject({
-  program: z.enum(certificationPrograms),
+// Which programs count is set per category (certifications: in its YAML file).
+export function certificationSchema<T extends readonly [string, ...string[]]>(programs: T) {
+  return z.strictObject({
+  program: z.enum(programs),
   // Link to the product's listing on the certifier's own website.
   listing_url: z.url(),
   date_verified: date,
   entered_by: enteredBy,
-});
+  });
+}
 
 // A COA schema needs the category's own list of test names,
 // so each category calls this with its list.
@@ -69,7 +64,16 @@ export const baseProductFields = {
   form: z.enum(['powder', 'capsule', 'tablet', 'gummy']),
   other_ingredients: z.array(z.string()).default([]),
   prices: z.array(priceSchema).default([]),
-  certifications: z.array(certificationSchema).default([]),
   flags: z.array(z.string()).default([]),
   notes: z.string().default(''),
 };
+
+// The parts of a product every category has, as the code sees them after checking.
+const baseShape = z.object({
+  category: z.string(),
+  ...baseProductFields,
+  certifications: z.array(certificationSchema(['' as string] as [string])),
+  dose: z.object({ servings_per_container: z.number() }).catchall(z.number().optional()),
+  coas: z.array(coaSchema(['' as string] as [string])),
+});
+export type BaseProduct = z.infer<typeof baseShape>;

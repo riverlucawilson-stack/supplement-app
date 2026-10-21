@@ -14,9 +14,10 @@ const { title, description } = Astro.props;
 const fullTitle = title === settings.siteName ? title : `${title} | ${settings.siteName}`;
 const path = Astro.url.pathname;
 const samePage = (href: string) => path.replace(/\/$/, '') === href.replace(/\/$/, '');
-// One menu link per category; each category page links to its own evidence page.
+// One menu link per published category. Its product and evidence pages count as "inside" it.
 // Phase (e) adds Methodology, How to read a COA, About.
-const nav = categoryList.map((c) => ({ href: c.path, label: c.name, evidence: c.evidencePath }));
+const nav = categoryList.filter((c) => c.published).map((c) => ({ href: c.path, label: c.name }));
+const inside = (href: string) => path === href || path.startsWith(href);
 ---
 
 <!doctype html>
@@ -40,7 +41,7 @@ const nav = categoryList.map((c) => ({ href: c.path, label: c.name, evidence: c.
       <div class="wrap">
         <a class="wordmark" href="/">Sup<span>Search</span></a>
         <nav class="site-nav" aria-label="Main">
-          {nav.map((n) => <a href={n.href} aria-current={samePage(n.href) || samePage(n.evidence) ? 'page' : undefined}>{n.label}</a>)}
+          {nav.map((n) => <a href={n.href} aria-current={samePage(n.href) ? 'page' : inside(n.href) ? 'true' : undefined}>{n.label}</a>)}
         </nav>
       </div>
     </header>

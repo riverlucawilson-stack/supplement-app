@@ -11,16 +11,19 @@ import { bestPrice } from '../lib/pricing';
 import { isCertificationCurrent } from '../lib/staleness';
 import { tierFor } from '../lib/tier';
 import { hasUnverifiedData, isSampleProduct } from '../lib/review';
+import { evidenceFor } from '../evidence';
 
 interface Props {
   categoryId: CategoryId;
-  title: string;
-  description: string;
-  heading: string;
 }
-const { categoryId, title, description, heading } = Astro.props;
+const { categoryId } = Astro.props;
 const today = new Date();
 const category = categoryById(categoryId);
+const { title, description, heading } = category.page;
+// The intro is plain text from the category file; **words** become bold.
+const escape = (t: string) => t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const intro = escape(category.page.intro).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+const hasEvidence = evidenceFor(categoryId) !== undefined;
 
 const rows = (await getCollection('products'))
   .filter((entry) => entry.data.category === categoryId)
@@ -63,8 +66,10 @@ const costLabelLower = costLabel.charAt(0).toLowerCase() + costLabel.slice(1);
   <section class="intro wrap">
     <p class="eyebrow">{category.name} · {rows.length} products</p>
     <h1>{heading}</h1>
-    <p class="lede"><slot /></p>
-    <p class="research"><a href={category.evidencePath}>What the research says about {category.name.toLowerCase()} →</a></p>
+    <p class="lede" set:html={intro} />
+    {hasEvidence && (
+      <p class="research"><a href={category.evidencePath}>What the research says about {category.name.toLowerCase()} →</a></p>
+    )}
   </section>
 
   <section class="wrap" aria-label="Comparison table">
@@ -114,7 +119,7 @@ const costLabelLower = costLabel.charAt(0).toLowerCase() + costLabel.slice(1);
           <tr>
             <th scope="col">Product</th>
             <th scope="col" class="r">{costLabel}</th>
-            <th scope="col" class="r">30 days</th>
+            {category.daily && <th scope="col" class="r">30 days</th>}
             <th scope="col">Best price</th>
             <th scope="col" class="c">Tier</th>
             <th scope="col">Testing</th>
@@ -161,9 +166,11 @@ const costLabelLower = costLabel.charAt(0).toLowerCase() + costLabel.slice(1);
                 <td class="r cost" data-label={costLabel} data-per={category.referenceDose.label.replace(/ \S+$/, '')}>
                   {r.best ? <span class="num big">{usd(r.best.costPerReferenceDose)}</span> : <span class="none">No price</span>}
                 </td>
-                <td class="r" data-label={category.dailyLabel}>
-                  {r.best ? <span class="num">{usd(r.best.costPer30Days)}</span> : <span class="none">–</span>}
-                </td>
+                {category.daily && (
+                  <td class="r" data-label={category.daily.label}>
+                    {r.best?.costPer30Days !== undefined ? <span class="num">{usd(r.best.costPer30Days)}</span> : <span class="none">–</span>}
+                  </td>
+                )}
                 <td class="where" data-label="Best price">
                   {r.best ? (
                     <>

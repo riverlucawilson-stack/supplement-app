@@ -1,0 +1,63 @@
+# Everything specific to creatine. The site reads this file when it builds.
+# How each part works is explained in categories/README.md.
+slug: creatine
+name: Creatine
+status: published
+order: 1
+
+page:
+  title: Creatine compared by cost per 5 g and testing
+  description: Every creatine product converted to cost per 5 g of creatine, with third-party certifications and lab results (COAs) graded A to C.
+  heading: What creatine really costs, and how much of its testing you can see.
+  intro: >-
+    Every price is converted to **cost per 5 g of creatine**, the amount most labels use as one serving.
+    Testing transparency gets its own grade, A to C, and is never blended into the price.
+
+comparison:
+  amount: 5
+  unit: g
+  counts_toward: [creatine_per_serving_g]
+  label: per 5 g creatine
+  short: Cost per 5 g
+  daily_amount: 5
+  daily_label: 30 days at 5 g/day
+  # validate warns when a cost falls outside this range (usually a typo in price or servings)
+  plausible_cost: { min: 0.05, max: 5 }
+
+# Numbers each product file records under dose:, per serving.
+# servings_per_container is always required and doesn't need listing here.
+dose_fields:
+  serving_size_g: { label: Serving size, unit: g }
+  creatine_per_serving_g: { label: Creatine per serving, unit: g }
+
+type:
+  field: creatine_type
+  label: Creatine type
+  options:
+    monohydrate: Monohydrate
+    hcl: HCl
+    nitrate: Nitrate
+    ethyl_ester: Ethyl ester
+    buffered: Buffered
+    magnesium_chelate: Magnesium chelate
+    other: Other
+
+# Optional text fields on the product. Leave out of the product file if the label doesn't say.
+extra_fields:
+  raw_material: Raw material brand (e.g. Creapure)
+
+# The short description under the product name. A part is skipped when its field is empty.
+describe: ['{creatine_type}', '{raw_material}']
+
+certifications: [NSF Certified for Sport, Informed Sport, USP Verified, BSCG, Clean Label Project]
+
+coa_tests:
+  purity: Purity / potency
+  lead: Lead
+  arsenic: Arsenic
+  cadmium: Cadmium
+  mercury: Mercury
+  microbial: Microbial
+  creatinine: Creatinine
+  dcd: Dicyandiamide (DCD)
+  dht: Dihydrotriazine (DHT)

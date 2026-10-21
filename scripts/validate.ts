@@ -18,8 +18,7 @@ import { allPrices, bestPrice } from '../src/lib/pricing';
 import { isCertificationCurrent, isCoaStale } from '../src/lib/staleness';
 import { tierFor } from '../src/lib/tier';
 import { checkEvidence } from '../src/evidence/check';
-import { creatineEvidence } from '../src/evidence/creatine';
-import { ashwagandhaEvidence } from '../src/evidence/ashwagandha';
+import { evidencePages } from '../src/evidence';
 
 const PRODUCTS_DIR = process.argv[2] ?? join('src', 'content', 'products');
 const today = new Date();
@@ -83,6 +82,9 @@ function checkFile(path: string): FileReport {
   const fileName = parts[parts.length - 1];
   if (!/^[a-z0-9]+(-[a-z0-9]+)*\.yaml$/.test(fileName)) {
     errors.push('File name must be lowercase letters and numbers joined by dashes, e.g. brand-creatine-powder.yaml.');
+  }
+  if (fileName === 'evidence.yaml') {
+    errors.push('"evidence" is taken by the evidence page address. Pick another file name.');
   }
   if (parts.length !== 2) {
     errors.push('Product files must sit directly inside a category folder, e.g. creatine/brand-product.yaml.');
@@ -180,7 +182,7 @@ function checkFile(path: string): FileReport {
 const reports = listFiles(PRODUCTS_DIR).sort().map(checkFile);
 // The evidence page is checked only on a normal run, not when pointed at test files.
 if (process.argv[2] === undefined) {
-  for (const page of [creatineEvidence, ashwagandhaEvidence]) {
+  for (const page of evidencePages) {
     reports.push({ file: join('src', 'evidence', `${page.category}.ts`), ...checkEvidence(page) });
   }
 }

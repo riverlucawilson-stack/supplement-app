@@ -19,9 +19,9 @@ const category = categoryOf(p);
 const prices = allPrices(p, today);
 const best = bestPrice(p, today);
 const tier = tierFor(p, today);
-const perServing = category.activeGramsPerServing(p);
-const servingsPerReferenceDose = category.referenceDose.grams / perServing;
-const doseFacts = category.doseFacts?.(p) ?? [];
+const perServing = category.activePerServing(p);
+const servingsPerReferenceDose = category.referenceDose.amount / perServing;
+const doseFacts = category.doseFacts(p);
 const unverified = hasUnverifiedData(p);
 const sample = isSampleProduct(p);
 
@@ -29,7 +29,8 @@ const usd = (n: number) => `$${n.toFixed(2)}`;
 const shortDate = (d: Date) =>
   d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 const round = (n: number) => Number(n.toFixed(2)).toString();
-const grams = (g: number) => (g < 1 ? `${round(g * 1000)} mg` : `${round(g)} g`);
+const unit = category.referenceDose.unit;
+const inUnit = (n: number) => `${round(n)} ${unit}`;
 const formLabel: Record<string, string> = { powder: 'Powder', capsule: 'Capsules', tablet: 'Tablets', gummy: 'Gummies' };
 const scopeLabel = { finished_product: 'Finished product', raw_material: 'Raw material' } as const;
 const isoLabel = { yes: 'Yes', no: 'No', unknown: 'Unknown' } as const;
@@ -61,10 +62,12 @@ const description = best
         {best ? <span class="num big">{usd(best.costPerReferenceDose)}</span> : <span class="none">No price found</span>}
         {best && <span class="sub">at {best.price.retailer}{best.stale && <span class="pill pill-warn">Stale</span>}</span>}
       </div>
-      <div class="stat">
-        <span class="label">{category.dailyLabel}</span>
-        {best ? <span class="num big">{usd(best.costPer30Days)}</span> : <span class="none">–</span>}
-      </div>
+      {category.daily && (
+        <div class="stat">
+          <span class="label">{category.daily.label}</span>
+          {best?.costPer30Days !== undefined ? <span class="num big">{usd(best.costPer30Days)}</span> : <span class="none">–</span>}
+        </div>
+      )}
       <div class="stat">
         <span class="label">Transparency tier</span>
         <span class={`tier tier-${tier.tier}`}>{tier.tier}</span>
@@ -93,8 +96,8 @@ const description = best
       {best && (
         <p class="formula">
           At the best price: <span class="num">{usd(best.price.price_usd)}</span> ÷ (
-          <span class="num">{best.price.servings}</span> servings × <span class="num">{grams(perServing)}</span>) ×{' '}
-          <span class="num">{grams(category.referenceDose.grams)}</span> ={' '}
+          <span class="num">{best.price.servings}</span> servings × <span class="num">{inUnit(perServing)}</span>) ×{' '}
+          <span class="num">{inUnit(category.referenceDose.amount)}</span> ={' '}
           <strong class="num">{usd(best.costPerReferenceDose)}</strong>
         </p>
       )}

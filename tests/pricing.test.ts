@@ -9,9 +9,9 @@ test('cost per 5 g when one serving is 5 g of creatine', () => {
   // $30 for 100 servings × 5 g = 500 g creatine → $0.30 per 5 g
   const p = makeProduct({ prices: [price(30, 100)] });
   const m = priceMath(p, p.prices[0], TODAY);
-  close(m.activeGrams, 500);
+  close(m.activeAmount, 500);
   close(m.costPerReferenceDose, 0.3);
-  close(m.costPer30Days, 9);
+  close(m.costPer30Days!, 9);
 });
 
 test('uses actual creatine per serving, not serving size', () => {
@@ -22,9 +22,9 @@ test('uses actual creatine per serving, not serving size', () => {
     prices: [price(30, 30)],
   });
   const m = priceMath(p, p.prices[0], TODAY);
-  close(m.activeGrams, 90);
+  close(m.activeAmount, 90);
   close(m.costPerReferenceDose, 30 / 90 * 5);
-  close(m.costPer30Days, 30 / 90 * 150);
+  close(m.costPer30Days!, 30 / 90 * 150);
 });
 
 test("uses the retailer's own container size", () => {

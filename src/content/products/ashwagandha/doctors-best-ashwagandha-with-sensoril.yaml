@@ -40,4 +40,6 @@ certifications: []
 coas: []                        # no COA or test results on the brand page
 
 flags: []
-notes: "The task named this as a KSM-66 product, but Doctor's Best's ashwagandha uses Sensoril (root and leaf), not KSM-66."
+# Research note (not shown on the site): this was first listed as a KSM-66 product, but
+# Doctor's Best's ashwagandha uses Sensoril (root and leaf), not KSM-66.
+notes: ""

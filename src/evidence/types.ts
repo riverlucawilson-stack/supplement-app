@@ -52,7 +52,7 @@ export interface Section {
 }
 
 export interface EvidencePage {
-  category: 'creatine' | 'ashwagandha';
+  category: string;
   title: string;
   description: string;
   lede: string;

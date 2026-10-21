@@ -23,7 +23,7 @@ export function snapshotAll() {
         prices: allPrices(product, SNAPSHOT_DAY).map((m) => ({
           retailer: m.price.retailer,
           costPerReferenceDose: round(m.costPerReferenceDose),
-          costPer30Days: round(m.costPer30Days),
+          costPer30Days: m.costPer30Days === undefined ? null : round(m.costPer30Days),
         })),
       };
     }

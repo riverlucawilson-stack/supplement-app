@@ -40,11 +40,11 @@ YAML file you edit by hand.
 | `src/lib/` | The calculations: `pricing.ts` (cost per 5 g, per 30 days, best price), `tier.ts` (Tier A/B/C with reasons), `staleness.ts`. |
 | `scripts/validate.ts` | The validation script. |
 | `tests/` | Automated tests. `tests/fixtures/products/` holds deliberately broken product files the tests check get caught. |
-| `src/categories/` | What a product file must contain, per category (`creatine.ts`, `ashwagandha.ts`), and the amount each is compared on. |
+| `categories/` | **One YAML file per category** (`creatine.yaml`, `ashwagandha.yaml`): the amount it's compared on, which dose numbers a product records, its types, which certifications count and which COA tests are listed. See `categories/README.md`. |
 | `src/evidence/` | The words on each category's evidence page. |
 | `templates/` | A blank product file for each category. |
 | `src/layouts/BaseLayout.astro` | The frame on every page, including the affiliate disclosure and "not medical advice" note. |
-| `src/pages/` | One file per page of the site. |
+| `src/pages/` | The page addresses. `[category]/` makes `/creatine/`, `/creatine/<product>/` and so on for every category, so a new category needs no page files. |
 | `src/styles/global.css` | Site-wide styling. |
 
 ## How to add a product
@@ -135,7 +135,7 @@ Extracts and plain root powder aren't the same at the same weight, so the table 
 type (root extract, root + leaf extract, root powder), the branded extract (e.g. KSM-66,
 Sensoril, Shoden) and the withanolide % beside each one. A small, concentrated extract
 (e.g. 120 mg of Shoden) will look expensive per 600 mg; that's expected. To compare on a
-different amount, change `referenceDose` and `dailyGrams` in `src/categories/ashwagandha.ts`.
+different amount, change `comparison` in `categories/ashwagandha.yaml`.
 
 Its COA tests are: withanolides, identity, lead, arsenic, cadmium, mercury, microbial,
 pesticides, residual_solvents, aflatoxins. A COA from the extract supplier (e.g. the KSM-66
