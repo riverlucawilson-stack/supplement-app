@@ -1,0 +1,36 @@
+# Looked up by Claude on 2026-10-21. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 60 capsules.
+category: vitamin-d
+entered_by: claude              # label info from vitacost.com
+brand: Pure Encapsulations
+name: Vitamin D3 125 mcg (5,000 IU) Capsules
+form: capsule
+vitamin_d_form: d3              # vitacost.com: "Vitamin D (as cholecalciferol) (D3)"
+other_ingredients: [hypoallergenic plant fiber (cellulose), vegetarian capsule (cellulose, water)]   # vitacost.com
+# Not recorded as carrier_oil: vitacost's description mentions an MCT base for the liquid vitamin D3 but the ingredient list does not name an oil.
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 capsule
+  vitamin_d_per_serving_mcg: 125 # vitacost.com: 125 mcg (5,000 IU)
+  servings_per_container: 60    # vitacost.com 60-capsule page
+
+prices:
+  - retailer: Vitacost
+    price_usd: 21.00            # vitacost.com: $21.00 (regular and sale price the same), 60 capsules
+    servings: 60
+    url: https://www.vitacost.com/products/pure-encapsulations-vitamin-d3-125-mcg-5-000-iu-60-capsules-51840
+    date_checked: 2026-10-21
+    entered_by: claude
+  # Same retailer also sells the 120-capsule size at $36.00 (https://www.vitacost.com/products/pure-encapsulations-vitamin-d3-125-mcg-5-000-iu-120-capsules-51821); not entered, one size per product.
+  # MISSING: a second retailer. Brand site pureencapsulations.com did not come up in search; purecapspro.com (practitioner page) has no prices.
+
+# MISSING: certification. NSF Certified for Sport vitamin D search (nsfsport.com) showed no Pure Encapsulations listing.
+# USP and Informed Sport searches returned no page naming this product. The Vitacost page lists Gluten-Free Certification Organization (gluten only; not in this site's program list).
+certifications: []
+
+# MISSING: COA. None found on vitacost.com or purecapspro.com
+# (https://www.purecapspro.com/drmuth/pe/products/product_details.asp?ProductsID=763).
+coas: []
+
+flags: []
+notes: ""

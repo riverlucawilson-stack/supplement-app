@@ -1,0 +1,43 @@
+# Looked up by Claude on 2026-10-21. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 60 gummies, wild berry.
+# Note: the 120-count Whole Foods page (listed as "D3 + Iron", garbled text) was not used.
+category: vitamin-d
+entered_by: claude              # label info from goodeggs.com and nordic.com
+brand: Nordic Naturals
+name: Vitamin D3 Gummies, Wild Berry
+form: gummy
+vitamin_d_form: d3              # goodeggs.com: "Vitamin D3 (as cholecalciferol)"
+# CHECK (audit 2026-10-21): Vitacost's label for this product also lists iron 1.4 mg and 2 g added sugars per
+# gummy, plus purified water and sodium citrate, which goodeggs.com doesn't show. It may be a newer label.
+# Kept the goodeggs.com list (it matches the priced listing); confirm which label is current.
+other_ingredients: [organic cane sugar, organic tapioca syrup, pectin, citric acid, fumaric acid, fruit juice concentrate (for color), natural flavor]   # goodeggs.com
+
+dose:
+  units_per_serving: 1          # goodeggs.com: serving size 1 gummy
+  vitamin_d_per_serving_mcg: 25 # Supplement Facts on vitacost.com (Wild Berry, 60 gummies): "25 mcg (1,000 IU)"
+                                #   https://www.vitacost.com/products/nordic-naturals-vitamin-d3-gummies-wild-berry-25-mcg-1-000-iu-60-gummies-48625
+  servings_per_container: 60    # goodeggs.com: 60 servings per bottle
+
+prices:
+  - retailer: Nordic Naturals
+    price_usd: 14.95            # nordic.com: $14.95 one-time purchase, 60 gummies ($13.46 subscribe and save not used)
+    servings: 60
+    url: https://www.nordic.com/products/vitamin-d3-gummies/
+    date_checked: 2026-10-21
+    entered_by: claude
+  - retailer: Good Eggs
+    price_usd: 17.49            # goodeggs.com: $17.49, 60 gummies
+    servings: 60
+    url: https://www.goodeggs.com/nordicnaturals/wild-berries-vitamin-d3-gummies/5fa9fd7f062445000eb2b582
+    date_checked: 2026-10-21
+    entered_by: claude
+
+# MISSING: certification. nsfsport.com lists "Vitamin D3 Gummies Sport" (ids 1410562, 1334637) for Nordic Naturals, but flavor "Other" and a Sport SKU
+# (SMP-00088 / RUS-31142); could not confirm it is the same product as this wild berry retail gummy, so not recorded. River to check.
+certifications: []
+
+# MISSING: COA. nordic.com offers a lot-number COA lookup (https://www.nordic.com/nordic-promise/) but no lot number or specific COA is on the product page.
+coas: []
+
+flags: [contains organic cane sugar, contains organic tapioca syrup]   # label ingredients (goodeggs.com); no added-sugars amount was readable on the pages
+notes: ""

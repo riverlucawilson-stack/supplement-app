@@ -10,8 +10,8 @@ Still River's: approving evidence/health text, and the first deploy.
 - (none)
 
 ## Next up
-- Vitamin D batch 2 (up to 5 products) per TEAM.md Mission 1. Give the researcher URLs from WebSearch results:
-  the fetch tool refuses guessed URLs.
+- Vitamin D batch 3 (up to 3 products, to reach 12) or move to the comparison-page check, then product pages,
+  claims review and the evidence draft. Give researchers URLs from WebSearch results: the fetch tool refuses guessed URLs.
   The vitamin D config records the label's mcg figure and compares per 25 mcg (= 1,000 IU).
 
 ## Already built before this roadmap existed (2026-10-21)
@@ -62,7 +62,7 @@ A category is done when it has:
 - [ ] 1. Vitamin D: $ per 1,000 IU (25 mcg). Record D3 vs D2, carrier oil, any added K2.
   - [x] category config: categories/vitamin-d.yaml (status: draft) + templates/vitamin-d-product.yaml
   - [x] batch 1: Nature Made D3 2000, NOW D3 5000, Thorne D-5000, Sports Research D3+K2 (no price yet); Kirkland skipped
-  - [ ] batch 2  - [ ] batch 3 if needed (8-12 total)
+  - [x] batch 2: Nature's Bounty D3 5000, Pure Encapsulations D3 5000, Carlson Super Daily D3 drops, Klean-D 5000 (NSF), Nordic Naturals D3 gummies  - [ ] batch 3 if needed (8-12 total)
   - [ ] comparison page check  - [ ] product pages check  - [ ] claims-review pass  - [ ] evidence draft
 - [ ] 2. Magnesium: $ per 100 mg elemental magnesium, taken from the Supplement Facts panel,
       never from compound weight. Record the form (glycinate, citrate, oxide, malate, threonate, etc.).
