@@ -11,6 +11,7 @@ One line per finished unit: date, unit, anything River needs to know.
 - 2026-10-21 · TEAM.md drafted · Mission 1 (product-researcher + data-auditor on Sonnet, 5 products per batch). Waiting for River's OK before the first research batch.
 - 2026-10-21 · Stage C1 Vitamin D config · categories/vitamin-d.yaml as a draft category (builds at /vitamin-d/ for preview, hidden from menu, home and sitemap). Products record the label's mcg figure; US labels must state mcg, so no IU conversion needed. Added softgel and liquid as product forms for all categories.
 - 2026-10-21 · River answers · TEAM.md approved, IFOS counts for fish oil, pushing allowed (PR #7 opened), and Claude may decide without asking from now on.
+- 2026-10-21 · Vitamin D batch 1 · 4 products researched and audited (all entered_by: claude). Thorne is Tier B (NSF Certified for Sport, no COA); the rest Tier C. Decision: Sports Research D3+K2 has no price, because the brand's $16.95 30-count page shows no Supplement Facts to confirm it's the 160-count formula. Kirkland D3 skipped: Costco pages show no price. Nature Made may be USP Verified (quality-supplements.org page wouldn't load here); worth a manual check. Research tip: the fetch tool refuses guessed URLs, so give researchers URLs from WebSearch results.
 
 ## Questions for River
 - None open. Decisions Claude makes on its own are logged above, starting with "Decision:".

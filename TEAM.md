@@ -56,6 +56,8 @@ Checks the researcher's files before they're committed. It doesn't add new data.
    and skipped, and commit as `checkpoint: <category> batch <n>`.
 
 ## Notes from earlier research
+- The fetch tool refuses URLs a model guessed. Run WebSearch first and give the researcher the result URLs;
+  agents may also follow links found on pages they've read.
 - Retailer pages that work with one-page reads: Vitacost, GNC, Target, Vitamin Shoppe, and
   Shopify stores' `/products/<handle>.js` variant data. Amazon and iHerb block fetches.
 - Europe PMC's REST API works for paper details (about 1 request a minute before it

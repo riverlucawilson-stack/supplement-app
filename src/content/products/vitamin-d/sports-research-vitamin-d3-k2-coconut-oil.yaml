@@ -1,0 +1,34 @@
+# Looked up by Claude on 2026-10-21. Every entry marked entered_by: claude
+# still needs River's check against its link. Label facts are for the 160 ct size (Costco Business Delivery).
+category: vitamin-d
+entered_by: claude              # label info from costcobusinessdelivery.com
+brand: Sports Research
+name: Plant Based Vitamin D3 + K2 with Coconut MCT Oil
+form: softgel                   # costcobusinessdelivery.com: "160 veggie softgels"
+vitamin_d_form: d3              # "125 mcg (5000 IU), as cholecalciferol, sourced from lichen"
+carrier_oil: coconut MCT oil    # costcobusinessdelivery.com other ingredients: "Coconut MCT oil"
+k2_form: MK-7                   # "menaquinone-7 (MK-7), sourced from chickpea"
+other_ingredients: [coconut MCT oil, PlantGel capsule (non-GMO modified tapioca starch, vegetable glycerin, purified water, turmeric for color)]
+
+dose:
+  units_per_serving: 1          # costcobusinessdelivery.com: per 1 veggie softgel
+  vitamin_d_per_serving_mcg: 125 # costcobusinessdelivery.com: 125 mcg (5000 IU)
+  k2_per_serving_mcg: 100       # costcobusinessdelivery.com: 100 mcg
+  servings_per_container: 160   # costcobusinessdelivery.com (160 ct)
+
+# Decision (Claude, 2026-10-21): no price yet. sportsresearch.com sells a "5000 IU, 30 servings" option
+# for $16.95 (https://www.sportsresearch.com/products/vitamin-d3-k2, checked 2026-10-21), but that page shows
+# no Supplement Facts, so it can't be confirmed as the same formula as the 160 ct label used above.
+prices: []
+# MISSING: Costco Business Delivery price (page shows "Online Price" with no dollar amount):
+#   https://www.costcobusinessdelivery.com/p/-/sports-research-plant-based-vitamin-d3-k2-160-ct/2001149303
+
+# MISSING: certification. sportsresearch.com says "Third Party Tested" with no program or link.
+# A search of sport.wetestyoutrust.com found no Sports Research listing. NSF/USP not searched.
+certifications: []
+
+# MISSING: COA. No COA link on https://www.sportsresearch.com/products/vitamin-d3-k2.
+coas: []
+
+flags: []
+notes: ""

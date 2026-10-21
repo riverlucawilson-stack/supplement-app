@@ -8,5 +8,8 @@ import { snapshotAll } from './snapshot-helpers';
 
 test('every product has the same numbers as before the migration', () => {
   const before = JSON.parse(readFileSync('tests/fixtures/before-migration.json', 'utf8'));
-  assert.deepEqual(snapshotAll(), before);
+  const now = snapshotAll();
+  // Products added after the migration (e.g. vitamin D) aren't in the snapshot.
+  const sameProducts = Object.fromEntries(Object.keys(before).map((k) => [k, now[k]]));
+  assert.deepEqual(sameProducts, before);
 });
