@@ -8,9 +8,10 @@ as "checkpoint: <unit>". CLAUDE.md wins any conflict with this file.
 - (none)
 
 ## Next up
-- WAITING ON RIVER: approve drafts/multi-category-plan.md (and its 5 questions). Then implement Stage B
-  in about 4 units: snapshot of creatine numbers, YAML category loader, migrate creatine, migrate ashwagandha, generic routes.
-- Nothing in Stage C starts before Stage B is approved and built.
+- Stage C1 Vitamin D: write categories/vitamin-d.yaml (status: draft). Comparison is $ per 1,000 IU (25 mcg).
+  Labels give D in IU, mcg or both; the YAML loader keeps IU and mcg apart, so the config will record mcg and
+  compare per 25 mcg (labelled "per 1,000 IU (25 mcg)"), unless River prefers adding a D-specific IU conversion.
+- Then Vitamin D batch 1 (up to 5 products) using TEAM.md Mission 1, once River OKs TEAM.md.
 
 ## Already built before this roadmap existed (2026-10-21)
 - [x] Phase (a): project setup, data format (PR #1)
@@ -46,7 +47,7 @@ Propose how to generalize from creatine, but don't build it yet. Cover:
 - [x] B3 migrate ashwagandha
 - [x] B4 generic routes, creatine to /creatine/, home page lists categories
 - [x] B5 evidence drafts to drafts/evidence/, pages built only once fully reviewed
-- [ ] Draft TEAM.md (River asked 2026-10-21)
+- [x] Draft TEAM.md (River asked 2026-10-21; waiting for River's OK)
 
 ## Stage C: categories, most purchased first
 A category is done when it has:
