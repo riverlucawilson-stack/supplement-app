@@ -17,6 +17,7 @@ import { isAfterDay } from '../src/lib/dates';
 import { allPrices, bestPrice } from '../src/lib/pricing';
 import { isCertificationCurrent, isCoaStale } from '../src/lib/staleness';
 import { tierFor } from '../src/lib/tier';
+import { usd } from '../src/lib/format';
 import { checkEvidence } from '../src/evidence/check';
 import { evidencePages } from '../src/evidence';
 
@@ -38,7 +39,6 @@ function listFiles(dir: string): string[] {
 }
 
 const day = (d: Date) => d.toISOString().slice(0, 10);
-const usd = (n: number) => `$${n.toFixed(2)}`;
 
 // Turns a field path like ["prices", 0, "price_usd"] into "prices #1 → price_usd".
 function fieldName(path: PropertyKey[]): string {

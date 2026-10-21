@@ -10,6 +10,7 @@ import { formLabels } from '../categories/shared';
 import { settings } from '../settings';
 import { bestPrice } from '../lib/pricing';
 import { isCertificationCurrent } from '../lib/staleness';
+import { usd } from '../lib/format';
 import { tierFor } from '../lib/tier';
 import { hasUnverifiedData, isSampleProduct } from '../lib/review';
 import { evidenceFor } from '../evidence';
@@ -54,7 +55,6 @@ const rows = (await getCollection('products'))
   .sort((a, b) => (a.best?.costPerReferenceDose ?? Infinity) - (b.best?.costPerReferenceDose ?? Infinity));
 
 const forms = [...new Set(rows.map((r) => r.product.form))].sort();
-const usd = (n: number) => `$${n.toFixed(2)}`;
 const shortDate = (d: Date) =>
   d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 const formLabel = formLabels;
