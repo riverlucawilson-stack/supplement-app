@@ -10,7 +10,7 @@ Still River's: approving evidence/health text, and the first deploy.
 - (none)
 
 ## Next up
-- Protein powder category config, then batch 1.
+- Protein powder batch 1 per TEAM.md Mission 1.
 - Fish oil evidence to-dos: triglyceride effect size by dose, TG/rTG/EE absorption, fish allergy/oxidation.
 - Magnesium evidence to-dos: blood pressure meta-analysis, oxide vs chelate absorption, kidney disease and drug interactions.
 - Vitamin D evidence to-dos: D2 vs D3, VITAL, cancer/mortality, upper limit.
@@ -82,6 +82,10 @@ A category is done when it has:
   - [x] evidence draft (drafts/evidence/fish-oil.md, NEEDS RIVER REVIEW) + category published
 - [ ] 4. Protein powder: $ per 25 g protein. Record the protein source, heavy-metal testing,
       and NSF Certified for Sport or Informed Sport.
+  - [x] category config: categories/protein-powder.yaml (status: draft) + templates/protein-powder-product.yaml
+  - [ ] batch 1  - [ ] batch 2
+  - [ ] comparison page check  - [ ] product pages check  - [ ] claims-review pass
+  - [ ] evidence draft
 - [ ] 5. Multivitamin: no single comparison unit. Propose a method first (for example
       $ per daily serving plus nutrient forms and %DV), then stop for River's approval.
 - [ ] 6. Vitamin C: $ per 500 mg.

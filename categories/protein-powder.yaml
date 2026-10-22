@@ -1,0 +1,75 @@
+# Everything specific to protein powder. The site reads this file when it builds.
+# How each part works is explained in categories/README.md.
+slug: protein-powder
+name: Protein powder
+status: draft
+order: 6
+
+page:
+  title: Protein powder compared by cost per 25 g protein and testing
+  description: Every protein powder converted to cost per 25 g of protein from the Nutrition or Supplement Facts panel, with its protein source, heavy-metal testing and third-party certifications (NSF Certified for Sport, Informed Sport) graded A to C.
+  heading: What protein powder really costs, and how much of its testing you can see.
+  intro: >-
+    Every price is converted to **cost per 25 g of protein**, using the protein grams on the label, not
+    the scoop weight (a 32 g scoop might hold 24 g of protein or 18 g). Each product shows its protein
+    source. Testing transparency, including published heavy-metal results, gets its own grade, A to C,
+    and is never blended into the price.
+
+comparison:
+  amount: 25
+  unit: g
+  counts_toward: [protein_per_serving_g]
+  label: per 25 g protein
+  short: Cost per 25 g protein
+  # No daily amount: River chose to leave "cost per 30 days" out unless River sets one.
+  plausible_cost: { min: 0.2, max: 6 }
+
+dose_fields:
+  # Scoop weight in grams, as the label says ("Serving size 1 scoop (31 g)").
+  # Protein per serving can't be more than this; validate checks it.
+  serving_size_g: { label: Serving size, unit: g }
+  # The "Protein" line on the Nutrition Facts or Supplement Facts panel.
+  protein_per_serving_g:
+    label: Protein per serving
+    unit: g
+    max: 60
+    max_message: 'dose: {value} g of protein per serving is very high. Check the serving (one scoop vs two).'
+
+type:
+  field: protein_source
+  label: Protein source
+  options:
+    whey_concentrate: Whey concentrate
+    whey_isolate: Whey isolate
+    whey_blend: Whey blend (concentrate + isolate)
+    whey_hydrolysate: Hydrolyzed whey
+    casein: Casein
+    milk_protein: Milk protein
+    egg: Egg white
+    beef: Beef
+    collagen: Collagen
+    pea: Pea
+    soy: Soy
+    plant_blend: Plant blend
+    animal_blend: Blend of animal proteins
+    other: Other
+
+extra_fields:
+  # Every protein the label lists, in label order, when it's a blend (e.g. "whey isolate, whey concentrate").
+  sources_listed: Proteins listed on the label
+  # Flavor of the product this file describes, e.g. "Chocolate". Prices and dose are for this flavor.
+  flavor: Flavor
+
+describe: ['{protein_source}', '{flavor}']
+
+certifications: [NSF Certified for Sport, Informed Sport, USP Verified, BSCG, Clean Label Project]
+
+coa_tests:
+  potency: Protein content
+  amino_profile: Amino acid profile
+  lead: Lead
+  arsenic: Arsenic
+  cadmium: Cadmium
+  mercury: Mercury
+  microbial: Microbial
+  banned_substances: Banned substances
