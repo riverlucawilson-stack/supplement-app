@@ -67,7 +67,7 @@ A category is done when it has:
 - [ ] 2. Magnesium: $ per 100 mg elemental magnesium, taken from the Supplement Facts panel,
       never from compound weight. Record the form (glycinate, citrate, oxide, malate, threonate, etc.).
   - [x] category config: categories/magnesium.yaml (status: draft) + templates/magnesium-product.yaml
-  - [ ] batch 1  - [ ] batch 2  - [ ] batch 3 if needed (8-12 total)
+  - [ ] batch 1  - [x] batch 2: NOW citrate, Neuro-Mag, Nature's Bounty 500, Klean Magnesium, Nature Made glycinate  - [ ] batch 3 if needed (8-12 total)
   - [ ] comparison page check  - [ ] product pages check  - [ ] claims-review pass  - [ ] evidence draft
 - [ ] 3. Fish oil / omega-3 (River approved IFOS as a tier-counting certification, 2026-10-21): $ per 1,000 mg EPA+DHA combined, not total oil. Record the form
       (TG, rTG or EE), any published oxidation (TOTOX) results, and IFOS or similar certification.

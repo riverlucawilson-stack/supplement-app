@@ -1,0 +1,33 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 100 tablets.
+category: magnesium
+entered_by: claude              # label info from naturesbounty.com
+brand: Nature's Bounty
+name: Magnesium 500 mg Tablets
+form: tablet
+magnesium_form: oxide           # naturesbounty.com: "Magnesium 500 mg ... as magnesium oxide"
+other_ingredients: [vegetable cellulose, dicalcium phosphate, calcium carbonate, citric acid, medium chain triglycerides, polydextrose, vegetable magnesium stearate]   # naturesbounty.com ("less than 2% of" the last five)
+
+dose:
+  units_per_serving: 1          # naturesbounty.com: serving size 1 tablet
+  magnesium_per_serving_mg: 500 # Supplement Facts "Magnesium" line, 500 mg = 119% DV (500/420), so it is elemental
+  servings_per_container: 100
+
+prices:
+  - retailer: Nature's Bounty
+    price_usd: 10.16            # naturesbounty.com 100-tablet page; shown only as "FROM $10.16" beside the only variant (100 tablets); the page's price metadata says 0.00, so confirm
+    servings: 100
+    url: https://naturesbounty.com/products/magnesium-500-mg-100-tablets
+    date_checked: 2026-10-22
+    entered_by: claude
+# Not entered: kroger.com ($13.99, count shown as 200 ct with 100 ct option, no Supplement Facts) and farmandfleet.com
+# ($11.99, count not shown); package size could not be confirmed.
+
+# MISSING: certification. No certifier listing found by WebSearch.
+certifications: []
+
+# MISSING: COA. No COA link on naturesbounty.com.
+coas: []
+
+flags: []
+notes: ""
