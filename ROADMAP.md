@@ -7,7 +7,7 @@ Since 2026-10-21 River lets Claude make project decisions without asking; log ea
 Still River's: approving evidence/health text, and the first deploy.
 
 ## IN PROGRESS
-- (none)
+- Vitamin K2 batch 2: up to 4 more picked from Vitacost's vitamin K collection page
 
 ## Next up
 - Vitamin K2 batch 1 (up to 5 products).
@@ -115,4 +115,5 @@ A category is done when it has:
   - [x] evidence draft (drafts/evidence/vitamin-b12.md, NEEDS RIVER REVIEW); category published
 - [ ] 8. Vitamin K2: $ per 100 mcg. Record MK-7 vs MK-4.
   - [x] category config: categories/vitamin-k2.yaml (status: draft) + template
-  - [ ] batch 1  - [ ] batch 2
+  - [x] batch 1: NOW MK-7, Sports Research K2, Doctor's Best K2 MK-7, Jarrow MK-7
+  - [ ] batch 2

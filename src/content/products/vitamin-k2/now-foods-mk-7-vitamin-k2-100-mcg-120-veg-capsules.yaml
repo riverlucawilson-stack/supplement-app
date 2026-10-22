@@ -1,0 +1,33 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 120 veg capsules.
+category: vitamin-k2
+entered_by: claude              # label info from vitacost.com
+brand: NOW Foods
+name: MK-7 Vitamin K-2 100 mcg, 120 Veg Capsules
+form: capsule
+k2_form: mk7                    # vitacost.com: "Vitamin K2 (as menaquinone-7, MK-7, MenaQ7)"
+k2_source: MenaQ7               # vitacost.com Supplement Facts names MenaQ7
+other_ingredients: [rice flour, hypromellose (cellulose capsule), maltodextrin, ascorbyl palmitate, silicon dioxide]   # vitacost.com
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 veg capsule
+  vitamin_k2_per_serving_mcg: 100 # vitacost.com: 100 mcg
+  servings_per_container: 120
+
+prices:
+  - retailer: Vitacost
+    price_usd: 20.25            # vitacost.com: "Regular price" $20.25 for 120 capsules
+    servings: 120
+    url: https://www.vitacost.com/products/now-foods-mk-7-vitamin-k-2-100-mcg-120-veg-capsules-78992
+    date_checked: 2026-10-22
+    entered_by: claude
+
+# MISSING/CHECK: certification. Looked at nsfsport.com certified-products results (NOW not in brand list)
+# and sport.wetestyoutrust.com (brand list only shown as logos, could not confirm). Nothing recorded.
+certifications: []
+
+# MISSING: COA. Not checked on the brand's site; vitacost.com page has no COA link.
+coas: []
+
+flags: []
+notes: ""
