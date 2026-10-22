@@ -31,7 +31,7 @@ const cards = categoryList
             <a class="card" href={c.path}>
               <span class="name">{c.name}</span>
               <span class="sub">{count} products · compared {c.referenceDose.label}</span>
-              <span class="go">Compare {c.name.toLowerCase()} →</span>
+              <span class="go">Compare {c.name.charAt(0).toLowerCase() + c.name.slice(1)} →</span>
             </a>
           </li>
         ))

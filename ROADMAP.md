@@ -103,7 +103,7 @@ A category is done when it has:
   - [x] batch 1: Nature Made C 1,000 mg, NOW C-1000 with Rose Hips, Thorne Vitamin C with Flavonoids (LivOn and Nordic Naturals Sport skipped)
   - [x] batch 2: Nature's Bounty C 500 mg, NOW Buffered C-1000 Complex, Emergen-C Super Orange (Solgar 90 and Klean-C skipped)
   - [x] batch 3: Garden of Life RAW C, Solgar Ester-C Plus 180, Nature's Bounty C 1,000 mg (Nature Made Chewable skipped; 9 total)
-  - [ ] comparison page check  - [ ] product pages check  - [ ] claims-review pass
+  - [x] comparison page check  - [x] product pages check  - [x] claims-review pass
   - [ ] evidence draft
 - [ ] 7. Vitamin B12: $ per 1,000 mcg. Record the form (methyl, cyano, adenosyl or hydroxo).
 - [ ] 8. Vitamin K2: $ per 100 mcg. Record MK-7 vs MK-4.

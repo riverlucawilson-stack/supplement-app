@@ -265,7 +265,7 @@ const description = best
     </section>
   )}
 
-  <p class="wrap back"><a href={category.path}>← All {category.name.toLowerCase()} products</a></p>
+  <p class="wrap back"><a href={category.path}>← All {category.name.charAt(0).toLowerCase() + category.name.slice(1)} products</a></p>
 </BaseLayout>
 
 <style>

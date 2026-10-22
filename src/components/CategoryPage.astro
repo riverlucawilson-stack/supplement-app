@@ -69,7 +69,7 @@ const costLabelLower = costLabel.charAt(0).toLowerCase() + costLabel.slice(1);
     <h1>{heading}</h1>
     <p class="lede" set:html={intro} />
     {hasEvidence && (
-      <p class="research"><a href={category.evidencePath}>What the research says about {category.name.toLowerCase()} →</a></p>
+      <p class="research"><a href={category.evidencePath}>What the research says about {category.name.charAt(0).toLowerCase() + category.name.slice(1)} →</a></p>
     )}
   </section>
 
