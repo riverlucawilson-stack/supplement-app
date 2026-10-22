@@ -1,0 +1,32 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude needs River's check.
+# Source: Target product page (full URL in prices below). Size: 2 lb (907 g).
+category: protein-powder
+entered_by: claude
+brand: Optimum Nutrition
+name: Gold Standard 100% Whey
+form: powder
+protein_source: whey_blend      # Target page ingredients: "protein blend (whey protein isolate, whey protein concentrate, whey peptides)"
+sources_listed: whey protein isolate, whey protein concentrate, whey peptides
+flavor: Double Rich Chocolate
+other_ingredients: [cocoa powder (processed with alkali), lecithin, natural and artificial flavor, acesulfame potassium, lactase]   # Target page
+
+dose:
+  serving_size_g: 30.4          # Target page label: "Serving Size: 30.4 g"
+  protein_per_serving_g: 24     # Target page: "Protein 24g"
+  servings_per_container: 29    # Target page: "Serving Per Container: 29"
+
+prices:
+  - retailer: Target
+    price_usd: 48.99            # one price shown; page: "$48.99 when purchased online", no sale price shown
+    servings: 29
+    url: https://target.com/p/optimum-nutrition-gold-standard-100-whey-double-rich-chocolate-2-lb-907-g/-/A-90176552
+    date_checked: 2026-10-22
+    entered_by: claude
+
+# MISSING: NSF/Informed Sport listing. Not looked for on the certifiers' sites in this pass (only a Target page was read).
+certifications: []
+# MISSING: COA. None found in the pages read.
+coas: []
+
+flags: [contains milk, contains soy, acesulfame potassium, "sugars 1 g", lactase]   # Target page: "CONTAINS: MILK AND SOY", "Sugars 1g"
+notes: ""
