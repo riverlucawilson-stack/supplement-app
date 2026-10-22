@@ -34,5 +34,5 @@ prices:
 certifications: []              # MISSING: none looked for beyond the Vitacost page; no certifier listing found or checked
 coas: []                        # MISSING: no COA found in the page read
 
-flags: [contains iron, contains gelatin, "Yellow 6 Lake"]   # Vitacost ingredient list; page has no allergen statement
+flags: [contains iron, contains gelatin, "artificial color (Yellow 6 Lake)"]   # Vitacost ingredient list; page has no allergen statement
 notes: ""

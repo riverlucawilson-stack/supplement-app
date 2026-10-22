@@ -95,7 +95,7 @@ A category is done when it has:
   - [x] category config: categories/multivitamin.yaml (status: draft, new per-serving comparison mode) + template
   - [x] batch 1: Centrum Adults, Nature Made Multi, Thorne Basic Nutrients 2/Day (NSF, Tier B, CHECK), Garden of Life mykind Women's (One A Day Men's skipped)
   - [x] batch 2: Nature Made Multi for Her, NOW Eve, Pure Encapsulations O.N.E., SmartyPants Men's Plus (Centrum Silver Women skipped; 8 total)
-  - [ ] comparison page check  - [ ] product pages check  - [ ] claims-review pass
+  - [x] comparison page check  - [x] product pages check  - [x] claims-review pass
   - [ ] evidence draft
 - [ ] 6. Vitamin C: $ per 500 mg.
 - [ ] 7. Vitamin B12: $ per 1,000 mcg. Record the form (methyl, cyano, adenosyl or hydroxo).

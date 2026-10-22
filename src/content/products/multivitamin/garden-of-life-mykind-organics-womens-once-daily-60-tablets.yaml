@@ -36,5 +36,5 @@ prices:
 certifications: []              # MISSING: none looked for beyond the Vitamin Shoppe page; no certifier listing found or checked
 coas: []                        # MISSING: no COA found in the page read
 
-flags: [contains iron, contains sunflower lecithin]   # Vitamin Shoppe; page has no allergen statement
+flags: [contains iron]   # Vitamin Shoppe; page has no allergen statement
 notes: ""

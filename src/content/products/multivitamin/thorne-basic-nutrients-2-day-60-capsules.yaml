@@ -45,5 +45,5 @@ certifications:
 
 coas: []                        # MISSING: no COA found in the pages read
 
-flags: ["contains calcium laurate"]   # Vitacost other ingredients; no allergen statement on the page
+flags: []                       # no allergen statement on the Vitacost page
 notes: ""
