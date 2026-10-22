@@ -10,7 +10,8 @@ Still River's: approving evidence/health text, and the first deploy.
 - (none)
 
 ## Next up
-- Fish oil evidence draft, then publish the fish oil category.
+- Protein powder category config, then batch 1.
+- Fish oil evidence to-dos: triglyceride effect size by dose, TG/rTG/EE absorption, fish allergy/oxidation.
 - Magnesium evidence to-dos: blood pressure meta-analysis, oxide vs chelate absorption, kidney disease and drug interactions.
 - Vitamin D evidence to-dos: D2 vs D3, VITAL, cancer/mortality, upper limit.
 
@@ -72,13 +73,13 @@ A category is done when it has:
   - [x] batch 2: NOW citrate, Neuro-Mag, Nature's Bounty 500, Klean Magnesium, Nature Made glycinate (9 total, batch 3 not needed)
   - [x] comparison page check  - [x] product pages check  - [x] claims-review pass
   - [x] evidence draft (drafts/evidence/magnesium.md, NEEDS RIVER REVIEW) + category published
-- [ ] 3. Fish oil / omega-3 (River approved IFOS as a tier-counting certification, 2026-10-21): $ per 1,000 mg EPA+DHA combined, not total oil. Record the form
+- [x] 3. Fish oil / omega-3 (River approved IFOS as a tier-counting certification, 2026-10-21): $ per 1,000 mg EPA+DHA combined, not total oil. Record the form
       (TG, rTG or EE), any published oxidation (TOTOX) results, and IFOS or similar certification.
   - [x] category config: categories/fish-oil.yaml (status: draft) + templates/fish-oil-product.yaml
   - [x] batch 1: Nordic Naturals Ultimate Omega, Nature Made 1200 mg (no price), Sports Research Triple Strength, NOW Ultra Omega-3, Carlson Very Finest liquid
   - [x] batch 2: Thorne Super EPA, Klean Omega (NSF, Tier B), Life Extension Super Omega-3, Viva Naturals (no price), Nordic Ultimate Omega 2X (10 total)
   - [x] comparison page check  - [x] product pages check  - [x] claims-review pass
-  - [ ] evidence draft
+  - [x] evidence draft (drafts/evidence/fish-oil.md, NEEDS RIVER REVIEW) + category published
 - [ ] 4. Protein powder: $ per 25 g protein. Record the protein source, heavy-metal testing,
       and NSF Certified for Sport or Informed Sport.
 - [ ] 5. Multivitamin: no single comparison unit. Propose a method first (for example

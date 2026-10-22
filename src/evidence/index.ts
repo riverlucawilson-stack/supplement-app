@@ -5,8 +5,9 @@ import { creatineEvidence } from './creatine';
 import { ashwagandhaEvidence } from './ashwagandha';
 import { vitaminDEvidence } from './vitamin-d';
 import { magnesiumEvidence } from './magnesium';
+import { fishOilEvidence } from './fish-oil';
 
-export const evidencePages: EvidencePage[] = [creatineEvidence, ashwagandhaEvidence, vitaminDEvidence, magnesiumEvidence];
+export const evidencePages: EvidencePage[] = [creatineEvidence, ashwagandhaEvidence, vitaminDEvidence, magnesiumEvidence, fishOilEvidence];
 
 // Only pages River has fully reviewed (every section reviewed: true) go on the site.
 // Until then the text lives in drafts/evidence/<category>.md for review.
