@@ -1,0 +1,34 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude
+# still needs River's check against its link.
+category: vitamin-c
+entered_by: claude              # label info from the Vitacost product page
+brand: Solgar
+name: Ester-C Plus Vitamin C 1,000 mg
+form: tablet
+vitamin_c_form: calcium_ascorbate # Vitacost: "Vitamin C (as Ester-C calcium ascorbate)"
+added_with: Ester-C, citrus bioflavonoid complex, acerola extract, rose hips, rutin # Vitacost Supplement Facts
+other_ingredients: [vegetable cellulose, microcrystalline cellulose, silica, vegetable stearic acid, dicalcium phosphate, vegetable magnesium stearate, vegetable glycerin]   # Vitacost
+
+dose:
+  units_per_serving: 1          # Vitacost: serving size 1 tablet
+  vitamin_c_per_serving_mg: 1000 # Vitacost: 1,000 mg
+  servings_per_container: 180   # panel has no servings-per-container line; Vitacost "Total servings 180 count" at 1 tablet per serving
+
+prices:
+  - retailer: Vitacost
+    price_usd: 28.19            # Vitacost: regular price, 180 tablets
+    servings: 180
+    url: https://www.vitacost.com/products/solgar-ester-c-plus-vitamin-c-1-000-mg-180-tablets-71040
+    date_checked: 2026-10-22
+    entered_by: claude
+    # MISSING: rating. Page shows a star distribution but states no average, so none entered.
+
+# MISSING/CHECK: certifications. Vitacost page mentions certified gluten-free (not a program in this category's
+# list); nothing checked on a certifier's own site, so left out.
+certifications: []
+
+# MISSING: COA. No COA or lab-results link on the Vitacost page.
+coas: []
+
+flags: []
+notes: ""
