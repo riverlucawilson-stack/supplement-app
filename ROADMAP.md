@@ -10,7 +10,8 @@ Still River's: approving evidence/health text, and the first deploy.
 - (none)
 
 ## Next up
-- Multivitamin page checks, claims review, evidence draft, then publish.
+- Vitamin C ($ per 500 mg): config, then batch 1.
+- Multivitamin evidence to-dos: cognition trials, %DV explainer (FDA), AREDS decision, vitamin A in pregnancy.
 - Protein powder evidence to-dos: heavy-metal testing from a primary source, protein source comparison, RDA.
 - Fish oil evidence to-dos: triglyceride effect size by dose, TG/rTG/EE absorption, fish allergy/oxidation.
 - Magnesium evidence to-dos: blood pressure meta-analysis, oxide vs chelate absorption, kidney disease and drug interactions.
@@ -89,14 +90,14 @@ A category is done when it has:
   - [x] batch 3: Vega Performance Protein + Recovery (NSF, Tier B, CHECK), Nutricost Whey Isolate, Orgain Grass-Fed Whey (Garden of Life whey skipped; 9 total)
   - [x] comparison page check  - [x] product pages check  - [x] claims-review pass
   - [x] evidence draft (drafts/evidence/protein-powder.md, NEEDS RIVER REVIEW) + category published
-- [ ] 5. Multivitamin: no single comparison unit. Propose a method first (for example
+- [x] 5. Multivitamin: no single comparison unit. Propose a method first (for example
       $ per daily serving plus nutrient forms and %DV), then stop for River's approval.
       River approved 2026-10-22: sort by cost per daily serving; show nutrients at 100% DV and folate/B12/D forms beside it.
   - [x] category config: categories/multivitamin.yaml (status: draft, new per-serving comparison mode) + template
   - [x] batch 1: Centrum Adults, Nature Made Multi, Thorne Basic Nutrients 2/Day (NSF, Tier B, CHECK), Garden of Life mykind Women's (One A Day Men's skipped)
   - [x] batch 2: Nature Made Multi for Her, NOW Eve, Pure Encapsulations O.N.E., SmartyPants Men's Plus (Centrum Silver Women skipped; 8 total)
   - [x] comparison page check  - [x] product pages check  - [x] claims-review pass
-  - [ ] evidence draft
+  - [x] evidence draft (drafts/evidence/multivitamin.md, NEEDS RIVER REVIEW); category published
 - [ ] 6. Vitamin C: $ per 500 mg.
 - [ ] 7. Vitamin B12: $ per 1,000 mcg. Record the form (methyl, cyano, adenosyl or hydroxo).
 - [ ] 8. Vitamin K2: $ per 100 mcg. Record MK-7 vs MK-4.
