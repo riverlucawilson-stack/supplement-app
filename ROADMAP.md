@@ -10,7 +10,7 @@ Still River's: approving evidence/health text, and the first deploy.
 - (none)
 
 ## Next up
-- Fish oil category config (add IFOS to its certifications), then batch 1.
+- Fish oil batch 1 per TEAM.md Mission 1 (give researchers WebSearch URLs; IFOS listings from IFOS's own site).
 - Magnesium evidence to-dos: blood pressure meta-analysis, oxide vs chelate absorption, kidney disease and drug interactions.
 - Vitamin D evidence to-dos: D2 vs D3, VITAL, cancer/mortality, upper limit.
 
@@ -74,6 +74,10 @@ A category is done when it has:
   - [x] evidence draft (drafts/evidence/magnesium.md, NEEDS RIVER REVIEW) + category published
 - [ ] 3. Fish oil / omega-3 (River approved IFOS as a tier-counting certification, 2026-10-21): $ per 1,000 mg EPA+DHA combined, not total oil. Record the form
       (TG, rTG or EE), any published oxidation (TOTOX) results, and IFOS or similar certification.
+  - [x] category config: categories/fish-oil.yaml (status: draft) + templates/fish-oil-product.yaml
+  - [ ] batch 1  - [ ] batch 2
+  - [ ] comparison page check  - [ ] product pages check  - [ ] claims-review pass
+  - [ ] evidence draft
 - [ ] 4. Protein powder: $ per 25 g protein. Record the protein source, heavy-metal testing,
       and NSF Certified for Sport or Informed Sport.
 - [ ] 5. Multivitamin: no single comparison unit. Propose a method first (for example
