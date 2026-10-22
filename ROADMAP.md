@@ -10,7 +10,8 @@ Still River's: approving evidence/health text, and the first deploy.
 - (none)
 
 ## Next up
-- Vitamin K2 page checks, claims review, evidence draft, then publish.
+- Stage C queue is done. Waiting on River: evidence reviews (vitamin D, magnesium, fish oil, protein powder, multivitamin, vitamin C, B12, K2) and the first deploy.
+- Vitamin K2 evidence to-dos: cite Cockayne 2006 and a K2 meta-analysis directly, K2 trial on artery calcification, confirm fact sheet date and upper limit; find an MK-4 product.
 - Vitamin B12 evidence to-dos: sublingual vs swallowed, meta-analyses for heart/cognition/energy, PMID check.
 - Vitamin C evidence to-dos: English Cochrane abstract check, cancer/heart meta-analysis, liposomal, kidney stones.
 - Multivitamin evidence to-dos: cognition trials, %DV explainer (FDA), AREDS decision, vitamin A in pregnancy.
@@ -113,9 +114,9 @@ A category is done when it has:
   - [x] batch 2: Nature's Bounty B-12 200, Thorne Vitamin B12, Pure Encapsulations Methylcobalamin (Country Life skipped; 8 total)
   - [x] comparison page check  - [x] product pages check  - [x] claims-review pass
   - [x] evidence draft (drafts/evidence/vitamin-b12.md, NEEDS RIVER REVIEW); category published
-- [ ] 8. Vitamin K2: $ per 100 mcg. Record MK-7 vs MK-4.
+- [x] 8. Vitamin K2: $ per 100 mcg. Record MK-7 vs MK-4.
   - [x] category config: categories/vitamin-k2.yaml (status: draft) + template
   - [x] batch 1: NOW MK-7, Sports Research K2, Doctor's Best K2 MK-7, Jarrow MK-7
   - [x] batch 2: Life Extension Low Dose K2, MegaFood D3 & K2, NaturesPlus Source of Life K2, Enzymedica D3 + K2 (8 total)
-  - [ ] comparison page check  - [ ] product pages check  - [ ] claims-review pass
-  - [ ] evidence draft
+  - [x] comparison page check  - [x] product pages check  - [x] claims-review pass
+  - [x] evidence draft (drafts/evidence/vitamin-k2.md, NEEDS RIVER REVIEW); category published
