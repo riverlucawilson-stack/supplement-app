@@ -7,10 +7,10 @@ Since 2026-10-21 River lets Claude make project decisions without asking; log ea
 Still River's: approving evidence/health text, and the first deploy.
 
 ## IN PROGRESS
-- (none)
+- Vitamin C batch 2: Nature's Bounty C 500 mg (100), NOW Buffered C-1000 Complex (90), Solgar Ester-C Plus 1,000 mg (90), Emergen-C Super Orange (30 packets), Klean Athlete Klean-C
 
 ## Next up
-- Vitamin C batch 1 (up to 5 products).
+- Vitamin C batch 2, then page checks, evidence draft, publish.
 - Multivitamin evidence to-dos: cognition trials, %DV explainer (FDA), AREDS decision, vitamin A in pregnancy.
 - Protein powder evidence to-dos: heavy-metal testing from a primary source, protein source comparison, RDA.
 - Fish oil evidence to-dos: triglyceride effect size by dose, TG/rTG/EE absorption, fish allergy/oxidation.
@@ -100,6 +100,7 @@ A category is done when it has:
   - [x] evidence draft (drafts/evidence/multivitamin.md, NEEDS RIVER REVIEW); category published
 - [ ] 6. Vitamin C: $ per 500 mg.
   - [x] category config: categories/vitamin-c.yaml (status: draft) + template
-  - [ ] batch 1  - [ ] batch 2
+  - [x] batch 1: Nature Made C 1,000 mg, NOW C-1000 with Rose Hips, Thorne Vitamin C with Flavonoids (LivOn and Nordic Naturals Sport skipped)
+  - [ ] batch 2
 - [ ] 7. Vitamin B12: $ per 1,000 mcg. Record the form (methyl, cyano, adenosyl or hydroxo).
 - [ ] 8. Vitamin K2: $ per 100 mcg. Record MK-7 vs MK-4.
