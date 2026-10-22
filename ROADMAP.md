@@ -10,7 +10,7 @@ Still River's: approving evidence/health text, and the first deploy.
 - (none)
 
 ## Next up
-- Vitamin K2 ($ per 100 mcg, record MK-7 vs MK-4): config, then batch 1.
+- Vitamin K2 batch 1 (up to 5 products).
 - Vitamin B12 evidence to-dos: sublingual vs swallowed, meta-analyses for heart/cognition/energy, PMID check.
 - Vitamin C evidence to-dos: English Cochrane abstract check, cancer/heart meta-analysis, liposomal, kidney stones.
 - Multivitamin evidence to-dos: cognition trials, %DV explainer (FDA), AREDS decision, vitamin A in pregnancy.
@@ -114,3 +114,5 @@ A category is done when it has:
   - [x] comparison page check  - [x] product pages check  - [x] claims-review pass
   - [x] evidence draft (drafts/evidence/vitamin-b12.md, NEEDS RIVER REVIEW); category published
 - [ ] 8. Vitamin K2: $ per 100 mcg. Record MK-7 vs MK-4.
+  - [x] category config: categories/vitamin-k2.yaml (status: draft) + template
+  - [ ] batch 1  - [ ] batch 2
