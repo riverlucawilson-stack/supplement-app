@@ -1,0 +1,34 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude
+# still needs River's check against its link.
+category: vitamin-b12
+entered_by: claude              # label info from the Vitacost product page
+brand: Jarrow Formulas
+name: Methyl B-12 Lemon 1,000 mcg
+form: tablet
+b12_form: methylcobalamin   # Vitacost page Supplement Facts: "Vitamin B12 (as methylcobalamin) 1,000 mcg"
+delivery: chewable   # Vitacost page: chewable tablets
+other_ingredients: [xylitol, microcrystalline cellulose, stearic acid (vegetable source), natural flavor, magnesium stearate (vegetable source), citric acid, silicon dioxide]   # Vitacost page
+
+dose:
+  units_per_serving: 1
+  vitamin_b12_per_serving_mcg: 1000   # Vitacost page Supplement Facts
+  servings_per_container: 100
+
+prices:
+  - retailer: Vitacost
+    price_usd: 11.92          # Vitacost page regular price
+    servings: 100
+    url: https://www.vitacost.com/jarrow-formulas-energy-methyl-b-12-chewable-tablets-1000-mcg-100-tablets
+    date_checked: 2026-10-22
+    entered_by: claude
+    # MISSING: star rating. Page shows a star breakdown but states no average, so none entered.
+
+# MISSING/CHECK: certifications. Looked at sport.wetestyoutrust.com and nsfsport.com; their product listings are
+# search-only pages and could not be searched here. quality-supplements.org did not load. Not confirmed, so left out.
+certifications: []
+
+# MISSING: COA. Not looked for beyond the retailer page; none linked there.
+coas: []
+
+flags: [sugar alcohol]
+notes: ""

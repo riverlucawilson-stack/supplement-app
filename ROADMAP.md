@@ -10,7 +10,7 @@ Still River's: approving evidence/health text, and the first deploy.
 - (none)
 
 ## Next up
-- Vitamin B12 batch 1 (up to 5 products).
+- Vitamin B12 page checks, claims review, evidence draft, then publish.
 - Vitamin C evidence to-dos: English Cochrane abstract check, cancer/heart meta-analysis, liposomal, kidney stones.
 - Multivitamin evidence to-dos: cognition trials, %DV explainer (FDA), AREDS decision, vitamin A in pregnancy.
 - Protein powder evidence to-dos: heavy-metal testing from a primary source, protein source comparison, RDA.
@@ -108,5 +108,8 @@ A category is done when it has:
   - [x] evidence draft (drafts/evidence/vitamin-c.md, NEEDS RIVER REVIEW); category published
 - [ ] 7. Vitamin B12: $ per 1,000 mcg. Record the form (methyl, cyano, adenosyl or hydroxo).
   - [x] category config: categories/vitamin-b12.yaml (status: draft) + template
-  - [ ] batch 1  - [ ] batch 2
+  - [x] batch 1: Nature Made B12 softgels, NOW Methyl B-12 lozenges, Jarrow Methyl B-12 chewables, Solgar Sublingual 5,000 mcg, Garden of Life B-12 spray
+  - [x] batch 2: Nature's Bounty B-12 200, Thorne Vitamin B12, Pure Encapsulations Methylcobalamin (Country Life skipped; 8 total)
+  - [ ] comparison page check  - [ ] product pages check  - [ ] claims-review pass
+  - [ ] evidence draft
 - [ ] 8. Vitamin K2: $ per 100 mcg. Record MK-7 vs MK-4.

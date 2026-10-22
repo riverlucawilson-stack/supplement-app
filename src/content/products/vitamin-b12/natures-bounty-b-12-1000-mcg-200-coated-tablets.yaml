@@ -1,0 +1,32 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude
+# still needs River's check against its link.
+category: vitamin-b12
+entered_by: claude              # label info from the Vitacost page
+brand: Nature's Bounty
+name: B-12 1,000 mcg
+form: tablet
+b12_form: cyanocobalamin        # Vitacost: "Vitamin B-12 (as Cyanocobalamin)"
+other_ingredients: [dicalcium phosphate, vegetable cellulose, vegetable stearic acid, silica, vegetable magnesium stearate]   # Vitacost: "Contains <2% of: Silica, vegetable magnesium stearate"
+
+dose:
+  units_per_serving: 1          # Vitacost: serving size 1 tablet
+  vitamin_b12_per_serving_mcg: 1000   # Vitacost: 1,000 mcg
+  servings_per_container: 200
+
+prices:
+  - retailer: Vitacost
+    price_usd: 15.18            # Vitacost: regular price $15.18, 200 coated tablets
+    servings: 200
+    url: https://www.vitacost.com/products/nature-s-bounty-b-12-1-000-mcg-200-coated-tablets-59925
+    date_checked: 2026-10-22
+    entered_by: claude
+    # Page shows 55 ratings but no stated average, so no rating recorded.
+
+# MISSING: certifications. Nothing on the Vitacost page from a certifier; certifier sites not checked for this product.
+certifications: []
+
+# MISSING: COA. No COA or lab-results link on the Vitacost page.
+coas: []
+
+flags: []
+notes: ""

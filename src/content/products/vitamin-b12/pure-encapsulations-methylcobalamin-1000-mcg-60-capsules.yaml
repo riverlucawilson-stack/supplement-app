@@ -1,0 +1,32 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude
+# still needs River's check against its link.
+category: vitamin-b12
+entered_by: claude              # label info from the Vitacost page
+brand: Pure Encapsulations
+name: Methylcobalamin 1,000 mcg
+form: capsule
+b12_form: methylcobalamin       # Vitacost: "Vitamin B12 (as methylcobalamin)"
+other_ingredients: [hypoallergenic plant fiber (cellulose), vegetarian capsule (cellulose, water)]   # Vitacost
+
+dose:
+  units_per_serving: 1          # Vitacost: serving size 1 capsule
+  vitamin_b12_per_serving_mcg: 1000   # Vitacost: 1,000 mcg
+  servings_per_container: 60
+
+prices:
+  - retailer: Vitacost
+    price_usd: 20.50            # Vitacost: regular price $20.50, 60 capsules
+    servings: 60
+    url: https://www.vitacost.com/products/pure-encapsulations-methylcobalamin-1-000-mcg-60-capsules-158058
+    date_checked: 2026-10-22
+    entered_by: claude
+    # Page shows 5 reviews but no stated average, so no rating recorded.
+
+# MISSING: certifications. Nothing on the Vitacost page from a certifier; certifier sites not checked for this product.
+certifications: []
+
+# MISSING: COA. No COA or lab-results link on the Vitacost page.
+coas: []
+
+flags: []
+notes: ""
