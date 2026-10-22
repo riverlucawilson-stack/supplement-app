@@ -1,0 +1,34 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude needs River's check.
+# Size chosen: 180 softgels. The Vitacost 180-count page (https://www.vitacost.com/products/viva-naturals-omega-3-fish-oil-triple-strength-180-softgels-1-250-mg-per-softgel-121830)
+# failed to load, so no Vitacost price is entered. Label values below come from:
+#  - brand page https://vivanaturals.com/products/fish-oil (EPA, DHA, rTG, species, 180 ct price)
+#  - Vitacost 30-count page https://www.vitacost.com/products/viva-naturals-omega-3-fish-oil-triple-strength-30-softgels-1-250-mg-per-softgel-128994 (Supplement Facts, matches brand page)
+category: fish-oil
+entered_by: claude
+brand: Viva Naturals
+name: Omega-3 Fish Oil Triple-Strength 180 Softgels
+form: softgel
+oil_form: rtg                   # both pages: re-esterified triglyceride (rTG)
+oil_source: anchovy, sardine, mackerel   # brand page "Fish oil (Anchovy, Sardine, Mackerel)"; Vitacost 30 ct same
+other_ingredients: [fish and tilapia gelatin, glycerin, purified water, mixed tocopherols]   # brand page (180 ct); Vitacost 30 ct same
+
+dose:
+  units_per_serving: 2          # both pages: 2 softgels per serving
+  epa_per_serving_mg: 1500      # Supplement Facts "EPA" (Vitacost 30 ct and brand page)
+  dha_per_serving_mg: 570       # Supplement Facts "DHA"
+  total_omega3_per_serving_mg: 2250   # Supplement Facts total omega-3 (includes DPA 50 mg)
+  servings_per_container: 90    # CALCULATED: 180 softgels / 2 per serving (brand page lists servings by bottle size; 180 ct panel not read directly). Check against the label.
+
+# MISSING: price. The brand page (https://vivanaturals.com/products/fish-oil, 2026-10-22) shows $55.99 one-time
+# but doesn't tie it to a size, and the Vitacost 180-count page didn't load. Dropped until a size-specific price is read.
+prices: []
+# Not entered: Vitacost 30-count page also showed "180 count - $55.96" in its size list, but the 180-count page itself could not be read.
+# Not entered: Target page showed $60.99 sold by iHerb; its dose text is not a Supplement Facts panel.
+
+# MISSING: certification. Brand page claims "IFOS Certified" and Vitacost/Target badges are not sources; no certifications.nutrasource.ca page reached for it.
+certifications: []
+# MISSING: COA. No lab report link found on pages read.
+coas: []
+
+flags: [contains fish (anchovy, sardine, mackerel), fish and tilapia gelatin]
+notes: ""

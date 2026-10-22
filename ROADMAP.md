@@ -10,7 +10,7 @@ Still River's: approving evidence/health text, and the first deploy.
 - (none)
 
 ## Next up
-- Fish oil batch 2 per TEAM.md Mission 1 (give researchers WebSearch URLs; IFOS listings from IFOS's own site).
+- Fish oil page checks, claims review, evidence draft, then publish.
 - Magnesium evidence to-dos: blood pressure meta-analysis, oxide vs chelate absorption, kidney disease and drug interactions.
 - Vitamin D evidence to-dos: D2 vs D3, VITAL, cancer/mortality, upper limit.
 
@@ -76,7 +76,7 @@ A category is done when it has:
       (TG, rTG or EE), any published oxidation (TOTOX) results, and IFOS or similar certification.
   - [x] category config: categories/fish-oil.yaml (status: draft) + templates/fish-oil-product.yaml
   - [x] batch 1: Nordic Naturals Ultimate Omega, Nature Made 1200 mg (no price), Sports Research Triple Strength, NOW Ultra Omega-3, Carlson Very Finest liquid
-  - [ ] batch 2
+  - [x] batch 2: Thorne Super EPA, Klean Omega (NSF, Tier B), Life Extension Super Omega-3, Viva Naturals (no price), Nordic Ultimate Omega 2X (10 total)
   - [ ] comparison page check  - [ ] product pages check  - [ ] claims-review pass
   - [ ] evidence draft
 - [ ] 4. Protein powder: $ per 25 g protein. Record the protein source, heavy-metal testing,
