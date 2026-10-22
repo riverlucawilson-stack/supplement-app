@@ -27,7 +27,7 @@ export interface CategoryInfo {
   daily?: { amount: number; label: string };
   plausibleCostPerReferenceDose: { min: number; max: number };
   coaTestLabels: Record<string, string>;
-  /** Amount of the compared ingredient(s) in one serving, in the comparison's unit. */
+  /** Amount of the compared ingredient(s) in one serving, in the comparison's unit (1 when compared per serving). */
   activePerServing(p: Product): number;
   describe(p: Product): string;
   /** Label facts for the "Dose" box on a product page. */
@@ -88,10 +88,12 @@ function buildInfo(c: CategoryConfig): CategoryInfo {
     plausibleCostPerReferenceDose: c.comparison.plausible_cost,
     coaTestLabels: c.coa_tests,
     activePerServing: (p) =>
-      c.comparison.counts_toward.reduce(
-        (sum, f) => sum + convert(doseOf(p)[f] ?? 0, c.dose_fields[f].unit!, c.comparison.unit),
-        0,
-      ),
+      c.comparison.unit === 'serving'
+        ? 1
+        : c.comparison.counts_toward.reduce(
+            (sum, f) => sum + convert(doseOf(p)[f] ?? 0, c.dose_fields[f].unit!, c.comparison.unit),
+            0,
+          ),
     describe: (p) =>
       c.describe
         .filter((part) => placeholders(part).every((f) => valueOf(p, f) !== undefined))

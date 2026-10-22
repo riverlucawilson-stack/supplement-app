@@ -17,7 +17,7 @@ No code changes are needed. The site makes `/<slug>/` (the table) and
 | `status` | `published` shows it in the menu, home page and sitemap. `draft` builds the pages for preview only. |
 | `order` | Position in the menu and on the home page, lowest first. |
 | `page` | The table page's title, search description, heading and intro. Put `**double stars**` around words to bold them. |
-| `comparison.amount` + `unit` | What every price is converted to, e.g. 5 g or 1000 IU. |
+| `comparison.amount` + `unit` | What every price is converted to, e.g. 5 g or 1000 IU. For products with no single ingredient to compare (multivitamins), use `amount: 1` and `unit: serving` to compare on cost per label serving, and leave `counts_toward` out. |
 | `comparison.counts_toward` | Which dose numbers are added up to make that amount. Fish oil would list both EPA and DHA. Amounts in g, mg and mcg are converted automatically; IU only adds up with IU. |
 | `comparison.daily_amount` + `daily_label` | For the "cost per 30 days" column. Leave both out to hide the column. |
 | `comparison.plausible_cost` | Validation warns when a cost falls outside this range, which usually means a typo. |

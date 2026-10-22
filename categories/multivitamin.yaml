@@ -1,0 +1,82 @@
+# Everything specific to multivitamins. The site reads this file when it builds.
+# How each part works is explained in categories/README.md.
+# Method approved by River on 2026-10-22: sort by cost per daily serving, with the
+# nutrient facts shown beside it (never merged into one score).
+slug: multivitamin
+name: Multivitamin
+status: draft
+order: 7
+
+page:
+  title: Multivitamins compared by cost per daily serving and testing
+  description: Every multivitamin compared by cost per daily serving as the label defines it, shown beside how many nutrients reach 100% of the Daily Value and the forms of folate, vitamin B12 and vitamin D, with third-party certifications and lab results (COAs) graded A to C.
+  heading: What multivitamins really cost, and how much of their testing you can see.
+  intro: >-
+    Multivitamins don't share one ingredient to compare, so prices are converted to **cost per daily serving**
+    as the label defines it (one tablet for some, four for others). Next to each price you'll see how many
+    nutrients reach 100% of the Daily Value and the forms of folate, vitamin B12 and vitamin D. Those facts are
+    shown, not scored. Testing transparency gets its own grade, A to C, and is never blended into the price.
+
+comparison:
+  amount: 1
+  unit: serving
+  label: per daily serving
+  short: Cost per daily serving
+  # No daily amount: the serving already is one day.
+  plausible_cost: { min: 0.02, max: 3 }
+
+dose_fields:
+  # Tablets, capsules, gummies or scoops in one daily serving, as the label says.
+  units_per_serving: { label: Units per daily serving, whole_number: true }
+  # Count of Supplement Facts lines whose %DV is 100% or more. Count each nutrient once.
+  nutrients_at_100_dv: { label: Nutrients at 100% DV or more, whole_number: true }
+  # The folate line in mcg DFE, as printed (labels must give mcg DFE).
+  folate_mcg_dfe: { label: Folate per serving (mcg DFE), unit: mcg, optional: true, max: 4000 }
+  vitamin_b12_mcg: { label: Vitamin B12 per serving, unit: mcg, optional: true, max: 5000 }
+  vitamin_d_mcg:
+    label: Vitamin D per serving
+    unit: mcg
+    optional: true
+    max: 250
+    max_message: 'dose: {value} mcg vitamin D per serving is very high for a multivitamin. Check mcg vs IU.'
+  iron_mg: { label: Iron per serving, unit: mg, optional: true, max: 65 }
+
+type:
+  field: formula_for
+  label: Formula for
+  options:
+    adults: Adults
+    women: Women
+    men: Men
+    women_50_plus: Women 50+
+    men_50_plus: Men 50+
+    adults_50_plus: Adults 50+
+    prenatal: Prenatal
+    other: Other
+
+extra_fields:
+  # The form named on the label, e.g. "folic acid", "methylfolate (L-5-MTHF)".
+  folate_form: Folate form
+  # e.g. "cyanocobalamin", "methylcobalamin".
+  b12_form: Vitamin B12 form
+  # e.g. "D3 (cholecalciferol)", "D2 (ergocalciferol)".
+  vitamin_d_form: Vitamin D form
+
+describe:
+  - '{formula_for}'
+  - '{nutrients_at_100_dv} nutrients at 100% DV or more'
+  - 'folate as {folate_form}'
+  - 'B12 as {b12_form}'
+  - 'vitamin D {vitamin_d_mcg} mcg'
+
+certifications: [NSF Certified for Sport, Informed Sport, USP Verified, BSCG, Clean Label Project]
+
+coa_tests:
+  potency: Nutrient potency
+  identity: Identity
+  lead: Lead
+  arsenic: Arsenic
+  cadmium: Cadmium
+  mercury: Mercury
+  microbial: Microbial
+  disintegration: Disintegration

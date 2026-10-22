@@ -37,6 +37,8 @@ const scopeLabel = { finished_product: 'Finished product', raw_material: 'Raw ma
 const isoLabel = { yes: 'Yes', no: 'No', unknown: 'Unknown' } as const;
 const testIds = Object.keys(category.coaTestLabels);
 const amount = category.referenceDose.label.replace(/^per /, '');
+// Categories compared per label serving (multivitamins) have no ingredient amount to convert.
+const perServingOnly = unit === 'serving';
 
 const title = `${p.brand} ${p.name}`;
 const description = best
@@ -90,11 +92,19 @@ const description = best
           ))}
         </dl>
       )}
+      {!perServingOnly && (
       <p>
         {amount.charAt(0).toUpperCase() + amount.slice(1)} takes <strong class="num">{round(servingsPerReferenceDose)}</strong>
         {servingsPerReferenceDose === 1 ? ' serving' : ' servings'} of this product.
       </p>
-      {best && (
+      )}
+      {best && perServingOnly && (
+        <p class="formula">
+          At the best price: <span class="num">{usd(best.price.price_usd)}</span> ÷{' '}
+          <span class="num">{best.price.servings}</span> servings = <strong class="num">{usd(best.costPerReferenceDose)}</strong>
+        </p>
+      )}
+      {best && !perServingOnly && (
         <p class="formula">
           At the best price: <span class="num">{usd(best.price.price_usd)}</span> ÷ (
           <span class="num">{best.price.servings}</span> servings × <span class="num">{inUnit(perServing)}</span>) ×{' '}

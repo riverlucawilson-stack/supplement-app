@@ -27,3 +27,15 @@ test('a misspelled part of a category file is rejected', () => {
 test('a describe placeholder must be a real field', () => {
   assert.throws(loadEdited((y) => y.replace("'{raw_material}'", "'{raw_materal}'")), /\{raw_materal\} isn't a field/);
 });
+
+test('a per-serving comparison needs amount 1 and no counts_toward', () => {
+  const perServing = (y: string) => y.replace(/  amount: 5\n  unit: g\n  counts_toward: \[creatine_per_serving_g\]/, '  amount: 1\n  unit: serving');
+  assert.doesNotThrow(loadEdited(perServing));
+  assert.throws(loadEdited((y) => perServing(y).replace('  amount: 1\n', '  amount: 2\n')), /amount must be 1/);
+  assert.throws(loadEdited((y) => y.replace('counts_toward: [creatine_per_serving_g]', 'counts_toward: []')), /list at least one dose field/);
+});
+
+test('a multivitamin costs price divided by servings', () => {
+  const mv = categoryList.find((c) => c.id === 'multivitamin')!;
+  assert.equal(mv.activePerServing({} as never), 1);
+});

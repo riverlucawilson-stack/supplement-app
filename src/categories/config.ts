@@ -45,8 +45,9 @@ export const categoryConfigSchema = z.strictObject({
   }),
   comparison: z.strictObject({
     amount: z.number().positive(),
-    unit: amountUnit,
-    counts_toward: z.array(key).min(1),
+    // "serving" compares on cost per label serving (e.g. multivitamins), with no counts_toward.
+    unit: z.union([amountUnit, z.literal('serving')]),
+    counts_toward: z.array(key).default([]),
     label: z.string().min(1),
     short: z.string().min(1),
     // Leave both out to hide the "cost per 30 days" column.
@@ -81,6 +82,12 @@ export function configProblems(c: CategoryConfig, fileName: string): string[] {
   if (Object.keys(c.coa_tests).length === 0) problems.push('coa_tests: list at least one test');
   if ((c.comparison.daily_amount === undefined) !== (c.comparison.daily_label === undefined)) {
     problems.push('comparison: give daily_amount and daily_label together, or leave both out');
+  }
+  if (c.comparison.unit === 'serving') {
+    if (c.comparison.amount !== 1) problems.push('comparison: with unit "serving", amount must be 1');
+    if (c.comparison.counts_toward.length) problems.push('comparison: with unit "serving", leave counts_toward out');
+  } else if (c.comparison.counts_toward.length === 0) {
+    problems.push('comparison.counts_toward: list at least one dose field');
   }
   for (const f of c.comparison.counts_toward) {
     const field = c.dose_fields[f];

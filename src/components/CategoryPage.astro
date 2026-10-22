@@ -164,7 +164,7 @@ const costLabelLower = costLabel.charAt(0).toLowerCase() + costLabel.slice(1);
                   )}
                   </div>
                 </th>
-                <td class="r cost" data-label={costLabel} data-per={category.referenceDose.label.replace(/ \S+$/, '')}>
+                <td class="r cost" data-label={costLabel} data-per={category.referenceDose.label}>
                   {r.best ? <span class="num big">{usd(r.best.costPerReferenceDose)}</span> : <span class="none">No price</span>}
                 </td>
                 {category.daily && (
