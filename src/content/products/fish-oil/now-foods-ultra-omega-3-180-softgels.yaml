@@ -1,0 +1,33 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude needs River's check.
+# Size chosen: 180 softgels.
+category: fish-oil
+entered_by: claude              # label info from the Vitacost product page
+brand: NOW Foods
+name: Ultra Omega-3 180 Fish Softgels
+form: softgel
+oil_form: not_stated            # Vitacost page: "fish oil concentrate", "moleculary distilled"; TG vs ethyl ester not stated
+oil_source: anchovies, sardines # Vitacost: "Contains fish oil (anchovies, sardines)"
+other_ingredients: [fish gelatin (tilapia, basa), glycerin, water, lemon oil, d-alpha tocopherol (from sunflower)]   # Vitacost page
+
+dose:
+  units_per_serving: 1          # Vitacost: serving size 1 fish softgel
+  epa_per_serving_mg: 500       # Vitacost Supplement Facts "EPA"
+  dha_per_serving_mg: 250       # Vitacost Supplement Facts "DHA"
+  # Total omega-3 not listed on the panel (Vitacost).
+  servings_per_container: 180   # Vitacost page
+
+prices:
+  - retailer: Vitacost
+    price_usd: 36.74            # regular and sale both $36.74; 180 softgels
+    servings: 180
+    url: https://www.vitacost.com/products/now-foods-ultra-omega-3-fish-oil-180-fish-softgels-96436
+    date_checked: 2026-10-22
+    entered_by: claude
+
+# MISSING: certification. None named on the Vitacost page; no certifier page read.
+certifications: []
+# MISSING: COA. None linked on the Vitacost page.
+coas: []
+
+flags: [contains fish (anchovies, sardines)]
+notes: ""

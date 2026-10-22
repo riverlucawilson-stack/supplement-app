@@ -1,0 +1,33 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude needs River's check.
+# Size chosen: 500 mL, natural lemon.
+category: fish-oil
+entered_by: claude              # label info from the Vitacost product page
+brand: Carlson
+name: The Very Finest Fish Oil Natural Lemon 500 mL
+form: liquid
+oil_form: triglyceride          # Vitacost Supplement Facts: "Omega-3 amounts are reported as triglycerides"
+oil_source: anchovy, sardine, mackerel   # Vitacost: "Contains fish (anchovy, sardine, mackerel)"; Norwegian fish oil
+other_ingredients: [natural flavors, natural mixed tocopherols, rosemary extract]   # Vitacost: antioxidant blend under 0.5%
+
+dose:
+  units_per_serving: 1          # 1 teaspoon (5 mL) per serving, Vitacost
+  epa_per_serving_mg: 800       # Vitacost Supplement Facts "EPA"
+  dha_per_serving_mg: 500       # Vitacost Supplement Facts "DHA"
+  total_omega3_per_serving_mg: 1600   # Vitacost "Total omega-3 fatty acids" (includes DPA 90 mg)
+  servings_per_container: 100   # Vitacost page. Note Key info box says "Total servings 500 ml".
+
+prices:
+  - retailer: Vitacost
+    price_usd: 59.42            # regular and sale both $59.42; 500 mL natural lemon
+    servings: 100
+    url: https://www.vitacost.com/products/carlson-norwegian-the-very-finest-fish-oil-natural-lemon-16-9-fl-oz-500-ml-2796
+    date_checked: 2026-10-22
+    entered_by: claude
+
+# MISSING: certification. Vitacost lists "IFOS" as a bare bullet with no link; no nutrasource page was reached from pages read, so none entered.
+certifications: []
+# MISSING: COA. No lab report link on the Vitacost page (a review mentions downloadable batch results, but no link given).
+coas: []
+
+flags: [contains fish (anchovy, sardine, mackerel)]
+notes: ""

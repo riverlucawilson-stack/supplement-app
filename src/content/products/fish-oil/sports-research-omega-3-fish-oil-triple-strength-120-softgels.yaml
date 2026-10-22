@@ -1,0 +1,33 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude needs River's check.
+# Size chosen: 120 softgels.
+category: fish-oil
+entered_by: claude              # label info from the Vitacost product page
+brand: Sports Research
+name: Omega-3 Fish Oil Triple Strength 120 Softgels
+form: softgel
+oil_form: rtg                   # Vitacost page footnote: "in Triglyceride Form [TG as rTG]"; label line says "as TG". Recorded as rTG per the footnote; River to check the label.
+# MISSING: oil_source. Vitacost description says "Wild Alaska Pollock" but the allergen line says "Fish (anchovy, sardine and mackerel)"; left out until River checks the label.
+other_ingredients: [fish gelatin (tilapia-sourced), vegetable glycerin, purified water, tocopherols]   # Vitacost page
+
+dose:
+  units_per_serving: 1          # Vitacost: serving size 1 softgel
+  epa_per_serving_mg: 690       # Vitacost Supplement Facts "EPA"
+  dha_per_serving_mg: 310       # Vitacost Supplement Facts "DHA"
+  total_omega3_per_serving_mg: 1055   # Vitacost "Total Omega-3 Fatty Acids as TG"
+  servings_per_container: 120   # Vitacost page
+
+prices:
+  - retailer: Vitacost
+    price_usd: 40.67            # regular and sale both $40.67; 120 softgels
+    servings: 120
+    url: https://www.vitacost.com/products/sports-research-omega-3-fish-oil-triple-strength-120-softgels-109322
+    date_checked: 2026-10-22
+    entered_by: claude
+
+# MISSING: certification. The Vitacost page lists "IFOS" among badges, but that is a retailer/brand claim. No link to certifications.nutrasource.ca was found on pages read, so none entered.
+certifications: []
+# MISSING: COA. None linked on the Vitacost page.
+coas: []
+
+flags: [contains fish (anchovy, sardine, mackerel)]
+notes: ""
