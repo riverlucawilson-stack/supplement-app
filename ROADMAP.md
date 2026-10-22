@@ -10,7 +10,7 @@ Still River's: approving evidence/health text, and the first deploy.
 - (none)
 
 ## Next up
-- Protein powder batch 3 per TEAM.md Mission 1 (need at least 2 more).
+- Protein powder page checks, claims review, evidence draft, then publish.
 - Fish oil evidence to-dos: triglyceride effect size by dose, TG/rTG/EE absorption, fish allergy/oxidation.
 - Magnesium evidence to-dos: blood pressure meta-analysis, oxide vs chelate absorption, kidney disease and drug interactions.
 - Vitamin D evidence to-dos: D2 vs D3, VITAL, cancer/mortality, upper limit.
@@ -85,7 +85,7 @@ A category is done when it has:
   - [x] category config: categories/protein-powder.yaml (status: draft) + templates/protein-powder-product.yaml
   - [x] batch 1: Optimum Nutrition Gold Standard, Thorne Whey Isolate (NSF, Tier B), Orgain Organic (Dymatize ISO100 and Transparent Labs skipped)
   - [x] batch 2: Klean Isolate chocolate, Garden of Life Sport plant, NOW Sports Whey Isolate (Momentous and Naked skipped; 6 total)
-  - [ ] batch 3 (need 8-12 total)
+  - [x] batch 3: Vega Performance Protein + Recovery (NSF, Tier B, CHECK), Nutricost Whey Isolate, Orgain Grass-Fed Whey (Garden of Life whey skipped; 9 total)
   - [ ] comparison page check  - [ ] product pages check  - [ ] claims-review pass
   - [ ] evidence draft
 - [ ] 5. Multivitamin: no single comparison unit. Propose a method first (for example
