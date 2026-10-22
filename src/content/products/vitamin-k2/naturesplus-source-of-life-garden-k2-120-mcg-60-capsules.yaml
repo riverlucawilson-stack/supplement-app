@@ -1,0 +1,31 @@
+# Looked up by Claude on 2026-10-22 from the Vitacost product page. Every entry marked
+# entered_by: claude still needs River's check against its link. Size chosen: 60 vegan capsules.
+category: vitamin-k2
+entered_by: claude              # label info from vitacost.com
+brand: NaturesPlus
+name: Source of Life Garden Vitamin K2
+form: capsule
+k2_form: mk7                    # vitacost: "Vitamin K (as menaquinone-7 [K2])"
+other_ingredients: [rice maltodextrin, pullulan capsule, rice bran extract]   # vitacost.com; also a 225 mg organic whole food blend in the facts panel
+
+dose:
+  units_per_serving: 1          # vitacost: serving size 1 capsule
+  vitamin_k2_per_serving_mcg: 120 # vitacost Supplement Facts: 120 mcg
+  servings_per_container: 60
+
+prices:
+  - retailer: Vitacost
+    price_usd: 16.11            # vitacost.com: "Regular price $16.11"
+    servings: 60
+    url: https://www.vitacost.com/products/naturesplus-source-of-life-garden-vitamin-k2-60-vegan-capsules-24625
+    date_checked: 2026-10-22
+    entered_by: claude
+
+# MISSING: certifications. Not checked on any certifier's own site.
+certifications: []
+
+# MISSING: COA. Not looked for on the brand's site; only the Vitacost page was read.
+coas: []
+
+flags: []
+notes: "Contains a 225 mg Certified Organic Whole Food Blend"

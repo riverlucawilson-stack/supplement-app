@@ -1,0 +1,33 @@
+# Looked up by Claude on 2026-10-22 from the Vitacost product page. Every entry marked
+# entered_by: claude still needs River's check against its link. Size chosen: 60 capsules.
+category: vitamin-k2
+entered_by: claude              # label info from vitacost.com
+brand: Enzymedica
+name: Vitamin D3 + Vitamin K2
+form: capsule
+k2_form: mk7                    # vitacost: "all-trans menaquinone-7 (MK-7)"
+k2_source: K2VITAL              # vitacost: "(K2VITAL®)"
+other_ingredients: [vegetarian capsule (hypromellose), rice bran, rice hulls, rice extract, gum arabic, sunflower oil]   # vitacost.com; also 150 mg organic shiitake and 50 mg inulin in the facts panel
+
+dose:
+  units_per_serving: 1          # vitacost: serving size 1 capsule
+  vitamin_k2_per_serving_mcg: 90 # vitacost: 90 mcg
+  vitamin_d_per_serving_mcg: 125 # vitacost: VegD3 125 mcg (5,000 IU)
+  servings_per_container: 60
+
+prices:
+  - retailer: Vitacost
+    price_usd: 20.24            # vitacost.com: "Regular price $20.24"
+    servings: 60
+    url: https://www.vitacost.com/products/enzymedica-vitamin-d3-vitamin-k2-60-capsules-115983
+    date_checked: 2026-10-22
+    entered_by: claude
+
+# MISSING: certifications. Not checked on any certifier's own site.
+certifications: []
+
+# MISSING: COA. Not looked for on the brand's site; only the Vitacost page was read.
+coas: []
+
+flags: []
+notes: "Also contains organic shiitake mushroom 150 mg and inulin 50 mg"

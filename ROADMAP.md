@@ -7,10 +7,10 @@ Since 2026-10-21 River lets Claude make project decisions without asking; log ea
 Still River's: approving evidence/health text, and the first deploy.
 
 ## IN PROGRESS
-- Vitamin K2 batch 2: up to 4 more picked from Vitacost's vitamin K collection page
+- (none)
 
 ## Next up
-- Vitamin K2 batch 1 (up to 5 products).
+- Vitamin K2 page checks, claims review, evidence draft, then publish.
 - Vitamin B12 evidence to-dos: sublingual vs swallowed, meta-analyses for heart/cognition/energy, PMID check.
 - Vitamin C evidence to-dos: English Cochrane abstract check, cancer/heart meta-analysis, liposomal, kidney stones.
 - Multivitamin evidence to-dos: cognition trials, %DV explainer (FDA), AREDS decision, vitamin A in pregnancy.
@@ -116,4 +116,6 @@ A category is done when it has:
 - [ ] 8. Vitamin K2: $ per 100 mcg. Record MK-7 vs MK-4.
   - [x] category config: categories/vitamin-k2.yaml (status: draft) + template
   - [x] batch 1: NOW MK-7, Sports Research K2, Doctor's Best K2 MK-7, Jarrow MK-7
-  - [ ] batch 2
+  - [x] batch 2: Life Extension Low Dose K2, MegaFood D3 & K2, NaturesPlus Source of Life K2, Enzymedica D3 + K2 (8 total)
+  - [ ] comparison page check  - [ ] product pages check  - [ ] claims-review pass
+  - [ ] evidence draft
