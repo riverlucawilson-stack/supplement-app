@@ -1,0 +1,39 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude needs River's check.
+# Label info from the Vitacost page (URL in prices). Panel: serving size 3 softgels, 30 servings per container (90 softgels).
+category: multivitamin
+entered_by: claude
+brand: NOW Foods
+name: EVE Superior Women's Multi
+form: softgel
+formula_for: women              # from the product name ("Women's")
+folate_form: folic acid         # Vitacost: "1,360 mcg DFE (800 mcg folic acid)"
+b12_form: methylcobalamin       # Vitacost: "Vitamin B-12 (as Methylcobalamin)"
+vitamin_d_form: D3 (cholecalciferol)   # Vitacost: "Vitamin D (as Cholecalciferol)"
+other_ingredients: ["softgel capsule (bovine gelatin (BSE-free), glycerin, water, carob)", flax seed oil, soy lecithin, beeswax]   # Vitacost
+
+dose:
+  units_per_serving: 3          # Vitacost: serving size 3 softgels
+  # Counted (Vitacost panel %DV >= 100): vitamin A 167, vitamin C 222, vitamin D 125, vitamin E 667, thiamin 1667,
+  # riboflavin 1923, niacin 156, vitamin B6 1471, folate 340, vitamin B12 5000, biotin 1000, pantothenic acid 1000,
+  # iodine 150, zinc 136, selenium 364, copper 111, chromium 343, molybdenum 167.
+  # Not counted: vitamin K 29, choline 5, calcium 11, iron 33, magnesium 24, manganese 87, potassium <1.
+  nutrients_at_100_dv: 18
+  folate_mcg_dfe: 1360          # Vitacost: 1,360 mcg DFE, 340% DV
+  vitamin_b12_mcg: 120          # Vitacost: 120 mcg, 5000% DV
+  vitamin_d_mcg: 25             # Vitacost: 25 mcg (1,000 IU), 125% DV
+  iron_mg: 6                    # Vitacost: 6 mg (ferrous bisglycinate), 33% DV
+  servings_per_container: 30    # Vitacost panel: 30 (the page's "Key info" says "Total servings 90 count", which is the softgel count)
+
+prices:
+  - retailer: Vitacost
+    price_usd: 19.39            # regular and sale both $19.39 (shown as "Sale")
+    servings: 30                # 90 softgels at 3 per day
+    url: https://www.vitacost.com/products/now-foods-eve-softgels-superior-women-s-multi-90-softgels-116600
+    date_checked: 2026-10-22
+    entered_by: claude
+
+certifications: []              # MISSING: no certifier listing checked or found; only the Vitacost page was read
+coas: []                        # MISSING: no COA found in the page read
+
+flags: [contains soy (soy lecithin), contains bovine gelatin, contains beeswax, "contains iron"]   # Vitacost; allergen statement says not made with wheat, gluten, milk, egg, fish, shellfish or sesame ingredients but made in a facility that processes them
+notes: ""
