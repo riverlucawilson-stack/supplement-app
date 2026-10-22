@@ -10,7 +10,7 @@ Still River's: approving evidence/health text, and the first deploy.
 - (none)
 
 ## Next up
-- Vitamin B12 ($ per 1,000 mcg, record the form): config, then batch 1.
+- Vitamin B12 batch 1 (up to 5 products).
 - Vitamin C evidence to-dos: English Cochrane abstract check, cancer/heart meta-analysis, liposomal, kidney stones.
 - Multivitamin evidence to-dos: cognition trials, %DV explainer (FDA), AREDS decision, vitamin A in pregnancy.
 - Protein powder evidence to-dos: heavy-metal testing from a primary source, protein source comparison, RDA.
@@ -107,4 +107,6 @@ A category is done when it has:
   - [x] comparison page check  - [x] product pages check  - [x] claims-review pass
   - [x] evidence draft (drafts/evidence/vitamin-c.md, NEEDS RIVER REVIEW); category published
 - [ ] 7. Vitamin B12: $ per 1,000 mcg. Record the form (methyl, cyano, adenosyl or hydroxo).
+  - [x] category config: categories/vitamin-b12.yaml (status: draft) + template
+  - [ ] batch 1  - [ ] batch 2
 - [ ] 8. Vitamin K2: $ per 100 mcg. Record MK-7 vs MK-4.
