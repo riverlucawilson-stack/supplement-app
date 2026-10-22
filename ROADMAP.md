@@ -110,6 +110,6 @@ A category is done when it has:
   - [x] category config: categories/vitamin-b12.yaml (status: draft) + template
   - [x] batch 1: Nature Made B12 softgels, NOW Methyl B-12 lozenges, Jarrow Methyl B-12 chewables, Solgar Sublingual 5,000 mcg, Garden of Life B-12 spray
   - [x] batch 2: Nature's Bounty B-12 200, Thorne Vitamin B12, Pure Encapsulations Methylcobalamin (Country Life skipped; 8 total)
-  - [ ] comparison page check  - [ ] product pages check  - [ ] claims-review pass
+  - [x] comparison page check  - [x] product pages check  - [x] claims-review pass
   - [ ] evidence draft
 - [ ] 8. Vitamin K2: $ per 100 mcg. Record MK-7 vs MK-4.
