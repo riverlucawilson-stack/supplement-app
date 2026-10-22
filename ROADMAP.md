@@ -10,7 +10,8 @@ Still River's: approving evidence/health text, and the first deploy.
 - (none)
 
 ## Next up
-- Protein powder evidence draft, then publish.
+- Multivitamin: propose a comparison method in SESSION-LOG and wait for River's approval (roadmap rule).
+- Protein powder evidence to-dos: heavy-metal testing from a primary source, protein source comparison, RDA.
 - Fish oil evidence to-dos: triglyceride effect size by dose, TG/rTG/EE absorption, fish allergy/oxidation.
 - Magnesium evidence to-dos: blood pressure meta-analysis, oxide vs chelate absorption, kidney disease and drug interactions.
 - Vitamin D evidence to-dos: D2 vs D3, VITAL, cancer/mortality, upper limit.
@@ -80,14 +81,14 @@ A category is done when it has:
   - [x] batch 2: Thorne Super EPA, Klean Omega (NSF, Tier B), Life Extension Super Omega-3, Viva Naturals (no price), Nordic Ultimate Omega 2X (10 total)
   - [x] comparison page check  - [x] product pages check  - [x] claims-review pass
   - [x] evidence draft (drafts/evidence/fish-oil.md, NEEDS RIVER REVIEW) + category published
-- [ ] 4. Protein powder: $ per 25 g protein. Record the protein source, heavy-metal testing,
+- [x] 4. Protein powder: $ per 25 g protein. Record the protein source, heavy-metal testing,
       and NSF Certified for Sport or Informed Sport.
   - [x] category config: categories/protein-powder.yaml (status: draft) + templates/protein-powder-product.yaml
   - [x] batch 1: Optimum Nutrition Gold Standard, Thorne Whey Isolate (NSF, Tier B), Orgain Organic (Dymatize ISO100 and Transparent Labs skipped)
   - [x] batch 2: Klean Isolate chocolate, Garden of Life Sport plant, NOW Sports Whey Isolate (Momentous and Naked skipped; 6 total)
   - [x] batch 3: Vega Performance Protein + Recovery (NSF, Tier B, CHECK), Nutricost Whey Isolate, Orgain Grass-Fed Whey (Garden of Life whey skipped; 9 total)
   - [x] comparison page check  - [x] product pages check  - [x] claims-review pass
-  - [ ] evidence draft
+  - [x] evidence draft (drafts/evidence/protein-powder.md, NEEDS RIVER REVIEW) + category published
 - [ ] 5. Multivitamin: no single comparison unit. Propose a method first (for example
       $ per daily serving plus nutrient forms and %DV), then stop for River's approval.
 - [ ] 6. Vitamin C: $ per 500 mg.
