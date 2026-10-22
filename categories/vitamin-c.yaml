@@ -1,0 +1,63 @@
+# Everything specific to vitamin C. The site reads this file when it builds.
+# How each part works is explained in categories/README.md.
+slug: vitamin-c
+name: Vitamin C
+status: draft
+order: 8
+
+page:
+  title: Vitamin C compared by cost per 500 mg and testing
+  description: Every vitamin C product converted to cost per 500 mg of vitamin C, with its form (ascorbic acid, ascorbates, liposomal), added ingredients, and third-party certifications and lab results (COAs) graded A to C.
+  heading: What vitamin C really costs, and how much of its testing you can see.
+  intro: >-
+    Every price is converted to **cost per 500 mg of vitamin C**, using the vitamin C line on the Supplement Facts
+    panel (not the weight of the whole compound). Each product shows its form, such as ascorbic acid or a buffered
+    ascorbate. Testing transparency gets its own grade, A to C, and is never blended into the price.
+
+comparison:
+  amount: 500
+  unit: mg
+  counts_toward: [vitamin_c_per_serving_mg]
+  label: per 500 mg vitamin C
+  short: Cost per 500 mg
+  # No daily amount: same rule as the other new categories.
+  plausible_cost: { min: 0.005, max: 2 }
+
+dose_fields:
+  # Tablets, capsules, gummies, scoops or packets in one serving, as the label says.
+  units_per_serving: { label: Units per serving, whole_number: true }
+  # The vitamin C mg figure from the Supplement Facts panel.
+  vitamin_c_per_serving_mg:
+    label: Vitamin C per serving
+    unit: mg
+    max: 5000
+    max_message: 'dose: {value} mg per serving is over 5,000 mg. Check the label.'
+  # Only if the label lists zinc (common in "immune" products).
+  zinc_per_serving_mg: { label: Added zinc per serving, unit: mg, optional: true }
+
+type:
+  field: vitamin_c_form
+  label: Vitamin C form
+  options:
+    ascorbic_acid: Ascorbic acid
+    sodium_ascorbate: Sodium ascorbate
+    calcium_ascorbate: Calcium ascorbate
+    mixed_ascorbates: Mixed ascorbates (buffered)
+    liposomal: Liposomal
+    other: Other
+
+extra_fields:
+  # A branded or extra ingredient the label names with the vitamin C, e.g. Ester-C, rose hips, citrus bioflavonoids.
+  added_with: Added with
+
+describe: ['{vitamin_c_form}', 'with {added_with}', '+ {zinc_per_serving_mg} mg zinc']
+
+certifications: [NSF Certified for Sport, Informed Sport, USP Verified, BSCG, Clean Label Project]
+
+coa_tests:
+  potency: Vitamin C potency
+  lead: Lead
+  arsenic: Arsenic
+  cadmium: Cadmium
+  mercury: Mercury
+  microbial: Microbial
