@@ -1,0 +1,32 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude
+# still needs River's check against its link.
+category: vitamin-c
+entered_by: claude              # label info from vitacost.com
+brand: Nature's Bounty
+name: Vitamin C 500 mg Tablets
+form: tablet
+vitamin_c_form: ascorbic_acid   # vitacost: "Vitamin C (as Ascorbic Acid)"
+other_ingredients: [vegetable cellulose, calcium silicate, vegetable magnesium stearate, vegetable stearic acid]   # vitacost
+
+dose:
+  units_per_serving: 1          # vitacost: serving size 1 tablet
+  vitamin_c_per_serving_mg: 500 # vitacost: 500 mg
+  servings_per_container: 100
+
+prices:
+  - retailer: Vitacost
+    price_usd: 6.69             # vitacost: $6.69 (sale price equals regular price)
+    servings: 100
+    url: https://www.vitacost.com/products/nature-s-bounty-vitamin-c-500-mg-100-tablets-32095
+    date_checked: 2026-10-22
+    entered_by: claude
+    # No rating entered: the page shows a star breakdown (44 reviews) but no average.
+
+# MISSING: certification. None named on the Vitacost page; certifier sites not searched for this product.
+certifications: []
+
+# MISSING: COA. No COA or lab-results link on the Vitacost page.
+coas: []
+
+flags: []
+notes: ""
