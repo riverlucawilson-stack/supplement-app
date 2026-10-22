@@ -10,11 +10,8 @@ Still River's: approving evidence/health text, and the first deploy.
 - (none)
 
 ## Next up
-- Stage C2 Magnesium: categories/magnesium.yaml (status: draft). $ per 100 mg elemental magnesium from the
-  Supplement Facts line, never compound weight. type = form (glycinate, citrate, oxide, malate, threonate,
-  taurate, chloride, blend, other). Then batches of up to 5 per TEAM.md (give researchers WebSearch URLs).
-- Vitamin D evidence to-dos: D2 vs D3, VITAL, cancer/mortality, upper limit. PMC pages show a bot check and
-  Europe PMC was refused this shift; try again next shift or ask River to paste abstracts.
+- Magnesium batch 1 per TEAM.md Mission 1 (give researchers WebSearch URLs).
+- Vitamin D evidence to-dos: D2 vs D3, VITAL, cancer/mortality, upper limit.
 
 ## Already built before this roadmap existed (2026-10-21)
 - [x] Phase (a): project setup, data format (PR #1)
@@ -69,6 +66,9 @@ A category is done when it has:
   - [x] published the category (2026-10-21); its evidence page stays off until River reviews it
 - [ ] 2. Magnesium: $ per 100 mg elemental magnesium, taken from the Supplement Facts panel,
       never from compound weight. Record the form (glycinate, citrate, oxide, malate, threonate, etc.).
+  - [x] category config: categories/magnesium.yaml (status: draft) + templates/magnesium-product.yaml
+  - [ ] batch 1  - [ ] batch 2  - [ ] batch 3 if needed (8-12 total)
+  - [ ] comparison page check  - [ ] product pages check  - [ ] claims-review pass  - [ ] evidence draft
 - [ ] 3. Fish oil / omega-3 (River approved IFOS as a tier-counting certification, 2026-10-21): $ per 1,000 mg EPA+DHA combined, not total oil. Record the form
       (TG, rTG or EE), any published oxidation (TOTOX) results, and IFOS or similar certification.
 - [ ] 4. Protein powder: $ per 25 g protein. Record the protein source, heavy-metal testing,
