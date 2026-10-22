@@ -37,5 +37,5 @@ certifications: []
 # dioxins/furans 0.201 ppt, mercury <0.005 ppm, lead <0.01 ppm, arsenic <0.05 ppm, cadmium <0.01 ppm. Lab named only as Nutrasource Diagnostics Inc. (IFOS program provider).
 coas: []
 
-flags: [contains fish (anchovies, sardines, mackerel, herring)]
+flags: ["contains fish (anchovies, sardines, mackerel, herring)"]
 notes: ""

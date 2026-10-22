@@ -30,5 +30,5 @@ certifications: []
 # MISSING: COA. No lab report link found on pages read.
 coas: []
 
-flags: [contains fish (anchovy, sardine, mackerel), fish and tilapia gelatin]
+flags: ["contains fish (anchovy, sardine, mackerel)", fish and tilapia gelatin]
 notes: ""

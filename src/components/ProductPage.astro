@@ -148,7 +148,7 @@ const description = best
     )}
     <p class="fine">
       Prices are read from each store's own page and marked stale after {settings.priceStaleAfterDays} days. The best price is
-      the lowest {category.referenceDose.short.toLowerCase()} among prices that aren't stale. Star ratings are the store's own
+      the lowest {category.referenceDose.short.charAt(0).toLowerCase() + category.referenceDose.short.slice(1)} among prices that aren't stale. Star ratings are the store's own
       reviews and never affect rankings.
     </p>
   </section>

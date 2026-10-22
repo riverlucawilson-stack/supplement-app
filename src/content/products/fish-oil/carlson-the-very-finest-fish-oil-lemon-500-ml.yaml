@@ -29,5 +29,5 @@ certifications: []
 # MISSING: COA. No lab report link on the Vitacost page (a review mentions downloadable batch results, but no link given).
 coas: []
 
-flags: [contains fish (anchovy, sardine, mackerel)]
+flags: ["contains fish (anchovy, sardine, mackerel)"]
 notes: ""

@@ -36,5 +36,5 @@ certifications:
 # MISSING: COA. No COA link on kleanathlete.com product page.
 coas: []
 
-flags: [contains fish (anchovy, sardine)]
+flags: ["contains fish (anchovy, sardine)"]
 notes: ""

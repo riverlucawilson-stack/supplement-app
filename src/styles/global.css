@@ -127,6 +127,22 @@ h3 {
   display: flex;
   gap: 1.25rem;
   font-size: 0.9rem;
+  /* One link per published category, so the list grows. It scrolls sideways
+     inside itself instead of making the whole page wider on phones. */
+  min-width: 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+
+@media (max-width: 640px) {
+  .site-header .wrap {
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+  }
+  .site-nav {
+    flex-basis: 100%;
+  }
 }
 
 .site-nav a {

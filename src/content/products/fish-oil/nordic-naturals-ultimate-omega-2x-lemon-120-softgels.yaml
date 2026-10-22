@@ -38,5 +38,5 @@ certifications: []
 # MISSING: COA. No lab report link on the Vitacost pages.
 coas: []
 
-flags: [contains fish (anchovy, sardine, mackerel, herring), gelatin]   # Vitacost has no explicit "Contains fish" statement; species from product text
+flags: ["contains fish (anchovy, sardine, mackerel, herring)", gelatin]   # Vitacost has no explicit "Contains fish" statement; species from product text
 notes: ""

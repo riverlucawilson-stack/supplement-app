@@ -29,5 +29,5 @@ certifications: []
 # MISSING: COA. None linked on the Vitacost page.
 coas: []
 
-flags: [contains fish (anchovies, sardines)]
+flags: ["contains fish (anchovies, sardines)"]
 notes: ""
