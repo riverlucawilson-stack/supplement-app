@@ -10,7 +10,8 @@ Still River's: approving evidence/health text, and the first deploy.
 - (none)
 
 ## Next up
-- Magnesium evidence draft, then publish the magnesium category.
+- Fish oil category config (add IFOS to its certifications), then batch 1.
+- Magnesium evidence to-dos: blood pressure meta-analysis, oxide vs chelate absorption, kidney disease and drug interactions.
 - Vitamin D evidence to-dos: D2 vs D3, VITAL, cancer/mortality, upper limit.
 
 ## Already built before this roadmap existed (2026-10-21)
@@ -64,13 +65,13 @@ A category is done when it has:
   - [x] batch 2: Nature's Bounty D3 5000, Pure Encapsulations D3 5000, Carlson Super Daily D3 drops, Klean-D 5000 (NSF), Nordic Naturals D3 gummies  - [x] batch 3 not needed for now (9 products, 8 priced)
   - [x] comparison page check  - [x] product pages check  - [x] claims-review pass (2026-10-21: no health wording in data or pages)  - [x] evidence draft: drafts/evidence/vitamin-d.md (2 papers read; to-dos list what's still unsourced). NEEDS RIVER REVIEW.
   - [x] published the category (2026-10-21); its evidence page stays off until River reviews it
-- [ ] 2. Magnesium: $ per 100 mg elemental magnesium, taken from the Supplement Facts panel,
+- [x] 2. Magnesium: $ per 100 mg elemental magnesium, taken from the Supplement Facts panel,
       never from compound weight. Record the form (glycinate, citrate, oxide, malate, threonate, etc.).
   - [x] category config: categories/magnesium.yaml (status: draft) + templates/magnesium-product.yaml
   - [x] batch 1: Doctor's Best, Nature Made oxide, Thorne bisglycinate, Pure Encapsulations (Natural Vitality Calm skipped)
   - [x] batch 2: NOW citrate, Neuro-Mag, Nature's Bounty 500, Klean Magnesium, Nature Made glycinate (9 total, batch 3 not needed)
   - [x] comparison page check  - [x] product pages check  - [x] claims-review pass
-  - [ ] evidence draft
+  - [x] evidence draft (drafts/evidence/magnesium.md, NEEDS RIVER REVIEW) + category published
 - [ ] 3. Fish oil / omega-3 (River approved IFOS as a tier-counting certification, 2026-10-21): $ per 1,000 mg EPA+DHA combined, not total oil. Record the form
       (TG, rTG or EE), any published oxidation (TOTOX) results, and IFOS or similar certification.
 - [ ] 4. Protein powder: $ per 25 g protein. Record the protein source, heavy-metal testing,

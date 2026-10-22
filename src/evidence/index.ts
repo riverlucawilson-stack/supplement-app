@@ -4,8 +4,9 @@ import { isApproved } from './markdown';
 import { creatineEvidence } from './creatine';
 import { ashwagandhaEvidence } from './ashwagandha';
 import { vitaminDEvidence } from './vitamin-d';
+import { magnesiumEvidence } from './magnesium';
 
-export const evidencePages: EvidencePage[] = [creatineEvidence, ashwagandhaEvidence, vitaminDEvidence];
+export const evidencePages: EvidencePage[] = [creatineEvidence, ashwagandhaEvidence, vitaminDEvidence, magnesiumEvidence];
 
 // Only pages River has fully reviewed (every section reviewed: true) go on the site.
 // Until then the text lives in drafts/evidence/<category>.md for review.

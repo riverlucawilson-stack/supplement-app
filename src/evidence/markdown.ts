@@ -61,7 +61,7 @@ export function evidenceMarkdown(page: EvidencePage): string {
   for (const id of order) {
     const c = page.citations[id];
     if (!c) continue;
-    const link = c.pmid ? `PMID ${c.pmid}` : c.doi ? `doi:${c.doi}` : 'no PMID or DOI';
+    const link = c.pmid ? `PMID ${c.pmid}` : c.doi ? `doi:${c.doi}` : c.design === 'government' ? 'official page' : 'no PMID or DOI';
     const flags = [designLabels[c.design], c.read === 'abstract' ? 'abstract read' : 'full text read', `checked ${c.date_checked}`];
     if (c.entered_by) flags.push('UNVERIFIED, entered by Claude');
     out.push(`${ref(id)}. ${c.authors}. ${c.title} ${c.journal}. ${c.year}. ${link}. ${c.source_url} (${flags.join('; ')})`);

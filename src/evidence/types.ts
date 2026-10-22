@@ -20,7 +20,9 @@ export const strengthLabels: Record<Strength, string> = {
 //   1 = human meta-analyses and RCTs, 2 = observational studies,
 //   3 = mechanistic and animal studies. Reviews, position stands, case reports
 //   and studies whose design isn't clear sit outside the three levels.
-export type Design = 'meta_analysis' | 'rct' | 'observational' | 'mechanistic_or_animal' | 'review' | 'case_report' | 'unclear';
+//   `government` is an official fact sheet (e.g. NIH Office of Dietary Supplements):
+//   it has no PMID or DOI, so it must link to a .gov page instead.
+export type Design = 'meta_analysis' | 'rct' | 'observational' | 'mechanistic_or_animal' | 'review' | 'case_report' | 'government' | 'unclear';
 
 export const designLevel: Record<Design, 1 | 2 | 3 | undefined> = {
   meta_analysis: 1,
@@ -29,6 +31,7 @@ export const designLevel: Record<Design, 1 | 2 | 3 | undefined> = {
   mechanistic_or_animal: 3,
   review: undefined,
   case_report: undefined,
+  government: undefined,
   unclear: undefined,
 };
 
@@ -39,6 +42,7 @@ export const designLabels: Record<Design, string> = {
   mechanistic_or_animal: 'Mechanistic or animal study',
   review: 'Review or position stand',
   case_report: 'Case report',
+  government: 'Government fact sheet',
   unclear: 'Design not clear from the title (check the paper)',
 };
 
