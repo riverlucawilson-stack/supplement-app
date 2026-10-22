@@ -10,7 +10,8 @@ Still River's: approving evidence/health text, and the first deploy.
 - (none)
 
 ## Next up
-- Vitamin C page checks, claims review, evidence draft, then publish.
+- Vitamin B12 ($ per 1,000 mcg, record the form): config, then batch 1.
+- Vitamin C evidence to-dos: English Cochrane abstract check, cancer/heart meta-analysis, liposomal, kidney stones.
 - Multivitamin evidence to-dos: cognition trials, %DV explainer (FDA), AREDS decision, vitamin A in pregnancy.
 - Protein powder evidence to-dos: heavy-metal testing from a primary source, protein source comparison, RDA.
 - Fish oil evidence to-dos: triglyceride effect size by dose, TG/rTG/EE absorption, fish allergy/oxidation.
@@ -98,12 +99,12 @@ A category is done when it has:
   - [x] batch 2: Nature Made Multi for Her, NOW Eve, Pure Encapsulations O.N.E., SmartyPants Men's Plus (Centrum Silver Women skipped; 8 total)
   - [x] comparison page check  - [x] product pages check  - [x] claims-review pass
   - [x] evidence draft (drafts/evidence/multivitamin.md, NEEDS RIVER REVIEW); category published
-- [ ] 6. Vitamin C: $ per 500 mg.
+- [x] 6. Vitamin C: $ per 500 mg.
   - [x] category config: categories/vitamin-c.yaml (status: draft) + template
   - [x] batch 1: Nature Made C 1,000 mg, NOW C-1000 with Rose Hips, Thorne Vitamin C with Flavonoids (LivOn and Nordic Naturals Sport skipped)
   - [x] batch 2: Nature's Bounty C 500 mg, NOW Buffered C-1000 Complex, Emergen-C Super Orange (Solgar 90 and Klean-C skipped)
   - [x] batch 3: Garden of Life RAW C, Solgar Ester-C Plus 180, Nature's Bounty C 1,000 mg (Nature Made Chewable skipped; 9 total)
   - [x] comparison page check  - [x] product pages check  - [x] claims-review pass
-  - [ ] evidence draft
+  - [x] evidence draft (drafts/evidence/vitamin-c.md, NEEDS RIVER REVIEW); category published
 - [ ] 7. Vitamin B12: $ per 1,000 mcg. Record the form (methyl, cyano, adenosyl or hydroxo).
 - [ ] 8. Vitamin K2: $ per 100 mcg. Record MK-7 vs MK-4.
