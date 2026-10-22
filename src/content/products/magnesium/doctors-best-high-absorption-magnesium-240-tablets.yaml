@@ -1,0 +1,39 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 240 tablets (120 servings).
+category: magnesium
+entered_by: claude              # label info from vitacost.com (240-count page)
+brand: Doctor's Best
+name: High Absorption Magnesium
+form: tablet
+magnesium_form: glycinate       # vitacost.com 240-count: "from 2,000 mg magnesium lysinate glycinate chelate" (single chelate named; check against the panel image)
+branded_ingredient: Albion TRAACS   # vitacost.com title: "Albion TRAACS"
+other_ingredients: [microcrystalline cellulose, croscarmellose sodium, vegetable-source magnesium stearate, stearic acid, hydroxypropyl cellulose, silicon dioxide, hypromellose]   # vitacost.com 240-count
+
+dose:
+  units_per_serving: 2          # vitacost.com 240-count: serving size 2 tablets
+  magnesium_per_serving_mg: 200 # vitacost.com 240-count: "Magnesium 200 mg" per serving (elemental line, not the 2,000 mg compound weight)
+  servings_per_container: 120   # vitacost.com 240-count panel: 120 servings (page's "Total servings 240 count" is the tablet count)
+
+prices:
+  - retailer: Vitacost
+    price_usd: 23.99            # vitacost.com: $23.99 for 240 tablets (page also lists a 120-count at $13.99)
+    servings: 120
+    url: https://www.vitacost.com/products/doctor-s-best-high-absorption-magnesium-lysinate-glycinate-chelated-albion-traacs-240-tablets-100-mg-per-tablet-16567
+    date_checked: 2026-10-22
+    entered_by: claude
+  - retailer: Target
+    price_usd: 15.99            # target.com: $15.99 for the 120-tablet bottle; 60 servings per its page (serving size not stated on Target; 200 mg per serving matches Vitacost)
+    servings: 60
+    url: https://target.com/p/doctor-s-best-high-absorption-magnesium-100-mg-120-tablets/-/A-82757351
+    date_checked: 2026-10-22
+    entered_by: claude
+
+# MISSING: certification. Searched nsfsport.com, sport.wetestyoutrust.com, quality-supplements.org via WebSearch; no listing found for this product.
+certifications: []
+
+# MISSING: COA. No COA or lab-results link on the Vitacost or Target pages; no brand page fetched.
+# MISSING: the 120-count Vitacost URL (.../120-tablets-100-mg-per-tablet-15) failed to load.
+coas: []
+
+flags: []
+notes: ""

@@ -1,0 +1,37 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 90 capsules.
+category: magnesium
+entered_by: claude              # label info from vitacost.com
+brand: Pure Encapsulations
+name: Magnesium (Glycinate)
+form: capsule
+magnesium_form: glycinate       # vitacost.com: "Magnesium (as magnesium glycinate)"
+other_ingredients: [vegetarian capsule (cellulose, water), ascorbyl palmitate]   # vitacost.com
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 capsule
+  magnesium_per_serving_mg: 120 # vitacost.com: Magnesium 120 mg (elemental line)
+  servings_per_container: 90
+
+prices:
+  - retailer: Vitacost
+    price_usd: 27.00            # vitacost.com: $27.00 for 90 capsules
+    servings: 90
+    url: https://www.vitacost.com/products/pure-encapsulations-magnesium-glycinate-90-capsules-120-mg-per-capsule-145681
+    date_checked: 2026-10-22
+    entered_by: claude
+  - retailer: Vitacost (360 capsules)
+    price_usd: 89.61            # vitacost.com: $89.61 for 360 capsules; 1 capsule per serving
+    servings: 360
+    url: https://www.vitacost.com/products/pure-encapsulations-magnesium-glycinate-360-capsules-120-mg-per-capsule-51827
+    date_checked: 2026-10-22
+    entered_by: claude
+
+# MISSING: certification. WebSearch of nsfsport.com and sport.wetestyoutrust.com found no listing for this product.
+certifications: []
+
+# MISSING: COA. None on the Vitacost pages; no brand page fetched.
+coas: []
+
+flags: []
+notes: ""
