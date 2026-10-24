@@ -163,4 +163,23 @@ if a point has no source or cites a paper that isn't in the list.
 
 ## How to deploy
 
-Written in phase (f).
+The site is hosted free on Cloudflare Pages, which rebuilds it every time code is pushed.
+
+**One-time setup (about 5 minutes, in your browser):**
+1. Sign in at https://dash.cloudflare.com (a free account is fine).
+2. Go to **Workers & Pages → Create → Pages → Connect to Git**, and pick the
+   `riverlucawilson-stack/supplement-app` repository.
+3. Project name: `sup-search` (the site will be at https://sup-search.pages.dev).
+   If that name is taken, pick another and change `siteUrl` in `src/settings.ts` to match.
+4. Production branch: `claude/project-thread-6g8ebj` until the pull requests are merged, then `main`.
+5. Build settings: Framework preset **Astro**, build command `npm run build`, output directory `dist`.
+   The Node version comes from the `.node-version` file, so you don't need to set it.
+6. Click **Save and Deploy**. The first build takes a couple of minutes.
+
+**After that:** every push to the production branch redeploys automatically. `npm run build`
+runs the validation script first, so a push with a data error fails the build and the live
+site stays as it was.
+
+**Stale prices:** staleness is worked out when the site builds. To keep the warnings current,
+add a daily rebuild: in Cloudflare, **Settings → Builds → Deploy hooks**, create a hook, and
+ask Claude to add a small scheduled GitHub Action that calls it each morning.

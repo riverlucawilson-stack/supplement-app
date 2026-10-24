@@ -7,7 +7,7 @@ Since 2026-10-21 River lets Claude make project decisions without asking; log ea
 Still River's: approving evidence/health text, and the first deploy.
 
 ## IN PROGRESS
-- (none)
+- Evidence to-dos and approval for all draft categories (River asked 2026-10-24: "Work through the evidence todos and approve them" and "deploy them")
 
 ## Next up
 - Stage C queue is done. Waiting on River: evidence reviews (vitamin D, magnesium, fish oil, protein powder, multivitamin, vitamin C, B12, K2) and the first deploy.

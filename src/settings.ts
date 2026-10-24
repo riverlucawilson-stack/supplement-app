@@ -5,7 +5,7 @@ export const settings = {
   siteName: 'Sup Search',
 
   // The site's public address. Update after deploying (phase f).
-  siteUrl: 'https://example.pages.dev',
+  siteUrl: 'https://sup-search.pages.dev',
 
   // A price is marked "stale" when its date_checked is older than this.
   priceStaleAfterDays: 14,
