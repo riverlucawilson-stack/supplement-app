@@ -70,7 +70,7 @@ const drafts = page.sections.filter((s) => !s.reviewed).length;
             <div class="cards">
               {g.items.map((item) => (
                 <article class="card">
-                  <h4>{item.title}</h4>
+                  {g.strength ? <h4>{item.title}</h4> : <h3>{item.title}</h3>}
                   <p>
                     {item.text}
                     {item.cites.map((c) => (
@@ -297,7 +297,7 @@ const drafts = page.sections.filter((s) => !s.reviewed).length;
     background: var(--surface);
   }
 
-  .card h4 {
+  .card :is(h3, h4) {
     margin: 0 0 0.4rem;
     font-size: 1rem;
     font-weight: 700;

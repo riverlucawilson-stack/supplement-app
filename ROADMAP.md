@@ -144,7 +144,7 @@ Same inclusion rule and TEAM.md Mission 1 (up to 5 per batch, researcher + audit
 - [x] D1 Freshness check (2026-10-24): validate already warned on stale prices, COAs (incl. test results) and certification checks; now also lists the 10 stalest items. Limits come from src/settings.ts (see WAITING ON RIVER 1).
 - [x] D2 Methodology draft (2026-10-24, waiting for River's review; 5 RIVER: lines inside): drafts/methodology.md (each category's comparison unit and math, tier rules exactly as CLAUDE.md states them, what "date checked" means, what the site doesn't cover). NEEDS RIVER REVIEW; build the page only after approval.
 - [ ] D3 Affiliate disclosure on every page with a buy link, shown before the first link (CLAUDE.md's wording, or draft wording and wait). Checked 2026-10-24: BaseLayout already shows it on every page above all page content and buy links; CLAUDE.md has no wording, so the text waits on WAITING ON RIVER 4.
-- [ ] D4 Phone-width pass: tables usable at 375 px, heading order, alt text, color contrast.
+- [x] D4 Phone-width pass (2026-10-24; all 170 pages pass at 375 px in light and dark): tables usable at 375 px, heading order, alt text, color contrast.
 - [ ] D5 Search basics: unique title and meta description per page, sitemap, canonical URLs.
 - [ ] D6 Link check: separate npm script (not part of validate) that checks source and buy URLs respond; 404 = dead, 403/429 = couldn't check.
 - [ ] D7 Launch checklist: drafts/launch-checklist.md (hosting, domain, each affiliate program and its disclosure wording, privacy policy if analytics/cookies, approving evidence drafts).

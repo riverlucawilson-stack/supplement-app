@@ -15,7 +15,7 @@
   --tier-a-soft: #e1f2e7;
   --tier-b: #8f5c00;
   --tier-b-soft: #fbf0d9;
-  --tier-c: #6b7470;
+  --tier-c: #59615d;
   --tier-c-soft: #eceeed;
   --warn: #a8480c;
   --warn-soft: #fcebdc;
@@ -202,6 +202,13 @@ h3 {
 .pill-warn {
   background: var(--warn-soft);
   color: var(--warn);
+}
+
+/* Long label facts (flags) wrap instead of widening the page on phones. */
+.tags .pill {
+  white-space: normal;
+  max-width: 100%;
+  border-radius: 0.75rem;
 }
 
 .pill-good {
