@@ -131,8 +131,15 @@ A category is done when it has:
   - [x] comparison page check  - [x] product pages check  - [x] claims-review pass
   - [x] evidence draft (drafts/evidence/vitamin-k2.md, NEEDS RIVER REVIEW); category published
 
+## Ongoing: more products for every category (River, 2026-10-24)
+"Continue to add comparison products for all supplement categories as you progress with the same criteria."
+Same inclusion rule and TEAM.md Mission 1 (up to 5 per batch, researcher + auditor). Alternate these batches with Stage D/E units.
+- [ ] Creatine  - [ ] Ashwagandha  - [ ] Vitamin D  - [ ] Magnesium  - [ ] Fish oil  - [ ] Protein powder
+- [ ] Multivitamin  - [ ] Vitamin C  - [ ] Vitamin B12  - [ ] Vitamin K2 (try to find an MK-4 product)
+(A box is checked once a category has had one extra batch; the list then starts over.)
+
 ## Stage D: launch readiness (build it; never deploy)
-- [ ] D1 Freshness check: validate warns (never fails) on stale prices, certifications, COAs and test results, and lists the 10 stalest items. Limits come from src/settings.ts (see WAITING ON RIVER 1).
+- [x] D1 Freshness check (2026-10-24): validate already warned on stale prices, COAs (incl. test results) and certification checks; now also lists the 10 stalest items. Limits come from src/settings.ts (see WAITING ON RIVER 1).
 - [ ] D2 Methodology draft: drafts/methodology.md (each category's comparison unit and math, tier rules exactly as CLAUDE.md states them, what "date checked" means, what the site doesn't cover). NEEDS RIVER REVIEW; build the page only after approval.
 - [ ] D3 Affiliate disclosure on every page with a buy link, shown before the first link (CLAUDE.md's wording, or draft wording and wait).
 - [ ] D4 Phone-width pass: tables usable at 375 px, heading order, alt text, color contrast.

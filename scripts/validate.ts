@@ -15,7 +15,8 @@ import type { Product } from '../src/categories';
 import { settings } from '../src/settings';
 import { isAfterDay } from '../src/lib/dates';
 import { allPrices, bestPrice } from '../src/lib/pricing';
-import { isCertificationCurrent, isCoaStale } from '../src/lib/staleness';
+import { freshness, isCertificationCurrent, isCoaStale } from '../src/lib/staleness';
+import type { DatedKind } from '../src/lib/staleness';
 import { tierFor } from '../src/lib/tier';
 import { usd } from '../src/lib/format';
 import { checkEvidence } from '../src/evidence/check';
@@ -30,6 +31,15 @@ interface FileReport {
   warnings: string[];
   summary?: string;
 }
+
+// Every dated price, certification and COA, for the "stalest items" list at the end.
+interface DatedItem {
+  file: string;
+  what: string;
+  kind: DatedKind;
+  date: Date;
+}
+const dated: DatedItem[] = [];
 
 function listFiles(dir: string): string[] {
   return readdirSync(dir).flatMap((name) => {
@@ -163,6 +173,10 @@ function checkFile(path: string): FileReport {
     warnings.push('Uses example.com links, so this is sample data. Remove it or replace it before launch.');
   }
 
+  for (const p of product.prices) dated.push({ file, what: `price at ${p.retailer}`, kind: 'price', date: p.date_checked });
+  for (const c of product.certifications) dated.push({ file, what: `${c.program} listing`, kind: 'certification', date: c.date_verified });
+  for (const c of product.coas) dated.push({ file, what: `COA lot ${c.lot}`, kind: 'coa', date: c.test_date });
+
   // Values Claude looked up that you haven't checked yet.
   const unverified = (what: string) =>
     warnings.push(`UNVERIFIED: ${what} was entered by Claude. Check it against its source, then delete its entered_by line.`);
@@ -197,6 +211,20 @@ for (const r of reports) {
   console.log(`${mark} ${r.file}${r.summary && !r.errors.length ? `  (${r.summary})` : ''}`);
   for (const e of r.errors) console.log(`    ✗ ${e}`);
   for (const w of r.warnings) console.log(`    ⚠ ${w}`);
+}
+
+// The 10 items closest to (or furthest past) their freshness limit, so you know what to re-check first.
+const kindLabel: Record<DatedKind, string> = { price: 'checked', certification: 'verified', coa: 'tested' };
+const stalest = dated
+  .map((d) => ({ ...d, ...freshness(d.kind, d.date, today) }))
+  .sort((a, b) => b.used - a.used)
+  .slice(0, 10);
+if (stalest.length) {
+  console.log('\nStalest 10 items (age as a share of its limit in src/settings.ts; over 100% is stale):');
+  for (const s of stalest) {
+    const pct = `${Math.round(s.used * 100)}%`.padStart(5);
+    console.log(`  ${pct}  ${s.file}: ${s.what}, ${kindLabel[s.kind]} ${day(s.date)} (${s.ageDays} of ${s.limitDays} days)`);
+  }
 }
 
 console.log(`\n${errorCount} error(s), ${warningCount} warning(s).`);

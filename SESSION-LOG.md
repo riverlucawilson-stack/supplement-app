@@ -58,3 +58,4 @@ One line per finished unit: date, unit, anything River needs to know.
 
 ## Questions for River
 - Decisions Claude makes on its own are logged above, starting with "Decision:".
+- 2026-10-24 · D1 Freshness check · Stale warnings already existed (never fail); validate now ends with the 10 stalest prices, certifications and COAs ranked by share of their limit. Nothing is stale yet (oldest price is 4 of 14 days), so no refresh unit this shift. Limits stay at CLAUDE.md's 14 days / 2 years until River answers WAITING ON RIVER 1. Added an ongoing product-batch queue per River's request.
