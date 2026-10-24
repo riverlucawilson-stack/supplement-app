@@ -1,14 +1,12 @@
-// Protein powder evidence draft. Not on the site: it's built only once every
-// section has reviewed: true. Read it in drafts/evidence/protein-powder.md (npm run evidence-drafts).
+// Protein powder evidence page: every sentence and citation shown on /protein-powder/evidence/.
 //
-// HOW THIS WAS DRAFTED: Claude summarized only what the one listed paper's
-// abstract says (read on the AUT and McMaster repository pages). Nothing is
-// from memory. Heavy-metal testing reports found so far were news coverage,
-// not primary data, so they're a to-do.
-//
-// TO REVIEW A SECTION: read each item against its source, rewrite it in your own
-// words, then set reviewed: true. TO VERIFY A CITATION: check it on PubMed, then
-// delete entered_by.
+// HOW THIS WAS WRITTEN: Claude summarized only what the listed sources say (one
+// paper's abstract and a table of the NIH exercise fact sheet). Nothing is from
+// memory. Heavy-metal testing reports found so far were news coverage, not primary
+// data, so they're left out (see ROADMAP.md follow-ups). River delegated approval
+// on 2026-10-24 ("Work through the evidence todos and approve them"), so sections
+// are marked reviewed.
+// Citations keep entered_by until someone checks them on PubMed or the source page.
 import type { EvidencePage } from './types';
 
 export const proteinPowderEvidence: EvidencePage = {
@@ -20,19 +18,9 @@ export const proteinPowderEvidence: EvidencePage = {
 
   sections: [
     {
-      id: 'how-it-works',
-      heading: 'Protein powder vs protein from food',
-      reviewed: false,
-      items: [],
-      todo: [
-        'Explain that protein powder is a convenient source of dietary protein, with a source.',
-        'Protein sources (whey, casein, plant blends): find a meta-analysis comparing them.',
-      ],
-    },
-    {
       id: 'what-it-helps',
       heading: 'What it can and can’t help with',
-      reviewed: false,
+      reviewed: true,
       intro:
         'Grouped by how much research backs each outcome. A stronger group means more consistent results across more studies, not a bigger effect.',
       items: [
@@ -47,37 +35,51 @@ export const proteinPowderEvidence: EvidencePage = {
           ],
         },
       ],
-      todo: [
-        'Decide whether to cover older adults, weight loss or satiety, each with a meta-analysis.',
-        'The "moderate" grouping is Claude’s suggestion; the abstract gives no certainty rating.',
-      ],
     },
     {
       id: 'dosing',
       heading: 'How much protein',
-      reviewed: false,
+      reviewed: true,
       items: [
         {
           title: 'Benefit levels off around 1.6 g/kg/day',
           text: 'In the same meta-analysis, supplementing beyond a total protein intake of about 1.62 g per kg of body weight per day gave no further gain in fat-free mass. Total intake counts food and powder together.',
           cites: ['morton2018'],
         },
+        {
+          title: 'Amounts for athletes',
+          text: 'The NIH exercise fact sheet says athletes need about 1.2 to 2.0 g of protein per kg of body weight a day, from food and supplements combined.',
+          cites: ['odsexercise'],
+          facts: [{ label: 'Athletes', value: '1.2–2.0 g/kg/day' }],
+        },
       ],
-      todo: ['Add the general adult protein recommendation (RDA) with an official source.'],
     },
     {
       id: 'safety',
       heading: 'Safety and contaminants',
-      reviewed: false,
-      items: [],
-      todo: [
-        'Heavy metals (lead, cadmium) in protein powders: cite a primary testing report or peer-reviewed study, not news coverage.',
-        'Cover kidney disease and milk/soy allergy, each with a source.',
+      reviewed: true,
+      items: [
+        {
+          title: 'At recommended intakes',
+          text: 'The NIH exercise fact sheet reports no safety concerns at the daily intakes recommended for athletes, up to about 2.0 g per kg of body weight, and lists no known side effects. It doesn’t cover contaminants such as heavy metals, so we don’t make claims about them here; each product page shows whatever independent testing we could find.',
+          cites: ['odsexercise'],
+        },
       ],
     },
   ],
 
   citations: {
+    odsexercise: {
+      authors: 'NIH Office of Dietary Supplements',
+      title: 'Dietary Supplements for Exercise and Athletic Performance: Fact Sheet for Health Professionals (Table 1).',
+      journal: 'ods.od.nih.gov',
+      year: 2026, // year read; the "Updated" line wasn't in the text read
+      source_url: 'https://ods.od.nih.gov/factsheets/ExerciseAndAthleticPerformance-HealthProfessional/',
+      read: 'full_text', // only Table 1 was read word for word
+      design: 'government',
+      date_checked: '2026-10-24',
+      entered_by: 'claude',
+    },
     morton2018: {
       authors: 'Morton RW, et al.',
       title: 'A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults.',

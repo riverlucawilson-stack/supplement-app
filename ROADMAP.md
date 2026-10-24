@@ -4,21 +4,27 @@ Work in shifts. One unit at a time; mark it IN PROGRESS before starting, check i
 when `npm run validate` and `npm run build` pass, log it in SESSION-LOG.md, and commit
 as "checkpoint: <unit>". CLAUDE.md wins any conflict with this file.
 Since 2026-10-21 River lets Claude make project decisions without asking; log each one in SESSION-LOG.md.
-Still River's: approving evidence/health text, and the first deploy.
+Still River's: approving evidence/health text (delegated to Claude on 2026-10-24 for the current to-dos), and the first deploy (River approved 2026-10-24; needs River's Cloudflare login).
 
 ## IN PROGRESS
-- Evidence to-dos and approval for all draft categories (River asked 2026-10-24: "Work through the evidence todos and approve them" and "deploy them")
+- (none)
 
 ## Next up
-- Stage C queue is done. Waiting on River: evidence reviews (vitamin D, magnesium, fish oil, protein powder, multivitamin, vitamin C, B12, K2) and the first deploy.
-- Vitamin K2 evidence to-dos: cite Cockayne 2006 and a K2 meta-analysis directly, K2 trial on artery calcification, confirm fact sheet date and upper limit; find an MK-4 product.
-- Vitamin B12 evidence to-dos: sublingual vs swallowed, meta-analyses for heart/cognition/energy, PMID check.
-- Vitamin C evidence to-dos: English Cochrane abstract check, cancer/heart meta-analysis, liposomal, kidney stones.
-- Multivitamin evidence to-dos: cognition trials, %DV explainer (FDA), AREDS decision, vitamin A in pregnancy.
-- Protein powder evidence to-dos: heavy-metal testing from a primary source, protein source comparison, RDA.
-- Fish oil evidence to-dos: triglyceride effect size by dose, TG/rTG/EE absorption, fish allergy/oxidation.
-- Magnesium evidence to-dos: blood pressure meta-analysis, oxide vs chelate absorption, kidney disease and drug interactions.
-- Vitamin D evidence to-dos: D2 vs D3, VITAL, cancer/mortality, upper limit.
+- First deploy: River connects the repo to Cloudflare Pages (steps in README "How to deploy"). If the name sup-search is taken, update siteUrl in src/settings.ts.
+- [x] Evidence to-dos and approval for all 10 categories (2026-10-24, River delegated approval). All evidence pages are live.
+
+## Evidence follow-ups (not on the site; couldn't be sourced word for word)
+- All: check each `entered_by: claude` citation on PubMed or the source page, then delete the line. Fill in "Updated" dates where the fact sheet text read didn't show one.
+- Creatine: older-adults and upper-body strength meta-analyses (Devries & Phillips 2014, PMID 24576864; Lanhers 2017); who should talk to a doctor first (River's call). Antonio 2021 and Kreider 2017 authors report creatine-industry ties.
+- Ashwagandha: 2025 BJPsych Open review (PMID 41140145) and 2025 cortisol meta-analysis (PMID 40746175); autoimmune conditions (not in the NIH fact sheet).
+- Vitamin D: steroid and thiazide interaction details (fact sheet text cut off); trial-based all-cause mortality meta-analysis.
+- Magnesium: glycinate absorption (not in the fact sheet).
+- Fish oil: triglyceride effect size by dose, American Heart Association advice, depression/joint/eye outcomes, fish allergy, oxidation (only seen in a summary or not found).
+- Protein powder: adult RDA (0.8 g/kg not seen word for word), whey vs casein vs plant, heavy metals from a primary testing source, kidney disease and milk/soy allergy.
+- Vitamin C: English Cochrane abstract (Hemilä 2013, PMC8078152) for confidence intervals; liposomal vitamin C.
+- Vitamin B12: upper limit reason, and heart/cognition/energy meta-analyses from the Health Professional fact sheet (only seen in a summary).
+- Vitamin K2: upper limit, antibiotic/bile acid sequestrant/orlistat interactions, a K2 randomized trial on artery calcification, the 2022 K2 meta-analysis (doi 10.3389/fpubh.2022.979649); find an MK-4 product.
+- Multivitamin: iron overdose in children (not in the fact sheet).
 
 ## Already built before this roadmap existed (2026-10-21)
 - [x] Phase (a): project setup, data format (PR #1)

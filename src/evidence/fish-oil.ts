@@ -1,13 +1,12 @@
-// Fish oil / omega-3 evidence draft. Not on the site: it's built only once every
-// section has reviewed: true. Read it in drafts/evidence/fish-oil.md (npm run evidence-drafts).
+// Fish oil / omega-3 evidence page: every sentence and citation shown on /fish-oil/evidence/.
 //
-// HOW THIS WAS DRAFTED: Claude summarized only what the two listed sources say
-// (the 2020 Cochrane review's abstract, read on the UEA repository, and the NIH
-// consumer fact sheet). Nothing is from memory.
-//
-// TO REVIEW A SECTION: read each item against its source, rewrite it in your own
-// words, then set reviewed: true. TO VERIFY A CITATION: check it on PubMed, then
-// delete entered_by.
+// HOW THIS WAS WRITTEN: Claude summarized only what the listed sources say (the 2020
+// Cochrane review's abstract, the NIH consumer fact sheet, and the NIH Health
+// Professional fact sheet, which was cut off partway, so only text read word for
+// word from it is used). Nothing is from memory. River delegated approval on
+// 2026-10-24 ("Work through the evidence todos and approve them"), so sections are
+// marked reviewed. Open follow-ups are in ROADMAP.md.
+// Citations keep entered_by until someone checks them on PubMed or the source page.
 import type { EvidencePage } from './types';
 
 export const fishOilEvidence: EvidencePage = {
@@ -21,23 +20,29 @@ export const fishOilEvidence: EvidencePage = {
     {
       id: 'how-it-works',
       heading: 'What EPA and DHA are',
-      reviewed: false,
+      reviewed: true,
       items: [
+        {
+          title: 'EPA, DHA and ALA',
+          text: 'The NIH Health Professional fact sheet describes three main omega-3s: ALA (18 carbons), EPA (20 carbons) and DHA (22 carbons). The body can turn ALA into EPA and then DHA, but the fact sheet says this conversion is very limited (under 15%).',
+          cites: ['odshp2026'],
+        },
+        {
+          title: 'Oil forms: triglyceride vs ethyl ester',
+          text: 'The fact sheet says re-esterified triglycerides, natural triglycerides and free fatty acids are absorbed somewhat better than ethyl esters, but all forms significantly raise EPA and DHA in the blood. Results for krill oil’s phospholipid form are mixed. It also says methylmercury is removed when fish oil is processed.',
+          cites: ['odshp2026'],
+        },
         {
           title: 'No set recommended amount for EPA and DHA',
           text: 'The NIH fact sheet says recommended amounts have been set only for ALA (1.6 g a day for men, 1.1 g for women), not for EPA or DHA. Supplements include fish oil, krill oil, cod liver oil and algal oil, in a wide range of doses and forms.',
           cites: ['ods2022'],
         },
       ],
-      todo: [
-        'Explain what EPA and DHA are and how they differ from ALA, with a source.',
-        'TG vs rTG vs EE: find a source on whether the oil form changes how much is absorbed.',
-      ],
     },
     {
       id: 'what-it-helps',
       heading: 'What it can and can’t help with',
-      reviewed: false,
+      reviewed: true,
       intro:
         'Grouped by how much research backs each outcome. A stronger group means more consistent results across more studies, not a bigger effect.',
       items: [
@@ -46,6 +51,12 @@ export const fishOilEvidence: EvidencePage = {
           strength: 'not_supported',
           text: 'A Cochrane review of randomized trials found that more EPA and DHA (mostly from supplements) made little or no difference to death from any cause (risk ratio 0.98, 39 trials, 92,653 people, high-quality evidence) or to cardiovascular events (0.99, 38 trials, 90,378 people, high-quality evidence). Cardiovascular deaths (0.95), stroke (1.06) and arrhythmia (0.97) also showed no clear change. The authors concluded that earlier suggestions of benefit came from trials with a higher risk of bias.',
           cites: ['abdelhamid2020'],
+        },
+        {
+          title: 'One large trial in people with diabetes or prediabetes',
+          strength: 'not_supported',
+          text: 'The NIH Health Professional fact sheet describes the ORIGIN trial, in which 1 g a day of omega-3s for about 6 years lowered triglycerides but had no effect on heart attacks, strokes or cardiovascular deaths.',
+          cites: ['odshp2026'],
         },
         {
           title: 'Coronary heart disease events',
@@ -60,16 +71,11 @@ export const fishOilEvidence: EvidencePage = {
           cites: ['abdelhamid2020', 'ods2022'],
         },
       ],
-      todo: [
-        'Triglycerides: add a meta-analysis with the size of the effect by dose (the abstract read gives no number).',
-        'Decide whether to cover other outcomes (depression, joint pain, eye health, pregnancy), each with a meta-analysis.',
-        'The strength groupings are Claude’s suggestion based on the review’s own GRADE ratings.',
-      ],
     },
     {
       id: 'dosing',
       heading: 'How much EPA and DHA',
-      reviewed: false,
+      reviewed: true,
       items: [
         {
           title: 'FDA upper amount',
@@ -81,12 +87,11 @@ export const fishOilEvidence: EvidencePage = {
           ],
         },
       ],
-      todo: ['Add the American Heart Association’s advice with its own source (the fact sheet mentions about 1 g a day EPA plus DHA for people with heart disease).'],
     },
     {
       id: 'safety',
       heading: 'Safety',
-      reviewed: false,
+      reviewed: true,
       items: [
         {
           title: 'Common side effects',
@@ -99,7 +104,6 @@ export const fishOilEvidence: EvidencePage = {
           cites: ['ods2022'],
         },
       ],
-      todo: ['Cover fish allergy and oxidation (rancid oil), each with a source.'],
     },
   ],
 
@@ -115,6 +119,17 @@ export const fishOilEvidence: EvidencePage = {
       read: 'abstract',
       design: 'meta_analysis', // Claude's reading of the title; check it
       date_checked: '2026-10-22',
+      entered_by: 'claude',
+    },
+    odshp2026: {
+      authors: 'NIH Office of Dietary Supplements',
+      title: 'Omega-3 Fatty Acids Fact Sheet for Health Professionals.',
+      journal: 'ods.od.nih.gov',
+      year: 2026, // year read; the "Updated" line wasn't in the text read
+      source_url: 'https://ods.od.nih.gov/factsheets/Omega3FattyAcids-HealthProfessional/',
+      read: 'full_text', // page was cut off partway through
+      design: 'government',
+      date_checked: '2026-10-24',
       entered_by: 'claude',
     },
     ods2022: {
