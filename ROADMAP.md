@@ -12,6 +12,7 @@ Still River's: approving evidence/health text (delegated to Claude on 2026-10-24
 ## WAITING ON RIVER
 1. Freshness limits: CLAUDE.md says stale after 14 days (prices) and 2 years (COAs); your shift prompt says 30 days and 12 months. Change CLAUDE.md and src/settings.ts to 30 days / 12 months? (Until you say yes, CLAUDE.md's limits stay.)
 2. Shifts can't push now, so the live site won't show new work until someone pushes. May shifts push to claude/project-thread-6g8ebj again? (yes/no)
+3. Methodology draft (drafts/methodology.md): approve it as is, or edit the RIVER: lines? Also says cert-only products are Tier B, which CLAUDE.md's tier rules don't cover. OK? (yes/no)
 
 ## Next up
 - [x] First deploy (2026-10-24): live at https://sup-search-doo.pages.dev, redeploys on every push to claude/project-thread-6g8ebj. Optional: deploy hook for a daily rebuild so stale-price warnings update (README).
@@ -140,7 +141,7 @@ Same inclusion rule and TEAM.md Mission 1 (up to 5 per batch, researcher + audit
 
 ## Stage D: launch readiness (build it; never deploy)
 - [x] D1 Freshness check (2026-10-24): validate already warned on stale prices, COAs (incl. test results) and certification checks; now also lists the 10 stalest items. Limits come from src/settings.ts (see WAITING ON RIVER 1).
-- [ ] D2 Methodology draft: drafts/methodology.md (each category's comparison unit and math, tier rules exactly as CLAUDE.md states them, what "date checked" means, what the site doesn't cover). NEEDS RIVER REVIEW; build the page only after approval.
+- [x] D2 Methodology draft (2026-10-24, waiting for River's review; 5 RIVER: lines inside): drafts/methodology.md (each category's comparison unit and math, tier rules exactly as CLAUDE.md states them, what "date checked" means, what the site doesn't cover). NEEDS RIVER REVIEW; build the page only after approval.
 - [ ] D3 Affiliate disclosure on every page with a buy link, shown before the first link (CLAUDE.md's wording, or draft wording and wait).
 - [ ] D4 Phone-width pass: tables usable at 375 px, heading order, alt text, color contrast.
 - [ ] D5 Search basics: unique title and meta description per page, sitemap, canonical URLs.
