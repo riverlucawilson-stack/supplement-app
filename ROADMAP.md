@@ -9,6 +9,10 @@ Still River's: approving evidence/health text (delegated to Claude on 2026-10-24
 ## IN PROGRESS
 - (none)
 
+## WAITING ON RIVER
+1. Freshness limits: CLAUDE.md says stale after 14 days (prices) and 2 years (COAs); your shift prompt says 30 days and 12 months. Change CLAUDE.md and src/settings.ts to 30 days / 12 months? (Until you say yes, CLAUDE.md's limits stay.)
+2. Shifts can't push now, so the live site won't show new work until someone pushes. May shifts push to claude/project-thread-6g8ebj again? (yes/no)
+
 ## Next up
 - [x] First deploy (2026-10-24): live at https://sup-search-doo.pages.dev, redeploys on every push to claude/project-thread-6g8ebj. Optional: deploy hook for a daily rebuild so stale-price warnings update (README).
 - [x] Evidence to-dos and approval for all 10 categories (2026-10-24, River delegated approval). All evidence pages are live.
@@ -126,3 +130,24 @@ A category is done when it has:
   - [x] batch 2: Life Extension Low Dose K2, MegaFood D3 & K2, NaturesPlus Source of Life K2, Enzymedica D3 + K2 (8 total)
   - [x] comparison page check  - [x] product pages check  - [x] claims-review pass
   - [x] evidence draft (drafts/evidence/vitamin-k2.md, NEEDS RIVER REVIEW); category published
+
+## Stage D: launch readiness (build it; never deploy)
+- [ ] D1 Freshness check: validate warns (never fails) on stale prices, certifications, COAs and test results, and lists the 10 stalest items. Limits come from src/settings.ts (see WAITING ON RIVER 1).
+- [ ] D2 Methodology draft: drafts/methodology.md (each category's comparison unit and math, tier rules exactly as CLAUDE.md states them, what "date checked" means, what the site doesn't cover). NEEDS RIVER REVIEW; build the page only after approval.
+- [ ] D3 Affiliate disclosure on every page with a buy link, shown before the first link (CLAUDE.md's wording, or draft wording and wait).
+- [ ] D4 Phone-width pass: tables usable at 375 px, heading order, alt text, color contrast.
+- [ ] D5 Search basics: unique title and meta description per page, sitemap, canonical URLs.
+- [ ] D6 Link check: separate npm script (not part of validate) that checks source and buy URLs respond; 404 = dead, 403/429 = couldn't check.
+- [ ] D7 Launch checklist: drafts/launch-checklist.md (hosting, domain, each affiliate program and its disclosure wording, privacy policy if analytics/cookies, approving evidence drafts).
+- [ ] D8 PWA proposal: drafts/pwa-plan.md (what it adds, what it costs to maintain). Don't build.
+
+## Stage E: next categories, most purchased first
+Same definition of done as Stage C.
+- [ ] 1. CoQ10: $ per 100 mg. Record ubiquinone vs ubiquinol and compare each at its labeled amount, without converting between them. Leave MitoQ out.
+- [ ] 2. B-complex: no single unit. Reuse the approved multivitamin method if it fits; otherwise propose one and wait. Record folate form (folic acid vs methylfolate) and B12 form.
+- [ ] 3. Probiotics: propose a method first and wait. Record each strain's full designation, CFU, guaranteed through expiration or at manufacture, storage needs.
+- [ ] 4. Zinc: $ per 10 mg elemental zinc from the Supplement Facts panel. Record form, whether copper is included, and format (capsule, tablet, lozenge).
+- [ ] 5. Collagen: $ per 10 g collagen peptides. Record source (bovine, marine, porcine, chicken) and heavy-metal testing. Leave out undenatured type II collagen.
+- [ ] 6. Curcumin / turmeric: $ per 500 mg curcuminoids, not turmeric powder weight. Record formulation (95% extract, piperine, phytosome, etc.). No bioavailability adjustment; record the claim and its source. No stated curcuminoid content = empty unit price with a note.
+- [ ] 7. Calcium: $ per 500 mg elemental calcium. Record carbonate vs citrate and any added vitamin D or K.
+- [ ] 8. Melatonin: propose a method first and wait (price per mg would rank megadoses best). Record labeled dose, format (tablet, gummy, extended release), and any independent testing of actual content.
