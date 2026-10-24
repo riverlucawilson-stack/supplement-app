@@ -22,7 +22,9 @@ export function checkEvidence(page: EvidencePage): { errors: string[]; warnings:
   }
 
   for (const [id, c] of Object.entries(page.citations)) {
-    if (!c.pmid && !c.doi) errors.push(`Citation "${id}" needs a PMID or DOI.`);
+    if (c.design === 'government') {
+      if (!/^https:\/\/[^/]+\.gov\//.test(c.source_url)) errors.push(`Citation "${id}" is a government fact sheet, so its source_url must be a .gov page.`);
+    } else if (!c.pmid && !c.doi) errors.push(`Citation "${id}" needs a PMID or DOI.`);
     if (!used.has(id)) warnings.push(`Citation "${id}" isn't used by any point. Remove it or cite it.`);
     if (c.entered_by) warnings.push(`UNVERIFIED: citation "${id}" was entered by Claude. Check it on PubMed, then delete its entered_by line.`);
   }

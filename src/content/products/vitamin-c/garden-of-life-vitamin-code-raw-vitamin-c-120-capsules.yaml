@@ -1,0 +1,34 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude
+# still needs River's check against its link.
+category: vitamin-c
+entered_by: claude              # label info from the Vitacost product page
+brand: Garden of Life
+name: Vitamin Code RAW Vitamin C
+form: capsule
+vitamin_c_form: other           # Vitacost: "from culture of Saccharomyces cerevisiae", no "as ascorbic acid" stated
+added_with: raw organic fruit and vegetable blend, raw probiotic and enzyme blend # Vitacost: Raw Organic Fruit & Vegetable Blend 720 mg; Raw Probiotic & Enzyme Blend 60 mg
+other_ingredients: [vegetable cellulose capsule, organic rice hull]   # Vitacost
+
+dose:
+  units_per_serving: 2          # Vitacost: serving size 2 capsules
+  vitamin_c_per_serving_mg: 500 # Vitacost: 500 mg per serving
+  servings_per_container: 60    # Vitacost Supplement Facts: 60 servings (120 capsules)
+
+prices:
+  - retailer: Vitacost
+    price_usd: 26.59            # Vitacost: regular price, 120 capsules
+    servings: 60
+    url: https://www.vitacost.com/products/garden-of-life-vitamin-code-raw-vitamin-c-120-vegan-capsules-46038
+    date_checked: 2026-10-22
+    entered_by: claude
+    # MISSING: rating. Page shows a star distribution but states no average, so none entered.
+
+# MISSING/CHECK: certifications. Vitacost page says NSF Certified Gluten-Free (brand claim, not a program in this
+# category's list); nothing checked on a certifier's own site, so left out.
+certifications: []
+
+# MISSING: COA. No COA or lab-results link on the Vitacost page.
+coas: []
+
+flags: [proprietary blend]   # both blends are listed by total weight only, no amount per ingredient
+notes: Vitamin C source on the label is "from culture of Saccharomyces cerevisiae" (no ascorbic acid form stated). Vitacost's key info says "120 count" servings, but the Supplement Facts panel says 60 servings of 2 capsules.

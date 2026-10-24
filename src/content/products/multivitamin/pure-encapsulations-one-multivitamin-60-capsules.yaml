@@ -1,0 +1,39 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude needs River's check.
+# Label info from the Vitacost page (URL in prices). Panel has 1 capsule per serving, 60 servings.
+category: multivitamin
+entered_by: claude
+brand: Pure Encapsulations
+name: O.N.E. Multivitamin
+form: capsule
+formula_for: adults             # product name has no sex/age wording
+folate_form: "Metafolin L-5-MTHF"   # Vitacost: "Folate (as Metafolin, L-5-MTHF) 667 mcg DFE (400 mcg L-5-MTHF)"
+b12_form: methylcobalamin       # Vitacost: "Vitamin B12 (as methylcobalamin)"
+vitamin_d_form: D3 (cholecalciferol)   # Vitacost: "Vitamin D (as cholecalciferol) (D3)"
+other_ingredients: [vegetarian capsule (cellulose, water), hypoallergenic plant fiber (cellulose), ascorbyl palmitate, potato starch]   # Vitacost
+
+dose:
+  units_per_serving: 1          # Vitacost: serving size 1 capsule
+  # Counted (Vitacost panel %DV >= 100): vitamin A 125, vitamin C 200, vitamin D 250, vitamin E 134, thiamin 250,
+  # riboflavin 231, niacin 125, vitamin B6 235, folate 167, vitamin B12 20,833, biotin 1,000, pantothenic acid 200,
+  # iodine 100, zinc 227, selenium 127, chromium 571, molybdenum 167.
+  # Not counted: manganese 87; boron, inositol, CoQ10, alpha lipoic acid, lutein, zeaxanthin, lycopene have no DV.
+  nutrients_at_100_dv: 17
+  folate_mcg_dfe: 667           # Vitacost: 667 mcg DFE, 167% DV
+  vitamin_b12_mcg: 500          # Vitacost: 500 mcg, 20,833% DV
+  vitamin_d_mcg: 50             # Vitacost: 50 mcg (2,000 IU), 250% DV
+  # iron_mg: MISSING: no iron line in the Vitacost Supplement Facts panel
+  servings_per_container: 60    # Vitacost: 60
+
+prices:
+  - retailer: Vitacost
+    price_usd: 48.50            # regular and sale both $48.50 (60 count)
+    servings: 60                # 60 capsules at 1 per day
+    url: https://www.vitacost.com/products/pure-encapsulations-o-n-e-multivitamin-60-capsules-52461
+    date_checked: 2026-10-22
+    entered_by: claude
+
+certifications: []              # MISSING: no certifier listing checked or found; only the Vitacost page was read
+coas: []                        # MISSING: no COA found in the page read
+
+flags: []                       # Vitacost page has no allergen statement
+notes: ""

@@ -1,0 +1,43 @@
+# Looked up by Claude on 2026-10-21. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 250 softgels.
+category: vitamin-d
+entered_by: claude              # label info from the Fred Meyer and Harris Teeter pages
+brand: Nature Made
+name: Vitamin D3 2000 IU (50 mcg) Softgels
+form: softgel                   # fredmeyer.com: "Nature Made Vitamin D3 2000 IU Softgels, 250 ct"
+vitamin_d_form: d3              # product name "Vitamin D3"
+other_ingredients: [soybean oil, gelatin, glycerin, water]   # fredmeyer.com: "Soybean Oil, Gelatin, Glycerin, Water"
+# carrier_oil: not set. The page lists soybean oil only under other ingredients, not as a named carrier.
+
+dose:
+  units_per_serving: 1          # fredmeyer.com: serving size 1 softgel
+  vitamin_d_per_serving_mcg: 50 # fredmeyer.com and harristeeter.com: "50 mcg" (2000 IU shown in the name)
+  servings_per_container: 250   # fredmeyer.com and harristeeter.com: 250
+
+prices:
+  - retailer: Fred Meyer
+    price_usd: 24.99            # fredmeyer.com: "$24.99"; page also shows a "Buy 1, Get 1 Free" sale (not applied)
+    servings: 250
+    url: https://www.fredmeyer.com/p/nature-made-vitamin-d3-softgels-50mcg/0003160402678
+    date_checked: 2026-10-21
+    entered_by: claude
+  - retailer: Harris Teeter
+    price_usd: 25.99            # harristeeter.com: "$25.99" (a BOGO sale is also shown; not applied)
+    servings: 250
+    url: https://harristeeter.com/p/nature-made-vitamin-d3-2000iu-softgels/0003160402678
+    date_checked: 2026-10-21
+    entered_by: claude
+
+# MISSING: USP Verified listing. Nature Made is known to carry the USP mark on some
+# products, but the listing could not be read. Tried (fetch failed, client_error):
+#   https://www.quality-supplements.org/nature-made-vitamin-d3-2000-iu-50-mcg-softgels
+#   https://www.quality-supplements.org/usp_verified_products?search_api_fulltext=D3
+#   https://www.quality-supplements.org/usp_verified_products?f%5B0%5D=brand:Nature+Made
+# Nothing recorded because it was not confirmed on a certifier page.
+certifications: []
+
+# MISSING: COA. None looked for on a brand lab-results page; not found in any page read.
+coas: []
+
+flags: [contains soybean]       # fredmeyer.com: "Contains soybean and its derivatives"
+notes: ""

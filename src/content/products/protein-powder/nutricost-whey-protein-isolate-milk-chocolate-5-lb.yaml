@@ -1,0 +1,33 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude needs River's check.
+# Size: 5 lb (2,268 g), 60 servings. Label info from the Vitacost page (URL in prices).
+# Vitacost "Total servings" key-info field says "2268 g" (container weight); servings taken from the panel (60).
+category: protein-powder
+entered_by: claude
+brand: Nutricost
+name: Whey Protein Isolate
+form: powder
+protein_source: whey_isolate    # Vitacost ingredients: "Whey protein isolate (whey protein, soy lecithin)(instantized)"
+flavor: Milk Chocolate
+other_ingredients: [cocoa powder (processed with alkali), natural and artificial flavors, salt, acesulfame potassium, sucralose, soy lecithin]   # Vitacost
+
+dose:
+  serving_size_g: 38            # Vitacost: "1 Scoop (1/3 c) (38 g)"
+  protein_per_serving_g: 30     # Vitacost: protein 30 g
+  servings_per_container: 60    # Vitacost panel: 60
+
+prices:
+  - retailer: Vitacost
+    price_usd: 124.95           # regular and sale both $124.95; page does not state stock status (Add to cart shown)
+    servings: 60
+    url: https://www.vitacost.com/products/nutricost-whey-protein-isolate-milk-chocolate-5-lb-2-268-g-139414
+    date_checked: 2026-10-22
+    entered_by: claude
+
+# MISSING: certifications. NSF Certified for Sport results page (Protein) shows no Nutricost entry; other certifiers not checked.
+certifications: []
+
+# MISSING: COA. None found in the page read (Vitacost).
+coas: []
+
+flags: [contains milk, "soy lecithin", sucralose, "acesulfame potassium"]   # Vitacost: "Contains: Milk"; soy lecithin and sweeteners from ingredient list (page's allergen line does not list soy)
+notes: ""

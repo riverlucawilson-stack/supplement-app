@@ -1,10 +1,12 @@
 // Ashwagandha evidence page: every sentence and citation shown on /ashwagandha/evidence/.
 //
-// HOW THIS WAS DRAFTED: Claude summarized only what the listed papers' abstracts
-// say, read from Europe PMC on 2026-10-21. Nothing is from memory. The
-// "strength of evidence" groupings are Claude's suggestion and are yours to change.
-// Review works the same as src/evidence/creatine.ts: edit the wording, set
-// `reviewed: true` per section, and delete `entered_by` once you've checked a citation.
+// HOW THIS WAS WRITTEN: Claude summarized only what the listed sources say (papers'
+// abstracts read from Europe PMC on 2026-10-21, and the NIH Health Professional fact
+// sheet read in full on 2026-10-24). Nothing is from memory. The "strength of
+// evidence" groupings are Claude's suggestion. River delegated approval on 2026-10-24
+// ("Work through the evidence todos and approve them"), so sections are marked
+// reviewed. Open follow-ups are in ROADMAP.md. Delete `entered_by` once you've
+// checked a citation.
 import type { EvidencePage } from './types';
 
 export const ashwagandhaEvidence: EvidencePage = {
@@ -18,18 +20,25 @@ export const ashwagandhaEvidence: EvidencePage = {
     {
       id: 'what-it-is',
       heading: 'What ashwagandha is',
-      reviewed: false,
-      items: [],
-      todo: [
-        'Describe the plant (Withania somnifera), which parts are used, and what withanolides are, in your own words with a source.',
-        'Explain how branded extracts differ (e.g. KSM-66 is root-only; Sensoril and Shoden use root and leaf) with a source for each.',
+      reviewed: true,
+      items: [
+        {
+          title: 'The plant',
+          text: 'The NIH fact sheet describes ashwagandha (Withania somnifera) as an evergreen shrub. Its root and leaf have different makeups. Most supplements contain root extract, and some contain root and leaf. Withanolides, a type of steroidal lactone, are thought to be among its active compounds, though other components may also play a role.',
+          cites: ['odshp2025'],
+        },
+        {
+          title: 'Branded extracts differ',
+          text: 'The fact sheet says KSM-66 is a root extract (more than 5% withanolides in a 300 mg capsule), while Sensoril and Shoden use root and leaf (Shoden has 21 mg of withanolide glycosides per 60 mg capsule). Because products differ so much, it says it is difficult to identify specific extracts or recommended amounts.',
+          cites: ['odshp2025'],
+        },
       ],
     },
 
     {
       id: 'what-it-helps',
       heading: 'What it can and can’t help with',
-      reviewed: false,
+      reviewed: true,
       intro:
         'Grouped by how much research backs each outcome. Most ashwagandha studies are small, and reviews often find large differences between trials.',
       items: [
@@ -75,18 +84,24 @@ export const ashwagandhaEvidence: EvidencePage = {
           text: 'Two 2026 reviews found no effect on body weight or body fat percentage.',
           cites: ['zhu2026', 'lee2026'],
         },
-      ],
-      todo: [
-        'Sleep: read and cite a sleep trial or review before adding anything (the lookup was rate-limited).',
-        'Consider the 2025 BJPsych Open review (PMID 41140145) and the 2025 cortisol meta-analysis (PMID 40746175), not yet read in full.',
-        'Confirm or change each strength grouping.',
+        {
+          title: 'Sleep',
+          strength: 'limited',
+          text: 'The NIH fact sheet describes a 2021 meta-analysis of 5 studies (372 adults) that found a small but significant improvement in sleep, larger at 600 mg a day or more, after 8 weeks or more, and in people with insomnia. In one trial of 150 adults using Shoden, sleep quality improved in 72% of the ashwagandha group vs 29% on placebo.',
+          cites: ['odshp2025'],
+        },
+        {
+          title: 'The NIH summary',
+          text: 'The fact sheet concludes ashwagandha may help reduce anxiety and stress and improve sleep, but the trials are fairly small and short. A guideline taskforce (WFSBP/CANMAT, 2022) provisionally recommended 300 to 600 mg of root extract (5% withanolides) for generalized anxiety disorder and said more research is needed.',
+          cites: ['odshp2025'],
+        },
       ],
     },
 
     {
       id: 'dosing',
       heading: 'Doses used in research',
-      reviewed: false,
+      reviewed: true,
       intro:
         'These are amounts studied in research, not a personal recommendation. Check with a professional first.',
       items: [
@@ -101,17 +116,22 @@ export const ashwagandhaEvidence: EvidencePage = {
           text: 'The mental-health review found dose was linked to the size of the stress effect but says the most effective dose and length of use still need to be established. The blood-sugar review found no advantage for any dose or duration.',
           cites: ['alsanie2026', 'farrin2026'],
         },
-      ],
-      todo: [
-        'Add the doses and extracts used in key individual trials (e.g. KSM-66 at 300 mg twice a day; Sensoril at 125–250 mg), each with its own source.',
-        'Explain why 600 mg of root powder and 600 mg of a concentrated extract are not equivalent, with a source.',
+        {
+          title: 'Extract vs whole root',
+          text: 'In a review of 7 stress trials (491 adults, 6 to 8 weeks) described by the NIH fact sheet, doses were 240 to 1,250 mg a day of extract, or 12,000 mg a day of whole root granules (about 6,000 mg of root powder). Benefits appeared greater at 500 to 600 mg a day. This site compares products by the amount on the label, so check whether a product lists an extract or whole root powder.',
+          cites: ['odshp2025'],
+          facts: [
+            { label: 'Extract doses studied', value: '240–1,250 mg/day' },
+            { label: 'Whole root granules', value: '12,000 mg/day' },
+          ],
+        },
       ],
     },
 
     {
       id: 'safety',
       heading: 'Safety',
-      reviewed: false,
+      reviewed: true,
       items: [
         {
           title: 'Liver injury',
@@ -123,18 +143,38 @@ export const ashwagandhaEvidence: EvidencePage = {
           text: 'In one reported case, a healthy 27-year-old developed jaundice and itching after three days of ashwagandha, rated a probable cause of the liver injury.',
           cites: ['perezperez2026'],
         },
-      ],
-      todo: [
-        'Thyroid effects: read and cite before adding.',
-        'Pregnancy, breastfeeding, autoimmune conditions and medication interactions (e.g. sedatives, thyroid medicine, immunosuppressants): source each before adding.',
-        'Who should talk to a doctor first, and the warning signs of liver injury to watch for: your call as the editor.',
+        {
+          title: 'Warning signs of liver injury',
+          text: 'The NIH fact sheet lists signs reported in liver injury cases: jaundice (yellow skin or eyes), itching, nausea, tiredness, abdominal discomfort and high bilirubin.',
+          cites: ['odshp2025'],
+        },
+        {
+          title: 'Short-term use and side effects',
+          text: 'The fact sheet says ashwagandha appears well tolerated for up to about 3 months, but its long-term safety is not known. Mild side effects include loose stools, nausea and drowsiness.',
+          cites: ['odshp2025'],
+        },
+        {
+          title: 'Thyroid',
+          text: 'Ashwagandha has raised thyroid hormone (T4) levels in studies. In people with subclinical hypothyroidism it lowered TSH and raised T3 and T4. Three cases of thyrotoxicosis (an overactive thyroid), one at 1,950 mg a day, resolved after stopping. The fact sheet says it might interact with thyroid hormone medicines.',
+          cites: ['odshp2025'],
+        },
+        {
+          title: 'Pregnancy and hormone-sensitive conditions',
+          text: 'The fact sheet says some experts advise against ashwagandha in pregnancy because of reports of miscarriage. Denmark banned ashwagandha products in 2023, and France’s food safety agency (ANSES, 2024) advises against it during pregnancy and breastfeeding and for people with endocrine disorders. It might not be safe for people with hormone-sensitive prostate cancer.',
+          cites: ['odshp2025'],
+        },
+        {
+          title: 'Medicines',
+          text: 'The fact sheet says ashwagandha might interact with diabetes medicines, blood pressure medicines, immunosuppressants and sedatives, as well as thyroid hormone medicines.',
+          cites: ['odshp2025'],
+        },
       ],
     },
 
     {
       id: 'myths',
       heading: 'Common myths',
-      reviewed: false,
+      reviewed: true,
       items: [
         {
           title: '“It’s natural, so it’s harmless”',
@@ -160,6 +200,7 @@ export const ashwagandhaEvidence: EvidencePage = {
       doi: '10.1016/j.ctim.2026.103325',
       source_url: 'https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE:ashwagandha%20AND%20TITLE:meta-analysis&resultType=core&format=json&pageSize=8',
       read: 'abstract',
+      design: 'meta_analysis', // Claude's reading of the title; check it
       date_checked: '2026-10-21',
       entered_by: 'claude',
     },
@@ -172,6 +213,7 @@ export const ashwagandhaEvidence: EvidencePage = {
       doi: '10.3390/nu18121915',
       source_url: 'https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE:ashwagandha%20AND%20TITLE:meta-analysis&resultType=core&format=json&pageSize=8',
       read: 'abstract',
+      design: 'meta_analysis', // Claude's reading of the title; check it
       date_checked: '2026-10-21',
       entered_by: 'claude',
     },
@@ -184,6 +226,7 @@ export const ashwagandhaEvidence: EvidencePage = {
       doi: '10.3389/fphar.2026.1799467',
       source_url: 'https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE:ashwagandha%20AND%20TITLE:meta-analysis&resultType=core&format=json&pageSize=8',
       read: 'abstract',
+      design: 'meta_analysis', // Claude's reading of the title; check it
       date_checked: '2026-10-21',
       entered_by: 'claude',
     },
@@ -196,6 +239,7 @@ export const ashwagandhaEvidence: EvidencePage = {
       doi: '10.3390/nu18172815',
       source_url: 'https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE:ashwagandha%20AND%20TITLE:meta-analysis&resultType=core&format=json&pageSize=8',
       read: 'abstract',
+      design: 'meta_analysis', // Claude's reading of the title; check it
       date_checked: '2026-10-21',
       entered_by: 'claude',
     },
@@ -208,7 +252,19 @@ export const ashwagandhaEvidence: EvidencePage = {
       doi: '10.1016/j.diabres.2026.113529',
       source_url: 'https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE:ashwagandha%20AND%20TITLE:meta-analysis&resultType=core&format=json&pageSize=8',
       read: 'abstract',
+      design: 'meta_analysis', // Claude's reading of the title; check it
       date_checked: '2026-10-21',
+      entered_by: 'claude',
+    },
+    odshp2025: {
+      authors: 'NIH Office of Dietary Supplements',
+      title: 'Ashwagandha Fact Sheet for Health Professionals (updated May 2, 2025).',
+      journal: 'ods.od.nih.gov',
+      year: 2025,
+      source_url: 'https://ods.od.nih.gov/factsheets/Ashwagandha-HealthProfessional/',
+      read: 'full_text',
+      design: 'government',
+      date_checked: '2026-10-24',
       entered_by: 'claude',
     },
     mcintyre2026: {
@@ -220,6 +276,7 @@ export const ashwagandhaEvidence: EvidencePage = {
       doi: '10.7759/cureus.109764',
       source_url: 'https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE:ashwagandha%20AND%20TITLE:liver&resultType=core&format=json&pageSize=5',
       read: 'abstract',
+      design: 'review', // Claude's reading of the title; check it
       date_checked: '2026-10-21',
       entered_by: 'claude',
     },
@@ -232,6 +289,7 @@ export const ashwagandhaEvidence: EvidencePage = {
       doi: '10.1155/crhe/8417352',
       source_url: 'https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE:ashwagandha%20AND%20TITLE:liver&resultType=core&format=json&pageSize=5',
       read: 'abstract',
+      design: 'case_report', // Claude's reading of the title; check it
       date_checked: '2026-10-21',
       entered_by: 'claude',
     },

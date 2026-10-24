@@ -1,0 +1,63 @@
+# Everything specific to vitamin B12. The site reads this file when it builds.
+# How each part works is explained in categories/README.md.
+slug: vitamin-b12
+name: Vitamin B12
+status: published
+order: 9
+
+page:
+  title: Vitamin B12 compared by cost per 1,000 mcg and testing
+  description: Every vitamin B12 product converted to cost per 1,000 mcg of B12, with its form (methylcobalamin, cyanocobalamin, adenosylcobalamin or hydroxocobalamin), and third-party certifications and lab results (COAs) graded A to C.
+  heading: What vitamin B12 really costs, and how much of its testing you can see.
+  intro: >-
+    Every price is converted to **cost per 1,000 mcg of vitamin B12**, using the B12 line on the Supplement Facts
+    panel. Each product shows its form: methylcobalamin, cyanocobalamin, adenosylcobalamin, hydroxocobalamin, or a
+    mix. Testing transparency gets its own grade, A to C, and is never blended into the price.
+
+comparison:
+  amount: 1000
+  unit: mcg
+  counts_toward: [vitamin_b12_per_serving_mcg]
+  label: per 1,000 mcg vitamin B12
+  short: Cost per 1,000 mcg
+  # No daily amount: same rule as the other new categories.
+  plausible_cost: { min: 0.002, max: 2 }
+
+dose_fields:
+  # Tablets, lozenges, gummies, drops, sprays or capsules in one serving, as the label says.
+  units_per_serving: { label: Units per serving, whole_number: true }
+  # The B12 mcg figure from the Supplement Facts panel.
+  vitamin_b12_per_serving_mcg:
+    label: Vitamin B12 per serving
+    unit: mcg
+    max: 10000
+    max_message: 'dose: {value} mcg per serving is over 10,000 mcg. Check the units (mcg, not mg).'
+  # Only if the label lists folate.
+  folate_per_serving_mcg_dfe: { label: Added folate per serving (DFE), unit: mcg, optional: true }
+
+type:
+  field: b12_form
+  label: B12 form
+  options:
+    methylcobalamin: Methylcobalamin
+    cyanocobalamin: Cyanocobalamin
+    adenosylcobalamin: Adenosylcobalamin
+    hydroxocobalamin: Hydroxocobalamin
+    mixed: Mix of forms
+    other: Other
+
+extra_fields:
+  # How it's taken, as the label says, e.g. sublingual, chewable, spray.
+  delivery: How it's taken
+
+describe: ['{b12_form}', '{delivery}', '+ {folate_per_serving_mcg_dfe} mcg DFE folate']
+
+certifications: [NSF Certified for Sport, Informed Sport, USP Verified, BSCG, Clean Label Project]
+
+coa_tests:
+  potency: Vitamin B12 potency
+  lead: Lead
+  arsenic: Arsenic
+  cadmium: Cadmium
+  mercury: Mercury
+  microbial: Microbial

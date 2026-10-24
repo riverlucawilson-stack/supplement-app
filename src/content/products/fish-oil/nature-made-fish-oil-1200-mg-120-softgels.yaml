@@ -1,0 +1,30 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude needs River's check.
+# Size chosen: 120 softgels (Giant Food Stores / Stop & Shop pages).
+category: fish-oil
+entered_by: claude              # label info, checked 2026-10-22, from https://stopandshop.com/groceries/product/nature-made-1200mg-fish-oil-softgels-120-ct-btl/184970
+                                # and https://giantfoodstores.com/groceries/product/nature-made-1200mg-fish-oil-softgels-120-ct-btl/184970
+brand: Nature Made
+name: Fish Oil 1200 mg 120 Softgels
+form: softgel
+oil_form: ethyl_ester           # both pages: omega-3 "As ethyl esters"
+oil_source: wild fish, Norway   # pages: "wild fish, not farm raised"; "Fish Oil Country Of Origin Is Norway"; species not stated
+other_ingredients: [gelatin, glycerin, methacrylic acid copolymer, triethyl citrate, polysorbate 80, glyceryl monostearate, propylene glycol, tocopherols]   # both pages
+
+dose:
+  units_per_serving: 1          # stopandshop.com / giantfoodstores.com: serving size 1 softgel
+  epa_per_serving_mg: 360       # stopandshop.com "EPA 360 mg"; giantfoodstores.com bullet "360 mg of EPA"
+  dha_per_serving_mg: 300       # stopandshop.com "DHA 300 mg"; giantfoodstores.com bullet "300 mg of DHA"
+  # Note: pages say 1200 mg fish oil (720 mg Omega-3). EPA+DHA = 660, which does not equal 720; page does not explain. total_omega3 not entered for that reason.
+  servings_per_container: 120   # INFERRED, not printed: servings number is blank on the pages; "one per day for a 120-day supply" and 120 ct. River to check the label.
+  # Food Lion page (100 ct) shows a different version: 2 softgels per serving, 50 servings, 360 mg omega-3, no EPA/DHA. Not used.
+
+# MISSING: price. Giant Food Stores, Stop & Shop and Food Lion pages show only a "See Best Price" link and no dollar amount.
+prices: []
+
+# MISSING: certification. Food Lion page mentions "USP verified" with www.uspverified.org text but no listing; no usp.org listing was read, so none entered.
+certifications: []
+# MISSING: COA. None found.
+coas: []
+
+flags: [contains fish]
+notes: ""

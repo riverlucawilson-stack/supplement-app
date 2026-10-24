@@ -1,0 +1,38 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude needs River's check.
+# Label info from the Vitacost page (URL in prices). Panel has 1 tablet per serving, 200 servings.
+category: multivitamin
+entered_by: claude
+brand: Centrum
+name: Adults Multivitamin
+form: tablet
+formula_for: adults             # from the product name ("Adults")
+folate_form: folic acid         # Vitacost: folate "667 mcg DFE (400 mcg Folic Acid)"; ingredient list names folic acid
+b12_form: cyanocobalamin        # Vitacost: not in the panel line; the ingredient list names cyanocobalamin
+vitamin_d_form: D3 (cholecalciferol)   # Vitacost: "Vitamin D3 25 mcg (1,000 IU)"
+other_ingredients: [calcium carbonate, potassium chloride, dibasic calcium phosphate, magnesium oxide, microcrystalline cellulose, ascorbic acid, ferrous fumarate, dl-alpha tocopheryl acetate, maltodextrin, "less than 2% of: beta-carotene, BHT, biotin, calcium pantothenate, cholecalciferol, chromium picolinate, copper sulfate, corn starch, crospovidone, cyanocobalamin, folic acid, gelatin, magnesium stearate, manganese sulfate, modified corn starch, niacinamide, phytonadione, polyethylene glycol, polyvinyl alcohol, potassium iodide, pyridoxine hydrochloride, riboflavin, silicon dioxide, sodium ascorbate, sodium molybdate, sodium selenate, talc, thiamine mononitrate, titanium dioxide, tocopherols, vitamin A acetate, Yellow 6 Lake, and zinc oxide"]   # Vitacost
+
+dose:
+  units_per_serving: 1          # Vitacost: serving size 1 tablet
+  # Counted (Vitacost panel %DV >= 100): vitamin A 117, vitamin D 125, thiamin 125, riboflavin 131, niacin 125,
+  # vitamin B6 118, folate 167, vitamin B12 250, biotin 100, pantothenic acid 200, iron 100, iodine 100,
+  # zinc 100, selenium 100, manganese 100, chromium 100, molybdenum 100. Not counted: vitamin E 90, others below 100.
+  nutrients_at_100_dv: 17
+  folate_mcg_dfe: 667           # Vitacost: 667 mcg DFE, 167% DV
+  vitamin_b12_mcg: 6            # Vitacost: 6 mcg, 250% DV
+  vitamin_d_mcg: 25             # Vitacost: 25 mcg (1,000 IU), 125% DV
+  iron_mg: 18                   # Vitacost: 18 mg, 100% DV
+  servings_per_container: 200   # Vitacost: 200
+
+prices:
+  - retailer: Vitacost
+    price_usd: 15.83            # regular and sale both $15.83
+    servings: 200               # 200 tablets at 1 per day
+    url: https://www.vitacost.com/products/centrum-adults-multivitamin-200-tablets-125279
+    date_checked: 2026-10-22
+    entered_by: claude
+
+certifications: []              # MISSING: none looked for beyond the Vitacost page; no certifier listing found or checked
+coas: []                        # MISSING: no COA found in the page read
+
+flags: [contains iron, contains gelatin, "artificial color (Yellow 6 Lake)"]   # Vitacost ingredient list; page has no allergen statement
+notes: ""

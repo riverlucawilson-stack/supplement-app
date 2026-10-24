@@ -1,0 +1,41 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude needs River's check.
+# Size chosen: 120 softgels (lemon).
+category: fish-oil
+entered_by: claude              # label info from the Vitacost product page (URL under prices)
+brand: Nordic Naturals
+name: Ultimate Omega 120 Softgels (Lemon)
+form: softgel
+oil_form: rtg                   # Vitacost page: omega-3s "in triglyceride form (rTG)"
+oil_source: anchovies, sardines, mackerel, herring   # Vitacost page: "Purified deep sea fish oil (from anchovies, sardines, mackerel, and herring)"
+# totox_published: not entered. The IFOS report 1285E3 gives peroxide 3.51 meq/kg and anisidine 81.9% (as "true anisidine value") but no TOTOX number.
+other_ingredients: [gelatin, glycerin, water, natural flavor, RRR-alpha tocopherol, rosemary extract]   # Vitacost page
+
+dose:
+  units_per_serving: 2          # Vitacost page: serving size 2 soft gels
+  epa_per_serving_mg: 650       # Vitacost Supplement Facts "EPA" 650 mg per 2 softgels
+  dha_per_serving_mg: 450       # Vitacost Supplement Facts "DHA" 450 mg per 2 softgels
+  total_omega3_per_serving_mg: 1280   # Vitacost Supplement Facts "Total Omega-3s"
+  servings_per_container: 60    # Vitacost Supplement Facts panel. NOTE: Vitacost "Key info" says "Total servings 120 count", which is softgels, not servings.
+
+prices:
+  - retailer: Vitacost
+    price_usd: 45.86            # one price shown, no sale marking; 120 count
+    servings: 60                # 120 softgels / 2 per serving
+    url: https://www.vitacost.com/products/nordic-naturals-ultimate-omega-great-lemon-120-soft-gels-640-mg-per-soft-gel-4200
+    date_checked: 2026-10-22
+    entered_by: claude
+
+# NOT ENTERED as a certification (Claude's decision, 2026-10-22): the only readable IFOS report,
+# https://certifications.nutrasource.ca/files/IFOS%20Nordic%20Naturals%20-%20Flavoured%20-%20Ultimate%20Omega%20-%201285E3.pdf,
+# is for lot 1285E3 with an EXPIRY of 01/2016, so it is not a current certification of the lot on sale (Vitacost best-by 2029).
+# It names "Ultimate Omega (TG Softgel)" (Vitacost says rTG), 5/5 stars, "Passes all IFOS testing categories - Yes".
+# River: if you find a current IFOS listing for this product, add it here.
+certifications: []
+
+# MISSING: COA entry not created. The schema requires a test date and the IFOS report 1285E3 shows none (also no lab accreditation, no finished/raw scope).
+# Values the report does show (lot 1285E3, "Ultimate Omega"): peroxide 3.51 meq/kg, true anisidine 81.9%, EPA 337 mg/cap, DHA 248 mg/cap, PCBs 0.11 ppb,
+# dioxins/furans 0.201 ppt, mercury <0.005 ppm, lead <0.01 ppm, arsenic <0.05 ppm, cadmium <0.01 ppm. Lab named only as Nutrasource Diagnostics Inc. (IFOS program provider).
+coas: []
+
+flags: ["contains fish (anchovies, sardines, mackerel, herring)"]
+notes: ""

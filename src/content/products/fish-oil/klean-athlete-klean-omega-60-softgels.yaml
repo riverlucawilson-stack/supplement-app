@@ -1,0 +1,40 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude needs River's check.
+# Size chosen: 60 softgels. Label info from https://www.kleanathlete.com/klean-omega-60.html
+# (its label PDF: https://www.kleanathlete.com/media/pdf_upload/KA201900-60-LBL.pdf was linked there, not opened separately)
+category: fish-oil
+entered_by: claude              # label info from the kleanathlete.com product page
+brand: Klean Athlete
+name: Klean Omega 60 Softgels
+form: softgel
+oil_form: triglyceride          # kleanathlete.com: omega-3s "from clean, pure fish oil in triglyceride form"
+oil_source: anchovy, sardine    # kleanathlete.com: "This product contains fish oil (anchovies and sardines)"
+other_ingredients: [fish gelatin (capsule, from tilapia), purified water, natural orange flavor, natural mixed tocopherols]   # kleanathlete.com
+
+dose:
+  units_per_serving: 1          # kleanathlete.com: serving size 1 softgel
+  epa_per_serving_mg: 500       # Supplement Facts "EPA"
+  dha_per_serving_mg: 250       # Supplement Facts "DHA"
+  # MISSING: total omega-3 line, not listed on kleanathlete.com (label shows Marine Triglyceride Concentrate 1,250 mg)
+  servings_per_container: 60    # kleanathlete.com
+
+prices:
+  - retailer: Klean Athlete
+    price_usd: 44.50            # regular price on kleanathlete.com (no sale shown); page said "Log In to Add to Cart"
+    servings: 60
+    url: https://www.kleanathlete.com/klean-omega-60.html
+    date_checked: 2026-10-22
+    entered_by: claude
+
+certifications:
+  - program: NSF Certified for Sport
+    # nsfsport.com listing "Klean Omega", brand Klean Athlete, softgel, package size 60, serving size 1.
+    # The page shows no status or listing date. Other candidate ids were not opened since this one names the product.
+    listing_url: https://www.nsfsport.com/certified-products/listing-detail.php?id=820619
+    date_verified: 2026-10-22
+    entered_by: claude
+
+# MISSING: COA. No COA link on kleanathlete.com product page.
+coas: []
+
+flags: ["contains fish (anchovy, sardine)"]
+notes: ""

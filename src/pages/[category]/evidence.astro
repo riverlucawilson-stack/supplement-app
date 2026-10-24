@@ -1,0 +1,15 @@
+---
+// Each category's evidence page, at /<category>/evidence/.
+// The words live in src/evidence/<category>.ts. A page is built only once
+// every section is reviewed; until then it's a draft in drafts/evidence/.
+import EvidencePage from '../../components/EvidencePage.astro';
+import { publishedEvidence } from '../../evidence';
+
+export function getStaticPaths() {
+  return publishedEvidence.map((page) => ({ params: { category: page.category }, props: { page } }));
+}
+
+const { page } = Astro.props;
+---
+
+<EvidencePage page={page} />

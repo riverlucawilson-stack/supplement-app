@@ -5,22 +5,27 @@
 // calculated in src/lib, never typed by hand.
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { categoryById, type CategoryId } from '../categories';
+import { categoryById, productPath, type CategoryId } from '../categories';
+import { formLabels } from '../categories/shared';
 import { settings } from '../settings';
 import { bestPrice } from '../lib/pricing';
 import { isCertificationCurrent } from '../lib/staleness';
+import { usd } from '../lib/format';
 import { tierFor } from '../lib/tier';
 import { hasUnverifiedData, isSampleProduct } from '../lib/review';
+import { evidenceFor } from '../evidence';
 
 interface Props {
   categoryId: CategoryId;
-  title: string;
-  description: string;
-  heading: string;
 }
-const { categoryId, title, description, heading } = Astro.props;
+const { categoryId } = Astro.props;
 const today = new Date();
 const category = categoryById(categoryId);
+const { title, description, heading } = category.page;
+// The intro is plain text from the category file; **words** become bold.
+const escape = (t: string) => t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const intro = escape(category.page.intro).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+const hasEvidence = evidenceFor(categoryId) !== undefined;
 
 const rows = (await getCollection('products'))
   .filter((entry) => entry.data.category === categoryId)
@@ -33,6 +38,7 @@ const rows = (await getCollection('products'))
     const currentCerts = p.certifications.filter((c) => isCertificationCurrent(c.date_verified, today));
     return {
       id: entry.id,
+      href: productPath(entry.id, p),
       product: p,
       best,
       tier: tier.tier,
@@ -49,10 +55,9 @@ const rows = (await getCollection('products'))
   .sort((a, b) => (a.best?.costPerReferenceDose ?? Infinity) - (b.best?.costPerReferenceDose ?? Infinity));
 
 const forms = [...new Set(rows.map((r) => r.product.form))].sort();
-const usd = (n: number) => `$${n.toFixed(2)}`;
 const shortDate = (d: Date) =>
   d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
-const formLabel: Record<string, string> = { powder: 'Powder', capsule: 'Capsules', tablet: 'Tablets', gummy: 'Gummies' };
+const formLabel = formLabels;
 const tierOrder = { A: 0, B: 1, C: 2 } as const;
 const costLabel = category.referenceDose.short;
 const costLabelLower = costLabel.charAt(0).toLowerCase() + costLabel.slice(1);
@@ -62,8 +67,10 @@ const costLabelLower = costLabel.charAt(0).toLowerCase() + costLabel.slice(1);
   <section class="intro wrap">
     <p class="eyebrow">{category.name} · {rows.length} products</p>
     <h1>{heading}</h1>
-    <p class="lede"><slot /></p>
-    <p class="research"><a href={category.evidencePath}>What the research says about {category.name.toLowerCase()} →</a></p>
+    <p class="lede" set:html={intro} />
+    {hasEvidence && (
+      <p class="research"><a href={category.evidencePath}>What the research says about {category.name.charAt(0).toLowerCase() + category.name.slice(1)} →</a></p>
+    )}
   </section>
 
   <section class="wrap" aria-label="Comparison table">
@@ -113,7 +120,7 @@ const costLabelLower = costLabel.charAt(0).toLowerCase() + costLabel.slice(1);
           <tr>
             <th scope="col">Product</th>
             <th scope="col" class="r">{costLabel}</th>
-            <th scope="col" class="r">30 days</th>
+            {category.daily && <th scope="col" class="r">30 days</th>}
             <th scope="col">Best price</th>
             <th scope="col" class="c">Tier</th>
             <th scope="col">Testing</th>
@@ -132,7 +139,11 @@ const costLabelLower = costLabel.charAt(0).toLowerCase() + costLabel.slice(1);
                 <th scope="row" class="product">
                   <div class="product-inner">
                   <span class="brand">{r.product.brand}</span>
-                  <span class="name">{r.product.name}</span>
+                  {r.href ? (
+                    <a class="name" href={r.href}>{r.product.name}</a>
+                  ) : (
+                    <span class="name">{r.product.name}</span>
+                  )}
                   <span class="meta">
                     {formLabel[r.product.form]} · {category.describe(r.product)}
                   </span>
@@ -153,12 +164,14 @@ const costLabelLower = costLabel.charAt(0).toLowerCase() + costLabel.slice(1);
                   )}
                   </div>
                 </th>
-                <td class="r cost" data-label={costLabel}>
+                <td class="r cost" data-label={costLabel} data-per={category.referenceDose.label}>
                   {r.best ? <span class="num big">{usd(r.best.costPerReferenceDose)}</span> : <span class="none">No price</span>}
                 </td>
-                <td class="r" data-label={category.dailyLabel}>
-                  {r.best ? <span class="num">{usd(r.best.costPer30Days)}</span> : <span class="none">–</span>}
-                </td>
+                {category.daily && (
+                  <td class="r" data-label={category.daily.label}>
+                    {r.best?.costPer30Days !== undefined ? <span class="num">{usd(r.best.costPer30Days)}</span> : <span class="none">–</span>}
+                  </td>
+                )}
                 <td class="where" data-label="Best price">
                   {r.best ? (
                     <>
@@ -470,6 +483,10 @@ const costLabelLower = costLabel.charAt(0).toLowerCase() + costLabel.slice(1);
     font-size: 1rem;
   }
 
+  a.name {
+    color: var(--ink);
+  }
+
   .meta,
   .sub {
     font-size: 0.8125rem;
@@ -611,7 +628,7 @@ const costLabelLower = costLabel.charAt(0).toLowerCase() + costLabel.slice(1);
     }
 
     .compare td.cost::after {
-      content: ' per 5 g';
+      content: ' ' attr(data-per);
       font-size: 0.8125rem;
       color: var(--muted);
     }

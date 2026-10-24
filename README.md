@@ -40,11 +40,11 @@ YAML file you edit by hand.
 | `src/lib/` | The calculations: `pricing.ts` (cost per 5 g, per 30 days, best price), `tier.ts` (Tier A/B/C with reasons), `staleness.ts`. |
 | `scripts/validate.ts` | The validation script. |
 | `tests/` | Automated tests. `tests/fixtures/products/` holds deliberately broken product files the tests check get caught. |
-| `src/categories/` | What a product file must contain, per category (`creatine.ts`, `ashwagandha.ts`), and the amount each is compared on. |
+| `categories/` | **One YAML file per category** (`creatine.yaml`, `ashwagandha.yaml`): the amount it's compared on, which dose numbers a product records, its types, which certifications count and which COA tests are listed. See `categories/README.md`. |
 | `src/evidence/` | The words on each category's evidence page. |
 | `templates/` | A blank product file for each category. |
 | `src/layouts/BaseLayout.astro` | The frame on every page, including the affiliate disclosure and "not medical advice" note. |
-| `src/pages/` | One file per page of the site. |
+| `src/pages/` | The page addresses. `[category]/` makes `/creatine/`, `/creatine/<product>/` and so on for every category, so a new category needs no page files. |
 | `src/styles/global.css` | Site-wide styling. |
 
 ## How to add a product
@@ -135,7 +135,7 @@ Extracts and plain root powder aren't the same at the same weight, so the table 
 type (root extract, root + leaf extract, root powder), the branded extract (e.g. KSM-66,
 Sensoril, Shoden) and the withanolide % beside each one. A small, concentrated extract
 (e.g. 120 mg of Shoden) will look expensive per 600 mg; that's expected. To compare on a
-different amount, change `referenceDose` and `dailyGrams` in `src/categories/ashwagandha.ts`.
+different amount, change `comparison` in `categories/ashwagandha.yaml`.
 
 Its COA tests are: withanolides, identity, lead, arsenic, cadmium, mercury, microbial,
 pesticides, residual_solvents, aflatoxins. A COA from the extract supplier (e.g. the KSM-66
@@ -145,6 +145,11 @@ maker) is `scope: raw_material`.
 
 Everything on an evidence page lives in `src/evidence/<category>.ts` (e.g. `creatine.ts`). Claude drafted it
 from the abstracts of the papers listed under each point; nothing in it is from memory.
+
+**Evidence pages stay off the site until you approve them.** A page is built only once every one of its
+sections has `reviewed: true`. Until then, read it in `drafts/evidence/<category>.md`, which files every point
+under your evidence levels (1: human meta-analyses and RCTs, 2: observational, 3: mechanistic and animal).
+After editing the `.ts` file, run `npm run evidence-drafts` to refresh the draft.
 
 1. Open the page and read a section. Each point has a numbered link to its paper.
 2. Rewrite anything you'd say differently, right in that file.
@@ -158,4 +163,23 @@ if a point has no source or cites a paper that isn't in the list.
 
 ## How to deploy
 
-Written in phase (f).
+The site is hosted free on Cloudflare Pages, which rebuilds it every time code is pushed.
+
+**One-time setup (about 5 minutes, in your browser):**
+1. Sign in at https://dash.cloudflare.com (a free account is fine).
+2. Go to **Workers & Pages → Create → Pages → Connect to Git**, and pick the
+   `riverlucawilson-stack/supplement-app` repository.
+3. Project name: `sup-search`. That name was taken on pages.dev, so Cloudflare gave the site the address https://sup-search-doo.pages.dev (set as `siteUrl` in `src/settings.ts`).
+   If that name is taken, pick another and change `siteUrl` in `src/settings.ts` to match.
+4. Production branch: `claude/project-thread-6g8ebj` until the pull requests are merged, then `main`.
+5. Build settings: Framework preset **Astro**, build command `npm run build`, output directory `dist`.
+   The Node version comes from the `.node-version` file, so you don't need to set it.
+6. Click **Save and Deploy**. The first build takes a couple of minutes.
+
+**After that:** every push to the production branch redeploys automatically. `npm run build`
+runs the validation script first, so a push with a data error fails the build and the live
+site stays as it was.
+
+**Stale prices:** staleness is worked out when the site builds. To keep the warnings current,
+add a daily rebuild: in Cloudflare, **Settings → Builds → Deploy hooks**, create a hook, and
+ask Claude to add a small scheduled GitHub Action that calls it each morning.

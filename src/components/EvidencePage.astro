@@ -112,6 +112,11 @@ const drafts = page.sections.filter((s) => !s.reviewed).length;
                   PMID {c.pmid}
                 </a>
               )}
+              {!c.pmid && !c.doi && (
+                <a href={c.source_url} class="num">
+                  {new URL(c.source_url).hostname}
+                </a>
+              )}
               {c.doi && (
                 <>
                   {' · '}

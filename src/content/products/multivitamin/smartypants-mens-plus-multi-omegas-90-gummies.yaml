@@ -1,0 +1,38 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude needs River's check.
+# Label info from the Vitacost page (URL in prices). Panel: serving size 3 gummies, 30 servings per container (90 gummies).
+category: multivitamin
+entered_by: claude
+brand: SmartyPants
+name: Men's Plus Multi & Omegas (Raspberry Lemonade)
+form: gummy
+formula_for: men                # from the product name ("Men's")
+folate_form: "L-methylfolate, calcium salt"   # Vitacost: "Folate (as L-methylfolate, calcium salt) 400 mcg DFE"
+b12_form: methylcobalamin       # Vitacost: "Vitamin B12 (as methylcobalamin)"
+vitamin_d_form: D3 (cholecalciferol)   # Vitacost: "Vitamin D (as cholecalciferol)"
+other_ingredients: [organic cane sugar, pectin, gelatin, citric acid, sodium citrate, natural flavors, organic sunflower oil, organic carnauba wax]   # Vitacost
+
+dose:
+  units_per_serving: 3          # Vitacost: serving size 3 gummies
+  # Counted (Vitacost panel %DV >= 100): vitamin D 200, vitamin B6 100, folate 100, vitamin B12 167, iodine 100, zinc 100.
+  # Not counted: vitamin A 30, vitamin C 50, vitamin E 60, vitamin K 43, thiamin 10, riboflavin 20, niacin 25,
+  # biotin 50, selenium 25, total carbohydrate 2, added sugars 6, sodium <1.
+  nutrients_at_100_dv: 6
+  folate_mcg_dfe: 400           # Vitacost: 400 mcg DFE, 100% DV
+  vitamin_b12_mcg: 4            # Vitacost: 4 mcg, 167% DV
+  vitamin_d_mcg: 40             # Vitacost: 40 mcg (1600 IU), 200% DV
+  # iron_mg: MISSING: no iron line in the Vitacost Supplement Facts panel
+  servings_per_container: 30    # Vitacost panel: 30 (the page's "Key info" says "Total servings 90 count", which is the gummy count)
+
+prices:
+  - retailer: Vitacost
+    price_usd: 29.38            # regular and sale both $29.38
+    servings: 30                # 90 gummies at 3 per day
+    url: https://www.vitacost.com/products/smartypants-men-s-plus-multi-omegas-raspberry-lemonade-90-gummies-149748
+    date_checked: 2026-10-22
+    entered_by: claude
+
+certifications: []              # MISSING: no certifier listing checked or found; only the Vitacost page was read
+coas: []                        # MISSING: no COA found in the page read
+
+flags: ["added sugars 3 g", contains gelatin]   # Vitacost panel; page allergen statement: free of synthetic colors, gluten, wheat, milk, eggs, peanuts, sesame, soy, tree nut allergens, fish, and shellfish
+notes: ""

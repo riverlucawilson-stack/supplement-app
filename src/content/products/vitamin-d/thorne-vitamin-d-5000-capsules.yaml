@@ -1,0 +1,41 @@
+# Looked up by Claude on 2026-10-21. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 60 capsules.
+category: vitamin-d
+entered_by: claude              # label info from thorne.com and vitacost.com
+brand: Thorne
+name: Vitamin D-5,000 Capsules
+form: capsule
+vitamin_d_form: d3              # thorne.com: "Vitamin D3"; vitacost: "Vitamin D (as Vitamin D3)"
+other_ingredients: [leucine, microcrystalline cellulose, silicon dioxide, hypromellose capsule, vitamin E (d-alpha-tocopherol)]   # thorne.com
+
+dose:
+  units_per_serving: 1          # thorne.com: serving size 1 capsule
+  vitamin_d_per_serving_mcg: 125 # thorne.com and vitacost.com: 125 mcg (5,000 IU)
+  servings_per_container: 60
+
+prices:
+  - retailer: Thorne
+    price_usd: 20.00            # thorne.com: "$20" for 60 capsules
+    servings: 60
+    url: https://thorne.com/products/dp/vitamin-d-5000
+    date_checked: 2026-10-21
+    entered_by: claude
+  - retailer: Vitacost
+    price_usd: 20.00            # vitacost.com: "$20.00 USD"
+    servings: 60
+    url: https://www.vitacost.com/products/thorne-d-5-000-60-capsules-125-mcg-per-capsule-18451
+    date_checked: 2026-10-21
+    entered_by: claude
+
+certifications:
+  - program: NSF Certified for Sport
+    # Listing "Thorne D-5,000", capsules unflavored, 60 or 120 count, serving size 1 capsule
+    listing_url: https://www.nsfsport.com/certified-products/listing-detail.php?id=1221010
+    date_verified: 2026-10-21
+    entered_by: claude
+
+# MISSING: COA. No COA or lab-results link on https://thorne.com/products/dp/vitamin-d-5000.
+coas: []
+
+flags: []
+notes: ""

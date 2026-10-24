@@ -1,0 +1,33 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude
+# still needs River's check against its link.
+category: vitamin-c
+entered_by: claude              # label info from vitacost.com
+brand: NOW Foods
+name: C-1000 With Rose Hips Tablets
+form: tablet
+vitamin_c_form: ascorbic_acid   # vitacost: "Vitamin C (as Ascorbic Acid)"
+added_with: rose hips           # vitacost: Rose Hips Powder (Rosa canina) 25 mg
+other_ingredients: [microcrystalline cellulose, hypromellose, hydroxypropyl cellulose, vegetarian coating, stearic acid, sunflower lecithin, triethyl citrate, sunflower oil, magnesium stearate]   # vitacost
+
+dose:
+  units_per_serving: 1          # vitacost: serving size 1 tablet
+  vitamin_c_per_serving_mg: 1000 # vitacost: 1 g (1,000 mg)
+  servings_per_container: 100
+
+prices:
+  - retailer: Vitacost
+    price_usd: 9.17             # vitacost: $9.17 (tagged Sale but equals regular price)
+    servings: 100
+    url: https://www.vitacost.com/products/now-foods-c-1000-with-rose-hips-100-tablets-39672
+    date_checked: 2026-10-22
+    entered_by: claude
+    # No rating entered: the page shows a star breakdown (1,768 ratings) but no average.
+
+# MISSING: certification. None named on the Vitacost page; certifier sites not searched for this product.
+certifications: []
+
+# MISSING: COA. No COA or lab-results link on the Vitacost page.
+coas: []
+
+flags: []
+notes: ""

@@ -1,0 +1,40 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 100 tablets.
+category: magnesium
+entered_by: claude              # label info from nowfoods.com and vitacost.com
+brand: NOW Foods
+name: Magnesium Citrate 200 mg Tablets
+form: tablet
+magnesium_form: citrate         # nowfoods.com: magnesium source is magnesium citrate only
+other_ingredients: [hydroxypropyl cellulose, microcrystalline cellulose, "vegetarian coating (hypromellose, calcium carbonate, glycerin)", stearic acid (vegetable source), croscarmellose sodium, magnesium stearate (vegetable source)]   # nowfoods.com and vitacost.com
+
+dose:
+  units_per_serving: 2          # nowfoods.com and vitacost.com: serving size 2 tablets
+  magnesium_per_serving_mg: 400 # Supplement Facts "Magnesium" line = elemental, 400 mg per 2 tablets (95% DV); the name's "200 mg" is per tablet. vitacost 100-count page: made from 2,660 mg magnesium citrate
+  servings_per_container: 50    # nowfoods.com and vitacost.com Supplement Facts (vitacost "Key info" says 100 servings, which conflicts; Supplement Facts used)
+
+prices:
+  - retailer: NOW Foods
+    price_usd: 19.99            # nowfoods.com: 100 tablets $19.99 (SKU 1290)
+    servings: 50
+    url: https://www.nowfoods.com/products/supplements/magnesium-citrate-200-mg-tablets
+    date_checked: 2026-10-22
+    entered_by: claude
+  - retailer: Vitacost
+    price_usd: 13.46            # vitacost.com regular price, 100 tablets
+    servings: 50
+    url: https://www.vitacost.com/products/now-foods-magnesium-citrate-200-mg-100-tablets-116584
+    date_checked: 2026-10-22
+    entered_by: claude
+# Not entered: Vitacost 250-tablet page (https://www.vitacost.com/products/now-foods-magnesium-citrate-200-mg-250-tablets-691)
+# showed $19.99 vs $39.99 for 250 on nowfoods.com; different size, and the gap looks odd, so left for River to check.
+
+# MISSING: certification. NOW's page shows an Intertek GMP program and other seals, but none of the five certifiers
+# (NSF Sport, Informed Sport, USP, BSCG, Clean Label Project); a WebSearch found no certifier listing for this product.
+certifications: []
+
+# MISSING: COA. No COA link on nowfoods.com or either Vitacost page.
+coas: []
+
+flags: [made in a facility that processes wheat, gluten, soy, milk, egg, fish, shellfish and sesame]   # nowfoods.com
+notes: ""

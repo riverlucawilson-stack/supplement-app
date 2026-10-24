@@ -1,0 +1,34 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude needs River's check.
+# Size chosen: 90 gelcaps. All label values below are from the Vitacost page
+# https://www.vitacost.com/products/thorne-super-epa-90-gelcaps-85477
+category: fish-oil
+entered_by: claude              # label info from the Vitacost product page
+brand: Thorne
+name: Super EPA 90 Gelcaps
+form: softgel                   # Vitacost sells it as "gelcaps" (gelatin capsule); closest allowed form
+oil_form: not_stated            # Vitacost page does not state TG / rTG / EE ("purified fish oil" only)
+oil_source: anchovy, sardine, mackerel   # Vitacost: "Contains ingredients derived from fish (fish oil = anchovy, sardine, mackerel)"
+other_ingredients: [gelatin (bovine), purified water, glycerin (vegetable source), vitamin E (mixed tocopherols)]   # Vitacost "Other ingredients"
+
+dose:
+  units_per_serving: 1          # Vitacost: "Serving size 1 gelcap"
+  epa_per_serving_mg: 425       # Vitacost Supplement Facts "EPA"
+  dha_per_serving_mg: 270       # Vitacost Supplement Facts "DHA"
+  total_omega3_per_serving_mg: 813   # Vitacost "Total Omega-3 Fatty Acids (from Fish Oil)"
+  servings_per_container: 90    # Vitacost: serving 1 gelcap, 90 count. Key info "Total servings 90 count" is the gelcap count; same number here because 1 per serving.
+
+prices:
+  - retailer: Vitacost
+    price_usd: 41.00            # regular and sale both $41.00 (page shows a "Sale" tag); 90 count
+    servings: 90
+    url: https://www.vitacost.com/products/thorne-super-epa-90-gelcaps-85477
+    date_checked: 2026-10-22
+    entered_by: claude
+
+# MISSING: certification. No nsfsport.com listing URL reached for Thorne Super EPA. thorne.com's NSF claim is not a source; Vitacost page names no third-party certification.
+certifications: []
+# MISSING: COA. No lab report link on the Vitacost page.
+coas: []
+
+flags: ["contains fish (anchovy, sardine, mackerel)", gelatin (bovine)]
+notes: ""

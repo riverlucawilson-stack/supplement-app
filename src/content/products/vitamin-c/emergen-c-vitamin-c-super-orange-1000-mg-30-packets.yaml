@@ -1,0 +1,33 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude
+# still needs River's check against its link.
+category: vitamin-c
+entered_by: claude              # label info from vitacost.com
+brand: Emergen-C
+name: Vitamin C Super Orange 1,000 mg Packets
+form: powder
+vitamin_c_form: other           # vitacost: "Vitamin C (as ascorbic acid, zinc ascorbate)"; not a buffered ascorbate blend, so "other". River to confirm.
+other_ingredients: [fructose, maltodextrin, citric acid, malic acid, acacia, beta-carotene (color), glycine, L-aspartic acid, natural flavors, orange juice concentrate (color and flavor), orange oil, silicon dioxide, tartaric acid, tocopherols]   # vitacost
+
+dose:
+  units_per_serving: 1          # vitacost: serving size 1 packet (9.1 g)
+  vitamin_c_per_serving_mg: 1000 # vitacost: 1,000 mg
+  zinc_per_serving_mg: 2        # vitacost: Zinc (as zinc ascorbate) 2 mg
+  servings_per_container: 30
+
+prices:
+  - retailer: Vitacost
+    price_usd: 15.43            # vitacost: $15.43 (sale price equals regular price)
+    servings: 30
+    url: https://www.vitacost.com/products/emergen-c-vitamin-c-super-orange-1-000-mg-30-packets-0-32-oz-9-1-g-each-18057
+    date_checked: 2026-10-22
+    entered_by: claude
+    # No rating entered: the page shows a star breakdown (254 reviews) but no average.
+
+# MISSING: certification. None named on the Vitacost page; certifier sites not searched for this product.
+certifications: []
+
+# MISSING: COA. No COA or lab-results link on the Vitacost page.
+coas: []
+
+flags: [added sugar]            # vitacost: Total sugars 6 g (6 g added)
+notes: ""

@@ -1,0 +1,39 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude needs River's check.
+# Label info from the Vitacost page (URL in prices). Panel has 1 tablet per serving, 90 servings.
+category: multivitamin
+entered_by: claude
+brand: Nature Made
+name: Multi For Her
+form: tablet
+formula_for: women              # from the product name ("For Her")
+folate_form: folic acid         # Vitacost: "1000 mcg DFE (600 mcg Folic Acid)"
+b12_form: cyanocobalamin        # Vitacost: "Vitamin B12 (as Cyanocobalamin)"
+vitamin_d_form: D3 (cholecalciferol)   # Vitacost: "Vitamin D3 (as Cholecalciferol)"
+other_ingredients: [cellulose gel, modified food starch, maltodextrin, croscarmellose sodium, hypromellose, magnesium stearate, silicon dioxide, gelatin, polyethylene glycol]   # Vitacost
+
+dose:
+  units_per_serving: 1          # Vitacost: serving size 1 tablet
+  # Counted (Vitacost panel %DV >= 100): vitamin C 200, vitamin D 125, vitamin E 150, thiamin 125, riboflavin 131,
+  # niacin 125, vitamin B6 118, folate 250, vitamin B12 250, biotin 100, pantothenic acid 200, iron 100, iodine 100,
+  # zinc 136, selenium 127, copper 222, manganese 174, chromium 343, molybdenum 167.
+  # Not counted: vitamin A 83, vitamin K 67, calcium 19, magnesium 24.
+  nutrients_at_100_dv: 19
+  folate_mcg_dfe: 1000          # Vitacost: 1000 mcg DFE, 250% DV
+  vitamin_b12_mcg: 6            # Vitacost: 6 mcg, 250% DV
+  vitamin_d_mcg: 25             # Vitacost: 25 mcg (1000 IU), 125% DV
+  iron_mg: 18                   # Vitacost: 18 mg, 100% DV
+  servings_per_container: 90    # Vitacost: 90
+
+prices:
+  - retailer: Vitacost
+    price_usd: 10.18            # regular and sale both $10.18
+    servings: 90                # 90 tablets at 1 per day
+    url: https://www.vitacost.com/products/nature-made-multi-for-her-90-tablets-40397
+    date_checked: 2026-10-22
+    entered_by: claude
+
+certifications: []              # MISSING: no certifier listing checked or found; only the Vitacost page was read
+coas: []                        # MISSING: no COA found in the page read
+
+flags: [contains iron, contains gelatin]   # Vitacost ingredient list; page has no allergen statement
+notes: ""

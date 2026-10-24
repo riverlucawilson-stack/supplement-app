@@ -1,0 +1,33 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude
+# still needs River's check against its link.
+category: vitamin-b12
+entered_by: claude              # label info from the Vitacost product page
+brand: Nature Made
+name: Vitamin B12 1,000 mcg
+form: softgel
+b12_form: cyanocobalamin   # Vitacost page Supplement Facts: "Vitamin B12 (as Cyanocobalamin) 1000 mcg"
+other_ingredients: [soybean oil, gelatin, glycerin, yellow beeswax, water, lecithin, added colors (including carmine)]   # Vitacost page
+
+dose:
+  units_per_serving: 1
+  vitamin_b12_per_serving_mcg: 1000   # Vitacost page Supplement Facts
+  servings_per_container: 90
+
+prices:
+  - retailer: Vitacost
+    price_usd: 17.70          # Vitacost page regular price
+    servings: 90
+    url: https://www.vitacost.com/products/nature-made-vitamin-b12-1-000-mcg-90-softgels-145568
+    date_checked: 2026-10-22
+    entered_by: claude
+    # MISSING: star rating. Page shows a star breakdown but states no average, so none entered.
+
+# MISSING/CHECK: certifications. Looked at sport.wetestyoutrust.com and nsfsport.com; their product listings are
+# search-only pages and could not be searched here. quality-supplements.org did not load. Not confirmed, so left out.
+certifications: []
+
+# MISSING: COA. Not looked for beyond the retailer page; none linked there.
+coas: []
+
+flags: [contains soy, contains gelatin, "contains carmine (insect-derived color)"]   # Vitacost: "colors added (including carmine)"
+notes: ""

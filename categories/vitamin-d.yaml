@@ -1,0 +1,63 @@
+# Everything specific to vitamin D. The site reads this file when it builds.
+# How each part works is explained in categories/README.md.
+slug: vitamin-d
+name: Vitamin D
+status: published
+order: 3
+
+page:
+  title: Vitamin D compared by cost per 1,000 IU and testing
+  description: Every vitamin D product converted to cost per 1,000 IU (25 mcg), with D3 or D2, carrier oil, added K2, and third-party certifications and lab results (COAs) graded A to C.
+  heading: What vitamin D really costs, and how much of its testing you can see.
+  intro: >-
+    Every price is converted to **cost per 1,000 IU (25 mcg) of vitamin D**. Each product shows whether it's D3 or
+    D2, the oil it's carried in, and any added vitamin K2. Testing transparency gets its own grade, A to C, and is
+    never blended into the price.
+
+comparison:
+  # US labels must give vitamin D in mcg (IU is optional), so products record mcg. 25 mcg = 1,000 IU.
+  amount: 25
+  unit: mcg
+  counts_toward: [vitamin_d_per_serving_mcg]
+  label: per 1,000 IU (25 mcg) vitamin D
+  short: Cost per 1,000 IU
+  # No daily amount: River chose to leave "cost per 30 days" out unless River sets one.
+  plausible_cost: { min: 0.001, max: 1 }
+
+dose_fields:
+  # Softgels, tablets, gummies, capsules or drops in one serving, as the label says.
+  units_per_serving: { label: Units per serving, whole_number: true }
+  # The mcg figure from the Supplement Facts panel (not the IU figure).
+  vitamin_d_per_serving_mcg:
+    label: Vitamin D per serving
+    unit: mcg
+    max: 1250
+    max_message: 'dose: {value} mcg per serving is over 1,250 mcg (50,000 IU). Check the units (mcg, not IU).'
+  # Only if the label lists vitamin K2.
+  k2_per_serving_mcg: { label: Added vitamin K2 per serving, unit: mcg, optional: true }
+
+type:
+  field: vitamin_d_form
+  label: Vitamin D form
+  options:
+    d3: D3 (cholecalciferol)
+    d2: D2 (ergocalciferol)
+    other: Other
+
+extra_fields:
+  # The oil the vitamin D is dissolved in, as the label names it (e.g. olive oil, MCT oil). Leave out if none.
+  carrier_oil: Carrier oil
+  # Only if the label names it, e.g. MK-7.
+  k2_form: Vitamin K2 form
+
+describe: ['{vitamin_d_form}', '{carrier_oil}', '+ {k2_per_serving_mcg} mcg K2']
+
+certifications: [NSF Certified for Sport, Informed Sport, USP Verified, BSCG, Clean Label Project]
+
+coa_tests:
+  potency: Vitamin D potency
+  lead: Lead
+  arsenic: Arsenic
+  cadmium: Cadmium
+  mercury: Mercury
+  microbial: Microbial

@@ -1,0 +1,36 @@
+# Looked up by Claude on 2026-10-21. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 150 softgels.
+category: vitamin-d
+entered_by: claude              # label info from vitacost.com and naturesbounty.com
+brand: Nature's Bounty
+name: Vitamin D3 5000 IU (125 mcg) Rapid Release Softgels
+form: softgel
+vitamin_d_form: d3              # vitacost.com and naturesbounty.com: "Vitamin D (as D3 cholecalciferol)"
+carrier_oil: soybean oil, corn oil   # label's other ingredients list soybean oil and corn oil (naturesbounty.com, vitacost.com); the label does not say which is the carrier, so both are listed
+other_ingredients: [soybean oil, gelatin, vegetable glycerin, corn oil]   # vitacost.com, naturesbounty.com
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 softgel
+  vitamin_d_per_serving_mcg: 125 # vitacost.com and naturesbounty.com: 125 mcg (5,000 IU)
+  servings_per_container: 150   # vitacost.com: 150 servings
+
+prices:
+  - retailer: Vitacost
+    price_usd: 15.46            # vitacost.com: $15.46 (regular and sale price shown the same), 150 softgels
+    servings: 150
+    url: https://www.vitacost.com/products/nature-s-bounty-vitamin-d3-125-mcg-5-000-iu-150-rapid-release-softgels-32101
+    date_checked: 2026-10-21
+    entered_by: claude
+  # MISSING: second price. naturesbounty.com page (https://naturesbounty.com/products/vitamin-d3-5000-iu-150-rapid-release-softgels)
+  # shows only a 0.00 placeholder price. Rite Aid URL given (https://www.riteaid.com/shop/natures-bounty-vitamin-d-maximum-strength-5000-iu-softgels-150-softgels-0349525)
+  # is a Rite Aid blood-test page, not this product. Hannaford URL (240 count) shows no price ("See Best Price").
+
+# MISSING: certification. Searched quality-supplements.org (USP); the brand-filter page failed to load, and no listing naming this product was read.
+# Not checked further on nsfsport.com: the vitamin D search there showed no Nature's Bounty listing.
+certifications: []
+
+# MISSING: COA. No COA or lab-results link on naturesbounty.com or vitacost.com for this product.
+coas: []
+
+flags: []
+notes: ""

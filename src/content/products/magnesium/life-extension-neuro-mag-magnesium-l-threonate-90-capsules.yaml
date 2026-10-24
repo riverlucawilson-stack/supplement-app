@@ -1,0 +1,33 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 90 vegetarian capsules.
+category: magnesium
+entered_by: claude              # label info from vitacost.com
+brand: Life Extension
+name: Neuro-Mag Magnesium L-Threonate 90 Vegetarian Capsules
+form: capsule
+magnesium_form: threonate       # vitacost.com Supplement Facts: magnesium L-threonate
+branded_ingredient: Magtein     # vitacost.com Supplement Facts: "2,000 mg Magtein magnesium L-threonate"
+other_ingredients: [vegetable cellulose (capsule), microcrystalline cellulose, stearic acid, vegetable stearate, silica]   # vitacost.com
+
+dose:
+  units_per_serving: 3          # vitacost.com: serving size 3 capsules
+  magnesium_per_serving_mg: 144 # Supplement Facts "Magnesium" line = elemental, 144 mg per 3 capsules (34% DV). The 2,000 mg is the L-threonate compound weight, not used.
+  servings_per_container: 30    # vitacost.com Supplement Facts (its "Key info" says 90, which conflicts; 90 capsules / 3 = 30)
+
+prices:
+  - retailer: Vitacost
+    price_usd: 31.50            # vitacost.com regular price (sale price shown is the same)
+    servings: 30
+    url: https://www.vitacost.com/products/life-extension-neuro-mag-magnesium-l-threonate-90-vegetarian-capsules-48-mg-per-capsule-40244
+    date_checked: 2026-10-22
+    entered_by: claude
+# MISSING: second price. lifeextension.com did not turn up in WebSearch; fredmeyer.com page showed no price.
+
+# MISSING: certification. WebSearch found no NSF/Informed Sport/USP listing for this product.
+certifications: []
+
+# MISSING: COA. No COA link on the Vitacost page; lifeextension.com page not found.
+coas: []
+
+flags: []
+notes: ""

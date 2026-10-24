@@ -1,0 +1,44 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude needs River's check.
+# Size: 1 lb 13.5 oz (837 g). Label info from the Vitacost page (URL in prices).
+# Vitacost "Total servings" key-info field says "837 g" (container weight); servings taken from the panel instead.
+category: protein-powder
+entered_by: claude
+brand: Vega
+name: Performance Protein + Recovery   # Vitacost title and NSF row name; often sold as "Vega Sport"
+form: powder
+protein_source: plant_blend     # Vitacost ingredients: "Plant protein blend (pea protein, pumpkin seed protein, organic sunflower seed protein)"
+sources_listed: pea protein, pumpkin seed protein, organic sunflower seed protein   # Vitacost, label order
+flavor: Creamy Chocolate
+other_ingredients: [cocoa powder (processed with alkali), natural flavors, stevia leaf extract, sea salt, xanthan gum]   # Vitacost; auditor confirmed the list is complete
+
+dose:
+  serving_size_g: 44            # Vitacost: "1 scoop (44 g)"
+  protein_per_serving_g: 30     # Vitacost: protein 30 g
+  servings_per_container: 19    # Vitacost panel: "About 19" (837 g / 44 g = 19.0)
+
+prices:
+  - retailer: Vitacost
+    price_usd: 44.99            # regular and sale both $44.99; page does not state stock status (Add to cart shown)
+    servings: 19
+    url: https://www.vitacost.com/products/vega-plant-based-protein-performance-protein-recovery-creamy-chocolate-1-lb-13-5-oz-837-g-66667
+    date_checked: 2026-10-22
+    entered_by: claude
+
+certifications:
+  - program: NSF Certified for Sport
+    # DOUBT: certifier's own results page (nsfsport.com, Dietary Supplements > Protein) lists two rows named
+    # "Vega Performance Protein + Recovery Creamy Chocolate" (Vega). That page shows no package size or status,
+    # so I could not confirm that the 837 g container is covered. The individual listing pages (ids 1708467,
+    # 1677015) returned another brand's (ATHLEAN-RX) content when fetched, so they were not used.
+    # CHECK (River): NSF's results page lists 7 Vega "Performance Protein + Recovery" flavors, Creamy Chocolate twice (ids 1708467, 1677015).
+    # Kept as a certification because the certifier's own site names this product and flavor; the size is unconfirmed.
+    # Vitacost's description mentions "NSF Certified Sport" but that is a retailer claim, not a source.
+    listing_url: https://www.nsfsport.com/certified-products/search-results.php?product_category=Dietary+Supplements&goal=&type=Protein&brand=
+    date_verified: 2026-10-22
+    entered_by: claude
+
+# MISSING: COA. None found in the pages read (Vitacost, NSF results page). Brand site not read.
+coas: []
+
+flags: ["may contain traces of soy", "manufactured in a facility that also processes milk, soy, peanuts, eggs, tree nuts, and sesame", "Montmorency tart cherry 480 mg", "Bacillus subtilis DE111 2 billion CFU"]   # Vitacost allergen lines and Supplement Facts panel
+notes: ""

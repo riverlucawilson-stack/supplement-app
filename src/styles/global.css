@@ -127,6 +127,22 @@ h3 {
   display: flex;
   gap: 1.25rem;
   font-size: 0.9rem;
+  /* One link per published category, so the list grows. It scrolls sideways
+     inside itself instead of making the whole page wider on phones. */
+  min-width: 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+
+@media (max-width: 640px) {
+  .site-header .wrap {
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+  }
+  .site-nav {
+    flex-basis: 100%;
+  }
 }
 
 .site-nav a {
@@ -134,7 +150,7 @@ h3 {
   text-decoration: none;
 }
 
-.site-nav a[aria-current='page'] {
+.site-nav a[aria-current] {
   color: var(--ink);
   font-weight: 600;
 }
@@ -186,6 +202,11 @@ h3 {
 .pill-warn {
   background: var(--warn-soft);
   color: var(--warn);
+}
+
+.pill-good {
+  background: var(--tier-a-soft);
+  color: var(--tier-a);
 }
 
 .pill-muted {

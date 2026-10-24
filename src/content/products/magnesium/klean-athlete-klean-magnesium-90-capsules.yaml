@@ -1,0 +1,37 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 90 capsules.
+category: magnesium
+entered_by: claude              # label info from kleanathlete.com label PDF
+brand: Klean Athlete
+name: Klean Magnesium 90 Capsules
+form: capsule
+magnesium_form: glycinate       # label PDF: "Magnesium (as magnesium glycinate)"
+other_ingredients: [hydroxypropyl methylcellulose (vegetarian capsule), ascorbyl palmitate]   # label PDF https://www.kleanathlete.com/media/pdf_upload/KA202599-90-LBL.pdf
+
+dose:
+  units_per_serving: 1          # label PDF: serving size 1 vegetarian capsule
+  magnesium_per_serving_mg: 120 # Supplement Facts "Magnesium" line, 120 mg = 29% DV (120/420), so elemental
+  servings_per_container: 90
+
+prices:
+  - retailer: Klean Athlete
+    price_usd: 26.50            # kleanathlete.com, 90 capsules
+    servings: 90
+    url: https://www.kleanathlete.com/klean-magnesium.html
+    date_checked: 2026-10-22
+    entered_by: claude
+# Not entered: shop.kleanathlete.com showed $21.59 (was $25.40), marked sold out.
+
+certifications:
+  - program: NSF Certified for Sport
+    # nsfsport.com listing "Klean Magnesium", Klean Athlete, capsule, unflavored, package size 90, serving size 1 capsule.
+    # The page names the Certified for Sport mark but shows no status or listing date.
+    listing_url: https://www.nsfsport.com/certified-products/listing-detail.php?id=1281622
+    date_verified: 2026-10-22
+    entered_by: claude
+
+# MISSING: COA. No COA link on kleanathlete.com (only product info and Supplement Facts PDFs).
+coas: []
+
+flags: []
+notes: ""

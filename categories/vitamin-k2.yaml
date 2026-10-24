@@ -1,0 +1,64 @@
+# Everything specific to vitamin K2. The site reads this file when it builds.
+# How each part works is explained in categories/README.md.
+slug: vitamin-k2
+name: Vitamin K2
+status: published
+order: 10
+
+page:
+  title: Vitamin K2 compared by cost per 100 mcg and testing
+  description: Every vitamin K2 product converted to cost per 100 mcg of K2, with MK-7 or MK-4, any added vitamin D3, and third-party certifications and lab results (COAs) graded A to C.
+  heading: What vitamin K2 really costs, and how much of its testing you can see.
+  intro: >-
+    Every price is converted to **cost per 100 mcg of vitamin K2**, using the K2 amount on the Supplement Facts
+    panel. Each product shows whether it's MK-7 or MK-4 (or both) and any added vitamin D3. Testing transparency
+    gets its own grade, A to C, and is never blended into the price.
+
+comparison:
+  amount: 100
+  unit: mcg
+  counts_toward: [vitamin_k2_per_serving_mcg]
+  label: per 100 mcg vitamin K2
+  short: Cost per 100 mcg
+  # No daily amount: same rule as the other new categories.
+  plausible_cost: { min: 0.005, max: 3 }
+
+dose_fields:
+  # Softgels, capsules, tablets, gummies or drops in one serving, as the label says.
+  units_per_serving: { label: Units per serving, whole_number: true }
+  # The K2 mcg figure from the Supplement Facts panel. If the label gives only total
+  # vitamin K, use the K2 amount named under it; if K2 isn't separated out, skip the product.
+  vitamin_k2_per_serving_mcg:
+    label: Vitamin K2 per serving
+    unit: mcg
+    max: 5000
+    max_message: 'dose: {value} mcg per serving is over 5,000 mcg. Check the units (mcg, not mg).'
+  # Only if the label lists vitamin D3.
+  vitamin_d_per_serving_mcg: { label: Added vitamin D per serving, unit: mcg, optional: true }
+
+type:
+  field: k2_form
+  label: K2 form
+  options:
+    mk7: MK-7
+    mk4: MK-4
+    mk4_and_mk7: MK-4 and MK-7
+    other: Other
+
+extra_fields:
+  # A branded K2 ingredient the label names, e.g. MenaQ7, K2VITAL.
+  k2_source: K2 ingredient
+  # The oil it's carried in, if the label names one.
+  carrier_oil: Carrier oil
+
+describe: ['{k2_form}', '{k2_source}', '+ {vitamin_d_per_serving_mcg} mcg vitamin D']
+
+certifications: [NSF Certified for Sport, Informed Sport, USP Verified, BSCG, Clean Label Project]
+
+coa_tests:
+  potency: Vitamin K2 potency
+  lead: Lead
+  arsenic: Arsenic
+  cadmium: Cadmium
+  mercury: Mercury
+  microbial: Microbial

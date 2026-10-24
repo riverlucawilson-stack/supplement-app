@@ -1,0 +1,32 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude
+# still needs River's check against its link.
+category: vitamin-c
+entered_by: claude              # label info from the Vitacost product page
+brand: Nature's Bounty
+name: Vitamin C 1,000 mg
+form: tablet                    # sold as caplets; the form list has no caplet option
+vitamin_c_form: ascorbic_acid   # Vitacost: "Vitamin C (as ascorbic acid)"
+other_ingredients: [vegetable cellulose, calcium silicate, vegetable magnesium stearate, vegetable stearic acid]   # Vitacost
+
+dose:
+  units_per_serving: 1          # Vitacost: serving size 1 caplet
+  vitamin_c_per_serving_mg: 1000 # Vitacost: 1,000 mg
+  servings_per_container: 100   # panel has no servings-per-container line; Vitacost "Total servings 100 count" at 1 caplet per serving
+
+prices:
+  - retailer: Vitacost
+    price_usd: 11.50            # Vitacost: regular price, 100 caplets
+    servings: 100
+    url: https://www.vitacost.com/products/nature-s-bounty-vitamin-c-1-000-mg-100-caplets-67786
+    date_checked: 2026-10-22
+    entered_by: claude
+    # MISSING: rating. Page shows a star distribution but states no average, so none entered.
+
+# MISSING/CHECK: certifications. None listed on the Vitacost page; certifier sites not checked.
+certifications: []
+
+# MISSING: COA. No COA or lab-results link on the Vitacost page.
+coas: []
+
+flags: []
+notes: ""

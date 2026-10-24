@@ -1,0 +1,42 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude needs River's check.
+# Size chosen: 120 softgels (60 count also priced). Label info from Vitacost
+# https://www.vitacost.com/products/nordic-naturals-ultimate-omega-2x-lemon-120-soft-gels-1-075-mg-per-softgel-73701
+category: fish-oil
+entered_by: claude              # label info from the Vitacost product page
+brand: Nordic Naturals
+name: Ultimate Omega 2X Lemon 120 Softgels
+form: softgel
+oil_form: rtg                   # Vitacost: "re-esterified triglyceride (rTG) form" (also described as triglyceride)
+oil_source: anchovy, sardine, mackerel, herring   # Vitacost: purified deep sea fish oil "from anchovies, sardines, mackerel, and herring"
+other_ingredients: [soft gel capsule (gelatin, glycerin, water, natural flavor), natural flavor, RRR-alpha tocopherol, rosemary extract]   # Vitacost
+
+dose:
+  units_per_serving: 2          # Vitacost: serving size 2 soft gels
+  epa_per_serving_mg: 1125      # Vitacost Supplement Facts "EPA"
+  dha_per_serving_mg: 875       # Vitacost Supplement Facts "DHA"
+  total_omega3_per_serving_mg: 2150   # Vitacost "Total omega-3s"
+  servings_per_container: 60    # Vitacost Supplement Facts. Key info "Total servings 120 count" is the softgel count (conflict noted).
+
+prices:
+  - retailer: Vitacost
+    price_usd: 83.26            # regular and sale both $83.26; 120 count
+    servings: 60
+    url: https://www.vitacost.com/products/nordic-naturals-ultimate-omega-2x-lemon-120-soft-gels-1-075-mg-per-softgel-73701
+    date_checked: 2026-10-22
+    entered_by: claude
+  - retailer: Vitacost
+    price_usd: 45.01            # regular and sale both $45.01; 60 count (30 servings; Key info says "60 count")
+    servings: 30
+    url: https://www.vitacost.com/products/nordic-naturals-ultimate-omega-2x-lemon-60-softgels-1-075-mg-per-softgel-65085
+    date_checked: 2026-10-22
+    entered_by: claude
+
+# MISSING: certification. No IFOS report found. certifications.nutrasource.ca brand page for Nordic Naturals
+# (https://certifications.nutrasource.ca/certified-products/brand?id=NRDN) lists IGEN (non-GMO) products with no lot/date,
+# not IFOS; Vitacost "3rd Party Purity Tested" is not a source.
+certifications: []
+# MISSING: COA. No lab report link on the Vitacost pages.
+coas: []
+
+flags: ["contains fish (anchovy, sardine, mackerel, herring)", gelatin]   # Vitacost has no explicit "Contains fish" statement; species from product text
+notes: ""

@@ -1,0 +1,34 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude
+# still needs River's check against its link.
+category: vitamin-b12
+entered_by: claude              # label info from the Vitacost product page
+brand: NOW Foods
+name: Methyl B-12 1,000 mcg
+form: tablet                    # Vitacost: "Lozenge"; the form list has no lozenge option
+b12_form: methylcobalamin   # Vitacost page Supplement Facts: "Vitamin B-12 (as Methylcobalamin) 1 mg (1,000 mcg)"
+delivery: lozenge (chew or dissolve in mouth)   # Vitacost: "Chew lozenge or hold in mouth until dissolved and swallow."
+other_ingredients: [xylitol, hydroxypropyl cellulose, microcrystalline cellulose, citric acid, stearic acid (vegetable source), natural flavors, organic stevia leaf extract (enzyme-modified steviol glycosides), organic monk fruit extract]   # Vitacost page
+
+dose:
+  units_per_serving: 1
+  vitamin_b12_per_serving_mcg: 1000   # Vitacost page Supplement Facts
+  servings_per_container: 100
+
+prices:
+  - retailer: Vitacost
+    price_usd: 6.84          # Vitacost page regular price
+    servings: 100
+    url: https://www.vitacost.com/products/now-foods-methyl-b-12-1-000-mcg-100-lozenges-449
+    date_checked: 2026-10-22
+    entered_by: claude
+    # MISSING: star rating. Page shows a star breakdown but states no average, so none entered.
+
+# MISSING/CHECK: certifications. Looked at sport.wetestyoutrust.com and nsfsport.com; their product listings are
+# search-only pages and could not be searched here. quality-supplements.org did not load. Not confirmed, so left out.
+certifications: []
+
+# MISSING: COA. Not looked for beyond the retailer page; none linked there.
+coas: []
+
+flags: [sugar alcohol]
+notes: ""

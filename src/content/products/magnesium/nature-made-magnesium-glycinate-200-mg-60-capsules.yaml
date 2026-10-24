@@ -1,0 +1,34 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 60 capsules.
+category: magnesium
+entered_by: claude              # label info from heb.com
+brand: Nature Made
+name: Magnesium Glycinate 200 mg Capsules   # heb.com title, without the marketing words "High Absorption"
+form: capsule
+magnesium_form: glycinate       # product title on heb.com / wegmans.com / foodlion.com; the panel text did not name the compound, so confirm on the label
+# CHECK: foodlion.com lists hypromellose, magnesium stearate, cellulose gel, silicon dioxide instead.
+# Decision (Claude, 2026-10-22): use heb.com's list, since heb.com is the price and label source.
+other_ingredients: [citric acid, gelatin, water, magnesium stearate, stearic acid, cellulose gel, silicon dioxide]   # heb.com
+
+dose:
+  units_per_serving: 2          # heb.com: serving size 2 capsules (foodlion.com directions: take 2 capsules daily)
+  magnesium_per_serving_mg: 200 # heb.com: Magnesium 200 mg per serving = 48% DV (200/420), so elemental
+  servings_per_container: 30    # heb.com: 60 capsules, 30 servings
+
+prices:
+  - retailer: H-E-B
+    price_usd: 10.68            # heb.com, 60 count
+    servings: 30
+    url: https://www.heb.com/product-detail/nature-made-high-absorption-magnesium-glycinate-200-mg-60-ct/5008501
+    date_checked: 2026-10-22
+    entered_by: claude
+# MISSING: other prices. wegmans.com, citymarket.com (no content/price) and foodlion.com (no price, "See Best Price") gave no price.
+
+# MISSING: certification. WebSearch for a USP listing found nothing from quality-supplements.org.
+certifications: []
+
+# MISSING: COA. No COA link found on the pages read.
+coas: []
+
+flags: []
+notes: ""

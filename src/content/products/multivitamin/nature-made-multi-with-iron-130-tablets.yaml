@@ -1,0 +1,43 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude needs River's check.
+# Label info from the Vitacost page (URL in prices). The Vitacost title is "Nature Made, Multi, 130 Tablets"
+# and its description says "Multi with Iron"; Kroger and Fred Meyer pages call it "Multi Complete" but loaded no product details.
+category: multivitamin
+entered_by: claude
+brand: Nature Made
+name: Multi (with iron)
+form: tablet
+formula_for: adults             # Vitacost suggested use: "Adults, take 1 tablet daily"
+folate_form: folic acid         # Vitacost: "Folate 665 mcg DFE (400 mcg Folic Acid)"
+b12_form: cyanocobalamin        # Vitacost: "Vitamin B12 (as Cyanocobalamin)"
+vitamin_d_form: D3 (cholecalciferol)   # Vitacost: "Vitamin D3 (as Cholecalciferol)"
+other_ingredients: [cellulose gel, modified food starch, "less than 2% of maltodextrin", croscarmellose sodium, silicon dioxide, hypromellose, magnesium stearate, gelatin, polyethylene glycol]   # Vitacost
+
+dose:
+  units_per_serving: 1          # Vitacost: serving size 1 tablet
+  # Counted (Vitacost panel %DV >= 100): vitamin C 200, vitamin D 125, vitamin E 150, thiamin 125, riboflavin 131,
+  # niacin 125, vitamin B6 118, folate 166, vitamin B12 250, biotin 100, pantothenic acid 200, iron 100, iodine 100,
+  # zinc 100, selenium 100, copper 100, manganese 100, chromium 100, molybdenum 111.
+  # Not counted: vitamin A 83, vitamin K 67, calcium 12, magnesium 24.
+  nutrients_at_100_dv: 19
+  folate_mcg_dfe: 665           # Vitacost: 665 mcg DFE, 166% DV
+  vitamin_b12_mcg: 6            # Vitacost: 6 mcg, 250% DV
+  vitamin_d_mcg: 25             # Vitacost: 25 mcg (1000 IU), 125% DV
+  iron_mg: 18                   # Vitacost: 18 mg (as ferrous fumarate), 100% DV
+  servings_per_container: 130   # Vitacost: 130
+
+prices:
+  - retailer: Vitacost
+    price_usd: 12.78            # regular and sale both $12.78
+    servings: 130               # 130 tablets at 1 per day
+    url: https://www.vitacost.com/products/nature-made-multi-130-tablets-40426
+    date_checked: 2026-10-22
+    entered_by: claude
+
+# MISSING: USP Verified. The Vitacost page shows a "USP Verified" claim but links to no listing. The USP search
+# (quality-supplements.org/usp_verified_products) failed to load and no listing page was reached. The Kroger page
+# loaded without product details and the Fred Meyer page was not read. Not entered: a store or brand seal is not a source.
+certifications: []
+coas: []                        # MISSING: no COA found in the page read
+
+flags: [contains iron, contains gelatin]   # Vitacost; page has no allergen statement
+notes: ""

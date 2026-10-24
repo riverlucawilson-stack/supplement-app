@@ -1,0 +1,37 @@
+# Looked up by Claude on 2026-10-21. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 365 drops (about 10 mL bottle).
+category: vitamin-d
+entered_by: claude              # label info from nhc.com
+brand: Carlson
+name: Super Daily D3 2000 IU Liquid Drops
+form: liquid
+vitamin_d_form: d3              # nhc.com: "Vitamin D3 (as cholecalciferol)"
+carrier_oil: medium chain triglyceride oil   # nhc.com other ingredients: "Medium chain triglyceride oil (coconut and palm source)"
+other_ingredients: [medium chain triglyceride oil (coconut and palm source)]   # nhc.com
+
+dose:
+  units_per_serving: 1          # nhc.com: serving size 1 drop (0.028 mL)
+  vitamin_d_per_serving_mcg: 50 # nhc.com: 2,000 IU (50 mcg) per drop
+  servings_per_container: 365   # nhc.com: 365 servings (365 drops)
+
+prices:
+  - retailer: Nutrition Headquarters
+    price_usd: 17.99            # nhc.com: $17.99 read from the page's price data; the visible price text on the page was blank, so River should check it
+    servings: 365
+    url: https://www.nhc.com/products/super-daily-d3-2000-iu-vitamin-d-liquid-by-carlson-labs
+    date_checked: 2026-10-21
+    entered_by: claude
+  # Not entered: smallflower.com shows $20.61 sale price (regular $22.91) for 10.3 mL, but the variant was marked sold out.
+  # https://www.smallflower.com/products/carlson-super-daily-d3-2000-iu-drops-10_3-ml
+  # carlsonlabs.com shows $21.00 ($17.85 subscribe and save) but its page did not state bottle size or servings in text, so not used.
+  # https://www.carlsonlabs.com/products/super-daily-d3-2000-iu
+
+# MISSING: certification. No third-party certification on nhc.com or carlsonlabs.com (they show IGEN Non-GMO and "Potency and Purity Guaranteed", which are brand claims).
+# NSF/Informed Sport/USP searches returned no page naming this product.
+certifications: []
+
+# MISSING: COA. No COA link on carlsonlabs.com or nhc.com for this product.
+coas: []
+
+flags: []
+notes: ""

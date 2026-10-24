@@ -1,0 +1,38 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 60 scoops.
+category: magnesium
+entered_by: claude              # label info from thorne.com
+brand: Thorne
+name: Magnesium Bisglycinate
+form: powder
+magnesium_form: glycinate       # thorne.com: "Magnesium Bisglycinate"
+other_ingredients: [citric acid, monk fruit concentrate]   # thorne.com
+
+dose:
+  units_per_serving: 1          # thorne.com: serving size 1 scoop
+  magnesium_per_serving_mg: 200 # thorne.com: Magnesium 200 mg
+  servings_per_container: 60    # thorne.com: 60 servings
+
+prices:
+  - retailer: Thorne
+    price_usd: 52.00            # thorne.com: $52 for 60 scoops
+    servings: 60
+    url: https://thorne.com/products/dp/magnesium-bisglycinate
+    date_checked: 2026-10-22
+    entered_by: claude
+# Not used: wellbefore.com ($54.99, 6.5 oz "Sweet Flavor") shows no Supplement Facts or servings, so servings can't be set.
+
+certifications:
+  - program: NSF Certified for Sport
+    # Listing "Thorne Magnesium Bisglycinate", unflavored powder, 1 scoop (3.11 g), 187 g. 187 g / 3.11 g = 60 servings, matching thorne.com.
+    # CHECK: NSF says "Unflavored" while thorne.com calls it lightly sweetened (monk fruit); two other Thorne listings exist
+    # (id=1507934: 1 scoop 3.77 g, 226.2 g). Match is by brand, name, form and scoop count, so River should confirm.
+    listing_url: https://www.nsfsport.com/certified-products/listing-detail.php?id=1205063
+    date_verified: 2026-10-22
+    entered_by: claude
+
+# MISSING: COA. No COA or lab-results link on https://thorne.com/products/dp/magnesium-bisglycinate.
+coas: []
+
+flags: [sweetened with monk fruit concentrate]   # thorne.com other ingredients
+notes: ""

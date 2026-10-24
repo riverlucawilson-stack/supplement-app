@@ -1,0 +1,32 @@
+# Looked up by Claude on 2026-10-22 from the Vitacost product page. Every entry marked
+# entered_by: claude still needs River's check against its link. Size chosen: 120 mini capsules.
+category: vitamin-k2
+entered_by: claude              # label info from vitacost.com
+brand: MegaFood
+name: Vitamin D3 & K2
+form: capsule                   # vitacost: "120 Mini Capsules"
+k2_form: mk7                    # vitacost: "Vitamin K2 (as menaquinone-7)"
+other_ingredients: [maltodextrin, hypromellose, dicalcium phosphate, silicon dioxide]   # vitacost.com
+
+dose:
+  units_per_serving: 1          # vitacost: serving size 1 capsule
+  vitamin_k2_per_serving_mcg: 80 # vitacost: K2 (as MK-7) 80 mcg; K1 listed separately, not counted
+  vitamin_d_per_serving_mcg: 125 # vitacost: D3 125 mcg (5,000 IU)
+  servings_per_container: 120
+
+prices:
+  - retailer: Vitacost
+    price_usd: 37.99            # vitacost.com: "Regular price $37.99"
+    servings: 120
+    url: https://www.vitacost.com/products/megafood-vitamin-d3-k2-120-mini-capsules-103333
+    date_checked: 2026-10-22
+    entered_by: claude
+
+# MISSING: certifications. Not checked on any certifier's own site.
+certifications: []
+
+# MISSING: COA. Not looked for on the brand's site; only the Vitacost page was read.
+coas: []
+
+flags: []
+notes: "Also contains vitamin K1 (as phytonadione), 120 mcg, and 10 mg cabbage"

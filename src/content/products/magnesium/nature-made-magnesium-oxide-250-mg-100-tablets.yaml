@@ -1,0 +1,40 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 100 tablets.
+category: magnesium
+entered_by: claude              # label info from vitacost.com (panel text) and naturemade.com
+brand: Nature Made
+name: Magnesium Oxide 250 mg Tablets
+form: tablet
+magnesium_form: oxide           # vitacost.com: "Magnesium 250 mg ... as Magnesium Oxide"
+other_ingredients: [cellulose gel, croscarmellose sodium, stearic acid, hypromellose, magnesium stearate, silicon dioxide, color added, polyethylene glycol, triethyl citrate, polysorbate 80]   # vitacost.com (hypromellose is "less than 2%")
+
+dose:
+  units_per_serving: 1          # vitacost.com and naturemade.com: serving size 1 tablet
+  magnesium_per_serving_mg: 250 # vitacost.com and naturemade.com: 250 mg magnesium (as oxide)
+  servings_per_container: 100   # vitacost.com: 100 count at 1 tablet per serving
+
+prices:
+  - retailer: Fred Meyer
+    price_usd: 7.99             # fredmeyer.com: $7.99, 100 ct. A "Buy 1, Get 1 Free" promotion was shown; not applied. Facts panel not on this page ("See Packaging").
+    servings: 100
+    url: https://www.fredmeyer.com/p/nature-made-magnesium-tablets/0003160401269
+    date_checked: 2026-10-22
+    entered_by: claude
+  - retailer: Kroger
+    price_usd: 8.99             # kroger.com: $8.99, 100 ct. BOGO promotion shown; not applied.
+    servings: 100
+    url: https://www.kroger.com/p/nature-made-magnesium-tablets/0003160401269
+    date_checked: 2026-10-22
+    entered_by: claude
+# Not used: vitacost.com showed "Sale price $5.55" (100 count) at https://www.vitacost.com/products/nature-made-magnesium-250-mg-100-tablets-70862 ; regular price not shown.
+# Not used: stopandshop.com showed no price; heb.com $3.96 (servings field read 0, not usable).
+# naturemade.com page (https://www.naturemade.com/products/magnesium-250-mg-tablets) is marked Discontinued / "Product No Longer Available"; retailers still list it.
+
+# MISSING: certification. naturemade.com shows a USP Verified badge but links only to uspverified.org with no product listing. Searched quality-supplements.org via WebSearch; no product listing found. Brand claim is not recorded.
+certifications: []
+
+# MISSING: COA. None on the brand or retailer pages read.
+coas: []
+
+flags: []
+notes: ""

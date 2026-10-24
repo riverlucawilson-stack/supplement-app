@@ -1,0 +1,33 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude
+# still needs River's check against its link.
+category: vitamin-c
+entered_by: claude              # label info from vitacost.com
+brand: NOW Foods
+name: Buffered C-1000 Complex Tablets
+form: tablet
+vitamin_c_form: calcium_ascorbate # vitacost: "Vitamin C (from Calcium Ascorbate)"
+added_with: citrus bioflavonoids, acerola, rutin # vitacost: Citrus Bioflavonoid Complex 250 mg, Acerola Powder Complex 50 mg, Rutin Complex 50 mg
+other_ingredients: [hydroxypropyl cellulose, hypromellose, stearic acid, maltodextrin, vegetarian coating, magnesium stearate, silicon dioxide, caramel color]   # vitacost
+
+dose:
+  units_per_serving: 1          # vitacost: serving size 1 tablet
+  vitamin_c_per_serving_mg: 1000 # vitacost: 1 g (1,000 mg)
+  servings_per_container: 90
+
+prices:
+  - retailer: Vitacost
+    price_usd: 12.24            # vitacost: $12.24 (sale price equals regular price)
+    servings: 90
+    url: https://www.vitacost.com/products/now-foods-buffered-c-1000-complex-90-tablets-117137
+    date_checked: 2026-10-22
+    entered_by: claude
+    # No rating entered: the page shows a star breakdown (291 ratings) but no average.
+
+# MISSING: certification. None named on the Vitacost page; certifier sites not searched for this product.
+certifications: []
+
+# MISSING: COA. No COA or lab-results link on the Vitacost page.
+coas: []
+
+flags: []
+notes: ""

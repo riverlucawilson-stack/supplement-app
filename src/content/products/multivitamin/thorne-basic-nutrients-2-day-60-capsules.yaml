@@ -1,0 +1,49 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude needs River's check.
+# Label info from the Vitacost page ...-2-day-60-capsules-85476 (URL in prices). That page does not say NSF.
+# The separate "NSF Certified" Vitacost page (...-52954) failed to load, so I could not compare the two.
+# Thorne's own page (thorne.com/products/dp/basic-nutrients-2-day) shows the same facts, 30 servings (60 capsules).
+category: multivitamin
+entered_by: claude
+brand: Thorne
+name: Basic Nutrients 2/Day
+form: capsule
+formula_for: adults             # no age or sex wording in the name
+folate_form: L-5-methyltetrahydrofolate (Quatrefolic)   # Vitacost: "400 mcg as L-5-Methyltetrahydrofolate"; footnote uses Gnosis Quatrefolic
+b12_form: methylcobalamin       # Vitacost: "Vitamin B12 (as Methylcobalamin)"
+vitamin_d_form: D3 (cholecalciferol)   # Vitacost: "Vitamin D (as Vitamin D3)"
+other_ingredients: [hypromellose capsule, dicalcium phosphate, calcium laurate]   # Vitacost
+
+dose:
+  units_per_serving: 2          # Vitacost: serving size two capsules
+  # Counted (Vitacost panel %DV >= 100): vitamin A 117, vitamin C 278, vitamin D 250, vitamin E 110, vitamin K 333,
+  # thiamin 4167, riboflavin 923, niacin 500, vitamin B6 1176, folate 167, vitamin B12 25000, biotin 1667,
+  # pantothenic acid 900, zinc 136, selenium 364, manganese 130, chromium 1143.
+  # Not counted: iodine 50, calcium 4, magnesium 5, copper 83; gamma tocopherol, boron, lutein have no DV.
+  nutrients_at_100_dv: 17
+  folate_mcg_dfe: 667           # Vitacost: 667 mcg DFE, 167% DV
+  vitamin_b12_mcg: 600          # Vitacost: 600 mcg, 25,000% DV
+  vitamin_d_mcg: 50             # Vitacost: 50 mcg (2,000 IU), 250% DV
+  # iron_mg: not listed on the panel (Vitacost)
+  servings_per_container: 30    # Vitacost panel: 30 (its "Key info" says 60 count, which is capsules)
+
+prices:
+  - retailer: Vitacost
+    price_usd: 36.00            # regular and sale both $36.00
+    servings: 30                # 60 capsules at 2 per day
+    url: https://www.vitacost.com/products/thorne-basic-nutrients-2-day-60-capsules-85476
+    date_checked: 2026-10-22
+    entered_by: claude
+
+certifications:
+  - program: NSF Certified for Sport
+    # nsfsport.com listing "Thorne Basic Nutrients 2/Day", brand Thorne, capsule, package size 60, serving size 2 capsules.
+    # Reached through the nsfsport search results for "thorne". Page shows lot numbers only, no status or dates.
+    # DOUBT: the Vitacost page I priced is not titled NSF; it matches the NSF listing on name, 60 count and 2 capsules.
+    listing_url: https://www.nsfsport.com/certified-products/listing-detail.php?id=1301460
+    date_verified: 2026-10-22
+    entered_by: claude
+
+coas: []                        # MISSING: no COA found in the pages read
+
+flags: []                       # no allergen statement on the Vitacost page
+notes: ""

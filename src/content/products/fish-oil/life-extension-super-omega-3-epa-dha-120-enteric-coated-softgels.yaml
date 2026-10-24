@@ -1,0 +1,41 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude needs River's check.
+# Size chosen: 120 softgels. Label info from the Vitacost page
+# https://www.vitacost.com/products/life-extension-super-omega-3-epa-dha-fish-oil-sesame-lignans-olive-extract-120-enteric-coated-softgels-65704
+# NOTE: this Vitacost listing is the "Enteric Coated" version (2 softgels per serving, 60 servings).
+# The NIH label https://api.ods.od.nih.gov/dsld/s3/pdf/232623.pdf is a different label version (4 softgels per serving, 240 softgels), same EPA/DHA per serving. Not used for dose.
+category: fish-oil
+entered_by: claude              # label info from the Vitacost product page
+brand: Life Extension
+name: Super Omega-3 EPA/DHA Fish Oil, Sesame Lignans & Olive Extract 120 Enteric Coated Softgels
+form: softgel
+oil_form: not_stated            # neither Vitacost nor the NIH label states TG / rTG / EE
+# MISSING: oil_source left out. Vitacost lists "anchovy, jack mackerel, mackerel, sardine"; NIH label (older version) lists anchovy only. Pages conflict.
+other_ingredients: [highly refined fish oil concentrate (from one or more anchovy, jack mackerel, mackerel, sardine), gelatin, glycerin, enteric coating, purified water, silica, beeswax, caramel color, natural flavor, sunflower lecithin, mixed tocopherols, maltodextrin, rosemary extract]   # Vitacost "Other ingredients"
+
+dose:
+  units_per_serving: 2          # Vitacost: "Serving Size: 2 Enteric Coated Softgels"
+  epa_per_serving_mg: 700       # Vitacost Supplement Facts "EPA"
+  dha_per_serving_mg: 500       # Vitacost Supplement Facts "DHA"
+  # MISSING: total omega-3 line not stated on the Vitacost label (Pure+ Wild Fish Oil Concentrate 2000 mg is the oil weight)
+  servings_per_container: 60    # Vitacost Supplement Facts. Key info box says "Total servings 120 count", which is the softgel count.
+
+prices:
+  - retailer: Vitacost
+    price_usd: 32.25            # regular and sale both $32.25 (page shows a "Sale" label); 120 softgels
+    servings: 60
+    url: https://www.vitacost.com/products/life-extension-super-omega-3-epa-dha-fish-oil-sesame-lignans-olive-extract-120-enteric-coated-softgels-65704
+    date_checked: 2026-10-22
+    entered_by: claude
+
+# MISSING: certification. Both IFOS reports on certifications.nutrasource.ca are old, so not entered:
+#  - lot C1803113: "Report generated on: 25-Jan-2019", expiry 01/2021
+#    https://certifications.nutrasource.ca/files/IFOS%20Life%20Extension%20Inc.%20Super%20Omega%203%20EPA%20DHA%2C%20lot%20C1803113.pdf
+#  - lot C1800855: no report date, expiry 06/2020, TOTOX 4.61
+#    https://certifications.nutrasource.ca/files/IFOS%20Life%20Extension%20Super%20Omega-3%20Batch%20C1800855.pdf
+# Vitacost "IFOS 5-Star Rating" is a retailer claim, not a source.
+certifications: []
+# MISSING: COA. No current lab report found.
+coas: []
+
+flags: [contains fish, contains sesame]   # Vitacost: "Contains sesame"; fish oil is the main ingredient
+notes: ""
