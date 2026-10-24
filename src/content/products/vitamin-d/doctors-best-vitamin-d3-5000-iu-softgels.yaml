@@ -1,0 +1,34 @@
+# Looked up by Claude on 2026-10-24. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 180 softgels.
+category: vitamin-d
+entered_by: claude              # label info from the Vitacost page
+brand: Doctor's Best
+name: Vitamin D3 125 mcg (5,000 IU) Softgels
+form: softgel                   # vitacost.com: title "180 Softgels"
+vitamin_d_form: d3              # vitacost.com: "Vitamin D3 (as cholecalciferol)"
+other_ingredients: [extra virgin olive oil, gelatin, glycerin, purified water]   # vitacost.com: "Extra virgin olive oil, softgel capsule (gelatin, glycerin, purified water)."
+# carrier_oil: not set. Page lists the oil only under other ingredients.
+
+dose:
+  units_per_serving: 1          # vitacost.com: "Serving Size: 1 softgel"
+  vitamin_d_per_serving_mcg: 125 # vitacost.com: "125 mcg (5000 IU)"
+  servings_per_container: 180   # vitacost.com: "Servings Per Container: 180"
+
+prices:
+  - retailer: Vitacost
+    price_usd: 10.29            # vitacost.com: regular and sale price $10.29
+    servings: 180
+    url: https://www.vitacost.com/products/doctor-s-best-vitamin-d3-125-mcg-5-000-iu-180-softgels-21367
+    date_checked: 2026-10-24
+    entered_by: claude
+    # rating: page shows 1626 reviews but no stated average, so no rating recorded.
+
+# MISSING: certification. Looked for a listing on quality-supplements.org (fetch failed, client_error) and
+#   via a search for NSF Certified for Sport; no certifier page naming this product was found. Nothing recorded.
+certifications: []
+
+# MISSING: COA. No brand lab-results page found by search; none read.
+coas: []
+
+flags: []
+notes: ""

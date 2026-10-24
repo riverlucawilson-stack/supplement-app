@@ -1,0 +1,34 @@
+# Looked up by Claude on 2026-10-24. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 240 capsules.
+# No mainstream high-dose D2 supplement was readable; this is the D2 product found on a retailer page.
+category: vitamin-d
+entered_by: claude              # label info from the Vitacost page
+brand: Nutricost
+name: Vitamin D2 50 mcg (2,000 IU) Capsules
+form: capsule                   # vitacost.com: title "240 Capsules"
+vitamin_d_form: d2              # vitacost.com: "Vitamin D2 (from sugar cane)"
+other_ingredients: [rice flour, hypromellose (cellulose) capsule, magnesium stearate (vegetable source)]   # vitacost.com
+
+dose:
+  units_per_serving: 1          # vitacost.com: "Serving Size: 1 capsule"
+  vitamin_d_per_serving_mcg: 50 # vitacost.com: "50 mcg (250% DV)"; title says 2,000 IU
+  servings_per_container: 240   # vitacost.com: 240
+
+prices:
+  - retailer: Vitacost
+    price_usd: 14.97            # vitacost.com: "Sale price $14.97"
+    servings: 240
+    url: https://www.vitacost.com/products/nutricost-vitamin-d2-50-mcg-2-000-iu-240-capsules-147092
+    date_checked: 2026-10-24
+    entered_by: claude
+    # rating: page shows 19 reviews but no average, so no rating recorded.
+
+# MISSING: certification. Looked for a listing on quality-supplements.org (fetch failed, client_error) and
+#   via a search for NSF Certified for Sport; no certifier page naming this product was found. Nothing recorded.
+certifications: []
+
+# MISSING: COA. A web search for Nutricost lab results returned only third-party blog pages; no brand page read.
+coas: []
+
+flags: []
+notes: ""

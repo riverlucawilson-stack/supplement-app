@@ -1,0 +1,34 @@
+# Looked up by Claude on 2026-10-24. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 100 softgels.
+category: vitamin-d
+entered_by: claude              # label info from the Vitacost page
+brand: Solgar
+name: Vitamin D3 (Cholecalciferol) 125 mcg (5,000 IU) Softgels
+form: softgel                   # vitacost.com: "oil-based softgels"
+vitamin_d_form: d3              # vitacost.com: "Vitamin D3 (as cholecalciferol)"
+other_ingredients: [soybean oil, gelatin, vegetable glycerin, corn oil]   # vitacost.com: "Soybean oil, gelatin, vegetable glycerin, corn oil."
+# carrier_oil: not set. Page lists oils only under other ingredients.
+
+dose:
+  units_per_serving: 1          # vitacost.com: "Serving Size: 1 Softgel"
+  vitamin_d_per_serving_mcg: 125 # vitacost.com: "125 mcg (5,000 IU)"
+  servings_per_container: 100   # vitacost.com: "Total servings 100 count"
+
+prices:
+  - retailer: Vitacost
+    price_usd: 13.13            # vitacost.com: "Regular price $13.13", "Sale price $13.13"
+    servings: 100
+    url: https://www.vitacost.com/products/solgar-vitamin-d3-cholecalciferol-125-mcg-5-000-iu-100-softgels-23559
+    date_checked: 2026-10-24
+    entered_by: claude
+    # rating: page shows 663 reviews but no average, so no rating recorded.
+
+# MISSING: certification. Looked for a listing on quality-supplements.org (fetch failed, client_error) and
+#   via a search for NSF Certified for Sport; no certifier page naming this product was found. Nothing recorded.
+certifications: []
+
+# MISSING: COA. No brand lab-results page found by search; none read.
+coas: []
+
+flags: [contains soybean oil]   # vitacost.com lists soybean oil; page has no allergen statement
+notes: ""
