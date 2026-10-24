@@ -3,7 +3,7 @@
 category: ashwagandha
 entered_by: claude
 brand: Garden of Life
-name: mykind Organics Ashwagandha Stress & Mood   # Thrive Market title; Vitacost lists it as "Organics, Ashwagandha"
+name: mykind Organics Ashwagandha   # Vitacost lists it as "Organics, Ashwagandha"; Thrive Market's title adds "Stress & Mood", left out so the site doesn't repeat health wording in page titles
 form: tablet
 ashwagandha_type: root_extract  # panel: "Organic Ashwagandha Root Extract (30 mg Withanolides)"
 other_ingredients: [organic fermented ginger root (50 mg), probiotic blend (B. lactis Bl-04, L. acidophilus La-14, 4 mg), organic gum arabic, organic dextrose, organic tapioca maltodextrin, sunflower lecithin, palm oil, guar gum]
