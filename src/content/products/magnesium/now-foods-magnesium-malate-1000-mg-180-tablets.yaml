@@ -1,0 +1,39 @@
+# Looked up by Claude on 2026-10-24. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 180 tablets.
+# nowfoods.com listed the product as "Out of Stock" on 2026-10-24; its price is entered anyway.
+category: magnesium
+entered_by: claude              # label info from nowfoods.com and vitacost.com
+brand: NOW Foods
+name: Magnesium Malate 1000 mg Tablets
+form: tablet
+magnesium_form: malate          # nowfoods.com: "Magnesium (elemental) (from 1000 mg Magnesium Malate)"
+other_ingredients: [hydroxypropyl cellulose, microcrystalline cellulose, stearic acid (vegetable source), croscarmellose sodium, magnesium stearate (vegetable source), silicon dioxide, "vegetarian coating (hypromellose, calcium carbonate, glycerin)"]   # nowfoods.com and vitacost.com
+
+dose:
+  units_per_serving: 1          # nowfoods.com and vitacost.com: serving size 1 tablet
+  magnesium_per_serving_mg: 113 # Supplement Facts elemental magnesium line = 113 mg (27% DV); the 1000 mg in the name is the malate compound
+  servings_per_container: 180   # nowfoods.com and vitacost.com
+
+prices:
+  - retailer: NOW Foods
+    price_usd: 25.99            # nowfoods.com, 180 tablets (SKU 1300); page showed "Out of Stock"
+    servings: 180
+    url: https://nowfoods.com/supplements/magnesium-malate-1000-mg-tablets
+    date_checked: 2026-10-24
+    entered_by: claude
+  - retailer: Vitacost
+    price_usd: 12.73            # vitacost.com regular price, 180 tablets
+    servings: 180
+    url: https://www.vitacost.com/products/now-foods-magnesium-malate-1-000-mg-180-tablets-692
+    date_checked: 2026-10-24
+    entered_by: claude
+    # Rating not entered: the page states no average (only a star distribution, 1,689 reviews).
+
+# MISSING: certification. nowfoods.com lists an Intertek GMP program and other seals, none of the five certifiers.
+certifications: []
+
+# MISSING: COA. No COA link on nowfoods.com or the Vitacost page.
+coas: []
+
+flags: [not manufactured with wheat, gluten, soy, milk, egg, fish, shellfish or sesame ingredients; produced in a GMP facility that processes other ingredients containing these allergens]   # nowfoods.com
+notes: ""

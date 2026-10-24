@@ -1,0 +1,38 @@
+# Looked up by Claude on 2026-10-24. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 8 oz.
+# Note: the Swanson page is titled "Natural Vitality CALM Magnesium Powder" but names the product "MaxCalm - Unflavored".
+# Other pages (Walmart, Grove, Whole Foods) gave no Supplement Facts panel or conflicting ingredient lists, so only Swanson is used.
+category: magnesium
+entered_by: claude              # label info from swansonvitamins.com
+brand: Natural Vitality
+name: MaxCalm Magnesium Powder Unflavored 8 oz
+form: powder
+magnesium_form: blend           # swansonvitamins.com: "Magnesium (as Ionic Magnesium Citrate, Ionic Magnesium Glycinate [when mixed with water])"
+forms_listed: citrate, glycinate
+# MISSING: other_ingredients. The Swanson page gives only a description (made from citric acid and magnesium carbonate), no "Other ingredients" line.
+other_ingredients: []
+
+dose:
+  units_per_serving: 2          # swansonvitamins.com: serving size "Approx. 2 Teaspoons (4 g)"; units = teaspoons
+  magnesium_per_serving_mg: 350 # Supplement Facts "Magnesium" line = 350 mg (83% DV)
+  servings_per_container: 57    # swansonvitamins.com: "About 57"
+
+prices:
+  - retailer: Swanson Vitamins
+    price_usd: 20.24            # swansonvitamins.com one-time price, 8 oz
+    servings: 57
+    url: https://www.swansonvitamins.com/p/natural-vitality-calm-original-unflavored-350-mg-8-oz-pwdr
+    date_checked: 2026-10-24
+    entered_by: claude
+    rating:
+      stars: 4.8
+      count: 148
+
+# MISSING: certification. Swanson page shows none; no certifier listing looked up for this product.
+certifications: []
+
+# MISSING: COA. No COA link on the Swanson page.
+coas: []
+
+flags: []   # swansonvitamins.com states no allergen statement; label claims "free of gluten, sugar, artificial color"
+notes: ""

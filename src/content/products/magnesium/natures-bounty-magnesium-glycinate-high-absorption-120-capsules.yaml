@@ -1,0 +1,33 @@
+# Looked up by Claude on 2026-10-24. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 120 capsules.
+# naturesbounty.com page was also read but shows a different size (60 capsules, 90 servings) that doesn't reconcile and no price, so not used.
+category: magnesium
+entered_by: claude              # label info from vitacost.com
+brand: Nature's Bounty
+name: Magnesium Glycinate High Absorption 120 Capsules
+form: capsule
+magnesium_form: glycinate       # vitacost.com: "Magnesium (as Magnesium Glycinate)"
+other_ingredients: [vegetable cellulose, ascorbyl palmitate]   # vitacost.com
+
+dose:
+  units_per_serving: 2          # vitacost.com: serving size 2 capsules
+  magnesium_per_serving_mg: 240 # Supplement Facts "Magnesium" line = 240 mg per 2 capsules (57% DV); the title's "120 mg per capsule" matches
+  servings_per_container: 60    # vitacost.com Supplement Facts (its "Key info" says 120 servings, which conflicts; Supplement Facts used)
+
+prices:
+  - retailer: Vitacost
+    price_usd: 26.06            # vitacost.com regular price, 120 capsules
+    servings: 60
+    url: https://www.vitacost.com/products/nature-s-bounty-magnesium-glycinate-high-absorption-120-capsules-120-mg-per-capsule-151036
+    date_checked: 2026-10-24
+    entered_by: claude
+    # Rating not entered: the page states no average (only a star distribution, 37 ratings).
+
+# MISSING: certification. Neither the Vitacost nor naturesbounty.com page links a certifier listing.
+certifications: []
+
+# MISSING: COA. No COA link on either page.
+coas: []
+
+flags: []   # vitacost.com gives no allergen statement; "free from" claims only
+notes: ""

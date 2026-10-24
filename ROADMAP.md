@@ -136,7 +136,7 @@ A category is done when it has:
 ## Ongoing: more products for every category (River, 2026-10-24)
 "Continue to add comparison products for all supplement categories as you progress with the same criteria."
 Same inclusion rule and TEAM.md Mission 1 (up to 5 per batch, researcher + auditor). Alternate these batches with Stage D/E units.
-- [x] Creatine (46, skipped: already past 12)  - [x] Ashwagandha (28, skipped)  - [x] Vitamin D (2026-10-24: +5, 14 total)  - [ ] Magnesium  - [ ] Fish oil  - [ ] Protein powder
+- [x] Creatine (46, skipped: already past 12)  - [x] Ashwagandha (28, skipped)  - [x] Vitamin D (2026-10-24: +5, 14 total)  - [x] Magnesium (2026-10-24: +5, 14 total)  - [ ] Fish oil  - [ ] Protein powder
 - [ ] Multivitamin  - [ ] Vitamin C  - [ ] Vitamin B12  - [ ] Vitamin K2 (try to find an MK-4 product)
 (A box is checked once a category has had one extra batch; the list then starts over.)
 
