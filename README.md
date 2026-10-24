@@ -169,7 +169,7 @@ The site is hosted free on Cloudflare Pages, which rebuilds it every time code i
 1. Sign in at https://dash.cloudflare.com (a free account is fine).
 2. Go to **Workers & Pages → Create → Pages → Connect to Git**, and pick the
    `riverlucawilson-stack/supplement-app` repository.
-3. Project name: `sup-search` (the site will be at https://sup-search.pages.dev).
+3. Project name: `sup-search`. That name was taken on pages.dev, so Cloudflare gave the site the address https://sup-search-doo.pages.dev (set as `siteUrl` in `src/settings.ts`).
    If that name is taken, pick another and change `siteUrl` in `src/settings.ts` to match.
 4. Production branch: `claude/project-thread-6g8ebj` until the pull requests are merged, then `main`.
 5. Build settings: Framework preset **Astro**, build command `npm run build`, output directory `dist`.

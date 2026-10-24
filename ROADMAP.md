@@ -10,7 +10,7 @@ Still River's: approving evidence/health text (delegated to Claude on 2026-10-24
 - (none)
 
 ## Next up
-- First deploy: River connects the repo to Cloudflare Pages (steps in README "How to deploy"). If the name sup-search is taken, update siteUrl in src/settings.ts.
+- [x] First deploy (2026-10-24): live at https://sup-search-doo.pages.dev, redeploys on every push to claude/project-thread-6g8ebj. Optional: deploy hook for a daily rebuild so stale-price warnings update (README).
 - [x] Evidence to-dos and approval for all 10 categories (2026-10-24, River delegated approval). All evidence pages are live.
 
 ## Evidence follow-ups (not on the site; couldn't be sourced word for word)
