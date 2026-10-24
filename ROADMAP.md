@@ -16,6 +16,12 @@ Still River's: approving evidence/health text (delegated to Claude on 2026-10-24
 4. Affiliate disclosure wording (CLAUDE.md has none). Replace the current "some links may earn us a commission. It never affects rankings." with: "When you buy through some links on this site, we may earn a commission. Commissions never change the order of products or their tiers." (yes / your wording)
 
 ## Next up
+(Shift paused 2026-10-24 03:11Z at River's request, for 12 hours.)
+- D6 link-check script, then D7 launch checklist and D8 PWA proposal.
+- Extra product batches continue with fish oil, then protein powder, multivitamin, C, B12, K2.
+- Stage E 1: CoQ10 category config, then its batches.
+- Work from this shift isn't pushed (WAITING ON RIVER 2); a git bundle is in /mnt/project-files/supplement-site-backup/.
+
 - [x] First deploy (2026-10-24): live at https://sup-search-doo.pages.dev, redeploys on every push to claude/project-thread-6g8ebj. Optional: deploy hook for a daily rebuild so stale-price warnings update (README).
 - [x] Evidence to-dos and approval for all 10 categories (2026-10-24, River delegated approval). All evidence pages are live.
 
