@@ -1,0 +1,40 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the kroger.com title; no health words in it.
+# CHECK: vitacost.com page for the 120-count said "Temporarily unavailable", so it was not priced. target.com 60-count page is blocked (robots). naturemade.com page says "Discontinued"/"Product No Longer Available" while also showing Add to cart, so it was not priced.
+category: calcium
+entered_by: claude              # label info from kroger.com
+brand: Nature Made
+name: Calcium with Vitamin D3 600mg Tablets, 220 ct   # kroger.com title
+form: tablet
+calcium_form: carbonate         # kroger.com ingredients: "Calcium (as Calcium Carbonate)"
+# MISSING: branded_ingredient. None named on kroger.com.
+other_ingredients: [cellulose gel, maltodextrin, croscarmellose sodium, hypromellose, magnesium stearate, polyethylene glycol, gelatin, corn starch]   # kroger.com ingredients line (after calcium and vitamin D3)
+ingredients_confirmed: true     # full ingredients line read on kroger.com
+# CHECK: vitacost.com's line for the 120-count lacked gelatin and corn starch; kroger's line used here.
+
+dose:
+  units_per_serving: 1          # kroger.com: serving size one tablet
+  calcium_per_serving_mg: 600   # kroger.com Supplement Facts: 600 mg calcium (46% DV)
+  vitamin_d_mcg: 10             # kroger.com: 10 mcg vitamin D (50% DV)
+  servings_per_container: 220   # kroger.com: about 220 servings per container
+  # MISSING: vitamin_k_mcg, magnesium_mg. Not listed.
+
+# MISSING: photos.product. kroger.com content had no title/meta image.
+
+prices:
+  - retailer: Kroger
+    price_usd: 23.49            # kroger.com: $23.49, 220 ct; "Buy 1, Get 1 Free" sale noted but not used; pickup available, delivery unavailable
+    servings: 220
+    url: https://www.kroger.com/p/nature-made-calcium-with-vitamin-d3-600mg-tablets/0003160401212
+    date_checked: 2026-11-05
+    entered_by: claude
+
+# MISSING: certification. naturemade.com says "USP Verified" (brand claim, not recorded). usp.org's own listing would not load.
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: [contains gelatin]   # kroger.com ingredients line
+notes: ""

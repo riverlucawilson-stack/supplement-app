@@ -1,0 +1,46 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the vitacost.com H1 minus "Bone Strengthening".
+category: calcium
+entered_by: claude              # label info from vitacost.com
+brand: Viactiv
+name: Calcium, Max Formula, Rich Caramel, 60 Soft Chews   # vitacost.com H1 "Calcium + Bone Strengthening, Max Formula, Rich Caramel, 60 Soft Chews" minus health words
+form: gummy                     # CHECK: soft chew; no soft chew option in the form list, gummy is closest. See format.
+format: soft chew               # vitacost.com title
+calcium_form: carbonate         # vitacost.com ingredients: calcium carbonate (first ingredient)
+# MISSING: branded_ingredient. None named on vitacost.com.
+other_ingredients: [calcium carbonate, corn syrup, sugar, hydrogenated coconut oil, non-fat dry milk powder, glycerine, corn syrup solids, corn starch, caramel color, salt, soy lecithin, natural and artificial flavor, cholecalciferol (vitamin d3), phylloquinone (vitamin k1)]   # vitacost.com ingredients line
+ingredients_confirmed: true     # full ingredients line read on vitacost.com
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 chew
+  calcium_per_serving_mg: 650   # vitacost.com Supplement Facts: Calcium 650 mg (50% DV)
+  vitamin_d_mcg: 12.5           # vitacost.com: 12.5 mcg (500 IU), as printed
+  vitamin_k_mcg: 40             # vitacost.com: Vitamin K 40 mcg
+  servings_per_container: 60    # CHECK: from "Total servings 60 count" in Key info; the panel's own servings line was not shown
+  # MISSING: magnesium_mg. Not listed.
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/41_8734b663-7bab-4050-93c9-e8389237913c.jpg?v=1789456213
+    source_url: https://www.vitacost.com/products/viactiv-calcium-bone-strengthening-max-formula-rich-caramel-60-soft-chews-139283
+    alt: Viactiv Calcium Max Formula Rich Caramel 60 soft chews
+    date_checked: 2026-11-05
+    entered_by: claude          # page og:title names Viactiv Calcium + Bone Strengthening Max Formula Rich Caramel
+
+prices:
+  - retailer: Vitacost
+    price_usd: 10.31            # vitacost.com: $10.31; Add to cart shown, no stock label either way
+    servings: 60
+    url: https://www.vitacost.com/products/viactiv-calcium-bone-strengthening-max-formula-rich-caramel-60-soft-chews-139283
+    date_checked: 2026-11-05
+    entered_by: claude
+
+# MISSING: certification. Certifier sites not checked.
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: [added sugars (2 g per chew), contains sugar and corn syrup, contains milk, contains soy lecithin, contains caramel color, artificial flavor]   # vitacost.com Supplement Facts "Includes 2 g Added Sugars" and ingredients line
+notes: ""

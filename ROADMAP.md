@@ -7,11 +7,12 @@ Since 2026-10-21 River lets Claude make project decisions without asking; log ea
 Still River's: approving evidence/health text (delegated to Claude on 2026-10-24 for the current to-dos), and the first deploy (River approved 2026-10-24; needs River's Cloudflare login).
 
 ## IN PROGRESS
-- Calcium batch 1: Caltrate 600+D3, Citracal Maximum (citrate + D3), Nature Made Calcium 600 + D3, Viactiv chews, NOW Calcium Citrate.
+- Calcium batch 2: an algae calcium (AlgaeCal or Garden of Life), a calcium + D + K2 product, a store brand, a calcium citrate petite/chewable, a gummy.
 
 ## WAITING ON RIVER
 1. Installable app (drafts/pwa-plan.md): A (installable only), B (installable + offline pages), or neither? I recommend A.
-2. Probiotics method (drafts/probiotics-method.md): OK to use cost per daily serving with strains, CFU, guarantee type and storage shown beside it? Building it this way after zinc and collagen unless you say otherwise.
+2. Probiotics method (drafts/probiotics-method.md): built and published 2026-11-05 with cost per daily serving, strains, CFU, guarantee type and storage shown beside it. Say if you want B or C instead.
+3. Melatonin method (drafts/melatonin-method.md): OK to compare by cost per daily serving with the labeled mg shown beside it (not price per mg, which ranks megadoses best)? Building it this way after calcium unless you say otherwise.
 
 ## Next up
 - [x] Refresh 2026-11-05: Double Wood KSM-66 (no newer dated COA found; prices re-checked).
@@ -195,6 +196,7 @@ Same definition of done as Stage C.
   - [x] evidence draft (drafts/evidence/curcumin.md from the NCCIH turmeric page, April 2025, NEEDS RIVER REVIEW; copy in project files review/); category published
 - [ ] 7. Calcium: $ per 500 mg elemental calcium. Record carbonate vs citrate and any added vitamin D or K.
   - [x] category config: categories/calcium.yaml (status: draft) + template (2026-11-05)
+  - [x] batch 1: Caltrate 600+D3 (Target), Citracal Maximum Plus, Nature Made Calcium 600 + D3 (Kroger, pickup only), Viactiv Max Formula soft chews, NOW Calcium Citrate
 - [ ] 8. Melatonin: propose a method first and wait (price per mg would rank megadoses best). Record labeled dose, format (tablet, gummy, extended release), and any independent testing of actual content.
 
 ## Ingredient grades and product photos (2026-11-05, River's request)

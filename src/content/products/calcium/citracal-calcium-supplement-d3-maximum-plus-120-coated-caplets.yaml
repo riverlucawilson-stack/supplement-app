@@ -1,0 +1,45 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the vitacost.com H1; no health words in it.
+category: calcium
+entered_by: claude              # label info from vitacost.com
+brand: Citracal
+name: Calcium Supplement + D3, Maximum Plus, 120 Coated Caplets   # vitacost.com H1
+form: tablet                    # CHECK: sold as "coated caplets"; closest form option is tablet
+calcium_form: citrate           # vitacost.com ingredients: "Calcium citrate" (first ingredient)
+# MISSING: branded_ingredient. None named on vitacost.com.
+other_ingredients: [calcium citrate, polyethylene glycol, croscarmellose sodium, copper gluconate, hydroxypropyl methylcellulose, magnesium stearate, manganese gluconate, oligofructose enriched inulin, propylene glycol dicaprylate/dicaprate, talc, titanium dioxide (color), vitamin d3 (cholecalciferol), zinc oxide]   # vitacost.com ingredients line
+ingredients_confirmed: true     # full ingredients line read on vitacost.com
+
+dose:
+  units_per_serving: 2          # vitacost.com: serving size 2 caplets
+  calcium_per_serving_mg: 650   # vitacost.com Supplement Facts: Calcium 650 mg (50% DV)
+  vitamin_d_mcg: 25             # vitacost.com: 25 mcg (1000 IU), as printed
+  servings_per_container: 60    # vitacost.com Supplement Facts: 60 (the "120 count" in Key info is caplets)
+  # MISSING: vitamin_k_mcg, magnesium_mg. Not listed on the vitacost.com panel.
+  # Panel also lists zinc 5.5 mg, copper 0.45 mg, manganese 1.15 mg (not tracked fields).
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/24_4499abfa-01ab-45ac-a205-8f82477c9efd.jpg?v=1781888801
+    source_url: https://www.vitacost.com/products/citracal-calcium-supplement-d3-maximum-plus-120-coated-caplets-108822
+    alt: Citracal Maximum Plus calcium citrate with D3 120 coated caplets
+    date_checked: 2026-11-05
+    entered_by: claude          # page title/og:title name Citracal Calcium Supplement + D3 Maximum Plus
+
+prices:
+  - retailer: Vitacost
+    price_usd: 13.01            # vitacost.com: $13.01; Add to cart shown, no stock label either way
+    servings: 60
+    url: https://www.vitacost.com/products/citracal-calcium-supplement-d3-maximum-plus-120-coated-caplets-108822
+    date_checked: 2026-11-05
+    entered_by: claude
+
+# MISSING: certification. Certifier sites not checked. Brand/retailer claims not recorded.
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: [contains titanium dioxide]   # vitacost.com ingredients line
+notes: ""
