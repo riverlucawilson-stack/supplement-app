@@ -1,0 +1,48 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the label name only: no health words from retailer titles.
+# (Left out of the name: "Digestive" in the vitacost.com title.)
+category: probiotics
+entered_by: claude              # label info from vitacost.com
+brand: Culturelle
+name: Daily Probiotic, 50 Capsules
+form: capsule
+cfu_guarantee: through_expiration   # vitacost.com: "Guaranteed potency through date on box when stored as directed." (page also shows "Best by 01/01/2028"). CHECK: "date on box" is read as the expiration/best-by date; confirm on the box.
+strains: Lactobacillus rhamnosus GG   # vitacost.com Supplement Facts: "Lactobacillus rhamnosus GG": 40 mg (10 billion CFUs)
+storage: shelf-stable           # vitacost.com: "Store Culturelle in a cool, dry place away from direct sunlight." (no refrigeration instruction)
+# MISSING: delivery_claim. None found on the vitacost.com page.
+other_ingredients: [hydroxypropyl methylcellulose, vegetable magnesium stearate, titanium dioxide (color)]   # vitacost.com
+ingredients_confirmed: true     # full other-ingredients line read on vitacost.com
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size "One (1) Capsule"
+  cfu_billions_per_serving: 10  # vitacost.com: "10 billion CFUs"
+  strain_count: 1
+  servings_per_container: 50    # vitacost.com: 50
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/71_41c3a83c-427e-4aa4-b6d0-96204686f20f.jpg?v=1781975924
+    source_url: https://www.vitacost.com/products/culturelle-probiotics-digestive-daily-probiotic-50-once-daily-vegetarian-capsules-72683
+    alt: Culturelle Daily Probiotic 50 capsule box
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 34.86            # vitacost.com: $34.86, 50 count, Add to cart shown, no out-of-stock notice
+    servings: 50
+    url: https://www.vitacost.com/products/culturelle-probiotics-digestive-daily-probiotic-50-once-daily-vegetarian-capsules-72683
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. The page shows only a star breakdown (223 ratings), no stated average.
+
+# MISSING: certification. Certifier sites (NSF, Informed Sport, USP, BSCG, Clean Label Project) not checked.
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: [added prebiotic (inulin 200 mg)]   # vitacost.com Supplement Facts: "Inulin (Chicory Root Extract)": 200 mg
+# vitacost.com also states "Allergy friendly free from: milk, wheat, eggs, tree nuts, peanuts." (no allergen to flag)
+notes: ""
