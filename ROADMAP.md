@@ -10,7 +10,7 @@ Still River's: approving evidence/health text (delegated to Claude on 2026-10-24
 - (none)
 
 ## WAITING ON RIVER
-- (none)
+1. Installable app (drafts/pwa-plan.md): A (installable only), B (installable + offline pages), or neither? I recommend A.
 
 ## Next up
 - [x] Refresh 2026-11-05: Double Wood KSM-66 (no newer dated COA found; prices re-checked).
@@ -150,7 +150,7 @@ Same inclusion rule and TEAM.md Mission 1 (up to 5 per batch, researcher + audit
 - [x] D5 Search basics (2026-10-24; 170 pages checked, robots.txt added): unique title and meta description per page, sitemap, canonical URLs.
 - [x] D6 Link check (2026-11-05, `npm run links`; logic tested against a local server; this cloud container's proxy blocks every outside site, so run it on your computer): separate npm script (not part of validate) that checks source and buy URLs respond; 404 = dead, 403/429 = couldn't check.
 - [x] D7 Launch checklist (2026-11-05, drafts/launch-checklist.md, NEEDS RIVER REVIEW): drafts/launch-checklist.md (hosting, domain, each affiliate program and its disclosure wording, privacy policy if analytics/cookies, approving evidence drafts).
-- [ ] D8 PWA proposal: drafts/pwa-plan.md (what it adds, what it costs to maintain). Don't build.
+- [x] D8 PWA proposal (2026-11-05, drafts/pwa-plan.md; recommends manifest-only or nothing): drafts/pwa-plan.md (what it adds, what it costs to maintain). Don't build.
 - [ ] D9 "How to read a COA" page: template with DRAFT - NEEDS REVIEW placeholders (CLAUDE.md page 4), built only once River writes it.
 - [ ] D10 About page: template with placeholders (CLAUDE.md page 6).
 
