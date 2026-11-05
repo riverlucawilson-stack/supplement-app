@@ -167,3 +167,12 @@ Same definition of done as Stage C.
 - [ ] 6. Curcumin / turmeric: $ per 500 mg curcuminoids, not turmeric powder weight. Record formulation (95% extract, piperine, phytosome, etc.). No bioavailability adjustment; record the claim and its source. No stated curcuminoid content = empty unit price with a note.
 - [ ] 7. Calcium: $ per 500 mg elemental calcium. Record carbonate vs citrate and any added vitamin D or K.
 - [ ] 8. Melatonin: propose a method first and wait (price per mg would rank megadoses best). Record labeled dose, format (tablet, gummy, extended release), and any independent testing of actual content.
+
+## Ingredient grades and product photos (2026-11-05, River's request)
+- [x] Ingredient grade A–D from sourced rules in ingredients/flags.yaml (7 rules, all entered_by: claude), shown on product pages, tables, and Methodology. Never affects ranking.
+- [x] Supplement Facts-style panel rebuilt from each product file, ingredients grouped by role, flagged ones colored with the source.
+- [x] Product photos for 83 of 167 products (Vitacost og:image, credited, entered_by: claude).
+- [ ] River: check each rule in ingredients/flags.yaml against its source, then delete its entered_by line.
+- [ ] Photos for the 84 products without one (non-Vitacost stores, CoQ10, and fetch failures: double-wood-ksm-66, designs-for-sport, sports-research triple strength and K2, nature-made vitamin C 1000).
+- [ ] Label (Supplement Facts) photos: only add when the store page identifies the image as the label.
+- [ ] Set ingredients_confirmed: true where the full ingredient list was read, so empty lists get graded (about 39 products show "Not graded").
