@@ -7,7 +7,7 @@ Since 2026-10-21 River lets Claude make project decisions without asking; log ea
 Still River's: approving evidence/health text (delegated to Claude on 2026-10-24 for the current to-dos), and the first deploy (River approved 2026-10-24; needs River's Cloudflare login).
 
 ## IN PROGRESS
-- Curcumin category config: $ per 500 mg curcuminoids; formulation; no stated curcuminoids = empty unit price with a note.
+- Curcumin batch 1: Sports Research Turmeric Curcumin C3 Complex, Doctor's Best Curcumin Phytosome (Meriva), Nature's Bounty or Nature Made Turmeric, Qunol turmeric, NOW Curcumin.
 
 ## WAITING ON RIVER
 1. Installable app (drafts/pwa-plan.md): A (installable only), B (installable + offline pages), or neither? I recommend A.
@@ -188,6 +188,7 @@ Same definition of done as Stage C.
   - [x] comparison page check  - [x] product pages check  - [x] claims-review pass (2026-11-05)
   - [x] evidence draft (drafts/evidence/collagen.md from a 2026 umbrella review and a 2024 OA meta-analysis, abstracts only, NEEDS RIVER REVIEW; copy in project files review/); category published
 - [ ] 6. Curcumin / turmeric: $ per 500 mg curcuminoids, not turmeric powder weight. Record formulation (95% extract, piperine, phytosome, etc.). No bioavailability adjustment; record the claim and its source. No stated curcuminoid content = empty unit price with a note.
+  - [x] category config: categories/curcumin.yaml (status: draft) + template; products without stated curcuminoids show "Amount not on label" instead of a cost (src/lib/pricing.ts amountStated) (2026-11-05)
 - [ ] 7. Calcium: $ per 500 mg elemental calcium. Record carbonate vs citrate and any added vitamin D or K.
 - [ ] 8. Melatonin: propose a method first and wait (price per mg would rank megadoses best). Record labeled dose, format (tablet, gummy, extended release), and any independent testing of actual content.
 

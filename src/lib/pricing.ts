@@ -31,8 +31,17 @@ export function priceMath(product: Product, price: Price, today: Date): PriceMat
   };
 }
 
-/** Every retailer's price for a product, cheapest per dose first. */
+/**
+ * False when the label doesn't state the compared amount (e.g. a turmeric product that
+ * gives no curcuminoid content). Such a product has no cost per comparison amount.
+ */
+export function amountStated(product: Product): boolean {
+  return categoryOf(product).activePerServing(product) > 0;
+}
+
+/** Every retailer's price for a product, cheapest per dose first. Empty when the amount isn't stated. */
 export function allPrices(product: Product, today: Date): PriceMath[] {
+  if (!amountStated(product)) return [];
   return product.prices
     .map((price) => priceMath(product, price, today))
     .sort((a, b) => a.costPerReferenceDose - b.costPerReferenceDose);

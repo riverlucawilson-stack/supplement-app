@@ -9,7 +9,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { categoryById, productPath, type CategoryId } from '../categories';
 import { formLabels } from '../categories/shared';
 import { settings } from '../settings';
-import { bestPrice } from '../lib/pricing';
+import { amountStated, bestPrice } from '../lib/pricing';
 import { isCertificationCurrent } from '../lib/staleness';
 import { usd } from '../lib/format';
 import { tierFor } from '../lib/tier';
@@ -185,7 +185,7 @@ const costLabelLower = midSentence(costLabel);
                   </div>
                 </th>
                 <td class="r cost" data-label={costLabel} data-per={category.referenceDose.label}>
-                  {r.best ? <span class="num big">{usd(r.best.costPerReferenceDose)}</span> : <span class="none">No price</span>}
+                  {r.best ? <span class="num big">{usd(r.best.costPerReferenceDose)}</span> : <span class="none">{amountStated(r.product) ? 'No price' : 'Amount not on label'}</span>}
                 </td>
                 {category.daily && (
                   <td class="r" data-label={category.daily.label}>
