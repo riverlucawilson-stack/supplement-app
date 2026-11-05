@@ -165,6 +165,7 @@ Same definition of done as Stage C.
 - [ ] 2. B-complex: no single unit. Reuse the approved multivitamin method if it fits; otherwise propose one and wait. Record folate form (folic acid vs methylfolate) and B12 form.
   - [x] category config: categories/b-complex.yaml (status: draft, multivitamin method reused: cost per daily serving) + template (2026-11-05)
   - [x] batch 1: Nature Made Super B-Complex, NOW B-50, Pure Encapsulations B-Complex Plus, Thorne Basic B Complex, Garden of Life RAW B-Complex (Jarrow B-Right skipped)
+  - [x] batch 2: Solgar B-Complex 100, Nature's Bounty Super B-Complex with C, Life Extension BioActive Complete, MegaFood Balanced B, Country Life Coenzyme B (10 total)
 - [ ] 3. Probiotics: propose a method first and wait. Record each strain's full designation, CFU, guaranteed through expiration or at manufacture, storage needs.
 - [ ] 4. Zinc: $ per 10 mg elemental zinc from the Supplement Facts panel. Record form, whether copper is included, and format (capsule, tablet, lozenge).
 - [ ] 5. Collagen: $ per 10 g collagen peptides. Record source (bovine, marine, porcine, chicken) and heavy-metal testing. Leave out undenatured type II collagen.

@@ -1,0 +1,40 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude needs River's check.
+# Label info from Life Extension's own page "BioActive Complete B-Complex, 60 capsules".
+# That panel has no %DV column. I compared the amounts to the FDA adult Daily Values (thiamin 1.2 mg, riboflavin 1.3 mg,
+# niacin 16 mg NE, B6 1.7 mg, folate 400 mcg DFE, B12 2.4 mcg, biotin 30 mcg, pantothenic acid 5 mg): all 8 are at or above 100%.
+# Please check this count against the label. Page shows 4.8 rating from 1032 reviews.
+category: b-complex
+entered_by: claude
+brand: Life Extension
+name: BioActive Complete B-Complex
+form: capsule
+folate_form: methylfolate      # Life Extension: "Folate (as L-5-methyltetrahydrofolate calcium salt) 680 mcg DFE"
+b12_form: methylcobalamin      # Life Extension: "Vitamin B12 (as methylcobalamin)"
+other_ingredients: [vegetable cellulose (capsule), microcrystalline cellulose, stearic acid, purified water, silica]   # Life Extension
+
+dose:
+  units_per_serving: 2          # Life Extension: serving size 2 vegetarian capsules
+  # Counted (amounts vs FDA DV, since the panel prints no %DV): thiamin 100 mg, riboflavin 75 mg, niacin 100 mg NE,
+  # vitamin B6 100 mg, folate 680 mcg DFE, vitamin B12 300 mcg, biotin 1000 mcg, pantothenic acid 500 mg. All 8 counted.
+  # Not counted: calcium 50 mg; inositol and PABA are not among the 8.
+  b_vitamins_at_100_dv: 8
+  folate_mcg_dfe: 680           # Life Extension: 680 mcg DFE
+  vitamin_b12_mcg: 300          # Life Extension: 300 mcg
+  servings_per_container: 30    # Life Extension: servings per container 30
+
+prices:
+  - retailer: Life Extension
+    price_usd: 9.00             # 60 vegetarian capsules (30 servings); page shows regular price 9.00 and "$0.15 / count | 30 Day Supply"
+    servings: 30
+    url: https://www.lifeextension.com/vitamins-supplements/item01945/bioactive-complete-b-complex
+    date_checked: 2026-11-05
+    entered_by: claude
+    rating:
+      stars: 4.8
+      count: 1032
+
+certifications: []              # MISSING: not checked on a certifier's site
+coas: []                        # MISSING: no COA found in the pages read
+
+flags: [added inositol (100 mg), added PABA (50 mg), added calcium (50 mg)]   # Life Extension panel
+notes: ""

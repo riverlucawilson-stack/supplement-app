@@ -1,0 +1,36 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude needs River's check.
+# Label info from the Vitacost page "Solgar, B-Complex "100", 100 Vegetable Capsules".
+# The Vitacost panel does not print servings per container; "Key info" says total servings 100 count with a 1 capsule serving, so 100 used.
+# Rating not stated on page (653 ratings shown), not stored.
+category: b-complex
+entered_by: claude
+brand: Solgar
+name: B-Complex "100"
+form: capsule
+folate_form: folic_acid        # Vitacost: "666 mcg DFE (400 mcg folic acid)"
+b12_form: cyanocobalamin       # Vitacost: "Vitamin B12 (as cyanocobalamin)"
+other_ingredients: [vegetable cellulose, vegetable magnesium stearate, silica]   # Vitacost
+
+dose:
+  units_per_serving: 1          # Vitacost: serving size 1 vegetable capsule
+  # Counted (Vitacost panel %DV >= 100): thiamin 8333, riboflavin 7692, niacin 625, vitamin B6 5882,
+  # folate 167, vitamin B12 4167, biotin 333, pantothenic acid 2000. All 8 counted.
+  # Not counted: choline 4%; inositol has no DV.
+  b_vitamins_at_100_dv: 8
+  folate_mcg_dfe: 666           # Vitacost: 666 mcg DFE, 167% DV
+  vitamin_b12_mcg: 100          # Vitacost: 100 mcg, 4167% DV
+  servings_per_container: 100
+
+prices:
+  - retailer: Vitacost
+    price_usd: 18.92            # sale price, 100 vegetable capsules
+    servings: 100
+    url: https://www.vitacost.com/products/solgar-b-complex-100-100-vegetable-capsules-19437
+    date_checked: 2026-11-05
+    entered_by: claude
+
+certifications: []              # MISSING: not checked on a certifier's site (Vitacost lists Non-GMO and Certified Gluten Free claims only; those are not tracked programs)
+coas: []                        # MISSING: no COA found in the pages read
+
+flags: [added choline (20 mg), added inositol (100 mg)]   # Vitacost panel
+notes: ""
