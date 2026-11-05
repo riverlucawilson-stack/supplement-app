@@ -148,7 +148,7 @@ Same inclusion rule and TEAM.md Mission 1 (up to 5 per batch, researcher + audit
 - [x] D3 Affiliate disclosure (2026-11-05: River says the site earns no commission; every page now says so above all links) on every page with a buy link, shown before the first link (CLAUDE.md's wording, or draft wording and wait). Checked 2026-10-24: BaseLayout already shows it on every page above all page content and buy links; CLAUDE.md has no wording, so the text waits on WAITING ON RIVER 4.
 - [x] D4 Phone-width pass (2026-10-24; all 170 pages pass at 375 px in light and dark): tables usable at 375 px, heading order, alt text, color contrast.
 - [x] D5 Search basics (2026-10-24; 170 pages checked, robots.txt added): unique title and meta description per page, sitemap, canonical URLs.
-- [ ] D6 Link check: separate npm script (not part of validate) that checks source and buy URLs respond; 404 = dead, 403/429 = couldn't check.
+- [x] D6 Link check (2026-11-05, `npm run links`; logic tested against a local server; this cloud container's proxy blocks every outside site, so run it on your computer): separate npm script (not part of validate) that checks source and buy URLs respond; 404 = dead, 403/429 = couldn't check.
 - [ ] D7 Launch checklist: drafts/launch-checklist.md (hosting, domain, each affiliate program and its disclosure wording, privacy policy if analytics/cookies, approving evidence drafts).
 - [ ] D8 PWA proposal: drafts/pwa-plan.md (what it adds, what it costs to maintain). Don't build.
 

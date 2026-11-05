@@ -27,6 +27,7 @@ YAML file you edit by hand.
 |---|---|
 | `npm run dev` | Starts the site at http://localhost:4321 and refreshes as you edit. Stop it with Ctrl+C. |
 | `npm run validate` | **Run before publishing.** Checks every product file and lists errors (✗, must fix) and warnings (⚠, look at). |
+| `npm run links` | Checks that every buy, certification, COA and evidence link still answers (status code only, no page reading). Needs internet; slow. Lists DEAD links (404/410) to fix; 403/429 mean "couldn't check", not dead. Not part of validate. |
 | `npm run build` | Runs `validate`, then builds the finished site into `dist/`. Stops if there are any errors. |
 | `npm test` | Runs the automated tests for the price math, tiers, and validation. |
 | `npm run check` | Checks the code for type mistakes. |
