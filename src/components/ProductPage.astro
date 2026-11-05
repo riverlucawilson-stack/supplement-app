@@ -8,7 +8,7 @@ import { categoryOf, type Product } from '../categories';
 import { formLabels } from '../categories/shared';
 import { settings } from '../settings';
 import { allPrices, amountStated, bestPrice } from '../lib/pricing';
-import { isCertificationCurrent } from '../lib/staleness';
+import { isCertificationCurrent, isPriceStale } from '../lib/staleness';
 import { usd } from '../lib/format';
 import { coaProblems, tierFor } from '../lib/tier';
 import { hasUnverifiedData, isSampleProduct } from '../lib/review';
@@ -21,7 +21,11 @@ interface Props {
 const { product: p } = Astro.props;
 const today = new Date();
 const category = categoryOf(p);
-const prices = allPrices(p, today);
+// When the label doesn't state the compared amount, prices are still listed, without a cost per amount.
+const stated = amountStated(p);
+const prices = stated
+  ? allPrices(p, today)
+  : p.prices.map((price) => ({ price, activeAmount: 0, costPerReferenceDose: NaN, costPer30Days: undefined, stale: isPriceStale(price.date_checked, today) }));
 const best = bestPrice(p, today);
 const tier = tierFor(p, today);
 const perServing = category.activePerServing(p);
@@ -101,7 +105,10 @@ const description = best
           ))}
         </dl>
       )}
-      {!perServingOnly && (
+      {!perServingOnly && !stated && (
+      <p>The label doesn’t state this amount, so there’s no cost {category.referenceDose.label}.</p>
+      )}
+      {!perServingOnly && stated && (
       <p>
         {amount.charAt(0).toUpperCase() + amount.slice(1)} takes <strong class="num">{round(servingsPerReferenceDose)}</strong>
         {servingsPerReferenceDose === 1 ? ' serving' : ' servings'} of this product.
@@ -157,7 +164,7 @@ const description = best
                 </th>
                 <td class="r num" data-label="Price">{usd(m.price.price_usd)}</td>
                 <td class="r num" data-label="Servings">{m.price.servings}</td>
-                <td class="r num" data-label={category.referenceDose.short}><strong>{usd(m.costPerReferenceDose)}</strong></td>
+                <td class="r num" data-label={category.referenceDose.short}><strong>{Number.isNaN(m.costPerReferenceDose) ? '—' : usd(m.costPerReferenceDose)}</strong></td>
                 <td data-label="Checked">
                   {shortDate(m.price.date_checked)} {m.stale && <span class="pill pill-warn">Stale</span>}
                 </td>

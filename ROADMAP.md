@@ -7,7 +7,7 @@ Since 2026-10-21 River lets Claude make project decisions without asking; log ea
 Still River's: approving evidence/health text (delegated to Claude on 2026-10-24 for the current to-dos), and the first deploy (River approved 2026-10-24; needs River's Cloudflare login).
 
 ## IN PROGRESS
-- Curcumin batch 2: Thorne Curcumin Phytosome, a turmeric gummy, a BCM-95/Longvida/Theracurmin product, a store brand, a root-powder-only product.
+- Calcium category config: $ per 500 mg elemental calcium; carbonate vs citrate; added vitamin D or K.
 
 ## WAITING ON RIVER
 1. Installable app (drafts/pwa-plan.md): A (installable only), B (installable + offline pages), or neither? I recommend A.
@@ -187,9 +187,12 @@ Same definition of done as Stage C.
   - [x] batch 2: NeoCell Grassfed Collagen Peptides tablets, Doctor's Best Collagen Types 1 & 3 tablets, Garden of Life Grass Fed Collagen Peptides, Vital Proteins Vanilla (9 total). Vitacost Advanced Collagen dropped (temporarily unavailable); no chicken/porcine product had a collagen-in-grams line.
   - [x] comparison page check  - [x] product pages check  - [x] claims-review pass (2026-11-05)
   - [x] evidence draft (drafts/evidence/collagen.md from a 2026 umbrella review and a 2024 OA meta-analysis, abstracts only, NEEDS RIVER REVIEW; copy in project files review/); category published
-- [ ] 6. Curcumin / turmeric: $ per 500 mg curcuminoids, not turmeric powder weight. Record formulation (95% extract, piperine, phytosome, etc.). No bioavailability adjustment; record the claim and its source. No stated curcuminoid content = empty unit price with a note.
+- [x] 6. Curcumin / turmeric: $ per 500 mg curcuminoids, not turmeric powder weight. Record formulation (95% extract, piperine, phytosome, etc.). No bioavailability adjustment; record the claim and its source. No stated curcuminoid content = empty unit price with a note.
   - [x] category config: categories/curcumin.yaml (status: draft) + template; products without stated curcuminoids show "Amount not on label" instead of a cost (src/lib/pricing.ts amountStated) (2026-11-05)
   - [x] batch 1: Sports Research Turmeric Curcumin (C3 + BioPerine), Doctor's Best Curcumin Phytosome (Meriva), Nature's Bounty Turmeric 450 mg, Qunol Turmeric Curcumin Complex (curcuminoids not stated), NOW Turmeric Curcumin
+  - [x] batch 2: Thorne Curcumin Phytosome, Garden of Life Turmeric Gummies, Life Extension Super Bio-Curcumin (BCM-95), Vitacost Root2 C3 Complex, Solaray Fermented Organic Turmeric (10 total; 5 without a stated curcuminoid amount)
+  - [x] comparison page check  - [x] product pages check (fixed "Infinity servings" and hidden prices for products without a stated amount)  - [x] claims-review pass (2026-11-05)
+  - [x] evidence draft (drafts/evidence/curcumin.md from the NCCIH turmeric page, April 2025, NEEDS RIVER REVIEW; copy in project files review/); category published
 - [ ] 7. Calcium: $ per 500 mg elemental calcium. Record carbonate vs citrate and any added vitamin D or K.
 - [ ] 8. Melatonin: propose a method first and wait (price per mg would rank megadoses best). Record labeled dose, format (tablet, gummy, extended release), and any independent testing of actual content.
 
@@ -198,6 +201,7 @@ Same definition of done as Stage C.
 - [x] Supplement Facts-style panel rebuilt from each product file, ingredients grouped by role, flagged ones colored with the source.
 - [x] Product photos for 83 of 167 products (Vitacost og:image, credited, entered_by: claude).
 - [ ] River: check each rule in ingredients/flags.yaml against its source, then delete its entered_by line.
+- [ ] River: look over the photos on the zinc, collagen, probiotics and curcumin pages (added 2026-11-05 from each Vitacost page's og:image). Some Vitacost pages carry another product's meta tags, so an image may show the wrong product; Claude can't view images from this container.
 - [ ] Photos for the 84 products without one (non-Vitacost stores, CoQ10, and fetch failures: double-wood-ksm-66, designs-for-sport, sports-research triple strength and K2, nature-made vitamin C 1000).
 - [ ] Label (Supplement Facts) photos: only add when the store page identifies the image as the label.
 - [ ] Set ingredients_confirmed: true where the full ingredient list was read, so empty lists get graded (about 39 products show "Not graded").
