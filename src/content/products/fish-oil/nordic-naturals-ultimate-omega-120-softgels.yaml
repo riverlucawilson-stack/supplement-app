@@ -17,6 +17,13 @@ dose:
   total_omega3_per_serving_mg: 1280   # Vitacost Supplement Facts "Total Omega-3s"
   servings_per_container: 60    # Vitacost Supplement Facts panel. NOTE: Vitacost "Key info" says "Total servings 120 count", which is softgels, not servings.
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/182_8f0b87d3-78cc-4a86-8a85-cb40d810246b.jpg?v=1781993775
+    source_url: https://www.vitacost.com/products/nordic-naturals-ultimate-omega-great-lemon-120-soft-gels-640-mg-per-soft-gel-4200
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 45.86            # one price shown, no sale marking; 120 count

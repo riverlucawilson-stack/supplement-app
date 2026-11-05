@@ -13,6 +13,13 @@ dose:
   vitamin_c_per_serving_mg: 1000 # Vitacost: 1,000 mg
   servings_per_container: 100   # panel has no servings-per-container line; Vitacost "Total servings 100 count" at 1 caplet per serving
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/39_3a51be88-2776-4807-bae0-e19bf01b549d.jpg?v=1781949870
+    source_url: https://www.vitacost.com/products/nature-s-bounty-vitamin-c-1-000-mg-100-caplets-67786
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 11.50            # Vitacost: regular price, 100 caplets

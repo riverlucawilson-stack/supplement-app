@@ -24,6 +24,13 @@ dose:
   iron_mg: 6                    # Vitacost: 6 mg (ferrous bisglycinate), 33% DV
   servings_per_container: 30    # Vitacost panel: 30 (the page's "Key info" says "Total servings 90 count", which is the softgel count)
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/35_432c3d64-134f-4b81-9ba4-f2283285efee.jpg?v=1781994705
+    source_url: https://www.vitacost.com/products/now-foods-eve-softgels-superior-women-s-multi-90-softgels-116600
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 19.39            # regular and sale both $19.39 (shown as "Sale")

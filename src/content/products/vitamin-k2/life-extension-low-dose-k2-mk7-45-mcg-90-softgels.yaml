@@ -13,6 +13,13 @@ dose:
   vitamin_k2_per_serving_mcg: 45 # vitacost: 45 mcg
   servings_per_container: 90    # vitacost: "Total servings 90 count"
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/107_f92624aa-0053-4fbc-8065-1e148fc23248.jpg?v=1782001136
+    source_url: https://www.vitacost.com/products/life-extension-low-dose-vitamin-k2-mk-7-45-mcg-90-softgels-68439
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 13.50            # vitacost.com: "Regular price $13.50"

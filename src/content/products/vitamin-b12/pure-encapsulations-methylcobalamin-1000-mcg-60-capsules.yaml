@@ -13,6 +13,13 @@ dose:
   vitamin_b12_per_serving_mcg: 1000   # Vitacost: 1,000 mcg
   servings_per_container: 60
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/10_2ce37221-b2b2-4835-9247-0a465ad345b6.jpg?v=1781817472
+    source_url: https://www.vitacost.com/products/pure-encapsulations-methylcobalamin-1-000-mcg-60-capsules-158058
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 20.50            # Vitacost: regular price $20.50, 60 capsules

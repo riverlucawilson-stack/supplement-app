@@ -17,6 +17,13 @@ dose:
   total_omega3_per_serving_mg: 1600   # Vitacost Supplement Facts "Total omega-3 fatty acids"
   servings_per_container: 60    # Supplement Facts panel. NOTE: Vitacost "Key info" says "Total servings 120 count", which is softgels, not servings.
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/45_f14199dd-f283-46c2-a2e0-001f29ca84ae.jpg?v=1781991119
+    source_url: https://www.vitacost.com/products/carlson-wild-norwegian-elite-omega-3-gems-natural-lemon-120-soft-gels-67747
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 42.42            # page shows "Sale" tag but regular and sale price are both $42.42; 120 count

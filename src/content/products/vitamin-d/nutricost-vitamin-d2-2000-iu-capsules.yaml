@@ -14,6 +14,13 @@ dose:
   vitamin_d_per_serving_mcg: 50 # vitacost.com: "50 mcg (250% DV)"; title says 2,000 IU
   servings_per_container: 240   # vitacost.com: 240
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/8_ccdabe0f-cf1b-4f66-91f8-ac5124de62dd.jpg?v=1781857140
+    source_url: https://www.vitacost.com/products/nutricost-vitamin-d2-50-mcg-2-000-iu-240-capsules-147092
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 14.97            # vitacost.com: "Sale price $14.97"

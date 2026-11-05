@@ -18,6 +18,13 @@ dose:
   protein_per_serving_g: 21     # Vitacost and Target: 21 g
   servings_per_container: 20    # "About 20" on Vitacost, Target and HEB
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/46_8361037d-8bde-46ad-86fc-cc4dfbaa07f4.jpg?v=1781986985
+    source_url: https://www.vitacost.com/products/orgain-organic-protein-powder-creamy-chocolate-fudge-2-03-lb-920-g-69268
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 32.99            # regular; page showed regular and sale both $32.99

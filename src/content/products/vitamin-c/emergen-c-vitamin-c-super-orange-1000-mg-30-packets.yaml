@@ -14,6 +14,13 @@ dose:
   zinc_per_serving_mg: 2        # vitacost: Zinc (as zinc ascorbate) 2 mg
   servings_per_container: 30
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/49_4d83cfe0-159a-485b-962a-d6afd12e08c3.jpg?v=1781972976
+    source_url: https://www.vitacost.com/products/emergen-c-vitamin-c-super-orange-1-000-mg-30-packets-0-32-oz-9-1-g-each-18057
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 15.43            # vitacost: $15.43 (sale price equals regular price)

@@ -16,6 +16,13 @@ dose:
   ashwagandha_per_serving_mg: 120   # thorne.com: "Ashwagandha extract (root, leaf): 120mg"
   servings_per_container: 30        # thorne.com: "Servings per container: 30"
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/8_5b15d3cb-aa1c-43ea-9d7b-f4e2c4a2003a.jpg?v=1781846588
+    source_url: https://www.vitacost.com/products/thorne-ashwagandha-120-mg-30-capsules-156374
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Thorne
     price_usd: 22.00                # page: "$22 / 30 Capsule(s)", SKU SF828

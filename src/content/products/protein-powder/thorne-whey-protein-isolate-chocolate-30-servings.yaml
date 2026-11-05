@@ -16,6 +16,13 @@ dose:
   protein_per_serving_g: 21     # Vitacost: protein 21 g
   servings_per_container: 30    # Vitacost: "Servings Per Container: 30"
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/43_7e6adaef-1d54-4ab0-a400-cbf4cf2b05b0.jpg?v=1788455239
+    source_url: https://www.vitacost.com/products/thorne-whey-protein-isolate-chocolate-1-99-lb-906-g-68452
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 65.00            # regular; page showed regular and sale both $65.00

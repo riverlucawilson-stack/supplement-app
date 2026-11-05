@@ -13,6 +13,13 @@ dose:
   vitamin_d_per_serving_mcg: 125 # thorne.com and vitacost.com: 125 mcg (5,000 IU)
   servings_per_container: 60
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/54_94a4b66c-0209-4b55-8084-343e1ef065b1.jpg?v=1782001312
+    source_url: https://www.vitacost.com/products/thorne-d-5-000-60-capsules-125-mcg-per-capsule-18451
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Thorne
     price_usd: 20.00            # thorne.com: "$20" for 60 capsules

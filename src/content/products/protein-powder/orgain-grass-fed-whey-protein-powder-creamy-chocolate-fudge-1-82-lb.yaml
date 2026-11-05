@@ -16,6 +16,13 @@ dose:
   protein_per_serving_g: 21     # Vitacost: protein 21 g
   servings_per_container: 20    # Vitacost panel: "About 20"
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/34_3743922e-f5aa-41f9-9efc-446ef5c21afb.jpg?v=1781892604
+    source_url: https://www.vitacost.com/products/orgain-grass-fed-whey-protein-powder-creamy-chocolate-fudge-1-82-lb-828-g-81281
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 31.52            # regular and sale both $31.52; page does not state stock status (Add to cart shown)

@@ -14,6 +14,13 @@ dose:
   vitamin_c_per_serving_mg: 1000 # vitacost: 1 g (1,000 mg)
   servings_per_container: 100
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/77_f13097fe-63cf-42ab-8d21-1e6fc607ec84.jpg?v=1789528284
+    source_url: https://www.vitacost.com/products/now-foods-c-1000-with-rose-hips-100-tablets-39672
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 9.17             # vitacost: $9.17 (tagged Sale but equals regular price)

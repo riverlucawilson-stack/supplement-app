@@ -14,6 +14,13 @@ dose:
   vitamin_b12_per_serving_mcg: 1000   # Vitacost page Supplement Facts
   servings_per_container: 100
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/69_c54c1c8c-4409-46fa-8bd9-ba79a0c92555.jpg?v=1781993817
+    source_url: https://www.vitacost.com/products/now-foods-methyl-b-12-1-000-mcg-100-lozenges-449
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 6.84          # Vitacost page regular price

@@ -24,6 +24,13 @@ dose:
   iron_mg: 18                   # Vitacost: 18 mg, 100% DV
   servings_per_container: 90    # Vitacost: 90
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/43_dc0856f5-5478-4e60-a02b-ffd84cfac781.jpg?v=1781958350
+    source_url: https://www.vitacost.com/products/nature-made-multi-for-her-90-tablets-40397
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 10.18            # regular and sale both $10.18

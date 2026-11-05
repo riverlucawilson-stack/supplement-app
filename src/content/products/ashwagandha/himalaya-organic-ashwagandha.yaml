@@ -16,6 +16,13 @@ dose:
   # withanolides_percent left out: each part has its own % (0.2%, 0.5%, 8%), no single value.
   servings_per_container: 60        # Vitacost 60-caplet page: "Servings Per Container: 60"
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/60_42b4a214-1949-48d7-aed3-c803b737a4d7.jpg?v=1781998222
+    source_url: https://www.vitacost.com/products/himalaya-organic-ashwagandha-60-caplets-3691
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Himalaya
     price_usd: 17.99                # .js: "30 Caplets", 1799

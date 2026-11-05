@@ -13,6 +13,13 @@ dose:
   vitamin_d_per_serving_mcg: 25 # vitacost.com: "25 mcg (1,000 IU)"
   servings_per_container: 125   # vitacost.com Supplement Facts: 125 (the Key info box says "Total servings 58 ml", which is the bottle volume)
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/116_3c3d8c93-6bc4-4ae4-b56d-47f68f199f72.jpg?v=1781958102
+    source_url: https://www.vitacost.com/products/garden-of-life-vegan-d3-organic-spray-vanilla-2-fl-oz-58-ml-58127
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 17.49            # vitacost.com: regular and sale price $17.49

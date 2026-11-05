@@ -14,6 +14,13 @@ dose:
   creatine_per_serving_g: 5
   servings_per_container: 90    # Vitacost facts: "Servings Per Container: 90" (15.9 oz tub)
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/8_cf8b39de-94bc-4fef-b18c-ecb7e59b97ba.jpg?v=1781823684
+    source_url: https://www.vitacost.com/products/bubs-naturals-bubs-boost-creatine-monohydrate-unflavored-15-9-oz-450-g-159817
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: BUBS Naturals
     price_usd: 43.00            # .js: "15.9oz Tub", 4300 cents

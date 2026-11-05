@@ -16,6 +16,13 @@ dose:
   # CHECK: Vitacost's "Key info" box says "Total servings 60 count", which is the gummy
   # count, not servings. The panel's 30 servings is used.
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/104_631b84a2-5d84-4acd-af8f-8316e07e95c0.jpg?v=1786492086
+    source_url: https://www.vitacost.com/products/goli-nutrition-ashwagandha-gummies-60-gummies-104633
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 14.98                # page: "$14.98", "60 Gummies"

@@ -15,6 +15,13 @@ dose:
   # (30/600 would be 5%). CHECK: add 5 only if you're happy deriving it.
   servings_per_container: 60        # panel: servings per container 60
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/104_80a645c4-9819-4033-818e-4d4517a12af5.jpg?v=1781976047
+    source_url: https://www.vitacost.com/products/garden-of-life-organics-ashwagandha-60-vegan-tablets-600-mg-per-tablet-85255
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 19.59                # page: "$19.59", "60 Vegan Tablets"

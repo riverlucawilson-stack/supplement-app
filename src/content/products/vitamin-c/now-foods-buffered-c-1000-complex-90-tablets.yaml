@@ -14,6 +14,13 @@ dose:
   vitamin_c_per_serving_mg: 1000 # vitacost: 1 g (1,000 mg)
   servings_per_container: 90
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/38_c180ba40-9152-4590-9c98-05db21772089.jpg?v=1781998119
+    source_url: https://www.vitacost.com/products/now-foods-buffered-c-1000-complex-90-tablets-117137
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 12.24            # vitacost: $12.24 (sale price equals regular price)

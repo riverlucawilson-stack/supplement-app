@@ -14,6 +14,13 @@ dose:
   magnesium_per_serving_mg: 240 # Supplement Facts "Magnesium" line = 240 mg per 2 capsules (57% DV); the title's "120 mg per capsule" matches
   servings_per_container: 60    # vitacost.com Supplement Facts (its "Key info" says 120 servings, which conflicts; Supplement Facts used)
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/8_a9efba6a-9a90-422b-93bd-ea2fdb3f60b9.jpg?v=1781876002
+    source_url: https://www.vitacost.com/products/nature-s-bounty-magnesium-glycinate-high-absorption-120-capsules-120-mg-per-capsule-151036
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 26.06            # vitacost.com regular price, 120 capsules

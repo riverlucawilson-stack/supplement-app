@@ -14,6 +14,13 @@ dose:
   vitamin_d_per_serving_mcg: 125 # vitacost.com and naturesbounty.com: 125 mcg (5,000 IU)
   servings_per_container: 150   # vitacost.com: 150 servings
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/64_d5324cc4-f996-41b3-9cbe-cbfbde067d81.jpg?v=1781979968
+    source_url: https://www.vitacost.com/products/nature-s-bounty-vitamin-d3-125-mcg-5-000-iu-150-rapid-release-softgels-32101
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 15.46            # vitacost.com: $15.46 (regular and sale price shown the same), 150 softgels

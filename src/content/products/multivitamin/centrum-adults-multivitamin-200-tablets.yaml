@@ -23,6 +23,13 @@ dose:
   iron_mg: 18                   # Vitacost: 18 mg, 100% DV
   servings_per_container: 200   # Vitacost: 200
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/24_00bbb4f6-5b96-4cd8-b266-70cd10823c65.jpg?v=1781977154
+    source_url: https://www.vitacost.com/products/centrum-adults-multivitamin-200-tablets-125279
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 15.83            # regular and sale both $15.83

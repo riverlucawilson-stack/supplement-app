@@ -13,6 +13,13 @@ dose:
   magnesium_per_serving_mg: 120 # vitacost.com: Magnesium 120 mg (elemental line)
   servings_per_container: 90
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/8_acf7a958-1daa-4424-beb4-ce799a29602b.jpg?v=1781930019
+    source_url: https://www.vitacost.com/products/pure-encapsulations-magnesium-glycinate-90-capsules-120-mg-per-capsule-145681
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 27.00            # vitacost.com: $27.00 for 90 capsules

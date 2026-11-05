@@ -24,6 +24,13 @@ dose:
   # iron_mg: MISSING: no iron line in the Vitacost Supplement Facts panel
   servings_per_container: 60    # Vitacost: 60
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/11_5e7a579d-19c0-42ec-84d6-420b421f1116.jpg?v=1781894901
+    source_url: https://www.vitacost.com/products/pure-encapsulations-o-n-e-multivitamin-60-capsules-52461
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 48.50            # regular and sale both $48.50 (60 count)

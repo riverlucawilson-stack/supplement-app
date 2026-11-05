@@ -14,6 +14,13 @@ dose:
   creatine_per_serving_g: 5
   servings_per_container: 100   # facts: "Serving Per Container: 100"
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/59_fecc555f-8749-49a8-a242-50b627e53565.jpg?v=1781952771
+    source_url: https://www.vitacost.com/products/nutrabio-micronized-creatine-monohydrate-unflavored-1-1-lb-500-g-80769
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: iHerb
     price_usd: 35.99            # "Unflavored, 1.1 lb (500 g)", $35.99

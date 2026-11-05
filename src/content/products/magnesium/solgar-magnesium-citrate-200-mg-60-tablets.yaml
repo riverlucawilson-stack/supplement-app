@@ -14,6 +14,13 @@ dose:
   magnesium_per_serving_mg: 400 # Supplement Facts "Magnesium" line = 400 mg per 2 tablets (95% DV); the name's "200 mg" is per tablet
   servings_per_container: 30    # vitacost.com Supplement Facts
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/104_e94fe0e4-3137-4412-8123-a889c3a4373b.jpg?v=1785802345
+    source_url: https://www.vitacost.com/products/solgar-magnesium-citrate-60-tablets-200-mg-per-tablet-84119
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 8.49             # vitacost.com regular price, 60 tablets

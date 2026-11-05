@@ -26,6 +26,13 @@ dose:
   # iron_mg: not listed on the panel (Vitacost)
   servings_per_container: 30    # Vitacost panel: 30 (its "Key info" says 60 count, which is capsules)
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/63_70b4e200-8eb7-4097-80be-cbd86fcbcea1.jpg?v=1781994496
+    source_url: https://www.vitacost.com/products/thorne-basic-nutrients-2-day-60-capsules-85476
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 36.00            # regular and sale both $36.00

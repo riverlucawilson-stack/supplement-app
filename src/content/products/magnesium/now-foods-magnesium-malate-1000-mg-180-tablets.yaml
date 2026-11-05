@@ -14,6 +14,13 @@ dose:
   magnesium_per_serving_mg: 113 # Supplement Facts elemental magnesium line = 113 mg (27% DV); the 1000 mg in the name is the malate compound
   servings_per_container: 180   # nowfoods.com and vitacost.com
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/82_a94c52e5-2af9-47df-b4d9-70ab5e93c090.jpg?v=1781998502
+    source_url: https://www.vitacost.com/products/now-foods-magnesium-malate-1-000-mg-180-tablets-692
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: NOW Foods
     price_usd: 25.99            # nowfoods.com, 180 tablets (SKU 1300); page showed "Out of Stock"

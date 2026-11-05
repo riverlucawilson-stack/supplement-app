@@ -20,6 +20,13 @@ dose:
   creatine_per_serving_g: 5     # Vitacost: 5 g micronized creatine monohydrate
   servings_per_container: 30    # Vitacost: "Servings Per Container: 30"
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/8_dcd1d277-c279-4c9a-ad9c-ccbbcc86fe89.jpg?v=1782588996
+    source_url: https://www.vitacost.com/products/bodyhealth-perfect-amino-creatine-8-04-oz-228-g-160839
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 39.95            # Vitacost: "8.04 oz (228 g)", $39.95

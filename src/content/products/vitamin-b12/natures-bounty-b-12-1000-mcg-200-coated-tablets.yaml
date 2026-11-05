@@ -13,6 +13,13 @@ dose:
   vitamin_b12_per_serving_mcg: 1000   # Vitacost: 1,000 mcg
   servings_per_container: 200
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/55_cde47b63-2475-4ecb-8c8a-1183292e7c06.jpg?v=1781940775
+    source_url: https://www.vitacost.com/products/nature-s-bounty-b-12-1-000-mcg-200-coated-tablets-59925
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 15.18            # Vitacost: regular price $15.18, 200 coated tablets

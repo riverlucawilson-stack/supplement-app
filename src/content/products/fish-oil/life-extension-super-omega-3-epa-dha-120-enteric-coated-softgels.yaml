@@ -19,6 +19,13 @@ dose:
   # MISSING: total omega-3 line not stated on the Vitacost label (Pure+ Wild Fish Oil Concentrate 2000 mg is the oil weight)
   servings_per_container: 60    # Vitacost Supplement Facts. Key info box says "Total servings 120 count", which is the softgel count.
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/199.jpg?v=1781983922
+    source_url: https://www.vitacost.com/products/life-extension-super-omega-3-epa-dha-fish-oil-sesame-lignans-olive-extract-120-enteric-coated-softgels-65704
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 32.25            # regular and sale both $32.25 (page shows a "Sale" label); 120 softgels

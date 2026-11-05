@@ -14,6 +14,13 @@ dose:
   vitamin_k2_per_serving_mcg: 100 # vitacost.com: 100 mcg
   servings_per_container: 120
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/86_693c8854-e1f6-4f9f-a251-3696b7f28b9f.jpg?v=1781991190
+    source_url: https://www.vitacost.com/products/now-foods-mk-7-vitamin-k-2-100-mcg-120-veg-capsules-78992
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 20.25            # vitacost.com: "Regular price" $20.25 for 120 capsules

@@ -17,6 +17,13 @@ dose:
   total_omega3_per_serving_mg: 813   # Vitacost "Total Omega-3 Fatty Acids (from Fish Oil)"
   servings_per_container: 90    # Vitacost: serving 1 gelcap, 90 count. Key info "Total servings 90 count" is the gelcap count; same number here because 1 per serving.
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/50_f0d4d2c3-028f-431d-b9f0-e67b17cb7d43.jpg?v=1781954072
+    source_url: https://www.vitacost.com/products/thorne-super-epa-90-gelcaps-85477
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 41.00            # regular and sale both $41.00 (page shows a "Sale" tag); 90 count

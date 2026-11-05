@@ -23,6 +23,13 @@ dose:
   withanolides_percent: 5       # "(min. 5% total withanolides)"
   servings_per_container: 60    # "Servings per container: 60"
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/24_67bed921-d7e8-4de5-98d0-388eab2ba003.jpg?v=1781973162
+    source_url: https://www.vitacost.com/products/nutricost-ksm-66-ashwagandha-root-extract-60-capsules-139433
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Nutricost
     price_usd: 16.97            # brand page: 60 veggie caps, 60 servings, $16.97 (only variant)

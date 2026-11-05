@@ -25,6 +25,13 @@ dose:
   withanolides_percent: 10      # "Std. to no less than 10% total withanolides"
   servings_per_container: 45    # "Servings Per Container: 45" (90 capsules)
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/8_c937874e-933a-4b8c-9d4e-3e8842ca1a6d.jpg?v=1781882826
+    source_url: https://www.vitacost.com/products/toniiq-ashwagandha-90-capsules-144813
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Toniiq
     price_usd: 24.97            # .js "Default Title" $24.97; page: 1 bottle (90 capsules) $24.97

@@ -13,6 +13,13 @@ dose:
   magnesium_per_serving_mg: 400 # Supplement Facts "Magnesium" line = elemental, 400 mg per 2 tablets (95% DV); the name's "200 mg" is per tablet. vitacost 100-count page: made from 2,660 mg magnesium citrate
   servings_per_container: 50    # nowfoods.com and vitacost.com Supplement Facts (vitacost "Key info" says 100 servings, which conflicts; Supplement Facts used)
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/39_e409944d-cf9d-4d3f-80ec-3816d4d7d075.jpg?v=1781990507
+    source_url: https://www.vitacost.com/products/now-foods-magnesium-citrate-200-mg-100-tablets-116584
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: NOW Foods
     price_usd: 19.99            # nowfoods.com: 100 tablets $19.99 (SKU 1290)

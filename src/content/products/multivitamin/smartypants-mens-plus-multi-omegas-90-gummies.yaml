@@ -23,6 +23,13 @@ dose:
   # iron_mg: MISSING: no iron line in the Vitacost Supplement Facts panel
   servings_per_container: 30    # Vitacost panel: 30 (the page's "Key info" says "Total servings 90 count", which is the gummy count)
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/8_e49fa5a5-f345-4f82-9ee6-bad8ef99e50b.jpg?v=1781933335
+    source_url: https://www.vitacost.com/products/smartypants-men-s-plus-multi-omegas-raspberry-lemonade-90-gummies-149748
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 29.38            # regular and sale both $29.38

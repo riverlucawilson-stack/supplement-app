@@ -15,6 +15,13 @@ dose:
   withanolides_percent: 2.5         # Vitacost: "standardized to contain 2.5% withanolides"
   servings_per_container: 60        # Vitacost 60-capsule page: "Servings per container: 60"
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/8_59c58ffc-a250-4d72-915e-40115b7abf8f.jpg?v=1785559655
+    source_url: https://www.vitacost.com/products/pure-encapsulations-ashwagandha-60-capsules-500-mg-per-capsule-145656
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 29.00                # page: "Pure Encapsulations, Ashwagandha, 60 Capsules", $29.00

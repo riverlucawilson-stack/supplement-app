@@ -14,6 +14,13 @@ dose:
   magnesium_per_serving_mg: 144 # Supplement Facts "Magnesium" line = elemental, 144 mg per 3 capsules (34% DV). The 2,000 mg is the L-threonate compound weight, not used.
   servings_per_container: 30    # vitacost.com Supplement Facts (its "Key info" says 90, which conflicts; 90 capsules / 3 = 30)
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/276.jpg?v=1781993512
+    source_url: https://www.vitacost.com/products/life-extension-neuro-mag-magnesium-l-threonate-90-vegetarian-capsules-48-mg-per-capsule-40244
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 31.50            # vitacost.com regular price (sale price shown is the same)

@@ -13,6 +13,13 @@ dose:
   vitamin_k2_per_serving_mcg: 120 # vitacost Supplement Facts: 120 mcg
   servings_per_container: 60
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/67_286764bd-fe64-4318-b199-4b1c9c34dcc6.jpg?v=1781970351
+    source_url: https://www.vitacost.com/products/naturesplus-source-of-life-garden-vitamin-k2-60-vegan-capsules-24625
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 16.11            # vitacost.com: "Regular price $16.11"

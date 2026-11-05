@@ -13,6 +13,13 @@ dose:
   vitamin_b12_per_serving_mcg: 1000   # Vitacost page Supplement Facts
   servings_per_container: 90
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/8_661ffc6e-9c63-49f4-9551-75e9f6c52f51.jpg?v=1781847875
+    source_url: https://www.vitacost.com/products/nature-made-vitamin-b12-1-000-mcg-90-softgels-145568
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 17.70          # Vitacost page regular price

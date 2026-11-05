@@ -25,6 +25,13 @@ dose:
   iron_mg: 18                   # Vitacost: 18 mg (as ferrous fumarate), 100% DV
   servings_per_container: 130   # Vitacost: 130
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/55_a48e9f23-78af-4b18-8fbd-41c26b24bfad.jpg?v=1787000820
+    source_url: https://www.vitacost.com/products/nature-made-multi-130-tablets-40426
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 12.78            # regular and sale both $12.78

@@ -14,6 +14,13 @@ dose:
   vitamin_k2_per_serving_mcg: 90 # vitacost.com: 90 mcg
   servings_per_container: 90
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/48_72865f7f-0b91-4598-82ce-380575ad02d1.jpg?v=1782003667
+    source_url: https://www.vitacost.com/products/jarrow-formulas-mk-7-90-mcg-90-softgels-108495
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   # CHECK: vitacost.com showed "Temporarily unavailable" on 2026-10-22; the price is still shown.
   - retailer: Vitacost

@@ -15,6 +15,13 @@ dose:
   vitamin_d_per_serving_mcg: 125 # vitacost: VegD3 125 mcg (5,000 IU)
   servings_per_container: 60
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/68_520e9535-f963-4a21-9015-267f2b0cf1fa.jpg?v=1785568034
+    source_url: https://www.vitacost.com/products/enzymedica-vitamin-d3-vitamin-k2-60-capsules-115983
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 20.24            # vitacost.com: "Regular price $20.24"

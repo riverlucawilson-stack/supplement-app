@@ -17,6 +17,13 @@ dose:
   # total_omega3_per_serving_mg: not entered; panel lists "other omega-3s" 197 mg but no total line. Page title says "650 mg per softgel" and the description "1,300 mg ... in just two softgels", which do not match the panel.
   servings_per_container: 30    # Supplement Facts panel. NOTE: Key info says "60 count", which is softgels.
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/70_94ffa58a-580c-4ce9-86d6-86eaf362482a.jpg?v=1781892640
+    source_url: https://www.vitacost.com/products/barlean-s-fresh-catch-ultra-epa-dha-fish-oil-orange-60-softgels-650-mg-per-softgel-14956
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 33.99            # "Sale" tag shown but regular and sale price are both $33.99; 60 count

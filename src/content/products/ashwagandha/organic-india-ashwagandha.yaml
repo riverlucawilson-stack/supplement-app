@@ -14,6 +14,13 @@ dose:
   ashwagandha_per_serving_mg: 800   # Vitacost: "Organic Ashwagandha ... root, 800 mg"
   servings_per_container: 45        # Vitacost 90-capsule page: "Servings per container: 45"
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/43_30f95d9a-1551-4268-9ee3-74ac16cef32c.jpg?v=1781989917
+    source_url: https://www.vitacost.com/products/organic-india-ashwagandha-90-vegetarian-caps-400-mg-per-capsule-24627
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Organic India
     price_usd: 19.99                # .js: "60 ct. bottle", 1999 (60 caps / 2 = 30 servings)

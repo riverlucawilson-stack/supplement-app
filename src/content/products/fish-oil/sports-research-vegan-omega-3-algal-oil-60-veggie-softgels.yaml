@@ -17,6 +17,13 @@ dose:
   total_omega3_per_serving_mg: 1020   # Vitacost Supplement Facts total omega-3 (as TG)
   servings_per_container: 30    # Supplement Facts panel. NOTE: Key info says "60 count", which is softgels.
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/77_f3b26c94-c0b7-42d0-85d8-88334faeed5d.jpg?v=1781986507
+    source_url: https://www.vitacost.com/products/sports-research-vegan-omega-3-60-veggie-softgels-99942
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 27.97            # "Sale" label shown but regular and sale price are both $27.97; 60 count
