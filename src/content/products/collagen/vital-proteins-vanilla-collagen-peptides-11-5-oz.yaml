@@ -1,0 +1,48 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the label name only: no health or beauty claims from retailer titles.
+category: collagen
+entered_by: claude              # label info from target.com
+brand: Vital Proteins
+name: Vanilla Collagen Peptides, 11.5 oz
+form: powder
+collagen_source: bovine         # target.com Supplement Facts "Collagen peptides (from bovine)"
+# MISSING: collagen_types. Not stated on the target.com or vitalproteins.com text read.
+flavor: Vanilla                 # target.com
+other_ingredients: [natural flavors, gluten-free whole grain oats, sea salt, stevia leaf reb m]   # target.com
+# MISSING: ingredients_confirmed left out. Target text cut off at "reb m", so the line may be incomplete.
+
+dose:
+  serving_size_g: 23            # target.com: 23.0 g
+  collagen_per_serving_g: 20    # target.com Supplement Facts "Collagen peptides (from bovine)" 20 g
+  servings_per_container: 14    # target.com. 14 x 23 g = 322 g, fits 11.5 oz (326 g).
+
+photos:
+  product:
+    url: https://cdn.shopify.com/s/files/1/2074/9385/files/1_HERO_CPV10oz.jpg?v=1784137540
+    source_url: https://www.vitalproteins.com/products/vanilla-collagen-peptides
+    alt: Vital Proteins Vanilla Collagen Peptides container
+    date_checked: 2026-11-05
+    entered_by: claude
+    # vitalproteins.com image alt text: "Vanilla Collagen Peptides 11.5oz | Hero Image" (filename says 10oz; alt text names 11.5 oz).
+
+prices:
+  - retailer: Target
+    price_usd: 21.99            # target.com: $21.99 online, 11.5 oz
+    servings: 14
+    url: https://target.com/p/vital-proteins-vanilla-collagen-peptides-dietary-supplement-11-5oz/-/A-83940895
+    date_checked: 2026-11-05
+    entered_by: claude
+    rating:
+      stars: 4.2                # target.com: 4.2 out of 5
+      count: 542
+
+# MISSING: certification. Target text says "filled at a cGMP and NSF certified facility" (brand claim); no certifier listing checked, so nothing recorded.
+certifications: []
+
+# MISSING: COA. Retailer pages have no COA link; brand site not checked.
+coas: []
+
+flags:
+  - may contain milk, peanuts, tree nuts and fish   # target.com allergen statement
+notes: ""
