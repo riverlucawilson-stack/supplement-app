@@ -10,17 +10,13 @@ Still River's: approving evidence/health text (delegated to Claude on 2026-10-24
 - (none)
 
 ## WAITING ON RIVER
-1. Freshness limits: CLAUDE.md says stale after 14 days (prices) and 2 years (COAs); your shift prompt says 30 days and 12 months. Change CLAUDE.md and src/settings.ts to 30 days / 12 months? (Until you say yes, CLAUDE.md's limits stay.)
-2. Shifts can't push now, so the live site won't show new work until someone pushes. May shifts push to claude/project-thread-6g8ebj again? (yes/no)
-3. Methodology draft (drafts/methodology.md): approve it as is, or edit the RIVER: lines? Also says cert-only products are Tier B, which CLAUDE.md's tier rules don't cover. OK? (yes/no)
-4. Affiliate disclosure wording (CLAUDE.md has none). Replace the current "some links may earn us a commission. It never affects rankings." with: "When you buy through some links on this site, we may earn a commission. Commissions never change the order of products or their tiers." (yes / your wording)
+- (none)
 
 ## Next up
-(Shift paused 2026-10-24 03:11Z at River's request, for 12 hours.)
+- Refresh: Double Wood KSM-66's COA (tested 2025-05-22) is stale under the new 12-month limit; look for a newer lot.
 - D6 link-check script, then D7 launch checklist and D8 PWA proposal.
 - Extra product batches continue with fish oil, then protein powder, multivitamin, C, B12, K2.
 - Stage E 1: CoQ10 category config, then its batches.
-- Work from this shift isn't pushed (WAITING ON RIVER 2); a git bundle is in /mnt/project-files/supplement-site-backup/.
 
 - [x] First deploy (2026-10-24): live at https://sup-search-doo.pages.dev, redeploys on every push to claude/project-thread-6g8ebj. Optional: deploy hook for a daily rebuild so stale-price warnings update (README).
 - [x] Evidence to-dos and approval for all 10 categories (2026-10-24, River delegated approval). All evidence pages are live.
@@ -148,8 +144,8 @@ Same inclusion rule and TEAM.md Mission 1 (up to 5 per batch, researcher + audit
 
 ## Stage D: launch readiness (build it; never deploy)
 - [x] D1 Freshness check (2026-10-24): validate already warned on stale prices, COAs (incl. test results) and certification checks; now also lists the 10 stalest items. Limits come from src/settings.ts (see WAITING ON RIVER 1).
-- [x] D2 Methodology draft (2026-10-24, waiting for River's review; 5 RIVER: lines inside): drafts/methodology.md (each category's comparison unit and math, tier rules exactly as CLAUDE.md states them, what "date checked" means, what the site doesn't cover). NEEDS RIVER REVIEW; build the page only after approval.
-- [ ] D3 Affiliate disclosure on every page with a buy link, shown before the first link (CLAUDE.md's wording, or draft wording and wait). Checked 2026-10-24: BaseLayout already shows it on every page above all page content and buy links; CLAUDE.md has no wording, so the text waits on WAITING ON RIVER 4.
+- [x] D2 Methodology (River approved 2026-11-05; built at /methodology/, draft removed): drafts/methodology.md (each category's comparison unit and math, tier rules exactly as CLAUDE.md states them, what "date checked" means, what the site doesn't cover). NEEDS RIVER REVIEW; build the page only after approval.
+- [x] D3 Affiliate disclosure (2026-11-05: River says the site earns no commission; every page now says so above all links) on every page with a buy link, shown before the first link (CLAUDE.md's wording, or draft wording and wait). Checked 2026-10-24: BaseLayout already shows it on every page above all page content and buy links; CLAUDE.md has no wording, so the text waits on WAITING ON RIVER 4.
 - [x] D4 Phone-width pass (2026-10-24; all 170 pages pass at 375 px in light and dark): tables usable at 375 px, heading order, alt text, color contrast.
 - [x] D5 Search basics (2026-10-24; 170 pages checked, robots.txt added): unique title and meta description per page, sitemap, canonical URLs.
 - [ ] D6 Link check: separate npm script (not part of validate) that checks source and buy URLs respond; 404 = dead, 403/429 = couldn't check.

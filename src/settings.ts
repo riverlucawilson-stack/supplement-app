@@ -8,10 +8,10 @@ export const settings = {
   siteUrl: 'https://sup-search-doo.pages.dev',
 
   // A price is marked "stale" when its date_checked is older than this.
-  priceStaleAfterDays: 14,
+  priceStaleAfterDays: 30,
 
   // A COA is marked "stale" when its test_date is older than this.
-  coaStaleAfterYears: 2,
+  coaStaleAfterMonths: 12,
 
   // A certification counts as "current" only if you re-checked the
   // certifier's listing within this many months (date_verified).

@@ -36,7 +36,7 @@ YAML file you edit by hand.
 | Path | What's in it |
 |---|---|
 | `src/content/products/creatine/`, `src/content/products/ashwagandha/` | **One YAML file per product**, one folder per category. This is where you'll spend most of your time. |
-| `src/settings.ts` | Site name, and the "stale" limits (prices 14 days, COAs 2 years, certifications 12 months). |
+| `src/settings.ts` | Site name, and the "stale" limits (prices 30 days, COAs 12 months, certifications 12 months). |
 | `src/lib/` | The calculations: `pricing.ts` (cost per 5 g, per 30 days, best price), `tier.ts` (Tier A/B/C with reasons), `staleness.ts`. |
 | `scripts/validate.ts` | The validation script. |
 | `tests/` | Automated tests. `tests/fixtures/products/` holds deliberately broken product files the tests check get caught. |
@@ -120,7 +120,7 @@ You never type a calculated number. For each retailer's price:
 **Tiers** (`src/lib/tier.ts`):
 
 - **A**: a current certification (verified within 12 months) AND a COA from an ISO/IEC
-  17025 accredited lab, on the finished product, under 2 years old.
+  17025 accredited lab, on the finished product, under 12 months old.
 - **B**: not A, but at least one COA or certification exists.
 - **C**: no COA and no certification.
 

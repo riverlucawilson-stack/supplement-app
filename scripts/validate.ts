@@ -157,7 +157,7 @@ function checkFile(path: string): FileReport {
   }
   product.coas.forEach((coa, i) => {
     if (isCoaStale(coa.test_date, today)) {
-      warnings.push(`STALE COA: coas #${i + 1} (lot ${coa.lot}) was tested ${day(coa.test_date)}, over ${settings.coaStaleAfterYears} years ago.`);
+      warnings.push(`STALE COA: coas #${i + 1} (lot ${coa.lot}) was tested ${day(coa.test_date)}, over ${settings.coaStaleAfterMonths} months ago.`);
     }
     if (coa.tests.length === 0) warnings.push(`coas #${i + 1} (lot ${coa.lot}) lists no tests.`);
   });
