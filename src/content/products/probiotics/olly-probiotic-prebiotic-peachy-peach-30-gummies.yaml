@@ -1,0 +1,46 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the label name only: no health words from retailer titles.
+category: probiotics
+entered_by: claude              # label info from vitacost.com
+brand: OLLY
+name: Probiotic + Prebiotic, Peachy Peach, 30 Gummies
+form: gummy
+cfu_guarantee: not_stated       # vitacost.com: only "500 Million CFU" on the Supplement Facts; no guarantee wording found
+strains: Bacillus coagulans MTCC 5856   # vitacost.com Supplement Facts: "Probiotic Blend: 500 Million CFU Bacillus coagulans MTCC 5856, 33 mg"
+storage: shelf-stable           # vitacost.com: "Store in a cool, dry place."
+# MISSING: delivery_claim. None found on the vitacost.com page.
+other_ingredients: [water, sugar, gelatin, pectin, lactic acid, sodium citrate, natural flavor, citric acid, tartaric acid, coloring from black carrot juice and paprika]   # vitacost.com
+ingredients_confirmed: true     # full other-ingredients line read on vitacost.com
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 gummy
+  cfu_billions_per_serving: 0.5 # vitacost.com: "500 Million CFU"
+  strain_count: 1
+  servings_per_container: 30    # vitacost.com: 30
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/24_68f73db6-b530-4073-b9a1-44e69af33b55.jpg?v=1781888352
+    source_url: https://www.vitacost.com/products/olly-probiotic-prebiotic-peachy-peach-30-gummies-119170
+    alt: OLLY Probiotic + Prebiotic Peachy Peach 30 gummies package
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 12.89            # vitacost.com: $12.89, 30 count, Add to cart shown, no out-of-stock notice
+    servings: 30
+    url: https://www.vitacost.com/products/olly-probiotic-prebiotic-peachy-peach-30-gummies-119170
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. The page shows only a star breakdown (74 ratings), no stated average.
+
+# MISSING: certification. The page shows "Contents Certified NSF" (a retailer/brand claim, not recorded). NSF's own site not checked.
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: [added sugars (<1 g per gummy; sugar is the 2nd other ingredient), added prebiotic blend (FOS, inulin, xylitol; 1.5 g total, amounts not listed), contains gelatin, "Processed in a facility with products that may contain soy, egg, peanuts, tree nuts, milk, fish, shellfish, wheat and sesame."]   # vitacost.com Supplement Facts and label statements
+notes: ""

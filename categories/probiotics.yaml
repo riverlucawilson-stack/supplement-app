@@ -5,7 +5,7 @@
 # same day to keep developing without waiting for authorization. River can switch to B or C.
 slug: probiotics
 name: Probiotics
-status: draft
+status: published
 order: 15
 
 page:
@@ -56,7 +56,7 @@ extra_fields:
 describe:
   - 'CFU guaranteed {cfu_guarantee}'
   - '{cfu_billions_per_serving} billion CFU'
-  - '{strain_count} strains'
+  - 'strains listed: {strain_count}'
   - '{storage}'
 
 certifications: [NSF Certified for Sport, Informed Sport, USP Verified, BSCG, Clean Label Project]
