@@ -1,0 +1,42 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name from the vitacost.com title.
+# CHECK: kroger.com page (30 ct) showed no price and delivery/pickup unavailable, so it was not priced.
+category: melatonin
+entered_by: claude              # label info from vitacost.com
+brand: Natrol
+name: Melatonin Fast Dissolve Strawberry 5 mg, 90 Tablets   # vitacost.com title
+form: tablet
+release: not_stated             # vitacost.com page has no release wording
+format: fast dissolve           # vitacost.com: "Quick Dissolves in Mouth", title "Fast Dissolve"
+other_ingredients: [xylitol, cellulose gum, soy polysaccharides, dextrose, crospovidone, dextrin, modified food starch, maltodextrin, silicon dioxide, malic acid, natural flavor, stearic acid, beet root extract (color), magnesium stearate, citric acid]   # vitacost.com line
+ingredients_confirmed: true     # full other-ingredients line read on vitacost.com
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 tablet
+  melatonin_mg: 5               # vitacost.com Supplement Facts: Melatonin 5 mg
+  servings_per_container: 90    # vitacost.com: 90
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/74_bd4e0127-37e9-47ef-8524-d1654634076b.jpg?v=1781997030   # vitacost.com og:image; page title names this product
+    source_url: https://www.vitacost.com/products/natrol-melatonin-fast-dissolve-strawberry-5-mg-90-tablets-23956
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 12.38            # vitacost.com: $12.38, 90 tablets, Add to cart shown (stock not stated)
+    servings: 90
+    url: https://www.vitacost.com/products/natrol-melatonin-fast-dissolve-strawberry-5-mg-90-tablets-23956
+    date_checked: 2026-11-05
+    entered_by: claude
+
+# MISSING: certification. Not looked up on a certifier's own site.
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: [contains xylitol, contains soy polysaccharides, beet root extract color]   # vitacost.com other-ingredients line
+notes: ""

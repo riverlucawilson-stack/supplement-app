@@ -18,8 +18,9 @@ import { collagenEvidence } from './collagen';
 import { probioticsEvidence } from './probiotics';
 import { curcuminEvidence } from './curcumin';
 import { calciumEvidence } from './calcium';
+import { melatoninEvidence } from './melatonin';
 
-export const evidencePages: EvidencePage[] = [creatineEvidence, ashwagandhaEvidence, vitaminDEvidence, magnesiumEvidence, fishOilEvidence, proteinPowderEvidence, multivitaminEvidence, vitaminCEvidence, vitaminB12Evidence, vitaminK2Evidence, coq10Evidence, bComplexEvidence, zincEvidence, collagenEvidence, probioticsEvidence, curcuminEvidence, calciumEvidence];
+export const evidencePages: EvidencePage[] = [creatineEvidence, ashwagandhaEvidence, vitaminDEvidence, magnesiumEvidence, fishOilEvidence, proteinPowderEvidence, multivitaminEvidence, vitaminCEvidence, vitaminB12Evidence, vitaminK2Evidence, coq10Evidence, bComplexEvidence, zincEvidence, collagenEvidence, probioticsEvidence, curcuminEvidence, calciumEvidence, melatoninEvidence];
 
 // Only pages River has fully reviewed (every section reviewed: true) go on the site.
 // Until then the text lives in drafts/evidence/<category>.md for review.

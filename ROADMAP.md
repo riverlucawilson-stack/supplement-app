@@ -7,7 +7,7 @@ Since 2026-10-21 River lets Claude make project decisions without asking; log ea
 Still River's: approving evidence/health text (delegated to Claude on 2026-10-24 for the current to-dos), and the first deploy (River approved 2026-10-24; needs River's Cloudflare login).
 
 ## IN PROGRESS
-- Melatonin batch 1: Nature Made Melatonin 3 mg, Natrol Melatonin 5 mg (fast dissolve), Olly Sleep gummy, Life Extension Melatonin 300 mcg, Nature's Bounty extended release.
+- Melatonin batch 2: OLLY gummy, NOW Melatonin 3 mg, Thorne Melaton-3, Pure Encapsulations Melatonin 0.5 mg, Natrol 10 mg time release; plus certifier lookups for batch 1.
 
 ## WAITING ON RIVER
 1. Installable app (drafts/pwa-plan.md): A (installable only), B (installable + offline pages), or neither? I recommend A.
@@ -202,6 +202,7 @@ Same definition of done as Stage C.
   - [x] evidence draft (drafts/evidence/calcium.md from the NIH ODS consumer sheet, NEEDS RIVER REVIEW; copy in project files review/); category published
 - [ ] 8. Melatonin: propose a method first and wait (price per mg would rank megadoses best). Record labeled dose, format (tablet, gummy, extended release), and any independent testing of actual content.
   - [x] method proposal drafts/melatonin-method.md (WAITING ON RIVER 3); category config: categories/melatonin.yaml (draft, option A) + template (2026-11-05). Sort/filter by dose not built yet (CategoryPage).
+  - [x] batch 1 (2026-11-05): Nature Made 3 mg (Target), Natrol 5 mg fast dissolve, Vitafusion gummies, Life Extension 300 mcg, Nature's Bounty Dual Spectrum. Audited; 1 FIX applied.
 
 ## Ingredient grades and product photos (2026-11-05, River's request)
 - [x] Ingredient grade A–D from sourced rules in ingredients/flags.yaml (7 rules, all entered_by: claude), shown on product pages, tables, and Methodology. Never affects ranking.

@@ -1,0 +1,43 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name from the vitacost.com title "VitaFusion Sleep Gummies Blackberry"; "Sleep" dropped. "Melatonin" comes from the page URL and the Supplement Facts panel, not the title.
+# 2.5 mg per gummy; the serving is 2 gummies = 5 mg.
+category: melatonin
+entered_by: claude              # label info from vitacost.com
+brand: Vitafusion
+name: Melatonin Gummies Blackberry, 120 Gummies   # vitacost.com title, "Sleep" dropped
+form: gummy
+release: not_stated             # vitacost.com page has no release wording
+# MISSING: format. form: gummy already says it; the page never says chewable.
+# MISSING: other_actives. None on the panel read.
+other_ingredients: [glucose syrup, sugar, water, gelatin, 'less than 2% of: blend of oils (coconut and/or palm) with beeswax and/or carnauba wax', citric acid, color (blueberry and carrot concentrates), flavor, lactic acid, pectin, sodium citrate]   # vitacost.com ingredients line, word for word (audit re-read 2026-11-05)
+ingredients_confirmed: true     # full line read word for word on vitacost.com
+
+dose:
+  units_per_serving: 2          # vitacost.com: serving size 2 gummies
+  melatonin_mg: 5               # vitacost.com: Melatonin 5 mg per serving (2.5 mg per gummy)
+  servings_per_container: 60    # vitacost.com Supplement Facts: 60 servings per bottle. CHECK: the page's Key info block says "Total servings 120 count" (that's the gummy count); the panel wins.
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/60_d479958b-1266-4921-a9b5-30d118c113ba.jpg   # vitacost.com og:image; page title names this product
+    source_url: https://www.vitacost.com/products/vitafusion-sleep-melatonin-gummies-blackberry-120-gummies-2-5-mg-per-gummy-80497
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 14.31            # vitacost.com: $14.31, 120 gummies = 60 servings, Add to cart shown (stock not stated)
+    servings: 60
+    url: https://www.vitacost.com/products/vitafusion-sleep-melatonin-gummies-blackberry-120-gummies-2-5-mg-per-gummy-80497
+    date_checked: 2026-11-05
+    entered_by: claude
+
+# MISSING: certification. Not looked up on a certifier's own site.
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: [added sugars 2 g per serving, contains sugar and glucose syrup, contains gelatin]   # vitacost.com Supplement Facts and ingredients
+notes: ""

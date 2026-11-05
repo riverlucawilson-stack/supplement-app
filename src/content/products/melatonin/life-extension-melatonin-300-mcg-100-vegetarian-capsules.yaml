@@ -1,0 +1,41 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Dose is 300 mcg on the label = 0.3 mg; entered as 0.3 mg.
+category: melatonin
+entered_by: claude              # label info from vitacost.com
+brand: Life Extension
+name: Melatonin 300 mcg, 100 Vegetarian Capsules   # vitacost.com title
+form: capsule
+release: not_stated             # vitacost.com page has no release wording
+# MISSING: format. None labeled.
+other_ingredients: [microcrystalline cellulose, vegetable cellulose (capsule), silica]   # vitacost.com line
+ingredients_confirmed: true     # full other-ingredients line read on vitacost.com
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 vegetarian capsule
+  melatonin_mg: 0.3             # vitacost.com: Melatonin 300 mcg = 0.3 mg
+  servings_per_container: 100   # vitacost.com: 100
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/129_fce174bd-a81c-49a5-a71a-5ea321909889.jpg?v=1781962144   # vitacost.com og:image; meta title names this product
+    source_url: https://www.vitacost.com/products/life-extension-melatonin-300-mcg-100-vegetarian-capsules-47809
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 7.50             # vitacost.com: $7.50, 100 capsules, Add to cart shown (stock not stated)
+    servings: 100
+    url: https://www.vitacost.com/products/life-extension-melatonin-300-mcg-100-vegetarian-capsules-47809
+    date_checked: 2026-11-05
+    entered_by: claude
+
+# MISSING: certification. Not looked up on a certifier's own site.
+certifications: []
+
+# MISSING: COA. lifeextension.com lab-results page not checked.
+coas: []
+
+flags: []
+notes: ""
