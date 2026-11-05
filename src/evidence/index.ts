@@ -11,8 +11,9 @@ import { multivitaminEvidence } from './multivitamin';
 import { vitaminCEvidence } from './vitamin-c';
 import { vitaminB12Evidence } from './vitamin-b12';
 import { vitaminK2Evidence } from './vitamin-k2';
+import { coq10Evidence } from './coq10';
 
-export const evidencePages: EvidencePage[] = [creatineEvidence, ashwagandhaEvidence, vitaminDEvidence, magnesiumEvidence, fishOilEvidence, proteinPowderEvidence, multivitaminEvidence, vitaminCEvidence, vitaminB12Evidence, vitaminK2Evidence];
+export const evidencePages: EvidencePage[] = [creatineEvidence, ashwagandhaEvidence, vitaminDEvidence, magnesiumEvidence, fishOilEvidence, proteinPowderEvidence, multivitaminEvidence, vitaminCEvidence, vitaminB12Evidence, vitaminK2Evidence, coq10Evidence];
 
 // Only pages River has fully reviewed (every section reviewed: true) go on the site.
 // Until then the text lives in drafts/evidence/<category>.md for review.
