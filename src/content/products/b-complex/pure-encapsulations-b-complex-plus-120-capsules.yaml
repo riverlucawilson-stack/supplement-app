@@ -1,0 +1,36 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude needs River's check.
+# Label info from the Vitacost page "Pure Encapsulations, B-Complex Plus, 120 Capsules".
+# The page's meta description mentions choline but the Supplement Facts panel does not list it; not recorded.
+# Rating not stated on page (89 ratings shown), not stored.
+category: b-complex
+entered_by: claude
+brand: Pure Encapsulations
+name: B-Complex Plus
+form: capsule
+folate_form: methylfolate      # Vitacost: "Folate (as Metafolin L-5-MTHF)"
+folate_source: Metafolin
+b12_form: methylcobalamin      # Vitacost: "Vitamin B12 (as methylcobalamin)"
+other_ingredients: [vegetarian capsule (cellulose, water), ascorbyl palmitate]   # Vitacost
+
+dose:
+  units_per_serving: 1          # Vitacost: serving size 1 capsule
+  # Counted (Vitacost panel %DV >= 100): thiamin 8333, riboflavin 977, niacin 675, vitamin B6 982,
+  # folate 167, vitamin B12 16667, biotin 1333, pantothenic acid 2000. All 8 counted.
+  b_vitamins_at_100_dv: 8
+  folate_mcg_dfe: 667           # Vitacost: 667 mcg DFE (400 mcg L-5-MTHF), 167% DV
+  vitamin_b12_mcg: 400          # Vitacost: 400 mcg, 16,667% DV
+  servings_per_container: 120   # Vitacost: 120
+
+prices:
+  - retailer: Vitacost
+    price_usd: 42.00            # 120 capsules (60 count listed at $27.30)
+    servings: 120
+    url: https://www.vitacost.com/products/pure-encapsulations-b-complex-plus-120-capsules-51822
+    date_checked: 2026-11-05
+    entered_by: claude
+
+certifications: []              # MISSING: not checked on a certifier's site for this product
+coas: []                        # MISSING: no COA found in the pages read
+
+flags: []                       # no added non-B ingredients on the panel
+notes: ""

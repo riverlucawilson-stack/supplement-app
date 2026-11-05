@@ -1,0 +1,43 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude needs River's check.
+# Label info from the Vitacost page (price 1). Vitacost: "Nature Made, Super B-Complex with Vitamin C, 140 Tablets".
+# Target page names it "Nature Made Super Vitamin B Complex with Folic Acid + Vitamin C ..." and shows the same panel,
+# but prints biotin as "30mg" (looks like a typo for mcg; %DV 100%) and has two B12 numbers (15 mcg panel vs 30 mcg in a
+# "primary dietary ingredient" field). I used the Vitacost panel (15 mcg). River: check the bottle.
+# Ratings seen (not stored): Target 4.7 out of 5, 232 reviews.
+category: b-complex
+entered_by: claude
+brand: Nature Made
+name: Super B-Complex          # Vitacost title adds "with Vitamin C"; Target's title adds claims, left out
+form: tablet
+folate_form: folic_acid        # Vitacost: folate "665 mcg DFE, 400 mcg of which is folic acid"
+b12_form: cyanocobalamin       # Vitacost: "As cyanocobalamin"
+other_ingredients: [cellulose gel, hypromellose, croscarmellose sodium, silicon dioxide, magnesium stearate, polyethylene glycol]   # Vitacost
+
+dose:
+  units_per_serving: 1          # Vitacost: serving size 1 tablet
+  # Counted (Vitacost panel %DV >= 100): thiamin 8333, riboflavin 1538, niacin 156, vitamin B6 118,
+  # folate 167, vitamin B12 625, biotin 100, pantothenic acid 110. All 8 counted.
+  b_vitamins_at_100_dv: 8
+  folate_mcg_dfe: 665           # Vitacost: 665 mcg DFE, 167% DV
+  vitamin_b12_mcg: 15           # Vitacost: 15 mcg, 625% DV
+  servings_per_container: 140   # Vitacost panel: 140
+
+prices:
+  - retailer: Vitacost
+    price_usd: 13.04            # 140 count
+    servings: 140
+    url: https://vitacost.com/nature-made-super-b-complex-140-tablets
+    date_checked: 2026-11-05
+    entered_by: claude
+  - retailer: Target
+    price_usd: 9.89             # 140 count, "$0.07/count"; page calls it a "140-day supply"
+    servings: 140
+    url: https://www.target.com/p/nature-made-super-b-complex-tablets-140ct/-/A-14358683
+    date_checked: 2026-11-05
+    entered_by: claude
+
+certifications: []              # MISSING: nsfsport.com search "b complex" showed no Nature Made listing; no other certifier checked
+coas: []                        # MISSING: no COA found in the pages read
+
+flags: [added vitamin C (150 mg), added calcium (35 mg)]   # Vitacost panel
+notes: ""

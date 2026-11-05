@@ -1,0 +1,44 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude needs River's check.
+# Label info from the Vitacost page (thorne-basic-b-complex, 60 capsules). Thorne's own page
+# (thorne.com/products/dp/basic-b-complex, $27, 60 servings) shows the same amounts but no %DV and no NSF mention.
+# Ratings seen (not stored): Vitacost stated no average, 1,704 ratings.
+category: b-complex
+entered_by: claude
+brand: Thorne
+name: Basic B Complex
+form: capsule
+folate_form: methylfolate      # Vitacost: "Folate (as L-5-Methyltetrahydrofolate, glucosamine salt)"
+folate_source: Quatrefolic     # Vitacost: "sourced from Gnosis S.p.A.'s Quatrefolic"
+b12_form: methylcobalamin      # Vitacost: "Vitamin B12 (as Methylcobalamin)"
+other_ingredients: [leucine, magnesium citrate, microcrystalline cellulose, silicon dioxide, calcium laurate, hypromellose capsule]   # thorne.com list (Vitacost omits leucine)
+
+dose:
+  units_per_serving: 1          # Vitacost: 1 capsule per serving
+  # Counted (Vitacost panel %DV >= 100): thiamin 9167, riboflavin 769, niacin 875, vitamin B6 588,
+  # folate 167, vitamin B12 16667, biotin 1333, pantothenic acid 2200. All 8 counted.
+  # Not counted: choline 5%.
+  b_vitamins_at_100_dv: 8
+  folate_mcg_dfe: 667           # Vitacost: 667 mcg DFE (400 mcg folate), 167% DV
+  vitamin_b12_mcg: 400          # Vitacost: 400 mcg, 16,667% DV
+  servings_per_container: 60    # Vitacost: 60
+
+prices:
+  - retailer: Vitacost
+    price_usd: 27.00            # 60 capsules; regular and sale both $27.00
+    servings: 60
+    url: https://www.vitacost.com/thorne-basic-b-complex
+    date_checked: 2026-11-05
+    entered_by: claude
+  - retailer: Thorne
+    price_usd: 27.00            # 60 capsules
+    servings: 60
+    url: https://www.thorne.com/products/dp/basic-b-complex
+    date_checked: 2026-11-05
+    entered_by: claude
+
+certifications: []              # MISSING: nsfsport.com search "thorne" listed only "B-Complex #6" (id 1238120) among B-complexes, and search "b complex"
+                                # found no Basic B Complex. The search page said "No results matched" while showing one entry, so it may be incomplete.
+coas: []                        # MISSING: no COA found in the pages read
+
+flags: [added choline (28 mg)]  # Vitacost panel
+notes: ""
