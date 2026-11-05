@@ -7,7 +7,7 @@ Since 2026-10-21 River lets Claude make project decisions without asking; log ea
 Still River's: approving evidence/health text (delegated to Claude on 2026-10-24 for the current to-dos), and the first deploy (River approved 2026-10-24; needs River's Cloudflare login).
 
 ## IN PROGRESS
-- Calcium category config: $ per 500 mg elemental calcium; carbonate vs citrate; added vitamin D or K.
+- Calcium batch 1: Caltrate 600+D3, Citracal Maximum (citrate + D3), Nature Made Calcium 600 + D3, Viactiv chews, NOW Calcium Citrate.
 
 ## WAITING ON RIVER
 1. Installable app (drafts/pwa-plan.md): A (installable only), B (installable + offline pages), or neither? I recommend A.
@@ -194,6 +194,7 @@ Same definition of done as Stage C.
   - [x] comparison page check  - [x] product pages check (fixed "Infinity servings" and hidden prices for products without a stated amount)  - [x] claims-review pass (2026-11-05)
   - [x] evidence draft (drafts/evidence/curcumin.md from the NCCIH turmeric page, April 2025, NEEDS RIVER REVIEW; copy in project files review/); category published
 - [ ] 7. Calcium: $ per 500 mg elemental calcium. Record carbonate vs citrate and any added vitamin D or K.
+  - [x] category config: categories/calcium.yaml (status: draft) + template (2026-11-05)
 - [ ] 8. Melatonin: propose a method first and wait (price per mg would rank megadoses best). Record labeled dose, format (tablet, gummy, extended release), and any independent testing of actual content.
 
 ## Ingredient grades and product photos (2026-11-05, River's request)

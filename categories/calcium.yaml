@@ -1,0 +1,76 @@
+# Everything specific to calcium. The site reads this file when it builds.
+# How each part works is explained in categories/README.md.
+slug: calcium
+name: Calcium
+status: draft
+order: 17
+
+page:
+  title: Calcium compared by cost per 500 mg elemental calcium and testing
+  description: Every calcium supplement converted to cost per 500 mg of elemental calcium from the Supplement Facts panel, with its form (carbonate, citrate and others) and any added vitamin D or K, plus third-party certifications and lab results (COAs) graded A to C.
+  heading: What calcium really costs, and how much of its testing you can see.
+  intro: >-
+    Every price is converted to **cost per 500 mg of elemental calcium**, the calcium amount on the Supplement
+    Facts panel, never the weight of the whole compound (1,250 mg of calcium carbonate is about 500 mg of calcium).
+    Each product shows its calcium form and any added vitamin D or K, which aren't counted in the price. Testing
+    transparency gets its own grade, A to C, and is never blended into the price.
+
+comparison:
+  amount: 500
+  unit: mg
+  counts_toward: [calcium_per_serving_mg]
+  label: per 500 mg elemental calcium
+  short: Cost per 500 mg
+  # No daily amount: same rule as the other new categories.
+  plausible_cost: { min: 0.005, max: 2 }
+
+dose_fields:
+  # Tablets, capsules, softgels, chews or gummies in one serving, as the label says.
+  units_per_serving: { label: Units per serving, whole_number: true }
+  # The "Calcium ... mg" line on the Supplement Facts panel: elemental calcium,
+  # NEVER the compound weight (e.g. "calcium carbonate 1,500 mg" in the ingredient list).
+  calcium_per_serving_mg:
+    label: Elemental calcium per serving
+    unit: mg
+    max: 2000
+    max_message: 'dose: {value} mg of calcium per serving is very high. Check it is the elemental calcium line, not the compound weight.'
+  # Only if the label lists them. Shown beside the price, not counted in it.
+  vitamin_d_mcg: { label: Added vitamin D per serving, unit: mcg, optional: true, max: 250 }
+  vitamin_k_mcg: { label: Added vitamin K per serving, unit: mcg, optional: true, max: 1000 }
+  magnesium_mg: { label: Added magnesium per serving, unit: mg, optional: true, max: 800 }
+
+type:
+  field: calcium_form
+  label: Calcium form
+  options:
+    # Lowercase because they read mid-sentence.
+    carbonate: carbonate
+    citrate: citrate
+    carbonate_citrate: carbonate + citrate
+    citrate_malate: citrate malate
+    phosphate: phosphate (tricalcium)
+    algae: from algae (e.g. Lithothamnion)
+    hydroxyapatite: hydroxyapatite (bone-derived)
+    blend: blend of forms
+    other: other
+
+extra_fields:
+  # Every form the label lists, when it's a blend.
+  forms_listed: Forms listed on the label
+  # Branded ingredient named on the label, e.g. "AlgaeCal", "Aquamin". Leave out if none.
+  branded_ingredient: Branded ingredient
+  # Chewable, gummy or soft chew, as the label says. Leave out for plain tablets and capsules.
+  format: Format
+
+describe: ['calcium {calcium_form}', '{format}', '+ {vitamin_d_mcg} mcg vitamin D', '+ {vitamin_k_mcg} mcg vitamin K', '+ {magnesium_mg} mg magnesium']
+
+certifications: [NSF Certified for Sport, Informed Sport, USP Verified, BSCG, Clean Label Project]
+
+coa_tests:
+  potency: Calcium potency
+  identity: Identity
+  lead: Lead
+  arsenic: Arsenic
+  cadmium: Cadmium
+  mercury: Mercury
+  microbial: Microbial
