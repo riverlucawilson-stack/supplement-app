@@ -1,0 +1,63 @@
+# Everything specific to CoQ10. The site reads this file when it builds.
+# How each part works is explained in categories/README.md.
+# Left out of this category on purpose: MitoQ (mitoquinone), a different compound.
+slug: coq10
+name: CoQ10
+status: published
+order: 11
+
+page:
+  title: CoQ10 compared by cost per 100 mg and testing
+  description: Every CoQ10 product converted to cost per 100 mg of CoQ10 as labeled, marked ubiquinone or ubiquinol, with third-party certifications and lab results (COAs) graded A to C.
+  heading: What CoQ10 really costs, and how much of its testing you can see.
+  intro: >-
+    Every price is converted to **cost per 100 mg of CoQ10**, using the amount on the Supplement Facts panel.
+    Each product says whether it's ubiquinone or ubiquinol, and each is compared at its labeled amount; we
+    don't convert one form into the other. Testing transparency gets its own grade, A to C, and is never
+    blended into the price.
+
+comparison:
+  amount: 100
+  unit: mg
+  counts_toward: [coq10_per_serving_mg]
+  label: per 100 mg CoQ10
+  short: Cost per 100 mg
+  # No daily amount: same rule as the other new categories.
+  plausible_cost: { min: 0.01, max: 3 }
+
+dose_fields:
+  # Softgels, capsules, tablets, gummies or scoops in one serving, as the label says.
+  units_per_serving: { label: Units per serving, whole_number: true }
+  # The CoQ10 mg on the Supplement Facts panel (labeled as ubiquinone, ubiquinol or "Coenzyme Q10").
+  # Use the labeled amount as is, never a converted "equivalent".
+  coq10_per_serving_mg:
+    label: CoQ10 per serving
+    unit: mg
+    max: 1200
+    max_message: 'dose: {value} mg per serving is over 1,200 mg. Check the units (mg, not mcg).'
+
+type:
+  field: coq10_form
+  label: CoQ10 form
+  options:
+    ubiquinone: Ubiquinone
+    ubiquinol: Ubiquinol
+    other: Other
+
+extra_fields:
+  # A branded CoQ10 ingredient the label names, e.g. Kaneka Q10, Kaneka QH.
+  coq10_source: CoQ10 ingredient
+  # The oil it's carried in, if the label names one.
+  carrier_oil: Carrier oil
+
+describe: ['{coq10_form}', '{coq10_source}']
+
+certifications: [NSF Certified for Sport, Informed Sport, USP Verified, BSCG, Clean Label Project]
+
+coa_tests:
+  potency: CoQ10 potency
+  lead: Lead
+  arsenic: Arsenic
+  cadmium: Cadmium
+  mercury: Mercury
+  microbial: Microbial

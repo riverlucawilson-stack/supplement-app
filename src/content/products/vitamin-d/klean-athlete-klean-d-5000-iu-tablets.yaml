@@ -1,0 +1,37 @@
+# Looked up by Claude on 2026-10-21. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 100 tablets.
+category: vitamin-d
+entered_by: claude              # label info from kleanathlete.com
+brand: Klean Athlete
+name: Klean-D 5000 IU Tablets
+form: tablet
+vitamin_d_form: d3              # kleanathlete.com: "Vitamin D3 (cholecalciferol)"
+other_ingredients: [microcrystalline cellulose, calcium carbonate, croscarmellose sodium, stearic acid, coating (hypromellose, glycerin), silica, vegetable stearate]   # kleanathlete.com
+
+dose:
+  units_per_serving: 1          # kleanathlete.com: 1 tablet
+  vitamin_d_per_serving_mcg: 125 # kleanathlete.com: 125 mcg (5,000 IU)
+  servings_per_container: 100   # kleanathlete.com: 100 servings
+
+prices:
+  - retailer: Klean Athlete
+    price_usd: 17.50            # kleanathlete.com: $17.50, in stock, 100 tablets
+    servings: 100
+    url: https://www.kleanathlete.com/klean-d-trade-5000-iu.html
+    date_checked: 2026-10-21
+    entered_by: claude
+  # MISSING: second retailer. Not fetched/read.
+
+certifications:
+  - program: NSF Certified for Sport
+    # Listing "KLEAN-D 5000", Klean Athlete, tablet, serving size 1 tablet, package size 100, US. The page shows no certification date.
+    listing_url: https://www.nsfsport.com/certified-products/listing-detail.php?id=1633064
+    date_verified: 2026-10-21
+    entered_by: claude
+  # Other NSF listings named KLEAN-D 5000 exist (ids 1087901, 1597177) but those pages loaded as Klean B-Complex, so not used.
+
+# MISSING: COA. No COA or lab-results link on kleanathlete.com product page.
+coas: []
+
+flags: []
+notes: ""

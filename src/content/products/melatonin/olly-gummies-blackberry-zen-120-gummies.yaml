@@ -1,0 +1,31 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name from the vitacost.com title "OLLY, Sleep Gummies, Blackberry Zen, 120 Gummies"; "Sleep" dropped. "Melatonin" comes from the Supplement Facts panel, not the title.
+# CHECK: the page also shows another 120-count option at $29.99; the $32.99 on the page was used.
+category: melatonin
+entered_by: claude              # label info from vitacost.com
+brand: OLLY
+name: Melatonin Gummies Blackberry Zen, 120 Gummies   # vitacost.com title, "Sleep" dropped
+form: gummy
+release: not_stated             # vitacost.com page has no release wording
+other_actives: L-theanine 50 mg; chamomile extract (flower) 17 mg; passionflower extract (aerial parts) 17 mg; lemon balm extract (aerial parts) 16 mg   # vitacost.com Supplement Facts
+other_ingredients: [glucose syrup, sugar, water, gelatin, pectin, citric acid, coloring (from carrot and blueberry juices), natural flavors, sodium citrate, vegetable oil (coconut), carnauba wax (to prevent sticking)]   # vitacost.com ingredients line
+ingredients_confirmed: true     # full line read on vitacost.com
+
+dose:
+  units_per_serving: 2          # vitacost.com: serving size 2 gummies
+  melatonin_mg: 5               # vitacost.com Supplement Facts: Melatonin 5 mg per 2 gummies
+  servings_per_container: 60    # vitacost.com Supplement Facts: 60 servings. CHECK: Key info block says "Total servings 120 count" (the gummy count); the panel wins.
+
+# MISSING: price. vitacost.com 120-count page (https://www.vitacost.com/products/olly-sleep-gummies-blackberry-zen-120-gummies-156237)
+# showed two 120-count prices, $32.99 and $29.99, on 2026-11-05, so which one applies couldn't be confirmed.
+prices: []
+
+# MISSING: certification. nsfsport.com brand search "OLLY" on 2026-11-05 returned no results; USP page (quality-supplements.org) would not load.
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: [added sugars 2 g per serving, contains sugar and glucose syrup, contains gelatin]   # vitacost.com Supplement Facts and ingredients
+notes: ""

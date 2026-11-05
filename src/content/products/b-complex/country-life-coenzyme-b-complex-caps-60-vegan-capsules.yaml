@@ -1,0 +1,36 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude needs River's check.
+# Label info from the Vitacost page "Country Life, Coenzyme B-Complex, 60 Vegan Capsules".
+# Vitacost's "Key info" says total servings 60 count, which conflicts with the Supplement Facts panel
+# (2 capsules per serving, 30 servings). I used the panel: 30 servings. Rating not stated on page (318 ratings), not stored.
+category: b-complex
+entered_by: claude
+brand: Country Life
+name: Coenzyme B-Complex Caps
+form: capsule
+folate_form: methylfolate      # Vitacost: "Folate (as L-5-Methyltetrahydrofolate calcium salt) 667 mcg DFE"
+b12_form: dibencozide and methylcobalamin   # Vitacost: "Vitamin B12 (as dibencozide, methylcobalamin)"
+other_ingredients: [cellulose, cellulose (capsule shell), vegetable magnesium stearate, silica]   # Vitacost
+
+dose:
+  units_per_serving: 2          # Vitacost panel: serving size 2 capsules
+  # Counted (Vitacost panel %DV >= 100): thiamin 4167, riboflavin 3846, niacin 625, vitamin B6 2941,
+  # folate 167, vitamin B12 20833, biotin 667, pantothenic acid 1000. All 8 counted.
+  # Not counted: choline 10%; PABA, inositol and alpha-lipoic acid have no DV.
+  b_vitamins_at_100_dv: 8
+  folate_mcg_dfe: 667           # Vitacost: 667 mcg DFE, 167% DV
+  vitamin_b12_mcg: 500          # Vitacost: 500 mcg, 20833% DV
+  servings_per_container: 30    # Vitacost panel: 30
+
+prices:
+  - retailer: Vitacost
+    price_usd: 17.91            # 60 vegan capsules (30 servings)
+    servings: 30
+    url: https://www.vitacost.com/products/country-life-coenzyme-b-complex-60-vegan-capsules-1760
+    date_checked: 2026-11-05
+    entered_by: claude
+
+certifications: []              # MISSING: not checked on a certifier's site
+coas: []                        # MISSING: no COA found in the pages read
+
+flags: [added choline (55 mg), added PABA (50 mg), added inositol (27 mg), added alpha-lipoic acid (100 mcg)]   # Vitacost panel
+notes: ""

@@ -1,0 +1,153 @@
+# Added ingredients that have negative data, and how much each counts against a
+# product's ingredient grade. Every rule must cite at least one source that was
+# read (a regulator's page or a paper's abstract), with the date it was checked.
+#
+# level, most serious first:
+#   concern  a regulator has acted on it (banned, phasing out, or "no longer safe")   -> grade D
+#   caution  official guidance advises limiting it or not using it                   -> grade C
+#   limited  individual studies report possible harm; not settled                    -> grade B
+#   note     worth knowing, but not counted in the grade
+# A product with none of these is grade A.
+#
+# patterns / exclude are matched against each "other ingredient" (case doesn't matter).
+# They're regular expressions: \b means a word edge, | means "or".
+#
+# Rules marked entered_by: claude were written by Claude from the sources listed.
+# Check each against its source, then delete that line.
+
+- id: titanium_dioxide
+  name: Titanium dioxide
+  level: concern
+  patterns: ['titanium dioxide']
+  finding: >-
+    In 2021 the European Food Safety Authority concluded that titanium dioxide (E171)
+    can no longer be considered safe as a food additive, because it could not rule out
+    genotoxicity (damage to DNA) from eating titanium dioxide particles. EFSA's
+    evaluation covered its use as a food additive, not other uses.
+  sources:
+    - title: 'Titanium dioxide: E171 no longer considered safe when used as a food additive'
+      publisher: European Food Safety Authority
+      url: https://www.efsa.europa.eu/en/news/titanium-dioxide-e171-no-longer-considered-safe-when-used-food-additive
+      published: 2021-05-06
+      date_checked: 2026-11-05
+  entered_by: claude
+
+- id: synthetic_dyes
+  name: Petroleum-based synthetic dyes
+  level: concern
+  patterns: ['\b(red|yellow|blue|green)\s*(no\.?\s*)?\d+\b']
+  finding: >-
+    In April 2025 the FDA announced it would work to eliminate six synthetic dyes from
+    the US food supply by the end of 2026 (FD&C Green No. 3, Red No. 40, Yellow No. 5,
+    Yellow No. 6, Blue No. 1 and Blue No. 2) and asked companies to remove Red No. 3
+    sooner than its 2027–2028 deadline, citing growing concerns about their potential
+    role in children's health.
+  sources:
+    - title: HHS, FDA to Phase Out Petroleum-Based Synthetic Dyes in Nation's Food Supply
+      publisher: US Food and Drug Administration
+      url: https://www.fda.gov/news-events/press-announcements/hhs-fda-phase-out-petroleum-based-synthetic-dyes-nations-food-supply
+      published: 2025-04-22
+      date_checked: 2026-11-05
+  entered_by: claude
+
+- id: added_sugars
+  name: Added sugars
+  level: caution
+  patterns:
+    - '\bsugar\b'
+    - '\b(sucrose|dextrose|fructose)\b'
+    - '\b(glucose|tapioca|rice|corn|cane) syrup\b'
+    - 'cane juice'
+    - '\bhoney\b'
+    - 'juice concentrate'
+  exclude: ['sugar alcohol', 'maltitol', 'colou?r']
+  finding: >-
+    The FDA counts sugars added during processing (such as sucrose or dextrose), syrups,
+    honey and concentrated fruit or vegetable juices as added sugars. It sets a Daily
+    Value of 50 g of added sugars a day, and the Dietary Guidelines recommend keeping
+    calories from added sugars under 10% of total calories.
+  sources:
+    - title: Added Sugars on the Nutrition Facts Label
+      publisher: US Food and Drug Administration
+      url: https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label
+      published: 2026-03-04
+      date_checked: 2026-11-05
+  entered_by: claude
+
+- id: non_sugar_sweeteners
+  name: Non-sugar sweeteners
+  level: caution
+  patterns: ['sucralose', 'acesulfame', 'aspartame', 'advantame', 'cyclamate', 'neotame', 'saccharin', 'stevia', 'steviol', 'rebaudioside', '\breb[ -]?[am]\b']
+  finding: >-
+    In 2023 the World Health Organization recommended against using non-sugar sweeteners
+    (it names acesulfame K, aspartame, advantame, cyclamates, neotame, saccharin, sucralose,
+    stevia and stevia derivatives) to control body weight or lower the risk of chronic
+    disease. Its review found no long-term benefit for body fat and possible undesirable
+    effects from long-term use, such as higher risk of type 2 diabetes, cardiovascular
+    disease and death in adults. WHO rates the recommendation as conditional, and it does
+    not apply to people who already have diabetes or to sugar alcohols.
+  sources:
+    - title: WHO advises not to use non-sugar sweeteners for weight control in newly released guideline
+      publisher: World Health Organization
+      url: https://www.who.int/news/item/15-05-2023-who-advises-not-to-use-non-sugar-sweeteners-for-weight-control-in-newly-released-guideline
+      published: 2023-05-15
+      date_checked: 2026-11-05
+  entered_by: claude
+
+- id: erythritol
+  name: Erythritol
+  level: limited
+  patterns: ['erythritol']
+  finding: >-
+    In a 2023 study of about 4,000 US and European patients having heart evaluations,
+    people with the highest blood erythritol levels had more heart attacks, strokes and
+    deaths over 3 years. In lab tests erythritol made platelets more reactive, and in 8
+    healthy volunteers a 30 g dose kept blood levels raised for more than 2 days. The
+    authors say the studies show association, not causation, and that the patients
+    already had high heart risk.
+  sources:
+    - title: The artificial sweetener erythritol and cardiovascular event risk
+      publisher: 'Witkowski M, et al. Nature Medicine 29:710-718'
+      url: https://www.nature.com/articles/s41591-023-02223-9.pdf
+      doi: 10.1038/s41591-023-02223-9
+      published: 2023-02-27
+      date_checked: 2026-11-05
+  entered_by: claude
+
+- id: xylitol
+  name: Xylitol
+  level: limited
+  patterns: ['xylitol']
+  finding: >-
+    A 2024 study of about 3,300 patients having heart evaluations found higher blood
+    xylitol levels were linked to more heart attacks, strokes and deaths. In 10 healthy
+    volunteers, a drink with 30 g of xylitol raised blood levels and made platelets more
+    reactive in every person. The link in patients is an association, not proof of cause.
+  sources:
+    - title: Xylitol is prothrombotic and associated with cardiovascular risk
+      publisher: 'Witkowski M, et al. European Heart Journal (2024)'
+      url: https://esc365.escardio.org/journal/78194
+      doi: 10.1093/eurheartj/ehae244
+      published: 2024-06-06
+      date_checked: 2026-11-05
+  entered_by: claude
+
+- id: carboxymethylcellulose
+  name: Carboxymethylcellulose (cellulose gum)
+  level: limited
+  patterns: ['carboxymethylcellulose', 'cellulose gum']
+  finding: >-
+    In a small 2022 controlled-feeding trial (16 healthy adults, 11 days), people eating
+    15 g a day of carboxymethylcellulose had modestly more abdominal discomfort after
+    meals, less diverse gut bacteria and lower short-chain fatty acids than people on the
+    same diet without it. Animal and lab studies had raised similar concerns about
+    emulsifiers.
+  sources:
+    - title: Randomized Controlled-Feeding Study of Dietary Emulsifier Carboxymethylcellulose Reveals Detrimental Impacts on the Gut Microbiota and Metabolome
+      publisher: 'Chassaing B, et al. Gastroenterology 162(3):743-756'
+      url: https://pure.psu.edu/en/publications/randomized-controlled-feeding-study-of-dietary-emulsifier-carboxy/
+      doi: 10.1053/j.gastro.2021.11.006
+      pmid: '34774538'
+      published: 2022-03-01
+      date_checked: 2026-11-05
+  entered_by: claude

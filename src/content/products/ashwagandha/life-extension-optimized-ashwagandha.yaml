@@ -17,6 +17,13 @@ dose:
   servings_per_container: 60        # 60 capsules, 1 per serving (Vitacost: "Total servings 60 count").
                                     # CHECK: no page showed "Servings Per Container" from the panel.
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/117_0a9c3bb1-9197-4c2f-a8fe-2e71bf98f348.jpg?v=1781991895
+    source_url: https://www.vitacost.com/products/life-extension-optimized-ashwagandha-60-vegetarian-capsules-125-mg-per-capsule-16416
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Life Extension
     price_usd: 7.50                 # page: 60 vegetarian capsules, $7.50 one-time purchase

@@ -18,6 +18,13 @@ dose:
   servings_per_container: 120       # Vitacost: "Total servings 120 count"; 120 capsules, 1 per serving.
                                     # CHECK: no page showed "Servings Per Container" from the panel.
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/53_0c1e399f-6ec7-443d-85db-c90bbb4afa09.jpg?v=1781998260
+    source_url: https://www.vitacost.com/jarrow-formulas-ashwagandha-withania-somnifera
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Jarrow Formulas
     price_usd: 24.99                # page: 120 veggie capsules, $24.99 ("Sale")

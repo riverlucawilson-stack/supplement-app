@@ -1,0 +1,63 @@
+# Everything specific to melatonin. The site reads this file when it builds.
+# How each part works is explained in categories/README.md.
+# Method: drafts/melatonin-method.md option A (cost per daily serving, labeled mg shown
+# beside it, never scored). Price per mg was rejected because it ranks the biggest doses
+# cheapest. Proposed 2026-11-05; River said the same day to keep building without waiting.
+slug: melatonin
+name: Melatonin
+status: published
+order: 18
+
+page:
+  title: Melatonin compared by cost per serving and testing
+  description: Every melatonin supplement compared by cost per serving as the label defines it, with the labeled melatonin dose, format and release type shown beside it, plus third-party certifications and lab results (COAs) graded A to C.
+  heading: What melatonin really costs, and how much of its testing you can see.
+  intro: >-
+    Melatonin is sold in very different doses, and a bigger dose isn't a better buy for someone who wants a
+    small one, so prices aren't converted to cost per mg. Each product is compared by **cost per serving** as
+    the label defines it, with its **melatonin dose** shown beside it so you can find the amount you want.
+    Format and release type are shown too. Testing transparency, including any lab report on the actual
+    melatonin content, gets its own grade, A to C, and is never blended into the price.
+
+comparison:
+  amount: 1
+  unit: serving
+  label: per serving
+  short: Cost per serving
+  # No daily amount: the serving is what the label calls one dose.
+  plausible_cost: { min: 0.01, max: 2 }
+
+dose_fields:
+  # Tablets, capsules, gummies or droppers in one serving, as the label says.
+  units_per_serving: { label: Units per serving, whole_number: true }
+  # The "Melatonin ... mg" line on the Supplement Facts panel, for one serving.
+  melatonin_mg: { label: Melatonin per serving, unit: mg, max: 30 }
+
+type:
+  field: release
+  label: Release
+  options:
+    # Lowercase because they read mid-sentence.
+    standard: standard release
+    extended: extended or time release
+    dual: dual or bi-layer release
+    not_stated: release not stated
+
+extra_fields:
+  # Other actives on the panel, e.g. "L-theanine 100 mg; chamomile". Leave out if none.
+  other_actives: Other actives on the label
+  # Dissolve, chewable or quick-dissolve, as the label says. Leave out for plain tablets and capsules.
+  format: Format
+
+describe: ['{melatonin_mg} mg melatonin', '{release}', '{format}', 'with {other_actives}']
+
+certifications: [NSF Certified for Sport, Informed Sport, USP Verified, BSCG, Clean Label Project]
+
+coa_tests:
+  potency: Melatonin content
+  identity: Identity
+  lead: Lead
+  arsenic: Arsenic
+  cadmium: Cadmium
+  mercury: Mercury
+  microbial: Microbial

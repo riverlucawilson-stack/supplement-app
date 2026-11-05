@@ -1,0 +1,19 @@
+---
+// One page per product, at /<category>/<file name>/.
+// The layout and math live in src/components/ProductPage.astro.
+import { getCollection } from 'astro:content';
+import ProductPage from '../../components/ProductPage.astro';
+import { productSlug } from '../../categories';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('products');
+  return entries.map((entry) => ({
+    params: { category: entry.data.category, product: productSlug(entry.id) },
+    props: { product: entry.data },
+  }));
+}
+
+const { product } = Astro.props;
+---
+
+<ProductPage product={product} />

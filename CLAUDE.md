@@ -61,7 +61,7 @@ commands to run.
 - Cost per 5 g of creatine, based on each product's actual creatine content
 - Cost per 30 days at 5 g/day
 - Best current price across retailers
-- A "stale" warning on prices older than 14 days and COAs older than 2 years
+- A "stale" warning on prices older than 30 days and COAs older than 12 months
   (keep both limits in one settings file so I can change them)
 
 ## Transparency tier (shown next to price, never merged into one score)

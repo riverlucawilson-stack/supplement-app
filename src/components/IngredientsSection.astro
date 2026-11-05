@@ -1,0 +1,387 @@
+---
+// The "What's in it" part of a product page: label photos (with credit links),
+// a Supplement Facts-style panel rebuilt from the product file, the other
+// ingredients grouped by what they do, and the ingredient grade with the sourced
+// reason for each flag. Rules live in ingredients/flags.yaml.
+import type { Product, CategoryInfo } from '../categories';
+import { groupedIngredients, ingredientGrade } from '../lib/ingredients';
+import { levelLabels } from '../ingredients/rules';
+
+interface Props {
+  product: Product;
+  category: CategoryInfo;
+}
+const { product: p, category } = Astro.props;
+const groups = groupedIngredients(p);
+const grade = ingredientGrade(p);
+const facts = category.doseFacts(p);
+const photos = [p.photos?.product, p.photos?.label].filter((x) => x !== undefined);
+const host = (u: string) => new URL(u).hostname.replace(/^www\./, '');
+const shortDate = (d: Date) =>
+  d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+const ingredientText = groups.flatMap((g) => g.items.map((i) => i.name)).join(', ');
+---
+
+<section class="wrap block" aria-labelledby="whats-in-it">
+  <h2 id="whats-in-it">What’s in it</h2>
+
+  {photos.length > 0 && (
+    <div class="photos">
+      {photos.map((ph, i) => (
+        <figure class="photo">
+          <a href={ph.url} rel="noopener" target="_blank">
+            <img src={ph.url} alt={ph.alt ?? (i === 0 && p.photos?.product ? `${p.brand} ${p.name}` : 'Supplement Facts panel')} loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.closest('figure').remove()" />
+          </a>
+          <figcaption>
+            {ph.alt ?? (ph === p.photos?.label ? 'Supplement Facts' : 'Product')} · Image from{' '}
+            <a href={ph.source_url} rel="noopener" target="_blank">{host(ph.source_url)}</a>, {shortDate(ph.date_checked)}
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+  )}
+
+  <div class="label-grid">
+    <div class="facts-panel" role="group" aria-label="Supplement Facts as recorded">
+      <p class="facts-title">Supplement Facts</p>
+      <dl>
+        {facts.map((f) => (
+          <div>
+            <dt>{f.label}</dt>
+            <dd class="num">{f.value}</dd>
+          </div>
+        ))}
+      </dl>
+      <p class="facts-other">
+        <strong>Other ingredients:</strong>{' '}
+        {ingredientText ? ingredientText : p.ingredients_confirmed ? 'None.' : 'Not recorded yet.'}
+      </p>
+      <p class="facts-note">Rebuilt from the label as we read it, not a copy of the official panel. Check the brand’s page or the photo for the full panel.</p>
+    </div>
+
+    <div class="grade-card">
+      <div class="grade-head">
+        <span class="label">Ingredient grade</span>
+        {grade.grade ? <span class={`grade grade-${grade.grade}`}>{grade.grade}</span> : <span class="grade grade-none">–</span>}
+      </div>
+      <p class="grade-reason">{grade.reason}</p>
+      <p class="fine">
+        Grades only the added (non-active) ingredients, against a short list of ingredients with published negative data.
+        It never changes the price ranking. <a href="/methodology/#ingredient-grade">How grades work</a>
+      </p>
+    </div>
+  </div>
+
+  {groups.length > 0 && (
+    <div class="card ingredients">
+      <h3>Other ingredients, grouped by what they do</h3>
+      <dl class="groups">
+        {groups.map((g) => (
+          <div>
+            <dt>{g.label}</dt>
+            <dd>
+              <ul>
+                {g.items.map((i) => (
+                  <li class={i.flags.length ? `chip-ing flagged flag-${i.flags[0].level}` : 'chip-ing'}>
+                    {i.name}
+                    {i.flags.length > 0 && <span class="sr-only"> (flagged)</span>}
+                  </li>
+                ))}
+              </ul>
+            </dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  )}
+
+  {grade.flagged.length > 0 && (
+    <div class="card flags">
+      <h3>Flagged ingredients</h3>
+      <ul class="flag-list">
+        {grade.flagged.map((f) => (
+          <li>
+            <p class="flag-head">
+              <strong>{f.rule.name}</strong>
+              <span class={`pill flag-pill flag-${f.rule.level}`}>{levelLabels[f.rule.level]}</span>
+            </p>
+            <p class="fine">Found as: {f.ingredients.join('; ')}</p>
+            <p>{f.rule.finding}</p>
+            <p class="fine">
+              Source{f.rule.sources.length > 1 ? 's' : ''}:{' '}
+              {f.rule.sources.map((s, i) => (
+                <>
+                  {i > 0 && '; '}
+                  <a href={s.url} rel="noopener" target="_blank">{s.title}</a> ({s.publisher}
+                  {s.published && `, ${s.published.getUTCFullYear()}`})
+                </>
+              ))}
+            </p>
+          </li>
+        ))}
+      </ul>
+      <p class="fine">These summarize what each source says about the ingredient in general, not about the amount in this product.</p>
+    </div>
+  )}
+
+  {(p.flags.length > 0 || p.notes) && (
+    <div class="card">
+      <h3>Label notes</h3>
+      {p.flags.length > 0 && <p class="tags">{p.flags.map((f) => <span class="pill pill-muted">{f}</span>)}</p>}
+      {p.notes && <p>{p.notes}</p>}
+    </div>
+  )}
+</section>
+
+<style>
+  .photos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .photo {
+    margin: 0;
+    flex: 1 1 12rem;
+    max-width: 20rem;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    padding: 0.75rem;
+  }
+
+  .photo img {
+    display: block;
+    width: 100%;
+    height: 14rem;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 4px;
+  }
+
+  .photo figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.8125rem;
+    color: var(--muted);
+  }
+
+  .label-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 0.75rem;
+    align-items: start;
+  }
+
+  @media (max-width: 40rem) {
+    .label-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Styled after the black-rule Supplement Facts box on a label. */
+  .facts-panel {
+    background: var(--surface);
+    color: var(--ink);
+    border: 2px solid var(--ink);
+    padding: 0.6rem 0.8rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .facts-title {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    border-bottom: 8px solid var(--ink);
+    padding-bottom: 0.3rem;
+  }
+
+  .facts-panel dl {
+    margin: 0;
+  }
+
+  .facts-panel dl > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.3rem 0;
+    border-bottom: 1px solid var(--ink);
+  }
+
+  .facts-panel dl > div:last-child {
+    border-bottom: 4px solid var(--ink);
+  }
+
+  .facts-panel dt {
+    font-weight: 600;
+  }
+
+  .facts-panel dd {
+    margin: 0;
+    font-weight: 700;
+    text-align: right;
+  }
+
+  .facts-other {
+    margin: 0.5rem 0 0;
+  }
+
+  .facts-note {
+    margin: 0.5rem 0 0;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  .grade-card,
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    padding: 1rem;
+  }
+
+  .card {
+    margin-top: 0.75rem;
+  }
+
+  .card h3 {
+    margin: 0 0 0.75rem;
+    font-size: 1rem;
+  }
+
+  .grade-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .label {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .grade-reason {
+    margin: 0.6rem 0 0.4rem;
+    font-weight: 600;
+  }
+
+  .fine {
+    margin: 0.4rem 0 0;
+    font-size: 0.8125rem;
+    color: var(--muted);
+  }
+
+  .groups {
+    margin: 0;
+    display: grid;
+    gap: 0.6rem;
+  }
+
+  .groups > div {
+    display: grid;
+    grid-template-columns: 13rem minmax(0, 1fr);
+    gap: 0.75rem;
+  }
+
+  @media (max-width: 40rem) {
+    .groups > div {
+      grid-template-columns: 1fr;
+      gap: 0.3rem;
+    }
+  }
+
+  .groups dt {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--muted);
+    padding-top: 0.2rem;
+  }
+
+  .groups dd {
+    margin: 0;
+  }
+
+  .groups ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .chip-ing {
+    padding: 0.2rem 0.6rem;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    font-size: 0.8125rem;
+    background: var(--paper);
+  }
+
+  .chip-ing.flagged {
+    font-weight: 600;
+  }
+
+  .flag-concern {
+    border-color: var(--warn);
+    background: var(--warn-soft);
+    color: var(--warn);
+  }
+
+  .flag-caution {
+    border-color: var(--tier-b);
+    background: var(--tier-b-soft);
+    color: var(--tier-b);
+  }
+
+  .flag-limited,
+  .flag-note {
+    border-color: var(--tier-c);
+    background: var(--tier-c-soft);
+    color: var(--ink);
+  }
+
+  .flag-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .flag-list p {
+    margin: 0.3rem 0 0;
+  }
+
+  .flag-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .flag-pill {
+    border: 1px solid;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin: 0;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+</style>

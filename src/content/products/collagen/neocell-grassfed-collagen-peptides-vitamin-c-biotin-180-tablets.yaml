@@ -1,0 +1,48 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the label name only: no health or beauty claims from retailer titles.
+# Left out of the name: "+ Vitamin C & Biotin" kept as ingredients; retailer title has no benefit wording.
+category: collagen
+entered_by: claude              # label info from vitacost.com
+brand: NeoCell
+name: Grassfed Collagen Peptides + Vitamin C & Biotin, 180 Tablets
+form: tablet
+collagen_source: bovine         # vitacost.com Supplement Facts: "from grassfed bovine"
+# MISSING: collagen_types. Page does not list a type (I, III, etc.).
+# MISSING: branded_ingredient. The label line "BioActive NeoCell Collagen Peptides" is the brand's own name, not a third-party branded peptide, so it is not recorded.
+other_ingredients: [vegetable magnesium stearate]   # vitacost.com "Other ingredients: Vegetable magnesium stearate"
+# MISSING: ingredients_confirmed left out. Panel and other-ingredients line read, but not verified as the complete line.
+
+dose:
+  units_per_serving: 6          # vitacost.com: serving size 6 tablets
+  collagen_per_serving_g: 6     # vitacost.com Supplement Facts "BioActive NeoCell Collagen Peptides (from grassfed bovine)" 6 g
+  servings_per_container: 30    # vitacost.com. 30 x 6 = 180 tablets, matches title.
+  # CHECK: no serving weight in grams on the page, so the collagen vs serving-weight check cannot run.
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/56_46914ea1-827e-4ce8-adf8-b6d59b3f2b92.jpg?v=1781990716
+    source_url: https://www.vitacost.com/products/neocell-grassfed-collagen-peptides-vitamin-c-biotin-180-tablets-113088
+    alt: NeoCell Grassfed Collagen Peptides + Vitamin C & Biotin 180 tablets bottle
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 15.37            # vitacost.com: $15.37 for 180 count
+    servings: 30
+    url: https://www.vitacost.com/products/neocell-grassfed-collagen-peptides-vitamin-c-biotin-180-tablets-113088
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. Page shows only a star breakdown (1,449 ratings), no stated average, so none recorded.
+
+# MISSING: certification. None checked; no certifier site visited.
+certifications: []
+
+# MISSING: COA. Retailer page has no COA link; brand site not checked.
+coas: []
+
+flags:
+  - contains added vitamin C (60 mg) and biotin (5,000 mcg)   # vitacost.com Supplement Facts
+  - may contain trace amounts of naturally occurring sulfite residue   # vitacost.com ingredients
+notes: ""

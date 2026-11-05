@@ -1,0 +1,14 @@
+---
+// Each category's comparison table, at /<category>/. Its words and settings
+// come from categories/<category>.yaml.
+import CategoryPage from '../../components/CategoryPage.astro';
+import { categoryList } from '../../categories';
+
+export function getStaticPaths() {
+  return categoryList.map((c) => ({ params: { category: c.id } }));
+}
+
+const { category } = Astro.params;
+---
+
+<CategoryPage categoryId={category} />

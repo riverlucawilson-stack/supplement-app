@@ -1,0 +1,47 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the page H1 (vitacost.com). Vitacost's own Root2 line (store brand).
+# Left out of the name/flags: "Herbal Supplement" and joint wording from other Root2 pages.
+category: curcumin
+entered_by: claude              # label info from vitacost.com
+brand: Vitacost
+name: Root2®, Turmeric Extract Curcumin C3 Complex®, 120 Capsules   # vitacost.com H1
+form: capsule
+formulation: extract_with_piperine   # vitacost.com Supplement Facts: Turmeric Extract (rhizome) plus Black Pepper Extract (fruit)
+branded_ingredient: C3 Complex  # vitacost.com H1: "Curcumin C3 Complex®"
+absorption_claim: '"Enhanced Absorption"; "Featuring BioPerine®" (vitacost.com product description; no footnote qualifies it, only the general FDA disclaimer)'
+other_ingredients: [hydroxypropyl methylcellulose (capsule), rice flour, vegetable magnesium stearate, silicon dioxide, vegetable stearic acid, starch]   # vitacost.com
+ingredients_confirmed: true     # full other-ingredients line read on vitacost.com
+
+dose:
+  units_per_serving: 2          # vitacost.com: serving size 2 capsules
+  # vitacost.com Supplement Facts: "Turmeric Extract (rhizome) 1,160 mg, supplying 1,102 mg curcuminoids". The label states the curcuminoid mg itself (1,160 x 0.95 = 1,102, matches).
+  curcuminoids_per_serving_mg: 1102
+  turmeric_per_serving_mg: 1160 # vitacost.com: extract weight (reference only)
+  piperine_per_serving_mg: 4.75 # vitacost.com: Black Pepper Extract (fruit) 5 mg, supplying 4.75 mg piperine
+  servings_per_container: 60    # vitacost.com Supplement Facts: 60 (120 capsules / 2). "Key info" says "Total servings 120 count", which is capsules.
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/10_da6689c1-38d5-4f54-8e85-b694eb0f26d1.jpg?v=1781816097
+    source_url: https://www.vitacost.com/vitacost-root2-turmeric-ext-curcumin-c3-complex-featuring-bioperine-1160-mg-per-serving-120-capsules
+    alt: Vitacost Root2 Turmeric Extract Curcumin C3 Complex 120 capsule bottle   # page title and meta description name this product
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 32.99            # vitacost.com: $32.99 (regular and sale price the same), 120 count, Add to cart shown, no out-of-stock notice. The 60-count is a separate listing at $17.92 (not entered).
+    servings: 60
+    url: https://www.vitacost.com/vitacost-root2-turmeric-ext-curcumin-c3-complex-featuring-bioperine-1160-mg-per-serving-120-capsules
+    date_checked: 2026-11-05
+    entered_by: claude
+
+# MISSING: certification. Certifier sites not checked. vitacost.com lists none ("Guaranteed Authentic" is a retailer badge).
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: [contains black pepper extract]   # vitacost.com Supplement Facts
+notes: ""

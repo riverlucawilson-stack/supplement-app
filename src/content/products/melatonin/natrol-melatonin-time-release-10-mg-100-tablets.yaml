@@ -1,0 +1,35 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name from the vitacost.com title.
+# release is dual, not extended: the page says "Time Release" but also "2-Layer Tablet Dual-Action Controlled Release Tablet" with a quick-dissolving outer layer and a controlled-release inner layer.
+category: melatonin
+entered_by: claude              # label info from vitacost.com
+brand: Natrol
+name: Melatonin Time Release 10 mg, 100 Tablets   # vitacost.com title
+form: tablet
+release: dual                   # vitacost.com: "2-Layer Tablet Dual-Action Controlled Release Tablet"
+other_actives: Vitamin B6 10 mg (as pyridoxine hydrochloride); calcium 23 mg (as dibasic calcium phosphate)   # vitacost.com Supplement Facts
+other_ingredients: [microcrystalline cellulose, hypromellose, magnesium stearate, stearic acid, silicon dioxide, methylcellulose, glycerin]   # vitacost.com line
+ingredients_confirmed: true     # full line read on vitacost.com
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 tablet
+  melatonin_mg: 10              # vitacost.com Supplement Facts: Melatonin 10 mg
+  servings_per_container: 100   # vitacost.com: 100
+
+prices:
+  - retailer: Vitacost
+    price_usd: 17.32            # vitacost.com: $17.32, 100 tablets, Add to cart shown (stock not stated)
+    servings: 100
+    url: https://www.vitacost.com/products/natrol-melatonin-time-release-10-mg-100-tablets-98696
+    date_checked: 2026-11-05
+    entered_by: claude
+
+# MISSING: certification. nsfsport.com brand search "Natrol" on 2026-11-05 returned no results; USP page (quality-supplements.org) would not load.
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: []
+notes: ""

@@ -1,0 +1,36 @@
+# Looked up by Claude on 2026-10-21. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 120 softgels.
+category: vitamin-d
+entered_by: claude              # label info from nowfoods.com
+brand: NOW Foods
+name: Vitamin D3 5000 IU Softgels
+form: softgel
+vitamin_d_form: d3              # nowfoods.com: "Vitamin D (as D3 cholecalciferol, from lanolin)"
+carrier_oil: extra virgin olive oil and safflower oil   # nowfoods.com other ingredients
+other_ingredients: [extra virgin olive oil, safflower oil, softgel capsule (bovine gelatin, glycerin, water)]
+
+dose:
+  units_per_serving: 1          # nowfoods.com: serving size 1 softgel
+  vitamin_d_per_serving_mcg: 125 # nowfoods.com: "125 mcg (5,000 IU)"
+  servings_per_container: 120   # nowfoods.com: 120 on the label shown; 120-softgel size row
+
+prices:
+  - retailer: NOW Foods
+    price_usd: 12.99            # nowfoods.com size table: 120 softgels (SKU 0372) $12.99
+    servings: 120
+    url: https://www.nowfoods.com/products/supplements/vitamin-d-3-5000-iu-softgels
+    date_checked: 2026-10-21
+    entered_by: claude
+
+# MISSING: third-party sport/quality certification. The NOW page (and https://www.nowfoods.com/0372)
+# lists Halal, Kosher, Non-GMO and an Intertek GMP Supplement Certification seal; none of
+# the five programs in the category file. NSF/Informed Sport/USP listings for this product
+# were not searched or found.
+certifications: []
+
+# MISSING: COA. No COA or lab-results link on https://www.nowfoods.com/products/supplements/vitamin-d-3-5000-iu-softgels
+# or https://www.nowfoods.com/0372.
+coas: []
+
+flags: []
+notes: ""

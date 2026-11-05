@@ -1,0 +1,48 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the label name only: no health words from retailer titles.
+# (Name is the label/brand line "Dr. Formulated Probiotics Once Daily"; no health words added.)
+category: probiotics
+entered_by: claude              # label info from vitacost.com
+brand: Garden of Life
+name: Dr. Formulated Probiotics Once Daily, 30 Capsules
+form: capsule
+cfu_guarantee: through_expiration   # vitacost.com: "30 Billion CFU¹" with footnote "¹ At end of Best Use Date under recommended storage conditions."
+# strains as printed on vitacost.com Supplement Facts (no strain codes printed for any):
+strains: Lactobacillus acidophilus (no strain code); Lactobacillus plantarum (no strain code); Lactobacillus gasseri (no strain code); Lactobacillus paracasei (no strain code); Lactobacillus bulgaricus (no strain code); Lactobacillus brevis (no strain code); Lactobacillus casei (no strain code); Lactobacillus rhamnosus (no strain code); Lactobacillus salivarius (no strain code); Bifidobacterium lactis (no strain code); Bifidobacterium bifidum (no strain code); Bifidobacterium breve (no strain code); Bifidobacterium infantis (no strain code); Bifidobacterium longum (no strain code)   # vitacost.com Supplement Facts, in printed order
+storage: "Store in a dry place at 71F (22C) or below. Best if refrigerated."   # vitacost.com. CHECK: the label gives both; this SKU was not confirmed to be the shelf-stable one (a different garden of life page calls a Sprouts-exclusive Once Daily SKU shelf-stable).
+# MISSING: delivery_claim. None found on the vitacost.com page.
+other_ingredients: [non-GMO vegetable cellulose (capsule)]   # vitacost.com
+ingredients_confirmed: true     # full other-ingredients line read on vitacost.com
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 capsule
+  cfu_billions_per_serving: 30  # vitacost.com: "Total Probiotic Cultures: 30 Billion CFU" (Lacto 20 + Bifido 10)
+  strain_count: 14
+  servings_per_container: 30    # vitacost.com
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/23_5d9717da-c13a-49db-ac38-e6651d01f7f7.jpg?v=1790923361
+    source_url: https://www.vitacost.com/garden-of-life-dr-formulated-probiotics-once-daily-30-billion-30-vegetarian-capsules-1
+    alt: Garden of Life Dr. Formulated Probiotics Once Daily 30 capsule bottle
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 27.55            # vitacost.com: $27.55, 30 capsules, Add to cart shown
+    servings: 30
+    url: https://www.vitacost.com/garden-of-life-dr-formulated-probiotics-once-daily-30-billion-30-vegetarian-capsules-1
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. The page shows only a star breakdown (71 ratings), no stated average.
+
+# MISSING: certification. The brand page shows badges (e.g. NSF GF Certified) but certifier sites were not checked.
+certifications: []
+
+# MISSING: COA. gardenoflife.com product page read had no lab-results link.
+coas: []
+
+flags: [proprietary blend without per-strain amounts, added prebiotics (Organic Prebiotic Fiber Blend 410 mg)]   # vitacost.com Supplement Facts: "Daily Probiotic Blend 115 mg"; CFU given only as Lacto 20 billion and Bifido 10 billion totals
+notes: ""

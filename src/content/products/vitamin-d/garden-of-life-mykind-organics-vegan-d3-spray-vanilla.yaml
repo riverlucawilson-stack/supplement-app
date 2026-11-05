@@ -1,0 +1,41 @@
+# Looked up by Claude on 2026-10-24. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 2 fl oz (58 ml) spray.
+category: vitamin-d
+entered_by: claude              # label info from the Vitacost page
+brand: Garden of Life
+name: Vegan D3 Organic Spray, Vanilla, 2 fl oz (58 ml)
+form: liquid                    # vitacost.com: spray, serving "1 Spray (About 0.46 ml)"
+vitamin_d_form: d3              # product name "Vegan D3"
+other_ingredients: [organic pumpkin seed oil, organic cranberry seed oil, organic vanilla flavor, non-GMO vitamin E (from sunflower), organic sunflower lecithin, organic rosemary extract, organic stevia extract (leaf)]   # vitacost.com; the two seed oils are listed as an "omega blend"
+
+dose:
+  units_per_serving: 1          # vitacost.com: "1 Spray (About 0.46 ml)"
+  vitamin_d_per_serving_mcg: 25 # vitacost.com: "25 mcg (1,000 IU)"
+  servings_per_container: 125   # vitacost.com Supplement Facts: 125 (the Key info box says "Total servings 58 ml", which is the bottle volume)
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/116_3c3d8c93-6bc4-4ae4-b56d-47f68f199f72.jpg?v=1781958102
+    source_url: https://www.vitacost.com/products/garden-of-life-vegan-d3-organic-spray-vanilla-2-fl-oz-58-ml-58127
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 17.49            # vitacost.com: regular and sale price $17.49
+    servings: 125
+    url: https://www.vitacost.com/products/garden-of-life-vegan-d3-organic-spray-vanilla-2-fl-oz-58-ml-58127
+    date_checked: 2026-10-24
+    entered_by: claude
+    # rating: page shows 244 reviews but no average, so no rating recorded.
+
+# MISSING: certification. Looked for a listing on quality-supplements.org (fetch failed, client_error) and
+#   via a search for NSF Certified for Sport; no certifier page naming this product was found. Nothing recorded.
+certifications: []
+
+# MISSING: COA. No brand lab-results page found by search; none read.
+coas: []
+
+# vitacost.com: "Made without dairy, soy or peanut ingredients." and "Manufactured in a facility that also processes wheat, egg, milk, soy, fish, crustacean shellfish, peanut, tree nuts and sesame."
+flags: [made in a facility that also processes wheat, egg, milk, soy, fish, shellfish, peanut, tree nuts and sesame, contains stevia]
+notes: ""

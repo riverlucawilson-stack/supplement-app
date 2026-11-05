@@ -1,0 +1,45 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the vitacost.com H1.
+category: calcium
+entered_by: claude              # label info from vitacost.com
+brand: Citracal
+name: Calcium Supplement +D3, Petites, 200 Coated Caplets   # vitacost.com H1
+form: tablet                    # CHECK: sold as "coated caplets"; closest form option is tablet
+calcium_form: citrate           # vitacost.com ingredients line lists "Calcium citrate" first and the description says "made with calcium citrate"; the panel calcium line has no "as ..." wording
+# MISSING: branded_ingredient. None named on vitacost.com.
+other_ingredients: [polyethylene glycol, croscarmellose sodium, gelatin, hydroxypropyl methylcellulose, inulin, magnesium stearate]   # vitacost.com ingredients line
+ingredients_confirmed: true     # full ingredients line read on vitacost.com
+
+dose:
+  units_per_serving: 2          # vitacost.com: serving size 2 caplets
+  calcium_per_serving_mg: 400   # vitacost.com Supplement Facts: Calcium 400 mg (31% DV)
+  vitamin_d_mcg: 12.5           # vitacost.com: 12.5 mcg (500 IU), as printed
+  servings_per_container: 100   # vitacost.com Supplement Facts: 100 (Key info "200 count" is caplets)
+  # MISSING: vitamin_k_mcg, magnesium_mg. Not listed on the vitacost.com panel.
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/53_361032ab-24b4-4d30-93fd-734a9f8f9acb.jpg?v=1781946363
+    source_url: https://www.vitacost.com/products/citracal-calcium-supplement-d3-petites-200-coated-caplets-31721
+    alt: Citracal Petites calcium citrate with D3 200 coated caplets
+    date_checked: 2026-11-05
+    entered_by: claude          # page og:title names Citracal Calcium Supplement +D3 Petites 200 Coated Caplets
+
+prices:
+  - retailer: Vitacost
+    price_usd: 13.01            # vitacost.com: $13.01; Add to cart shown, no stock label either way
+    servings: 100
+    url: https://www.vitacost.com/products/citracal-calcium-supplement-d3-petites-200-coated-caplets-31721
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. Page shows no average; not computed.
+
+# MISSING: certification. Certifier sites not checked. Brand/retailer claims not recorded.
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: [contains gelatin]   # vitacost.com ingredients line
+notes: ""

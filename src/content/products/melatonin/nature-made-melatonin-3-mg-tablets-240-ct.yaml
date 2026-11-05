@@ -1,0 +1,38 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name from the target.com title ("Nature Made Melatonin sleep 3mg Tablets, 240 Ct"); the word "sleep" dropped.
+# CHECK: target.com Supplement Facts also list Calcium (as Dibasic Calcium Phosphate) 65 mg (5% DV); not entered as an active, please confirm on the label.
+# CHECK: no USP listing found on usp.org (search 2026-11-05 returned only general pages), so no certification recorded.
+category: melatonin
+entered_by: claude              # label info from target.com
+brand: Nature Made
+name: Melatonin 3 mg Tablets, 240 ct   # target.com title, "sleep" dropped
+form: tablet
+release: not_stated             # target.com page has no release wording
+# MISSING: format. None labeled on target.com.
+other_ingredients: [croscarmellose sodium, cellulose gel, magnesium stearate]   # target.com "other ingredients" line
+ingredients_confirmed: true     # full other-ingredients line read on target.com
+
+dose:
+  units_per_serving: 1          # target.com: serving size 1 tablet
+  melatonin_mg: 3               # target.com Supplement Facts: Melatonin 3 mg
+  servings_per_container: 240   # CHECK: target.com did not print servings; derived from 240 count at 1 tablet per serving
+
+# MISSING: photos.product. target.com content had no title/meta image.
+
+prices:
+  - retailer: Target
+    price_usd: 15.49            # target.com: $15.49, 240 ct, In Stock, "Sold & shipped by Hey Pharma" (third-party seller on Target)
+    servings: 240
+    url: https://www.target.com/p/nature-made-melatonin-sleep-3mg-tablets-240-ct/-/A-1006429330
+    date_checked: 2026-11-05
+    entered_by: claude
+
+# MISSING: certification. nsfsport.com brand search on 2026-11-05 for "Nature Made" listed only a creatine product, no melatonin; USP page (quality-supplements.org) would not load, so a USP Verified listing could not be checked.
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: [also lists calcium 65 mg (as dibasic calcium phosphate)]   # target.com Supplement Facts
+notes: ""

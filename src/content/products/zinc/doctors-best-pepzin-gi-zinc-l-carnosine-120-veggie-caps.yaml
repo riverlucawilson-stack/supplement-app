@@ -1,0 +1,43 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Name note: kept the brand's ingredient name "PepZin GI" as the product name; no other marketing words used.
+category: zinc
+entered_by: claude              # label info from vitacost.com
+brand: Doctor's Best
+name: PepZin GI Zinc-L-Carnosine, 120 Veggie Caps
+form: capsule
+zinc_form: carnosine            # vitacost.com Supplement Facts: "Zinc (from PepZin GI Zinc-L-Carnosine) 16 mg"
+branded_ingredient: PepZin GI   # vitacost.com label wording
+other_ingredients: [microcrystalline cellulose, hypromellose (vegetarian capsule), magnesium stearate (vegetable source), silicon dioxide]   # vitacost.com
+ingredients_confirmed: true     # full ingredients line read on vitacost.com (page heading is "Ingredients")
+
+dose:
+  units_per_serving: 2          # vitacost.com: serving size 2 veggie capsules
+  zinc_per_serving_mg: 16       # vitacost.com Supplement Facts "Zinc" 16 mg (elemental line); Zinc-L-Carnosine 75 mg is the compound weight, not used
+  servings_per_container: 60    # vitacost.com Supplement Facts: 60 servings (= 120 capsules; Key info says "120 count")
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/106_3c6f480f-5d13-4640-b64f-cdd3716011d0.jpg?v=1781994077
+    source_url: https://www.vitacost.com/products/doctor-s-best-pepzin-gi-zinc-l-carnosine-120-veggie-caps-2467
+    alt: Doctor's Best PepZin GI bottle
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 22.99            # vitacost.com: sale price $22.99 (regular price also $22.99), 120 capsules = 60 servings
+    servings: 60
+    url: https://www.vitacost.com/products/doctor-s-best-pepzin-gi-zinc-l-carnosine-120-veggie-caps-2467
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. Page shows 1,944 reviews as a star breakdown but states no average.
+
+# MISSING: certifications. vitacost.com lists Non-GMO, Gluten Free, Soy Free, Vegan (brand/retailer claims); nothing looked up at a certifier's site.
+certifications: []
+
+# MISSING: COA. vitacost.com page has no COA link; brand site not checked.
+coas: []
+
+flags: []
+notes: ""

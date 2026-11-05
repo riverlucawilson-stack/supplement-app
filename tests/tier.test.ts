@@ -21,10 +21,10 @@ test('Tier B: COA only covers raw material', () => {
   assert.equal(tier({ certifications: [cert()], coas: [coa({ scope: 'raw_material' })] }).tier, 'B');
 });
 
-test('Tier B: COA is over 2 years old', () => {
+test('Tier B: COA is over 12 months old', () => {
   const r = tier({ certifications: [cert()], coas: [coa({ test_date: '2024-01-01' })] });
   assert.equal(r.tier, 'B');
-  assert.match(r.checks[1].details[0], /more than 2 years old/);
+  assert.match(r.checks[1].details[0], /more than 12 months old/);
 });
 
 test('Tier B: good COA but no certification', () => {

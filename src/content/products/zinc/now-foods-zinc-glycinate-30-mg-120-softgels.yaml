@@ -1,0 +1,42 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+category: zinc
+entered_by: claude              # label info from vitacost.com
+brand: NOW Foods
+name: Zinc Glycinate 30 mg, 120 Softgels
+form: softgel
+zinc_form: bisglycinate         # vitacost.com Supplement Facts: "Zinc (elemental), from 150 mg Zinc Bisglycinate (Albion)"
+branded_ingredient: Albion      # vitacost.com label wording: "Albion" zinc bisglycinate
+other_ingredients: [pumpkin seed oil (cold pressed) 250 mg, "softgel capsule (bovine gelatin (BSE-free), glycerin, water, carob)", beeswax, soy lecithin]   # vitacost.com; pumpkin seed oil is listed on Supplement Facts
+ingredients_confirmed: true     # full ingredients line read on vitacost.com (page heading is "Ingredients")
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 softgel
+  zinc_per_serving_mg: 30       # vitacost.com Supplement Facts "Zinc (elemental)" 30 mg; 150 mg is the compound weight, not used
+  servings_per_container: 120   # vitacost.com Key info: total servings 120 count
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/47_7c7508e8-88ad-42a1-a625-6f1fabe47850.jpg?v=1781993370
+    source_url: https://www.vitacost.com/products/now-foods-zinc-glycinate-120-softgels-18419
+    alt: NOW Foods Zinc Glycinate softgels bottle
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 10.40            # vitacost.com: sale price $10.40 (regular price also $10.40), 120 softgels
+    servings: 120
+    url: https://www.vitacost.com/products/now-foods-zinc-glycinate-120-softgels-18419
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. Page shows 1,928 reviews as a star breakdown but states no average.
+
+# MISSING: certifications. vitacost.com lists Kosher, Halal, GMP Quality Assured (brand claims); nothing looked up at a certifier's site.
+certifications: []
+
+# MISSING: COA. vitacost.com page has no COA link; brand site not checked.
+coas: []
+
+flags: [contains soy lecithin, contains bovine gelatin, contains beeswax, contains pumpkin seed oil 250 mg]
+notes: ""

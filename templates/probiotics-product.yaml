@@ -1,0 +1,54 @@
+# BLANK PROBIOTIC PRODUCT TEMPLATE
+#
+# How to use it:
+#   1. Copy this file into src/content/products/probiotics/
+#   2. Rename it, e.g. brandname-probiotic-50-billion-30-capsules.yaml (lowercase, dashes)
+#   3. Fill in every field from the sources named in the comments
+#   4. Delete any example lines you didn't use
+#   5. Run: npm run validate
+#
+# Only enter what you have seen yourself on the label, the seller's page,
+# the certifier's site, or the COA. If you can't find something, leave it out
+# (for optional fields) or leave the list empty with [].
+
+category: probiotics
+
+# --- From the product label or the brand's product page ---
+brand: ""
+name: ""
+form: capsule                  # capsule | tablet | gummy | powder | liquid
+cfu_guarantee: through_expiration   # through_expiration | at_manufacture | not_stated (as the label words it)
+strains: ""                    # every strain as printed, separated by semicolons, e.g. "Lactobacillus rhamnosus GG; Bifidobacterium lactis BB-12"
+storage: shelf-stable          # as labeled: refrigerate | shelf-stable
+# delivery_claim: delayed-release capsule   # only if the label says so. Otherwise delete this line.
+other_ingredients: []          # everything else, e.g. [hypromellose, microcrystalline cellulose]
+
+dose:                          # from the Supplement Facts panel
+  units_per_serving: 1         # capsules / tablets / gummies in one daily serving
+  cfu_billions_per_serving: 0  # total CFU in billions, e.g. "50 Billion CFU" = 50. Delete if the label gives none.
+  strain_count: 0              # number of strains listed
+  servings_per_container: 0    # as printed on the label
+
+# --- From each retailer's product page. One block per store and size. ---
+prices:
+  - retailer: ""
+    price_usd: 0
+    servings: 0                # servings in the container THIS store sells
+    url: https://
+    date_checked: 2026-01-01
+
+# --- Only from the certifier's own website ---
+certifications: []
+
+# --- Certificate of analysis (lab report) ---
+coas: []
+#  - url: https://
+#    lab: ""
+#    iso_17025: unknown        # yes | no | unknown
+#    lot: ""
+#    test_date: 2026-01-01
+#    scope: finished_product   # finished_product | raw_material
+#    tests: [potency, identity, microbial]
+
+flags: []                      # e.g. [proprietary blend without amounts, no CFU listed, contains milk]
+notes: ""

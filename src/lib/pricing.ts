@@ -8,31 +8,40 @@ type Price = Product['prices'][number];
 
 export interface PriceMath {
   price: Price;
-  /** Grams of the active ingredient (e.g. creatine) in this retailer's container. */
-  activeGrams: number;
+  /** Amount of the compared ingredient (e.g. grams of creatine) in this retailer's container, in the comparison's unit. */
+  activeAmount: number;
   /** e.g. cost per 5 g of creatine. */
   costPerReferenceDose: number;
-  /** Cost of 30 days at the category's daily amount (5 g/day for creatine). */
-  costPer30Days: number;
+  /** Cost of 30 days at the category's daily amount (5 g/day for creatine). Undefined if the category sets none. */
+  costPer30Days: number | undefined;
   stale: boolean;
 }
 
 /** Works out the per-dose costs for one retailer's price. */
 export function priceMath(product: Product, price: Price, today: Date): PriceMath {
   const category = categoryOf(product);
-  const activeGrams = price.servings * category.activeGramsPerServing(product);
-  const costPerGram = price.price_usd / activeGrams;
+  const activeAmount = price.servings * category.activePerServing(product);
+  const costPerUnit = price.price_usd / activeAmount;
   return {
     price,
-    activeGrams,
-    costPerReferenceDose: costPerGram * category.referenceDose.grams,
-    costPer30Days: costPerGram * category.dailyGrams * 30,
+    activeAmount,
+    costPerReferenceDose: costPerUnit * category.referenceDose.amount,
+    costPer30Days: category.daily ? costPerUnit * category.daily.amount * 30 : undefined,
     stale: isPriceStale(price.date_checked, today),
   };
 }
 
-/** Every retailer's price for a product, cheapest per dose first. */
+/**
+ * False when the label doesn't state the compared amount (e.g. a turmeric product that
+ * gives no curcuminoid content). Such a product has no cost per comparison amount.
+ */
+export function amountStated(product: Product): boolean {
+  return categoryOf(product).activePerServing(product) > 0;
+}
+
+/** Every retailer's price for a product, cheapest per dose first. Empty when the amount isn't stated. */
 export function allPrices(product: Product, today: Date): PriceMath[] {
+  if (!amountStated(product)) return [];
   return product.prices
     .map((price) => priceMath(product, price, today))
     .sort((a, b) => a.costPerReferenceDose - b.costPerReferenceDose);

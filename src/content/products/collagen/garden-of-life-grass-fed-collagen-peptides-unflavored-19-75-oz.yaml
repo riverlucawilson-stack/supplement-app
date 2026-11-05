@@ -1,0 +1,47 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the label name only: no health or beauty claims from retailer titles.
+category: collagen
+entered_by: claude              # label info from vitacost.com
+brand: Garden of Life
+name: Grass Fed Collagen Peptides, Unflavored, 19.75 oz (560 g)
+form: powder
+collagen_source: bovine         # vitacost.com Supplement Facts "Collagen Peptides (from Bovine Hide)"
+collagen_types: Types I and III   # vitacost.com page text: "Type I & III + Probiotics"
+flavor: Unflavored              # vitacost.com
+other_ingredients: [Bacillus coagulans SNZ 1969]   # vitacost.com Supplement Facts (250 million CFU, 2.5 mg)
+# MISSING: ingredients_confirmed left out. The page has an "Ingredients" heading but no other-ingredients line.
+
+dose:
+  serving_size_g: 20            # vitacost.com: "1 Scoop (About 20 g)"
+  collagen_per_serving_g: 20    # vitacost.com Supplement Facts "Collagen Peptides (from Bovine Hide)" 20 g
+  servings_per_container: 28    # vitacost.com: "About 28". 28 x 20 g = 560 g, matches net weight.
+  # CHECK: page's Key Info says "Total servings 280 g" (a size variant error); Supplement Facts say about 28 servings.
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/66_28186867-9762-4a0c-ac62-3bc2f96c2784.jpg?v=1791326949
+    source_url: https://www.vitacost.com/products/garden-of-life-grass-fed-collagen-peptides-unflavored-19-75-oz-560-g-86837
+    alt: Garden of Life Grass Fed Collagen Peptides Unflavored 19.75 oz container
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 32.89            # vitacost.com: $32.89, 19.75 oz (560 g)
+    servings: 28
+    url: https://www.vitacost.com/products/garden-of-life-grass-fed-collagen-peptides-unflavored-19-75-oz-560-g-86837
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. Page shows only a star breakdown (662 reviews), no stated average.
+
+# MISSING: certification. The page mentions "NSF Certified Gluten Free" (a brand/retailer claim); no certifier site checked, so nothing recorded.
+certifications: []
+
+# MISSING: COA. Retailer page has no COA link; brand site not checked.
+coas: []
+
+flags:
+  - contains Bacillus coagulans SNZ 1969 probiotic (250 million CFU per serving)   # vitacost.com Supplement Facts
+  - manufactured in a facility that also processes egg, milk, soy, wheat, fish, tree nuts and sesame   # vitacost.com
+notes: ""

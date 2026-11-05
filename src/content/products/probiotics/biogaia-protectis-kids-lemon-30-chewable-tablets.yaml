@@ -1,0 +1,48 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the label name only: no health words from retailer titles.
+# (Left out of the name: "For Gut Comfort" in the vitacost.com title.)
+category: probiotics
+entered_by: claude              # label info from vitacost.com
+brand: BioGaia
+name: Protectis Kids, Lemon, 100 Million CFU, 30 Probiotic Chewable Tablets
+form: tablet
+cfu_guarantee: not_stated       # vitacost.com: only "100 million CFU" on the Supplement Facts; no guarantee wording found
+strains: L. reuteri DSM 17938 (L. reuteri Protectis)   # vitacost.com Supplement Facts: "L. reuteri DSM 17938 (L. reuteri Protectis®)"
+storage: shelf-stable           # vitacost.com: "Store in a dry place at room temperature."
+# MISSING: delivery_claim. None found on the vitacost.com page (chewable tablet is the form, recorded in "form").
+other_ingredients: [isomalt, xylitol, natural lemon flavoring, citric acid]   # vitacost.com
+ingredients_confirmed: true     # full other-ingredients line read on vitacost.com
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 tablet
+  cfu_billions_per_serving: 0.1 # vitacost.com: "100 million CFU"
+  strain_count: 1
+  servings_per_container: 30    # vitacost.com: 30
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/133_3103391c-4a2c-47e2-bb1a-2e462a04630b.jpg?v=1792722291
+    source_url: https://www.vitacost.com/products/biogaia-protectis-kids-for-gut-comfort-lemon-100-million-cfu-30-probiotic-chewable-tablets-79661
+    alt: BioGaia Protectis Kids Lemon chewable tablets package
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 20.55            # vitacost.com: $20.55, 30 count, Add to cart shown, no out-of-stock notice
+    servings: 30
+    url: https://www.vitacost.com/products/biogaia-protectis-kids-for-gut-comfort-lemon-100-million-cfu-30-probiotic-chewable-tablets-79661
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. The page shows only a star breakdown (120 ratings), no stated average.
+
+# MISSING: certification. The page lists no third-party certification. Certifier sites not checked.
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: [contains sugar alcohols (isomalt, xylitol)]   # vitacost.com other ingredients
+# vitacost.com also states "Milk Free," "Lactose Free," "Gluten Free." (no allergen to flag)
+notes: ""

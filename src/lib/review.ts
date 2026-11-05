@@ -17,6 +17,7 @@ export function hasUnverifiedData(product: Product): boolean {
     product.entered_by ||
       product.prices.some((p) => p.entered_by) ||
       product.certifications.some((c) => c.entered_by) ||
-      product.coas.some((c) => c.entered_by),
+      product.coas.some((c) => c.entered_by) ||
+      Boolean(product.photos?.product?.entered_by || product.photos?.label?.entered_by),
   );
 }

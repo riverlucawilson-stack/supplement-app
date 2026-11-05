@@ -1,0 +1,38 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 60 softgels.
+# Page title: "Super Ubiquinol CoQ10 with Enhanced Mitochondrial Support" (health-style wording trimmed from name).
+category: coq10
+entered_by: claude              # label info from lifeextension.com
+brand: Life Extension
+name: Super Ubiquinol CoQ10 100 mg, 60 Softgels
+form: softgel
+coq10_form: ubiquinol           # lifeextension.com Supplement Facts: "Ubiquinol (as Kaneka Ubiquinol)"
+coq10_source: Kaneka Ubiquinol  # named on the Supplement Facts line at lifeextension.com
+other_ingredients: [sunflower oil, gelatin, glycerin, purified water, beeswax, sunflower lecithin, annatto color]   # lifeextension.com
+
+dose:
+  units_per_serving: 1          # lifeextension.com: serving size 1 softgel
+  coq10_per_serving_mg: 100     # lifeextension.com: Ubiquinol (as Kaneka Ubiquinol) 100 mg
+  servings_per_container: 60    # page states 60 softgels, 1 per serving; it does not print "servings per container"
+
+prices:
+  - retailer: Life Extension
+    price_usd: 42.00            # lifeextension.com: $42.00 regular price (AutoShip also shown at $42.00 "Save 19%"; page's $0.57/count does not match, so regular price used)
+    servings: 60
+    url: https://www.lifeextension.com/vitamins-supplements/item01426/super-ubiquinol-coq10-with-enhanced-mitochondrial-support
+    date_checked: 2026-11-05
+    entered_by: claude
+    rating:
+      stars: 4.9                # lifeextension.com: 4.9 average from 549 reviews
+      count: 549
+    # MISSING: second retailer. Vitacost page for this product failed to load; fullscript failed; iHerb blocks fetches.
+
+# MISSING: certification. Page names no third-party certification (only a ConsumerLab award badge and "LE-certified non-GMO", which are not certifier listings).
+certifications: []
+
+# MISSING: COA. Page says a Certificate of Analysis is available on request by phone (1-800-678-8989); no COA link shown.
+coas: []
+
+# Label facts: Supplement Facts also lists Shilajit fulvic acid complex 100 mg. Page also states: contains bovine gelatin (not vegetarian/vegan); does not contain any of the 9 major allergens listed on the label.
+flags: [Also contains shilajit fulvic acid complex (100 mg per softgel), Contains bovine gelatin, Does not contain any of the 9 major allergens per the page]
+notes: ""

@@ -70,7 +70,7 @@ const drafts = page.sections.filter((s) => !s.reviewed).length;
             <div class="cards">
               {g.items.map((item) => (
                 <article class="card">
-                  <h4>{item.title}</h4>
+                  {g.strength ? <h4>{item.title}</h4> : <h3>{item.title}</h3>}
                   <p>
                     {item.text}
                     {item.cites.map((c) => (
@@ -110,6 +110,11 @@ const drafts = page.sections.filter((s) => !s.reviewed).length;
               {c.pmid && (
                 <a href={`https://pubmed.ncbi.nlm.nih.gov/${c.pmid}/`} class="num">
                   PMID {c.pmid}
+                </a>
+              )}
+              {!c.pmid && !c.doi && (
+                <a href={c.source_url} class="num">
+                  {new URL(c.source_url).hostname}
                 </a>
               )}
               {c.doi && (
@@ -292,7 +297,7 @@ const drafts = page.sections.filter((s) => !s.reviewed).length;
     background: var(--surface);
   }
 
-  .card h4 {
+  .card :is(h3, h4) {
     margin: 0 0 0.4rem;
     font-size: 1rem;
     font-weight: 700;

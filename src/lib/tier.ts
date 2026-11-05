@@ -36,7 +36,7 @@ export function coaProblems(coa: Coa, today: Date): string[] {
   if (coa.iso_17025 === 'unknown') problems.push("lab's ISO/IEC 17025 accreditation is unconfirmed");
   if (coa.scope === 'raw_material') problems.push('tests the raw material, not the finished product');
   if (isCoaStale(coa.test_date, today)) {
-    problems.push(`test date ${day(coa.test_date)} is more than ${settings.coaStaleAfterYears} years old`);
+    problems.push(`test date ${day(coa.test_date)} is more than ${settings.coaStaleAfterMonths} months old`);
   }
   return problems;
 }
@@ -60,7 +60,7 @@ export function tierFor(product: Product, today: Date): TierResult {
   // Check 2: a qualifying COA
   const qualifyingCoas = product.coas.filter((coa) => coaProblems(coa, today).length === 0);
   const coaCheck: TierCheck = {
-    label: `COA from an accredited lab, on the finished product, under ${settings.coaStaleAfterYears} years old`,
+    label: `COA from an accredited lab, on the finished product, under ${settings.coaStaleAfterMonths} months old`,
     met: qualifyingCoas.length > 0,
     details:
       product.coas.length === 0

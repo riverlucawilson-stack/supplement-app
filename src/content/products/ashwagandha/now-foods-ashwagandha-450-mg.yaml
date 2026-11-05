@@ -16,6 +16,13 @@ dose:
                                     # (Vitacost still shows "min. 2.5%": older label? CHECK)
   servings_per_container: 90        # 90-capsule bottle, 1 capsule per serving (Vitacost: 90)
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/103_d6ac23e5-fd18-4e7a-af3b-7c35d85f1b24.jpg?v=1788574573
+    source_url: https://www.vitacost.com/now-ashwagandha
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: NOW Foods
     price_usd: 9.99                 # page: 30 veg capsules, $9.99, SKU 4595

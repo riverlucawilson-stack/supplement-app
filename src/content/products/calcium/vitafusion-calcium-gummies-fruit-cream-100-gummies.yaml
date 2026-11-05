@@ -1,0 +1,47 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the vitacost.com H1.
+category: calcium
+entered_by: claude              # label info from vitacost.com
+brand: Vitafusion
+name: Calcium Gummies, Fruit & Cream, 100 Gummies   # vitacost.com H1
+form: gummy                     # vitacost.com title
+format: gummy                   # vitacost.com title
+calcium_form: phosphate         # vitacost.com Supplement Facts: Calcium (as tricalcium phosphate)
+# MISSING: branded_ingredient. None named on vitacost.com.
+other_ingredients: [sugar, glucose syrup, water, gelatin, canola lecithin, citric acid, colors (annatto extract, blueberry and carrot concentrates, purple carrot juice concentrate), flavors, lactic acid, medium chain triglycerides, pectin]   # vitacost.com other ingredients line (tricalcium phosphate, vitamin D3 are the active ingredients)
+ingredients_confirmed: true     # full other-ingredients line read on vitacost.com
+
+dose:
+  units_per_serving: 2          # vitacost.com: serving size 2 gummies
+  calcium_per_serving_mg: 500   # vitacost.com Supplement Facts: Calcium 500 mg (38% DV)
+  vitamin_d_mcg: 25             # vitacost.com: 25 mcg (1000 IU), as printed
+  servings_per_container: 50    # vitacost.com Supplement Facts: 50 (Key info "100 count" is gummies)
+  # MISSING: vitamin_k_mcg, magnesium_mg. Not listed on the vitacost.com panel.
+  # Panel also lists phosphorus 200 mg (not a tracked field).
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/51_792d303f-81b8-4492-9372-a27ce7193856.jpg?v=1790927644
+    source_url: https://www.vitacost.com/products/vitafusion-calcium-gummies-fruit-cream-100-gummies-71433
+    alt: Vitafusion Calcium Gummies Fruit & Cream 100 gummies
+    date_checked: 2026-11-05
+    entered_by: claude          # page og:title names VitaFusion Calcium Gummies Fruit & Cream 100 Gummies
+
+prices:
+  - retailer: Vitacost
+    price_usd: 13.78            # vitacost.com: $13.78; Add to cart shown, no stock label either way
+    servings: 50
+    url: https://www.vitacost.com/products/vitafusion-calcium-gummies-fruit-cream-100-gummies-71433
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. Page shows no average; not computed.
+
+# MISSING: certification. Certifier sites not checked. Brand/retailer claims not recorded.
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: [added sugars (6 g per serving), contains sugar and glucose syrup, contains gelatin, processed in a facility with egg, fish, shellfish, soy and tree nuts]   # vitacost.com Supplement Facts "Includes 6 g Added Sugars" and allergen statement
+notes: ""

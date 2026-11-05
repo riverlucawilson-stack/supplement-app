@@ -1,0 +1,48 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the page H1 (vitacost.com). Left out of the name/flags: "Inflammatory Response Gummy" (page wording).
+category: curcumin
+entered_by: claude              # label info from vitacost.com
+brand: Garden of Life
+name: Organics, Turmeric Gummies, 120 Vegan Gummy Drops   # vitacost.com H1
+form: gummy
+formulation: root_and_extract   # vitacost.com Supplement Facts: "Certified Organic Turmeric Blend" of fermented root, root extract (std. 95% curcuminoids) and black pepper fruit
+# MISSING: branded_ingredient. None named on the vitacost.com label.
+# MISSING: absorption_claim. None found on the vitacost.com page.
+other_ingredients: [organic fruit chew base (apple puree and juice concentrates, peach puree concentrate, lemon juice concentrate, pectin, apple flavor, rice meal), organic sunflower oil, organic rice powder]   # vitacost.com
+ingredients_confirmed: true     # full other-ingredients line read on vitacost.com
+
+dose:
+  units_per_serving: 4          # vitacost.com: serving size 4 gummies (10 g)
+  # Panel sub-line: "Organic Turmeric Root Extract (standardized to 95% Curcuminoids) 50 mg", inside a 254 mg blend.
+  # 50 x 0.95 = 47.5 mg. The extract line has its own mg and its own %, so it is multiplied out. The rest of the blend (fermented root, black pepper fruit) states no curcuminoids and is not counted.
+  # CHECK by eye: the fetch showed the 50 mg beside the extract line only; confirm on the label that it is not a share of the blend.
+  # curcuminoids_per_serving_mg left out: the label shows "Organic Turmeric Root Extract (standardized to 95% Curcuminoids, 50 mg)" inside the 254 mg "Certified Organic Turmeric Blend", so the 50 mg can't be confirmed as the extract's own amount. CHECK the label.
+  turmeric_per_serving_mg: 254  # vitacost.com: Certified Organic Turmeric Blend 254 mg (reference only)
+  # MISSING: piperine_per_serving_mg. Black pepper fruit is in the blend but no piperine amount is listed.
+  servings_per_container: 30    # vitacost.com Supplement Facts: 30 (120 gummies / 4). CHECK: "Key info" says "120 count".
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/50_2518755a-d868-4ea1-8ae0-95fd234fcdda.jpg?v=1781966455
+    source_url: https://www.vitacost.com/products/garden-of-life-organics-turmeric-gummies-120-vegan-gummy-drops-85260
+    alt: Garden of Life Organics Turmeric Gummies 120 count bottle   # page title and meta description describe this product
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 26.59            # vitacost.com: $26.59 (regular and sale price the same), 120 count, Add to cart shown, no out-of-stock notice
+    servings: 30
+    url: https://www.vitacost.com/products/garden-of-life-organics-turmeric-gummies-120-vegan-gummy-drops-85260
+    date_checked: 2026-11-05
+    entered_by: claude
+
+# MISSING: certification. Certifier sites not checked. vitacost.com lists USDA Organic, Non-GMO Project Verified and NSF Certified Gluten-Free as brand/retailer claims: not recorded.
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: [curcuminoids stated only inside a blend, organic cinnamon bark 60 mg, organic fermented ginger root 50 mg, added sugars 7 g per serving, contains black pepper fruit, manufactured in a facility that also processes soy, dairy, egg, peanut, tree nuts, fish and shellfish]   # vitacost.com Supplement Facts and allergen statement
+notes: ""

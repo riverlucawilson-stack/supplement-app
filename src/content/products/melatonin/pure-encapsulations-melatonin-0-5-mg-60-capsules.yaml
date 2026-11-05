@@ -1,0 +1,35 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name from the target.com title "Pure Encapsulations Melatonin 0.5 mg - Natural Sleep Helper..."; the marketing phrases after the dash were dropped.
+# CHECK: target.com says the item ships from third-party seller Pattern, and shows only a one-line Supplement Facts ("1 vegetarian capsule contains Melatonin 0.5 mg"), no servings line. Servings 60 = Package Quantity 60 with 1 capsule per serving.
+# The other Target listing read (A-1003955313) is the 180 count at $29.80; A-1003955312 could not be fetched (robots).
+category: melatonin
+entered_by: claude              # label info from target.com
+brand: Pure Encapsulations
+name: Melatonin 0.5 mg, 60 Capsules   # target.com title, marketing phrases dropped
+form: capsule
+release: not_stated             # target.com page has no release wording
+other_ingredients: [hypoallergenic plant fiber (cellulose), vegetarian capsule (cellulose, water)]   # target.com line
+ingredients_confirmed: true     # line read on target.com
+
+dose:
+  units_per_serving: 1          # target.com: serving size 1 vegetarian capsule
+  melatonin_mg: 0.5             # target.com: Melatonin 0.5 mg
+  servings_per_container: 60    # target.com: Package Quantity 60 (see CHECK above)
+
+prices:
+  - retailer: Target            # target.com: "item ships from third party seller: Pattern"
+    price_usd: 11.80            # target.com: $11.80 when purchased online, 60 count (stock not stated)
+    servings: 60
+    url: https://www.target.com/p/-/A-1003955314
+    date_checked: 2026-11-05
+    entered_by: claude
+
+# MISSING: certification. nsfsport.com brand search "Pure Encapsulations" on 2026-11-05 listed only a creatine product, no melatonin; USP page (quality-supplements.org) would not load.
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: []
+notes: ""

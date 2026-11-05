@@ -1,0 +1,30 @@
+# Looked up by Claude on 2026-10-24. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 60 capsules.
+# A Walmart listing (walmart.com/ip/177110873) said "125 mg" with no Supplement Facts panel; the panel on the
+# source below says 120 mg, so 120 is used. River should check against the physical label.
+category: magnesium
+entered_by: claude              # label info from professionalsupplementcenter.com
+brand: Cardiovascular Research
+name: Magnesium Taurate 60 Capsules
+form: capsule
+magnesium_form: taurate         # professionalsupplementcenter.com: "Magnesium (as magnesium taurate)"
+other_ingredients: [rice flour, hypromellose (capsule)]   # professionalsupplementcenter.com
+
+dose:
+  units_per_serving: 1          # serving size 1 capsule
+  magnesium_per_serving_mg: 120 # Supplement Facts "Magnesium (as magnesium taurate)" line = 120 mg (29% DV)
+  servings_per_container: 60    # Supplement Facts
+
+# MISSING: price. professionalsupplementcenter.com (2026-10-24) offers 60 and 180 capsules but shows
+# no visible price per size; $13.99 appears only in page metadata, so the size it belongs to is
+# unconfirmed and it was left out (auditor FIX). The page shows "Rated 4.9 out of 5 stars, Based on 37 reviews".
+prices: []
+
+# MISSING: certification. The page only says "Kosher"; no certifier listing found.
+certifications: []
+
+# MISSING: COA. No COA link on the page.
+coas: []
+
+flags: []
+notes: ""

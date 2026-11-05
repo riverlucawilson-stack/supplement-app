@@ -1,0 +1,35 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 120 softgels.
+category: coq10
+entered_by: claude              # label info from vitacost.com
+brand: Doctor's Best
+name: High Absorption CoQ10 with BioPerine 100 mg, 120 Softgels   # "Heart Health" in some retailer titles left out on purpose (health wording)
+form: softgel
+coq10_form: ubiquinone          # vitacost.com Supplement Facts: "Coenzyme Q10 (Ubiquinone)"
+# coq10_source: none. vitacost.com names no branded CoQ10 ingredient (page says "Naturally Fermented CoQ10", a description, not a brand).
+carrier_oil: extra virgin olive oil   # vitacost.com other ingredients: "Extra virgin olive oil (non-GMO)"
+other_ingredients: [extra virgin olive oil (non-GMO), softgel capsule (gelatin, glycerin, purified water), beeswax, soy lecithin, rosemary extract]   # vitacost.com
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 softgel
+  coq10_per_serving_mg: 100     # vitacost.com: 100 mg
+  servings_per_container: 120
+
+prices:
+  - retailer: Vitacost
+    price_usd: 19.99            # vitacost.com: sale price $19.99 (regular price also $19.99), 120 softgels
+    servings: 120
+    url: https://www.vitacost.com/products/doctor-s-best-high-absorption-coq10-100-mg-120-softgels-10930
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. Page shows a star breakdown and a count of 2624 but no average, so none recorded.
+
+# MISSING/CHECK: certification. vitacost.com page says "USP Verified", but that is a retailer/brand claim.
+# usp.org/verification-services/verification-program-participants (read 2026-11-05) does not list Doctor's Best. Nothing recorded.
+certifications: []
+
+# MISSING: COA. vitacost.com page has no COA link; brand site not checked.
+coas: []
+
+flags: [Contains soy, "Includes BioPerine black pepper extract 5 mg (standardized to 95% piperine) per softgel"]
+notes: ""

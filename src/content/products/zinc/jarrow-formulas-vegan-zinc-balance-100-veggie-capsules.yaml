@@ -1,0 +1,44 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Name note: Vitacost title is "Vegan Zinc Balance"; "Balance" is the brand's product name.
+category: zinc
+entered_by: claude              # label info from vitacost.com
+brand: Jarrow Formulas
+name: Vegan Zinc Balance, 100 Veggie Capsules
+form: capsule
+zinc_form: methionine          # vitacost.com Supplement Facts: "Zinc (as Zinc L-Methionine Sulfate) 15 mg"; exact wording in forms_listed
+forms_listed: zinc L-methionine sulfate   # vitacost.com Supplement Facts wording
+other_ingredients: [microcrystalline cellulose, capsule (hydroxypropylmethylcellulose, water), magnesium stearate (vegetable source)]   # vitacost.com
+ingredients_confirmed: true     # full "Other ingredients" line read on vitacost.com
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 capsule
+  zinc_per_serving_mg: 15       # vitacost.com Supplement Facts zinc line
+  copper_per_serving_mg: 1      # vitacost.com Supplement Facts "Copper (as Gluconate)" 1 mg
+  servings_per_container: 100   # vitacost.com Key info: total servings 100 count
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/82_6117b6da-1df6-478f-9f00-4121c12b1da4.jpg?v=1781993695
+    source_url: https://www.vitacost.com/products/jarrow-formulas-vegan-zinc-balance-100-veggie-capsules-278
+    alt: Jarrow Formulas Vegan Zinc Balance bottle
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 12.83            # vitacost.com: sale price $12.83 (regular price also $12.83), 100 capsules
+    servings: 100
+    url: https://www.vitacost.com/products/jarrow-formulas-vegan-zinc-balance-100-veggie-capsules-278
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. Page shows 1,631 ratings as a star breakdown but states no average.
+
+# MISSING: certifications. vitacost.com lists only Non-GMO and Gluten Free claims; nothing looked up at a certifier's site.
+certifications: []
+
+# MISSING: COA. vitacost.com page has no COA link; brand site not checked.
+coas: []
+
+flags: [contains copper]
+notes: ""

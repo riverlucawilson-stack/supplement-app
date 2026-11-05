@@ -13,6 +13,13 @@ dose:
   creatine_per_serving_g: 0.75  # Vitacost: "Serving Size: 1 Capsule", "750 mg". CHECK: creatine HCl, not creatine base
   servings_per_container: 75    # Vitacost: "about 75"
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/8_6038ea30-52d3-4a3e-9582-5bf664737c29.jpg?v=1781925549
+    source_url: https://www.vitacost.com/products/kaged-creatine-hcl-75-veggie-capsules-750-mg-per-capsule-126654
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Kaged
     price_usd: 24.99            # .js: "75 Servings / 75 Vegetable Caps" 2499 cents

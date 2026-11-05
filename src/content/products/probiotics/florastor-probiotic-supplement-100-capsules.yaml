@@ -1,0 +1,47 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the label name only: no health words from retailer titles.
+# (Left out of the name: "Dual Action" and "Digestive & Immune Health" wording from retailer titles.)
+category: probiotics
+entered_by: claude              # label info from vitacost.com
+brand: Florastor
+name: Probiotic Supplement, 100 Capsules (250 mg per Capsule)
+form: capsule
+cfu_guarantee: not_stated       # vitacost.com: no CFU or potency guarantee wording ("Guaranteed Authentic" only)
+strains: Saccharomyces boulardii CNCM I-745   # vitacost.com Supplement Facts: "Saccharomyces boulardii CNCM I-745", 500 mg per serving
+storage: "Do not refrigerate"   # vitacost.com: "Do not refrigerate."
+# MISSING: delivery_claim. None found on the vitacost.com page.
+other_ingredients: [lactose, magnesium stearate, hydroxypropylmethylcellulose]   # vitacost.com: "Lactose, magnesium stearate, hydroxypropylmethylcellulose (derived from pine bark)."
+ingredients_confirmed: true     # full other-ingredients line read on vitacost.com
+
+dose:
+  units_per_serving: 2          # vitacost.com: serving size 2 capsules
+  # MISSING: cfu_billions_per_serving. Panel gives 500 mg per serving, no CFU (vitacost.com; walmart.com page also gave mg only).
+  strain_count: 1
+  servings_per_container: 50    # vitacost.com Supplement Facts: "Servings Per Container: 50" (100 capsules / 2). CHECK: same page's key info says "Total servings 100 count".
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/22_4a266071-4abd-4f8c-b34e-d684a9244955.jpg?v=1782013132
+    source_url: https://www.vitacost.com/products/florastor-dual-action-probiotic-supplement-100-vegetarian-capsules-250-mg-per-capsule-157609
+    alt: Florastor Probiotic Supplement 100 capsule box
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 84.30            # vitacost.com: $84.30, 100 capsules (the 20-count option is $19.99), Add to cart shown. (A search-results view of this page said "Temporarily unavailable"; the product page itself showed Add to cart. CHECK.)
+    servings: 50
+    url: https://www.vitacost.com/products/florastor-dual-action-probiotic-supplement-100-vegetarian-capsules-250-mg-per-capsule-157609
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. The page shows only a star breakdown (13 ratings), no stated average.
+
+# MISSING: certification. Certifier sites not checked ("NSF Certified Gluten Free" appears on the vitacost.com page but is not a listed program).
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: [no CFU listed, contains lactose (derived from milk)]   # vitacost.com
+notes: ""

@@ -1,0 +1,35 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude needs River's check.
+# Label info from the Vitacost page. The brand name on the page is "NOW Foods, B-50, 100 Veg Capsules".
+# Search-result titles add "Energy Support" to the name; left out. Rating not stated on page (1,204 ratings shown), not stored.
+category: b-complex
+entered_by: claude
+brand: NOW
+name: B-50
+form: capsule
+folate_form: folic_acid        # Vitacost: "680 mcg DFE (400 mcg folic acid)"
+b12_form: cyanocobalamin       # Vitacost: "Vitamin B-12, as cyanocobalamin"
+other_ingredients: [hypromellose (cellulose capsule), microcrystalline cellulose, silicon dioxide, magnesium stearate]   # Vitacost
+
+dose:
+  units_per_serving: 1          # Vitacost: serving size 1 veg capsule
+  # Counted (Vitacost panel %DV >= 100): thiamin 4167, riboflavin 3846, niacin 313, vitamin B6 2941,
+  # folate 170, vitamin B12 2083, biotin 167, pantothenic acid 1000. All 8 counted.
+  # Not counted: choline 5%; PABA and inositol have no DV (not B vitamins in the 8).
+  b_vitamins_at_100_dv: 8
+  folate_mcg_dfe: 680           # Vitacost: 680 mcg DFE, 170% DV
+  vitamin_b12_mcg: 50           # Vitacost: 50 mcg, 2083% DV
+  servings_per_container: 100   # Vitacost: 100
+
+prices:
+  - retailer: Vitacost
+    price_usd: 11.45            # 100 veg capsules
+    servings: 100
+    url: https://www.vitacost.com/products/now-foods-b-50-100-veg-capsules-39670
+    date_checked: 2026-11-05
+    entered_by: claude
+
+certifications: []              # MISSING: not checked on a certifier's site for NOW B-50 (nsfsport "b complex" search showed no NOW listing)
+coas: []                        # MISSING: no COA found in the pages read
+
+flags: [added choline (25 mg), added PABA (25 mg), added inositol (25 mg)]   # Vitacost panel
+notes: ""

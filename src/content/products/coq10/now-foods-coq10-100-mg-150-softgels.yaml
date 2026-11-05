@@ -1,0 +1,35 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 150 softgels.
+category: coq10
+entered_by: claude              # label info from vitacost.com
+brand: NOW Foods
+name: CoQ10 100 mg, 150 Softgels
+form: softgel
+coq10_form: other               # vitacost.com Supplement Facts: "Coenzyme Q10 (CoQ10)", no form (ubiquinone/ubiquinol) named
+# coq10_source: none. vitacost.com names no branded CoQ10 ingredient.
+other_ingredients: [bovine gelatin (BSE-free), glycerin, water, organic caramel color, organic extra virgin olive oil, mixed tocopherols (from sunflower oil), sunflower lecithin, silicon dioxide]   # vitacost.com Ingredients section: no separate "Other ingredients" line on the panel
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 softgel
+  coq10_per_serving_mg: 100     # vitacost.com: Coenzyme Q10 (CoQ10) 100 mg
+  servings_per_container: 150
+
+prices:
+  - retailer: Vitacost
+    price_usd: 27.99            # vitacost.com: sale price $27.99 (regular price also $27.99), 150 softgels
+    servings: 150
+    url: https://www.vitacost.com/products/now-foods-coq10-100-mg-150-softgels-319
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. Page shows a star breakdown (212 reviews) but no average, so none recorded.
+
+# MISSING: certification. Page lists Non GMO, Kosher, "GMP Quality Assured" (brand/retailer claims). Certifier sites not checked.
+certifications: []
+
+# MISSING: COA. vitacost.com page has no COA link; brand site not checked.
+coas: []
+
+# Label facts: allergen line on vitacost.com: "Not manufactured with wheat, gluten, soy, corn, milk, egg, fish or shellfish ingredients. Produced in a GMP facility that processes other ingredients containing these allergens."
+# Page description wording ("pharmaceutical grade") is a brand claim, not recorded.
+flags: [Produced in a GMP facility that processes other ingredients containing wheat, gluten, soy, corn, milk, egg, fish and shellfish allergens, Contains bovine gelatin]
+notes: ""

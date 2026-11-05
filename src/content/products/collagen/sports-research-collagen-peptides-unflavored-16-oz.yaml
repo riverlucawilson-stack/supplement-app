@@ -1,0 +1,46 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the label name only: no health or beauty claims from retailer titles.
+category: collagen
+entered_by: claude              # label info from vitacost.com
+brand: Sports Research
+name: Collagen Peptides, Unflavored, 16 oz
+form: powder
+collagen_source: bovine         # vitacost.com: "Hydrolyzed Bovine Collagen Peptides"
+# MISSING: collagen_types. vitacost.com Supplement Facts reads only "Hydrolyzed Bovine Collagen Peptides 11 g".
+flavor: Unflavored              # vitacost.com
+other_ingredients: []           # vitacost.com Ingredients: "Hydrolyzed bovine collagen peptides." Nothing else listed.
+ingredients_confirmed: true     # full ingredient line read on vitacost.com
+
+dose:
+  units_per_serving: 1          # vitacost.com: 1 Scoop (11 g)
+  serving_size_g: 11            # vitacost.com Supplement Facts
+  collagen_per_serving_g: 11    # vitacost.com Supplement Facts "Hydrolyzed Bovine Collagen Peptides" 11 g
+  servings_per_container: 41    # vitacost.com Supplement Facts: "About 41" (Key info says "Total servings 454 g", ignored)
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/86_83741e4b-bdbc-4561-94be-47d95f55086d.jpg?v=1781991411
+    source_url: https://www.vitacost.com/products/sports-research-collagen-peptides-unflavored-16-oz-454-g-71106
+    alt: Sports Research Collagen Peptides Unflavored 16 oz container
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 32.95            # vitacost.com: sale price $32.95 (regular price also $32.95), 16 oz (454 g)
+    servings: 41
+    url: https://www.vitacost.com/products/sports-research-collagen-peptides-unflavored-16-oz-454-g-71106
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. Page shows 1,316 ratings as a star breakdown but states no average.
+
+# MISSING/CHECK: certification. vitacost.com page says "Informed Choice" and "Third Party Tested", but those are retailer/brand claims.
+# A WebSearch for the certifier listing returned no informed-sport.com or informed-choice.org product page, so nothing was read there.
+certifications: []
+
+# MISSING: COA. vitacost.com page has no COA link; brand site not checked.
+coas: []
+
+flags: []
+notes: ""

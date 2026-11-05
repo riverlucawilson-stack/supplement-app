@@ -1,0 +1,57 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the label name only: no health or beauty claims from retailer titles.
+category: collagen
+entered_by: claude              # label info from target.com
+brand: Orgain
+name: Collagen Peptides, Unflavored, 16 oz
+form: powder
+collagen_source: bovine         # target.com Ingredients: "Collagen peptides (bovine)"
+# MISSING: collagen_types. Not stated on the target.com page text read.
+flavor: Unflavored              # target.com
+other_ingredients: []           # target.com Ingredients: "Collagen peptides (bovine)". Nothing else listed.
+ingredients_confirmed: true     # full ingredient line read on target.com
+
+dose:
+  serving_size_g: 20            # target.com: 20.0 g (2 scoops)
+  collagen_per_serving_g: 20    # target.com Supplement Facts "Collagen Peptides 20g"
+  servings_per_container: 22    # target.com
+  # CHECK: target.com spec list also shows "Protein Grams per Serving: 10 Grams", which conflicts with the 20 g line, as does "Primary dietary ingredient amount per serving: 10000 mg". The Supplement Facts panel ("Collagen Peptides: 20g", "Protein: 18g") is used.
+
+photos:
+  product:
+    url: https://i5.walmartimages.com/seo/Orgain-Hydrolyzed-Grass-Fed-20g-Collagen-Peptides-Powder-Unflavored-1lb_f4f074ba-e086-4a33-8260-6a344b8a76e8.70fdee382989bd5e29aa3bf245c11207.jpeg?odnHeight=573&odnWidth=573&odnBg=FFFFFF
+    source_url: https://www.walmart.com/ip/597718861
+    alt: Orgain Collagen Peptides Unflavored 1 lb container
+    date_checked: 2026-11-05
+    entered_by: claude
+    # target.com page gave no image URL, so the photo comes from the Walmart page for the same product.
+
+prices:
+  - retailer: Target
+    price_usd: 21.49            # target.com: $21.49 (was $23.99), 16 oz
+    servings: 22
+    url: https://www.target.com/p/orgain-collagen-peptide-powder-16oz/-/A-75668450
+    date_checked: 2026-11-05
+    entered_by: claude
+    rating:
+      stars: 4.4                # target.com: 4.4 out of 5
+      count: 835
+  - retailer: Walmart
+    price_usd: 23.88            # walmart.com: $23.88, 16 oz, serving size 20 g, 22 servings
+    servings: 22
+    url: https://www.walmart.com/ip/597718861
+    date_checked: 2026-11-05
+    entered_by: claude
+    rating:
+      stars: 4.6                # walmart.com: 4.6 out of 5
+      count: 5597
+
+# MISSING: certification. None found on the pages read, and no certifier site was checked.
+certifications: []
+
+# MISSING: COA. Retailer pages have no COA link; brand site not checked.
+coas: []
+
+flags: []
+notes: ""

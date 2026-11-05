@@ -14,6 +14,13 @@ dose:
   creatine_per_serving_g: 0.75  # Vitacost: "750 mg" Creatine Hydrochloride. CHECK: weight of creatine HCl, not creatine base
   servings_per_container: 75    # Vitacost: "about 75"
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/24_ec938908-e316-4db4-87fe-8f94284df6d2.jpg?v=1781921377
+    source_url: https://www.vitacost.com/products/kaged-creatine-hcl-unflavored-1-98-oz-56-25-g-126238
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Kaged
     price_usd: 24.99            # .js: "75 Servings / Unflavored" 2499 cents

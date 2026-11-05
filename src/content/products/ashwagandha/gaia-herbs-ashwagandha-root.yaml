@@ -16,6 +16,13 @@ dose:
   # withanolides_percent left out: the label gives "Withanolides: 2.5 mg", not a percent.
   servings_per_container: 60        # Vitacost 60-count page: "Serving Per Container: 60"
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/70_e4723bdf-3752-4044-8919-4676a9194bf9.jpg?v=1781984020
+    source_url: https://www.vitacost.com/products/gaia-herbs-ashwagandha-root-60-liquid-phyto-caps-23832
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Gaia Herbs
     price_usd: 25.19                # .js: "60 ct" variant, 2519

@@ -1,0 +1,44 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the label/title name only.
+category: curcumin
+entered_by: claude              # label info from vitacost.com
+brand: NOW Foods
+name: Turmeric Curcumin, 120 Veg Capsules   # vitacost.com title
+form: capsule
+formulation: extract_95         # vitacost.com Supplement Facts: Turmeric Root Extract standardized to min. 95% curcuminoids
+# MISSING: branded_ingredient. None named on the vitacost.com label.
+# MISSING: absorption_claim. None on the vitacost.com page (only customer reviews, which are not recorded).
+other_ingredients: [hypromellose (cellulose capsule), calcium laurate, silicon dioxide]   # vitacost.com ingredients line
+ingredients_confirmed: true     # full ingredients line read on vitacost.com
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 veg capsule
+  curcuminoids_per_serving_mg: 630   # vitacost.com Supplement Facts: "Standardized to min. 95% Curcuminoids (630 mg)" (stated on label; minimum)
+  turmeric_per_serving_mg: 665  # vitacost.com: Turmeric Root Extract 665 mg (reference only)
+  servings_per_container: 120   # vitacost.com: 120
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/69_29488605-75d0-4307-8ea3-b73c618a8d0f.jpg?v=1781997301
+    source_url: https://www.vitacost.com/products/now-foods-turmeric-curcumin-120-veg-capsules-665-mg-per-capsule-13441
+    alt: NOW Foods Turmeric Curcumin 120 veg capsule bottle
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 33.35            # vitacost.com: $33.35, 120 count, Add to cart shown, no out-of-stock notice
+    servings: 120
+    url: https://www.vitacost.com/products/now-foods-turmeric-curcumin-120-veg-capsules-665-mg-per-capsule-13441
+    date_checked: 2026-11-05
+    entered_by: claude
+
+# MISSING: certification. Certifier sites not checked. vitacost.com says "GMP Quality Assured": brand claim only, not recorded.
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: []
+notes: ""
