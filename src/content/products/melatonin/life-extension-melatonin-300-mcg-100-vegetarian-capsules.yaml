@@ -31,7 +31,7 @@ prices:
     date_checked: 2026-11-05
     entered_by: claude
 
-# MISSING: certification. Not looked up on a certifier's own site.
+# MISSING: certification. nsfsport.com brand search on 2026-11-05 for "Life Extension" returned no results; USP page (quality-supplements.org) would not load.
 certifications: []
 
 # MISSING: COA. lifeextension.com lab-results page not checked.

@@ -28,7 +28,7 @@ prices:
     date_checked: 2026-11-05
     entered_by: claude
 
-# MISSING: certification. Not found on the certifier's own site.
+# MISSING: certification. nsfsport.com brand search on 2026-11-05 for "Nature Made" listed only a creatine product, no melatonin; USP page (quality-supplements.org) would not load, so a USP Verified listing could not be checked.
 certifications: []
 
 # MISSING: COA. No brand lab-results page checked.

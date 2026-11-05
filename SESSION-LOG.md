@@ -97,6 +97,7 @@ One line per finished unit: date, unit, anything River needs to know.
 2026-11-05 Calcium batch 2 and publish: added New Chapter Plant Calcium (algae, K1 + K2 = 80 mcg vitamin K), Dr. Mercola Calcium + D3 + K2 (180 mg per capsule, $3.26 per 500 mg, above the plausible range but correct), Vitacost Calcium Citrate chewable, Citracal Petites, Vitafusion Calcium Gummies; 10 at /calcium/, auditor PASS on all. Decision: vitamin_k_mcg is total vitamin K (K1 + K2) as labeled.
 2026-11-05 Melatonin config: categories/melatonin.yaml (draft, cost per serving per drafts/melatonin-method.md option A; melatonin mg, release type, format and other actives shown, never scored) + template.
 - 2026-11-05 Melatonin batch 1: added Nature Made 3 mg, Natrol 5 mg fast dissolve, Vitafusion gummies, Life Extension 300 mcg, Nature's Bounty Dual Spectrum (audited, Vitafusion ingredients fixed). Skipped Kroger listings (no price or not available) and naturesbounty.com ($0.00 price). Evidence draft from NCCIH page (off site).
+- 2026-11-05 Melatonin batch 2 and publish: added NOW 3 mg, Thorne Melaton-3 (NSF Certified for Sport, nsfsport.com listing 1207474), Pure Encapsulations 0.5 mg, Natrol 10 mg time release, OLLY gummies (price left out: two 120-count prices on the page). Decision: no price recorded when a page shows two for the same size. Category published (10 products).
 
 ## Questions for River
 - Decisions Claude makes on its own are logged above, starting with "Decision:".

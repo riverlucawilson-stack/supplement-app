@@ -7,15 +7,17 @@ Since 2026-10-21 River lets Claude make project decisions without asking; log ea
 Still River's: approving evidence/health text (delegated to Claude on 2026-10-24 for the current to-dos), and the first deploy (River approved 2026-10-24; needs River's Cloudflare login).
 
 ## IN PROGRESS
-- Melatonin batch 2: OLLY gummy, NOW Melatonin 3 mg, Thorne Melaton-3, Pure Encapsulations Melatonin 0.5 mg, Natrol 10 mg time release; plus certifier lookups for batch 1.
+- Nothing. Stage E is done; shift stopped 2026-11-05 (see Next up).
 
 ## WAITING ON RIVER
 1. Installable app (drafts/pwa-plan.md): A (installable only), B (installable + offline pages), or neither? I recommend A.
 2. Probiotics method (drafts/probiotics-method.md): built and published 2026-11-05 with cost per daily serving, strains, CFU, guarantee type and storage shown beside it. Say if you want B or C instead.
-3. Melatonin method (drafts/melatonin-method.md): OK to compare by cost per daily serving with the labeled mg shown beside it (not price per mg, which ranks megadoses best)? Building it this way after calcium unless you say otherwise.
+3. Melatonin method (drafts/melatonin-method.md): published 2026-11-05 comparing by cost per daily serving with the labeled mg shown beside it (not price per mg, which ranks megadoses best). Say if you want B or C instead.
 
 ## Next up
 - [x] Refresh 2026-11-05: Double Wood KSM-66 (no newer dated COA found; prices re-checked).
+- Supplement Facts panel (other thread's component) doesn't list other actives yet, e.g. OLLY melatonin's L-theanine and herbs show only in the summary line.
+- Retry USP Verified lookups (quality-supplements.org wouldn't load 2026-11-05), starting with Nature Made.
 - D6 link-check script, then D7 launch checklist and D8 PWA proposal.
 - Extra product batches continue with fish oil, then protein powder, multivitamin, C, B12, K2.
 - Stage E 1: CoQ10 category config, then its batches.
@@ -200,16 +202,19 @@ Same definition of done as Stage C.
   - [x] batch 2: New Chapter Plant Calcium (algae), Dr. Mercola Calcium + D3 + K2, Vitacost Calcium Citrate chewable, Citracal Petites, Vitafusion Calcium Gummies (10 total)
   - [x] comparison page check  - [x] product pages check  - [x] claims-review pass (2026-11-05)
   - [x] evidence draft (drafts/evidence/calcium.md from the NIH ODS consumer sheet, NEEDS RIVER REVIEW; copy in project files review/); category published
-- [ ] 8. Melatonin: propose a method first and wait (price per mg would rank megadoses best). Record labeled dose, format (tablet, gummy, extended release), and any independent testing of actual content.
+- [x] 8. Melatonin: propose a method first and wait (price per mg would rank megadoses best). Record labeled dose, format (tablet, gummy, extended release), and any independent testing of actual content.
   - [x] method proposal drafts/melatonin-method.md (WAITING ON RIVER 3); category config: categories/melatonin.yaml (draft, option A) + template (2026-11-05). Sort/filter by dose not built yet (CategoryPage).
   - [x] batch 1 (2026-11-05): Nature Made 3 mg (Target), Natrol 5 mg fast dissolve, Vitafusion gummies, Life Extension 300 mcg, Nature's Bounty Dual Spectrum. Audited; 1 FIX applied.
+  - [x] batch 2: NOW 3 mg, Thorne Melaton-3 (NSF Certified for Sport listing), Pure Encapsulations 0.5 mg (Target), Natrol 10 mg time release, OLLY gummies (no price: Vitacost showed two 120-count prices) (10 total). USP site wouldn't load, so USP Verified is unchecked for all 10.
+  - [x] comparison page check  - [x] product pages check  - [x] claims-review pass (2026-11-05)
+  - [x] evidence draft (drafts/evidence/melatonin.md from the NCCIH page, May 2024, NEEDS RIVER REVIEW; copy in project files review/); category published
 
 ## Ingredient grades and product photos (2026-11-05, River's request)
 - [x] Ingredient grade A–D from sourced rules in ingredients/flags.yaml (7 rules, all entered_by: claude), shown on product pages, tables, and Methodology. Never affects ranking.
 - [x] Supplement Facts-style panel rebuilt from each product file, ingredients grouped by role, flagged ones colored with the source.
 - [x] Product photos for 83 of 167 products (Vitacost og:image, credited, entered_by: claude).
 - [ ] River: check each rule in ingredients/flags.yaml against its source, then delete its entered_by line.
-- [ ] River: look over the photos on the zinc, collagen, probiotics and curcumin pages (added 2026-11-05 from each Vitacost page's og:image). Some Vitacost pages carry another product's meta tags, so an image may show the wrong product; Claude can't view images from this container.
+- [ ] River: look over the photos on the zinc, collagen, probiotics, curcumin and melatonin pages (added 2026-11-05 from each Vitacost page's og:image). Some Vitacost pages carry another product's meta tags, so an image may show the wrong product; Claude can't view images from this container.
 - [ ] Photos for the 84 products without one (non-Vitacost stores, CoQ10, and fetch failures: double-wood-ksm-66, designs-for-sport, sports-research triple strength and K2, nature-made vitamin C 1000).
 - [ ] Label (Supplement Facts) photos: only add when the store page identifies the image as the label.
 - [ ] Set ingredients_confirmed: true where the full ingredient list was read, so empty lists get graded (about 39 products show "Not graded").
