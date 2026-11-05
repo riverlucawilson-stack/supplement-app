@@ -157,6 +157,7 @@ Same inclusion rule and TEAM.md Mission 1 (up to 5 per batch, researcher + audit
 ## Stage E: next categories, most purchased first
 Same definition of done as Stage C.
 - [ ] 1. CoQ10: $ per 100 mg. Record ubiquinone vs ubiquinol and compare each at its labeled amount, without converting between them. Leave MitoQ out.
+  - [x] category config: categories/coq10.yaml (status: draft) + templates/coq10-product.yaml (2026-11-05)
 - [ ] 2. B-complex: no single unit. Reuse the approved multivitamin method if it fits; otherwise propose one and wait. Record folate form (folic acid vs methylfolate) and B12 form.
 - [ ] 3. Probiotics: propose a method first and wait. Record each strain's full designation, CFU, guaranteed through expiration or at manufacture, storage needs.
 - [ ] 4. Zinc: $ per 10 mg elemental zinc from the Supplement Facts panel. Record form, whether copper is included, and format (capsule, tablet, lozenge).
