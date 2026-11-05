@@ -1,0 +1,41 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+category: zinc
+entered_by: claude              # label info from vitacost.com
+brand: Nature's Bounty
+name: Zinc 50 mg, 200 Tablets
+form: tablet
+zinc_form: gluconate            # vitacost.com Supplement Facts: "Zinc (as Zinc Gluconate) 50 mg"
+other_ingredients: [vegetable cellulose, dicalcium phosphate, silica, vegetable magnesium stearate, vegetable stearic acid]   # vitacost.com: last four are "Contains <2% of"
+ingredients_confirmed: true     # full "Other ingredients" line read on vitacost.com
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 tablet
+  zinc_per_serving_mg: 50       # vitacost.com Supplement Facts "Zinc (as Zinc Gluconate)" 50 mg (elemental line)
+  servings_per_container: 200   # vitacost.com Key info: total servings 200 count (not in the facts table)
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/24_55b36c49-08c7-4b3e-9124-68d15f14ed0c.jpg?v=1782003653
+    source_url: https://www.vitacost.com/natures-bounty-zinc-50-mg-200-caplets
+    alt: Nature's Bounty Zinc 50 mg bottle
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 10.14            # vitacost.com: sale price $10.14 (regular price also $10.14), 200 tablets
+    servings: 200
+    url: https://www.vitacost.com/natures-bounty-zinc-50-mg-200-caplets
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. Page shows 91 reviews as a star breakdown but states no average.
+
+# MISSING: certifications. vitacost.com lists only retailer/brand claims ("Laboratory Tested", Non-GMO); nothing looked up at a certifier's site.
+certifications: []
+
+# MISSING: COA. vitacost.com page has no COA link; brand site not checked.
+coas: []
+
+flags: []
+notes: ""

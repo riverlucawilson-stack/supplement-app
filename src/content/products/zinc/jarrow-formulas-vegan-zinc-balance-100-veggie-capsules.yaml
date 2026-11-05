@@ -6,7 +6,7 @@ entered_by: claude              # label info from vitacost.com
 brand: Jarrow Formulas
 name: Vegan Zinc Balance, 100 Veggie Capsules
 form: capsule
-zinc_form: other                # vitacost.com Supplement Facts: "Zinc (as Zinc L-Methionine Sulfate) 15 mg". Not mapped to monomethionine: the page doesn't confirm they are the same form.
+zinc_form: methionine          # vitacost.com Supplement Facts: "Zinc (as Zinc L-Methionine Sulfate) 15 mg"; exact wording in forms_listed
 forms_listed: zinc L-methionine sulfate   # vitacost.com Supplement Facts wording
 other_ingredients: [microcrystalline cellulose, capsule (hydroxypropylmethylcellulose, water), magnesium stearate (vegetable source)]   # vitacost.com
 ingredients_confirmed: true     # full "Other ingredients" line read on vitacost.com

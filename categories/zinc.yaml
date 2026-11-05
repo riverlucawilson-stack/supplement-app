@@ -49,7 +49,9 @@ type:
     sulfate: Sulfate
     oxide: Oxide
     carnosine: Zinc carnosine
-    monomethionine: Monomethionine (e.g. OptiZinc)
+    # Any label wording with zinc + methionine (L-methionine sulfate, methionine sulfate complex, OptiZinc,
+    # monomethionine). Exact wording goes in forms_listed.
+    methionine: Methionine (e.g. OptiZinc)
     orotate: Orotate
     blend: Blend of forms
     other: Other

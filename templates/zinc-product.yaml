@@ -17,7 +17,7 @@ category: zinc
 brand: ""
 name: ""
 form: capsule                  # capsule | tablet | softgel | gummy | powder | liquid (lozenges: tablet, plus format below)
-zinc_form: picolinate          # picolinate | gluconate | citrate | bisglycinate | acetate | sulfate | oxide | carnosine | monomethionine | orotate | blend | other
+zinc_form: picolinate          # picolinate | gluconate | citrate | bisglycinate | acetate | sulfate | oxide | carnosine | methionine | orotate | blend | other
 # format: lozenge              # only for lozenges or chewables, as the label says. Otherwise delete this line.
 # forms_listed: gluconate, citrate          # only for a blend: every form the label lists. Otherwise delete this line.
 # branded_ingredient: OptiZinc              # only if the label names one. Otherwise delete this line.
