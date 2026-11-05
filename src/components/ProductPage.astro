@@ -11,6 +11,8 @@ import { isCertificationCurrent } from '../lib/staleness';
 import { usd } from '../lib/format';
 import { coaProblems, tierFor } from '../lib/tier';
 import { hasUnverifiedData, isSampleProduct } from '../lib/review';
+import { ingredientGrade } from '../lib/ingredients';
+import IngredientsSection from './IngredientsSection.astro';
 
 interface Props {
   product: Product;
@@ -26,6 +28,7 @@ const servingsPerReferenceDose = category.referenceDose.amount / perServing;
 const doseFacts = category.doseFacts(p);
 const unverified = hasUnverifiedData(p);
 const sample = isSampleProduct(p);
+const grade = ingredientGrade(p);
 
 const shortDate = (d: Date) =>
   d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
@@ -76,6 +79,11 @@ const description = best
         <span class={`tier tier-${tier.tier}`}>{tier.tier}</span>
         <a class="sub" href="#tier">Why this tier</a>
       </div>
+      <div class="stat">
+        <span class="label">Ingredient grade</span>
+        {grade.grade ? <span class={`grade grade-${grade.grade}`}>{grade.grade}</span> : <span class="none">Not graded yet</span>}
+        <a class="sub" href="#whats-in-it">What’s in it</a>
+      </div>
     </div>
   </section>
 
@@ -114,6 +122,8 @@ const description = best
       )}
     </div>
   </section>
+
+  <IngredientsSection product={p} category={category} />
 
   <section class="wrap block" aria-labelledby="prices">
     <h2 id="prices">Prices</h2>
@@ -249,21 +259,6 @@ const description = best
       </p>
     </div>
   </section>
-
-  {(p.other_ingredients.length > 0 || p.flags.length > 0 || p.notes) && (
-    <section class="wrap block" aria-labelledby="label">
-      <h2 id="label">Label details</h2>
-      <div class="card">
-        {p.other_ingredients.length > 0 && (
-          <p><span class="label">Other ingredients</span> {p.other_ingredients.join(', ')}</p>
-        )}
-        {p.flags.length > 0 && (
-          <p class="tags">{p.flags.map((f) => <span class="pill pill-muted">{f}</span>)}</p>
-        )}
-        {p.notes && <p>{p.notes}</p>}
-      </div>
-    </section>
-  )}
 
   <p class="wrap back"><a href={category.path}>← All {category.name.charAt(0).toLowerCase() + category.name.slice(1)} products</a></p>
 </BaseLayout>

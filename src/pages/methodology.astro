@@ -18,6 +18,9 @@ const counts: Record<string, string> = {
 const rows = categoryList
   .filter((c) => c.published)
   .map((c) => ({ name: c.name, path: c.path, amount: c.referenceDose.label.replace(/^per /, ''), daily: c.daily?.label, note: counts[c.id] }));
+import { ingredientRules, levelLabels } from '../ingredients/rules';
+import { levelOrder } from '../lib/ingredients';
+const rulesByLevel = levelOrder.map((level) => ({ level, rules: ingredientRules.filter((r) => r.level === level) })).filter((g) => g.rules.length);
 ---
 
 <BaseLayout
@@ -116,6 +119,44 @@ const rows = categoryList
       the finished product, and its test date is less than {settings.coaStaleAfterMonths} months old. Each product page
       shows why it got its tier.
     </p>
+
+    {/* Ingredient grades section: added by Claude on 2026-11-05 at River's request; not part of the wording River approved. */}
+    <h2 id="ingredient-grade">Ingredient grades</h2>
+    <p>
+      Separate from the price and the tier, each product gets a grade for its added (non-active) ingredients: sweeteners,
+      colors, sugars, fillers and the like. It is worked out in code from the ingredient list we recorded and the rules
+      below, and it never changes the order of a comparison table.
+    </p>
+    <ul>
+      <li><strong>A:</strong> none of the product’s added ingredients are on the list below.</li>
+      <li><strong>B:</strong> contains an ingredient where individual studies report possible harm, but the evidence isn’t settled.</li>
+      <li><strong>C:</strong> contains an ingredient that official guidance advises limiting or not using.</li>
+      <li><strong>D:</strong> contains an ingredient a regulator has acted on (banned, being phased out, or no longer considered safe).</li>
+      <li><strong>Not graded:</strong> we haven’t confirmed the product’s full ingredient list yet.</li>
+    </ul>
+    <p>
+      The worst flag decides the grade. A flag describes what its source says about the ingredient in general, not the
+      amount in a particular product, so it isn’t a safety verdict on that product. An ingredient joins this list only
+      with a source we’ve read: a regulator’s page or a published study.
+    </p>
+    {rulesByLevel.map((g) => (
+      <>
+        <h3>{levelLabels[g.level]}</h3>
+        <ul>
+          {g.rules.map((r) => (
+            <li>
+              <strong>{r.name}.</strong> {r.finding}{' '}
+              {r.sources.map((src, i) => (
+                <>
+                  {i > 0 && ' '}
+                  <a href={src.url} rel="noopener" target="_blank">Source: {src.publisher}{src.published && `, ${src.published.getUTCFullYear()}`}</a>
+                </>
+              ))}
+            </li>
+          ))}
+        </ul>
+      </>
+    ))}
 
     <h2>What “date checked” means</h2>
     <ul>

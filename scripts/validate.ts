@@ -21,6 +21,8 @@ import { tierFor } from '../src/lib/tier';
 import { usd } from '../src/lib/format';
 import { checkEvidence } from '../src/evidence/check';
 import { evidencePages } from '../src/evidence';
+import { ingredientRules, FLAGS_FILE } from '../src/ingredients/rules';
+import { ingredientGrade } from '../src/lib/ingredients';
 
 const PRODUCTS_DIR = process.argv[2] ?? join('src', 'content', 'products');
 const today = new Date();
@@ -184,11 +186,19 @@ function checkFile(path: string): FileReport {
   product.prices.forEach((p, i) => p.entered_by && unverified(`prices #${i + 1} (${p.retailer})`));
   product.certifications.forEach((c, i) => c.entered_by && unverified(`certifications #${i + 1} (${c.program})`));
   product.coas.forEach((c, i) => c.entered_by && unverified(`coas #${i + 1} (lot ${c.lot})`));
+  for (const kind of ['product', 'label'] as const) {
+    const photo = product.photos?.[kind];
+    if (photo?.entered_by) unverified(`photos → ${kind}`);
+  }
+  if (product.other_ingredients.length === 0 && !product.ingredients_confirmed) {
+    warnings.push('NOT GRADED: other_ingredients is empty. Once the label confirms there are none, add "ingredients_confirmed: true".');
+  }
 
   // One-line summary of what the site will show.
   const best = bestPrice(product, today);
   const price = best ? `${usd(best.costPerReferenceDose)} ${category.referenceDose.label}` : 'no price';
-  report.summary = `Tier ${tierFor(product, today).tier}, best ${price}`;
+  const grade = ingredientGrade(product).grade ?? 'not graded';
+  report.summary = `Tier ${tierFor(product, today).tier}, ingredients ${grade}, best ${price}`;
   return report;
 }
 
@@ -199,6 +209,14 @@ if (process.argv[2] === undefined) {
   for (const page of evidencePages) {
     reports.push({ file: join('src', 'evidence', `${page.category}.ts`), ...checkEvidence(page) });
   }
+  // The ingredient flag rules (a broken file stops the run before this point).
+  reports.push({
+    file: FLAGS_FILE,
+    errors: [],
+    warnings: ingredientRules
+      .filter((r) => r.entered_by)
+      .map((r) => `UNVERIFIED: rule "${r.id}" was written by Claude. Check its finding against its sources, then delete its entered_by line.`),
+  });
 }
 let errorCount = 0;
 let warningCount = 0;

@@ -250,6 +250,47 @@ h3 {
   box-shadow: inset 0 0 0 1.5px var(--tier-c);
 }
 
+/* Ingredient grade: a circle, so it can't be mistaken for the square tier badge. */
+.grade {
+  display: inline-grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.grade-A {
+  background: var(--tier-a-soft);
+  color: var(--tier-a);
+  box-shadow: inset 0 0 0 1.5px var(--tier-a);
+}
+
+.grade-B {
+  background: var(--tier-c-soft);
+  color: var(--ink);
+  box-shadow: inset 0 0 0 1.5px var(--tier-c);
+}
+
+.grade-C {
+  background: var(--tier-b-soft);
+  color: var(--tier-b);
+  box-shadow: inset 0 0 0 1.5px var(--tier-b);
+}
+
+.grade-D {
+  background: var(--warn-soft);
+  color: var(--warn);
+  box-shadow: inset 0 0 0 1.5px var(--warn);
+}
+
+.grade-none {
+  color: var(--muted);
+  box-shadow: inset 0 0 0 1.5px var(--rule);
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     transition: none !important;

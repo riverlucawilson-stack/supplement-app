@@ -55,6 +55,18 @@ export function coaSchema<T extends readonly [string, ...string[]]>(testNames: T
   });
 }
 
+// A photo shown on the product page, read from a public page (the brand's site or
+// a store). `url` is the image file itself; `source_url` is the page it appeared on,
+// which the site credits and links under the photo.
+export const photoSchema = z.strictObject({
+  url: z.url(),
+  source_url: z.url(),
+  // What the photo shows, for screen readers, e.g. "Supplement Facts panel".
+  alt: z.string().min(1).optional(),
+  date_checked: date,
+  entered_by: enteredBy,
+});
+
 // Fields every product has, whatever its category.
 export const baseProductFields = {
   // Covers the basics and dose info (brand, name, ingredients, dose...).
@@ -63,6 +75,17 @@ export const baseProductFields = {
   name: z.string().min(1),
   form: z.enum(['powder', 'capsule', 'softgel', 'tablet', 'gummy', 'liquid']),
   other_ingredients: z.array(z.string()).default([]),
+  // true once the full ingredient list was read from the label, so an empty
+  // other_ingredients really means "nothing else". The ingredient grade waits for it
+  // when other_ingredients is empty.
+  ingredients_confirmed: z.boolean().optional(),
+  photos: z
+    .strictObject({
+      product: photoSchema.optional(),
+      // The Supplement Facts panel.
+      label: photoSchema.optional(),
+    })
+    .optional(),
   prices: z.array(priceSchema).default([]),
   flags: z.array(z.string()).default([]),
   notes: z.string().default(''),
