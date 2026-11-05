@@ -1,0 +1,47 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the label name only: no health or beauty claims from retailer titles.
+category: collagen
+entered_by: claude              # label info from gnc.com
+brand: Vital Proteins
+name: Marine Collagen, Unflavored, 7.8 oz
+form: powder
+collagen_source: marine         # gnc.com Supplement Facts: "Collagen peptides (from whitefish)"; allergen line says cod
+flavor: Unflavored              # gnc.com
+# MISSING: collagen_types. gnc.com page states none.
+other_ingredients: []           # gnc.com Ingredients: "Collagen peptides (from whitefish)." No other ingredients listed.
+ingredients_confirmed: true     # full ingredient line read on gnc.com
+
+dose:
+  # MISSING: serving_size_g. gnc.com gives "2 Scoop(s)" with no gram weight; vitalproteins.com panel is an image that could not be read.
+  units_per_serving: 2          # gnc.com: 2 scoops
+  collagen_per_serving_g: 12    # gnc.com Supplement Facts "Collagen peptides (from whitefish)" 12 g
+  servings_per_container: 19    # gnc.com H1: 19 servings (vitaminshoppe.com title says 18, not used)
+  # CHECK: 19 x 12 g = 228 g of collagen, more than a 7.8 oz (about 221 g) tub holds. GNC's page says 19 throughout; River to check against the tub.
+
+photos:
+  product:
+    url: https://www.gnc.com/dw/image/v2/BBLB_PRD/on/demandware.static/-/Sites-master-catalog-gnc/default/dw289bc957/hi-res/542535_web_Vital%20Proteins%20Marine%20Collagen_Front_Tub.jpg?sw=1500&sh=1500&sm=fit
+    source_url: https://www.gnc.com/powders/542535.html
+    alt: Vital Proteins Marine Collagen Unflavored 7.8 oz tub
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: GNC
+    price_usd: 38.99            # gnc.com: $38.99 ($2.05 / serving), 7.8 oz
+    servings: 19
+    url: https://www.gnc.com/powders/542535.html
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. Reviews section on gnc.com showed no rating data.
+  # MISSING: brand-store price. vitalproteins.com lists 7.8 oz at \$39.00 (SKU MC07U), but its servings count is not readable (Supplement Facts is an image), so it is not recorded.
+
+# MISSING: certification. None named on the pages read; no certifier site checked.
+certifications: []
+
+# MISSING: COA. vitalproteins.com product page has no lab results or COA link.
+coas: []
+
+flags: [contains fish (cod), made in a facility that processes milk, fish and tree nuts]
+notes: ""

@@ -1,0 +1,46 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the label name only: no health or beauty claims from retailer titles.
+category: collagen
+entered_by: claude              # label info from vitacost.com
+brand: Vital Proteins
+name: Collagen Peptides, Unflavored, 20 oz
+form: powder
+collagen_source: bovine         # vitacost.com Supplement Facts: "Collagen peptides (from bovine)"
+flavor: Unflavored              # vitacost.com
+# MISSING: collagen_types. vitacost.com page states no collagen type.
+other_ingredients: []
+# MISSING: other ingredients. vitacost.com Ingredients section holds only the facility statement (processes milk, fish and tree nuts).
+ingredients_confirmed: false    # full ingredient line not on vitacost.com
+
+dose:
+  serving_size_g: 20            # vitacost.com Supplement Facts: 4 Tbsp (20 g)
+  collagen_per_serving_g: 20    # vitacost.com Supplement Facts "Collagen peptides (from bovine)" 20 g. Page also shows Protein 18 g; collagen line used.
+  servings_per_container: 28    # vitacost.com Supplement Facts: "About 28" (Key info says "Total servings 567 g", ignored)
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/105_7e3c9f1f-95a3-4c53-862c-35110acabc35.jpg?v=1781991461
+    source_url: https://www.vitacost.com/products/vital-proteins-collagen-peptides-unflavored-20-oz-567-g-71356
+    alt: Vital Proteins Collagen Peptides Unflavored 20 oz container
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 47.00            # vitacost.com: sale price $47.00 (regular price also $47.00), 20 oz (567 g)
+    servings: 28
+    url: https://www.vitacost.com/products/vital-proteins-collagen-peptides-unflavored-20-oz-567-g-71356
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. Page shows 3,617 ratings as a star breakdown but states no average.
+
+# MISSING/CHECK: certification. vitacost.com page says "NSF Certified Sport", but that is a retailer/brand claim.
+# A WebSearch for the NSF listing returned no nsf.org or nsfsport.com page, so nothing was read there. Nothing recorded.
+certifications: []
+
+# MISSING: COA. vitacost.com page has no COA link; brand site not checked.
+coas: []
+
+flags: [made in a facility that processes milk, fish and tree nuts]
+notes: ""
