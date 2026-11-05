@@ -15,6 +15,13 @@ dose:
   protein_per_serving_g: 30     # Vitacost: protein 30 g
   servings_per_container: 60    # Vitacost panel: 60
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/24_83170a65-4364-4c6d-b834-452f1589c1ab.jpg?v=1792659435
+    source_url: https://www.vitacost.com/products/nutricost-whey-protein-isolate-milk-chocolate-5-lb-2-268-g-139414
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 124.95           # regular and sale both $124.95; page does not state stock status (Add to cart shown)

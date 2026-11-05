@@ -155,7 +155,7 @@ const costLabelLower = costLabel.charAt(0).toLowerCase() + costLabel.slice(1);
                 <th scope="row" class="product">
                   <div class="product-inner">
                   {r.product.photos?.product && (
-                    <img class="thumb" src={r.product.photos.product.url} alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="48" height="48" />
+                    <img class="thumb" src={r.product.photos.product.url} alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="48" height="48" onerror="this.remove()" />
                   )}
                   <span class="brand">{r.product.brand}</span>
                   {r.href ? (

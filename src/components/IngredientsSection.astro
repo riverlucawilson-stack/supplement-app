@@ -30,7 +30,7 @@ const ingredientText = groups.flatMap((g) => g.items.map((i) => i.name)).join(',
       {photos.map((ph, i) => (
         <figure class="photo">
           <a href={ph.url} rel="noopener" target="_blank">
-            <img src={ph.url} alt={ph.alt ?? (i === 0 && p.photos?.product ? `${p.brand} ${p.name}` : 'Supplement Facts panel')} loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+            <img src={ph.url} alt={ph.alt ?? (i === 0 && p.photos?.product ? `${p.brand} ${p.name}` : 'Supplement Facts panel')} loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.closest('figure').remove()" />
           </a>
           <figcaption>
             {ph.alt ?? (ph === p.photos?.label ? 'Supplement Facts' : 'Product')} · Image from{' '}

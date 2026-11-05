@@ -15,6 +15,13 @@ dose:
   protein_per_serving_g: 30     # Vitacost: protein 30 g per serving (15 g per scoop)
   servings_per_container: 19    # Vitacost: servings per container 19; the store's "Total servings" field showed "912 g" (container weight), ignored
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/60_2ebfcb1a-9416-4f94-8442-4572cc80cde2.jpg?v=1790913478
+    source_url: https://www.vitacost.com/products/garden-of-life-sport-organic-plant-based-protein-chocolate-2-lb-0-17-oz-912-g-72538
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 41.99            # regular and sale both $41.99; page showed the item as "Temporarily unavailable"
