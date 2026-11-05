@@ -1,0 +1,47 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the label name only. Left out of the name/flags: "Supports Antioxidant Health" (vitacost.com wording).
+category: curcumin
+entered_by: claude              # label info from vitacost.com
+brand: Nature's Bounty
+name: Turmeric, 450 mg, 60 Capsules   # vitacost.com title
+form: capsule
+formulation: root_and_extract   # vitacost.com Supplement Facts: turmeric root 450 mg + turmeric extract 50 mg (std. 95% curcuminoids)
+# MISSING: branded_ingredient. None named on the vitacost.com label.
+# MISSING: absorption_claim. None found on the vitacost.com page.
+other_ingredients: [gelatin (bovine), silica, vegetable magnesium stearate, vegetable stearic acid]   # vitacost.com: "Gelatin (bovine). Contains <2% of: silica, vegetable magnesium stearate, vegetable stearic acid."
+ingredients_confirmed: true     # full other-ingredients line read on vitacost.com
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 capsule
+  # Label gives extract weight and %, not curcuminoid mg: Turmeric Extract 50 mg "standardized to contain 95% Curcuminoids" -> 50 x 0.95 = 47.5 mg.
+  # Both numbers are on the vitacost.com Supplement Facts. The 450 mg root powder is not counted (no curcuminoid content stated for it).
+  curcuminoids_per_serving_mg: 47.5
+  turmeric_per_serving_mg: 450  # vitacost.com: Turmeric (root) 450 mg (reference only; the extract is a further 50 mg)
+  servings_per_container: 60    # vitacost.com: 60
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/56_c17fe294-bfed-4b18-9da0-e17f75817e30.jpg?v=1781980019
+    source_url: https://www.vitacost.com/products/nature-s-bounty-turmeric-450-mg-60-capsules-32464
+    alt: Nature's Bounty Turmeric 450 mg 60 capsule bottle
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 8.43             # vitacost.com: $8.43 sale price (the page shows $10.22 struck through in one place and "Regular price $8.43" in another), 60 count, Add to cart shown, no out-of-stock notice
+    servings: 60
+    url: https://www.vitacost.com/products/nature-s-bounty-turmeric-450-mg-60-capsules-32464
+    date_checked: 2026-11-05
+    entered_by: claude
+
+# MISSING: certification. Certifier sites not checked. vitacost.com says "Laboratory Tested": brand claim only, not recorded.
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: [mostly turmeric root powder]   # vitacost.com Supplement Facts
+# Curcuminoids are calculated from the 50 mg extract line only (50 mg x 95%); the 450 mg root line states no curcuminoid content.
+notes: ""
