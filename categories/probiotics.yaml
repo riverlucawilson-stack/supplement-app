@@ -1,0 +1,71 @@
+# Everything specific to probiotics. The site reads this file when it builds.
+# How each part works is explained in categories/README.md.
+# Method: drafts/probiotics-method.md option A (cost per daily serving, with strains, CFU,
+# guarantee and storage shown beside it, never scored). Proposed 2026-11-05; River said the
+# same day to keep developing without waiting for authorization. River can switch to B or C.
+slug: probiotics
+name: Probiotics
+status: draft
+order: 15
+
+page:
+  title: Probiotics compared by cost per daily serving and testing
+  description: Every probiotic compared by cost per daily serving as the label defines it, shown beside its strains, CFU count, whether that count is guaranteed through expiration or only at manufacture, and storage, with third-party certifications and lab results (COAs) graded A to C.
+  heading: What probiotics really cost, and how much of their testing you can see.
+  intro: >-
+    Probiotic strains aren't interchangeable, so a bigger CFU number isn't a fair way to rank them. Prices are
+    converted to **cost per daily serving** as the label defines it. Next to each price you'll see the strains
+    as printed, the CFU count, whether that count is guaranteed **through expiration** or only **at manufacture**,
+    and how to store it. Those facts are shown, not scored. Testing transparency gets its own grade, A to C,
+    and is never blended into the price.
+
+comparison:
+  amount: 1
+  unit: serving
+  label: per daily serving
+  short: Cost per daily serving
+  # No daily amount: the serving already is one day.
+  plausible_cost: { min: 0.03, max: 5 }
+
+dose_fields:
+  # Capsules, tablets, gummies or packets in one daily serving, as the label says.
+  units_per_serving: { label: Units per daily serving, whole_number: true }
+  # Total CFU per serving in billions, as labeled (e.g. "50 Billion CFU" = 50). Leave out if the label gives none.
+  cfu_billions_per_serving: { label: CFU per serving (billions), optional: true, max: 1000 }
+  # Number of distinct strains the label lists.
+  strain_count: { label: Strains listed, whole_number: true, optional: true, max: 50 }
+
+type:
+  field: cfu_guarantee
+  label: CFU count guaranteed
+  options:
+    # Lowercase because they read mid-sentence ("CFU guaranteed through expiration").
+    through_expiration: through expiration
+    at_manufacture: at manufacture
+    not_stated: not stated
+
+extra_fields:
+  # Every strain as printed: genus, species and strain code, e.g. "Lactobacillus rhamnosus GG".
+  # Separate with semicolons. Write "(no strain code)" after any the label lists without one.
+  strains: Strains as labeled
+  # As labeled: "refrigerate" or "shelf-stable" (or the label's wording).
+  storage: Storage
+  # Delivery claims the label makes (e.g. "delayed-release capsule"), recorded, never scored.
+  delivery_claim: Delivery claim on the label
+
+describe:
+  - 'CFU guaranteed {cfu_guarantee}'
+  - '{cfu_billions_per_serving} billion CFU'
+  - '{strain_count} strains'
+  - '{storage}'
+
+certifications: [NSF Certified for Sport, Informed Sport, USP Verified, BSCG, Clean Label Project]
+
+coa_tests:
+  potency: CFU count
+  identity: Strain identity
+  microbial: Pathogen screen
+  lead: Lead
+  arsenic: Arsenic
+  cadmium: Cadmium
+  mercury: Mercury

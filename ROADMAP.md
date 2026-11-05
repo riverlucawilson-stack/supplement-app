@@ -7,7 +7,7 @@ Since 2026-10-21 River lets Claude make project decisions without asking; log ea
 Still River's: approving evidence/health text (delegated to Claude on 2026-10-24 for the current to-dos), and the first deploy (River approved 2026-10-24; needs River's Cloudflare login).
 
 ## IN PROGRESS
-- Probiotics category config (method per drafts/probiotics-method.md, option A).
+- Probiotics batch 1: Culturelle Daily Probiotic (LGG), Align (B. infantis 35624), Garden of Life Dr. Formulated, Florastor (S. boulardii CNCM I-745), a refrigerated product (e.g. Renew Life or Jarrow).
 
 ## WAITING ON RIVER
 1. Installable app (drafts/pwa-plan.md): A (installable only), B (installable + offline pages), or neither? I recommend A.
@@ -170,6 +170,7 @@ Same definition of done as Stage C.
   - [x] comparison page check  - [x] product pages check  - [x] claims-review pass (2026-11-05)
   - [x] evidence draft (drafts/evidence/b-complex.md, NEEDS RIVER REVIEW; copy in project files review/); category published
 - [ ] 3. Probiotics (proposal written 2026-11-05: drafts/probiotics-method.md; River said on 2026-11-05 to keep developing without authorization, so it goes ahead after zinc and collagen unless River objects): propose a method first and wait. Record each strain's full designation, CFU, guaranteed through expiration or at manufacture, storage needs.
+  - [x] category config: categories/probiotics.yaml (status: draft, method option A) + template (2026-11-05). Filters for "through expiration" and "shelf-stable" not built yet: CategoryPage belongs to the other thread's work.
 - [x] 4. Zinc: $ per 10 mg elemental zinc from the Supplement Facts panel. Record form, whether copper is included, and format (capsule, tablet, lozenge).
   - [x] category config: categories/zinc.yaml (status: draft) + template (2026-11-05)
   - [x] batch 1: Thorne Zinc Picolinate 30 mg, NOW Zinc Picolinate 50 mg, Nature Made Zinc 30 mg, Jarrow Vegan Zinc Balance (zinc + copper). Zand Cherry Echinacea lozenge dropped (49 mg herb blend vs 5 mg zinc, so zinc isn't the main ingredient); Cold-EEZE not used.
