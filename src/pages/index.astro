@@ -1,4 +1,5 @@
 ---
+import { midSentence } from '../lib/format';
 // Home page: one card per published category, linking to its comparison table.
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
@@ -31,7 +32,7 @@ const cards = categoryList
             <a class="card" href={c.path}>
               <span class="name">{c.name}</span>
               <span class="sub">{count} products · compared {c.referenceDose.label}</span>
-              <span class="go">Compare {/^.[a-z]/.test(c.name) ? c.name.charAt(0).toLowerCase() + c.name.slice(1) : c.name} →</span>
+              <span class="go">Compare {midSentence(c.name)} →</span>
             </a>
           </li>
         ))

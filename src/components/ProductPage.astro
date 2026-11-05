@@ -1,4 +1,5 @@
 ---
+import { midSentence } from '../lib/format';
 // One product's page: the dose math, every retailer's price with the date it
 // was checked, certification links, a breakdown of each COA, and the tier
 // with the reasons behind it. Every number is calculated in src/lib.
@@ -168,7 +169,7 @@ const description = best
     )}
     <p class="fine">
       Prices are read from each store's own page and marked stale after {settings.priceStaleAfterDays} days. The best price is
-      the lowest {category.referenceDose.short.charAt(0).toLowerCase() + category.referenceDose.short.slice(1)} among prices that aren't stale. Star ratings are the store's own
+      the lowest {midSentence(category.referenceDose.short)} among prices that aren't stale. Star ratings are the store's own
       reviews and never affect rankings.
     </p>
   </section>
@@ -260,7 +261,7 @@ const description = best
     </div>
   </section>
 
-  <p class="wrap back"><a href={category.path}>← All {category.name.charAt(0).toLowerCase() + category.name.slice(1)} products</a></p>
+  <p class="wrap back"><a href={category.path}>← All {midSentence(category.name)} products</a></p>
 </BaseLayout>
 
 <style>

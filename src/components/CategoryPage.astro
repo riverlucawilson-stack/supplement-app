@@ -1,4 +1,5 @@
 ---
+import { midSentence } from '../lib/format';
 // One category's comparison page: every product in one table, cheapest per
 // reference dose first (e.g. per 5 g of creatine). Visitors can sort and
 // filter it. On phones each row becomes a card. Every number here is
@@ -62,7 +63,7 @@ const shortDate = (d: Date) =>
 const formLabel = formLabels;
 const tierOrder = { A: 0, B: 1, C: 2 } as const;
 const costLabel = category.referenceDose.short;
-const costLabelLower = costLabel.charAt(0).toLowerCase() + costLabel.slice(1);
+const costLabelLower = midSentence(costLabel);
 ---
 
 <BaseLayout title={title} description={description}>
@@ -71,7 +72,7 @@ const costLabelLower = costLabel.charAt(0).toLowerCase() + costLabel.slice(1);
     <h1>{heading}</h1>
     <p class="lede" set:html={intro} />
     {hasEvidence && (
-      <p class="research"><a href={category.evidencePath}>What the research says about {category.name.charAt(0).toLowerCase() + category.name.slice(1)} →</a></p>
+      <p class="research"><a href={category.evidencePath}>What the research says about {midSentence(category.name)} →</a></p>
     )}
   </section>
 
@@ -724,6 +725,10 @@ const costLabelLower = costLabel.charAt(0).toLowerCase() + costLabel.slice(1);
 
   .legend h2 {
     margin: 0 0 1rem;
+  }
+
+  .legend dl + h2 {
+    margin-top: 2rem;
     font-size: 1.25rem;
   }
 
