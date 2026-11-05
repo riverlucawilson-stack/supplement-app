@@ -1,0 +1,47 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 80 softgels (one bottle).
+# Label facts (Supplement Facts, other ingredients, allergen line) come from the Vitacost twin-pack
+# page (2 bottles of 80, same 200 mg product). The Walmart single-bottle page showed no panel, so
+# River should confirm both pages are the same formula.
+category: coq10
+entered_by: claude              # label info from vitacost.com
+brand: Nature's Bounty
+name: CoQ10 200 mg, Rapid Release Softgels
+# Page title also says "Heart Support" on walmart.com; omitted (health wording).
+form: softgel
+coq10_form: other               # vitacost.com Supplement Facts: "Coenzyme Q10", no form (ubiquinone/ubiquinol) named
+# coq10_source: none on the Supplement Facts panel. Pages mention "Q-Sorb" in marketing text only; not recorded.
+other_ingredients: [rice bran oil, gelatin, vegetable glycerin, silica, soy lecithin]   # vitacost.com: "Rice bran oil, gelatin, vegetable glycerin. Contains <2% of: silica, soy lecithin."
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 softgel
+  coq10_per_serving_mg: 200     # vitacost.com: Coenzyme Q10 200 mg
+  servings_per_container: 80    # one bottle; vitacost twin pack title says "80 Rapid Release Softgels Each"
+
+prices:
+  - retailer: Walmart
+    price_usd: 28.84            # walmart.com: $28.84, 80 count
+    servings: 80
+    url: https://www.walmart.com/ip/Nature-s-Bounty-CoQ10-200-mg-Rapid-Release-Softgels-for-Heart-Health-Support-80-Ct/46108211
+    date_checked: 2026-11-05
+    entered_by: claude
+    rating:
+      stars: 4.6                # walmart.com: 4.6 out of 5 based on 127 ratings
+      count: 127
+  - retailer: Vitacost
+    price_usd: 70.57            # vitacost.com: sale price $70.57 (regular also $70.57), twin pack of 2 bottles x 80 softgels
+    servings: 160               # 2 bottles x 80 softgels, 1 softgel per serving
+    url: https://www.vitacost.com/products/nature-s-bounty-co-q-10-twin-pack-200-mg-2-bottles-80-rapid-release-softgels-each-86133
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. Page shows a star breakdown (24 ratings) but no average, so none recorded.
+
+# MISSING: certification. Pages list Non-GMO, "Laboratory Tested", "Guaranteed Quality" (brand/retailer claims). Certifier sites not checked.
+certifications: []
+
+# MISSING: COA. Neither page has a COA link; brand site not checked.
+coas: []
+
+# Label facts: allergen line on vitacost.com: "Contains soy ingredients."
+flags: [Contains soy ingredients]
+notes: ""

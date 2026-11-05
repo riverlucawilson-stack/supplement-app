@@ -1,0 +1,34 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 100 softgels.
+category: coq10
+entered_by: claude              # label info from vitacost.com
+brand: Qunol
+name: Mega CoQ10 Ubiquinol 100 mg, 100 Softgels
+form: softgel
+coq10_form: ubiquinol           # vitacost.com Supplement Facts: "Ubiquinol (Kaneka Ubiquinol) active form of Coenzyme Q10"
+coq10_source: Kaneka Ubiquinol  # named on the Supplement Facts line at vitacost.com
+other_ingredients: [medium chain triglycerides (palm oil), polysorbate 80, gelatin, glycerin, sorbitol, purified water, sunflower oil, annatto extract]   # vitacost.com Ingredients section
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 softgel
+  coq10_per_serving_mg: 100     # vitacost.com: Ubiquinol (Kaneka Ubiquinol) 100 mg
+  servings_per_container: 100
+
+prices:
+  - retailer: Vitacost
+    price_usd: 32.99            # vitacost.com: sale price $32.99 (regular price also $32.99), 100 softgels
+    servings: 100
+    url: https://www.vitacost.com/products/qunol-mega-coq10-ubiquinol-100-mg-100-softgels-126274
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. Page shows a star breakdown (153 reviews) but no average, so none recorded.
+
+# MISSING: certification. Page lists "Gluten Free" and a cGMP manufacturing statement only. Certifier sites not checked.
+certifications: []
+
+# MISSING: COA. vitacost.com page has no COA link; brand site not checked.
+coas: []
+
+# Label facts: Supplement Facts also lists Vitamin C (as ascorbyl palmitate) 6 mg. Allergen line: "Made in a facility that processes peanuts, tree nuts, soy, dairy, eggs, wheat and fish gelatin."
+flags: [Also contains vitamin C (6 mg per softgel as ascorbyl palmitate), Made in a facility that processes peanuts / tree nuts / soy / dairy / eggs / wheat / fish gelatin]
+notes: ""
