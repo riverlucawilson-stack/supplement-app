@@ -7,7 +7,7 @@ Since 2026-10-21 River lets Claude make project decisions without asking; log ea
 Still River's: approving evidence/health text (delegated to Claude on 2026-10-24 for the current to-dos), and the first deploy (River approved 2026-10-24; needs River's Cloudflare login).
 
 ## IN PROGRESS
-- Collagen category config: $ per 10 g collagen peptides; source; heavy-metal testing; leave out undenatured type II.
+- Collagen batch 1: Vital Proteins Collagen Peptides, Sports Research Collagen Peptides, Orgain Collagen Peptides, NOW Beauty/ Marine collagen, Garden of Life or Ancient Nutrition Multi Collagen.
 
 ## WAITING ON RIVER
 1. Installable app (drafts/pwa-plan.md): A (installable only), B (installable + offline pages), or neither? I recommend A.
@@ -177,6 +177,7 @@ Same definition of done as Stage C.
   - [x] comparison page check  - [x] product pages check  - [x] claims-review pass (2026-11-05)
   - [x] evidence draft (drafts/evidence/zinc.md from the NIH ODS consumer sheet, NEEDS RIVER REVIEW; copy in project files review/); category published
 - [ ] 5. Collagen: $ per 10 g collagen peptides. Record source (bovine, marine, porcine, chicken) and heavy-metal testing. Leave out undenatured type II collagen.
+  - [x] category config: categories/collagen.yaml (status: draft) + template (2026-11-05)
 - [ ] 6. Curcumin / turmeric: $ per 500 mg curcuminoids, not turmeric powder weight. Record formulation (95% extract, piperine, phytosome, etc.). No bioavailability adjustment; record the claim and its source. No stated curcuminoid content = empty unit price with a note.
 - [ ] 7. Calcium: $ per 500 mg elemental calcium. Record carbonate vs citrate and any added vitamin D or K.
 - [ ] 8. Melatonin: propose a method first and wait (price per mg would rank megadoses best). Record labeled dose, format (tablet, gummy, extended release), and any independent testing of actual content.

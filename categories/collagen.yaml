@@ -1,0 +1,75 @@
+# Everything specific to collagen. The site reads this file when it builds.
+# How each part works is explained in categories/README.md.
+slug: collagen
+name: Collagen
+status: draft
+order: 14
+
+page:
+  title: Collagen peptides compared by cost per 10 g and testing
+  description: Every collagen peptide supplement converted to cost per 10 g of collagen as labeled, with its source (bovine, marine, porcine or chicken), published heavy-metal testing, and third-party certifications graded A to C.
+  heading: What collagen really costs, and how much of its testing you can see.
+  intro: >-
+    Every price is converted to **cost per 10 g of collagen peptides**, using the collagen grams on the label,
+    not the scoop weight, so a flavored powder with added ingredients isn't counted as all collagen. Each product
+    shows its source animal. Testing transparency, including published heavy-metal results, gets its own grade,
+    A to C, and is never blended into the price. Undenatured type II collagen (taken in milligram doses) is a
+    different product and isn't included.
+
+comparison:
+  amount: 10
+  unit: g
+  counts_toward: [collagen_per_serving_g]
+  label: per 10 g collagen
+  short: Cost per 10 g
+  # No daily amount: same rule as the other new categories.
+  plausible_cost: { min: 0.05, max: 5 }
+
+dose_fields:
+  # Capsules, tablets or scoops in one serving, as the label says. Optional for powders measured by grams only.
+  units_per_serving: { label: Units per serving, whole_number: true, optional: true }
+  # Scoop or serving weight in grams, as the label says. Collagen can't be more than this; validate checks it.
+  # Optional because capsule products often don't print a serving weight.
+  serving_size_g: { label: Serving size, unit: g, optional: true }
+  # The collagen peptides line (or "hydrolyzed collagen") on the Supplement or Nutrition Facts panel,
+  # in grams. If only protein grams are listed and no collagen line, leave the product out.
+  collagen_per_serving_g:
+    label: Collagen per serving
+    unit: g
+    max: 40
+    max_message: 'dose: {value} g of collagen per serving is very high. Check it is grams, and one serving.'
+
+type:
+  field: collagen_source
+  label: Source
+  options:
+    bovine: Bovine (cow)
+    marine: Marine (fish)
+    porcine: Porcine (pig)
+    chicken: Chicken
+    eggshell_membrane: Eggshell membrane
+    blend: Blend of sources
+    other: Other
+
+extra_fields:
+  # Collagen types the label lists, e.g. "Types I and III". Leave out if the label lists none.
+  collagen_types: Collagen types on the label
+  # Branded ingredient named on the label, e.g. "Verisol", "Peptan", "Fortigel". Leave out if none.
+  branded_ingredient: Branded ingredient
+  # Flavor of the product this file describes, e.g. "Unflavored". Prices and dose are for this flavor.
+  flavor: Flavor
+  # Every source the label lists, when it's a blend.
+  sources_listed: Sources listed on the label
+
+describe: ['{collagen_source}', '{collagen_types}', '{flavor}']
+
+certifications: [NSF Certified for Sport, Informed Sport, USP Verified, BSCG, Clean Label Project]
+
+coa_tests:
+  potency: Collagen or protein content
+  lead: Lead
+  arsenic: Arsenic
+  cadmium: Cadmium
+  mercury: Mercury
+  microbial: Microbial
+  banned_substances: Banned substances
