@@ -160,6 +160,7 @@ Same definition of done as Stage C.
   - [x] category config: categories/coq10.yaml (status: draft) + templates/coq10-product.yaml (2026-11-05)
   - [x] batch 1: Qunol Ultra, Nature Made 200 mg, Doctor's Best with BioPerine, Jarrow QH-absorb (ubiquinol), Sports Research USP Grade (2026-11-05)
   - [x] batch 2: NOW CoQ10, Qunol Mega Ubiquinol, Nature's Bounty 200 mg, Life Extension Super Ubiquinol, Thorne CoQ10 (10 total)
+  - [x] comparison page check  - [x] product pages check  - [x] claims-review pass (2026-11-05)
 - [ ] 2. B-complex: no single unit. Reuse the approved multivitamin method if it fits; otherwise propose one and wait. Record folate form (folic acid vs methylfolate) and B12 form.
 - [ ] 3. Probiotics: propose a method first and wait. Record each strain's full designation, CFU, guaranteed through expiration or at manufacture, storage needs.
 - [ ] 4. Zinc: $ per 10 mg elemental zinc from the Supplement Facts panel. Record form, whether copper is included, and format (capsule, tablet, lozenge).
