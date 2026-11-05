@@ -11,6 +11,7 @@ Still River's: approving evidence/health text (delegated to Claude on 2026-10-24
 
 ## WAITING ON RIVER
 1. Installable app (drafts/pwa-plan.md): A (installable only), B (installable + offline pages), or neither? I recommend A.
+2. Probiotics method (drafts/probiotics-method.md): OK to use cost per daily serving with strains, CFU, guarantee type and storage shown beside it? Building it this way after zinc and collagen unless you say otherwise.
 
 ## Next up
 - [x] Refresh 2026-11-05: Double Wood KSM-66 (no newer dated COA found; prices re-checked).
@@ -168,7 +169,7 @@ Same definition of done as Stage C.
   - [x] batch 2: Solgar B-Complex 100, Nature's Bounty Super B-Complex with C, Life Extension BioActive Complete, MegaFood Balanced B, Country Life Coenzyme B (10 total)
   - [x] comparison page check  - [x] product pages check  - [x] claims-review pass (2026-11-05)
   - [x] evidence draft (drafts/evidence/b-complex.md, NEEDS RIVER REVIEW; copy in project files review/); category published
-- [ ] 3. Probiotics: propose a method first and wait. Record each strain's full designation, CFU, guaranteed through expiration or at manufacture, storage needs.
+- [ ] 3. Probiotics (proposal written 2026-11-05: drafts/probiotics-method.md; River said on 2026-11-05 to keep developing without authorization, so it goes ahead after zinc and collagen unless River objects): propose a method first and wait. Record each strain's full designation, CFU, guaranteed through expiration or at manufacture, storage needs.
 - [ ] 4. Zinc: $ per 10 mg elemental zinc from the Supplement Facts panel. Record form, whether copper is included, and format (capsule, tablet, lozenge).
 - [ ] 5. Collagen: $ per 10 g collagen peptides. Record source (bovine, marine, porcine, chicken) and heavy-metal testing. Leave out undenatured type II collagen.
 - [ ] 6. Curcumin / turmeric: $ per 500 mg curcuminoids, not turmeric powder weight. Record formulation (95% extract, piperine, phytosome, etc.). No bioavailability adjustment; record the claim and its source. No stated curcuminoid content = empty unit price with a note.
