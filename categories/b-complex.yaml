@@ -40,12 +40,13 @@ type:
   field: folate_form
   label: Folate form
   options:
-    folic_acid: Folic acid
-    methylfolate: Methylfolate (5-MTHF)
-    folinic_acid: Folinic acid
-    mixed: More than one form
-    none: No folate
-    other: Other
+    # Lowercase because they read mid-sentence ("folate as folic acid").
+    folic_acid: folic acid
+    methylfolate: methylfolate (5-MTHF)
+    folinic_acid: folinic acid
+    mixed: more than one form
+    none: none
+    other: a form the label doesn't name
 
 extra_fields:
   # The B12 form named on the label, e.g. "methylcobalamin", "cyanocobalamin",
