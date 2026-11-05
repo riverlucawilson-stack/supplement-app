@@ -2,7 +2,7 @@
 # How each part works is explained in categories/README.md.
 slug: zinc
 name: Zinc
-status: draft
+status: published
 order: 13
 
 page:
@@ -51,7 +51,7 @@ type:
     carnosine: Zinc carnosine
     # Any label wording with zinc + methionine (L-methionine sulfate, methionine sulfate complex, OptiZinc,
     # monomethionine). Exact wording goes in forms_listed.
-    methionine: Methionine (e.g. OptiZinc)
+    methionine: Methionine
     orotate: Orotate
     blend: Blend of forms
     other: Other
