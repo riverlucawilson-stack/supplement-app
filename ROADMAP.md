@@ -7,7 +7,7 @@ Since 2026-10-21 River lets Claude make project decisions without asking; log ea
 Still River's: approving evidence/health text (delegated to Claude on 2026-10-24 for the current to-dos), and the first deploy (River approved 2026-10-24; needs River's Cloudflare login).
 
 ## IN PROGRESS
-- (none)
+- B-complex batch 1: Nature Made Super B-Complex, NOW B-50, Thorne Basic B Complex, Pure Encapsulations B-Complex Plus, Garden of Life or Jarrow B-Right.
 
 ## WAITING ON RIVER
 1. Installable app (drafts/pwa-plan.md): A (installable only), B (installable + offline pages), or neither? I recommend A.
@@ -163,6 +163,7 @@ Same definition of done as Stage C.
   - [x] comparison page check  - [x] product pages check  - [x] claims-review pass (2026-11-05)
   - [x] evidence draft (drafts/evidence/coq10.md, NEEDS RIVER REVIEW; copy in project files review/); category published
 - [ ] 2. B-complex: no single unit. Reuse the approved multivitamin method if it fits; otherwise propose one and wait. Record folate form (folic acid vs methylfolate) and B12 form.
+  - [x] category config: categories/b-complex.yaml (status: draft, multivitamin method reused: cost per daily serving) + template (2026-11-05)
 - [ ] 3. Probiotics: propose a method first and wait. Record each strain's full designation, CFU, guaranteed through expiration or at manufacture, storage needs.
 - [ ] 4. Zinc: $ per 10 mg elemental zinc from the Supplement Facts panel. Record form, whether copper is included, and format (capsule, tablet, lozenge).
 - [ ] 5. Collagen: $ per 10 g collagen peptides. Record source (bovine, marine, porcine, chicken) and heavy-metal testing. Leave out undenatured type II collagen.

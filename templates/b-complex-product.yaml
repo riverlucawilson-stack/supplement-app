@@ -1,0 +1,57 @@
+# BLANK B-COMPLEX PRODUCT TEMPLATE
+#
+# How to use it:
+#   1. Copy this file into src/content/products/b-complex/
+#   2. Rename it, e.g. brandname-b-complex-100-capsules.yaml (lowercase, dashes)
+#   3. Fill in every field from the sources named in the comments
+#   4. Delete any example lines you didn't use
+#   5. Run: npm run validate
+#
+# Only enter what you have seen yourself on the label, the seller's page,
+# the certifier's site, or the COA. If you can't find something, leave it out
+# (for optional fields) or leave the list empty with [].
+
+category: b-complex
+
+# --- From the product label or the brand's product page ---
+brand: ""
+name: ""
+form: tablet                   # tablet | capsule | softgel | gummy | powder | liquid
+folate_form: methylfolate      # folic_acid | methylfolate | folinic_acid | mixed | none | other (as the label says)
+# b12_form: methylcobalamin    # as the label names it. Otherwise delete this line.
+# folate_source: Quatrefolic   # only if the label names a branded folate. Otherwise delete this line.
+other_ingredients: []
+
+dose:                          # from the Supplement Facts panel, per daily serving
+  units_per_serving: 0         # capsules / tablets / gummies in one daily serving
+  b_vitamins_at_100_dv: 0      # how many of the 8 B vitamins have %DV of 100% or more
+  # folate_mcg_dfe: 0          # the folate line in mcg DFE
+  # vitamin_b12_mcg: 0
+  servings_per_container: 0    # as printed on the label
+
+# --- From each retailer's product page. One block per store and size. ---
+prices:
+  - retailer: ""
+    price_usd: 0
+    servings: 0                # daily servings in the container THIS store sells
+    url: https://
+    date_checked: 2026-01-01
+
+# --- Only from the certifier's own website ---
+certifications: []
+#  - program: USP Verified      # NSF Certified for Sport | Informed Sport | USP Verified | BSCG | Clean Label Project
+#    listing_url: https://
+#    date_verified: 2026-01-01
+
+# --- Certificate of analysis (lab report) ---
+coas: []
+#  - url: https://
+#    lab: ""
+#    iso_17025: unknown        # yes | no | unknown
+#    lot: ""
+#    test_date: 2026-01-01
+#    scope: finished_product   # finished_product | raw_material
+#    tests: [potency, identity, lead, arsenic, cadmium, mercury, microbial, disintegration]
+
+flags: []                      # e.g. [added sugars, contains soy]
+notes: ""
