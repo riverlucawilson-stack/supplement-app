@@ -23,8 +23,8 @@ prices:
     price_usd: 19.95            # .js variant "One Bottle": $19.95 (120 capsules, 60 servings)
     servings: 60
     url: https://doublewoodsupplements.com/products/ksm-66-ashwagandha-supplement
-    date_checked: 2026-10-21
-    rating:                     # page: 4.75/5 from 4 reviews
+    date_checked: 2026-11-05    # re-read 2026-11-05: still $19.95
+    rating:                     # page: 4.75/5 from 4 reviews (read 2026-10-21; not re-read)
       stars: 4.75
       count: 4
     entered_by: claude
@@ -32,7 +32,7 @@ prices:
     price_usd: 53.87            # .js variant "Triple Pack": $53.87 (3 bottles)
     servings: 180
     url: https://doublewoodsupplements.com/products/ksm-66-ashwagandha-supplement
-    date_checked: 2026-10-21
+    date_checked: 2026-11-05    # re-read 2026-11-05: still $53.87
     entered_by: claude
   - retailer: Vitacost
     price_usd: 20.18            # page: "KSM66® Ashwagandha, 120 Capsules (300 mg per Capsule)", $20.18

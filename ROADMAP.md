@@ -13,7 +13,7 @@ Still River's: approving evidence/health text (delegated to Claude on 2026-10-24
 - (none)
 
 ## Next up
-- Refresh: Double Wood KSM-66's COA (tested 2025-05-22) is stale under the new 12-month limit; look for a newer lot.
+- [x] Refresh 2026-11-05: Double Wood KSM-66 (no newer dated COA found; prices re-checked).
 - D6 link-check script, then D7 launch checklist and D8 PWA proposal.
 - Extra product batches continue with fish oil, then protein powder, multivitamin, C, B12, K2.
 - Stage E 1: CoQ10 category config, then its batches.
