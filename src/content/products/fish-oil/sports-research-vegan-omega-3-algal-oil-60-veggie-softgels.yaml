@@ -1,0 +1,35 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude needs River's check.
+# Size chosen: 60 veggie softgels.
+category: fish-oil
+entered_by: claude              # label info from the Vitacost product page (URL under prices)
+brand: Sports Research
+name: Vegan Omega-3 (Algal Oil) 60 Veggie Softgels
+form: softgel
+oil_form: triglyceride          # Vitacost Supplement Facts: "Total omega-3 fatty acids (as TG)"; page also says "TG as rTG"
+oil_source: algae (Schizochytrium sp.)   # Vitacost Supplement Facts: "Vegan Algal Oil Concentrate (Schizochytrium sp.)"
+# totox_published: not entered. Not on the Vitacost page.
+other_ingredients: [plantgel capsule (non-GMO modified tapioca starch, vegetable glycerin, purified water), mixed tocopherols]   # Vitacost page
+
+dose:
+  units_per_serving: 2          # Vitacost Supplement Facts: serving 2 veggie softgels
+  epa_per_serving_mg: 280       # Vitacost Supplement Facts "EPA" 280 mg
+  dha_per_serving_mg: 700       # Vitacost Supplement Facts "DHA" 700 mg
+  total_omega3_per_serving_mg: 1020   # Vitacost Supplement Facts total omega-3 (as TG)
+  servings_per_container: 30    # Supplement Facts panel. NOTE: Key info says "60 count", which is softgels.
+
+prices:
+  - retailer: Vitacost
+    price_usd: 27.97            # "Sale" label shown but regular and sale price are both $27.97; 60 count
+    servings: 30                # 60 softgels / 2 per serving
+    url: https://www.vitacost.com/products/sports-research-vegan-omega-3-60-veggie-softgels-99942
+    date_checked: 2026-11-05
+    entered_by: claude
+    # Vitacost: 596 ratings, no stated average (not entered). Target page (https://target.com/p/sports-research-vegan-omega-3-60-veggie-softgels/-/A-82450235) showed $29.95, 4.5 stars / 10 reviews but no Supplement Facts panel, so not entered as a price here.
+
+# MISSING: certifications. Vitacost lists "Certified Vegan", "Igen Non-GMO", "IAOS", "Third Party Tested" as brand claims; not checked on certifier sites and none is an accepted program for this site.
+certifications: []
+# MISSING: COA. None linked on the Vitacost or Target pages; brand site not read.
+coas: []
+
+flags: ["algae-derived (no fish)"]
+notes: ""

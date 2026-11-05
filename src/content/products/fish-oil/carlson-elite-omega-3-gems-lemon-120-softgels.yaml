@@ -1,0 +1,40 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude needs River's check.
+# Size chosen: 120 softgels (Natural Lemon).
+category: fish-oil
+entered_by: claude              # label info from the Vitacost product page (URL under prices)
+brand: Carlson
+name: Wild Norwegian Elite Omega-3 Gems 120 Softgels (Natural Lemon)
+form: softgel
+oil_form: ethyl_ester           # Vitacost Supplement Facts footnote: EPA and DHA "Reported as ethyl ester"
+oil_source: Norwegian fish oil (anchovy, sardine, mackerel)   # Vitacost page: "Norwegian fish oil"; allergen line "Contains fish (anchovy, sardine, mackerel)"
+# totox_published: not entered. The only IFOS report found (lot SB014399) shows TOTOX 17.66 but its expiry is 01/2025, so it is not a current lot (see below).
+other_ingredients: [beef gelatin, glycerin, water, natural lemon flavor, natural mixed tocopherols]   # Vitacost page (soft gel shell + other ingredients)
+
+dose:
+  units_per_serving: 2          # Vitacost Supplement Facts: serving size 2 soft gels
+  epa_per_serving_mg: 800       # Vitacost Supplement Facts "EPA" 800 mg per serving
+  dha_per_serving_mg: 600       # Vitacost Supplement Facts "DHA" 600 mg per serving
+  total_omega3_per_serving_mg: 1600   # Vitacost Supplement Facts "Total omega-3 fatty acids"
+  servings_per_container: 60    # Supplement Facts panel. NOTE: Vitacost "Key info" says "Total servings 120 count", which is softgels, not servings.
+
+prices:
+  - retailer: Vitacost
+    price_usd: 42.42            # page shows "Sale" tag but regular and sale price are both $42.42; 120 count
+    servings: 60                # 120 softgels / 2 per serving
+    url: https://www.vitacost.com/products/carlson-wild-norwegian-elite-omega-3-gems-natural-lemon-120-soft-gels-67747
+    date_checked: 2026-11-05
+    entered_by: claude
+    # Star rating on page: 5*:538, 4*:52, 3*:6, 2*:1, 1*:5 (602 ratings); page states no average, so no rating entered.
+
+# NOT ENTERED as a certification (Claude's decision, 2026-11-05): the Vitacost page lists "IFOS" as a claim only (brand/retailer claim).
+# The only IFOS report found, https://andi.nutrasource.ca/files/IFOS%20Report%20Carlson%20Laboratories%20Inc.%20Elite%20Omega-3%20Gems%20lot%20SB014399.pdf,
+# is for lot SB014399 with EXPIRY 01/2025, so it is not a current lot. It shows 5/5 stars, peroxide 3.83 meq/kg, anisidine 10, TOTOX 17.66,
+# EPA 403 / DHA 312 mg per softgel, no test date and no lab named.
+# River: if you find a current IFOS listing for a lot on sale, add it here.
+certifications: []
+
+# MISSING: COA entry not created. The IFOS report above has no test date, no named lab and no accreditation statement; looked at Vitacost page and the Nutrasource file.
+coas: []
+
+flags: ["contains fish (anchovy, sardine, mackerel)"]
+notes: ""
