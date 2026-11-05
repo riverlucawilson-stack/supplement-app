@@ -1,0 +1,43 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+category: zinc
+entered_by: claude              # label info from vitacost.com
+brand: Thorne
+name: Zinc Picolinate 30 mg, 60 Capsules
+form: capsule
+zinc_form: picolinate           # vitacost.com Supplement Facts: "Zinc (as Zinc Picolinate) 30 mg"
+other_ingredients: [microcrystalline cellulose, hypromellose (derived from cellulose) capsule, leucine, silicon dioxide]   # vitacost.com
+ingredients_confirmed: true     # full "Other ingredients" line read on vitacost.com
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size one capsule
+  zinc_per_serving_mg: 30       # vitacost.com Supplement Facts "Zinc (as Zinc Picolinate)" 30 mg (elemental line)
+  servings_per_container: 60    # vitacost.com Key info: total servings 60 count
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/62_ce62f900-7e30-4ea0-a7c8-8bc4c4d31ff8.jpg?v=1781975891
+    source_url: https://www.vitacost.com/products/thorne-zinc-picolinate-30-mg-60-capsules-71893
+    alt: Thorne Zinc Picolinate 30 mg bottle
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 23.00            # vitacost.com: sale price $23.00 (regular price also $23.00), 60 capsules
+    servings: 60
+    url: https://www.vitacost.com/products/thorne-zinc-picolinate-30-mg-60-capsules-71893
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. Page shows 179 ratings as a star breakdown but states no average.
+
+# MISSING/CHECK: certification. vitacost.com text says "NSF Certified Sport", but that is a retailer/brand claim.
+# thorne.com NSF page (ph.thorne.com/nsf-certified-for-sport, read 2026-11-05) does not link a zinc picolinate listing,
+# and the certifier's own listing (nsfsport.com) is search-only and was not checked. Nothing recorded.
+certifications: []
+
+# MISSING: COA. Thorne product page (ph.thorne.com) has no COA or lab-results link.
+coas: []
+
+flags: []
+notes: ""

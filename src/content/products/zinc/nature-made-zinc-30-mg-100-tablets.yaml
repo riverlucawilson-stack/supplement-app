@@ -1,0 +1,43 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+category: zinc
+entered_by: claude              # label info from vitacost.com
+brand: Nature Made
+name: Zinc 30 mg, 100 Tablets
+form: tablet
+zinc_form: gluconate            # vitacost.com Supplement Facts: "Zinc (as Zinc Gluconate) 30 mg"
+other_ingredients: [cellulose gel, calcium carbonate, stearic acid, croscarmellose sodium, hypromellose, magnesium stearate, polyethylene glycol]   # vitacost.com "Ingredients"
+ingredients_confirmed: true     # full ingredient line read on vitacost.com
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 tablet
+  zinc_per_serving_mg: 30       # vitacost.com Supplement Facts "Zinc (as Zinc Gluconate)" 30 mg
+  servings_per_container: 100   # vitacost.com Key info: total servings 100 count
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/36_2053ea85-0ff1-4e5e-91c3-3d160b35d6f5.jpg?v=1781979718
+    source_url: https://www.vitacost.com/products/nature-made-zinc-30-mg-100-tablets-70864
+    alt: Nature Made Zinc 30 mg tablets bottle
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 5.23             # vitacost.com: sale price $5.23 (regular price also $5.23), 100 tablets
+    servings: 100
+    url: https://www.vitacost.com/products/nature-made-zinc-30-mg-100-tablets-70864
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. Page shows 119 ratings as a star breakdown but states no average.
+
+# MISSING/CHECK: certification. vitacost.com page says "USP Verified", but that is a retailer/brand claim.
+# usp.org participants page (checked for another Nature Made product on 2026-11-05) lists only a private-label brand
+# group, no product-level listing. Nothing recorded.
+certifications: []
+
+# MISSING: COA. vitacost.com page has no COA link; brand site not checked.
+coas: []
+
+flags: []
+notes: ""

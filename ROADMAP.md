@@ -7,7 +7,7 @@ Since 2026-10-21 River lets Claude make project decisions without asking; log ea
 Still River's: approving evidence/health text (delegated to Claude on 2026-10-24 for the current to-dos), and the first deploy (River approved 2026-10-24; needs River's Cloudflare login).
 
 ## IN PROGRESS
-- Zinc batch 1: Thorne Zinc Picolinate, NOW Zinc Picolinate, Nature Made Zinc, Cold-EEZE or Zand zinc lozenges, a zinc + copper product (e.g. Jarrow Zinc Balance).
+- Zinc batch 2: a plain zinc lozenge (zinc the main ingredient), a gluconate or citrate capsule, a bisglycinate, a zinc carnosine, an OptiZinc product.
 
 ## WAITING ON RIVER
 1. Installable app (drafts/pwa-plan.md): A (installable only), B (installable + offline pages), or neither? I recommend A.
@@ -172,6 +172,7 @@ Same definition of done as Stage C.
 - [ ] 3. Probiotics (proposal written 2026-11-05: drafts/probiotics-method.md; River said on 2026-11-05 to keep developing without authorization, so it goes ahead after zinc and collagen unless River objects): propose a method first and wait. Record each strain's full designation, CFU, guaranteed through expiration or at manufacture, storage needs.
 - [ ] 4. Zinc: $ per 10 mg elemental zinc from the Supplement Facts panel. Record form, whether copper is included, and format (capsule, tablet, lozenge).
   - [x] category config: categories/zinc.yaml (status: draft) + template (2026-11-05)
+  - [x] batch 1: Thorne Zinc Picolinate 30 mg, NOW Zinc Picolinate 50 mg, Nature Made Zinc 30 mg, Jarrow Vegan Zinc Balance (zinc + copper). Zand Cherry Echinacea lozenge dropped (49 mg herb blend vs 5 mg zinc, so zinc isn't the main ingredient); Cold-EEZE not used.
 - [ ] 5. Collagen: $ per 10 g collagen peptides. Record source (bovine, marine, porcine, chicken) and heavy-metal testing. Leave out undenatured type II collagen.
 - [ ] 6. Curcumin / turmeric: $ per 500 mg curcuminoids, not turmeric powder weight. Record formulation (95% extract, piperine, phytosome, etc.). No bioavailability adjustment; record the claim and its source. No stated curcuminoid content = empty unit price with a note.
 - [ ] 7. Calcium: $ per 500 mg elemental calcium. Record carbonate vs citrate and any added vitamin D or K.
