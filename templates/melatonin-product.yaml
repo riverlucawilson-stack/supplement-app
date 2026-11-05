@@ -1,0 +1,52 @@
+# BLANK MELATONIN PRODUCT TEMPLATE
+#
+# How to use it:
+#   1. Copy this file into src/content/products/melatonin/
+#   2. Rename it, e.g. brandname-melatonin-3-mg-120-tablets.yaml (lowercase, dashes)
+#   3. Fill in every field from the sources named in the comments
+#   4. Delete any example lines you didn't use
+#   5. Run: npm run validate
+#
+# Only enter what you have seen yourself on the label, the seller's page,
+# the certifier's site, or the COA. If you can't find something, leave it out
+# (for optional fields) or leave the list empty with [].
+
+category: melatonin
+
+# --- From the product label or the brand's product page ---
+brand: ""
+name: ""
+form: tablet                   # tablet | capsule | gummy | liquid | softgel | powder
+release: standard              # standard | extended | dual | not_stated (as the label says)
+# format: quick dissolve       # dissolve | chewable | quick dissolve, as labeled. Otherwise delete this line.
+# other_actives: L-theanine 100 mg   # other actives on the panel. Otherwise delete this line.
+other_ingredients: []          # everything else
+
+dose:                          # from the Supplement Facts panel
+  units_per_serving: 1
+  melatonin_mg: 0              # the "Melatonin" line, mg per serving
+  servings_per_container: 0    # as printed on the label
+
+# --- From each retailer's product page. One block per store and size. ---
+prices:
+  - retailer: ""
+    price_usd: 0
+    servings: 0                # servings in the container THIS store sells
+    url: https://
+    date_checked: 2026-01-01
+
+# --- Only from the certifier's own website ---
+certifications: []
+
+# --- Certificate of analysis (lab report) ---
+coas: []
+#  - url: https://
+#    lab: ""
+#    iso_17025: unknown        # yes | no | unknown
+#    lot: ""
+#    test_date: 2026-01-01
+#    scope: finished_product   # finished_product | raw_material
+#    tests: [potency, identity, lead, arsenic, cadmium, mercury, microbial]
+
+flags: []                      # e.g. [added sugars, artificial colors]
+notes: ""
