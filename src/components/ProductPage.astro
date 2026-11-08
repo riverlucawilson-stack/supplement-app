@@ -55,17 +55,33 @@ const description = best
 ---
 
 <BaseLayout title={title} description={description}>
-  <section class="wrap intro">
-    <p class="crumbs"><a href={category.path}>{category.name}</a> / {p.brand}</p>
-    <p class="brand">{p.brand}</p>
-    <h1>{p.name}</h1>
-    <p class="meta">{formLabel[p.form]} · {category.describe(p)}</p>
-    {(sample || unverified) && (
-      <p class="tags">
-        {sample && <span class="pill pill-muted">Sample data</span>}
-        {unverified && <span class="pill pill-warn">Not yet reviewed</span>}
-      </p>
-    )}
+  <section class="hero-band">
+  <div class="wrap intro">
+    <p class="crumbs"><a href="/">All categories</a> <span aria-hidden="true">/</span> <a href={category.path}>{category.name}</a> <span aria-hidden="true">/</span> {p.brand}</p>
+    <div class="head">
+      <div>
+        <p class="brand">{p.brand}</p>
+        <h1>{p.name}</h1>
+        <p class="meta">{formLabel[p.form]} · {category.describe(p)}</p>
+        {(sample || unverified) && (
+          <p class="tags">
+            {sample && <span class="pill pill-muted">Sample data</span>}
+            {unverified && <span class="pill pill-warn">Not yet reviewed</span>}
+          </p>
+        )}
+        {best && (
+          <p class="cta">
+            <a class="btn" href={best.price.url} rel="noopener" target="_blank">See it at {best.price.retailer} <span aria-hidden="true">↗</span></a>
+            {prices.length > 1 && <a class="btn btn-ghost" href="#prices">Compare all {prices.length} prices</a>}
+          </p>
+        )}
+      </div>
+      {p.photos?.product && (
+        <figure class="hero-photo">
+          <img src={p.photos.product.url} alt={p.photos.product.alt ?? `${p.brand} ${p.name}`} decoding="async" referrerpolicy="no-referrer" onerror="this.closest('figure').remove()" />
+        </figure>
+      )}
+    </div>
 
     <div class="summary">
       <div class="stat">
@@ -90,6 +106,7 @@ const description = best
         <a class="sub" href="#whats-in-it">What’s in it</a>
       </div>
     </div>
+  </div>
   </section>
 
   <section class="wrap block" aria-labelledby="dose">
@@ -273,7 +290,49 @@ const description = best
 
 <style>
   .intro {
-    padding-block: 2rem 0.5rem;
+    padding-block: 1.5rem 2rem;
+  }
+
+  .head {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .hero-photo {
+    margin: 0;
+    width: 11rem;
+    height: 11rem;
+    padding: 0.75rem;
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+  }
+
+  .hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  @media (max-width: 560px) {
+    .head {
+      grid-template-columns: 1fr;
+    }
+    .hero-photo {
+      grid-row: 1;
+      width: 8rem;
+      height: 8rem;
+    }
+  }
+
+  .cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1.25rem 0 0;
   }
 
   .crumbs {
@@ -333,8 +392,12 @@ const description = best
   .card {
     background: var(--surface);
     border: 1px solid var(--rule);
-    border-radius: var(--radius);
+    border-radius: 14px;
     padding: 1rem;
+  }
+
+  .stat {
+    box-shadow: var(--shadow);
   }
 
   .stat {

@@ -58,6 +58,16 @@ const rows = (await getCollection('products'))
   .sort((a, b) => (a.best?.costPerReferenceDose ?? Infinity) - (b.best?.costPerReferenceDose ?? Infinity));
 
 const forms = [...new Set(rows.map((r) => r.product.form))].sort();
+
+// "At a glance": the cheapest product (by the same formula as the table) that meets each condition.
+// Rows are already sorted cheapest first, so the first match is the cheapest.
+const priced = rows.filter((r) => r.best);
+const picks = [
+  { label: 'Lowest cost', note: 'Cheapest of every product here', row: priced[0] },
+  { label: 'Lowest cost, certified', note: 'Has a current third-party certification', row: priced.find((r) => r.certs.length > 0) },
+  { label: 'Lowest cost, Tier A', note: 'Certified, with an accredited lab report', row: priced.find((r) => r.tier === 'A') },
+  { label: 'Lowest cost, no flagged ingredients', note: 'Ingredient grade A', row: priced.find((r) => r.grade.grade === 'A') },
+].filter((x): x is typeof x & { row: (typeof rows)[number] } => x.row !== undefined);
 const shortDate = (d: Date) =>
   d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 const formLabel = formLabels;
@@ -67,14 +77,42 @@ const costLabelLower = midSentence(costLabel);
 ---
 
 <BaseLayout title={title} description={description}>
-  <section class="intro wrap">
-    <p class="eyebrow">{category.name} · {rows.length} products</p>
-    <h1>{heading}</h1>
-    <p class="lede" set:html={intro} />
-    {hasEvidence && (
-      <p class="research"><a href={category.evidencePath}>What the research says about {midSentence(category.name)} →</a></p>
-    )}
+  <section class="hero-band">
+    <div class="intro wrap">
+      <p class="crumbs"><a href="/">All categories</a> <span aria-hidden="true">/</span> {category.name}</p>
+      <p class="eyebrow">{category.name} · {rows.length} products</p>
+      <h1>{heading}</h1>
+      <p class="lede" set:html={intro} />
+      {hasEvidence && (
+        <p class="research"><a href={category.evidencePath}>What the research says about {midSentence(category.name)} →</a></p>
+      )}
+    </div>
   </section>
+
+  {picks.length > 0 && (
+    <section class="wrap picks-wrap" aria-labelledby="picks">
+      <h2 id="picks" class="picks-title">At a glance</h2>
+      <ul class="picks">
+        {picks.map((k) => (
+          <li>
+            <a class="pick" href={k.row.href}>
+              <span class="pick-label">{k.label}</span>
+              <span class="pick-name"><span class="pick-brand">{k.row.product.brand}</span> {k.row.product.name}</span>
+              <span class="pick-cost">
+                <span class="num">{usd(k.row.best!.costPerReferenceDose)}</span> <span class="pick-unit">{category.referenceDose.label}</span>
+              </span>
+              <span class="pick-badges">
+                <span class={`tier tier-${k.row.tier}`} title={`Transparency tier ${k.row.tier}`}>{k.row.tier}</span>
+                {k.row.grade.grade && <span class={`grade grade-${k.row.grade.grade}`} title={`Ingredient grade ${k.row.grade.grade}`}>{k.row.grade.grade}</span>}
+                <span class="pick-note">{k.note}</span>
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <p class="fine picks-fine">Picked by the same cost formula as the table below. Nobody pays to appear here.</p>
+    </section>
+  )}
 
   <section class="wrap" aria-label="Comparison table">
     <form class="controls" id="controls" aria-label="Sort and filter">
@@ -323,16 +361,116 @@ const costLabelLower = midSentence(costLabel);
 
 <style>
   .intro {
-    padding-block: 2.5rem 1.5rem;
+    padding-block: 1.5rem 2.25rem;
   }
 
-  .eyebrow {
-    margin: 0 0 0.5rem;
-    font-size: 0.75rem;
+  .crumbs {
+    margin: 0 0 1.25rem;
+    font-size: 0.875rem;
+    color: var(--muted);
+  }
+
+  .crumbs a {
+    color: var(--muted);
+  }
+
+  /* ---------- At a glance ---------- */
+  .picks-wrap {
+    padding-block: 1.75rem 1.5rem;
+  }
+
+  .picks-title {
+    margin: 0 0 0.75rem;
+    font-size: 1.125rem;
+  }
+
+  .picks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14.5rem, 1fr));
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .pick {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    height: 100%;
+    padding: 1rem 1.1rem;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    color: var(--ink);
+    text-decoration: none;
+    transition: box-shadow 0.15s ease, border-color 0.15s ease;
+  }
+
+  .pick:hover,
+  .pick:focus-visible {
+    border-color: var(--accent);
+    box-shadow: var(--shadow-lift);
+  }
+
+  .pick-label {
+    font-size: 0.6875rem;
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--accent);
+  }
+
+  .pick-name {
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .pick-brand {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .pick-cost .num {
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+
+  .pick-unit {
+    font-size: 0.8125rem;
+    color: var(--muted);
+  }
+
+  .pick-badges {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: auto;
+    padding-top: 0.35rem;
+  }
+
+  .pick-badges .tier,
+  .pick-badges .grade {
+    width: 1.6rem;
+    height: 1.6rem;
+    font-size: 0.8125rem;
+  }
+
+  .pick-note {
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  .picks-fine {
+    margin: 0.6rem 0 0;
+    font-size: 0.8125rem;
+    color: var(--muted);
   }
 
   h1 {

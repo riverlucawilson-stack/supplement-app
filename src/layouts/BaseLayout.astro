@@ -15,7 +15,6 @@ const fullTitle = title === settings.siteName ? title : `${title} | ${settings.s
 const path = Astro.url.pathname;
 const samePage = (href: string) => path.replace(/\/$/, '') === href.replace(/\/$/, '');
 // One menu link per published category. Its product and evidence pages count as "inside" it.
-// Phase (e) adds Methodology, How to read a COA, About.
 const nav = categoryList.filter((c) => c.published).map((c) => ({ href: c.path, label: c.name }));
 const inside = (href: string) => path === href || path.startsWith(href);
 ---
@@ -37,11 +36,28 @@ const inside = (href: string) => path === href || path.startsWith(href);
     />
   </head>
   <body>
+    <a class="skip" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="wrap">
-        <a class="wordmark" href="/">Sup<span>Search</span></a>
+        <a class="wordmark" href="/" aria-label={`${settings.siteName} home`}>
+          <svg class="mark" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+            <rect x="1.5" y="1.5" width="21" height="21" rx="6" fill="currentColor" />
+            <path d="M7 12.5l3.2 3.2L17 8.8" fill="none" stroke="var(--surface)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          Sup<span>Search</span>
+        </a>
         <nav class="site-nav" aria-label="Main">
-          {nav.map((n) => <a href={n.href} aria-current={samePage(n.href) ? 'page' : inside(n.href) ? 'true' : undefined}>{n.label}</a>)}
+          <details class="menu">
+            <summary aria-current={nav.some((n) => inside(n.href)) ? 'true' : undefined}>Categories</summary>
+            <div class="menu-panel">
+              <ul>
+                {nav.map((n) => (
+                  <li><a href={n.href} aria-current={samePage(n.href) ? 'page' : inside(n.href) ? 'true' : undefined}>{n.label}</a></li>
+                ))}
+              </ul>
+            </div>
+          </details>
+          <a href="/methodology/" aria-current={samePage('/methodology/') ? 'page' : undefined}>Methodology</a>
         </nav>
       </div>
     </header>
@@ -49,23 +65,55 @@ const inside = (href: string) => path === href || path.startsWith(href);
     <aside class="notice" aria-label="Disclosures">
       <div class="wrap">
         <p>
-          <strong>Affiliate disclosure:</strong> we don't earn commissions from any link on this site.
+          <strong>No affiliate links.</strong> We don't earn commissions from any link on this site.
         </p>
         <p><strong>Not medical advice.</strong> Talk to a qualified professional before starting a supplement.</p>
       </div>
     </aside>
 
-    <main>
+    <main id="main">
       <slot />
     </main>
 
     <footer class="site-footer">
       <div class="wrap">
-        <p>
-          {settings.siteName} compares supplements on price per dose and published testing. Rankings come only from
-          the formula on our <a href="/methodology/">Methodology</a> page.
-        </p>
+        <div class="foot-grid">
+          <div class="foot-about">
+            <a class="wordmark" href="/">Sup<span>Search</span></a>
+            <p>
+              An independent comparison of supplements by what they cost per dose and how much of their lab testing you
+              can see. Rankings come only from the formula on our <a href="/methodology/">Methodology</a> page.
+            </p>
+            <p>No affiliate links, no sponsored placements. Not medical advice.</p>
+          </div>
+          <nav class="foot-links cats" aria-label="Categories">
+            <p class="foot-head">Categories</p>
+            <ul>{nav.map((n) => <li><a href={n.href}>{n.label}</a></li>)}</ul>
+          </nav>
+          <nav class="foot-links" aria-label="About the data">
+            <p class="foot-head">About the data</p>
+            <ul>
+              <li><a href="/methodology/">Methodology</a></li>
+              <li><a href="/methodology/#ingredient-grade">Ingredient grades</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </footer>
+    <script>
+      // Close the Categories menu when clicking elsewhere or pressing Escape.
+      const menu = document.querySelector<HTMLDetailsElement>('.site-nav .menu');
+      if (menu) {
+        document.addEventListener('click', (e) => {
+          if (menu.open && !menu.contains(e.target as Node)) menu.open = false;
+        });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && menu.open) {
+            menu.open = false;
+            menu.querySelector('summary')?.focus();
+          }
+        });
+      }
+    </script>
   </body>
 </html>

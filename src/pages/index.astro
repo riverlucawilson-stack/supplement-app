@@ -1,63 +1,452 @@
 ---
-import { midSentence } from '../lib/format';
-// Home page: one card per published category, linking to its comparison table.
+// Home page: what the site does, a product search, how products are compared,
+// and one card per published category. Every number here is calculated from
+// the product files at build time.
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { categoryList } from '../categories';
+import { categoryList, productPath } from '../categories';
 import { settings } from '../settings';
+import { bestPrice } from '../lib/pricing';
+import { isCertificationCurrent } from '../lib/staleness';
+import { usd, midSentence } from '../lib/format';
 
+const today = new Date();
 const products = await getCollection('products');
-const cards = categoryList
-  .filter((c) => c.published)
-  .map((c) => ({ category: c, count: products.filter((p) => p.data.category === c.id).length }));
+const published = categoryList.filter((c) => c.published);
+const publishedIds = new Set(published.map((c) => c.id));
+const live = products.filter((e) => publishedIds.has(e.data.category));
+
+const cards = published.map((c) => {
+  const items = live.filter((e) => e.data.category === c.id);
+  const costs = items.map((e) => bestPrice(e.data, today)?.costPerReferenceDose).filter((x): x is number => x !== undefined);
+  return { category: c, count: items.length, from: costs.length ? Math.min(...costs) : undefined };
+});
+
+const certified = live.filter((e) => e.data.certifications.some((c) => isCertificationCurrent(c.date_verified, today))).length;
+const withCoa = live.filter((e) => e.data.coas.length > 0).length;
+const stats = [
+  { value: live.length.toString(), label: 'products compared' },
+  { value: published.length.toString(), label: 'categories' },
+  { value: certified.toString(), label: 'with a current third-party certification' },
+  { value: withCoa.toString(), label: 'with a published lab report (COA)' },
+];
+
+// Small index for the search box: brand, name and category, nothing else.
+const searchIndex = live.map((e) => ({
+  b: e.data.brand,
+  n: e.data.name,
+  c: published.find((c) => c.id === e.data.category)!.name,
+  h: productPath(e.id, e.data),
+}));
+const popular = cards.slice().sort((a, b) => b.count - a.count).slice(0, 6);
 ---
 
 <BaseLayout
   title={settings.siteName}
-  description="Supplements compared on what they really cost per dose and how much of their lab testing you can see."
+  description="Supplements compared on what they really cost per dose and how much of their lab testing you can see. No affiliate links."
 >
-  <section class="intro wrap">
-    <h1>What supplements really cost, and how much of their testing you can see.</h1>
-    <p class="lede">
-      Each category converts every price to the same amount of the ingredient, so products compare fairly. Testing
-      transparency gets its own grade, A to C, and is never blended into the price.
-    </p>
+  <section class="hero-band">
+    <div class="wrap hero">
+      <p class="eyebrow">Independent · No affiliate links · Every price dated</p>
+      <h1>Know what you’re paying for before you buy a supplement.</h1>
+      <p class="lede">
+        We turn every price into the cost of the same amount of the ingredient, show which products publish their lab
+        testing, and flag added ingredients with published negative data. Nothing is sponsored.
+      </p>
+
+      <div class="search" role="search">
+        <label for="q" class="sr-only">Search products</label>
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2" /><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
+        <input id="q" type="search" placeholder={`Search ${live.length} products by brand or name`} autocomplete="off" aria-controls="results" aria-expanded="false" />
+        <ul id="results" class="results" role="listbox" hidden></ul>
+      </div>
+
+      <p class="quick">
+        <span>Popular:</span>
+        {popular.map(({ category: c }) => <a class="chip-link" href={c.path}>{c.name}</a>)}
+      </p>
+    </div>
   </section>
 
-  <section class="wrap" aria-label="Categories">
+  <section class="wrap" aria-label="At a glance">
+    <div class="stats">
+      {stats.map((s) => (
+        <div class="stat">
+          <span class="num">{s.value}</span>
+          <span>{s.label}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="wrap how" aria-labelledby="how">
+    <h2 id="how">Three separate checks, never blended into one score</h2>
+    <ol class="steps">
+      <li>
+        <span class="badge num">$</span>
+        <h3>Cost per dose</h3>
+        <p>
+          Every store price becomes the cost of one fixed amount, like 5 g of creatine or 1,000 mg of EPA + DHA, so a big
+          tub and a small bottle compare fairly. This alone sets the order.
+        </p>
+      </li>
+      <li>
+        <span class="tier tier-A">A</span>
+        <h3>Testing transparency</h3>
+        <p>
+          A tier from A to C for how much testing you can verify: certifications read on the certifier’s own site, and
+          lab reports from accredited labs.
+        </p>
+      </li>
+      <li>
+        <span class="grade grade-A">A</span>
+        <h3>Added ingredients</h3>
+        <p>
+          A grade for sweeteners, dyes and other added ingredients, against a short list with a regulator’s page or a
+          published study behind each entry.
+        </p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="wrap" id="categories" aria-labelledby="cats">
+    <div class="section-head">
+      <h2 id="cats">Browse by category</h2>
+      <a href="/methodology/">How we compare →</a>
+    </div>
     <ul class="cards">
       {
-        cards.map(({ category: c, count }) => (
+        cards.map(({ category: c, count, from }) => (
           <li>
             <a class="card" href={c.path}>
-              <span class="name">{c.name}</span>
-              <span class="sub">{count} products · compared {c.referenceDose.label}</span>
-              <span class="go">Compare {midSentence(c.name)} →</span>
+              <span class="top">
+                <span class="name">{c.name}</span>
+                <span class="count">{count} products</span>
+              </span>
+              {from !== undefined && (
+                <span class="from">
+                  <span class="num">{usd(from)}</span>
+                  <span class="sub">lowest {c.referenceDose.label}</span>
+                </span>
+              )}
+              <span class="go">Compare {midSentence(c.name)} <span aria-hidden="true">→</span></span>
             </a>
           </li>
         ))
       }
     </ul>
   </section>
+
+  <section class="wrap trust" aria-labelledby="honest">
+    <div>
+      <h2 id="honest">How we keep it honest</h2>
+      <p>
+        The ranking is a published formula, not an opinion. Anyone can check the math on each product page.
+      </p>
+      <a class="btn" href="/methodology/">Read the methodology</a>
+    </div>
+    <ul class="checks">
+      <li><strong>No commissions.</strong> No link on this site earns us money, so no product pays to rank higher.</li>
+      <li><strong>Prices read by hand.</strong> Each price comes from one store page and shows the date it was checked. Old prices are marked stale.</li>
+      <li><strong>Certifications from the source.</strong> A certification counts only when it’s listed on the certifier’s own website, never because a brand says so.</li>
+      <li><strong>Sources for every flag.</strong> Each ingredient flag links to the regulator page or study it rests on.</li>
+    </ul>
+  </section>
 </BaseLayout>
 
+<script type="application/json" id="search-index" set:html={JSON.stringify(searchIndex)} />
+
+<script>
+  type Item = { b: string; n: string; c: string; h: string };
+  const input = document.getElementById('q') as HTMLInputElement | null;
+  const list = document.getElementById('results') as HTMLUListElement | null;
+  const raw = document.getElementById('search-index')?.textContent ?? '[]';
+  const items: Item[] = JSON.parse(raw);
+  const norm = (t: string) => t.toLowerCase().normalize('NFKD').replace(/[^\w\s.+-]/g, '');
+  const hay = items.map((i) => norm(`${i.b} ${i.n} ${i.c}`));
+  let active = -1;
+
+  function render(q: string) {
+    if (!input || !list) return;
+    const words = norm(q).split(/\s+/).filter(Boolean);
+    list.innerHTML = '';
+    active = -1;
+    if (!words.length) {
+      list.hidden = true;
+      input.setAttribute('aria-expanded', 'false');
+      return;
+    }
+    const hits = items.filter((_, i) => words.every((w) => hay[i].includes(w))).slice(0, 8);
+    if (!hits.length) {
+      const li = document.createElement('li');
+      li.className = 'empty';
+      li.textContent = 'No products match. Try a brand or an ingredient.';
+      list.append(li);
+    }
+    for (const h of hits) {
+      const li = document.createElement('li');
+      li.setAttribute('role', 'option');
+      const a = document.createElement('a');
+      a.href = h.h;
+      const t = document.createElement('span');
+      t.textContent = `${h.b} ${h.n}`;
+      const c = document.createElement('small');
+      c.textContent = h.c;
+      a.append(t, c);
+      li.append(a);
+      list.append(li);
+    }
+    list.hidden = false;
+    input.setAttribute('aria-expanded', 'true');
+  }
+
+  if (input && list) {
+    input.addEventListener('input', () => render(input.value));
+    input.addEventListener('keydown', (e) => {
+      const links = [...list.querySelectorAll('a')];
+      if (!links.length) return;
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        active = (active + (e.key === 'ArrowDown' ? 1 : -1) + links.length) % links.length;
+        links.forEach((l, i) => l.classList.toggle('on', i === active));
+      } else if (e.key === 'Enter') {
+        e.preventDefault();
+        (links[Math.max(active, 0)] as HTMLAnchorElement).click();
+      } else if (e.key === 'Escape') {
+        input.value = '';
+        render('');
+      }
+    });
+    document.addEventListener('click', (e) => {
+      if (!(e.target as Element).closest('.search')) list.hidden = true;
+    });
+  }
+</script>
+
 <style>
-  .intro {
-    padding-block: 2.5rem 1.5rem;
+  .hero {
+    padding-block: 3.5rem 2.75rem;
   }
 
   h1 {
     margin: 0;
-    max-width: 24ch;
-    font-size: clamp(1.75rem, 4.5vw, 2.75rem);
+    max-width: 20ch;
+    font-size: clamp(2rem, 5vw, 3.25rem);
     font-weight: 800;
+    letter-spacing: -0.025em;
   }
 
   .lede {
-    max-width: 62ch;
-    margin: 1rem 0 0;
+    max-width: 60ch;
+    margin: 1.1rem 0 0;
     color: var(--muted);
+    font-size: 1.125rem;
+  }
+
+  .search {
+    position: relative;
+    max-width: 40rem;
+    margin-top: 1.75rem;
+  }
+
+  .search svg {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--muted);
+    pointer-events: none;
+  }
+
+  .search input {
+    width: 100%;
+    padding: 0.95rem 1rem 0.95rem 2.9rem;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--ink);
+    font: inherit;
+    font-size: 1rem;
+    box-shadow: var(--shadow);
+  }
+
+  .search input:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+  }
+
+  .results {
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    top: calc(100% + 0.4rem);
+    margin: 0;
+    padding: 0.4rem;
+    list-style: none;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    box-shadow: var(--shadow-lift);
+  }
+
+  .results a {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.55rem 0.75rem;
+    border-radius: 8px;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .results a:hover,
+  .results a:global(.on) {
+    background: var(--accent-soft);
+  }
+
+  .results small {
+    flex-shrink: 0;
+    color: var(--muted);
+  }
+
+  .results :global(.empty) {
+    padding: 0.55rem 0.75rem;
+    color: var(--muted);
+  }
+
+  .quick {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 1rem 0 0;
+    font-size: 0.875rem;
+    color: var(--muted);
+  }
+
+  .chip-link {
+    padding: 0.3rem 0.75rem;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .chip-link:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1px;
+    margin-top: -1.5rem;
+    padding: 0;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    position: relative;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 1.1rem 1.25rem;
+    background: var(--surface);
+    font-size: 0.875rem;
+    color: var(--muted);
+  }
+
+  .stat .num {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  @media (max-width: 760px) {
+    .stats {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  h2 {
+    margin: 0;
+    font-size: clamp(1.35rem, 2.6vw, 1.75rem);
+    font-weight: 800;
+  }
+
+  .how {
+    padding-top: 3.5rem;
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin: 1.25rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  @media (max-width: 760px) {
+    .steps {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .steps li {
+    padding: 1.25rem;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+  }
+
+  .steps h3 {
+    margin: 0.85rem 0 0.35rem;
     font-size: 1.0625rem;
+  }
+
+  .steps p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.9375rem;
+  }
+
+  .badge {
+    display: inline-grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 6px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    box-shadow: inset 0 0 0 1.5px var(--accent);
+    font-weight: 700;
+  }
+
+  #categories {
+    padding-top: 3.5rem;
+  }
+
+  .section-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .section-head a {
+    font-weight: 600;
+    text-decoration: none;
   }
 
   .cards {
@@ -72,24 +461,44 @@ const cards = categoryList
   .card {
     display: flex;
     flex-direction: column;
-    gap: 0.35rem;
+    gap: 0.3rem;
     height: 100%;
     padding: 1.25rem;
     background: var(--surface);
     border: 1px solid var(--rule);
-    border-radius: var(--radius);
+    border-radius: 14px;
     color: var(--ink);
     text-decoration: none;
+    transition: box-shadow 0.15s ease, transform 0.15s ease, border-color 0.15s ease;
   }
 
   .card:hover,
   .card:focus-visible {
     border-color: var(--accent);
+    box-shadow: var(--shadow-lift);
+    transform: translateY(-2px);
+  }
+
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
   }
 
   .name {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 800;
+  }
+
+  .count {
+    flex-shrink: 0;
+    padding: 0.15rem 0.55rem;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 600;
   }
 
   .sub {
@@ -97,9 +506,83 @@ const cards = categoryList
     color: var(--muted);
   }
 
+  .from {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.6rem;
+  }
+
+  .from .num {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
   .go {
-    margin-top: 0.5rem;
+    margin-top: auto;
+    padding-top: 0.75rem;
     font-weight: 600;
     color: var(--accent);
+  }
+
+  .trust {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+    padding-block: 2.25rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  @media (max-width: 760px) {
+    .trust {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .trust p {
+    max-width: 40ch;
+    margin: 0.75rem 0 1.25rem;
+    color: var(--muted);
+  }
+
+  .checks {
+    display: grid;
+    gap: 0.9rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .checks li {
+    position: relative;
+    padding-left: 2rem;
+    color: var(--muted);
+  }
+
+  .checks strong {
+    color: var(--ink);
+  }
+
+  .checks li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.15rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 999px;
+    background: var(--accent-soft)
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-6.5' fill='none' stroke='%230d6b5b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+      center / 100% no-repeat;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
   }
 </style>
