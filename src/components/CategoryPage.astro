@@ -114,7 +114,7 @@ const costLabelLower = midSentence(costLabel);
       <fieldset class="control chips">
         <legend>Ingredient grade</legend>
         {
-          ['A', 'B', 'C', 'D', 'none'].map((g) => (
+          ['A', 'B', 'none'].map((g) => (
             <label class="chip">
               <input type="checkbox" name="grade" value={g} checked id={`grade-${g}`} />
               <span>{g === 'none' ? 'Not graded' : g}</span>
@@ -263,9 +263,7 @@ const costLabelLower = midSentence(costLabel);
     </p>
     <dl>
       <div><dt><span class="grade grade-A">A</span></dt><dd>No flagged added ingredients.</dd></div>
-      <div><dt><span class="grade grade-B">B</span></dt><dd>Contains an ingredient where some studies report possible harm, but it isn’t settled.</dd></div>
-      <div><dt><span class="grade grade-C">C</span></dt><dd>Contains an ingredient that official guidance advises limiting or not using (added sugars, non-sugar sweeteners).</dd></div>
-      <div><dt><span class="grade grade-D">D</span></dt><dd>Contains an ingredient a regulator has acted on (such as a dye the FDA is phasing out).</dd></div>
+      <div><dt><span class="grade grade-B">B</span></dt><dd>Contains at least one flagged ingredient. The product page names each one and the source behind it.</dd></div>
     </dl>
     <p class="fine">
       Prices are read from each store's own page and marked stale after {settings.priceStaleAfterDays} days. A certification counts

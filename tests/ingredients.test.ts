@@ -26,11 +26,14 @@ test('not graded when the list is empty and unconfirmed; A once confirmed', () =
   assert.equal(grade([], { ingredients_confirmed: true }).grade, 'A');
 });
 
-test('the worst flag decides the grade', () => {
+test('every flag gives a B, and the reason names each flag', () => {
   assert.equal(grade(['xylitol']).grade, 'B');
-  assert.equal(grade(['xylitol', 'sucralose']).grade, 'C');
-  assert.equal(grade(['cane sugar', 'titanium dioxide']).grade, 'D');
-  assert.equal(grade(['FD&C Yellow No. 6']).grade, 'D');
+  assert.equal(grade(['xylitol', 'sucralose']).grade, 'B');
+  assert.equal(grade(['cane sugar', 'titanium dioxide']).grade, 'B');
+  assert.equal(grade(['FD&C Yellow No. 6']).grade, 'B');
+  const r = grade(['xylitol', 'sucralose']).reason;
+  assert.match(r, /xylitol/);
+  assert.match(r, /non-sugar sweeteners/);
 });
 
 test('sugar alcohols, polydextrose and juice colors are not counted as added sugars', () => {
@@ -40,7 +43,7 @@ test('sugar alcohols, polydextrose and juice colors are not counted as added sug
 });
 
 test('label flags are checked too', () => {
-  assert.equal(grade(['pectin'], { flags: ['added sugar (4 g per serving)'] }).grade, 'C');
+  assert.equal(grade(['pectin'], { flags: ['added sugar (4 g per serving)'] }).grade, 'B');
 });
 
 test('groups ingredients by role', () => {

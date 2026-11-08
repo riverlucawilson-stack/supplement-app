@@ -104,7 +104,10 @@ export interface GradeResult {
 
 // Most serious level first. "note" is shown but never changes the grade.
 export const levelOrder: FlagLevel[] = ['concern', 'caution', 'limited', 'note'];
-export const gradeForLevel: Record<Exclude<FlagLevel, 'note'>, IngredientGrade> = { concern: 'D', caution: 'C', limited: 'B' };
+// River's call (2026-11-08): every flag gives a B, whatever its level. The level still says
+// what kind of source backs the flag (a regulator, official advice, or individual studies).
+// C and D are kept in the type so the scale can be split again later.
+export const gradeForLevel: Record<Exclude<FlagLevel, 'note'>, IngredientGrade> = { concern: 'B', caution: 'B', limited: 'B' };
 
 export function ingredientGrade(p: Product): GradeResult {
   const items = ingredientItems(p);
@@ -132,6 +135,6 @@ export function ingredientGrade(p: Product): GradeResult {
       flagged,
     };
   }
-  const top = flagged.filter((f) => f.rule.level === worst).map((f) => f.rule.name.toLowerCase());
+  const top = flagged.filter((f) => f.rule.level !== 'note').map((f) => f.rule.name.toLowerCase());
   return { grade: gradeForLevel[worst], reason: `Contains ${top.join(', ')}.`, flagged };
 }
