@@ -19,6 +19,13 @@ dose:
   # withanolides %: not stated
   servings_per_container: 30    # "Servings Per Container: 30" (60 caps)
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/93_b014c009-e885-4c35-9dc8-c3c6205fc7d9.jpg?v=1781957980
+    source_url: https://www.vitacost.com/products/doctor-s-best-ashwagandha-60-veggie-caps-125-mg-per-capsule-56017
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Doctor's Best
     price_usd: 12.99            # .js "Default Title": $12.99 (60 veggie caps, only size)
@@ -40,4 +47,6 @@ certifications: []
 coas: []                        # no COA or test results on the brand page
 
 flags: []
-notes: "The task named this as a KSM-66 product, but Doctor's Best's ashwagandha uses Sensoril (root and leaf), not KSM-66."
+# Research note (not shown on the site): this was first listed as a KSM-66 product, but
+# Doctor's Best's ashwagandha uses Sensoril (root and leaf), not KSM-66.
+notes: ""

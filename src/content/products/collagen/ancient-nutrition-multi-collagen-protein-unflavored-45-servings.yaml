@@ -1,0 +1,49 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the label name only: no health or beauty claims from retailer titles.
+category: collagen
+entered_by: claude              # label info from vitaminshoppe.com
+brand: Ancient Nutrition
+name: Multi Collagen Protein, Unflavored, 45 Servings
+form: powder
+collagen_source: blend          # label lists several animal sources
+sources_listed: hydrolyzed broths collagen peptides, chicken bone broth collagen concentrate, hydrolyzed fish collagen peptides, eggshell membrane collagen   # vitaminshoppe.com Supplement Facts wording (no source animal named for the "broths" peptides, so no bovine recorded)
+flavor: Unflavored              # vitaminshoppe.com
+# MISSING: collagen_types. Retailer pages state a number of types in marketing copy but name none, and pages disagree (10 vs five).
+other_ingredients: []
+# MISSING: other ingredients. vitaminshoppe.com shows only the collagen complex line. heb.com lists a probiotic (Bacillus coagulans) and wholefoodsmarket.com does not, so the pages disagree.
+ingredients_confirmed: false
+
+dose:
+  # MISSING: serving_size_g. vitaminshoppe.com gives "1 Scoop(s)" with no gram weight.
+  units_per_serving: 1          # vitaminshoppe.com
+  collagen_per_serving_g: 10    # vitaminshoppe.com Supplement Facts "Multi-Collagen Complex" 10 GM (Protein 9 GM). Marketing copy there says 20 g, which is 2 scoops, not used.
+  servings_per_container: 45    # vitaminshoppe.com
+
+photos:
+  product:
+    url: https://s7.vitaminshoppe.com/is/image/VitaminShoppe/2138154_01?$OP_PDPZOOM$
+    source_url: https://www.vitaminshoppe.com/p/multi-collagen-protein-1-lb-powder/axe1001
+    alt: Ancient Nutrition Multi Collagen Protein Unflavored container
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitamin Shoppe
+    price_usd: 49.99            # vitaminshoppe.com: $49.99, 45 servings (BOGO 50% promo and auto-delivery price ignored)
+    servings: 45
+    url: https://www.vitaminshoppe.com/p/multi-collagen-protein-1-lb-powder/axe1001
+    date_checked: 2026-11-05
+    entered_by: claude
+    rating:
+      stars: 4.6                # vitaminshoppe.com
+      count: 10759
+
+# MISSING: certification. None found; no certifier site checked.
+certifications: []
+
+# MISSING: COA. Retailer pages have no COA link; brand site not checked.
+coas: []
+
+flags: [contains fish collagen, contains eggshell membrane collagen]   # vitaminshoppe.com Supplement Facts ingredient line
+notes: ""

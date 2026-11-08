@@ -1,0 +1,47 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the label name only: no health words from retailer titles.
+# Store-brand pick: Vitacost's own brand, sold by Vitacost.
+category: probiotics
+entered_by: claude              # label info from vitacost.com
+brand: Vitacost
+name: Probiotic 15-35 With NutraFlora® FOS, 60 Vegetarian Capsules
+form: capsule
+cfu_guarantee: at_manufacture   # vitacost.com: "†Colony forming units at time of manufacture." Page also says "formulated to 35 billion CFU from 15 probiotic strains when the product is held under proper storage conditions."
+strains: Lactobacillus acidophilus (no strain code); L. casei (no strain code); L. rhamnosus (no strain code); L. plantarum (no strain code); Bifidobacterium bifidum (no strain code); B. breve (no strain code); B. infantis (no strain code); B. longum (no strain code); L. paracasei (no strain code); L. salivarius (no strain code); L. brevis (no strain code); L. fermentum (no strain code); L. helveticus (no strain code); L. lactis (no strain code); Streptococcus thermophilus (no strain code)   # vitacost.com Supplement Facts, "Probiotic Blend" 200 mg
+storage: shelf-stable           # vitacost.com: "Store in a cool (72ºF/22℃), dry place."
+# MISSING: delivery_claim. None found on the vitacost.com page.
+other_ingredients: [hydroxypropyl methylcellulose, pectin, sodium bicarbonate, sodium alginate, sodium carbonate, silicon dioxide, vegetable stearic acid]   # vitacost.com
+ingredients_confirmed: true     # full other-ingredients line read on vitacost.com
+
+dose:
+  units_per_serving: 2          # vitacost.com: serving size 2 capsules
+  cfu_billions_per_serving: 35  # vitacost.com Supplement Facts (per 2-capsule serving): "35 billion per serving, from 15 strains"
+  strain_count: 15
+  servings_per_container: 30    # vitacost.com Supplement Facts: 30 servings (page "Total servings" line says "60 count", which is the capsule count)
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/10_c41e00c1-300a-4342-b092-013698c7d6e2.jpg?v=1786413746
+    source_url: https://www.vitacost.com/products/vitacost-probiotic-15-35-with-nutraflora-fos-60-vegetarian-capsules-158781
+    alt: Vitacost Probiotic 15-35 With NutraFlora FOS 60 capsule bottle
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 15.85            # vitacost.com: $15.85, 60 capsules (30 servings), Add to cart shown, no out-of-stock notice
+    servings: 30
+    url: https://www.vitacost.com/products/vitacost-probiotic-15-35-with-nutraflora-fos-60-vegetarian-capsules-158781
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. The page shows only a star breakdown (174 ratings), no stated average.
+
+# MISSING: certification. The page lists none from a third party ("Guaranteed Authentic" is a Vitacost claim). Certifier sites not checked.
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: [proprietary blend without per-strain amounts, strains listed without strain codes, added prebiotic (FOS NutraFlora® 200 mg), "Contains: Milk."]   # vitacost.com Supplement Facts and label statements
+notes: ""

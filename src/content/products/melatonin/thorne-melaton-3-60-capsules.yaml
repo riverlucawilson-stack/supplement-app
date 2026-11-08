@@ -1,0 +1,38 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name from the vitacost.com title "Thorne, Melaton-3, 60 Capsules (3 mg per Capsule)".
+category: melatonin
+entered_by: claude              # label info from vitacost.com and thorne.com
+brand: Thorne
+name: Melaton-3, 60 Capsules   # vitacost.com title
+form: capsule
+release: not_stated             # vitacost.com and thorne.com pages have no release wording
+other_ingredients: [microcrystalline cellulose, hypromellose (derived from cellulose) capsule, calcium laurate, silicon dioxide]   # vitacost.com line
+ingredients_confirmed: true     # full line read on vitacost.com; thorne.com lists the same items in a different order
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size one capsule
+  melatonin_mg: 3               # vitacost.com Supplement Facts: Melatonin 3 mg
+  servings_per_container: 60    # vitacost.com: 60
+
+prices:
+  - retailer: Vitacost
+    price_usd: 16.00            # vitacost.com: $16.00, 60 capsules, Add to cart shown (stock not stated)
+    servings: 60
+    url: https://www.vitacost.com/products/thorne-melaton-3-60-capsules-3-mg-per-capsule-18750
+    date_checked: 2026-11-05
+    entered_by: claude
+
+certifications:
+  - program: NSF Certified for Sport
+    # nsfsport.com listing "Thorne Melaton-3", brand Thorne, capsules, package size 60, serving size 1 capsule, 18 lot numbers. Reached through the nsfsport search results for brand Thorne.
+    # DOUBT: the listing does not state the melatonin mg; it matches the priced product on name, 60 count and 1 capsule. Page shows lot numbers only, no status or dates.
+    listing_url: https://www.nsfsport.com/certified-products/listing-detail.php?id=1207474
+    date_verified: 2026-11-05
+    entered_by: claude
+
+# MISSING: COA. thorne.com product page lists no lab results.
+coas: []
+
+flags: []
+notes: ""

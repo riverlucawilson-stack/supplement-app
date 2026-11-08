@@ -13,6 +13,13 @@ dose:
   creatine_per_serving_g: 5
   servings_per_container: 72    # iHerb, 360 g tub: "72"
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/44_c200a6e4-d6e2-4eba-a902-6b07ff01049a.jpg?v=1781895304
+    source_url: https://www.vitacost.com/cellucor-cor-performance-creatine-unflavored-72-servings
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: iHerb
     price_usd: 18.99            # iHerb: "Unflavored, 12.7oz (360 g)", "$18.99"

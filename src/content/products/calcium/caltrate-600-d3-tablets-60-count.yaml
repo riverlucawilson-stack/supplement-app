@@ -1,0 +1,39 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the retailer title minus health words ("Bone Health", "Bone Strength").
+# CHECK: the vitacost.com URL for "Caltrate 600+D3" returned a different product (Mason Natural), so Vitacost was not used.
+category: calcium
+entered_by: claude              # label info from target.com
+brand: Caltrate
+name: 600 + D3 Calcium Tablets, 60 Count   # target.com title "Caltrate Bone Health 600 & D3 Bone Strength Calcium Dietary Supplement Tablets" minus health words
+form: tablet
+calcium_form: carbonate         # target.com ingredients line lists calcium carbonate first (panel's "as ..." wording not shown on the page)
+# MISSING: branded_ingredient. None named on target.com.
+other_ingredients: [maltodextrin, blue 2 lake, cholecalciferol (vit. d3), croscarmellose sodium, magnesium stearate, polyethlene glycol, polyvinyl alcohol, red 40 lake, talc, titanium dioxide, tocopherols (to preserve freshness), yellow 6 lake]   # target.com ingredients line (calcium carbonate listed first; spelling "polyethlene" as printed)
+ingredients_confirmed: true     # full ingredients line read on target.com
+# CHECK: Target labels the line "Ingredients", not "Other ingredients".
+
+dose:
+  units_per_serving: 1          # target.com: "Amount 1 Tablet"
+  calcium_per_serving_mg: 600   # target.com: "Calcium 600mg" (60% DV shown there)
+  vitamin_d_mcg: 20             # target.com: "Vitamin D3 800IU"; converted at 40 IU = 1 mcg (800 / 40 = 20)
+  servings_per_container: 60    # CHECK: target.com has no servings line; derived from "Package Quantity: 60" at 1 tablet per serving
+
+# MISSING: photos.product. target.com content did not show a title/meta image, so no photo recorded.
+
+prices:
+  - retailer: Target
+    price_usd: 9.59             # target.com: $9.59 ($0.16/count), 60 count; no out-of-stock notice seen
+    servings: 60
+    url: https://www.target.com/p/-/A-15026212
+    date_checked: 2026-11-05
+    entered_by: claude
+
+# MISSING: certification. Certifier sites not checked (usp.org listing would not load). Brand/retailer claims not recorded.
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: [contains artificial colors (blue 2 lake, red 40 lake, yellow 6 lake), contains titanium dioxide]   # target.com ingredients line
+notes: ""

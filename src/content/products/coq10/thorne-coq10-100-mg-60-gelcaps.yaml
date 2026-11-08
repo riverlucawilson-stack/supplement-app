@@ -1,0 +1,42 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 60 gelcaps.
+# Formerly sold as "Q-Best 100" (per the page title).
+category: coq10
+entered_by: claude              # label info from vitacost.com
+brand: Thorne
+name: CoQ10 100 mg, 60 Gelcaps
+form: capsule                   # sold as "gelcaps"; ingredient list: gelatin (bovine) shell with oil fill
+coq10_form: other               # vitacost.com Supplement Facts: "Coenzyme Q10", no form named. (A walmart.com listing title says "Ubiquinone", but its panel was not shown, so not used.)
+# coq10_source: none. vitacost.com names no branded CoQ10 ingredient.
+other_ingredients: [gelatin (bovine), purified water, glycerin (vegetable source), lycopene and turmeric (color) gelcap, conjugated linoleic acid, flaxseed oil, soy monoglycerides]   # vitacost.com
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size one gelcap
+  coq10_per_serving_mg: 100     # vitacost.com: Coenzyme Q10 100 mg
+  servings_per_container: 60
+
+prices:
+  - retailer: Vitacost
+    price_usd: 53.00            # vitacost.com: sale price $53.00 (regular price also $53.00), 60 gelcaps
+    servings: 60
+    url: https://www.vitacost.com/thorne-coq10-formerly-q-best-100
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. Page shows a star breakdown (214 reviews) but no average, so none recorded.
+# NOT ADDED (auditor FIX): Walmart's main price block showed no price; $53.00 appeared only in a
+# sponsored listing, so it can't be confirmed for this listing. Page rating: 4.7 from 76 ratings.
+# https://www.walmart.com/ip/Thorne-CoQ10-formerly-Q-Best-100-100mg-Optimally-Absorbed-Ubiquinone-Gluten-Free-Dietary-Supplement-Support-Heart-Health-Brain-Function-60-Gelcaps/542333617
+
+# MISSING: certification. NSF's company listing (info.nsf.org/Certified/Dietary/Listings.asp?CompanyName=Thorne)
+# lists "Thorne CoQ10" (gelcap, 2 gelcaps; Summerville SC) and "Thorne CoQ10 (Canada)" (gelcap, 1 gelcap; Ogden UT),
+# both under NSF/ANSI 173 (Dietary Supplements), not Certified for Sport, and neither shows a strength. Neither
+# confirms this US 100 mg, 1-gelcap product, so nothing was recorded (and Standard 173 isn't a tracked program).
+# River: open the NSF page and check whether it is this product before adding it.
+certifications: []
+
+# MISSING: COA. vitacost.com page has no COA link; brand site not checked.
+coas: []
+
+# Label facts: allergen line on vitacost.com: "Contains ingredient derived from soy (soy monoglycerides)." Supplement Facts also lists calories 10, total fat 1 g, protein 0.5 g.
+flags: [Contains soy (soy monoglycerides), Contains bovine gelatin]
+notes: ""

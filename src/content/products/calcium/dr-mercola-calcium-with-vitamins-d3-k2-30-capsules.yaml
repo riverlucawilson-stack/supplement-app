@@ -1,0 +1,46 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the vitacost.com H1.
+category: calcium
+entered_by: claude              # label info from vitacost.com
+brand: Dr. Mercola
+name: Calcium with Vitamins D3 & K2, 30 Capsules   # vitacost.com H1
+form: capsule                   # vitacost.com title
+calcium_form: carbonate         # vitacost.com Supplement Facts: Calcium [as Calcium Carbonate (from Eggshell)]
+# MISSING: branded_ingredient. None named on vitacost.com.
+other_ingredients: [glycerol monostearate, capsule (hydroxypropyl methylcellulose), microcrystalline cellulose, medium chain triglycerides, organic rice flour, ascorbyl palmitate, rosemary leaf extract]   # vitacost.com other ingredients line
+ingredients_confirmed: true     # full other-ingredients line read on vitacost.com
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 capsule
+  calcium_per_serving_mg: 180   # vitacost.com Supplement Facts: Calcium 180 mg (14% DV), elemental line
+  vitamin_d_mcg: 125            # vitacost.com: 125 mcg (5,000 IU), as printed
+  vitamin_k_mcg: 180            # vitacost.com: Vitamin K2 (as MK-7) 180 mcg
+  servings_per_container: 30    # vitacost.com Supplement Facts: 30
+  # MISSING: magnesium_mg. Not listed on the vitacost.com panel.
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/58_9935bb1b-b248-4670-b3a5-59945be659ab.jpg?v=1790822041
+    source_url: https://www.vitacost.com/products/dr-mercola-calcium-with-vitamins-d3-k2-30-capsules-80672
+    alt: Dr. Mercola Calcium with Vitamins D3 & K2 30 capsules
+    date_checked: 2026-11-05
+    entered_by: claude          # page og:title names Dr. Mercola Calcium with Vitamins D3 & K2 30 Capsules
+
+prices:
+  - retailer: Vitacost
+    price_usd: 35.17            # vitacost.com: $35.17; Add to cart shown, no stock label either way
+    servings: 30
+    url: https://www.vitacost.com/products/dr-mercola-calcium-with-vitamins-d3-k2-30-capsules-80672
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. Page shows no average; not computed.
+
+# MISSING: certification. Certifier sites not checked. Brand/retailer claims not recorded.
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: [contains egg]   # vitacost.com allergen statement "Contains egg"
+notes: ""

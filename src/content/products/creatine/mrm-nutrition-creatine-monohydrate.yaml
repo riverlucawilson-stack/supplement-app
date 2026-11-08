@@ -13,6 +13,13 @@ dose:
   creatine_per_serving_g: 5     # facts: "Creatine Monohydrate | 5,000 mg"
   servings_per_container: 100   # facts (500 g): "Servings Per Container: 100"
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/24_6bb7ba2a-8e88-4e54-a5cb-45e514b0fb54.jpg?v=1781915114
+    source_url: https://www.vitacost.com/products/mrm-nutrition-creatine-monohydrate-500-1-1-lbs-500-g-115906
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 29.99            # "Creatine Monohydrate 500, 1.1 lbs (500 g)", "Sale price $29.99"

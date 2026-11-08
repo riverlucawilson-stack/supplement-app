@@ -1,0 +1,62 @@
+# BLANK CALCIUM PRODUCT TEMPLATE
+#
+# How to use it:
+#   1. Copy this file into src/content/products/calcium/
+#   2. Rename it, e.g. brandname-calcium-glycinate-200-mg.yaml (lowercase, dashes)
+#   3. Fill in every field from the sources named in the comments
+#   4. Delete any example lines you didn't use
+#   5. Run: npm run validate
+#
+# Only enter what you have seen yourself on the label, the seller's page,
+# the certifier's site, or the COA. If you can't find something, leave it out
+# (for optional fields) or leave the list empty with [].
+
+category: calcium
+
+# --- From the product label or the brand's product page ---
+brand: ""
+name: ""
+form: capsule                  # capsule | tablet | softgel | gummy | powder | liquid
+calcium_form: carbonate       # carbonate | citrate | carbonate_citrate | citrate_malate | phosphate | algae | hydroxyapatite | blend | other
+# format: chewable                        # chewable | gummy | soft chew, as labeled. Otherwise delete this line.
+# forms_listed: oxide, citrate, glycinate   # only for a blend: every form the label lists. Otherwise delete this line.
+# branded_ingredient: AlgaeCal                 # only if the label names one. Otherwise delete this line.
+other_ingredients: []          # everything else, e.g. [hypromellose, rice flour]
+
+dose:                          # from the Supplement Facts panel
+  units_per_serving: 0         # capsules / tablets / gummies / scoops in one serving
+  calcium_per_serving_mg: 0    # the "Calcium" line on Supplement Facts (elemental), NEVER the compound weight
+  # vitamin_d_mcg: 0           # only if listed (mcg; if the label shows only IU, 40 IU = 1 mcg and say so in a comment)
+  # vitamin_k_mcg: 0           # only if listed
+  # magnesium_mg: 0            # only if listed
+  servings_per_container: 0    # as printed on the label
+
+# --- From each retailer's product page. One block per store and size. ---
+prices:
+  - retailer: ""
+    price_usd: 0
+    servings: 0                # servings in the container THIS store sells
+    url: https://
+    date_checked: 2026-01-01
+    # rating:                  # optional: the store's own review summary
+    #   stars: 4.7
+    #   count: 1234
+
+# --- Only from the certifier's own website ---
+certifications: []
+#  - program: NSF Certified for Sport   # NSF Certified for Sport | Informed Sport | USP Verified | BSCG | Clean Label Project
+#    listing_url: https://
+#    date_verified: 2026-01-01
+
+# --- Certificate of analysis (lab report) ---
+coas: []
+#  - url: https://
+#    lab: ""
+#    iso_17025: unknown        # yes | no | unknown
+#    lot: ""
+#    test_date: 2026-01-01
+#    scope: finished_product   # finished_product | raw_material
+#    tests: [potency, identity, lead, arsenic, cadmium, mercury, microbial]
+
+flags: []                      # e.g. [added sugars, contains soy]
+notes: ""

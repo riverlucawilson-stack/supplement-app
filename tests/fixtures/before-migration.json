@@ -1,0 +1,1437 @@
+{
+  "ashwagandha/bulksupplements-ashwagandha-extract-powder.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "BulkSupplements.com",
+      "servings": 1666,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "BulkSupplements.com",
+        "costPerReferenceDose": 0.028193,
+        "costPer30Days": 0.845798
+      },
+      {
+        "retailer": "BulkSupplements.com",
+        "costPerReferenceDose": 0.05988,
+        "costPer30Days": 1.796403
+      }
+    ]
+  },
+  "ashwagandha/doctors-best-ashwagandha-with-sensoril.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "Doctor's Best",
+      "servings": 30,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Doctor's Best",
+        "costPerReferenceDose": 1.0392,
+        "costPer30Days": 31.176
+      },
+      {
+        "retailer": "Vitacost",
+        "costPerReferenceDose": 1.0392,
+        "costPer30Days": 31.176
+      }
+    ]
+  },
+  "ashwagandha/double-wood-supplements-ksm-66-ashwagandha.yaml": {
+    "tier": "B",
+    "best": {
+      "retailer": "Double Wood Supplements",
+      "servings": 180,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Double Wood Supplements",
+        "costPerReferenceDose": 0.299278,
+        "costPer30Days": 8.978333
+      },
+      {
+        "retailer": "Double Wood Supplements",
+        "costPerReferenceDose": 0.3325,
+        "costPer30Days": 9.975
+      },
+      {
+        "retailer": "Vitacost",
+        "costPerReferenceDose": 0.336333,
+        "costPer30Days": 10.09
+      }
+    ]
+  },
+  "ashwagandha/gaia-herbs-ashwagandha-gummies.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "Grove Collaborative",
+      "servings": 15,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Grove Collaborative",
+        "costPerReferenceDose": 0.989333,
+        "costPer30Days": 29.68
+      }
+    ]
+  },
+  "ashwagandha/gaia-herbs-ashwagandha-root.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "Gaia Herbs",
+      "servings": 180,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Gaia Herbs",
+        "costPerReferenceDose": 0.499905,
+        "costPer30Days": 14.997143
+      },
+      {
+        "retailer": "Gaia Herbs",
+        "costPerReferenceDose": 0.604143,
+        "costPer30Days": 18.124286
+      },
+      {
+        "retailer": "Vitacost",
+        "costPerReferenceDose": 0.604143,
+        "costPer30Days": 18.124286
+      },
+      {
+        "retailer": "Gaia Herbs",
+        "costPerReferenceDose": 0.719714,
+        "costPer30Days": 21.591429
+      },
+      {
+        "retailer": "Vitacost",
+        "costPerReferenceDose": 0.719714,
+        "costPer30Days": 21.591429
+      }
+    ]
+  },
+  "ashwagandha/garden-of-life-mykind-organics-ashwagandha.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "Vitacost",
+      "servings": 60,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Vitacost",
+        "costPerReferenceDose": 0.3265,
+        "costPer30Days": 9.795
+      }
+    ]
+  },
+  "ashwagandha/goli-ashwagandha-gummies.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "Vitacost",
+      "servings": 30,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Vitacost",
+        "costPerReferenceDose": 0.998667,
+        "costPer30Days": 29.96
+      }
+    ]
+  },
+  "ashwagandha/himalaya-organic-ashwagandha-gummies.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "Vitacost",
+      "servings": 28,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Vitacost",
+        "costPerReferenceDose": 1.285,
+        "costPer30Days": 38.55
+      },
+      {
+        "retailer": "Blue Sky Vitamin",
+        "costPerReferenceDose": 1.713571,
+        "costPer30Days": 51.407143
+      }
+    ]
+  },
+  "ashwagandha/himalaya-organic-ashwagandha.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "Himalaya",
+      "servings": 120,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Himalaya",
+        "costPerReferenceDose": 0.309627,
+        "costPer30Days": 9.288806
+      },
+      {
+        "retailer": "Walmart",
+        "costPerReferenceDose": 0.343134,
+        "costPer30Days": 10.29403
+      },
+      {
+        "retailer": "Vitacost",
+        "costPerReferenceDose": 0.353433,
+        "costPer30Days": 10.602985
+      },
+      {
+        "retailer": "Himalaya",
+        "costPerReferenceDose": 0.37801,
+        "costPer30Days": 11.340299
+      },
+      {
+        "retailer": "Himalaya",
+        "costPerReferenceDose": 0.410299,
+        "costPer30Days": 12.308955
+      },
+      {
+        "retailer": "Himalaya",
+        "costPerReferenceDose": 0.537015,
+        "costPer30Days": 16.110448
+      }
+    ]
+  },
+  "ashwagandha/jarrow-formulas-ashwagandha.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "Vitacost",
+      "servings": 120,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Vitacost",
+        "costPerReferenceDose": 0.382167,
+        "costPer30Days": 11.465
+      },
+      {
+        "retailer": "Jarrow Formulas",
+        "costPerReferenceDose": 0.4165,
+        "costPer30Days": 12.495
+      },
+      {
+        "retailer": "Target",
+        "costPerReferenceDose": 0.447167,
+        "costPer30Days": 13.415
+      }
+    ]
+  },
+  "ashwagandha/klean-athlete-klean-ashwagandha.yaml": {
+    "tier": "B",
+    "best": {
+      "retailer": "Klean Athlete",
+      "servings": 60,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Klean Athlete",
+        "costPerReferenceDose": 0.64,
+        "costPer30Days": 19.2
+      }
+    ]
+  },
+  "ashwagandha/life-extension-optimized-ashwagandha.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "Life Extension",
+      "servings": 60,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Life Extension",
+        "costPerReferenceDose": 0.6,
+        "costPer30Days": 18
+      },
+      {
+        "retailer": "Vitacost",
+        "costPerReferenceDose": 0.6,
+        "costPer30Days": 18
+      }
+    ]
+  },
+  "ashwagandha/momentous-ashwagandha.yaml": {
+    "tier": "B",
+    "best": {
+      "retailer": "Momentous",
+      "servings": 60,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Momentous",
+        "costPerReferenceDose": 0.833,
+        "costPer30Days": 24.99
+      }
+    ]
+  },
+  "ashwagandha/nature-made-ashwagandha-capsules.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "H-E-B",
+      "servings": 60,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "H-E-B",
+        "costPerReferenceDose": 1.1912,
+        "costPer30Days": 35.736
+      },
+      {
+        "retailer": "Nature Made",
+        "costPerReferenceDose": 1.8312,
+        "costPer30Days": 54.936
+      }
+    ]
+  },
+  "ashwagandha/natures-bounty-ashwagandha-gummies.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "ShopRite",
+      "servings": 30,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "ShopRite",
+        "costPerReferenceDose": 0.799333,
+        "costPer30Days": 23.98
+      },
+      {
+        "retailer": "Kroger",
+        "costPerReferenceDose": 1.932667,
+        "costPer30Days": 57.98
+      }
+    ]
+  },
+  "ashwagandha/nootropics-depot-ksm-66-ashwagandha.yaml": {
+    "tier": "B",
+    "best": null,
+    "prices": []
+  },
+  "ashwagandha/nootropics-depot-shoden-ashwagandha.yaml": {
+    "tier": "B",
+    "best": null,
+    "prices": []
+  },
+  "ashwagandha/now-foods-ashwagandha-450-mg.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "Vitacost",
+      "servings": 180,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Vitacost",
+        "costPerReferenceDose": 0.127037,
+        "costPer30Days": 3.811111
+      },
+      {
+        "retailer": "Vitacost",
+        "costPerReferenceDose": 0.145926,
+        "costPer30Days": 4.377778
+      },
+      {
+        "retailer": "NOW Foods",
+        "costPerReferenceDose": 0.259185,
+        "costPer30Days": 7.775556
+      },
+      {
+        "retailer": "NOW Foods",
+        "costPerReferenceDose": 0.296148,
+        "costPer30Days": 8.884444
+      },
+      {
+        "retailer": "NOW Foods",
+        "costPerReferenceDose": 0.444,
+        "costPer30Days": 13.32
+      }
+    ]
+  },
+  "ashwagandha/nutricost-ksm-66-capsules.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "Vitacost",
+      "servings": 60,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Vitacost",
+        "costPerReferenceDose": 0.249167,
+        "costPer30Days": 7.475
+      },
+      {
+        "retailer": "Nutricost",
+        "costPerReferenceDose": 0.282833,
+        "costPer30Days": 8.485
+      }
+    ]
+  },
+  "ashwagandha/organic-india-ashwagandha.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "Organic India",
+      "servings": 160,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Organic India",
+        "costPerReferenceDose": 0.234328,
+        "costPer30Days": 7.029844
+      },
+      {
+        "retailer": "Vitacost",
+        "costPerReferenceDose": 0.29175,
+        "costPer30Days": 8.7525
+      },
+      {
+        "retailer": "Organic India",
+        "costPerReferenceDose": 0.366583,
+        "costPer30Days": 10.9975
+      },
+      {
+        "retailer": "Vitacost",
+        "costPerReferenceDose": 0.394667,
+        "costPer30Days": 11.84
+      },
+      {
+        "retailer": "Organic India",
+        "costPerReferenceDose": 0.449833,
+        "costPer30Days": 13.495
+      },
+      {
+        "retailer": "Organic India",
+        "costPerReferenceDose": 0.49975,
+        "costPer30Days": 14.9925
+      }
+    ]
+  },
+  "ashwagandha/physicians-choice-ksm-66-ashwagandha.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "Vitacost",
+      "servings": 30,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Vitacost",
+        "costPerReferenceDose": 0.6294,
+        "costPer30Days": 18.882
+      }
+    ]
+  },
+  "ashwagandha/pure-encapsulations-ashwagandha.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "Vitacost",
+      "servings": 120,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Vitacost",
+        "costPerReferenceDose": 0.52,
+        "costPer30Days": 15.6
+      },
+      {
+        "retailer": "Vitacost",
+        "costPerReferenceDose": 0.58,
+        "costPer30Days": 17.4
+      }
+    ]
+  },
+  "ashwagandha/sports-research-organic-ashwagandha.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "Sports Research",
+      "servings": 90,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Sports Research",
+        "costPerReferenceDose": 0.366111,
+        "costPer30Days": 10.983333
+      }
+    ]
+  },
+  "ashwagandha/spring-valley-ashwagandha-root-powder-500-mg.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "Walmart",
+      "servings": 60,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Walmart",
+        "costPerReferenceDose": 0.1788,
+        "costPer30Days": 5.364
+      }
+    ]
+  },
+  "ashwagandha/swanson-ultimate-ashwagandha-ksm-66.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "Swanson",
+      "servings": 60,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Swanson",
+        "costPerReferenceDose": 0.5716,
+        "costPer30Days": 17.148
+      }
+    ]
+  },
+  "ashwagandha/thorne-ashwagandha.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "Thorne",
+      "servings": 30,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Thorne",
+        "costPerReferenceDose": 3.666667,
+        "costPer30Days": 110
+      },
+      {
+        "retailer": "Vitacost",
+        "costPerReferenceDose": 3.666667,
+        "costPer30Days": 110
+      }
+    ]
+  },
+  "ashwagandha/toniiq-ashwagandha-10.yaml": {
+    "tier": "B",
+    "best": {
+      "retailer": "Toniiq",
+      "servings": 135,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Toniiq",
+        "costPerReferenceDose": 0.217675,
+        "costPer30Days": 6.530256
+      },
+      {
+        "retailer": "Toniiq",
+        "costPerReferenceDose": 0.256103,
+        "costPer30Days": 7.683077
+      },
+      {
+        "retailer": "Vitacost",
+        "costPerReferenceDose": 0.256103,
+        "costPer30Days": 7.683077
+      }
+    ]
+  },
+  "ashwagandha/transparent-labs-ksm-66-ashwagandha.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "Transparent Labs",
+      "servings": 60,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Transparent Labs",
+        "costPerReferenceDose": 0.333167,
+        "costPer30Days": 9.995
+      },
+      {
+        "retailer": "The Vitamin Shoppe",
+        "costPerReferenceDose": 0.333167,
+        "costPer30Days": 9.995
+      }
+    ]
+  },
+  "creatine/10x-health-creatine-monohydrate.yaml": {
+    "tier": "B",
+    "best": {
+      "retailer": "10X Health",
+      "servings": 60,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "10X Health",
+        "costPerReferenceDose": 0.583167,
+        "costPer30Days": 17.495
+      }
+    ]
+  },
+  "creatine/1st-phorm-micronized-creatine-monohydrate.yaml": {
+    "tier": "B",
+    "best": {
+      "retailer": "1st Phorm",
+      "servings": 100,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "1st Phorm",
+        "costPerReferenceDose": 0.3999,
+        "costPer30Days": 11.997
+      },
+      {
+        "retailer": "1st Phorm",
+        "costPerReferenceDose": 0.5998,
+        "costPer30Days": 17.994
+      }
+    ]
+  },
+  "creatine/animal-creatine-chews.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "Navy Exchange",
+      "servings": 30,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Navy Exchange",
+        "costPerReferenceDose": 1.166333,
+        "costPer30Days": 34.99
+      }
+    ]
+  },
+  "creatine/athlean-rx-creatine-monohydrate.yaml": {
+    "tier": "B",
+    "best": {
+      "retailer": "ATHLEAN-X",
+      "servings": 90,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "ATHLEAN-X",
+        "costPerReferenceDose": 0.433222,
+        "costPer30Days": 12.996667
+      },
+      {
+        "retailer": "ATHLEAN-X",
+        "costPerReferenceDose": 0.599667,
+        "costPer30Days": 17.99
+      }
+    ]
+  },
+  "creatine/beast-bites-creatine-infused-gummies.yaml": {
+    "tier": "B",
+    "best": {
+      "retailer": "Beast Bites",
+      "servings": 15,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Beast Bites",
+        "costPerReferenceDose": 1.666,
+        "costPer30Days": 49.98
+      }
+    ]
+  },
+  "creatine/bloom-nutrition-creatine-monohydrate.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "H-E-B",
+      "servings": 40,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "H-E-B",
+        "costPerReferenceDose": 0.4995,
+        "costPer30Days": 14.985
+      }
+    ]
+  },
+  "creatine/bodyhealth-perfect-amino-creatine.yaml": {
+    "tier": "B",
+    "best": {
+      "retailer": "Vitacost",
+      "servings": 30,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Vitacost",
+        "costPerReferenceDose": 1.331667,
+        "costPer30Days": 39.95
+      }
+    ]
+  },
+  "creatine/bpn-creatine-monohydrate.yaml": {
+    "tier": "B",
+    "best": {
+      "retailer": "Bare Performance Nutrition",
+      "servings": 60,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Bare Performance Nutrition",
+        "costPerReferenceDose": 0.583167,
+        "costPer30Days": 17.495
+      },
+      {
+        "retailer": "Bare Performance Nutrition",
+        "costPerReferenceDose": 0.666333,
+        "costPer30Days": 19.99
+      }
+    ]
+  },
+  "creatine/bubs-naturals-boost-creatine-monohydrate.yaml": {
+    "tier": "B",
+    "best": {
+      "retailer": "BUBS Naturals",
+      "servings": 90,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "BUBS Naturals",
+        "costPerReferenceDose": 0.477778,
+        "costPer30Days": 14.333333
+      },
+      {
+        "retailer": "Vitacost",
+        "costPerReferenceDose": 0.477778,
+        "costPer30Days": 14.333333
+      },
+      {
+        "retailer": "BUBS Naturals",
+        "costPerReferenceDose": 1.233333,
+        "costPer30Days": 37
+      }
+    ]
+  },
+  "creatine/bucked-up-essentials-creatine-monohydrate.yaml": {
+    "tier": "B",
+    "best": {
+      "retailer": "Bucked Up",
+      "servings": 50,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Bucked Up",
+        "costPerReferenceDose": 0.3998,
+        "costPer30Days": 11.994
+      }
+    ]
+  },
+  "creatine/bulksupplements-creatine-monohydrate.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "BulkSupplements.com",
+      "servings": 200,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "BulkSupplements.com",
+        "costPerReferenceDose": 0.15485,
+        "costPer30Days": 4.6455
+      },
+      {
+        "retailer": "BulkSupplements.com",
+        "costPerReferenceDose": 0.2397,
+        "costPer30Days": 7.191
+      }
+    ]
+  },
+  "creatine/cellucor-cor-performance-creatine-monohydrate.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "iHerb",
+      "servings": 72,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "iHerb",
+        "costPerReferenceDose": 0.26375,
+        "costPer30Days": 7.9125
+      },
+      {
+        "retailer": "Vitacost",
+        "costPerReferenceDose": 0.26375,
+        "costPer30Days": 7.9125
+      }
+    ]
+  },
+  "creatine/con-cret-creatine-hcl.yaml": {
+    "tier": "B",
+    "best": {
+      "retailer": "GNC",
+      "servings": 64,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "GNC",
+        "costPerReferenceDose": 3.123958,
+        "costPer30Days": 93.71875
+      }
+    ]
+  },
+  "creatine/create-wellness-creatine-electrolytes-mix.yaml": {
+    "tier": "B",
+    "best": {
+      "retailer": "Create Wellness",
+      "servings": 30,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Create Wellness",
+        "costPerReferenceDose": 2,
+        "costPer30Days": 60
+      }
+    ]
+  },
+  "creatine/create-wellness-creatine-monohydrate-gummies.yaml": {
+    "tier": "B",
+    "best": {
+      "retailer": "GNC",
+      "servings": 15,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "GNC",
+        "costPerReferenceDose": 1.851111,
+        "costPer30Days": 55.533333
+      },
+      {
+        "retailer": "Walmart",
+        "costPerReferenceDose": 1.851111,
+        "costPer30Days": 55.533333
+      }
+    ]
+  },
+  "creatine/designs-for-sport-creatine-monohydrate.yaml": {
+    "tier": "B",
+    "best": {
+      "retailer": "Vitacost",
+      "servings": 90,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Vitacost",
+        "costPerReferenceDose": 0.544333,
+        "costPer30Days": 16.33
+      }
+    ]
+  },
+  "creatine/dotfit-creatine-monohydrate.yaml": {
+    "tier": "B",
+    "best": {
+      "retailer": "dotFIT",
+      "servings": 60,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "dotFIT",
+        "costPerReferenceDose": 0.615833,
+        "costPer30Days": 18.475
+      }
+    ]
+  },
+  "creatine/dymatize-creatine-monohydrate.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "GoSupps",
+      "servings": 60,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "GoSupps",
+        "costPerReferenceDose": 0.749833,
+        "costPer30Days": 22.495
+      }
+    ]
+  },
+  "creatine/force-factor-creatine-monohydrate-gummies.yaml": {
+    "tier": "B",
+    "best": {
+      "retailer": "iHerb",
+      "servings": 30,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "iHerb",
+        "costPerReferenceDose": 0.999667,
+        "costPer30Days": 29.99
+      },
+      {
+        "retailer": "Target",
+        "costPerReferenceDose": 1.099667,
+        "costPer30Days": 32.99
+      }
+    ]
+  },
+  "creatine/ghost-creatine.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "GHOST",
+      "servings": 50,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "GHOST",
+        "costPerReferenceDose": 0.4998,
+        "costPer30Days": 14.994
+      },
+      {
+        "retailer": "The Vitamin Shoppe",
+        "costPerReferenceDose": 0.4998,
+        "costPer30Days": 14.994
+      }
+    ]
+  },
+  "creatine/gorilla-mind-creatine-monohydrate-gummies.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "The Vitamin Shoppe",
+      "servings": 30,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "The Vitamin Shoppe",
+        "costPerReferenceDose": 1.666333,
+        "costPer30Days": 49.99
+      }
+    ]
+  },
+  "creatine/jocko-fuel-creatine.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "Jocko Fuel",
+      "servings": 90,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Jocko Fuel",
+        "costPerReferenceDose": 0.444333,
+        "costPer30Days": 13.33
+      },
+      {
+        "retailer": "Jocko Fuel",
+        "costPerReferenceDose": 0.833,
+        "costPer30Days": 24.99
+      }
+    ]
+  },
+  "creatine/kaged-creaclear.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "The Vitamin Shoppe",
+      "servings": 30,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "The Vitamin Shoppe",
+        "costPerReferenceDose": 0.549667,
+        "costPer30Days": 16.49
+      }
+    ]
+  },
+  "creatine/kaged-creatine-hcl-capsules.yaml": {
+    "tier": "B",
+    "best": {
+      "retailer": "Kaged",
+      "servings": 75,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Kaged",
+        "costPerReferenceDose": 2.221333,
+        "costPer30Days": 66.64
+      },
+      {
+        "retailer": "Vitacost",
+        "costPerReferenceDose": 2.417778,
+        "costPer30Days": 72.533333
+      }
+    ]
+  },
+  "creatine/kaged-creatine-hcl-powder.yaml": {
+    "tier": "B",
+    "best": {
+      "retailer": "Kaged",
+      "servings": 75,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Kaged",
+        "costPerReferenceDose": 2.221333,
+        "costPer30Days": 66.64
+      },
+      {
+        "retailer": "Vitacost",
+        "costPerReferenceDose": 2.417778,
+        "costPer30Days": 72.533333
+      }
+    ]
+  },
+  "creatine/klean-athlete-klean-creatine.yaml": {
+    "tier": "B",
+    "best": {
+      "retailer": "Klean Athlete",
+      "servings": 60,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Klean Athlete",
+        "costPerReferenceDose": 0.575,
+        "costPer30Days": 17.25
+      }
+    ]
+  },
+  "creatine/legion-creatine-monohydrate-gummies.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "Target",
+      "servings": 30,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Target",
+        "costPerReferenceDose": 1.165,
+        "costPer30Days": 34.95
+      }
+    ]
+  },
+  "creatine/momentous-creatine-chews.yaml": {
+    "tier": "B",
+    "best": {
+      "retailer": "Sports Basement",
+      "servings": 30,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Sports Basement",
+        "costPerReferenceDose": 1.666333,
+        "costPer30Days": 49.99
+      }
+    ]
+  },
+  "creatine/momentous-creatine.yaml": {
+    "tier": "B",
+    "best": {
+      "retailer": "Momentous",
+      "servings": 90,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Momentous",
+        "costPerReferenceDose": 0.477667,
+        "costPer30Days": 14.33
+      }
+    ]
+  },
+  "creatine/mrm-nutrition-creatine-monohydrate.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "Vitacost",
+      "servings": 100,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Vitacost",
+        "costPerReferenceDose": 0.2999,
+        "costPer30Days": 8.997
+      },
+      {
+        "retailer": "Vitacost",
+        "costPerReferenceDose": 0.346,
+        "costPer30Days": 10.38
+      }
+    ]
+  },
+  "creatine/muscletech-platinum-100-creatine.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "MuscleTech",
+      "servings": 80,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "MuscleTech",
+        "costPerReferenceDose": 0.287375,
+        "costPer30Days": 8.62125
+      },
+      {
+        "retailer": "iHerb",
+        "costPerReferenceDose": 0.289875,
+        "costPer30Days": 8.69625
+      }
+    ]
+  },
+  "creatine/myprotein-creapure-creatine-monohydrate.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "GNC",
+      "servings": 50,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "GNC",
+        "costPerReferenceDose": 0.3998,
+        "costPer30Days": 11.994
+      }
+    ]
+  },
+  "creatine/myprotein-creatine-monohydrate-gummies.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "The Vitamin Shoppe",
+      "servings": 18,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "The Vitamin Shoppe",
+        "costPerReferenceDose": 1.666111,
+        "costPer30Days": 49.983333
+      },
+      {
+        "retailer": "GNC",
+        "costPerReferenceDose": 1.666111,
+        "costPer30Days": 49.983333
+      }
+    ]
+  },
+  "creatine/naked-nutrition-naked-creatine.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "Naked Nutrition",
+      "servings": 200,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Naked Nutrition",
+        "costPerReferenceDose": 0.17995,
+        "costPer30Days": 5.3985
+      },
+      {
+        "retailer": "Naked Nutrition",
+        "costPerReferenceDose": 0.2199,
+        "costPer30Days": 6.597
+      }
+    ]
+  },
+  "creatine/nootropics-depot-creatine-monohydrate.yaml": {
+    "tier": "B",
+    "best": {
+      "retailer": "Nootropics Depot",
+      "servings": 100,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Nootropics Depot",
+        "costPerReferenceDose": 0.3499,
+        "costPer30Days": 10.497
+      }
+    ]
+  },
+  "creatine/now-sports-creatine-monohydrate.yaml": {
+    "tier": "B",
+    "best": {
+      "retailer": "iHerb",
+      "servings": 200,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "iHerb",
+        "costPerReferenceDose": 0.1923,
+        "costPer30Days": 5.769
+      },
+      {
+        "retailer": "Vitacost",
+        "costPerReferenceDose": 0.1923,
+        "costPer30Days": 5.769
+      },
+      {
+        "retailer": "NOW Foods",
+        "costPerReferenceDose": 0.206167,
+        "costPer30Days": 6.185
+      },
+      {
+        "retailer": "NOW Foods",
+        "costPerReferenceDose": 0.2062,
+        "costPer30Days": 6.186
+      },
+      {
+        "retailer": "NOW Foods",
+        "costPerReferenceDose": 0.266444,
+        "costPer30Days": 7.993333
+      }
+    ]
+  },
+  "creatine/nutrabio-micronized-creatine-monohydrate.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "iHerb",
+      "servings": 100,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "iHerb",
+        "costPerReferenceDose": 0.3599,
+        "costPer30Days": 10.797
+      },
+      {
+        "retailer": "Vitacost",
+        "costPerReferenceDose": 0.3599,
+        "costPer30Days": 10.797
+      },
+      {
+        "retailer": "Target",
+        "costPerReferenceDose": 0.3899,
+        "costPer30Days": 11.697
+      }
+    ]
+  },
+  "creatine/nutricost-creatine-monohydrate-powder.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "Target",
+      "servings": 100,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Target",
+        "costPerReferenceDose": 0.215,
+        "costPer30Days": 6.45
+      },
+      {
+        "retailer": "Nutricost",
+        "costPerReferenceDose": 0.23485,
+        "costPer30Days": 7.0455
+      },
+      {
+        "retailer": "Nutricost",
+        "costPerReferenceDose": 0.2397,
+        "costPer30Days": 7.191
+      },
+      {
+        "retailer": "Nutricost",
+        "costPerReferenceDose": 0.316167,
+        "costPer30Days": 9.485
+      },
+      {
+        "retailer": "Nutricost",
+        "costPerReferenceDose": 0.565667,
+        "costPer30Days": 16.97
+      }
+    ]
+  },
+  "creatine/optimum-nutrition-micronized-creatine-capsules.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "Optimum Nutrition",
+      "servings": 150,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Optimum Nutrition",
+        "costPerReferenceDose": 0.766533,
+        "costPer30Days": 22.996
+      },
+      {
+        "retailer": "Optimum Nutrition",
+        "costPerReferenceDose": 0.7998,
+        "costPer30Days": 23.994
+      },
+      {
+        "retailer": "iHerb",
+        "costPerReferenceDose": 0.8072,
+        "costPer30Days": 24.216
+      },
+      {
+        "retailer": "Optimum Nutrition",
+        "costPerReferenceDose": 0.9196,
+        "costPer30Days": 27.588
+      }
+    ]
+  },
+  "creatine/optimum-nutrition-micronized-creatine-powder.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "Optimum Nutrition",
+      "servings": 240,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Optimum Nutrition",
+        "costPerReferenceDose": 0.224958,
+        "costPer30Days": 6.74875
+      },
+      {
+        "retailer": "iHerb",
+        "costPerReferenceDose": 0.23325,
+        "costPer30Days": 6.9975
+      },
+      {
+        "retailer": "Optimum Nutrition",
+        "costPerReferenceDose": 0.266583,
+        "costPer30Days": 7.9975
+      },
+      {
+        "retailer": "Optimum Nutrition",
+        "costPerReferenceDose": 0.3415,
+        "costPer30Days": 10.245
+      }
+    ]
+  },
+  "creatine/prohealth-longevity-longevity-creatine.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "Vitacost",
+      "servings": 90,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Vitacost",
+        "costPerReferenceDose": 0.555,
+        "costPer30Days": 16.65
+      }
+    ]
+  },
+  "creatine/sports-research-creatine-monohydrate.yaml": {
+    "tier": "B",
+    "best": {
+      "retailer": "Sports Research",
+      "servings": 60,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Sports Research",
+        "costPerReferenceDose": 0.299167,
+        "costPer30Days": 8.975
+      }
+    ]
+  },
+  "creatine/swolverine-creatine-monohydrate.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "Swolverine",
+      "servings": 30,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Swolverine",
+        "costPerReferenceDose": 0.833,
+        "costPer30Days": 24.99
+      }
+    ]
+  },
+  "creatine/thorne-creatine.yaml": {
+    "tier": "B",
+    "best": {
+      "retailer": "Thorne",
+      "servings": 90,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Thorne",
+        "costPerReferenceDose": 0.488889,
+        "costPer30Days": 14.666667
+      }
+    ]
+  },
+  "creatine/transparent-labs-creatine-hmb.yaml": {
+    "tier": "B",
+    "best": {
+      "retailer": "Transparent Labs",
+      "servings": 60,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "Transparent Labs",
+        "costPerReferenceDose": 1.499833,
+        "costPer30Days": 44.995
+      },
+      {
+        "retailer": "Transparent Labs",
+        "costPerReferenceDose": 1.666333,
+        "costPer30Days": 49.99
+      },
+      {
+        "retailer": "Scheels",
+        "costPerReferenceDose": 1.666333,
+        "costPer30Days": 49.99
+      }
+    ]
+  },
+  "creatine/xwerks-lift.yaml": {
+    "tier": "C",
+    "best": {
+      "retailer": "XWERKS",
+      "servings": 80,
+      "stale": false
+    },
+    "prices": [
+      {
+        "retailer": "XWERKS",
+        "costPerReferenceDose": 0.6125,
+        "costPer30Days": 18.375
+      }
+    ]
+  }
+}

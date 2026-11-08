@@ -1,0 +1,45 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the page H1 (vitacost.com).
+category: curcumin
+entered_by: claude              # label info from vitacost.com
+brand: Life Extension
+name: Super Bio-Curcumin® Turmeric Extract, 60 Vegetarian Capsules (400 mg per Capsule)   # vitacost.com H1
+form: capsule
+formulation: enhanced           # vitacost.com Supplement Facts: BCM-95® Bio-Curcumin® 25:1 extract, curcuminoids complex with essential oils of turmeric rhizome
+branded_ingredient: BCM-95      # vitacost.com Supplement Facts: "BCM-95® Bio-Curcumin®"
+absorption_claim: '"Up to 7 Times Greater Absorption"; "BCM-95® is up to seven times more absorbable than standard curcumin." (vitacost.com product description; no footnote qualifies it, only the general FDA disclaimer)'
+other_ingredients: [vegetable cellulose (capsule), microcrystalline cellulose, stearic acid, silica]   # vitacost.com
+ingredients_confirmed: true     # full other-ingredients line read on vitacost.com
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 vegetarian capsule
+  # curcuminoids_per_serving_mg left out on purpose. The panel line is "BCM-95 Bio-Curcumin 25:1 extract, standardized to 95% Total Curcuminoids Complex with Essential Oils of Turmeric Rhizome by HPLC (380 mg)" = 400 mg.
+  # The 95% / 380 mg applies to a complex that includes essential oils, so it is not a pure curcuminoid mg. Not used.
+  turmeric_per_serving_mg: 400  # vitacost.com: extract line 400 mg (reference only)
+  servings_per_container: 60    # vitacost.com
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/83_dc723538-a528-4498-946c-f3b52f130ec7.jpg?v=1781976870
+    source_url: https://www.vitacost.com/products/life-extension-super-bio-curcumin-turmeric-extract-60-vegetarian-capsules-400-mg-per-capsule-15211
+    alt: Life Extension Super Bio-Curcumin 60 capsule bottle   # page title and meta description describe this product
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 30.00            # vitacost.com: $30.00 (regular and sale price the same), 60 count, Add to cart shown, no out-of-stock notice
+    servings: 60
+    url: https://www.vitacost.com/products/life-extension-super-bio-curcumin-turmeric-extract-60-vegetarian-capsules-400-mg-per-capsule-15211
+    date_checked: 2026-11-05
+    entered_by: claude
+
+# MISSING: certification. Certifier sites not checked. vitacost.com says "Non GMO LE Certified": brand claim, not recorded.
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: [curcuminoids stated only as a complex with turmeric essential oils (380 mg)]   # vitacost.com Supplement Facts BCM-95 line
+notes: ""

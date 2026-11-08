@@ -1,0 +1,34 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude
+# still needs River's check against its link.
+category: vitamin-b12
+entered_by: claude              # label info from thorne.com
+brand: Thorne
+name: Vitamin B12
+form: capsule
+b12_form: methylcobalamin       # thorne.com: "Vitamin B12 (as Methylcobalamin)"
+other_ingredients: [leucine, microcrystalline cellulose, silicon dioxide, hypromellose capsule]   # thorne.com
+
+dose:
+  units_per_serving: 1          # thorne.com: serving size 1 capsule
+  vitamin_b12_per_serving_mcg: 1000   # thorne.com label line reads "1mg" = 1,000 mcg
+  servings_per_container: 90
+
+prices:
+  - retailer: Thorne
+    price_usd: 34.00            # thorne.com: "$34" for 90 capsules
+    servings: 90
+    url: https://www.thorne.com/products/dp/vitamin-b12-90
+    date_checked: 2026-10-22
+    entered_by: claude
+
+# MISSING/CHECK: NSF Certified for Sport. The thorne.com product page says "NSF Certified for Sport" but gives no
+# listing; the linked thorne.com/nsf-certified-for-sport page names only Creatine and links to no certifier listing.
+# info.nsf.org/Certified/BannedSub/Listings.asp (first part of page) had no Thorne or B12 entry; the page text was
+# cut off partway, so not ruled out. Not confirmed on the certifier's site, so left out.
+certifications: []
+
+# MISSING: COA. No COA or lab-results link on the thorne.com product page.
+coas: []
+
+flags: []
+notes: ""

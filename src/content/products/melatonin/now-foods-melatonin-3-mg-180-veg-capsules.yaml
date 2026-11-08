@@ -1,0 +1,33 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name from the vitacost.com title.
+category: melatonin
+entered_by: claude              # label info from vitacost.com and nowfoods.com
+brand: NOW Foods
+name: Melatonin 3 mg, 180 Veg Capsules   # vitacost.com title
+form: capsule
+release: not_stated             # vitacost.com and nowfoods.com pages have no release wording
+other_ingredients: [rice flour, hypromellose (cellulose capsule)]   # vitacost.com line
+ingredients_confirmed: true     # full line read on vitacost.com; nowfoods.com agrees
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 veg capsule
+  melatonin_mg: 3               # vitacost.com Supplement Facts: Melatonin 3 mg
+  servings_per_container: 180   # vitacost.com: 180; nowfoods.com lists 180 servings for the 180 size
+
+prices:
+  - retailer: Vitacost
+    price_usd: 9.17             # vitacost.com: $9.17, 180 capsules, Add to cart shown (stock not stated)
+    servings: 180
+    url: https://www.vitacost.com/products/now-foods-melatonin-3-mg-180-veg-capsules-328
+    date_checked: 2026-11-05
+    entered_by: claude
+
+# MISSING: certification. nsfsport.com brand search "NOW" on 2026-11-05 returned no results; USP page (quality-supplements.org) would not load. nowfoods.com page names no certifier.
+certifications: []
+
+# MISSING: COA. nowfoods.com product page shows no lab results link.
+coas: []
+
+flags: []
+notes: ""

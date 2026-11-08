@@ -1,0 +1,46 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the vitacost.com H1.
+category: calcium
+entered_by: claude              # label info from vitacost.com
+brand: NOW Foods
+name: Calcium Citrate, 100 Tablets   # vitacost.com H1
+form: tablet
+calcium_form: citrate           # vitacost.com panel: Calcium (from calcium citrate)
+# MISSING: branded_ingredient. None named on vitacost.com.
+other_ingredients: [hydroxypropyl cellulose, vegetarian coating, croscarmellose sodium, silicon dioxide, magnesium stearate (vegetable source), stearic acid (vegetable source)]   # vitacost.com other ingredients line
+ingredients_confirmed: true     # full line read on vitacost.com
+
+dose:
+  units_per_serving: 2          # vitacost.com: serving size 2 tablets
+  calcium_per_serving_mg: 600   # vitacost.com Supplement Facts: Calcium (from calcium citrate) 600 mg
+  vitamin_d_mcg: 10             # vitacost.com: Vitamin D2 (ergocalciferol) 10 mcg (400 IU), as printed
+  magnesium_mg: 300             # vitacost.com: Magnesium (from magnesium oxide and magnesium aspartate) 300 mg
+  servings_per_container: 50    # vitacost.com Supplement Facts: 50 (Key info says "Total servings 100 count", which is tablets)
+  # MISSING: vitamin_k_mcg. Not listed.
+  # Panel also lists zinc 15 mg, copper 1 mg, manganese 5 mg (not tracked fields).
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/8_e3e7cf8c-8846-415b-8d11-2c57bf570937.jpg?v=1781997715
+    source_url: https://www.vitacost.com/products/now-foods-calcium-citrate-100-tablets-120064
+    alt: NOW Foods Calcium Citrate 100 tablets bottle
+    date_checked: 2026-11-05
+    entered_by: claude          # page title/meta name NOW Foods Calcium Citrate 100 tablets
+
+prices:
+  - retailer: Vitacost
+    price_usd: 13.46            # vitacost.com: $13.46; Add to cart shown, no stock label either way
+    servings: 50
+    url: https://www.vitacost.com/products/now-foods-calcium-citrate-100-tablets-120064
+    date_checked: 2026-11-05
+    entered_by: claude
+
+# MISSING: certification. Certifier sites not checked.
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: []
+notes: ""

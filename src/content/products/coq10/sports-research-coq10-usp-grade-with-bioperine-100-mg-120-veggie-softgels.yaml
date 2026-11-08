@@ -1,0 +1,35 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 120 veggie softgels.
+category: coq10
+entered_by: claude              # label info from vitacost.com
+brand: Sports Research
+name: CoQ10 USP Grade with BioPerine 100 mg, 120 Veggie Softgels
+form: softgel
+coq10_form: ubiquinone          # vitacost.com Supplement Facts: "Coenzyme Q10 (Ubiquinone USP)"
+# coq10_source: none. vitacost.com names no branded CoQ10 ingredient.
+carrier_oil: coconut MCT oil    # vitacost.com other ingredients: "Coconut MCT oil"
+other_ingredients: [coconut MCT oil, Plantgel capsule (non-GMO modified tapioca starch, vegetable glycerin, purified water), rice bran wax]   # vitacost.com
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 veggie softgel
+  coq10_per_serving_mg: 100     # vitacost.com: 100 mg
+  servings_per_container: 120
+
+prices:
+  - retailer: Vitacost
+    price_usd: 28.97            # vitacost.com: sale price $28.97 (regular price also $28.97), 120 veggie softgels
+    servings: 120
+    url: https://www.vitacost.com/products/sports-research-coq10-usp-grade-with-bioperine-120-veggie-softgels-90291
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. Page shows a star breakdown (194 ratings) but no average, so none recorded.
+
+# MISSING: certification. Page lists "Third Party Tested", NSF Gluten Free, Non GMO Project Verified, Certified Vegan (brand/retailer claims,
+# none among the programs this site tracks, none checked on a certifier's site). Nothing recorded.
+certifications: []
+
+# MISSING: COA. vitacost.com page has no COA link. Searched for a Sports Research COA page; none found.
+coas: []
+
+flags: ["Includes BioPerine black pepper extract 5 mg (standardized to 95% piperine) per softgel", "contains tree nuts (coconut)"]   # allergen line on vitacost.com: "Contains: Tree nuts (coconut)"
+notes: ""

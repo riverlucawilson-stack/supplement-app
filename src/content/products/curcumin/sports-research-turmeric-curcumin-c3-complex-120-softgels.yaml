@@ -1,0 +1,41 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the label/title name only: no health words added.
+# MISSING: the C3 Complex name is on the Supplement Facts line; the vitacost.com title is just "Turmeric Curcumin, 120 Softgels".
+category: curcumin
+entered_by: claude              # label info from vitacost.com
+brand: Sports Research
+name: Turmeric Curcumin, 120 Softgels   # vitacost.com H1/title; C3 Complex and BioPerine are recorded as the branded ingredient
+form: softgel
+formulation: extract_with_piperine   # vitacost.com Supplement Facts: turmeric extract (95% curcuminoids) + black pepper extract (BioPerine)
+branded_ingredient: Curcumin C3 Complex   # vitacost.com Supplement Facts: "(Curcumin C3 Complex®)"; piperine line is "(BioPerine®)"
+# MISSING: absorption_claim. vitacost.com says only "Formulated with organic coconut oil and Bioperine® black pepper extract" (description of ingredients, no absorption/bioavailability wording on the page). Not recorded as a claim.
+other_ingredients: [organic virgin coconut oil, softgel capsule (gelatin, vegetable glycerin, purified water), organic beeswax]   # vitacost.com "Ingredients" line
+ingredients_confirmed: true     # full ingredients line read on vitacost.com (labeled "Ingredients", not "Other Ingredients")
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 softgel
+  curcuminoids_per_serving_mg: 475   # vitacost.com Supplement Facts: "standardized to 95% curcuminoids (475 mg)" (stated on label, not calculated)
+  turmeric_per_serving_mg: 500  # vitacost.com: Turmeric Extract 500 mg (reference only)
+  piperine_per_serving_mg: 4.75 # vitacost.com: Black Pepper Extract "standardized to 95% piperine (4.75 mg)" (BioPerine, 5 mg extract)
+  servings_per_container: 120   # vitacost.com: 120
+
+# photos: removed 2026-11-05. The vitacost.com page's meta tags describe a different product, so its og:image can't be trusted without a look.
+
+prices:
+  - retailer: Vitacost
+    price_usd: 33.97            # vitacost.com: $33.97, 120 softgels, Add to cart shown, no out-of-stock notice
+    servings: 120
+    url: https://www.vitacost.com/products/sports-research-turmeric-curcumin-120-softgels-72054
+    date_checked: 2026-11-05
+    entered_by: claude
+
+# MISSING: certification. Certifier sites (NSF, Informed Sport, USP, BSCG, Clean Label Project) not checked.
+# vitacost.com says "Third Party Tested" and "Igen Non-GMO Tested": brand/retailer claims only, not recorded.
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: [contains black pepper extract (piperine), contains tree nuts (coconut)]   # vitacost.com Supplement Facts / allergen note
+notes: ""

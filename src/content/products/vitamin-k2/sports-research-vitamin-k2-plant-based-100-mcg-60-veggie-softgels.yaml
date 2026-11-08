@@ -1,0 +1,33 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 60 veggie softgels.
+category: vitamin-k2
+entered_by: claude              # label info from vitacost.com
+brand: Sports Research
+name: Vitamin K2 Plant-Based 100 mcg, 60 Veggie Softgels
+form: softgel
+k2_form: mk7                    # vitacost.com: "Vitamin K2 (as Menaquinone-7) (MK-7 from Chickpea)"
+carrier_oil: coconut MCT oil    # vitacost.com other ingredients
+other_ingredients: [coconut MCT oil, plantgel capsule (non-GMO modified tapioca starch, vegetable glycerin, purified water, turmeric for color)]   # vitacost.com
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 veggie softgel
+  vitamin_k2_per_serving_mcg: 100 # vitacost.com: 100 mcg
+  servings_per_container: 60
+
+prices:
+  - retailer: Vitacost
+    price_usd: 18.97            # vitacost.com: "Regular price" $18.97 for 60 softgels
+    servings: 60
+    url: https://www.vitacost.com/products/sports-research-vitamin-k2-plant-based-100-mcg-60-veggie-softgels-72733
+    date_checked: 2026-10-22
+    entered_by: claude
+
+# MISSING/CHECK: certification. nsfsport.com results list showed the Sports Research brand but no products
+# visible (list cut off); sport.wetestyoutrust.com could not be confirmed. Nothing recorded.
+certifications: []
+
+# MISSING: COA. Not checked on the brand's site; vitacost.com page has no COA link.
+coas: []
+
+flags: ["contains tree nuts (coconut)"]   # label: "Contains: Tree nuts (coconut)."
+notes: ""

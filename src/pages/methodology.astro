@@ -1,0 +1,230 @@
+---
+// The Methodology page: how prices are compared, how COAs and tiers work, and
+// what "date checked" means. River approved the wording on 2026-11-05.
+// Limits and comparison amounts come from src/settings.ts and categories/*.yaml,
+// so this page updates itself when those change.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { categoryList } from '../categories';
+import { settings } from '../settings';
+
+// Extra words for categories where "what counts" isn't obvious from the comparison amount.
+const counts: Record<string, string> = {
+  ashwagandha: 'Extract or root powder, as labeled. The two aren’t the same thing at the same weight.',
+  magnesium: 'The elemental magnesium on the Supplement Facts panel, never the compound weight.',
+  'fish-oil': 'EPA plus DHA from the Supplement Facts panel, not the total amount of oil.',
+  multivitamin: 'One daily serving as the label defines it: price ÷ servings in the container.',
+  'vitamin-k2': 'Vitamin K2 only. Vitamin K1 isn’t counted.',
+};
+const rows = categoryList
+  .filter((c) => c.published)
+  .map((c) => ({ name: c.name, path: c.path, amount: c.referenceDose.label.replace(/^per /, ''), daily: c.daily?.label, note: counts[c.id] }));
+import { ingredientRules, levelLabels } from '../ingredients/rules';
+import { levelOrder } from '../lib/ingredients';
+const rulesByLevel = levelOrder.map((level) => ({ level, rules: ingredientRules.filter((r) => r.level === level) })).filter((g) => g.rules.length);
+---
+
+<BaseLayout
+  title="Methodology"
+  description="How Sup Search collects prices, converts them to a cost per fixed amount of each ingredient, judges lab reports, assigns transparency tiers, and dates every value."
+>
+  <article class="wrap prose">
+    <h1>Methodology</h1>
+    <p class="lede">How we collect prices, compare them fairly, judge lab reports, and grade testing transparency.</p>
+
+    <h2>How prices are collected</h2>
+    <ul>
+      <li>
+        A person opens a single public product page, such as the brand’s own store or a retailer like Vitacost, GNC,
+        Target or Walmart, and copies the price shown that day. There’s no automated scraping.
+      </li>
+      <li>The price recorded is the regular price you’d pay that day, before shipping.</li>
+      <li>
+        Each price is saved with the store, the number of servings in that store’s container, the page link, and the
+        date it was checked.
+      </li>
+      <li>Amounts per serving come from the product’s Supplement Facts panel, not the marketing text.</li>
+      <li>Products whose values our editor hasn’t yet checked against their sources are marked “Not yet reviewed.”</li>
+    </ul>
+
+    <h2>How we compare prices</h2>
+    <p>
+      Every price is converted to the cost of one fixed amount of the main ingredient, so a big tub and a small bottle
+      can be compared fairly:
+    </p>
+    <p class="formula">
+      cost per comparison amount = price ÷ (servings in the container × amount per serving) × comparison amount
+    </p>
+    <div class="table">
+      <table>
+        <thead>
+          <tr><th scope="col">Category</th><th scope="col">Compared per</th><th scope="col">What counts</th></tr>
+        </thead>
+        <tbody>
+          {
+            rows.map((r) => (
+              <tr>
+                <th scope="row"><a href={r.path}>{r.name}</a></th>
+                <td>{r.amount}</td>
+                <td>{r.note ?? 'The amount on the Supplement Facts panel.'}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <ul>
+      <li>
+        <strong>Cost per 30 days</strong> is shown only where a daily amount has been set:
+        {rows.filter((r) => r.daily).map((r) => `${r.name} (${r.daily})`).join('; ')}.
+      </li>
+      <li>
+        <strong>Best price</strong> is the lowest cost per comparison amount among prices that aren’t stale. If every
+        price is stale, the lowest stale one is shown and marked stale.
+      </li>
+      <li>
+        A lower cost per amount doesn’t mean a product works better. Forms differ, and we record the form without
+        adjusting the price for it or for absorption claims.
+      </li>
+      <li>We don’t earn commissions, and nothing but this formula decides the order.</li>
+    </ul>
+
+    <h2>How COAs are judged</h2>
+    <p>
+      A certificate of analysis (COA) is a lab report. For each one we record the link, the lab, whether the lab is
+      ISO/IEC 17025 accredited (yes, no or unknown), the lot number, the test date, whether it tests the finished product
+      or the raw material, and which tests it reports. Each category lists the tests that matter for it, such as heavy
+      metals, microbes, or oxidation for fish oil.
+    </p>
+    <p>
+      Certifications (NSF Certified for Sport, Informed Sport, USP Verified, BSCG, Clean Label Project, and IFOS for fish
+      oil) count only when they appear on the certifier’s own website, never because a brand says so.
+    </p>
+
+    <h2>Transparency tiers</h2>
+    <p>The tier is shown next to the price and never merged into one score.</p>
+    <ul>
+      <li>
+        <strong>Tier A:</strong> a current third-party certification and a COA from an accredited lab on the finished
+        product.
+      </li>
+      <li>
+        <strong>Tier B:</strong> a COA exists, but accreditation, finished-product status, or date can’t be confirmed.
+        A product with a current certification but no qualifying COA is also Tier B.
+      </li>
+      <li><strong>Tier C:</strong> no COA or certification found.</li>
+    </ul>
+    <p>
+      A certification is current if its listing was re-checked on the certifier’s site within the last
+      {settings.certificationCurrentForMonths} months. A COA counts toward Tier A only if the lab is accredited, it tests
+      the finished product, and its test date is less than {settings.coaStaleAfterMonths} months old. Each product page
+      shows why it got its tier.
+    </p>
+
+    {/* Ingredient grades section: added by Claude on 2026-11-05 at River's request; not part of the wording River approved. */}
+    <h2 id="ingredient-grade">Ingredient grades</h2>
+    <p>
+      Separate from the price and the tier, each product gets a grade for its added (non-active) ingredients: sweeteners,
+      colors, sugars, fillers and the like. It is worked out in code from the ingredient list we recorded and the rules
+      below, and it never changes the order of a comparison table.
+    </p>
+    <ul>
+      <li><strong>A:</strong> none of the product’s added ingredients are on the list below.</li>
+      <li><strong>B:</strong> contains at least one ingredient on the list below.</li>
+      <li><strong>Not graded:</strong> we haven’t confirmed the product’s full ingredient list yet.</li>
+    </ul>
+    <p>
+      Every flag gives the same grade. The headings below say what kind of source backs each one: a regulator that has acted, official advice to limit, or individual studies. A flag describes what its source says about the ingredient in general, not the
+      amount in a particular product, so it isn’t a safety verdict on that product. An ingredient joins this list only
+      with a source we’ve read: a regulator’s page or a published study.
+    </p>
+    {rulesByLevel.map((g) => (
+      <>
+        <h3>{levelLabels[g.level]}</h3>
+        <ul>
+          {g.rules.map((r) => (
+            <li>
+              <strong>{r.name}.</strong> {r.finding}{' '}
+              {r.sources.map((src, i) => (
+                <>
+                  {i > 0 && ' '}
+                  <a href={src.url} rel="noopener" target="_blank">Source: {src.publisher}{src.published && `, ${src.published.getUTCFullYear()}`}</a>
+                </>
+              ))}
+            </li>
+          ))}
+        </ul>
+      </>
+    ))}
+
+    <h2>What “date checked” means</h2>
+    <ul>
+      <li>
+        <strong>Price:</strong> the day the store’s page was read and showed that price. A price is marked stale after
+        {settings.priceStaleAfterDays} days.
+      </li>
+      <li>
+        <strong>Certification:</strong> the day the certifier’s own listing was read. It stops counting as current after
+        {settings.certificationCurrentForMonths} months.
+      </li>
+      <li>
+        <strong>COA:</strong> the test date printed on the lab report, not the day we found it. A COA is marked stale
+        after {settings.coaStaleAfterMonths} months.
+      </li>
+    </ul>
+
+    <h2>Update schedule</h2>
+    <p>
+      Prices are re-checked by hand, oldest first. Anything past its limit is labeled stale on the site until it’s
+      re-checked.
+    </p>
+
+    <h2>What this site doesn’t cover</h2>
+    <ul>
+      <li>We don’t test products ourselves. We report what labels, stores, certifiers and published lab reports say.</li>
+      <li>We don’t rank products by how well they work, and nothing here is medical advice.</li>
+      <li>We don’t adjust prices for absorption or “bioavailability” claims.</li>
+      <li>
+        We cover products sold in the US whose label states how much of the main ingredient is in each serving. Products
+        are left out when their label or price couldn’t be read.
+      </li>
+      <li>Prices don’t include shipping.</li>
+    </ul>
+
+    <h2>Affiliate disclosure</h2>
+    <p>We don’t earn commissions from any link on this site.</p>
+  </article>
+</BaseLayout>
+
+<style>
+  .prose {
+    max-width: 46rem;
+    padding-block: 2rem 1rem;
+  }
+  .prose h2 {
+    margin-top: 2rem;
+  }
+  .prose li + li {
+    margin-top: 0.4rem;
+  }
+  .formula {
+    padding: 0.75rem 1rem;
+    border-left: 3px solid var(--rule);
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+  }
+  .table {
+    overflow-x: auto;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9375rem;
+  }
+  th,
+  td {
+    padding: 0.5rem 0.6rem 0.5rem 0;
+    border-bottom: 1px solid var(--rule);
+    text-align: left;
+    vertical-align: top;
+  }
+</style>

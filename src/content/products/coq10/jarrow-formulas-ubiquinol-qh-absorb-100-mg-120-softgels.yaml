@@ -1,0 +1,33 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 120 softgels.
+category: coq10
+entered_by: claude              # label info from vitacost.com
+brand: Jarrow Formulas
+name: Ubiquinol QH-Absorb 100 mg, 120 Softgels   # "Max Absorption" in the retailer title left out (claim wording)
+form: softgel
+coq10_form: ubiquinol           # vitacost.com Supplement Facts lists "Ubiquinol" 100 mg
+# coq10_source: not recorded. "Made with Quality Kaneka Ubiquinol" appears only in the vitacost.com description, not confirmed on the Supplement Facts panel.
+other_ingredients: [medium chain triglycerides (modified coconut oil), softgel (bovine gelatin, glycerin, water, caramel color, carob extract), sunflower lecithin, beeswax, rosemary extract (antioxidant), mixed tocopherols, ascorbyl palmitate (antioxidant)]   # vitacost.com
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 softgel
+  coq10_per_serving_mg: 100     # vitacost.com: Ubiquinol 100 mg (as labeled, not converted)
+  servings_per_container: 120
+
+prices:
+  - retailer: Vitacost
+    price_usd: 82.16            # vitacost.com: sale price $82.16 (regular price also $82.16), 120 softgels
+    servings: 120
+    url: https://www.vitacost.com/products/jarrow-formulas-ubiquinol-qh-absorb-max-absorption-100-mg-120-softgels-36529
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. Page shows 291 ratings but no average, so none recorded.
+
+# MISSING: certification. Page states none (one customer review mentions NSF; not a source). Certifier sites not checked.
+certifications: []
+
+# MISSING: COA. vitacost.com page has no COA link; brand site not checked.
+coas: []
+
+flags: []
+notes: ""

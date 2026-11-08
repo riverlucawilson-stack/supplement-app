@@ -1,0 +1,34 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude needs River's check.
+# Label info from the Vitacost page "MegaFood, Balanced B Complex, 90 Tablets".
+# Rating not stated on page (242 ratings shown), not stored.
+category: b-complex
+entered_by: claude
+brand: MegaFood
+name: Balanced B Complex
+form: tablet
+folate_form: methylfolate      # Vitacost: "Folate (as calcium L-5-methyltetrahydrofolate) 400 mcg DFE (240 mcg L-5-MTHF)"
+b12_form: methylcobalamin      # Vitacost: "Vitamin B12 (as methylcobalamin)"
+other_ingredients: [microcrystalline cellulose, rice protein, autolyzed yeast extract, silicon dioxide, stearic acid, hypromellose]   # Vitacost
+
+dose:
+  units_per_serving: 1          # Vitacost: serving size 1 tablet
+  # Counted (Vitacost panel %DV >= 100): thiamin 750, riboflavin 308, niacin 281, vitamin B6 588,
+  # folate 100, vitamin B12 2083, biotin 100, pantothenic acid 900. All 8 counted (folate and biotin exactly 100%).
+  b_vitamins_at_100_dv: 8
+  folate_mcg_dfe: 400           # Vitacost: 400 mcg DFE, 100% DV
+  vitamin_b12_mcg: 50           # Vitacost: 50 mcg, 2083% DV
+  servings_per_container: 90
+
+prices:
+  - retailer: Vitacost
+    price_usd: 34.99            # 90 tablets (page also lists 60 for 26.99 and 30 for 15.49)
+    servings: 90
+    url: https://www.vitacost.com/megafood-balanced-b-complex-with-vitamin-b12-vitamin-b6-and-folate-90-tablets
+    date_checked: 2026-11-05
+    entered_by: claude
+
+certifications: []              # MISSING: not checked on a certifier's site
+coas: []                        # MISSING: no COA found in the pages read
+
+flags: [food blend (organic brown rice, organic kale, organic broccoli; 258 mg)]   # Vitacost panel
+notes: ""

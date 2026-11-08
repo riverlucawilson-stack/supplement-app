@@ -1,0 +1,40 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude needs River's check.
+# The Vitacost page given (...womens-once-daily-multivitamin-60-vegan-tablets-1) failed to load, so label and price
+# come from the Vitamin Shoppe page (URL in prices). Label there is "Organics Women's Once Daily Whole Food Multivitamin".
+category: multivitamin
+entered_by: claude
+brand: Garden of Life
+name: mykind Organics Women's Once Daily
+form: tablet
+formula_for: women              # from the product name
+# MISSING: folate_form. Vitamin Shoppe prints "FOLATE - (FROM ORGANIC FOOD BLEND)" and gives no chemical form.
+b12_form: methylcobalamin       # Vitamin Shoppe: "(AS METHYLCOBALAMIN FROM SACCHAROMYCES CEREVISIAE)"
+vitamin_d_form: D3 (from lichen)   # Vitamin Shoppe: "D3 FROM LICHEN"
+other_ingredients: [organic gum arabic, organic dextrose, organic tapioca maltodextrin, organic sunflower lecithin, organic palm oil, organic guar gum, organic brown rice, organic potato starch]   # Vitamin Shoppe "Clean Tablet Technology Blend"; Organic Food Blend 646 mg also listed (many fruit, vegetable and herb sources)
+
+dose:
+  units_per_serving: 1          # Vitamin Shoppe: serving size 1 tablet
+  # Counted (Vitamin Shoppe panel %DV >= 100): vitamin A 100, vitamin C 100, vitamin D 125, vitamin E 107, vitamin K 100,
+  # thiamin 115, riboflavin 115, niacin 115, vitamin B6 500, folate 100, vitamin B12 208, biotin 400,
+  # pantothenic acid 100, selenium 100, chromium 100.
+  # Not counted: iron 14, zinc 35, manganese 35.
+  nutrients_at_100_dv: 15
+  # MISSING: folate_mcg_dfe. Page prints "FOLATE 400 MCG, 100%" without saying DFE.
+  vitamin_b12_mcg: 5            # Vitamin Shoppe: 5 mcg, 208% DV
+  vitamin_d_mcg: 25             # Vitamin Shoppe: 25 mcg, 125% DV
+  iron_mg: 2.5                  # Vitamin Shoppe: 2.5 mg, 14% DV
+  servings_per_container: 60    # Vitamin Shoppe: 60
+
+prices:
+  - retailer: Vitamin Shoppe
+    price_usd: 42.99            # regular $42.99; no sale price shown (Buy 1 get 1 50% off promo, 10/12 to 10/25/2026, and auto-delivery price not used)
+    servings: 60                # 60 tablets at 1 per day
+    url: https://www.vitaminshoppe.com/p/garden-of-life-kind-organics-womens-one-multi-60-tablets/gu-1196
+    date_checked: 2026-10-22
+    entered_by: claude
+
+certifications: []              # MISSING: none looked for beyond the Vitamin Shoppe page; no certifier listing found or checked
+coas: []                        # MISSING: no COA found in the page read
+
+flags: [contains iron]   # Vitamin Shoppe; page has no allergen statement
+notes: ""

@@ -1,0 +1,44 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Name note: Vitacost title is "Enhanced Zinc Lozenges, Peppermint, 30 Vegetarian Lozenges (18.75 mg per Lozenge)".
+# Marketing words on the page ("Special Ionic Formula for ...") left out of the name.
+category: zinc
+entered_by: claude              # label info from vitacost.com
+brand: Life Extension
+name: Enhanced Zinc Lozenges, Peppermint, 30 Vegetarian Lozenges
+form: tablet
+format: lozenge                 # vitacost.com title: "Lozenges"
+zinc_form: acetate              # vitacost.com Supplement Facts: "Zinc (as zinc acetate) 18.75 mg"
+other_ingredients: [dextrose, stearic acid, peppermint flavor, vegetable stearate, silica]   # vitacost.com
+ingredients_confirmed: true     # full ingredients line read on vitacost.com (page has no separate "Other ingredients" heading)
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 vegetarian lozenge
+  zinc_per_serving_mg: 18.75    # vitacost.com Supplement Facts "Zinc (as zinc acetate)" 18.75 mg (elemental line)
+  servings_per_container: 30    # vitacost.com Key info: total servings 30 count
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/83_e228a22f-177b-4f77-9a3b-606beff91166.jpg?v=1792463013
+    source_url: https://www.vitacost.com/products/life-extension-enhanced-zinc-lozenges-peppermint-30-vegetarian-lozenges-18-75-mg-per-lozenge-87151
+    alt: Life Extension Enhanced Zinc Lozenges bottle
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 9.00             # vitacost.com: sale price $9.00 (regular price also $9.00), 30 lozenges
+    servings: 30
+    url: https://www.vitacost.com/products/life-extension-enhanced-zinc-lozenges-peppermint-30-vegetarian-lozenges-18-75-mg-per-lozenge-87151
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. Page shows 150 ratings as a star breakdown but states no average.
+
+# MISSING: certifications. vitacost.com lists "Non GMO LE Certified", Gluten Free (brand/retailer claims); nothing looked up at a certifier's site.
+certifications: []
+
+# MISSING: COA. vitacost.com page has no COA link; brand site not checked.
+coas: []
+
+flags: [added sugars 4 g per lozenge, contains dextrose, flavored (peppermint flavor), 20 calories per lozenge]   # vitacost.com Supplement Facts
+notes: ""

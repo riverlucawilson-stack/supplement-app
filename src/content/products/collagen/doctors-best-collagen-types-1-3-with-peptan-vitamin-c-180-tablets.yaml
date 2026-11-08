@@ -1,0 +1,46 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the label name only: no health or beauty claims from retailer titles.
+category: collagen
+entered_by: claude              # label info from vitacost.com
+brand: Doctor's Best
+name: Collagen Types 1 & 3 with Vitamin C, 180 Tablets
+form: tablet
+collagen_source: other          # CHECK: vitacost.com states only "BSE-Free Hydrolyzed Collagen Types 1 and 3"; the source animal is not stated on the page read, so "other" until River confirms from the label.
+collagen_types: Types 1 and 3   # vitacost.com Supplement Facts "Hydrolyzed Collagen Types 1 and 3"
+# branded_ingredient: not recorded. vitacost.com mentions Peptan® only in marketing text, not on the Supplement Facts or ingredients. CHECK the physical label.
+other_ingredients: [microcrystalline cellulose, croscarmellose sodium, magnesium stearate (vegetable source), stearic acid, coating (purified water, hypromellose)]   # vitacost.com
+ingredients_confirmed: true     # full other-ingredients line read on vitacost.com
+
+dose:
+  units_per_serving: 3          # vitacost.com: serving size 3 tablets
+  collagen_per_serving_g: 3     # vitacost.com Supplement Facts "Hydrolyzed Collagen Types 1 and 3" 3 g (3000 mg)
+  servings_per_container: 60    # vitacost.com. 60 x 3 = 180 tablets, matches title.
+  # CHECK: no serving weight in grams on the page.
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/141_50576cb2-14aa-4197-ba66-1b952cb093e6.jpg?v=1781991943
+    source_url: https://vitacost.com/doctors-best-collagen-types-1-3-with-peptan
+    alt: Doctor's Best Collagen Types 1 & 3 with Vitamin C 180 tablets bottle
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 17.99            # vitacost.com: $17.99 for 180 tablets
+    servings: 60
+    url: https://vitacost.com/doctors-best-collagen-types-1-3-with-peptan
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. Page shows only a star breakdown (1,033 ratings), no stated average.
+
+# MISSING: certification. None checked; no certifier site visited.
+certifications: []
+
+# MISSING: COA. Retailer page has no COA link; brand site not checked.
+coas: []
+
+flags:
+  - contains added vitamin C (30 mg)   # vitacost.com Supplement Facts
+notes: ""

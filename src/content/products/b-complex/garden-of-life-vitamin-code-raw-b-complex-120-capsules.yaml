@@ -1,0 +1,38 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude needs River's check.
+# Label info from the Vitacost page "Garden of Life, Vitamin Code, RAW B-Complex, 120 Vegan Capsules".
+# Vitacost's "Key info" says 120 total servings, which conflicts with the Supplement Facts panel (2 capsules per serving,
+# 60 servings). I used the panel: 60 servings. Rating not stated on page (640 ratings), not stored.
+category: b-complex
+entered_by: claude
+brand: Garden of Life
+name: Vitamin Code RAW B-Complex
+form: capsule
+folate_form: other             # Vitacost: "Folate (from S. cerevisiae culture)"; no folic acid/methylfolate named
+b12_form: methylcobalamin      # Vitacost: "Vitamin B12 (as methylcobalamin, from S. cerevisiae culture)"
+other_ingredients: [vegetable cellulose (capsule), organic potato starch]   # Vitacost
+
+dose:
+  units_per_serving: 2          # Vitacost: serving size 2 capsules
+  # Counted (Vitacost panel %DV >= 100): thiamin 417, riboflavin 769, niacin 281, vitamin B6 588,
+  # folate 113, vitamin B12 5542, biotin 1083, pantothenic acid 900. All 8 counted.
+  b_vitamins_at_100_dv: 8
+  folate_mcg_dfe: 450           # Vitacost: 450 mcg DFE, 113% DV
+  vitamin_b12_mcg: 133          # Vitacost: 133 mcg, 5542% DV
+  servings_per_container: 60    # Vitacost panel: 60 (120 capsules at 2 per serving)
+
+prices:
+  - retailer: Vitacost
+    price_usd: 28.69            # 120 capsules (60 count listed at $16.79)
+    servings: 60
+    url: https://www.vitacost.com/products/garden-of-life-vitamin-code-raw-b-complex-120-vegan-capsules-46039
+    date_checked: 2026-11-05
+    entered_by: claude
+
+certifications: []              # MISSING: not checked on a certifier's site for this product (nsfsport "b complex" search showed no Garden of Life listing)
+coas: []                        # MISSING: no COA found in the pages read
+
+flags:
+  - "RAW Organic Fruit & Vegetable Blend, 360 mg (proprietary blend: apple, beet, broccoli, carrot, spinach, tomato, strawberry, tart cherry, blackberry, green bell pepper, Brussels sprout, blueberry, ginger, garlic, green onion, raspberry, parsley, cauliflower, red cabbage, kale, cucumber, celery, asparagus)"
+  - "RAW Probiotic & Enzyme Blend, 60 mg (Lactobacillus bulgaricus, Lactobacillus plantarum 500 million CFU; enzymes: lipase, protease, aspergillopepsin, beta-glucanase, cellulase, bromelain, phytase, lactase, papain, peptidase, pectinase, hemicellulase, xylanase)"
+  - "B vitamins listed as from S. cerevisiae culture"
+notes: ""

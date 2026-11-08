@@ -1,0 +1,35 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 80 softgels.
+category: coq10
+entered_by: claude              # label info from vitacost.com
+brand: Nature Made
+name: CoQ10 200 mg, 80 Softgels
+form: softgel
+coq10_form: ubiquinone          # vitacost.com Supplement Facts: "Coenzyme Q10 (Ubidecarenone)". Ubidecarenone is the drug name for ubiquinone (CoQ10 in its oxidized form), so recorded as ubiquinone. CHECK.
+# coq10_source: none. No branded CoQ10 ingredient named on vitacost.com.
+other_ingredients: [soybean oil, gelatin, glycerin, water, rapeseed lecithin]   # vitacost.com
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 softgel
+  coq10_per_serving_mg: 200     # vitacost.com: 200 mg
+  servings_per_container: 80
+
+prices:
+  - retailer: Vitacost
+    price_usd: 40.74            # vitacost.com: sale price $40.74 (regular price also $40.74), 80 softgels
+    servings: 80
+    url: https://www.vitacost.com/products/nature-made-coq10-200-mg-80-softgels-76904
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. Page shows only a star breakdown, no average and no labeled count.
+
+# MISSING/CHECK: certification. vitacost.com page says "USP Verified", but that is a retailer/brand claim.
+# usp.org/verification-services/verification-program-participants (read 2026-11-05) lists only
+# "Pharmavite LLC - Selected private-label brand supplements", no product-level listing. Nothing recorded.
+certifications: []
+
+# MISSING: COA. vitacost.com page has no COA link; brand site not checked.
+coas: []
+
+flags: []
+notes: ""

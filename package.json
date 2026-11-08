@@ -9,7 +9,9 @@
     "test": "tsx --test tests/*.test.ts",
     "build": "npm run validate && astro build",
     "preview": "astro preview",
-    "check": "astro check"
+    "check": "astro check",
+    "evidence-drafts": "tsx scripts/evidence-drafts.ts",
+    "links": "tsx scripts/link-check.ts"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.10",

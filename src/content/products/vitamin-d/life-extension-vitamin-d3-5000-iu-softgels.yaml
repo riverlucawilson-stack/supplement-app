@@ -1,0 +1,42 @@
+# Looked up by Claude on 2026-10-24. Every entry marked entered_by: claude
+# still needs River's check against its link. Size chosen: 60 softgels.
+category: vitamin-d
+entered_by: claude              # label info from the Vitacost page
+brand: Life Extension
+name: Vitamin D3 125 mcg (5,000 IU) Softgels
+form: softgel                   # vitacost.com: title "60 Softgels"
+vitamin_d_form: d3              # vitacost.com: "Vitamin D3 (as Cholecalciferol)"
+other_ingredients: [extra virgin olive oil, gelatin, medium chain triglycerides, glycerin, purified water, rosemary extract]   # vitacost.com
+# carrier_oil: not set. Page lists oils only under other ingredients.
+
+dose:
+  units_per_serving: 1          # vitacost.com: "Serving Size: 1 Softgel"
+  vitamin_d_per_serving_mcg: 125 # vitacost.com: "125 mcg (625% Daily Value)"; title says 5,000 IU
+  servings_per_container: 60    # vitacost.com: "Total servings 60 count"
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/104_2e1a4a71-e7ea-446c-8a9a-60494010c2a6.jpg?v=1781996757
+    source_url: https://www.vitacost.com/products/life-extension-vitamin-d3-125-mcg-5-000-iu-60-softgels-46683
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 7.50             # vitacost.com: regular and sale price $7.50
+    servings: 60
+    url: https://www.vitacost.com/products/life-extension-vitamin-d3-125-mcg-5-000-iu-60-softgels-46683
+    date_checked: 2026-10-24
+    entered_by: claude
+    # rating: page shows 554 reviews but no average, so no rating recorded.
+# Walmart page (walmart.com/ip/161106403, $10.46, 4.9 stars / 2,720 ratings) not used: it shows no Supplement Facts or servings.
+
+# MISSING: certification. Looked for a listing on quality-supplements.org (fetch failed, client_error) and
+#   via a search for NSF Certified for Sport; no certifier page naming this product was found. Nothing recorded.
+certifications: []
+
+# MISSING: COA. Brand safety page https://www.lifeextension.com/about/life-extension-research/safety has no COA lookup or sample; it says reports are provided on request by phone.
+coas: []
+
+flags: []
+notes: ""

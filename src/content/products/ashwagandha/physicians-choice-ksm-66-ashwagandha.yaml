@@ -14,6 +14,13 @@ dose:
   ashwagandha_per_serving_mg: 1000  # panel: "Organic Ashwagandha Root Extract (KSM-66®) 1 g"
   servings_per_container: 30        # panel: "Servings per container: 30"
 
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/8_0bd722c6-cccb-4d30-9f92-b9eff9f695d3.jpg?v=1781823135
+    source_url: https://www.vitacost.com/products/physician-s-choice-ksm-66-ashwagandha-60-capsules-160659
+    date_checked: 2026-11-05
+    entered_by: claude
+
 prices:
   - retailer: Vitacost
     price_usd: 31.47                # page: "$31.47", "60 Capsules"

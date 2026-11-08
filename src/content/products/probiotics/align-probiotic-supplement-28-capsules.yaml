@@ -1,0 +1,47 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the label name only: no health words from retailer titles.
+# (Left out of the name: "24/7 Digestive Support" in the vitacost.com title.)
+category: probiotics
+entered_by: claude              # label info from vitacost.com
+brand: Align
+name: Probiotic Supplement, 28 Capsules
+form: capsule
+cfu_guarantee: at_manufacture   # vitacost.com footnote: "Contains one billion (1 x 109 CFU)(one billion) probiotic cells when manufactured, and provides 1 x 107 probiotic cells until the 'best by' date." CHECK: the label gives both an at-manufacture count and a lower count until best-by; at_manufacture used for the labeled 1 billion. Page also says "Guaranteed Potency". "1 x 109" is printed that way on the page.
+strains: Bifidobacterium longum subsp. longum 35624   # vitacost.com Supplement Facts: "Bifidobacterium longum subsp. longum 35624" (TM), 10 mg per serving
+storage: shelf-stable           # vitacost.com: "storage below 86F (30C) in the original container" and "No Refrigeration Required"
+# MISSING: delivery_claim. None found on the vitacost.com page.
+other_ingredients: [microcrystalline cellulose, hydroxypropyl methylcellulose, magnesium stearate (less than 2%), titanium dioxide (color) (less than 2%)]   # vitacost.com
+ingredients_confirmed: true     # full other-ingredients line read on vitacost.com
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 capsule
+  cfu_billions_per_serving: 1   # vitacost.com footnote: "one billion" when manufactured
+  strain_count: 1
+  servings_per_container: 28    # vitacost.com: 28 capsules
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/43_68996c91-e1d9-4c51-ba19-9e21405482b5.jpg?v=1781903498
+    source_url: https://www.vitacost.com/products/align-probiotics-24-7-digestive-support-probiotic-supplement-28-capsules-83453
+    alt: Align Probiotic Supplement 28 capsule box
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 30.25            # vitacost.com: $30.25, 28 capsules (page also lists 42 ct $42.77 and 56 ct $51.02), Add to cart shown
+    servings: 28
+    url: https://www.vitacost.com/products/align-probiotics-24-7-digestive-support-probiotic-supplement-28-capsules-83453
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. The page shows only a star breakdown (29 ratings), no stated average.
+
+# MISSING: certification. Certifier sites not checked.
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: ["CFU: 1 billion when manufactured, 10 million (1 x 10^7) until the best-by date"]   # vitacost.com label footnote
+notes: ""

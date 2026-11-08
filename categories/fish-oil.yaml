@@ -1,0 +1,75 @@
+# Everything specific to fish oil / omega-3. The site reads this file when it builds.
+# How each part works is explained in categories/README.md.
+slug: fish-oil
+name: Fish oil / omega-3
+status: published
+order: 5
+
+page:
+  title: Fish oil compared by cost per 1,000 mg EPA + DHA and testing
+  description: Every fish oil and omega-3 product converted to cost per 1,000 mg of EPA plus DHA from the Supplement Facts panel, with its oil form (TG, rTG or EE), freshness (oxidation) results where published, and third-party certifications and lab results (COAs) graded A to C.
+  heading: What fish oil really costs, and how much of its testing you can see.
+  intro: >-
+    Every price is converted to **cost per 1,000 mg of EPA plus DHA**, the two omega-3s listed on the
+    Supplement Facts panel, not the total amount of oil (a 1,000 mg softgel often holds far less than
+    1,000 mg of EPA and DHA). Each product shows its oil form and any published oxidation results. Testing
+    transparency gets its own grade, A to C, and is never blended into the price.
+
+comparison:
+  amount: 1000
+  unit: mg
+  counts_toward: [epa_per_serving_mg, dha_per_serving_mg]
+  label: per 1,000 mg EPA + DHA
+  short: Cost per 1,000 mg EPA+DHA
+  # No daily amount: River chose to leave "cost per 30 days" out unless River sets one.
+  plausible_cost: { min: 0.02, max: 5 }
+
+dose_fields:
+  # Softgels, capsules, gummies or teaspoons in one serving, as the label says.
+  units_per_serving: { label: Units per serving, whole_number: true }
+  # The EPA and DHA lines on the Supplement Facts panel, NEVER the total fish oil weight.
+  epa_per_serving_mg:
+    label: EPA per serving
+    unit: mg
+    max: 4000
+    max_message: 'dose: {value} mg EPA per serving is very high. Check it is the EPA line, not the total oil.'
+  dha_per_serving_mg:
+    label: DHA per serving
+    unit: mg
+    max: 4000
+    max_message: 'dose: {value} mg DHA per serving is very high. Check it is the DHA line, not the total oil.'
+  # Only if the label gives a total omega-3 line.
+  total_omega3_per_serving_mg: { label: Total omega-3 per serving, unit: mg, optional: true }
+
+type:
+  field: oil_form
+  label: Oil form
+  options:
+    triglyceride: Triglyceride (TG, natural)
+    rtg: Re-esterified triglyceride (rTG)
+    ethyl_ester: Ethyl ester (EE)
+    phospholipid: Phospholipid (krill)
+    not_stated: Oil form not stated
+
+extra_fields:
+  # Where the oil comes from, as the label says (e.g. "anchovy, sardine", "algae", "krill").
+  oil_source: Oil source
+  # Only an oxidation value the brand or IFOS publishes for a named lot, e.g. "TOTOX 8 (lot 12345)".
+  totox_published: Published TOTOX value
+
+describe: ['{oil_form}', '{oil_source}']
+
+# IFOS approved by River on 2026-10-21 as a certification that counts toward tiers.
+certifications: [IFOS, NSF Certified for Sport, Informed Sport, USP Verified, BSCG, Clean Label Project]
+
+coa_tests:
+  potency: EPA/DHA potency
+  totox: TOTOX (total oxidation)
+  peroxide: Peroxide value
+  anisidine: Anisidine value
+  pcbs: PCBs
+  dioxins: Dioxins and furans
+  lead: Lead
+  arsenic: Arsenic
+  cadmium: Cadmium
+  mercury: Mercury

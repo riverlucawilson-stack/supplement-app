@@ -1,0 +1,46 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Store brand (Vitacost's own label). Product name kept to the vitacost.com H1.
+category: calcium
+entered_by: claude              # label info from vitacost.com
+brand: Vitacost
+name: Calcium Citrate, Natural Orange, 120 Chewable Tablets   # vitacost.com H1
+form: tablet                    # vitacost.com title: "Chewable Tablets"
+format: chewable                # vitacost.com title
+calcium_form: citrate           # vitacost.com Supplement Facts: Calcium "from calcium citrate"
+# MISSING: branded_ingredient. None named on vitacost.com.
+other_ingredients: [sucrose, fructose, vegetable stearic acid, mannitol, soy lecithin, vegetable magnesium stearate, maltodextrin, citric acid, sucralose, cornstarch, medium chain triglycerides, natural flavor, sodium chloride]   # vitacost.com other ingredients line
+ingredients_confirmed: true     # full other-ingredients line read on vitacost.com
+
+dose:
+  units_per_serving: 4          # vitacost.com: serving size 4 tablets
+  calcium_per_serving_mg: 1000  # vitacost.com Supplement Facts: Calcium 1,000 mg (77% DV), elemental line
+  vitamin_d_mcg: 10             # vitacost.com: 10 mcg (440 IU), as printed
+  magnesium_mg: 500             # vitacost.com Supplement Facts: "Magnesium (from magnesium oxide, magnesium ascorbate) 500 mg 119%"
+  servings_per_container: 30    # vitacost.com Supplement Facts: 30 (the "120 count" in Key info is tablets)
+  # MISSING: vitamin_k_mcg. Not listed on the vitacost.com panel.
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/10_c0704a41-a49a-4fee-94ba-4948f3459cf5.jpg?v=1781836530
+    source_url: https://www.vitacost.com/products/vitacost-calcium-citrate-natural-orange-120-chewable-tablets-158551
+    alt: Vitacost Calcium Citrate Natural Orange 120 chewable tablets
+    date_checked: 2026-11-05
+    entered_by: claude          # page og:title names Vitacost Calcium Citrate Natural Orange 120 Chewable Tablets
+
+prices:
+  - retailer: Vitacost
+    price_usd: 9.67             # vitacost.com: $9.67; Add to cart shown, no stock label either way
+    servings: 30
+    url: https://www.vitacost.com/products/vitacost-calcium-citrate-natural-orange-120-chewable-tablets-158551
+    date_checked: 2026-11-05
+    entered_by: claude
+
+# MISSING: certification. Certifier sites not checked. Brand/retailer claims not recorded.
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: [added sugars 2 g per serving, contains sucralose, contains sucrose and fructose, contains mannitol, contains soy lecithin, contains bioengineered food ingredient]   # vitacost.com ingredients line and label statements
+notes: ""

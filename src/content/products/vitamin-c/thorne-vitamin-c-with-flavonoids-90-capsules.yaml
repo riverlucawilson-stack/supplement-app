@@ -1,0 +1,33 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude
+# still needs River's check against its link.
+category: vitamin-c
+entered_by: claude              # label info from thorne.com
+brand: Thorne
+name: Vitamin C with Flavonoids
+form: capsule
+vitamin_c_form: ascorbic_acid   # thorne.com: "Vitamin C (as Ascorbic Acid)"
+added_with: citrus bioflavonoids # thorne.com: Citrus Bioflavonoids 75 mg
+other_ingredients: [cellulose powder, calcium laurate, hypromellose capsule]   # thorne.com
+
+dose:
+  units_per_serving: 1          # thorne.com: serving size 1 capsule
+  vitamin_c_per_serving_mg: 500 # thorne.com: 500 mg
+  servings_per_container: 90
+
+prices:
+  - retailer: Thorne
+    price_usd: 23.00            # thorne.com: "$23" for 90 capsules
+    servings: 90
+    url: https://thorne.com/products/dp/vit-c-w-flavonoids
+    date_checked: 2026-10-22
+    entered_by: claude
+
+# MISSING/CHECK: NSF Certified for Sport. Product page does not list it for this product; thorne.com NSF set page
+# (page 1 of 3) did not show it; info.nsf.org listings page had no Thorne entry. Not confirmed, so left out.
+certifications: []
+
+# MISSING: COA. No COA or lab-results link on the thorne.com product page.
+coas: []
+
+flags: []
+notes: ""

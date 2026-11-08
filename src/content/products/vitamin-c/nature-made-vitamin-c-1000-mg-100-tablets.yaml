@@ -1,0 +1,33 @@
+# Looked up by Claude on 2026-10-22. Every entry marked entered_by: claude
+# still needs River's check against its link.
+category: vitamin-c
+entered_by: claude              # label info from vitacost.com
+brand: Nature Made
+name: Vitamin C 1,000 mg Tablets
+form: tablet
+vitamin_c_form: ascorbic_acid   # vitacost: "Vitamin C (as Ascorbic Acid)"
+other_ingredients: [cellulose gel, hypromellose, croscarmellose sodium, stearic acid, magnesium stearate, silicon dioxide, polyethylene glycol]   # vitacost (page spells "mgnesium stearate")
+
+dose:
+  units_per_serving: 1          # vitacost: serving size 1 tablet
+  vitamin_c_per_serving_mg: 1000 # vitacost: 1,000 mg
+  servings_per_container: 100
+
+prices:
+  - retailer: Vitacost
+    price_usd: 10.00            # vitacost: "Regular price $10.00" (a struck-through $14.54 is also shown; auditor read $10.00 as the labeled regular price). Page said "Temporarily unavailable" on 2026-10-22.
+    servings: 100
+    url: https://www.vitacost.com/products/nature-made-vitamin-c-1-000-mg-100-tablets-160995
+    date_checked: 2026-10-22
+    entered_by: claude
+    # No star rating: page shows "No reviews".
+
+# MISSING/CHECK: certification. Vitacost page says "USP Verified Dietary Supplement", but that is the brand/retailer claim.
+# quality-supplements.org could not be fetched (client error), so no USP listing was confirmed.
+certifications: []
+
+# MISSING: COA. No COA or lab-results link on the Vitacost page.
+coas: []
+
+flags: []
+notes: ""

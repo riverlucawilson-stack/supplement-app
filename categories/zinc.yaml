@@ -1,0 +1,78 @@
+# Everything specific to zinc. The site reads this file when it builds.
+# How each part works is explained in categories/README.md.
+slug: zinc
+name: Zinc
+status: published
+order: 13
+
+page:
+  title: Zinc compared by cost per 10 mg elemental zinc and testing
+  description: Every zinc supplement converted to cost per 10 mg of elemental zinc from the Supplement Facts panel, with its form, whether it adds copper, and whether it's a capsule, tablet or lozenge, plus third-party certifications and lab results (COAs) graded A to C.
+  heading: What zinc really costs, and how much of its testing you can see.
+  intro: >-
+    Every price is converted to **cost per 10 mg of elemental zinc**, the zinc amount on the Supplement Facts
+    panel, never the weight of the whole compound (50 mg of zinc gluconate is not 50 mg of zinc). Each product
+    shows its zinc form, any added copper, and whether it's a capsule, tablet or lozenge. Testing transparency
+    gets its own grade, A to C, and is never blended into the price.
+
+comparison:
+  amount: 10
+  unit: mg
+  counts_toward: [zinc_per_serving_mg]
+  label: per 10 mg elemental zinc
+  short: Cost per 10 mg
+  # No daily amount: same rule as the other new categories.
+  plausible_cost: { min: 0.002, max: 2 }
+
+dose_fields:
+  # Capsules, tablets or lozenges in one serving, as the label says.
+  units_per_serving: { label: Units per serving, whole_number: true }
+  # The "Zinc ... mg" line on the Supplement Facts panel: elemental zinc,
+  # NEVER the compound weight (e.g. "zinc gluconate 50 mg" in the ingredient list).
+  zinc_per_serving_mg:
+    label: Elemental zinc per serving
+    unit: mg
+    max: 100
+    max_message: 'dose: {value} mg of zinc per serving is very high. Check it is the elemental zinc line, not the compound weight.'
+  # Only if the label lists copper.
+  copper_per_serving_mg: { label: Added copper per serving, unit: mg, optional: true, max: 10 }
+
+type:
+  field: zinc_form
+  label: Zinc form
+  options:
+    picolinate: Picolinate
+    gluconate: Gluconate
+    citrate: Citrate
+    bisglycinate: Bisglycinate (glycinate)
+    acetate: Acetate
+    sulfate: Sulfate
+    oxide: Oxide
+    carnosine: Zinc carnosine
+    # Any label wording with zinc + methionine (L-methionine sulfate, methionine sulfate complex, OptiZinc,
+    # monomethionine). Exact wording goes in forms_listed.
+    methionine: Methionine
+    orotate: Orotate
+    blend: Blend of forms
+    other: Other
+
+extra_fields:
+  # "lozenge" when the label says lozenge (form stays tablet, since the shared form list has no lozenge),
+  # or "chewable". Leave out for plain capsules and tablets.
+  format: Format
+  # Every form the label lists, when it's a blend.
+  forms_listed: Forms listed on the label
+  # Branded ingredient named on the label, e.g. "OptiZinc", "Albion". Leave out if none.
+  branded_ingredient: Branded ingredient
+
+describe: ['{zinc_form}', '{format}', '+ {copper_per_serving_mg} mg copper']
+
+certifications: [NSF Certified for Sport, Informed Sport, USP Verified, BSCG, Clean Label Project]
+
+coa_tests:
+  potency: Zinc potency
+  lead: Lead
+  arsenic: Arsenic
+  cadmium: Cadmium
+  mercury: Mercury
+  microbial: Microbial

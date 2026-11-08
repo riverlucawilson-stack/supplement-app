@@ -1,0 +1,73 @@
+# Everything specific to B-complex supplements. The site reads this file when it builds.
+# How each part works is explained in categories/README.md.
+# Method: reuses the multivitamin method River approved on 2026-10-22 (cost per daily
+# serving, with nutrient facts shown beside it and never merged into one score).
+# Claude judged it fits on 2026-11-05: B-complexes also mix several nutrients in different amounts.
+slug: b-complex
+name: B-complex
+status: published
+order: 12
+
+page:
+  title: B-complex supplements compared by cost per daily serving and testing
+  description: Every B-complex compared by cost per daily serving as the label defines it, shown beside how many of the eight B vitamins reach 100% of the Daily Value and the forms of folate and vitamin B12, with third-party certifications and lab results (COAs) graded A to C.
+  heading: What B-complex supplements really cost, and how much of their testing you can see.
+  intro: >-
+    B-complexes don't share one ingredient to compare, so prices are converted to **cost per daily serving**
+    as the label defines it. Next to each price you'll see how many of the eight B vitamins reach 100% of the
+    Daily Value and the forms of folate and vitamin B12. Those facts are shown, not scored. Testing
+    transparency gets its own grade, A to C, and is never blended into the price.
+
+comparison:
+  amount: 1
+  unit: serving
+  label: per daily serving
+  short: Cost per daily serving
+  # No daily amount: the serving already is one day.
+  plausible_cost: { min: 0.01, max: 3 }
+
+dose_fields:
+  # Capsules, tablets, gummies or drops in one daily serving, as the label says.
+  units_per_serving: { label: Units per daily serving, whole_number: true }
+  # Count of the eight B vitamins (thiamin, riboflavin, niacin, vitamin B6, folate,
+  # vitamin B12, biotin, pantothenic acid) whose %DV is 100% or more. Count each once.
+  b_vitamins_at_100_dv: { label: B vitamins at 100% DV or more (of 8), whole_number: true, max: 8 }
+  # The folate line in mcg DFE, as printed (labels must give mcg DFE).
+  folate_mcg_dfe: { label: Folate per serving (mcg DFE), unit: mcg, optional: true, max: 4000 }
+  vitamin_b12_mcg: { label: Vitamin B12 per serving, unit: mcg, optional: true, max: 5000 }
+
+type:
+  field: folate_form
+  label: Folate form
+  options:
+    # Lowercase because they read mid-sentence ("folate as folic acid").
+    folic_acid: folic acid
+    methylfolate: methylfolate (5-MTHF)
+    folinic_acid: folinic acid
+    mixed: more than one form
+    none: none
+    other: a form the label doesn't name
+
+extra_fields:
+  # The B12 form named on the label, e.g. "methylcobalamin", "cyanocobalamin",
+  # "adenosylcobalamin", "hydroxocobalamin", or a mix.
+  b12_form: Vitamin B12 form
+  # A branded folate the label names, e.g. Quatrefolic, Metafolin.
+  folate_source: Folate ingredient
+
+describe:
+  - 'folate as {folate_form}'
+  - 'B12 as {b12_form}'
+  - '{b_vitamins_at_100_dv} of 8 B vitamins at 100% DV or more'
+
+certifications: [NSF Certified for Sport, Informed Sport, USP Verified, BSCG, Clean Label Project]
+
+coa_tests:
+  potency: Nutrient potency
+  identity: Identity
+  lead: Lead
+  arsenic: Arsenic
+  cadmium: Cadmium
+  mercury: Mercury
+  microbial: Microbial
+  disintegration: Disintegration

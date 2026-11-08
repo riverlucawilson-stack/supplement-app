@@ -1,0 +1,44 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the page H1 (vitacost.com). Left out of the name/flags: "Curcumin may support healthy joints" (description wording).
+category: curcumin
+entered_by: claude              # label info from vitacost.com
+brand: Solaray
+name: Fermented Organic Turmeric, 425 mg, 100 Organic Capsules   # vitacost.com H1
+form: capsule
+formulation: root_powder        # vitacost.com Supplement Facts: Fermented Organic Turmeric (Curcuma longa) (root) 425 mg, no extract line
+# MISSING: branded_ingredient. None named on the vitacost.com label.
+# MISSING: absorption_claim. None found on the vitacost.com page.
+other_ingredients: [organic pullulan capsule]   # vitacost.com
+ingredients_confirmed: true     # full other-ingredients line read on vitacost.com
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 capsule
+  # MISSING: curcuminoids_per_serving_mg. The vitacost.com panel states no curcuminoid content; the 425 mg is fermented turmeric root.
+  turmeric_per_serving_mg: 425  # vitacost.com: Fermented Organic Turmeric (root) 425 mg (reference only)
+  servings_per_container: 100   # vitacost.com: 100
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/66_a7345a65-4950-4430-94e3-9ef1e1c98435.jpg?v=1781940411
+    source_url: https://www.vitacost.com/products/solaray-fermented-organic-turmeric-425-mg-100-organic-capsules-73711
+    alt: Solaray Fermented Organic Turmeric 100 capsule bottle   # page title and meta description name this product
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 27.29            # vitacost.com: $27.29 (regular and sale price the same), 100 count, Add to cart shown, no out-of-stock notice
+    servings: 100
+    url: https://www.vitacost.com/products/solaray-fermented-organic-turmeric-425-mg-100-organic-capsules-73711
+    date_checked: 2026-11-05
+    entered_by: claude
+
+# MISSING: certification. Certifier sites not checked. vitacost.com lists USDA Organic, "Lab Verified" and others as brand/retailer claims: not recorded.
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: [curcuminoid content not stated, turmeric root only (no extract)]
+notes: ""

@@ -1,0 +1,47 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the page H1 (vitacost.com). Left out of the name/flags: the description's joint, muscle and inflammatory wording.
+category: curcumin
+entered_by: claude              # label info from vitacost.com
+brand: Thorne
+name: Curcumin Phytosome, 60 Capsules (500 mg per Capsule)   # vitacost.com H1
+form: capsule
+formulation: phytosome          # vitacost.com Supplement Facts: "Curcumin Phytosome" (Curcuma longa extract (root) / phospholipid complex from sunflower)
+branded_ingredient: Meriva      # vitacost.com Supplement Facts footnote: "This product uses Indena S.p.A.'s curcumin phytosome (Meriva®)."
+absorption_claim: '"Well-absorbed curcumin" (vitacost.com product description; the rest of that sentence is health wording and is left out; no footnote qualifies it)'
+other_ingredients: [hypromellose (capsule), leucine, calcium laurate, silicon dioxide, calcium citrate, microcrystalline cellulose]   # vitacost.com
+ingredients_confirmed: true     # full other-ingredients line read on vitacost.com
+
+dose:
+  units_per_serving: 2          # vitacost.com: serving size two capsules
+  # MISSING: curcuminoids_per_serving_mg. The panel gives only "Curcumin Phytosome 1 g" per serving (a complex with phospholipid) and no curcuminoid mg or % (looked at vitacost.com).
+  turmeric_per_serving_mg: 1000 # vitacost.com: Curcumin Phytosome 1 g per two capsules (reference only; includes the phospholipid)
+  servings_per_container: 30    # vitacost.com Supplement Facts: 30. CHECK: the page's "Key info" says "Total servings 60 count", which is capsules. Meta description says "500 mg per serving" but the panel says 1 g per 2 capsules.
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/64_ff2c5eb8-b570-4ab8-bef2-1b0202d94345.jpg?v=1793850128
+    source_url: https://www.vitacost.com/products/thorne-curcumin-phytosome-60-capsules-500-mg-per-capsule-68447
+    alt: Thorne Curcumin Phytosome 60 capsule bottle   # page title and meta description describe this product
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 36.00            # vitacost.com: $36.00 (regular and sale price the same), 60 count, Add to cart shown, no out-of-stock notice
+    servings: 30
+    url: https://www.vitacost.com/products/thorne-curcumin-phytosome-60-capsules-500-mg-per-capsule-68447
+    date_checked: 2026-11-05
+    entered_by: claude
+
+# CHECK (not recorded): nsfsport.com lists Thorne "Curcumin Phytosome" for NSF Certified for Sport
+# (https://www.nsfsport.com/certified-products/listing-detail.php?id=1448108, read 2026-11-05): capsules, serving 2 capsules,
+# package size 120, 25 lots. This product is the 60-count, which the listing doesn't show, so it isn't counted
+# (same rule as the Sports Research creatine 450 g vs 300 g case). River: add it if the 60-count is covered.
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked for this product.
+coas: []
+
+flags: []
+notes: ""

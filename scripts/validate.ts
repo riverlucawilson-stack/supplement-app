@@ -15,11 +15,14 @@ import type { Product } from '../src/categories';
 import { settings } from '../src/settings';
 import { isAfterDay } from '../src/lib/dates';
 import { allPrices, bestPrice } from '../src/lib/pricing';
-import { isCertificationCurrent, isCoaStale } from '../src/lib/staleness';
+import { freshness, isCertificationCurrent, isCoaStale } from '../src/lib/staleness';
+import type { DatedKind } from '../src/lib/staleness';
 import { tierFor } from '../src/lib/tier';
+import { usd } from '../src/lib/format';
 import { checkEvidence } from '../src/evidence/check';
-import { creatineEvidence } from '../src/evidence/creatine';
-import { ashwagandhaEvidence } from '../src/evidence/ashwagandha';
+import { evidencePages } from '../src/evidence';
+import { ingredientRules, FLAGS_FILE } from '../src/ingredients/rules';
+import { ingredientGrade } from '../src/lib/ingredients';
 
 const PRODUCTS_DIR = process.argv[2] ?? join('src', 'content', 'products');
 const today = new Date();
@@ -31,6 +34,15 @@ interface FileReport {
   summary?: string;
 }
 
+// Every dated price, certification and COA, for the "stalest items" list at the end.
+interface DatedItem {
+  file: string;
+  what: string;
+  kind: DatedKind;
+  date: Date;
+}
+const dated: DatedItem[] = [];
+
 function listFiles(dir: string): string[] {
   return readdirSync(dir).flatMap((name) => {
     const path = join(dir, name);
@@ -39,7 +51,6 @@ function listFiles(dir: string): string[] {
 }
 
 const day = (d: Date) => d.toISOString().slice(0, 10);
-const usd = (n: number) => `$${n.toFixed(2)}`;
 
 // Turns a field path like ["prices", 0, "price_usd"] into "prices #1 → price_usd".
 function fieldName(path: PropertyKey[]): string {
@@ -83,6 +94,9 @@ function checkFile(path: string): FileReport {
   const fileName = parts[parts.length - 1];
   if (!/^[a-z0-9]+(-[a-z0-9]+)*\.yaml$/.test(fileName)) {
     errors.push('File name must be lowercase letters and numbers joined by dashes, e.g. brand-creatine-powder.yaml.');
+  }
+  if (fileName === 'evidence.yaml') {
+    errors.push('"evidence" is taken by the evidence page address. Pick another file name.');
   }
   if (parts.length !== 2) {
     errors.push('Product files must sit directly inside a category folder, e.g. creatine/brand-product.yaml.');
@@ -145,7 +159,7 @@ function checkFile(path: string): FileReport {
   }
   product.coas.forEach((coa, i) => {
     if (isCoaStale(coa.test_date, today)) {
-      warnings.push(`STALE COA: coas #${i + 1} (lot ${coa.lot}) was tested ${day(coa.test_date)}, over ${settings.coaStaleAfterYears} years ago.`);
+      warnings.push(`STALE COA: coas #${i + 1} (lot ${coa.lot}) was tested ${day(coa.test_date)}, over ${settings.coaStaleAfterMonths} months ago.`);
     }
     if (coa.tests.length === 0) warnings.push(`coas #${i + 1} (lot ${coa.lot}) lists no tests.`);
   });
@@ -161,6 +175,10 @@ function checkFile(path: string): FileReport {
     warnings.push('Uses example.com links, so this is sample data. Remove it or replace it before launch.');
   }
 
+  for (const p of product.prices) dated.push({ file, what: `price at ${p.retailer}`, kind: 'price', date: p.date_checked });
+  for (const c of product.certifications) dated.push({ file, what: `${c.program} listing`, kind: 'certification', date: c.date_verified });
+  for (const c of product.coas) dated.push({ file, what: `COA lot ${c.lot}`, kind: 'coa', date: c.test_date });
+
   // Values Claude looked up that you haven't checked yet.
   const unverified = (what: string) =>
     warnings.push(`UNVERIFIED: ${what} was entered by Claude. Check it against its source, then delete its entered_by line.`);
@@ -168,11 +186,19 @@ function checkFile(path: string): FileReport {
   product.prices.forEach((p, i) => p.entered_by && unverified(`prices #${i + 1} (${p.retailer})`));
   product.certifications.forEach((c, i) => c.entered_by && unverified(`certifications #${i + 1} (${c.program})`));
   product.coas.forEach((c, i) => c.entered_by && unverified(`coas #${i + 1} (lot ${c.lot})`));
+  for (const kind of ['product', 'label'] as const) {
+    const photo = product.photos?.[kind];
+    if (photo?.entered_by) unverified(`photos → ${kind}`);
+  }
+  if (product.other_ingredients.length === 0 && !product.ingredients_confirmed) {
+    warnings.push('NOT GRADED: other_ingredients is empty. Once the label confirms there are none, add "ingredients_confirmed: true".');
+  }
 
   // One-line summary of what the site will show.
   const best = bestPrice(product, today);
   const price = best ? `${usd(best.costPerReferenceDose)} ${category.referenceDose.label}` : 'no price';
-  report.summary = `Tier ${tierFor(product, today).tier}, best ${price}`;
+  const grade = ingredientGrade(product).grade ?? 'not graded';
+  report.summary = `Tier ${tierFor(product, today).tier}, ingredients ${grade}, best ${price}`;
   return report;
 }
 
@@ -180,9 +206,17 @@ function checkFile(path: string): FileReport {
 const reports = listFiles(PRODUCTS_DIR).sort().map(checkFile);
 // The evidence page is checked only on a normal run, not when pointed at test files.
 if (process.argv[2] === undefined) {
-  for (const page of [creatineEvidence, ashwagandhaEvidence]) {
+  for (const page of evidencePages) {
     reports.push({ file: join('src', 'evidence', `${page.category}.ts`), ...checkEvidence(page) });
   }
+  // The ingredient flag rules (a broken file stops the run before this point).
+  reports.push({
+    file: FLAGS_FILE,
+    errors: [],
+    warnings: ingredientRules
+      .filter((r) => r.entered_by)
+      .map((r) => `UNVERIFIED: rule "${r.id}" was written by Claude. Check its finding against its sources, then delete its entered_by line.`),
+  });
 }
 let errorCount = 0;
 let warningCount = 0;
@@ -195,6 +229,20 @@ for (const r of reports) {
   console.log(`${mark} ${r.file}${r.summary && !r.errors.length ? `  (${r.summary})` : ''}`);
   for (const e of r.errors) console.log(`    ✗ ${e}`);
   for (const w of r.warnings) console.log(`    ⚠ ${w}`);
+}
+
+// The 10 items closest to (or furthest past) their freshness limit, so you know what to re-check first.
+const kindLabel: Record<DatedKind, string> = { price: 'checked', certification: 'verified', coa: 'tested' };
+const stalest = dated
+  .map((d) => ({ ...d, ...freshness(d.kind, d.date, today) }))
+  .sort((a, b) => b.used - a.used)
+  .slice(0, 10);
+if (stalest.length) {
+  console.log('\nStalest 10 items (age as a share of its limit in src/settings.ts; over 100% is stale):');
+  for (const s of stalest) {
+    const pct = `${Math.round(s.used * 100)}%`.padStart(5);
+    console.log(`  ${pct}  ${s.file}: ${s.what}, ${kindLabel[s.kind]} ${day(s.date)} (${s.ageDays} of ${s.limitDays} days)`);
+  }
 }
 
 console.log(`\n${errorCount} error(s), ${warningCount} warning(s).`);

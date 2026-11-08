@@ -1,0 +1,49 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the label name only: no health words from retailer titles.
+category: probiotics
+entered_by: claude              # label info from vitacost.com
+brand: Renew Life
+name: Ultimate Flora Probiotic 15 Billion, 30 Delayed Release Capsules
+form: capsule
+cfu_guarantee: through_expiration   # vitacost.com: "Quality, purity and potency guaranteed through expiration." and footnote "At Expiration Date under recommended storage conditions."
+# strains as printed on vitacost.com Supplement Facts ((1)/(2)/(3) are printed that way; only GG has a strain code):
+strains: Bifidobacterium lactis (1) (no strain code); Bifidobacterium lactis (2) (no strain code); Bifidobacterium lactis (3) (no strain code); Bifidobacterium infantis (no strain code); Lactobacillus plantarum (no strain code); Lactobacillus rhamnosus GG; Lactobacillus acidophilus (1) (no strain code); Lactococcus lactis (no strain code); Lactobacillus casei (no strain code); Lactobacillus paracasei (no strain code); Lactobacillus acidophilus (2) (no strain code); Lactobacillus brevis (no strain code)
+# CHECK: the auditor\'s read of the same page showed abbreviated genus names ("B. lactis", "L. plantarum"); spelled out here. Confirm against the label.
+storage: "Store in a cool, dry place. Best if refrigerated."   # vitacost.com. CHECK: refrigeration is recommended, not required; no product with a strict "refrigerate" instruction was found.
+delivery_claim: delayed-release capsule   # vitacost.com: "30 Delayed Release Vegan Capsules"; other-ingredients line says "vegetarian capsule (delayed release)". Recorded, not judged.
+other_ingredients: [cellulose (plant origin), vegetarian capsule (delayed release) (cellulose, gellan gum), MCT]   # vitacost.com
+ingredients_confirmed: true     # full other-ingredients line read on vitacost.com
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 delayed release capsule
+  cfu_billions_per_serving: 15  # vitacost.com: "Total Bifido/Lacto Probiotic Cultures: 15 Billion CFU" (9.7 bifido + 5.3 lacto)
+  strain_count: 12              # counted from the vitacost.com panel (4 Bifidobacterium lines + 8 Lactobacillus/Lactococcus lines)
+  servings_per_container: 30    # vitacost.com
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/56_f81a1e4e-4848-4c3b-8fe4-02a978e363bb.jpg?v=1781940244
+    source_url: https://www.vitacost.com/products/renew-life-ultimate-flora-probiotic-30-delayed-release-vegan-capsules-101804
+    alt: Renew Life Ultimate Flora Probiotic 30 capsule box
+    date_checked: 2026-11-05
+    entered_by: claude
+    # CHECK: the page lists several strengths/sizes; the 15 billion / 30 count variant's panel was read.
+
+prices:
+  - retailer: Vitacost
+    price_usd: 21.91            # vitacost.com: $21.91, 15B / 30 count variant, Add to cart shown. CHECK: page also shows a second 15B/30 ct option at $21.92.
+    servings: 30
+    url: https://www.vitacost.com/products/renew-life-ultimate-flora-probiotic-30-delayed-release-vegan-capsules-101804
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. The page shows only a star breakdown (24 ratings), no stated average.
+
+# MISSING: certification. Certifier sites not checked.
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: [proprietary blend without per-strain amounts]   # vitacost.com: "Ultimate Flora Everyday Care 15 Billion Blend, 48 mg"; CFU only as bifido/lacto subtotals
+notes: ""

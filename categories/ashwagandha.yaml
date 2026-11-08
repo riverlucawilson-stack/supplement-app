@@ -1,0 +1,66 @@
+# Everything specific to ashwagandha. The site reads this file when it builds.
+# How each part works is explained in categories/README.md.
+slug: ashwagandha
+name: Ashwagandha
+status: published
+order: 2
+
+page:
+  title: Ashwagandha compared by cost per 600 mg and testing
+  description: Every ashwagandha product converted to cost per 600 mg, labeled as extract or root powder, with third-party certifications and lab results (COAs) graded A to C.
+  heading: What ashwagandha really costs, and how much of its testing you can see.
+  intro: >-
+    Every price is converted to **cost per 600 mg of ashwagandha** as labeled. An extract and plain root
+    powder aren't the same thing at the same weight, so each product says which it is. Testing transparency gets its own
+    grade, A to C, and is never blended into the price.
+
+comparison:
+  amount: 600
+  unit: mg
+  counts_toward: [ashwagandha_per_serving_mg]
+  label: per 600 mg ashwagandha
+  short: Cost per 600 mg
+  daily_amount: 600
+  daily_label: 30 days at 600 mg/day
+  # High-potency extracts (e.g. 120 mg Shoden) legitimately cost more per 600 mg, so the ceiling is generous.
+  plausible_cost: { min: 0.02, max: 6 }
+
+dose_fields:
+  # Capsules, tablets, gummies or scoops in one serving, as the label says.
+  units_per_serving: { label: Units per serving, whole_number: true }
+  # Milligrams of ashwagandha (extract or powder) in one serving.
+  ashwagandha_per_serving_mg:
+    label: Ashwagandha per serving
+    unit: mg
+    max: 10000
+    max_message: 'dose: {value} mg per serving is over 10 g. Check the units (mg, not g).'
+  # Only if the label states it, e.g. 5 for "standardized to 5% withanolides".
+  withanolides_percent: { label: Withanolides, unit: '%', optional: true, max: 100 }
+
+type:
+  field: ashwagandha_type
+  label: Ashwagandha type
+  options:
+    root_extract: Root extract
+    root_leaf_extract: Root + leaf extract
+    root_powder: Root powder
+    other: Other
+
+extra_fields:
+  extract: Branded extract named on the label (e.g. KSM-66, Sensoril)
+
+describe: ['{ashwagandha_type}', '{extract}', '{withanolides_percent}% withanolides']
+
+certifications: [NSF Certified for Sport, Informed Sport, USP Verified, BSCG, Clean Label Project]
+
+coa_tests:
+  withanolides: Withanolides (potency)
+  identity: Identity (species and plant part)
+  lead: Lead
+  arsenic: Arsenic
+  cadmium: Cadmium
+  mercury: Mercury
+  microbial: Microbial
+  pesticides: Pesticides
+  residual_solvents: Residual solvents
+  aflatoxins: Aflatoxins

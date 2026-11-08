@@ -1,0 +1,47 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the label name only: no health words from retailer titles.
+category: probiotics
+entered_by: claude              # label info from vitacost.com
+brand: NOW Foods
+name: Probiotic-10™, 50 Billion, 50 Veg Capsules
+form: capsule
+cfu_guarantee: through_expiration   # vitacost.com: "This product is formulated to deliver a potency of 50 Billion CFU through the Best By date." CHECK: read as through expiration; the page shows both "Best by 01/01/2028" and "Expiration Date 07/01/2027".
+strains: Lactobacillus acidophilus (La-14); Bifidobacterium lactis (Bl-04); Lactobacillus plantarum (Lp-115); Lactobacillus casei (Lc-11); Lactobacillus rhamnosus (Lr-32); Lactobacillus paracasei (Lpc-37); Bifidobacterium breve (Bb-03); Streptococcus thermophilus (Sl-21); Lactobacillus salivarius (Ls-33); Bifidobacterium longum (Bl-05)   # vitacost.com Supplement Facts, "Blend of 10 Strains of Probiotic Bacteria"
+# CHECK: the page prints two codes with a space ("Bl -04", "Lp -115"); written without it here.
+storage: shelf-stable           # vitacost.com: "Store in a cool, dry place to maintain potency." (no refrigeration instruction)
+# MISSING: delivery_claim. None found on the vitacost.com page.
+other_ingredients: [microcrystalline cellulose, hypromellose (cellulose capsule), FOS (fructooligosaccharides), ascorbyl palmitate, silicon dioxide]   # vitacost.com
+ingredients_confirmed: true     # full other-ingredients line read on vitacost.com
+
+dose:
+  units_per_serving: 1          # vitacost.com: serving size 1 veg capsule
+  cfu_billions_per_serving: 50  # vitacost.com: "Blend of 10 Strains of Probiotic Bacteria (50 Billion CFU): 260 mg"
+  strain_count: 10
+  servings_per_container: 50    # vitacost.com Key info "Total servings 50 count" (the Supplement Facts panel read shows no servings line); 1 capsule per serving, 50 capsules
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/48_8ae1c8ce-723c-4e2a-9e44-4aca3743e9e0.jpg?v=1781988267
+    source_url: https://www.vitacost.com/products/now-foods-probiotic-10-50-billion-50-veg-capsules-21131
+    alt: NOW Foods Probiotic-10 50 Billion 50 veg capsule bottle
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 32.83            # vitacost.com: $32.83, 50 count, Add to cart shown, no out-of-stock notice
+    servings: 50
+    url: https://www.vitacost.com/products/now-foods-probiotic-10-50-billion-50-veg-capsules-21131
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. The page shows only a star breakdown (463 ratings), no stated average.
+
+# MISSING: certification. The page shows badges such as "Strain Verified" and "GMP Quality Assured" (brand/retailer claims, not recorded). Certifier sites not checked.
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: [proprietary blend without per-strain amounts, added prebiotic (FOS), "label says: Produced in a GMP facility that processes other ingredients containing these allergens"]   # vitacost.com label statements (allergens named there: wheat, gluten, soy, milk, egg, fish, shellfish, tree nut, sesame)
+notes: ""

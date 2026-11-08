@@ -1,0 +1,47 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the vitacost.com H1 minus "Bone Strength" (health words dropped).
+category: calcium
+entered_by: claude              # label info from vitacost.com
+brand: New Chapter
+name: Plant Calcium, Take Care™, 120 Vegan Slim Tablets   # vitacost.com H1 "Plant Calcium, Bone Strength Take Care™, 120 Vegan Slim Tablets" minus health words
+form: tablet                    # vitacost.com title: "Vegan Slim Tablets"
+calcium_form: algae             # vitacost.com Supplement Facts: Calcium "from organic algae Lithothamnion spp."
+# MISSING: branded_ingredient. No trademarked ingredient name on vitacost.com (page describes it only as plant calcium from red marine algae, Lithothamnion).
+other_ingredients: [organic gum acacia, ferment media (organic soy flour, organic saccharomyces cerevisiae, organic alfalfa powder, lactic acid bacteria, bromelain, papain), organic coating (organic maltodextrin, organic sunflower lecithin, organic palm oil, organic guar gum), organic MCT oil, organic psyllium husk, organic oat fiber, organic guar gum, organic agave fiber]   # vitacost.com other ingredients line
+ingredients_confirmed: true     # full other-ingredients line read on vitacost.com
+
+dose:
+  units_per_serving: 3          # vitacost.com: serving size 3 tablets
+  calcium_per_serving_mg: 905   # vitacost.com Supplement Facts: Calcium 905 mg (70% DV), elemental line
+  vitamin_d_mcg: 25             # vitacost.com: 25 mcg (1000 IU), as printed
+  vitamin_k_mcg: 80             # vitacost.com: "Vitamin K1 (as phylloquinone from ferment media) 35 mcg" + "Vitamin K2 (as menaquinone-7) 45 mcg" = 80 mcg vitamin K
+  magnesium_mg: 62              # vitacost.com: Magnesium 62 mg, from organic algae
+  servings_per_container: 40    # vitacost.com Supplement Facts: 40 (the "120 count" in Key info is tablets)
+  # Panel also lists strontium 5.5 mg and vanadium 14 mcg (not tracked fields).
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/132_00582f9b-a86a-4da0-9da8-046add8be852.jpg?v=1781958680
+    source_url: https://www.vitacost.com/products/new-chapter-plant-calcium-bone-strength-take-care-120-vegan-slim-tablets-9232
+    alt: New Chapter Plant Calcium Take Care 120 vegan slim tablets
+    date_checked: 2026-11-05
+    entered_by: claude          # page og:title names New Chapter Plant Calcium Take Care 120 Vegan Slim Tablets
+
+prices:
+  - retailer: Vitacost
+    price_usd: 41.97            # vitacost.com: $41.97; Add to cart shown, no stock label either way
+    servings: 40
+    url: https://www.vitacost.com/products/new-chapter-plant-calcium-bone-strength-take-care-120-vegan-slim-tablets-9232
+    date_checked: 2026-11-05
+    entered_by: claude
+    # MISSING: rating. Page shows no average; not computed.
+
+# MISSING: certification. Certifier sites not checked. Brand/retailer claims not recorded.
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: [contains fermented soy]   # vitacost.com allergen note
+notes: ""

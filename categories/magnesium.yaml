@@ -1,0 +1,72 @@
+# Everything specific to magnesium. The site reads this file when it builds.
+# How each part works is explained in categories/README.md.
+slug: magnesium
+name: Magnesium
+status: published
+order: 4
+
+page:
+  title: Magnesium compared by cost per 100 mg elemental magnesium and testing
+  description: Every magnesium product converted to cost per 100 mg of elemental magnesium from the Supplement Facts panel, with its form (glycinate, citrate, oxide and more) and third-party certifications and lab results (COAs) graded A to C.
+  heading: What magnesium really costs, and how much of its testing you can see.
+  intro: >-
+    Every price is converted to **cost per 100 mg of elemental magnesium**, the amount on the Supplement Facts
+    panel, not the weight of the whole compound (500 mg of magnesium glycinate holds far less than 500 mg of
+    magnesium). Each product shows its form. Testing transparency gets its own grade, A to C, and is never
+    blended into the price.
+
+comparison:
+  amount: 100
+  unit: mg
+  counts_toward: [magnesium_per_serving_mg]
+  label: per 100 mg elemental magnesium
+  short: Cost per 100 mg
+  # No daily amount: River chose to leave "cost per 30 days" out unless River sets one.
+  plausible_cost: { min: 0.005, max: 2 }
+
+dose_fields:
+  # Capsules, tablets, gummies or scoops in one serving, as the label says.
+  units_per_serving: { label: Units per serving, whole_number: true }
+  # The "Magnesium ... mg" line on the Supplement Facts panel: elemental magnesium,
+  # NEVER the compound weight (e.g. "magnesium glycinate 1,000 mg" in the ingredient list).
+  magnesium_per_serving_mg:
+    label: Elemental magnesium per serving
+    unit: mg
+    max: 1500
+    max_message: 'dose: {value} mg of magnesium per serving is very high. Check it is the elemental magnesium line, not the compound weight.'
+
+type:
+  field: magnesium_form
+  label: Magnesium form
+  options:
+    glycinate: Glycinate (bisglycinate)
+    citrate: Citrate
+    oxide: Oxide
+    malate: Malate
+    threonate: L-threonate
+    taurate: Taurate
+    chloride: Chloride
+    lactate: Lactate
+    carbonate: Carbonate
+    orotate: Orotate
+    blend: Blend of forms
+    other: Other
+
+extra_fields:
+  # Every form the label lists, when it's a blend (e.g. "oxide, citrate, glycinate").
+  forms_listed: Forms listed on the label
+  # Branded ingredient named on the label, e.g. "Albion TRAACS", "Magtein". Leave out if none.
+  branded_ingredient: Branded ingredient
+
+describe: ['{magnesium_form}', '{forms_listed}', '{branded_ingredient}']
+
+certifications: [NSF Certified for Sport, Informed Sport, USP Verified, BSCG, Clean Label Project]
+
+coa_tests:
+  potency: Magnesium potency
+  identity: Identity
+  lead: Lead
+  arsenic: Arsenic
+  cadmium: Cadmium
+  mercury: Mercury
+  microbial: Microbial

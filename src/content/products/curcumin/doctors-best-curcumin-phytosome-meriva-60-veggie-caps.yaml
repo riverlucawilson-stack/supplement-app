@@ -1,0 +1,39 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the label name only.
+# (Left out of the name: nothing; the vitacost.com title has no health words. Some other retailers add "Joint Support", which is not used.)
+category: curcumin
+entered_by: claude              # label info from vitacost.com
+brand: Doctor's Best
+name: Curcumin Phytosome (Meriva), 60 Veggie Caps   # vitacost.com title and Supplement Facts
+form: capsule
+formulation: phytosome          # vitacost.com Supplement Facts: "Phytosome (Meriva)", phospholipid complex from sunflower lecithin
+branded_ingredient: Meriva      # vitacost.com Supplement Facts: "Phytosome™ (Meriva®)"
+absorption_claim: '"Bioavailable Curcumin"; "Superior bioavailability"; "combines curcumin extract with phosphatidylcholine (PC) for heightened absorption" (vitacost.com product description)'
+other_ingredients: [hypromellose (vegetarian capsule), cellulose, magnesium stearate (vegetable source), silicon dioxide]   # vitacost.com
+ingredients_confirmed: true     # full other-ingredients line read on vitacost.com
+
+dose:
+  units_per_serving: 2          # vitacost.com: serving size 2 Veggie Capsules
+  curcuminoids_per_serving_mg: 180   # vitacost.com: "Standardized to contain min. 18% total Curcuminoids (180 mg)" (stated on label; minimum)
+  turmeric_per_serving_mg: 1000 # vitacost.com: Curcumin Complex Phytosome 1000 mg per serving (reference only; includes the phospholipid)
+  servings_per_container: 30    # vitacost.com Supplement Facts: 30 (60 capsules / 2). CHECK: the page's "Key info" says "Total servings 60 count", which is capsules.
+
+# photos: removed 2026-11-05. The vitacost.com page's meta tags describe a different product, so its og:image can't be trusted without a look.
+
+prices:
+  - retailer: Vitacost
+    price_usd: 24.71            # vitacost.com: $24.71, 60 count, Add to cart shown, no out-of-stock notice
+    servings: 30
+    url: https://www.vitacost.com/products/doctor-s-best-curcumin-phytosome-60-veggie-caps-500-mg-per-capsule-23084
+    date_checked: 2026-11-05
+    entered_by: claude
+
+# MISSING: certification. Certifier sites not checked. vitacost.com lists no third-party certification.
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: []
+notes: ""

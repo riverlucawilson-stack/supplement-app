@@ -1,0 +1,47 @@
+# Looked up by Claude on 2026-11-05. Every entry marked entered_by: claude
+# still needs River's check against its link.
+# Product name kept to the label/title name only.
+# This is Qunol's vegetarian-capsule turmeric (500 mg per capsule), not the Extra Strength softgel: the only page with a full Supplement Facts panel was this vitacost.com listing.
+category: curcumin
+entered_by: claude              # label info from vitacost.com
+brand: Qunol
+name: Turmeric Curcumin Complex, 120 Vegetarian Capsules   # vitacost.com title
+form: capsule
+formulation: enhanced           # vitacost.com Supplement Facts: "Bioenhanced Turmeric Complex (20% curcuminoids), Gamma-cyclodextrin (for absorption), Turmeric Extract"
+# MISSING: branded_ingredient. No brand name on the vitacost.com label line ("Bioenhanced Turmeric Complex" is descriptive).
+absorption_claim: '"patented hydro-soluble technology delivering Ultra High Absorption" with footnote "Compared to regular turmeric", where "Regular turmeric defined as standardized unformulated curcumin extract" (vitacost.com product description)'
+other_ingredients: [vegetable hypromellose, magnesium stearate, silicon dioxide]   # vitacost.com "Ingredients" line
+ingredients_confirmed: true     # full ingredients line read on vitacost.com
+
+dose:
+  units_per_serving: 2          # vitacost.com: serving size 2 vegetarian capsules
+  # DELETED: curcuminoids_per_serving_mg. The panel shows one line "Bioenhanced Turmeric Complex (20% curcuminoids), Gamma-cyclodextrin, Turmeric Extract: 1,000 mg"
+  # with no separate curcuminoid mg and no separate weight for the extract, so the 20% cannot be cleanly applied to the 1,000 mg (it also covers gamma-cyclodextrin).
+  # CHECK: if River reads the label and confirms the 20% applies to the full 1,000 mg (= 200 mg), add it here.
+  turmeric_per_serving_mg: 1000 # vitacost.com: complex line 1,000 mg per serving (reference only)
+  servings_per_container: 60    # vitacost.com: 60 (120 capsules / 2)
+
+photos:
+  product:
+    url: https://www.vitacost.com/cdn/shop/files/26_dcd078cc-4eb0-4afa-9002-e365c91db37e.jpg?v=1781875227
+    source_url: https://www.vitacost.com/products/qunol-turmeric-curcumin-complex-120-vegetarian-capsules-500-mg-per-capsule-126268
+    alt: Qunol Turmeric Curcumin Complex 120 vegetarian capsule bottle
+    date_checked: 2026-11-05
+    entered_by: claude
+
+prices:
+  - retailer: Vitacost
+    price_usd: 32.25            # vitacost.com: $32.25, 120 count, Add to cart shown, no out-of-stock notice
+    servings: 60
+    url: https://www.vitacost.com/products/qunol-turmeric-curcumin-complex-120-vegetarian-capsules-500-mg-per-capsule-126268
+    date_checked: 2026-11-05
+    entered_by: claude
+
+# MISSING: certification. Certifier sites not checked. vitacost.com lists no third-party certification.
+certifications: []
+
+# MISSING: COA. No brand lab-results page checked.
+coas: []
+
+flags: [curcuminoid content not stated, contains gamma-cyclodextrin]   # vitacost.com Supplement Facts: "20% curcuminoids" given only as a percentage of a combined 1,000 mg line
+notes: ""

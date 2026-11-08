@@ -1,0 +1,75 @@
+# Everything specific to curcumin / turmeric. The site reads this file when it builds.
+# How each part works is explained in categories/README.md.
+slug: curcumin
+name: Curcumin
+status: published
+order: 16
+
+page:
+  title: Curcumin and turmeric compared by cost per 500 mg curcuminoids and testing
+  description: Every curcumin and turmeric supplement converted to cost per 500 mg of curcuminoids as stated on the label, not turmeric powder weight, with its formulation (95% extract, added piperine, phytosome and others), plus third-party certifications and lab results (COAs) graded A to C.
+  heading: What curcumin really costs, and how much of its testing you can see.
+  intro: >-
+    Every price is converted to **cost per 500 mg of curcuminoids**, the amount the label states, never the
+    weight of turmeric powder or extract (1,000 mg of turmeric root might hold only a small share of
+    curcuminoids). Products whose label doesn't state curcuminoids are listed without a cost per 500 mg.
+    Each product shows its formulation and any absorption claim the label makes, recorded but never used to
+    adjust the price. Testing transparency gets its own grade, A to C, and is never blended into the price.
+
+comparison:
+  amount: 500
+  unit: mg
+  counts_toward: [curcuminoids_per_serving_mg]
+  label: per 500 mg curcuminoids
+  short: Cost per 500 mg
+  # No daily amount: same rule as the other new categories.
+  plausible_cost: { min: 0.02, max: 5 }
+
+dose_fields:
+  # Capsules, tablets, softgels or gummies in one serving, as the label says.
+  units_per_serving: { label: Units per serving, whole_number: true }
+  # Curcuminoids per serving in mg, as stated on the label (e.g. "standardized to 95% curcuminoids
+  # (475 mg)"). Only if the label gives the mg, or gives an extract weight and a % that the label
+  # itself multiplies out. Leave out when not stated: the product then has no cost per 500 mg.
+  curcuminoids_per_serving_mg:
+    label: Curcuminoids per serving
+    unit: mg
+    optional: true
+    max: 3000
+    max_message: 'dose: {value} mg of curcuminoids per serving is very high. Check it is curcuminoids, not turmeric or extract weight.'
+  # Turmeric root, extract or formulation weight per serving, as labeled. Shown for reference only.
+  turmeric_per_serving_mg: { label: Turmeric or extract weight per serving, unit: mg, optional: true, max: 5000 }
+  # Piperine (black pepper extract) per serving, if listed.
+  piperine_per_serving_mg: { label: Piperine (black pepper) per serving, unit: mg, optional: true, max: 50 }
+
+type:
+  field: formulation
+  label: Formulation
+  options:
+    # Lowercase because they read mid-sentence.
+    extract_95: 95% curcuminoid extract
+    extract_with_piperine: extract with piperine
+    phytosome: phytosome (with lecithin)
+    enhanced: other enhanced-absorption form
+    root_powder: turmeric root powder
+    root_and_extract: root powder plus extract
+    other: other
+
+extra_fields:
+  # Branded ingredient named on the label, e.g. "C3 Complex", "Meriva", "BCM-95", "Longvida", "Theracurmin".
+  branded_ingredient: Branded ingredient
+  # An absorption claim the label or brand page makes, quoted, with where it came from. Never used in the price.
+  absorption_claim: Absorption claim (as stated, not scored)
+
+describe: ['{formulation}', '{branded_ingredient}', '+ {piperine_per_serving_mg} mg piperine']
+
+certifications: [NSF Certified for Sport, Informed Sport, USP Verified, BSCG, Clean Label Project]
+
+coa_tests:
+  potency: Curcuminoid content
+  identity: Identity
+  lead: Lead
+  arsenic: Arsenic
+  cadmium: Cadmium
+  mercury: Mercury
+  microbial: Microbial
