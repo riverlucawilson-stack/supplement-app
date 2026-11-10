@@ -6,6 +6,13 @@
 //
 // ERRORS (✗) are mistakes that must be fixed. The site won't build until they are.
 // WARNINGS (⚠) are things to look at, like stale prices. They don't block anything.
+//
+// Short version, for Claude's checkpoints:  npm run validate:brief
+// It shows every error and every warning that needs action now (stale, missing prices,
+// duplicates...), but only counts the review-queue warnings (UNVERIFIED, NOT GRADED,
+// DRAFT) instead of listing all of them. Pass/fail is exactly the same as the full run.
+// Add --show=<text> to list matching files in full, e.g.
+//   npm run validate:brief -- --show=calcium/
 import { readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, relative, sep } from 'node:path';
 import { parse } from 'yaml';
@@ -24,7 +31,11 @@ import { evidencePages } from '../src/evidence';
 import { ingredientRules, FLAGS_FILE } from '../src/ingredients/rules';
 import { ingredientGrade } from '../src/lib/ingredients';
 
-const PRODUCTS_DIR = process.argv[2] ?? join('src', 'content', 'products');
+const args = process.argv.slice(2);
+const brief = args.includes('--brief');
+const showInFull = args.filter((a) => a.startsWith('--show=')).map((a) => a.slice('--show='.length));
+const folderArg = args.find((a) => !a.startsWith('--'));
+const PRODUCTS_DIR = folderArg ?? join('src', 'content', 'products');
 const today = new Date();
 
 interface FileReport {
@@ -205,7 +216,7 @@ function checkFile(path: string): FileReport {
 // --- Run it ---
 const reports = listFiles(PRODUCTS_DIR).sort().map(checkFile);
 // The evidence page is checked only on a normal run, not when pointed at test files.
-if (process.argv[2] === undefined) {
+if (folderArg === undefined) {
   for (const page of evidencePages) {
     reports.push({ file: join('src', 'evidence', `${page.category}.ts`), ...checkEvidence(page) });
   }
@@ -221,14 +232,32 @@ if (process.argv[2] === undefined) {
 let errorCount = 0;
 let warningCount = 0;
 
-console.log(`Checking ${reports.length} file(s) in ${PRODUCTS_DIR} (today is ${day(today)})\n`);
+// Warnings that wait on River's review rather than needing action now. Brief mode counts these.
+const REVIEW_QUEUE = ['UNVERIFIED', 'NOT GRADED', 'DRAFT'];
+const queueKind = (w: string) => REVIEW_QUEUE.find((k) => w.startsWith(`${k}:`));
+const hiddenCounts = new Map<string, number>();
+
+console.log(`Checking ${reports.length} file(s) in ${PRODUCTS_DIR} (today is ${day(today)})${brief ? ', brief' : ''}\n`);
 for (const r of reports) {
   errorCount += r.errors.length;
   warningCount += r.warnings.length;
+  let warnings = r.warnings;
+  if (brief && !showInFull.some((s) => r.file.includes(s))) {
+    warnings = r.warnings.filter((w) => {
+      const kind = queueKind(w);
+      if (kind) hiddenCounts.set(kind, (hiddenCounts.get(kind) ?? 0) + 1);
+      return !kind;
+    });
+    if (r.errors.length === 0 && warnings.length === 0) continue;
+  }
   const mark = r.errors.length ? '✗' : r.warnings.length ? '⚠' : '✓';
   console.log(`${mark} ${r.file}${r.summary && !r.errors.length ? `  (${r.summary})` : ''}`);
   for (const e of r.errors) console.log(`    ✗ ${e}`);
-  for (const w of r.warnings) console.log(`    ⚠ ${w}`);
+  for (const w of warnings) console.log(`    ⚠ ${w}`);
+}
+if (hiddenCounts.size) {
+  const counts = [...hiddenCounts].map(([kind, n]) => `${n} ${kind}`).join(', ');
+  console.log(`\nReview queue, counted but not listed: ${counts}. Run "npm run validate" to list them.`);
 }
 
 // The 10 items closest to (or furthest past) their freshness limit, so you know what to re-check first.

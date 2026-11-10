@@ -31,6 +31,7 @@ YAML file you edit by hand.
 | `npm run build` | Runs `validate`, then builds the finished site into `dist/`. Stops if there are any errors. |
 | `npm test` | Runs the automated tests for the price math, tiers, and validation. |
 | `npm run check` | Checks the code for type mistakes. |
+| `npm run validate:brief`, `build:brief`, `test:brief` | Short versions Claude uses so its context (and your usage) stays small. Same pass/fail as the full commands; they show every error but only count the "review queue" warnings. You can ignore these and keep using the full ones. |
 
 ## Where things live
 
@@ -40,6 +41,9 @@ YAML file you edit by hand.
 | `src/settings.ts` | Site name, and the "stale" limits (prices 30 days, COAs 12 months, certifications 12 months). |
 | `src/lib/` | The calculations: `pricing.ts` (cost per 5 g, per 30 days, best price), `tier.ts` (Tier A/B/C with reasons), `staleness.ts`. |
 | `scripts/validate.ts` | The validation script. |
+| `scripts/quiet.ts` | Runs a command and, if it passes, shows only its last few lines (used by the `:brief` commands). |
+| `.claude/` | Claude Code settings for this project: `settings.json` (starts sessions on Sonnet) and `agents/` (the product-researcher and data-auditor roles from TEAM.md). |
+| `docs/` | Archives: finished roadmap stages (`roadmap-done.md`) and older session-log entries (`session-log-archive.md`). |
 | `tests/` | Automated tests. `tests/fixtures/products/` holds deliberately broken product files the tests check get caught. |
 | `categories/` | **One YAML file per category** (`creatine.yaml`, `ashwagandha.yaml`): the amount it's compared on, which dose numbers a product records, its types, which certifications count and which COA tests are listed. See `categories/README.md`. |
 | `src/evidence/` | The words on each category's evidence page. |
