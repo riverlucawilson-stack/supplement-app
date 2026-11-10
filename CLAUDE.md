@@ -106,3 +106,30 @@ Each product page shows why it got its tier.
 3. After each phase, run the site locally and run the validation script. Tell
    me what to check, and fix anything broken before moving on.
 4. Keep a README that explains how to add a product, update a price, and deploy.
+
+## Keeping usage down (added 2026-11-10)
+Every request re-sends the whole conversation, so anything printed or read stays in the
+cost of every later step. Keep the context small:
+- Checks: use `npm run build:brief` (validate + build) at checkpoints, and
+  `npm run validate:brief` / `npm run test:brief` otherwise. Same pass/fail as the full
+  commands; they list every error and action-now warning but only count the review-queue
+  ones (UNVERIFIED, NOT GRADED, DRAFT). To see one batch in full:
+  `npm run validate:brief -- --show=<category>/`. Run the full `npm run validate` only
+  when I ask.
+- Starting a shift: read ROADMAP.md (live items only; finished stages are in
+  docs/roadmap-done.md) and only the end of SESSION-LOG.md (`tail -n 15 SESSION-LOG.md`).
+  Find past decisions with `grep -n "Decision:" SESSION-LOG.md docs/session-log-archive.md`.
+- Product research: use the product-researcher and data-auditor subagents
+  (.claude/agents/, Sonnet, at most 2 at a time; see TEAM.md). Their rules live in their
+  files, so the prompt only needs the category, products and URLs.
+- Long pages (fact sheets, papers, big data files): have a subagent read them and return
+  only the exact passages needed with their URLs, or use grep/head, instead of printing
+  them whole into the main conversation.
+- Model: this project starts on Sonnet (.claude/settings.json). For hard design or
+  code-structure work, switch with `/model opus`, then back with `/model sonnet`.
+
+## Compact instructions
+When compacting, keep: the unit IN PROGRESS and its current step, products added or
+skipped in the current batch, auditor FIX items not yet applied, unresolved errors, and
+my latest instructions. Drop: output from checks that passed, page text that was read,
+and finished units (they're already in SESSION-LOG.md and ROADMAP.md).

@@ -40,3 +40,20 @@ test('broken files are rejected with clear messages', () => {
     assert.ok(out.includes(expected), `expected output to mention: ${expected}\n\n${out}`);
   }
 });
+
+test('brief mode fails the same way but only counts review-queue warnings', () => {
+  const full = validate('tests/fixtures/products');
+  const { code, out } = validate('tests/fixtures/products', '--brief');
+  assert.equal(code, 1);
+  // Same totals and the same errors and action-now warnings as the full run.
+  assert.equal(out.match(/\d+ error\(s\), \d+ warning\(s\)/)?.[0], full.out.match(/\d+ error\(s\), \d+ warning\(s\)/)?.[0]);
+  for (const expected of ['is in the future', 'form: Invalid option', 'STALE PRICE', 'STALE COA', 'listed more than once']) {
+    assert.ok(out.includes(expected), `expected brief output to mention: ${expected}\n\n${out}`);
+  }
+  // UNVERIFIED lines are counted, not listed.
+  assert.ok(!out.includes('UNVERIFIED: prices #2 (Sample Store 1)'), out);
+  assert.match(out, /Review queue, counted but not listed: .*\d+ UNVERIFIED/);
+  // --show lists matching files in full again.
+  const shown = validate('tests/fixtures/products', '--brief', '--show=creatine/');
+  assert.ok(shown.out.includes('UNVERIFIED: prices #2 (Sample Store 1)'), shown.out);
+});
